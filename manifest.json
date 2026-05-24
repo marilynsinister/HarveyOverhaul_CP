@@ -1,0 +1,39 @@
+{
+  "Name": "Harvey Overhaul - Stress System",
+  "Author": "marilynsinister",
+  "Version": "1.0.0",
+  "Description": "Комплексная система стресса с визуальной шкалой и реалистичными эффектами",
+  "UniqueID": "marilynsinister.HarveyOverhaul",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "1.23.0"
+  },
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "Pathoschild.ContentPatcher",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "Spiderbuttons.BETAS",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "spacechase0.SpaceCore",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "JunimoHutch.FunctionalHospitalBeds",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "Veronnica.HarveySprite",
+      "IsRequired": false
+    }
+  ]
+}

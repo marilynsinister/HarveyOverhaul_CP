@@ -1,0 +1,200 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Mine",
+            "Entries": {
+                "eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "none/
+    -1000 -1000/
+    farmer 17 7 2 Harvey 1000 1000 0/
+    pause 1000/
+    ambientLight 40 40 40/
+    fade true/
+    message \"Ты теряешь сознание...\"/
+    pause 2000/
+    playSound thudStep/
+    message \"Быстрые шаги эхом отзываются в шахте...\"/
+    pause 800/
+    warp Harvey 17 10/
+    viewport 17 7 true/
+    pause 500/
+    fade false/
+    pause 300/
+    emote Harvey 16/
+    speak Harvey \"@?! НЕТ!$8\"/
+    pause 400/
+    move Harvey 0 -2 0 true/
+    pause 200/
+    animate Harvey false true 1000 22 20 21/
+    speak Harvey \"*проверяет пульс* Слабый... Критически слабый!$8\"/
+    pause 600/
+    emote Harvey 12/
+    speak Harvey \"Что ты здесь делаешь без сопровождения?!$a#$b#Держись! Я вытащу тебя отсюда!$a\"/
+    pause 1000/
+    speak Harvey \"*осторожно поднимает на руки* Кожа холодная...$s#$b#Держись... пожалуйста, держись!$s\"/
+    pause 1200/
+    globalFade/
+    viewport -1000 -1000/
+    pause 2000/
+    changeLocation Hospital/
+    ignoreCollisions farmer/
+    warp farmer 20 5/
+    positionOffset farmer 32 -52/
+    faceDirection farmer 2/
+    animate farmer true true 10000 4 5/
+    warp Harvey 18 5/
+    faceDirection Harvey 1/
+    viewport 14 6/
+    pause 500/
+    fade false/
+    ambientLight 180 180 180/
+    pause 800/
+    speak Harvey \"*срывающийся голос* Мару! Срочно реанимационный набор!$a\"/
+    pause 400/
+    speak Maru \"Доктор! Что случилось?!\"/
+    pause 300/
+    speak Harvey \"Критическое состояние! Адреналин, физраствор, кислород!$a\"/
+    pause 600/
+    animate Harvey false true 100 22 20 21 20/
+    playSound dwop/
+    speak Harvey \"*вводит инъекцию* Давай... стабилизируем пульс...$s\"/
+    pause 1000/
+    emote Harvey 28/
+    speak Harvey \"*выдыхает* Пульс стабилизируется... Боже...$s#$b#Ещё минута — и могло быть хуже.$s\"/
+    pause 1200/
+    message \"Ты медленно открываешь глаза...\"/
+    pause 500/
+    stopAnimation farmer/
+    faceDirection farmer 3/
+    pause 300/
+    speak Harvey \"*замечает* @! Ты в сознании!$h#$b#Не двигайся. Ты в клинике.$u\"/
+    pause 800/
+    emote farmer 8/
+    speak Harvey \"Вчера ты потеряла сознание в шахте.$s#$b#У тебя серьёзные раны.$a#$b#Мне нужно тебя осмотреть и начать лечение.$u\"/
+    pause 1200/
+    speak Harvey \"Отдыхай сейчас.$0#$b#Я буду следить за твоим состоянием.$0\"/
+    pause 1000/
+    action AddConversationTopic topicMineInjuryRescue 2/
+    friendship Harvey 60/
+    mail mailHarveyAfterMineRescue/
+    globalFade/
+    viewport -1000 -1000/
+    end dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
+
+                "eventHarveyMinorMineRescue/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "none/
+    -1000 -1000/
+    farmer 17 7 2 Harvey 17 10 0/
+    pause 500/
+    message \"Голова кружится, дыхание сбивается... Ещё шаг — и ноги точно подведут.\"/
+    pause 400/
+    speak Harvey \"@! Стой!$8\"/
+    pause 200/
+    move Harvey 0 -2 0 true/
+    emote Harvey 16/
+    speak Harvey \"Ты на грани. В таком состоянии я не дам тебе идти дальше.$a#$b#Сейчас в клинику — покой и осмотр.$u\"/
+    pause 800/
+    globalFade/
+    changeLocation Hospital/
+    warp farmer 14 6/
+    warp Harvey 15 6/
+    viewport 14 6/
+    pause 300/
+    fade false/
+    speak Harvey \"Садись. Дыши ровно. Я проверю показатели.$u\"/
+    pause 800/
+    animate Harvey false true 2000 22 20 21 20/
+    speak Harvey \"Пульс и давление на нижней границе нормы...$s#$b#Ещё немного нагрузки — и могло стать хуже.$u\"/
+    pause 1000/
+    speak Harvey \"Шахта подождёт. Сначала восстановление.$0#$b#Если снова почувствуешь слабость — сразу ко мне, без героизма.$u\"/
+    pause 1000/
+    action AddConversationTopic topicHarveyMinorMineRescue 2/
+    friendship Harvey 35/
+    globalFade/
+    viewport -1000 -1000/
+    end dialogue Harvey \"Отдыхай. Я загляну позже.$h\"",
+
+                "eventHarveyMineRescueDating/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "none/
+    -1000 -1000/
+    farmer 17 7 2 Harvey 1000 1000 0/
+    pause 900/
+    ambientLight 40 40 40/
+    fade true/
+    message \"Темно… тяжело…\"/
+    pause 800/
+    playSound thudStep/
+    message \"Шаги эхом отдаются в шахте…\"/
+    pause 400/
+    warp Harvey 17 10/
+    viewport 17 7 true/
+    pause 400/
+    fade false/
+    pause 200/
+    move Harvey 0 -2 0 true/
+    pause 200/
+    emote Harvey 16/
+    speak Harvey \"@… Нет. Нет.$8\"/
+    pause 400/
+    speak Harvey \"Дыши. Смотри на меня.$8\"/
+    pause 500/
+    animate Harvey false true 800 22 20 21/
+    speak Harvey \"*проверяет пульс* Слабый… слишком слабый.$8\"/
+    pause 600/
+    emote Harvey 12/
+    speak Harvey \"Кровь… ладно. Сейчас главное — вынести тебя отсюда.$a#$b#Я везу тебя в клинику. Пожалуйста, доверься мне.$a\"/
+    pause 800/
+    speak Harvey \"Держись. Пожалуйста.$s#$b#Я рядом. Я не отпущу.$s\"/
+    pause 600/
+    globalFade/
+    viewport -1000 -1000/
+    pause 1500/
+    changeLocation Hospital/
+    ignoreCollisions farmer/
+    warp farmer 20 5/
+    positionOffset farmer 32 -52/
+    faceDirection farmer 2/
+    animate farmer true true 10000 4 5/
+    warp Harvey 19 5/
+    faceDirection Harvey 1/
+    viewport 14 6/
+    pause 500/
+    fade false/
+    ambientLight 180 180 180/
+    pause 800/
+    animate Harvey false true 600 22 20 21/
+    speak Harvey \"Ты в клинике. Не пытайся встать.$u\"/
+    pause 600/
+    playSound dwop/
+    speak Harvey \"Раны обработаны. Кровотечение остановлено.$u#$b#Обезболивающее подействует через несколько минут.$u\"/
+    pause 800/
+    emote Harvey 12/
+    speak Harvey \"Ты остаёшься под наблюдением.$a#$b#Выйти из палаты сейчас нельзя. Я очень прошу отнестись к этому серьёзно.$a\"/
+    pause 1000/
+    message \"Ты медленно открываешь глаза…\"/
+    pause 500/
+    stopAnimation farmer/
+    faceDirection farmer 3/
+    pause 300/
+    emote farmer 8/
+    speak Harvey \"@! Ты в сознании.$u#$b#Не двигайся.$u\"/
+    pause 800/
+    speak Harvey \"Вчера ты потеряла сознание в шахте.$s#$b#Мне нужно завершить осмотр и начать лечение.$u\"/
+    pause 1000/
+    emote Harvey 28/
+    speak Harvey \"*голос смягчается* Я буду рядом.$l#$b#Отдыхай. Я прослежу за каждым показателем.$l\"/
+    pause 1000/
+    action AddConversationTopic topicMineInjuryRescue 2/
+    friendship Harvey 50/
+    globalFade/
+    viewport -1000 -1000/
+    end dialogue Harvey \"Если боль усилится — скажи сразу. Я не далеко.$u\""
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "mailHarveyAfterMineRescue": "@,^Прошла ночь после инцидента в шахте.^^Когда я нашёл тебя без сознания, пришлось срочно доставить тебя в клинику и стабилизировать состояние.^^Раны всё ещё серьёзны. Мне нужно завершить осмотр и начать лечение. Приходи в клинику, как только сможешь встать. Или я приду сам — если увижу, что ты игнорируешь лечение.^^Это важно. Твоё здоровье важнее всего.^^С беспокойством,^Харви[#]Письмо от Харви"
+            }
+        }
+    ]
+}

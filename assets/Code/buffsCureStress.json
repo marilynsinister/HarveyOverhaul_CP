@@ -1,0 +1,547 @@
+{
+    "Changes": [
+        {
+            "LogName": "AddStressCureBuffs",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                // ================== БАФФЫ ЛЕЧЕНИЯ СТРЕССА ==================
+                "buffHarveyTreatmentBreakdown": {
+                    "Id": "buffHarveyTreatmentBreakdown",
+                    "DisplayName": "Лечение нервного срыва",
+                    "Description": "Харви начал лечение эмоционального срыва. Ты под его постоянным наблюдением.",
+                    "IsDebuff": false,
+                    "GlowColor": "Green",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 20,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "Speed": 2,
+                        "Luck": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressBreakdown"
+                    }
+                },
+                "buffHarveyTreatmentCollapse": {
+                    "Id": "buffHarveyTreatmentCollapse",
+                    "DisplayName": "Реабилитация после коллапса",
+                    "Description": "Харви проводит курс реабилитации после потери сознания. Полный покой и наблюдение.",
+                    "IsDebuff": false,
+                    "GlowColor": "Blue",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 21,
+                    "Effects": {
+                        "MaxStamina": 20,
+                        "Speed": 1,
+                        "Defense": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressCollapse"
+                    }
+                },
+                "buffHarveyTreatmentNumbness": {
+                    "Id": "buffHarveyTreatmentNumbness",
+                    "DisplayName": "Лечение эмоционального онемения",
+                    "Description": "Харви помогает вернуть эмоциональную чувствительность. Лечение идёт постепенно.",
+                    "IsDebuff": false,
+                    "GlowColor": "LightBlue",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 22,
+                    "Effects": {
+                        "MaxStamina": 10,
+                        "Luck": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressNumbness"
+                    }
+                },
+                "buffHarveyTreatmentDespair": {
+                    "Id": "buffHarveyTreatmentDespair",
+                    "DisplayName": "Интервенция отчаяния",
+                    "Description": "Харви проводит экстренную интервенцию. Ты не одна в этой борьбе.",
+                    "IsDebuff": false,
+                    "GlowColor": "Purple",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 23,
+                    "Effects": {
+                        "MaxStamina": 25,
+                        "Speed": 1,
+                        "Defense": 3
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressDespair"
+                    }
+                },
+                "buffHarveyTreatmentCritical": {
+                    "Id": "buffHarveyTreatmentCritical",
+                    "DisplayName": "Критическое лечение",
+                    "Description": "Харви проводит экстренное лечение критического состояния. Максимальная защита.",
+                    "IsDebuff": false,
+                    "GlowColor": "Red",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 24,
+                    "Effects": {
+                        "MaxStamina": 30,
+                        "Speed": 0,
+                        "Defense": 5,
+                        "Health": 20
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressCritical"
+                    }
+                },
+                "buffHarveyTreatmentTired": {
+                    "Id": "buffHarveyTreatmentTired",
+                    "DisplayName": "Лечение хронической усталости",
+                    "Description": "Харви составил план восстановления. Строгий режим отдыха и восстановления.",
+                    "IsDebuff": false,
+                    "GlowColor": "Green",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 25,
+                    "Effects": {
+                        "MaxStamina": 20,
+                        "Speed": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressTired"
+                    }
+                },
+                "buffHarveyTreatmentLonely": {
+                    "Id": "buffHarveyTreatmentLonely",
+                    "DisplayName": "Лечение одиночества",
+                    "Description": "Харви помогает восстановить социальные связи. Ты не одна.",
+                    "IsDebuff": false,
+                    "GlowColor": "Blue",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 26,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "Luck": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressLonely"
+                    }
+                },
+                "buffHarveyTreatmentThunder": {
+                    "Id": "buffHarveyTreatmentThunder",
+                    "DisplayName": "Лечение страха грома",
+                    "Description": "Харви учит справляться со страхом перед грозами. Ты в безопасности.",
+                    "IsDebuff": false,
+                    "GlowColor": "Yellow",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 27,
+                    "Effects": {
+                        "MaxStamina": 10,
+                        "Defense": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressThunder"
+                    }
+                },
+                "buffHarveyTreatmentHunger": {
+                    "Id": "buffHarveyTreatmentHunger",
+                    "DisplayName": "Лечение проблем с аппетитом",
+                    "Description": "Харви восстанавливает твои отношения с едой. Питание - это важно.",
+                    "IsDebuff": false,
+                    "GlowColor": "Orange",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 28,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "Health": 10
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressHunger"
+                    }
+                },
+                "buffHarveyTreatmentOverwork": {
+                    "Id": "buffHarveyTreatmentOverwork",
+                    "DisplayName": "Лечение переутомления",
+                    "Description": "Харви запретил тяжёлую работу. Время восстановления и отдыха.",
+                    "IsDebuff": false,
+                    "GlowColor": "Red",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 29,
+                    "Effects": {
+                        "MaxStamina": 25,
+                        "Speed": 0,
+                        "Defense": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressOverwork"
+                    }
+                },
+                "buffHarveyTreatmentNoSleep": {
+                    "Id": "buffHarveyTreatmentNoSleep",
+                    "DisplayName": "Лечение бессонницы",
+                    "Description": "Харви установил строгий режим сна. Восстановление циркадных ритмов.",
+                    "IsDebuff": false,
+                    "GlowColor": "Purple",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 30,
+                    "Effects": {
+                        "MaxStamina": 20,
+                        "Luck": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressNoSleep"
+                    }
+                },
+                "buffHarveyTreatmentTooCold": {
+                    "Id": "buffHarveyTreatmentTooCold",
+                    "DisplayName": "Лечение холодовой чувствительности",
+                    "Description": "Харви помогает адаптироваться к холоду. Тепло и комфорт.",
+                    "IsDebuff": false,
+                    "GlowColor": "LightBlue",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 31,
+                    "Effects": {
+                        "MaxStamina": 10,
+                        "Defense": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressTooCold"
+                    }
+                },
+                "buffHarveyTreatmentSocial": {
+                    "Id": "buffHarveyTreatmentSocial",
+                    "DisplayName": "Лечение социальной тревожности",
+                    "Description": "Харви постепенно возвращает уверенность в общении. Шаг за шагом.",
+                    "IsDebuff": false,
+                    "GlowColor": "Green",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 32,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "Luck": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressSocial"
+                    }
+                },
+                "buffHarveyTreatmentDarkness": {
+                    "Id": "buffHarveyTreatmentDarkness",
+                    "DisplayName": "Лечение страха темноты",
+                    "Description": "Харви помогает чувствовать себя безопасно в любое время суток.",
+                    "IsDebuff": false,
+                    "GlowColor": "Blue",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 33,
+                    "Effects": {
+                        "MaxStamina": 10,
+                        "Defense": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressDarkness"
+                    }
+                },
+                "buffHarveyTreatmentCriticism": {
+                    "Id": "buffHarveyTreatmentCriticism",
+                    "DisplayName": "Лечение самокритики",
+                    "Description": "Харви учит быть добрее к себе. Ты заслуживаешь любви и уважения.",
+                    "IsDebuff": false,
+                    "GlowColor": "Pink",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 34,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "Luck": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressCriticism"
+                    }
+                },
+                "buffHarveyTreatmentBadDream": {
+                    "Id": "buffHarveyTreatmentBadDream",
+                    "DisplayName": "Лечение кошмаров",
+                    "Description": "Харви помогает разобраться с плохими снами. Спокойный сон возвращается.",
+                    "IsDebuff": false,
+                    "GlowColor": "Purple",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 35,
+                    "Effects": {
+                        "MaxStamina": 20,
+                        "Luck": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressBadDream"
+                    }
+                },
+                "buffHarveyTreatmentPanic": {
+                    "Id": "buffHarveyTreatmentPanic",
+                    "DisplayName": "Лечение панических атак",
+                    "Description": "Харви учит справляться с приступами паники. Ты в безопасности.",
+                    "IsDebuff": false,
+                    "GlowColor": "Red",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 36,
+                    "Effects": {
+                        "MaxStamina": 25,
+                        "Speed": 1,
+                        "Defense": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressPanic"
+                    }
+                },
+                "buffHarveyTreatmentAnxietyWave": {
+                    "Id": "buffHarveyTreatmentAnxietyWave",
+                    "DisplayName": "Лечение тревожности",
+                    "Description": "Харви помогает обрести внутренний покой. Тревога отступает.",
+                    "IsDebuff": false,
+                    "GlowColor": "Yellow",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 37,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "Luck": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressAnxietyWave"
+                    }
+                },
+                "buffHarveyTreatmentMentalFatigue": {
+                    "Id": "buffHarveyTreatmentMentalFatigue",
+                    "DisplayName": "Лечение умственной усталости",
+                    "Description": "Харви восстанавливает твои когнитивные способности. Ясность мышления возвращается.",
+                    "IsDebuff": false,
+                    "GlowColor": "Blue",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 38,
+                    "Effects": {
+                        "MaxStamina": 20,
+                        "Luck": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressMentalFatigue"
+                    }
+                },
+                "buffHarveyTreatmentShadowParanoia": {
+                    "Id": "buffHarveyTreatmentShadowParanoia",
+                    "DisplayName": "Лечение паранойи",
+                    "Description": "Харви помогает различать реальность и иллюзии. Безопасность возвращается.",
+                    "IsDebuff": false,
+                    "GlowColor": "Purple",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 39,
+                    "Effects": {
+                        "MaxStamina": 25,
+                        "Speed": 1,
+                        "Defense": 3
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressShadowParanoia"
+                    }
+                },
+                "buffHarveyTreatmentFreezeResponse": {
+                    "Id": "buffHarveyTreatmentFreezeResponse",
+                    "DisplayName": "Лечение реакции заморозки",
+                    "Description": "Харви учит справляться со стрессом без потери контроля. Ты управляешь ситуацией.",
+                    "IsDebuff": false,
+                    "GlowColor": "LightBlue",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 40,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "Speed": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressFreezeResponse"
+                    }
+                },
+                "buffHarveyTreatmentIsolation": {
+                    "Id": "buffHarveyTreatmentIsolation",
+                    "DisplayName": "Лечение изоляции",
+                    "Description": "Харви помогает вернуться к людям. Социальные связи восстанавливаются.",
+                    "IsDebuff": false,
+                    "GlowColor": "Green",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 41,
+                    "Effects": {
+                        "MaxStamina": 20,
+                        "Luck": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressIsolation"
+                    }
+                },
+                // ================== ВСПОМОГАТЕЛЬНЫЕ БАФФЫ ==================
+                "buffStressImmunity": {
+                    "Id": "buffStressImmunity",
+                    "DisplayName": "Иммунитет к стрессу",
+                    "Description": "Временная защита от стрессовых факторов благодаря лечению Харви.",
+                    "IsDebuff": false,
+                    "GlowColor": "Blue",
+                    "Duration": 14400000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 22,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "Defense": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressImmunity"
+                    }
+                },
+                "buffStressRecovery": {
+                    "Id": "buffStressRecovery",
+                    "DisplayName": "Восстановление от стресса",
+                    "Description": "Харви начал лечение. Стресс постепенно отступает.",
+                    "IsDebuff": false,
+                    "GlowColor": "Green",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 20,
+                    "Effects": {
+                        "Speed": 5,
+                        "MaxStamina": 10,
+                        "LuckLevel": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressRecovery"
+                    }
+                },
+                "buffStressRecoveryAdvanced": {
+                    "Id": "buffStressRecoveryAdvanced",
+                    "DisplayName": "Продвинутое восстановление",
+                    "Description": "Лечение идёт хорошо. Ты чувствуешь себя значительно лучше.",
+                    "IsDebuff": false,
+                    "GlowColor": "Green",
+                    "Duration": 3600000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 21,
+                    "Effects": {
+                        "Speed": 10,
+                        "MaxStamina": 20,
+                        "LuckLevel": 2,
+                        "Defense": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressRecoveryAdvanced"
+                    }
+                },
+                "buffStressRecoveryGlow": {
+                    "Id": "buffStressRecoveryGlow",
+                    "DisplayName": "Покой и восстановление",
+                    "Description": "Вы ощущаете, как возвращаются силы и спокойствие.",
+                    "IsDebuff": false,
+                    "GlowColor": "180 255 200",
+                    "Duration": 7200000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 17,
+                    "Effects": {
+                        "MaxStamina": 20,
+                        "Luck": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "stressRecovery"
+                    }
+                },
+                // ================== БАФФ ОТДЫХА ==================
+                "buffRestingAtHome": {
+                    "Id": "buffRestingAtHome",
+                    "DisplayName": "Отдых дома",
+                    "Description": "Вы отдыхаете в уютной обстановке фермерского дома. Стресс постепенно отступает.",
+                    "IsDebuff": false,
+                    "GlowColor": "Green",
+                    "Duration": 60000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 20,
+                    "Effects": {
+                        "MaxStamina": 10,
+                        "Speed": 0
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "resting"
+                    },
+                    "ActionsOnApply": [
+                        "Spiderbuttons.BETAS_DelayedAction \"Spiderbuttons.BETAS_TriggerAction HarveyMod_Trigger_RestCheck\" 60000"
+                    ]
+                },
+                // ================== БАФФ СПОКОЙСТВИЯ В БОЛЬНИЦЕ ==================
+                "buffCalmingAtHospitalWithHarvey": {
+                    "Id": "buffCalmingAtHospitalWithHarvey",
+                    "DisplayName": "Спокойствие в больнице",
+                    "Description": "Вы находитесь в больнице рядом с Харви. Его присутствие помогает вам успокоиться.",
+                    "IsDebuff": false,
+                    "GlowColor": "Blue",
+                    "Duration": 60000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 21,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "Speed": 2,
+                        "Defense": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "calming"
+                    },
+                    "ActionsOnApply": [
+                        "Spiderbuttons.BETAS_DelayedAction \"Spiderbuttons.BETAS_TriggerAction HarveyMod_Trigger_ThunderCalmingCheck\" 60000"
+                    ]
+                },
+                "buffOverworkBreak": {
+                    "Id": "buffOverworkBreak",
+                    "DisplayName": "Пауза отдыха",
+                    "Description": "Спокойный перерыв. Останься в безопасном месте и позволь себе выдохнуть.",
+                    "IsDebuff": false,
+                    "GlowColor": "LightBlue",
+                    "Duration": 60000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 25,
+                    "Effects": {
+                        "StaminaRegen": 1
+                    },
+                    "ActionsOnApply": [
+                        "Spiderbuttons.BETAS_DelayedAction \"Spiderbuttons.BETAS_TriggerAction {{ModId}}_triggerOverworkBreakComplete\" 60000",
+                    ],
+                    "CustomFields": {
+                        "HarveySystem": "OverworkBreak"
+                    }
+                },
+
+                // ================== БАФФ СВЕТА И БЕЗОПАСНОСТИ ==================
+                "buffLightAndSafe": {
+                    "Id": "buffLightAndSafe",
+                    "DisplayName": "Свет и безопасность",
+                    "Description": "Вы находитесь в хорошо освещённом месте. Тьма больше не пугает вас.",
+                    "IsDebuff": false,
+                    "GlowColor": "Yellow",
+                    "Duration": 600000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 26,
+                    "Effects": {
+                        "Defense": 2,
+                        "LuckLevel": 1
+                    },
+                    "CustomFields": {
+                        "HarveySystem": "LightAndSafe"
+                    }
+                }
+            }
+        }
+    ]
+}

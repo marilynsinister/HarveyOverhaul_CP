@@ -1,0 +1,568 @@
+{
+    "Changes": [
+      {
+        "LogName": "AddStressBuffs",
+        "Action": "EditData", 
+        "Target": "Data/Buffs",
+        "Entries": {
+          // ================== СТРЕССОВЫЕ БАФФЫ ==================
+          "buffStressTired": {
+            "DisplayName": "Усталость",
+            "Description": "Вы чувствуете усталость.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 2880000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 1,
+            "Effects": {
+              "MaxStamina": -10
+            }
+          },
+          "buffStressLonely": {
+            "DisplayName": "Одиночество",
+            "Description": "Вы чувствуете себя одиноко.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 4320000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 2,
+            "Effects": {
+              "Speed": -1
+            }
+          },
+          "buffStressThunder": {
+            "DisplayName": "Пугающая гроза",
+            "Description": "Вы всё ещё дрожите после грома.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 1440000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 4,
+            "Effects": {
+              "Speed": 1,
+              "Defense": -1
+            }
+          },
+          "buffStressHunger": {
+            "DisplayName": "Слабость от голода",
+            "Description": "Вы не ели слишком долго.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 360000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 6,
+            "Effects": {
+              "StaminaRegen": -1,
+              "Speed": -1
+            }
+          },
+          "buffStressOverwork": {
+            "DisplayName": "Переутомление",
+            "Description": "Ваше тело устало от работы без отдыха.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 7200000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 3,
+            "Effects": {
+              "MaxStamina": -20,
+              "Speed": -2
+            }
+          },
+          "buffStressNoSleep": {
+            "DisplayName": "Недосып",
+            "Description": "Вы спали слишком мало.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 1440000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 13,
+            "Effects": {
+              "LuckLevel": -1,
+              "Speed": -2
+            }
+          },
+          "buffStressTooCold": {
+            "DisplayName": "Переохлаждение",
+            "Description": "Вы промокли и продрогли на ветру.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 720000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 11,
+            "Effects": {
+              "Speed": -2,
+              "Defense": -1
+            }
+          },
+          "buffStressDarkness": {
+            "DisplayName": "Боязнь темноты",
+            "Description": "В темноте всё кажется опаснее.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 180000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 18,
+            "Effects": {
+              "Defense": -1
+            }
+          },
+          "buffDarknessLevel1": {
+            "DisplayName": "Боязнь темноты (легкая)",
+            "Description": "Темнота вызывает легкое беспокойство. Защита снижена.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": -2,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 18,
+            "Effects": {
+              "Defense": -1
+            }
+          },
+          "buffDarknessLevel2": {
+            "DisplayName": "Боязнь темноты (сильная)",
+            "Description": "Страх темноты растет. Тени кажутся зловещими. Защита сильно снижена.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": -2,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 18,
+            "Effects": {
+              "Defense": -2
+            }
+          },
+          "buffDarknessLevel3": {
+            "DisplayName": "Фобия темноты",
+            "Description": "Парализующий страх темноты. Сердце колотится. Защита критически снижена.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": -2,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 18,
+            "Effects": {
+              "Defense": -3
+            }
+          },
+          "buffDimLight": {
+            "DisplayName": "Приглушенный свет",
+            "Description": "Мягкий свет помогает привыкнуть к темноте. Терапия работает.",
+            "IsDebuff": false,
+            "GlowColor": "Yellow",
+            "Duration": -2,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 0,
+            "Effects": {
+            }
+          },
+          "buffHarveyLantern": {
+            "DisplayName": "Свет надежды",
+            "Description": "Виртуальный фонарь от Харви освещает путь. Его поддержка придаёт сил.",
+            "IsDebuff": false,
+            "GlowColor": "LightBlue",
+            "Duration": -2,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 0,
+            "Effects": {
+              "Defense": 2
+            }
+          },
+          "buffDarknessOvercome": {
+            "DisplayName": "Преодоление",
+            "Description": "Ты преодолела страх темноты! Ночь больше не пугает. ПЕРМАНЕНТНЫЙ БОНУС.",
+            "IsDebuff": false,
+            "GlowColor": "Gold",
+            "Duration": -2,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 0,
+            "Effects": {
+              "Defense": 1
+            }
+          },
+          "buffStressSocial": {
+            "DisplayName": "Социальная тревожность",
+            "Description": "Социальный стресс, критика и холод усилили вашу тревогу.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 9000000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 17,
+            "Effects": {
+              "Defense": -1
+            }
+          },
+          "buffStressBadDream": {
+            "DisplayName": "Тревожный сон",
+            "Description": "Вы проснулись в тревоге после ночных кошмаров.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 360000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 12,
+            "Effects": {
+              "MaxStamina": -10,
+              "Speed": -1
+            }
+          },
+          "buffStressAnxietyWave": {
+            "DisplayName": "Приступ тревоги",
+            "Description": "Сердце колотится, в голове шум. Всё кажется слишком.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 240000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 0,
+            "Effects": {
+              "Speed": 2,
+              "Defense": -2
+            }
+          },
+       
+          "buffStressBreakdown": {
+            "DisplayName": "Эмоциональный срыв",
+            "Description": "Вы не можете совладать с эмоциями. Паника поглощает вас.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 14400000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 8,
+            "Effects": {
+              "Speed": -3,
+              "Defense": -3,
+              "LuckLevel": -2,
+              "MaxStamina": -40
+            }
+          },
+          "buffStressCollapse": {
+            "DisplayName": "Коллапс",
+            "Description": "Ваше тело не слушается. Всё словно во сне.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 21600000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 7,
+            "Effects": {
+              "Speed": -5,
+              "MaxStamina": -50,
+              "LuckLevel": -3
+            }
+          },
+         
+          "buffStressDespair": {
+            "DisplayName": "Отчаяние",
+            "Description": "Ничего не имеет смысла. Всё будто потеряло цвет.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 28800000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 3,
+            "Effects": {
+              "Speed": -3,
+              "LuckLevel": -3,
+              "Defense": -2
+            }
+          },
+         
+          "buffStressPanic": {
+            "DisplayName": "Паническая атака",
+            "Description": "Сердце колотится, дыхание сбивается. Мир кружится вокруг.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 180000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 0,
+            "Effects": {
+              "Speed": -3,
+              "Defense": -3,
+              "MaxStamina": -40
+            }
+          },
+          "buffSleepDeprivation": {
+            "DisplayName": "Критический недосып",
+            "Description": "Хроническое нарушение режима сна. Харви настаивает на немедленной коррекции.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 10080000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 13,
+            "Effects": {
+              "Speed": -1,
+              "LuckLevel": -2,
+              "MaxStamina": -20
+            }
+          },
+          
+          "buffStressCritical": {
+            "DisplayName": "Критический стресс",
+            "Description": "Состояние требует немедленного медицинского вмешательства. Харви должен начать лечение.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 7200000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 23,
+            "Effects": {
+              "Speed": -4,
+              "MaxStamina": -60,
+              "LuckLevel": -4,
+              "Defense": -3,
+              "Attack": -2
+            }
+          },
+
+          // ================== НОВЫЕ БАФФЫ ДЛЯ КОМБИНАЦИЙ СТРЕССА ==================
+          "buffStressExhaustion": {
+            "DisplayName": "Полное истощение",
+            "Description": "Комбинация усталости, одиночества и недосыпа полностью истощила вас.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 14400000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 14,
+            "Effects": {
+              "Speed": -3,
+              "MaxStamina": -35,
+              "LuckLevel": -2,
+              "Defense": -2
+            }
+          },
+
+          "buffStressPhysicalDepletion": {
+            "DisplayName": "Физическое истощение",
+            "Description": "Голод, переутомление и холод подорвали ваши силы.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 10800000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 15,
+            "Effects": {
+              "Speed": -2,
+              "MaxStamina": -30,
+              "Defense": -3,
+              "Attack": -1
+            }
+          },
+
+          "buffStressNightTerror": {
+            "DisplayName": "Ночные кошмары",
+            "Description": "Гроза, темнота и кошмары создали состояние постоянного страха.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 7200000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 16,
+            "Effects": {
+              "Speed": -1,
+              "MaxStamina": -20,
+              "LuckLevel": -2,
+              "Defense": -2
+            }
+          },
+
+          "buffStressBurnout": {
+            "DisplayName": "Эмоциональное выгорание",
+            "Description": "Усталость, голод и социальный стресс привели к полному истощению.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 12600000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 18,
+            "Effects": {
+              "Speed": -2,
+              "MaxStamina": -30,
+              "LuckLevel": -3,
+              "Defense": -2
+            }
+          },
+
+          "buffStressMentalBreakdown": {
+            "DisplayName": "Психический срыв",
+            "Description": "Умственная усталость, тревога и паранойя привели к психическому срыву.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 18000000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 19,
+            "Effects": {
+              "Speed": -3,
+              "MaxStamina": -45,
+              "LuckLevel": -3,
+              "Defense": -3,
+              "Attack": -2
+            }
+          },
+
+          "buffStressPanicCollapse": {
+            "DisplayName": "Панический коллапс",
+            "Description": "Эмоциональный срыв и паника привели к полному коллапсу.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 21600000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 20,
+            "Effects": {
+              "Speed": -4,
+              "MaxStamina": -55,
+              "LuckLevel": -4,
+              "Defense": -3
+            }
+          },
+
+          "buffStressDespairCollapse": {
+            "DisplayName": "Коллапс отчаяния",
+            "Description": "Коллапс и отчаяние создали критическое состояние.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 25200000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 21,
+            "Effects": {
+              "Speed": -5,
+              "MaxStamina": -60,
+              "LuckLevel": -4,
+              "Defense": -3,
+              "Attack": -2
+            }
+          },
+
+          "buffStressPanicBreakdown": {
+            "DisplayName": "Панический срыв",
+            "Description": "Тревога, паника и критический недосып привели к психическому срыву.",
+            "IsDebuff": true,
+           "GlowColor": null,
+            "Duration": 16200000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 22,
+            "Effects": {
+              "Speed": -3,
+              "MaxStamina": -40,
+              "LuckLevel": -3,
+              "Defense": -3,
+              "Attack": -1
+            }
+          },
+
+          "buffStressParanoidCollapse": {
+            "DisplayName": "Параноидальный коллапс",
+            "Description": "Умственная усталость, паранойя и паника привели к коллапсу.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 19800000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 23,
+            "Effects": {
+              "Speed": -4,
+              "MaxStamina": -50,
+              "LuckLevel": -3,
+              "Defense": -3,
+              "Attack": -2
+            }
+          },
+
+          "buffStressCriticalExhaustion": {
+            "DisplayName": "Критическое истощение",
+            "Description": "Эмоциональный срыв, коллапс и критический недосып создали состояние критического истощения.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 28800000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 24,
+            "Effects": {
+              "Speed": -5,
+              "MaxStamina": -65,
+              "LuckLevel": -5,
+              "Defense": -4,
+              "Attack": -3
+            }
+          },
+
+          // ================== ДОПОЛНИТЕЛЬНЫЕ БАФФЫ СТРЕССА ==================
+          "buffStressNumbness": {
+            "DisplayName": "Эмоциональное онемение",
+            "Description": "Вы не чувствуете эмоций. Это защитная реакция организма.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 14400000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 20,
+            "Effects": {
+              "MaxStamina": -30,
+              "Speed": -2,
+              "Luck": -3
+            }
+          },
+
+          "buffStressShadowParanoia": {
+            "DisplayName": "Паранойя и страх теней",
+            "Description": "Вы видите угрозы в тенях. Реальность искажается.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 14400000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 12,
+            "Effects": {
+              "MaxStamina": -35,
+              "Speed": -3,
+              "Defense": -2
+            }
+          },
+
+          "buffStressFreezeResponse": {
+            "DisplayName": "Реакция заморозки",
+            "Description": "В стрессовых ситуациях вы замираете. Контроль над телом потерян.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 14400000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 14,
+            "Effects": {
+              "MaxStamina": -20,
+              "Speed": -3
+            }
+          },
+
+          "buffStressIsolation": {
+            "DisplayName": "Добровольная изоляция",
+            "Description": "Вы добровольно изолируетесь от людей. Это опасно для психики.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 14400000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 15,
+            "Effects": {
+              "MaxStamina": -25,
+              "Luck": -3
+            }
+          },
+
+          "buffStressCriticism": {
+            "DisplayName": "Самокритика",
+            "Description": "Вы постоянно критикуете себя. Это разрушает вашу самооценку.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 14400000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 54,
+            "Effects": {
+              "MaxStamina": -20,
+              "Luck": -2,
+              "Defense": -1
+            }
+          },
+
+          "buffStressMentalFatigue": {
+            "DisplayName": "Умственная усталость",
+            "Description": "Ваш разум истощён. Когнитивные способности снижены.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": 14400000,
+            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "IconSpriteIndex": 11,
+            "Effects": {
+              "MaxStamina": -30,
+              "Speed": -2,
+              "Luck": -2
+            }
+          }
+        }
+      }
+    ]
+  }

@@ -1,0 +1,399 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries": {
+                "eventHarveyFirstVisit/Time 600 1200/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstMeeting/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstVisit/GameStateQuery DAYS_PLAYED 3": "
+    continue/
+    64 15/
+    farmer 64 16 2 Harvey 64 18 0/
+    skippable/
+    pause 600/
+    speak Harvey \"Привет! Как дела? Просто хотел проверить, как ты себя чувствуешь.$h\"/
+    message \"Я... я в порядке, спасибо...\"/
+    speak Harvey \"Ты выглядишь немного уставшей. Долгая дорога?$s\"/
+    message \"Да, немного...\"/
+    speak Harvey \"Понимаю. Если тебе понадобится помощь - я всегда рядом.$h#$b#Но только если ты сама захочешь.$l\"/
+    quickQuestion ...#Спасибо за заботу#Я справлюсь сама#Мне нужно время привыкнуть(break)friendship Harvey 25\\speak Harvey \"Рад, что ты это ценишь.$h#$b#Но не стесняйся говорить, если что-то не так.$l\"\\emote farmer 60\\message \"Хорошо... Спасибо.\"\\speak Harvey \"Не за что. Просто забочусь о своих пациентах.$h\"\\action addConversationTopic topicHarveyFirstVisitAgree 7(break)friendship Harvey 15\\speak Harvey \"Конечно, ты сильная.$h#$b#Но помни - просить о помощи не стыдно.$l\"\\message \"Спасибо за понимание...\"\\speak Harvey \"Всегда пожалуйста.$h#$b#Если передумаешь - я здесь.$l\"\\action addConversationTopic topicHarveyFirstVisitNeutral 7(break)friendship Harvey 10\\speak Harvey \"Конечно, я понимаю.$s#$b#Каждому нужно время, чтобы привыкнуть к новому месту.$l\"\\message \"Да, именно так...\"\\speak Harvey \"Я буду рядом, когда будешь готова.$h#$b#Никакого давления.$l\"\\action addConversationTopic topicHarveyFirstVisitRefused 7/
+    pause 1000/
+    globalFade/
+    viewport -1000 -1000/
+    action addConversationTopic topicHarveyFirstVisit 2/
+    end
+","eventHarveySecondVisit/Time 600 1200/GameStateQuery DAYS_PLAYED 7/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitAgree/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitNeutral/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitRefused/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstVisit/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveySecondVisit": "
+    continue/
+    64 15/
+    farmer 64 16 2 Harvey 64 18 0/
+    skippable/
+    pause 600/
+    speak Harvey \"Привет! Я принёс тебе витаминный чай. Он поможет восстановить силы.$h\"/
+    addItem 614 1/
+    message \"Спасибо, но я не болею...\"/
+    speak Harvey \"Конечно, ты здорова!$h#$b#Но витамины никогда не помешают, особенно в новом месте.$l\"/
+    message \"Харви осторожно кладёт пакетик чая ей в карман.\"/
+    speak Harvey \"Попробуй, если захочешь. Никаких обязательств.$h\"/
+    quickQuestion ...#Попробую чай#Спасибо, но пока не хочу#Может быть позже(break)friendship Harvey 20\\speak Harvey \"Отлично! Надеюсь, тебе понравится.$h\"\\message \"Спасибо за заботу...\"\\speak Harvey \"Всегда пожалуйста.$l\"\\action addConversationTopic topicHarveySecondVisitAgree 7(break)friendship Harvey 15\\speak Harvey \"Конечно, никаких проблем.$h#$b#Чай будет ждать, когда ты будешь готова.$l\"\\message \"Спасибо за понимание...\"\\speak Harvey \"Конечно. Я не хочу давить.$h\"\\action addConversationTopic topicHarveySecondVisitNeutral 7(break)friendship Harvey 10\\speak Harvey \"Хорошо, я понимаю.$s#$b#Каждому нужно время.$l\"\\message \"Да, именно так...\"\\speak Harvey \"Я буду рядом, когда захочешь.$h\"\\action addConversationTopic topicHarveySecondVisitRefused 7/
+    pause 1000/
+    globalFade/
+    viewport -1000 -1000/
+    addConversationTopic topicHarveySecondVisit 10/
+    end
+",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "Entries": {
+                "eventHarveyEmergencyCare": "
+    none/
+    -1000 -1000/
+    farmer 1000 1000 0 Harvey 1000 1000 0/
+    message \"Всё плывёт перед глазами...\"/
+    message \"Ты чувствуешь, как кто-то подхватывает тебя на руки...\"/
+    message \"Ты приходишь в себя в клинике. Харви в белом халате с пятнами крови.\"/
+    changeLocation Hospital/
+    pause 200/
+    warp farmer 14 6/
+    positionOffset farmer 0 10/
+    faceDirection farmer 2/
+    animate farmer false true 1000 4 5/
+    pause 200/
+    warp Harvey 15 6/
+    faceDirection Harvey 3/
+    viewport 14 6/
+    speak Harvey \"ЧТО ТЫ НАДЕЛАЛА?!$a\"/
+    pause 500/
+    speak Harvey \"Извини... Я не хотел кричать. Но ты чуть не погибла.$s\"/
+    animate Harvey true true 1000 40 41/
+    speak Harvey \"Дай я осмотрю раны...$s\"/
+    pause 200/
+    emote farmer 28/
+    mail mailHarveyPostTrauma/
+    globalFade/
+    viewport -1000 -1000/
+    end
+","eventHarveyExhaustion": "
+    none/
+    -1000 -1000/
+    farmer 1000 1000 1 Harvey 1000 1000 1/
+    ambientLight 0 0 0/
+    pause 1000/
+    message \"Твоё дыхание становится прерывистым, руки дрожат, а перед глазами пляшут чёрные точки...\"/
+    message \"Последнее, что ты видишь - как Харви резко бросает медицинские карты и бежит к тебе...\"/
+    message \"Ты приходишь в себя в клинике.\"/
+    changeLocation Hospital/
+    ignoreCollisions farmer/
+    warp farmer 20 5/
+    faceDirection farmer 2/
+    animate farmer true true 3000 4 5/
+    positionOffset farmer 32 -52/
+    warp Harvey 19 5/
+    faceDirection Harvey 1/
+    viewport 14 6/
+    speak Harvey \"*бледнее обычного* Чёрт возьми! *крепко сжимает твоё запястье* Пульс нитевидный, давление 80/50...$a\"/
+    pause 300/
+    emote Harvey 12/
+    pause 500/
+    speak Harvey \"Мару! Немедленно глюкозу 40% и кордиамин!$u\"/
+    pause 300/
+    speak Maru \"Да, доктор!\"/
+    animate Harvey false true 1000 22 20 21 20/
+    playSound dwop/
+    pause 300/
+    speak Harvey \"*вводит инъекцию* Это поможет тебе прийти в себя... Дыши глубже. Вот так.$a\"/
+    speak Harvey \"*голос дрожит от гнева* Ты... ты могла впасть в гипогликемическую кому!$a\"/
+    pause 300/
+    emote Harvey 16/
+    pause 300/
+    speak Harvey \"Я нашел тебя без сознания... *стискивает зубы* Это больше не повторится.$a\"/
+    pause 1000/
+    speak Harvey \"*вытирает твой лоб влажной салфеткой* Всё хорошо... ты в безопасности...$l#$b#Тебе нужно отдохнуть. *ставит капельницу* Не бойся. $l\"/
+    message \"Ты слабо пытаешься протестовать...\"/
+    speak Harvey \"*неожиданно мягко* Пожалуйста... *отходит на шаг, чтобы не давить* Дай мне позаботиться о тебе.$0#$b#Спи сейчас. *приглушает свет* Я буду здесь, когда проснёшься.$0\"/
+    faceDirection Harvey 0/
+    pause 1000/
+    animate Harvey false false 1000 8 19 8 4/
+    pause 2000/
+    AmbientLight 140 140 140/
+    pause 1000/
+    addLantern 470 19 4 3/
+    pause 1000/
+    action AddBuff buffHarveyDropper 15000/
+    addConversationTopic topicHarveyExhaustion 3/
+    pause 1000/
+    globalFade/
+    viewport -1000 -1000/
+    end","eventHarveyCheckup/Time 1400 1600/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicAgreedCheckup/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting/GameStateQuery DAYS_PLAYED 2": "
+                    none/
+                    4 6/
+                    farmer 4 6 1 Harvey 4 5 3/
+                    skippable/
+                    speak Harvey \"*поднимает голову от бумаг* А, вы пришли! *улыбается* Проходите, располагайтесь.$h#$b#*указывает на кушетку* Садитесь, пожалуйста. Это займет совсем немного времени.$l\"/
+                    pause 1000/
+                    move farmer 1 0 0/
+                    pause 200/
+                    move farmer 0 -2 2/
+                    pause 100/
+                    showFrame farmer true 117/
+                    pause 1000/
+                    pause 1000/
+                    speak Harvey \"*моет руки* Итак, как вы себя чувствуете? Есть жалобы?$s\"/
+                    message \"Вроде все нормально...\"/
+                    pause 1000/
+                    move Harvey 1 0 0/
+                    speak Harvey \"*кивает* Хорошо. Тем не менее, давайте проверим основные показатели.$h#$b#*достает стетоскоп* Можно послушать сердце?$s\"/
+                    emote farmer 32/
+                    message \"Конечно...\"/
+                    speak Harvey \"*осторожно прикладывает стетоскоп* Дышите глубоко... Хорошо.$l#$b#*убирает стетоскоп* Ритм нормальный, хотя немного учащенный. Это от волнения?$s\"/
+                    message \"Наверное...\"/
+                    emote farmer 28/
+                    speak Harvey \"*мягко улыбается* Понимаю. Многие так себя чувствуют.$l#$b#Но видите - ничего страшного. *измеряет давление* Сейчас проверим давление.$u\"/
+                    pause 1000/
+                    speak Harvey \"*изучает показания* Немного повышено, но в пределах нормы.$s#$b#*садится напротив* А теперь честно - вы регулярно питаетесь?$0\"/
+                    question fork1 \"#Да, стараюсь#Не всегда получается\"/
+                    fork irregularEating/
+                    speak Harvey \"*с одобрением* Замечательно. Это очень важно для восстановления.$h#$b#Вы уже выглядите лучше, чем при знакомстве.$l\"/
+                    speak Harvey \"Еще несколько советов - пейте больше воды, особенно в жару.$s#$b#И не работайте до изнеможения. Отдых тоже важен.$l\"/
+                    emote Harvey 32/
+                    speak Harvey \"*встает* Ну что ж, осмотр окончен. Все показатели в норме.$h#$b#*мягко* Вы храбрая девушка. Не каждый решится начать новую жизнь.$l\"/
+                    message \"Иногда не чувствую себя храброй...\"/
+                    emote farmer 28/
+                    speak Harvey \"*тепло* А храбрость не в том, чтобы не бояться.$l#$b#Она в том, чтобы продолжать, несмотря на страх.$l\"/
+                    pause 1000/
+                    speak Harvey \"*улыбается* Приходите через месяц на контрольный осмотр?$h#$b#Или раньше, если что-то будет беспокоить.$s\"/
+                    message \"Хорошо... спасибо за заботу.\"/
+                    speak Harvey \"*краснеет* Это моя работа... и удовольствие.$l#$b#*провожает к выходу* Берегите себя!$h#$b#Заходите еще! И не забывайте про витамины.$l\"/
+                    addConversationTopic topicAfterCheckup 5/
+                    removeConversationTopic topicAgreedCheckup/
+                    globalFade/
+                    viewport -1000 -1000/
+                    pause 500/
+                    end position 10 17","irregularEating": "
+                    message \"Иногда забываю поесть... работы много...\"/
+                    emote Harvey 12/
+                    speak Harvey \"*обеспокоенно* Понимаю, ферма требует много сил.$s#$b#Но организм не может работать на пустом месте. *встает* Минуточку.$u\"/
+                    playSound backpackIN/
+                    speak Harvey \"*достает небольшую баночку* Это витамины группы B. Помогут поддержать энергию.$l#$b#Принимайте утром, после завтрака. Обязательно после еды!$s\"/
+                    message \"Спасибо... сколько я должна?\"/
+                    speak Harvey \"*машет рукой* Ничего. Это... профилактика.$h#$b#*смущенно* Считайте подарком соседа.$l\"/
+                    speak Harvey \"Еще несколько советов - пейте больше воды, особенно в жару.$s#$b#И не работайте до изнеможения. Отдых тоже важен.$l\"/
+                    emote Harvey 32/
+                    speak Harvey \"*встает* Ну что ж, осмотр окончен. Все показатели в норме.$h#$b#*мягко* Вы храбрая девушка. Не каждый решится начать новую жизнь.$l\"/
+                    message \"Иногда не чувствую себя храброй...\"/
+                    emote farmer 28/
+                    speak Harvey \"*тепло* А храбрость не в том, чтобы не бояться.$l#$b#Она в том, чтобы продолжать, несмотря на страх.$l\"/
+                    pause 1000/
+                    speak Harvey \"*улыбается* Приходите через месяц на контрольный осмотр?$h#$b#Или раньше, если что-то будет беспокоить.$s\"/
+                    message \"Хорошо... спасибо за заботу.\"/
+                    speak Harvey \"*краснеет* Это моя работа... и удовольствие.$l#$b#*провожает к выходу* Берегите себя!$h#$b#Заходите еще! И не забывайте про витамины.$l\"/
+                    addConversationTopic topicAfterCheckup 5/
+                    removeConversationTopic topicAgreedCheckup/
+                    globalFade/
+                    viewport -1000 -1000/
+                    pause 500/
+                    end position 10 17",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/BusStop",
+            "Entries": {
+                "eventHarveyFirstMeeting/Time 0600 2600/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstMeeting": "
+                    continue/
+                    20 23/ 
+                    farmer 20 23 1 Harvey 27 23 3/
+                    skippable/
+                    move farmer 3 0 1 true/
+                    move Harvey -3 0 3 true/
+                    emote Harvey 32/
+                    emote farmer 32/
+                    pause 500/
+                    addConversationTopic topicFirstMeeting 7/
+                    speak Harvey \"Здравствуйте! Вы... это вы купили старую ферму?$0#$b# *улыбается, но взгляд становится обеспокоенным* Добро пожаловать в долину...$h\"/
+                    emote Harvey 8/
+                    pause 400/
+                    speak Harvey \"*нерешительно* Простите, но... вы хорошо себя чувствуете? У вас очень бледный цвет лица...$s\"/
+                    message \"Я... просто устала от переезда...\"/
+                    emote farmer 28/
+                    startJittering/
+                    speak Harvey \"*мягко* Понимаю, переезд - это стресс. Но вы дрожите... *снимает пиджак*$s#$b#Возьмите, пожалуйста. На улице довольно прохладно.$l\"/
+                    stopJittering/
+                    message \"Спасибо... но не обязательно...\"/
+                    speak Harvey \"*настойчиво, но мягко* Обязательно. *накидывает пиджак на плечи*$l#$b#Вы не забываете есть? Вы выглядите... очень хрупкой.$s\"/
+                    emote farmer 60/
+                    message \"Сегодня еще не успела поесть...\"/
+                    emote Harvey 12/
+                    speak Harvey \"*обеспокоенно* У меня есть кофе и бутерброды. Я всегда беру с собой запас - привычка врача.$h\"/
+                    playSound backpackIN/
+                    speak Harvey \"*протягивает контейнер* Это не лечение, просто... человеческая забота.$l#$b#Съешьте хотя бы половину, ладно?$s\"/
+                    message \"Вы... врач? И так заботитесь о незнакомцах?\"/
+                    emote Harvey 32/
+                    speak Harvey \"*смущенно* Да, местный доктор. И... *тише* не могу пройти мимо, когда вижу, что кто-то плохо себя чувствует.$s\"/
+                    pause 800/
+                    speak Harvey \"Вы напоминаете мне... *останавливается* Неважно.$s#$b#Главное - вам нужно восстановиться после переезда.$l\"/
+                    emote Harvey 28/
+                    message \"Кого я вам напоминаю?\"/
+                    speak Harvey \"*колеблется* Когда я работал в городской больнице... встречал людей, которые забывали заботиться о себе.$s#$b#*мягко* Но об этом потом. Сейчас важнее ваше самочувствие.$l\"/
+                    question fork1 \"#Согласиться поесть#Вежливо отказаться\"/
+                    fork declineFood/
+                    speak Harvey \"*с облегчением* Отлично. Ешьте медленно, не торопитесь.$h#$b#А пока расскажите - как вам наша долина? Надеюсь, соседи встретили дружелюбно?$l\"/
+                    message \"Все очень добрые... но я еще толком никого не встретила...\"/
+                    speak Harvey \"*улыбается* Тогда я первый официальный сосед.$h#$b#Если что-то понадобится - лекарства, совет, или просто поговорить - клиника всегда открыта.$l\"/
+                    emote Harvey 32/
+                    speak Harvey \"*встает* А сейчас вам лучше отдохнуть. Организм восстанавливается только во сне.$s#$b#*мягко* Завтра зайдите в клинику, я дам вам витамины. Для адаптации.$l\"/
+                    message \"Спасибо... вы очень добрый...\"/
+                    emote farmer 32/
+                    speak Harvey \"*смущенно краснеет* Просто... берегите себя, хорошо?$s#$b#*тихо* Увидимся завтра.$l\"/
+                    addConversationTopic topicConcernForHealth 4/
+                    globalFade/
+                    viewport -1000 -1000/
+                    pause 500/
+                    end dialogue Harvey \"Рад был познакомиться. Отдыхайте хорошо.$l\"/",
+                "declineFood": "
+                    message \"Спасибо, но я справлюсь сама...\"/
+                    emote Harvey 12/
+                    speak Harvey \"*озабоченно* Понимаю... но все же...$s#$b#*протягивает термос* Хотя бы кофе? Вам нужно согреться.$s\"/
+                    message \"Ну... ладно, только кофе...\"/
+                    speak Harvey \"*с облегчением* Хорошо. *наливает в крышку-кружку*$l#$b#Пейте медленно, он горячий.$h\"/
+                    emote farmer 32/
+                    speak Harvey \"Знаете что... *колеблется* может, это слишком настойчиво, но...$s#$b#Не хотите зайти в клинику завтра? Просто проверить давление, пульс...$u\"/
+                    message \"Я не болею...\"/
+                    speak Harvey \"*мягко* Знаю. Но переезд - это стресс для организма.$s#$b#Пусть это будет... знакомство с местным врачом?$h\"/
+                    question fork2 \"#Согласиться на осмотр#Отказаться\"/
+                    fork refuseCheckup/
+                    speak Harvey \"*улыбается* Замечательно. Завтра после обеда удобно?$h#$b#Ничего серьезного, просто базовые показатели.$l\"/
+                    addConversationTopic topicAgreedCheckup 5/
+                    speak Harvey \"*заботливо* А пока - отдыхайте. И ешьте регулярно, пожалуйста.$l#$b#*смущенно* Прости, если показался навязчивым. Профессиональная деформация.$s\"/
+                    message \"Нет, вы... очень внимательный. Спасибо.\"/
+                    emote Harvey 32
+                    speak Harvey \"*тепло улыбается* Добро пожаловать в Стардью Вэлли. Надеюсь, вам здесь понравится.$h\"/
+                    globalFade/
+                    viewport -1000 -1000/
+                    pause 700/
+                    end dialogue Harvey \"Берегите себя. Увидимся!$l\"",
+                "refuseCheckup": "
+                    speak Harvey \"*кивает с пониманием* Конечно, не настаиваю.$s#$b#Но если что-то понадобится - клиника рядом с магазином Пьера.$l\"/
+                    addConversationTopic topicRefusedCheckup 3/         
+                    globalFade/
+                    viewport -1000 -1000/
+                    pause 700/
+                    end dialogue Harvey \"Берегите себя. Увидимся!$l\""
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/SkullCave",
+            "Entries": {
+                // Событие в пещере черепа - более серьёзное предупреждение
+                "eventHarveySkullCavePrevention": "
+    continue/
+    5 5/
+    farmer 5 5 0 Harvey 7 7 0/
+    skippable/
+    viewport 6 5 true/
+    pause 1500/
+    move Harvey 0 -2 3/
+    proceedPosition Harvey/
+    pause 100/
+    faceDirection farmer 1/
+    pause 100/
+    speak Harvey \"@! Немедленно выйди отсюда!$a#$b#Пещера черепа — не место для игр! Здесь можно умереть!$a\"/
+    pause 1800/
+    emote Harvey 12/
+    speak Harvey \"Ты понимаешь, что тут происходит?$a#$b#Монстры, которые могут убить за секунду! Яд, проклятия, смертельные ловушки!?$a\"/
+    pause 1500/
+    move Harvey -1 0 3/
+    proceedPosition Harvey/
+    speak Harvey \"А ты приходишь сюда одна! Без защиты! Без подготовки!$a#$b#Без... без меня.$s\"/
+    pause 1200/
+    speak Harvey \"Если что-то случится с тобой здесь...$s#$b#Если я потеряю тебя в этом проклятом месте... Я себе этого не прощу.$s\"/
+    pause 1500/
+    speak Harvey \"Домой. Сейчас же! И больше сюда не возвращайся без меня. Обещай мне это!$a\"/
+    quickQuestion fork1 \"#Обещаю#Но мне нужны ресурсы...\"/
+    fork HarveySkullPromise/
+    speak Harvey \"Спасибо. Теперь я буду спокоен. Пойдём домой.$l\"/
+    globalFade/
+    viewport -1000 -1000/
+    end
+","HarveySkullPromise": "
+    speak Harvey \"Ресурсы?!$a#$b#Твоя жизнь дороже любых ресурсов!$a#$b#@, пожалуйста... не заставляй меня волноваться.$s\"/
+    emote Harvey 28/
+    speak Harvey \"Хорошо. Если тебе так нужно сюда ходить ...$s#$b#обещай быть осторожнее...И всегда сообщай мне, когда собираешься сюда...$l\"/
+    end"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Mine",
+            "Entries": {
+                "eventHarveyMineInterception": "
+    EarthMine/
+    17 7/
+    farmer 17 7 0 Harvey 17 10 0/
+    skippable/
+    pause 800/
+    speak Harvey \"Стой.$a#$b#Стой прямо сейчас.$a\"/
+    pause 600/
+    move Harvey 0 -2 0/
+    faceDirection farmer 2/
+    emote Harvey 12/
+    speak Harvey \"Я же говорил тебе - никаких шахт во время лечения!$a#$b#Ты думаешь, это игра?$a\"/
+    pause 400/
+    emote farmer 8/
+    message \"Я... я просто хотела...\"/
+    speak Harvey \"Хотела что? Усугубить стресс? Получить еще раны?$a#$b#*осматривает тебя* Посмотри на себя - ты вся дрожишь!$u\"/
+    pause 800/
+    animate Harvey false true 100 19/
+    speak Harvey \"*снимает с себя куртку и накидывает на фермера*#$b#Давай вернёмся домой — тебе нужен покой.$a\"/
+    pause 600/
+    message \"Но мне нужна руда для...\"/
+    speak Harvey \"Руда?$8 РУДА?!#$b#Единственное, что тебе сейчас нужно - это покой!$a\"/
+    pause 1000/
+    speak Harvey \"*осторожно берёт за запястья — проверяет пульс*#$b#Твои ладони ледяные...#$b#Пульс учащённый...#$b#Дыхание поверхностное...$s\"/
+    pause 1200/
+    speak Harvey \"@, ты на грани нервного срыва.$s#$b#И ты хочешь спуститься в тёмную, опасную шахту?$s\"/
+    pause 800/
+    emote Harvey 28/
+    speak Harvey \"Я не хочу, чтобы ты снова навредила себе.$a#$b#Не тогда, когда ты под моей опекой.$a\"/
+    pause 1000/
+    message \"Я не маленький ребёнок...\"/
+    speak Harvey \"Нет, ты не ребёнок.$0#$b#Ты - моя пациентка.#$b#И пока ты не выздоровеешь полностью, я предложу план лечения, но окончательное слово — за тобой.$a\"/
+    pause 1200/
+    move Harvey -1 0 0/
+    move Harvey 0 -1 1/
+    speak Harvey \"*достаёт из сумки термос*#$b#Вот успокаивающий чай.#$b#Пей здесь.$0\"/
+    addItem 614 1/
+    pause 800/
+    emote farmer 60/
+    speak Harvey \"Знаешь, что меня больше всего пугает?$s#$b#Не то, что ты можешь пострадать в шахте...$s\"/
+    pause 1000/
+    speak Harvey \"А то, что ты бежишь туда, спасаясь от собственных мыслей.$s#$b#Но от стресса не убегают вглубь земли.#$b#От него лечатся.$u\"/
+    pause 1200/
+    faceDirection farmer 3/
+    speak Harvey \"*поправляет куртку на твоих плечах*#$b#Завтра утром - полное обследование.#$b#И никаких шахт до моего разрешения.$a\"/
+    pause 800/
+    message \"А если я не послушаюсь?\"/
+    speak Harvey \"*улыбается, но в глазах стальная решимость*#$b#Тогда я буду следовать за тобой везде.$a#$b#В шахту, в лес, в пустыню...#$b#Пока ты не поймёшь, что твоё здоровье важнее любых сокровищ.$a\"/
+    pause 1000/
+    speak Harvey \"*встаёт и протягивает руку*#$b#А теперь пойдём домой.#$b#Я приготовлю тебе ужин и проверю давление.$0\"/
+    move Harvey 0 3 2 true/
+    move farmer 0 3 2 true/
+    pause 600/
+    message \"Харви ведёт тебя прочь от шахт, поддерживая за локоть.\"/
+    pause 1200/
+    speak Harvey \"И запомни раз и навсегда: Пока я твой врач - моё слово закон.$a#$b#А я планирую быть твоим врачом очень, очень долго.$l\"/
+    pause 1000/
+    globalFade/
+    viewport -1000 -1000/
+    pause 700/
+    friendship Harvey 100/
+    addConversationTopic HarveyMineIntercept 3/
+    end
+",
+            }
+        }
+    ]
+}

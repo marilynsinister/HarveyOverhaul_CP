@@ -1,0 +1,594 @@
+{
+
+    "Changes": [
+      // ================== ПРЕДМЕТЫ ДЛЯ КВЕСТОВ ==================
+      {
+        "Action": "EditData",
+        "Target": "Data/Objects",
+        "Entries": {
+          // Диагностические предметы
+          "HarveyMod_PsychForm": {
+            "Name": "Психологическая анкета",
+            "DisplayName": "Психологическая анкета",
+            "Description": "Подробная анкета для оценки психологического состояния. Заполнена тщательно и честно.",
+            "Type": "Basic",
+            "Category": -22,
+            "Price": 0,
+            "Texture": "Maps\\springobjects",
+            "SpriteIndex": 897,
+            "Edibility": -300,
+            "IsDrink": false,
+            "Buffs": null,
+            "GeodeDropsDefaultItems": false,
+            "ArtifactSpotChances": null,
+            "ExcludeFromFishingCollection": false,
+            "ExcludeFromShippingCollection": true,
+            "ExcludeFromRandomSale": true,
+            "ContextTags": ["harvey_medical_form"]
+          },
+  
+          "HarveyMod_MemoryItem": {
+            "Name": "Важное воспоминание",
+            "DisplayName": "Важное воспоминание",
+            "Description": "Предмет, связанный с дорогими воспоминаниями. Вызывает сильные эмоции.",
+            "Type": "Basic",
+            "Category": -22,
+            "Price": 0,
+            "Texture": "Maps\\springobjects",
+            "SpriteIndex": 103,
+            "Edibility": -300,
+            "IsDrink": false,
+            "Buffs": null,
+            "GeodeDropsDefaultItems": false,
+            "ArtifactSpotChances": null,
+            "ExcludeFromFishingCollection": false,
+            "ExcludeFromShippingCollection": true,
+            "ExcludeFromRandomSale": true,
+            "ContextTags": ["emotional_therapy_item"]
+          },
+  
+          // Лечебные предметы
+            
+          "HarveyMod_RecoveryMeds": {
+            "Name": "Препараты восстановления",
+            "DisplayName": "Препараты восстановления", 
+            "Description": "Сильнодействующие лекарства для восстановления после коллапса. Только по рецепту врача.",
+            "Type": "Basic",
+            "Category": -22,
+            "Price": 500,
+            "Texture": "Maps\\springobjects",
+            "SpriteIndex": 773,
+            "Edibility": 100,
+            "IsDrink": false,
+            "Buffs": [
+              {
+                "Id": "HarveyMod_RecoveryEffect",
+                "Duration": "2880",
+                "IconTexture": "HarveyOverhaul/assets/Tilesheets/stressIcon.png",
+                "IconSpriteIndex": 1,
+                "Effects": {
+                  "MaxStamina": 50,
+                  "Immunity": 1.0
+                }
+              }
+            ],
+            "GeodeDropsDefaultItems": false,
+            "ArtifactSpotChances": null,
+            "ExcludeFromFishingCollection": false,
+            "ExcludeFromShippingCollection": true,
+            "ExcludeFromRandomSale": true,
+            "ContextTags": ["harvey_medicine", "prescription_only"]
+          },
+   
+          "HarveyMod_FlowerBouquet": {
+            "Name": "Букет для терапии",
+            "DisplayName": "Эмоциональный букет",
+            "Description": "Красивые цветы для восстановления способности чувствовать радость и красоту.",
+            "Type": "Basic",
+            "Category": -22,
+            "Price": 100,
+            "Texture": "Maps\\springobjects",
+            "SpriteIndex": 458,
+            "Edibility": -300,
+            "IsDrink": false,
+            "Buffs": null,
+            "GeodeDropsDefaultItems": false,
+            "ArtifactSpotChances": null,
+            "ExcludeFromFishingCollection": false,
+            "ExcludeFromShippingCollection": true,
+            "ExcludeFromRandomSale": true,
+            "ContextTags": ["flower", "emotional_therapy", "gift_item"]
+          },
+  
+          // Особые медицинские предметы
+          "HarveyMod_StressReliefAmpoule": {
+            "Name": "Ампула снятия стресса",
+            "DisplayName": "Экстренная ампула",
+            "Description": "Быстродействующее средство для экстренного снятия критического стресса. Только для крайних случаев.",
+            "Type": "Basic",
+            "Category": -22,
+            "Price": 750,
+            "Texture": "Maps\\springobjects",
+            "SpriteIndex": 351,
+            "Edibility": 75,
+            "IsDrink": false,
+            "Buffs": [
+              {
+                "Id": "HarveyMod_EmergencyRelief",
+                "Duration": "720",
+                "IconTexture": "HarveyOverhaul/assets/Tilesheets/stressIcon.png",
+                "IconSpriteIndex": 3,
+                "Effects": {
+                  "Immunity": 2.0,
+                  "MaxStamina": 100
+                }
+              }
+            ],
+            "GeodeDropsDefaultItems": false,
+            "ArtifactSpotChances": null,
+            "ExcludeFromFishingCollection": false,
+            "ExcludeFromShippingCollection": true,
+            "ExcludeFromRandomSale": true,
+            "ContextTags": ["harvey_medicine", "emergency_use", "prescription_only"]
+          },
+  
+          "HarveyMod_TherapyJournal": {
+            "Name": "Терапевтический дневник",
+            "DisplayName": "Дневник лечения",
+            "Description": "Специальный дневник для записи мыслей и чувств во время лечения. Помогает отслеживать прогресс.",
+            "Type": "Basic",
+            "Category": -22,
+            "Price": 100,
+            "Texture": "Maps\\springobjects",
+            "SpriteIndex": 102,
+            "Edibility": -300,
+            "IsDrink": false,
+            "Buffs": null,
+            "GeodeDropsDefaultItems": false,
+            "ArtifactSpotChances": null,
+            "ExcludeFromFishingCollection": false,
+            "ExcludeFromShippingCollection": true,
+            "ExcludeFromRandomSale": true,
+            "ContextTags": ["therapy_tool", "harvey_recommended"]
+          },
+  
+          "HarveyMod_ComfortAmulet": {
+            "Name": "Амулет комфорта",
+            "DisplayName": "Защитный амулет",
+            "Description": "Небольшой амулет, подаренный Харви. Носи с собой для защиты от панических атак.",
+            "Type": "Basic",
+            "Category": -22,
+            "Price": 200,
+            "Texture": "Maps\\springobjects",
+            "SpriteIndex": 930,
+            "Edibility": -300,
+            "IsDrink": false,
+            "Buffs": null,
+            "GeodeDropsDefaultItems": false,
+            "ArtifactSpotChances": null,
+            "ExcludeFromFishingCollection": false,
+            "ExcludeFromShippingCollection": true,
+            "ExcludeFromRandomSale": true,
+            "ContextTags": ["comfort_item", "harvey_blessed", "panic_protection"]
+          },
+
+          "HarveyMod_CalmingHerbs": {
+          "Name": "Успокаивающие травы",
+          "DisplayName": "Успокаивающие травы",
+          "Description": "Специальная смесь трав для лечения тревожности: валериана, мята, ромашка. Носи с собой для защиты от панических атак.",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 150,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 259,
+          "Edibility": 50,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "HarveyMod_CalmingEffect",
+              "Duration": "1440",
+              "IconTexture": "TileSheets\\BuffsIcons",
+              "IconSpriteIndex": 21,
+              "Effects": {
+                "Immunity": 0.5
+              }
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": ["harvey_medicine", "calming_herbs"]
+        },
+
+        "HarveyMod_HealthyMeal": {
+          "Name": "Здоровое питание",
+          "DisplayName": "Сбалансированное питание",
+          "Description": "Тщательно продуманное сочетание продуктов для восстановления здоровья. Приготовлено по рекомендациям доктора Харви.",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 200,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 237,
+          "Edibility": 125,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "HarveyMod_NutritionBoost",
+              "Duration": "1440",
+              "IconTexture": "TileSheets\\BuffsIcons",
+              "IconSpriteIndex": 6,
+              "Effects": {
+                "MaxStamina": 25,
+                "FarmingLevel": 1
+              }
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": ["healthy_food", "harvey_recommended"]
+        },
+
+        "HarveyMod_SleepTracker": {
+          "Name": "Трекер сна",
+          "DisplayName": "Медицинский трекер сна",
+          "Description": "Специальное медицинское устройство для мониторинга качества сна. Данные показывают значительное улучшение.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 250,
+          "Texture": "Maps\\springobjects", 
+          "SpriteIndex": 191,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": ["harvey_medical_device", "sleep_monitor"]
+        },
+
+        // ================== ПРЕДМЕТЫ ДЛЯ ТРИГГЕРОВ СНЯТИЯ СТРЕССА ==================
+        "HarveyMod_SelfCareJournal": {
+          "Name": "Дневник самопомощи",
+          "DisplayName": "Дневник самопомощи",
+          "Description": "Специальный дневник для работы с самокритикой. Записывай свои сильные стороны и достижения.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 150,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 102,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["therapy_tool", "self_care", "harvey_recommended"]
+        },
+
+        "HarveyMod_BreathingGuide": {
+          "Name": "Руководство по дыханию",
+          "DisplayName": "Руководство по дыханию",
+          "Description": "Пошаговое руководство по дыхательным упражнениям для снятия паники. Метод 4-7-8.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 100,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 103,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["therapy_tool", "breathing_exercise", "panic_relief"]
+        },
+
+        "HarveyMod_GroundingStone": {
+          "Name": "Камень заземления",
+          "DisplayName": "Камень заземления",
+          "Description": "Гладкий камень для упражнений заземления. Помогает вернуться в настоящий момент при диссоциации.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 80,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 390,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["therapy_tool", "grounding", "dissociation_relief"]
+        },
+
+        // ================== СЕРЬЕЗНЫЕ ЛЕКАРСТВА (только от Харви) ==================
+        "HarveyMod_AntiAnxietyMed": {
+          "Name": "Противотревожное лекарство",
+          "DisplayName": "Противотревожное лекарство",
+          "Description": "Сильнодействующее лекарство для лечения тревожных расстройств. Только по рецепту доктора Харви.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 800,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 773,
+          "Edibility": 50,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "HarveyMod_AntiAnxietyEffect",
+              "Duration": "2880",
+              "IconTexture": "HarveyOverhaul/assets/Tilesheets/stressIcon.png",
+              "IconSpriteIndex": 2,
+              "Effects": {
+                "Immunity": 1.5,
+                "MaxStamina": 75
+              }
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["harvey_medicine", "prescription_only", "anti_anxiety"]
+        },
+
+        "HarveyMod_Stabilizer": {
+          "Name": "Стабилизатор",
+          "DisplayName": "Стабилизатор",
+          "Description": "Лекарство для стабилизации состояния после потери сознания. Назначается только доктором Харви.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 1000,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 773,
+          "Edibility": 40,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "HarveyMod_StabilizerEffect",
+              "Duration": "4320",
+              "IconTexture": "HarveyOverhaul/assets/Tilesheets/stressIcon.png",
+              "IconSpriteIndex": 4,
+              "Effects": {
+                "Immunity": 2.0,
+                "MaxStamina": 100,
+                "Speed": 0.8
+              }
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["harvey_medicine", "prescription_only", "stabilizer"]
+        },
+
+        "HarveyMod_EmergencySedative": {
+          "Name": "Экстренное успокоительное",
+          "DisplayName": "Экстренное успокоительное",
+          "Description": "Сильнодействующее успокоительное для экстренных случаев. Используется только при критическом стрессе.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 1200,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 773,
+          "Edibility": 30,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "HarveyMod_EmergencySedativeEffect",
+              "Duration": "1440",
+              "IconTexture": "HarveyOverhaul/assets/Tilesheets/stressIcon.png",
+              "IconSpriteIndex": 5,
+              "Effects": {
+                "Immunity": 3.0,
+                "MaxStamina": 150,
+                "Speed": 0.6
+              }
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["harvey_medicine", "prescription_only", "emergency_use"]
+        },
+
+        "HarveyMod_EmotionalStimulant": {
+          "Name": "Эмоциональный стимулятор",
+          "DisplayName": "Эмоциональный стимулятор",
+          "Description": "Лекарство для восстановления эмоциональной чувствительности. Назначается при эмоциональном онемении.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 900,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 773,
+          "Edibility": 45,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "HarveyMod_EmotionalStimulantEffect",
+              "Duration": "3600",
+              "IconTexture": "HarveyOverhaul/assets/Tilesheets/stressIcon.png",
+              "IconSpriteIndex": 6,
+              "Effects": {
+                "Immunity": 1.8,
+                "MaxStamina": 80,
+                "LuckLevel": 1
+              }
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["harvey_medicine", "prescription_only", "emotional_stimulant"]
+        },
+
+        // ================== ЛЕГКИЕ ЛЕКАРСТВА И ПРЕДМЕТЫ ==================
+        "HarveyMod_StressReliefPill": {
+          "Name": "Таблетка от стресса",
+          "DisplayName": "Таблетка от стресса",
+          "Description": "Легкое успокоительное средство от Харви для снятия повседневного стресса и усталости.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 300,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 773,
+          "Edibility": 60,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "HarveyMod_StressReliefEffect",
+              "Duration": "1440",
+              "IconTexture": "HarveyOverhaul/assets/Tilesheets/stressIcon.png",
+              "IconSpriteIndex": 7,
+              "Effects": {
+                "Immunity": 0.8,
+                "MaxStamina": 50
+              }
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["harvey_medicine", "stress_relief", "over_the_counter"]
+        },
+
+        "HarveyMod_CalmingTea": {
+          "Name": "Успокаивающий чай",
+          "DisplayName": "Успокаивающий чай",
+          "Description": "Особый чай от Харви с успокаивающими травами. Помогает при тревожности и беспокойстве.",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 200,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 395,
+          "Edibility": 80,
+          "IsDrink": true,
+          "Buffs": [
+            {
+              "Id": "HarveyMod_CalmingTeaEffect",
+              "Duration": "720",
+              "IconTexture": "HarveyOverhaul/assets/Tilesheets/stressIcon.png",
+              "IconSpriteIndex": 8,
+              "Effects": {
+                "Immunity": 0.5,
+                "MaxStamina": 30
+              }
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["harvey_medicine", "calming_tea", "herbal_remedy"]
+        },
+
+        "HarveyMod_AnxietyTincture": {
+          "Name": "Настойка от тревоги",
+          "Description": "Натуральная настойка от Харви для лечения панических атак и сильной тревожности.",
+          "DisplayName": "Настойка от тревоги",
+          "Type": "Basic",
+          "Category": -22,
+          "Price": 400,
+          "Texture": "Maps\\springobjects",
+          "SpriteIndex": 773,
+          "Edibility": 55,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "HarveyMod_AnxietyTinctureEffect",
+              "Duration": "2160",
+              "IconTexture": "HarveyOverhaul/assets/Tilesheets/stressIcon.png",
+              "IconSpriteIndex": 9,
+              "Effects": {
+                "Immunity": 1.2,
+                "MaxStamina": 60
+              }
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "ArtifactSpotChances": null,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "UseForTriggerAction": true,
+          "ContextTags": ["harvey_medicine", "anxiety_relief", "herbal_remedy"]
+        }
+        }
+      },
+  
+      // ================== РЕЦЕПТЫ ИЗГОТОВЛЕНИЯ ==================
+      {
+        "Action": "EditData",
+        "Target": "Data/CraftingRecipes",
+        "Entries": {
+          "HarveyMod_CalmingTea": "395 2 771 1/Home/773 3/false/Farming 3/Успокаивающий чай##Специальный чай по рецепту Харви для снятия тревожности./Home",
+          
+          "HarveyMod_StressReliefSalve": "728 1 766 2/Home/HarveyMod_StressReliefAmpoule 1/false/Foraging 5/Мазь от стресса##Натуральная мазь для наружного применения при стрессе./Home",
+          
+          "HarveyMod_RecoveryDrink": "395 3 614 2 200 1/Home/HarveyMod_RecoveryMeds 1/false/Farming 7/Восстановительный напиток##Энергетический напиток для быстрого восстановления сил./Home",
+
+          "HarveyMod_CalmingHerbs": "420 5 421 3 403 2/Home/HarveyMod_CalmingHerbs 10/false/s Foraging 3/Успокаивающие травы##Специальная смесь трав для лечения панических атак по рецепту доктора Харви.",
+        
+          "HarveyMod_HealthyMeal": "24 2 186 1 395 1/Home/HarveyMod_HealthyMeal 1/false/s Farming 5/Здоровое питание##Сбалансированное блюдо по рекомендациям доктора Харви для восстановления здоровья.",
+          
+          "HarveyMod_SelfCareJournal": "388 2 102 1 395 1/Home/HarveyMod_SelfCareJournal 1/false/Foraging 2/Дневник самопомощи##Специальный дневник для работы с самокритикой./Home",
+          
+          "HarveyMod_BreathingGuide": "388 1 102 1 395 1/Home/HarveyMod_BreathingGuide 1/false/Foraging 1/Руководство по дыханию##Пошаговое руководство по дыхательным упражнениям./Home",
+          
+          "HarveyMod_GroundingStone": "390 1 395 1/Home/HarveyMod_GroundingStone 1/false/Foraging 1/Камень заземления##Гладкий камень для упражнений заземления./Home"
+        }
+      },
+  
+      // ================== РЕЦЕПТЫ ПРИГОТОВЛЕНИЯ ==================
+      {
+        "Action": "EditData",
+        "Target": "Data/CookingRecipes",
+        "Entries": {
+        
+        "HarveyMod_HealingBroth": "395 1 24 2 78 1/Home/HarveyMod_HealthyMeal 1/f Harvey 6/Лечебный бульон##Питательный бульон для восстановления здоровья./Харви научил меня готовить этот особый бульон. Он содержит все необходимые микроэлементы.",
+        
+        "HarveyMod_CalmingSoup": "24 2 399 3 HarveyMod_CalmingHerbs 2/Home/HarveyMod_HealthyMeal 2/f Harvey 8/Успокаивающий суп##Суп с травами против стресса./Рецепт от Харви: особый суп с успокаивающими травами. Помогает при тревожности.",
+        
+        "HarveyMod_EnergyRestorer": "182 1 395 2 456 1/Home/HarveyMod_HealthyMeal 1/f Harvey 10/Восстановитель энергии##Блюдо для восстановления после истощения./Секретный рецепт Харви для критических ситуаций. Быстро восстанавливает силы.",
+        
+        "HarveyMod_StressReliefPill": "395 2 771 1 773 1/Home/HarveyMod_StressReliefPill 1/f Harvey 6/Таблетка от стресса##Легкое успокоительное средство от Харви./Харви научил меня готовить это лекарство. Помогает при повседневном стрессе.",
+        
+        "HarveyMod_CalmingTea": "395 2 771 1 420 2/Home/HarveyMod_CalmingTea 1/f Harvey 5/Успокаивающий чай##Особый чай с успокаивающими травами./Рецепт от Харви: чай с валерианой и мятой для снятия тревожности.",
+        
+        "HarveyMod_AnxietyTincture": "395 1 420 3 421 2/Home/HarveyMod_AnxietyTincture 1/f Harvey 7/Настойка от тревоги##Натуральная настойка для лечения панических атак./Харви показал, как готовить эту настойку. Эффективна при сильной тревожности."
+        }
+      }
+    ]
+  }

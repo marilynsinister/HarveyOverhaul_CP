@@ -1,0 +1,467 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                // ================== БАЗОВЫЕ БАФФЫ ТРАВМ ==================
+                "buffHurt": {
+                    "Id": "buffHurt",
+                    "DisplayName": "Рана",
+                    "Description": "Вас ранили",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 4320000,
+                    "MaxDuration": -1,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "Effects": {
+                        "MaxStamina": -1
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                },
+                "buffPainFlare": {
+                    "Id": "buffPainFlare",
+                    "DisplayName": "Острая боль",
+                    "Description": "Резкий приступ боли серьёзно ограничивает движения.",
+                    "IsDebuff": true,
+                    "GlowColor": "Red",
+                    "Duration": 1080000, // 1.5 дня
+                    "MaxDuration": -1,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "Effects": {
+                        "MaxStamina": -40,
+                        "Speed": -3,
+                        "AttackMultiplier": -0.5,
+                        "DefenseMultiplier": -0.2
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                },
+                "buffBadlyHurt": {
+                    "Id": "buffBadlyHurt",
+                    "DisplayName": "Сильная рана",
+                    "Description": "Вас серьезно ранили",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 7200000,
+                    "MaxDuration": -1,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "Effects": {
+                        "MaxStamina": -2
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                },
+                "buffFarmerExhausted": {
+                    "Id": "buffFarmerExhausted",
+                    "DisplayName": "Истощение",
+                    "Description": "Переутомление",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 2880000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 17,
+                    "Effects": {
+                        "MaxStamina": -30
+                    }
+                },
+                "buffSleepy": {
+                    "Id": "buffSleepy",
+                    "DisplayName": "Нарушение режима",
+                    "Description": "Переутомление",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 720000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 17,
+                    "Effects": {
+                        "MaxStamina": -10
+                    }
+                },
+                // ================== ЛЁГКИЕ ТРАВМЫ ==================
+                "buffBruisedRibs": {
+                    "Id": "buffBruisedRibs",
+                    "DisplayName": "Ушибленные рёбра",
+                    "Description": "Каждый вдох отдаёт болью в груди. Нужен осмотр врача и покой.",
+                    "Effects": {
+                        "Stamina": -25,
+                        "MovementSpeed": -2,
+                        "Health": -10
+                    },
+                    "Duration": 14400000,
+                    "IsDebuff": true,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IconSpriteIndex": 3
+                },
+                "buffSprainedAnkle": {
+                    "Id": "buffSprainedAnkle",
+                    "DisplayName": "Растянутая лодыжка",
+                    "Description": "Хромота и боль при каждом шаге. Нужен осмотр и фиксация сустава.",
+                    "Effects": {
+                        "Stamina": -20,
+                        "MovementSpeed": -3,
+                        "Luck": -1
+                    },
+                    "Duration": 10080000,
+                    "IsDebuff": true,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IconSpriteIndex": 5
+                },
+                "buffBackStrain": {
+                    "Id": "buffBackStrain",
+                    "DisplayName": "Растяжение спины",
+                    "Description": "Острая боль в пояснице. Нужен осмотр и покой.",
+                    "Effects": {
+                        "Stamina": -30,
+                        "MovementSpeed": -2,
+                        "Health": -5
+                    },
+                    "Duration": 7200000,
+                    "IsDebuff": true,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IconSpriteIndex": 6
+                },
+                // ================== СРЕДНИЕ ТРАВМЫ ==================
+                "buffDeepCuts": {
+                    "Id": "buffDeepCuts",
+                    "DisplayName": "Глубокие порезы",
+                    "Description": "Кровоточащие раны требуют перевязки и ухода. Нужен осмотр врача.",
+                    "Effects": {
+                        "Stamina": -35,
+                        "Health": -20,
+                        "MovementSpeed": -2,
+                        "Luck": -2
+                    },
+                    "Duration": 10080000,
+                    "IsDebuff": true,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IconSpriteIndex": 7
+                },
+                "buffBurnWounds": {
+                    "Id": "buffBurnWounds",
+                    "DisplayName": "Ожоговые раны",
+                    "Description": "Болезненные ожоги второй степени. Нужна обработка и осмотр врача.",
+                    "Effects": {
+                        "Stamina": -40,
+                        "Health": -25,
+                        "MovementSpeed": -1,
+                        "Luck": -2
+                    },
+                    "Duration": 10080000,
+                    "IsDebuff": true,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IconSpriteIndex": 3
+                },
+                "buffTornMuscles": {
+                    "Id": "buffTornMuscles",
+                    "DisplayName": "Разорванные мышцы",
+                    "Description": "Серьёзная мышечная травма. Нужен осмотр, покой и лечение.",
+                    "Effects": {
+                        "Stamina": -50,
+                        "MovementSpeed": -4,
+                        "Health": -15,
+                        "Luck": -1
+                    },
+                    "Duration": 14400000,
+                    "IsDebuff": true,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IconSpriteIndex": 1
+                },
+                // ================== ТЯЖЁЛЫЕ ТРАВМЫ ==================
+                "buffConcussion": {
+                    "Id": "buffConcussion",
+                    "DisplayName": "Сотрясение мозга",
+                    "Description": "Головокружение и тошнота. Срочно нужен осмотр врача.",
+                    "Effects": {
+                        "Stamina": -60,
+                        "Health": -30,
+                        "MovementSpeed": -3,
+                        "Luck": -4
+                    },
+                    "Duration": 21600000,
+                    "IsDebuff": true,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IconSpriteIndex": 9
+                },
+                "buffFracturedBone": {
+                    "Id": "buffFracturedBone",
+                    "DisplayName": "Перелом кости",
+                    "Description": "Сломанная кость. Нужна фиксация и осмотр врача.",
+                    "Effects": {
+                        "Stamina": -70,
+                        "MovementSpeed": -5,
+                        "Health": -25,
+                        "Luck": -3
+                    },
+                    "Duration": 43200000,
+                    "IsDebuff": true,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IconSpriteIndex": 11
+                },
+                "buffShrapnelWounds": {
+                    "Id": "buffShrapnelWounds",
+                    "DisplayName": "Осколочные ранения",
+                    "Description": "Множественные глубокие раны от осколков. Срочно нужна помощь врача.",
+                    "Effects": {
+                        "Stamina": -80,
+                        "Health": -40,
+                        "MovementSpeed": -4,
+                        "Luck": -5
+                    },
+                    "Duration": 43200000,
+                    "IsDebuff": true,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IconSpriteIndex": 7
+                },
+                // ================== ОСЛОЖНЕНИЯ ==================
+                "buffInfectedWound": {
+                    "Id": "buffInfectedWound",
+                    "DisplayName": "Инфицированная рана",
+                    "Description": "Рана воспалилась и требует антибиотиков",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 5760000,
+                    "MaxDuration": -1,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "MaxStamina": -2,
+                        "Speed": -1
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                },
+                //=================== Прочие физические дебаффы ==================
+                "buffAlcoholPoisoning": {
+                    "Id": "buffAlcoholPoisoning",
+                    "DisplayName": "Алкогольное отравление",
+                    "Description": "Алкоголь взаимодействует с лекарствами. Нужна консультация врача.",
+                    "IsDebuff": true,
+                    "GlowColor": "Red",
+                    "Duration": 1440000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "Speed": -15,
+                        "MaxStamina": -30,
+                        "Health": -20
+                    }
+                },
+                // ================== ПОСЛЕОПЕРАЦИОННЫЕ БАФФЫ ==================
+                "buffSurgicalWound": {
+                    "Id": "buffSurgicalWound",
+                    "DisplayName": "Послеоперационная рана",
+                    "Description": "Швы после удаления осколков. Требует особого ухода.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 10080000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 19,
+                    "Effects": {
+                        "MaxStamina": -15
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "surgical"
+                    }
+                },
+                "HarveyMod_WetBandage": {
+                    "Id": "HarveyMod_WetBandage",
+                    "DisplayName": "Мокрая повязка",
+                    "Description": "Повязка промокла — лучше обсохнуть дома.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "Speed": -1,
+                        "MagneticRadius": -128
+                    }
+                },
+                "HarveyMod_DirtyWound": {
+                    "Id": "HarveyMod_DirtyWound",
+                    "DisplayName": "Грязная рана",
+                    "Description": "Пыль и грязь попали в рану. Риск инфекции.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "Speed": -1,
+                        "Defense": -1
+                    }
+                },
+                "HarveyMod_Neglect": {
+                    "Id": "HarveyMod_Neglect",
+                    "DisplayName": "Небрежность в лечении",
+                    "Description": "Игнорирование рекомендаций спровоцировало ухудшение.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "Speed": -1,
+                        "Defense": -2,
+                        "MaxStamina": -20
+                    }
+                },
+                "HarveyMod_MineForbidden": {
+                    "Id": "HarveyMod_MineForbidden",
+                    "DisplayName": "Харви запретил шахту",
+                    "Description": "Харви запретил посещение шахты и вулкана на время из-за твоих ран. Запрет снимется через несколько дней.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "Effects": {
+                        "Speed": -1,
+                        "Luck": -1
+                    }
+                },
+
+                "HarveyMod_PainFlare": {
+                    "Id": "HarveyMod_PainFlare",
+                    "DisplayName": "Обострение боли",
+                    "Description": "Гроза и давление усилили боль.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 14400000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "Speed": -1,
+                        "Attack": -1
+                    }
+                },
+                "HarveyMod_AllergicRash": {
+                    "Id": "HarveyMod_AllergicRash",
+                    "DisplayName": "Аллергическая реакция",
+                    "Description": "Пыльца раздражает свежие швы.",
+                    "Duration": 28800000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "Speed": -1,
+                        "Immunity": -1
+                    }
+                },
+                "HarveyMod_WetStitches": {
+                    "Id": "HarveyMod_WetStitches",
+                    "DisplayName": "Намокшие швы",
+                    "Description": "Купание повредило шов. Нужен покой.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 21600000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "Speed": -1,
+                        "Defense": -1
+                    }
+                },
+                "HarveyMod_ImpairedMobility": {
+                    "Id": "HarveyMod_ImpairedMobility",
+                    "DisplayName": "Нарушение подвижности",
+                    "Description": "Из-за отсутствия лечения подвижность ухудшилась.",
+                    "Duration": 10080000,
+                    "IsDebuff": true,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "Speed": -3
+                    }
+                },
+                "HarveyMod_MuscleAtrophy": {
+                    "Id": "HarveyMod_MuscleAtrophy",
+                    "DisplayName": "Атрофия мышц",
+                    "Description": "Мышцы ослабли из-за отсутствия лечения.",
+                    "Duration": 10080000,
+                    "IsDebuff": true,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "Attack": -0.3,
+                        "MaxStamina": -50
+                    }
+                },
+                "HarveyMod_BreathingDifficulty": {
+                    "Id": "HarveyMod_BreathingDifficulty",
+                    "DisplayName": "Затруднённое дыхание",
+                    "Description": "Боль в рёбрах мешает дышать.",
+                    "Duration": 10080000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "IsDebuff": true,
+                    "Effects": {
+                        "MaxStamina": -60
+                    }
+                },
+                "HarveyMod_Sepsis": {
+                    "Id": "HarveyMod_Sepsis",
+                    "DisplayName": "Заражение крови",
+                    "Description": "КРИТИЧЕСКОЕ СОСТОЯНИЕ. Немедленно к врачу!",
+                    "Duration": 20160000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "IsDebuff": true,
+                    "Effects": {
+                        "Health": -50,
+                        "Speed": -4,
+                        "Defense": -10
+                    }
+                },
+                // ================== ПРОСТУДА ==================
+                "buffCold": {
+                    "Id": "buffCold",
+                    "DisplayName": "Простуда",
+                    "Description": "Ты простудился от долгого пребывания под дождём. Температура, слабость...",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "IsDebuff": true,
+                    "Effects": {
+                        "Speed": -2,
+                        "MaxStamina": -30
+                    }
+                },
+                "HarveyMod_Cold_Acute": {
+                    "Id": "HarveyMod_Cold_Acute",
+                    "DisplayName": "Простуда (острая фаза)",
+                    "Description": "Температура 38°C, сильная слабость и чихание. Харви прописал жаропонижающее и строгий постельный режим.",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "IsDebuff": true,
+                    "GlowColor": "LightBlue",
+                    "Effects": {
+                        "Speed": -2,
+                        "MaxStamina": -40,
+                        "Defense": -2
+                    }
+                },
+                "HarveyMod_Cold_Recovery": {
+                    "Id": "HarveyMod_Cold_Recovery",
+                    "DisplayName": "Простуда (восстановление)",
+                    "Description": "Температура спала, но остаточный кашель и лёгкая слабость. Харви всё ещё наблюдает за тобой.",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 17,
+                    "IsDebuff": true,
+                    "Effects": {
+                        "Speed": -1,
+                        "MaxStamina": -20
+                    }
+                }
+            }
+        }
+    ]
+}

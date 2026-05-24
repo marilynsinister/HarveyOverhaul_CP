@@ -1,0 +1,83 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "aceynk.PersistentBuffs/PersistentBuffIds",
+            "Entries": {
+                // ================== БАЗОВЫЕ БАФФЫ ТРАВМ ==================
+                "buffHurt": true,
+                "buffBadlyHurt": true,
+                "buffFarmerExhausted": true,
+                "buffSleepy": true,
+                
+                // ================== ЛЁГКИЕ ТРАВМЫ ==================
+                "buffBruisedRibs": true,
+                "buffSprainedAnkle": true,
+                "buffBackStrain": true,
+                
+                // ================== СРЕДНИЕ ТРАВМЫ ==================
+                "buffDeepCuts": true,
+                "buffBurnWounds": true,
+                "buffTornMuscles": true,
+                
+                // ================== ТЯЖЁЛЫЕ ТРАВМЫ ==================
+                "buffConcussion": true,
+                "buffFracturedBone": true,
+                "buffShrapnelWounds": true,
+                
+                // ================== ОСЛОЖНЕНИЯ ==================
+                "buffInfectedWound": true,
+                
+                // ================== ПРОЧИЕ ФИЗИЧЕСКИЕ ДЕБАФФЫ ==================
+                "buffAlcoholPoisoning": true,
+                
+                // ================== ПОСЛЕОПЕРАЦИОННЫЕ БАФФЫ ==================
+                "buffSurgicalWound": true,
+                
+                // ================== БАФФЫ ЛЕЧЕНИЯ ХАРВИ ==================
+                "buffHarveyTreatment": true,
+                "buffHarveyIntensiveCare": true,
+                "buffHarveyRecovery": true,
+                "buffHarveyProtection": true,
+                "buffHarveyHealing": true,
+                
+                // ================== БАФФЫ ЛЕЧЕНИЯ ==================
+                "buffAntibioticsTreatment": true,
+                "buffStrictSupervision": true,
+                
+                // ================== БАЗОВЫЕ СТРЕССОВЫЕ БАФФЫ ==================
+                "buffStressTired": true,
+                "buffStressLonely": true,
+                "buffStressThunder": true,
+                "buffStressHunger": true,
+                "buffStressOverwork": true,
+                "buffStressNoSleep": true,
+                "buffStressTooCold": true,
+                "buffStressDarkness": true,
+                "buffStressBadDream": true,
+                "buffStressAnxietyWave": true,
+                
+                // ================== СРЕДНИЕ СТРЕССОВЫЕ БАФФЫ ==================
+                "buffStressBreakdown": true,
+                "buffStressCollapse": true,
+                "buffStressDespair": true,
+                "buffStressPanic": true,
+                "buffSleepDeprivation": true,
+                "buffStressCritical": true,
+                
+                // ================== КОМБИНИРОВАННЫЕ СТРЕССОВЫЕ БАФФЫ ==================
+                "buffStressExhaustion": true,
+                "buffStressPhysicalDepletion": true,
+                "buffStressNightTerror": true,
+                "buffStressSocialAnxiety": true,
+                "buffStressBurnout": true,
+                "buffStressMentalBreakdown": true,
+                "buffStressPanicCollapse": true,
+                "buffStressDespairCollapse": true,
+                "buffStressPanicBreakdown": true,
+                "buffStressParanoidCollapse": true,
+                "buffStressCriticalExhaustion": true
+            }
+        }
+    ]
+}

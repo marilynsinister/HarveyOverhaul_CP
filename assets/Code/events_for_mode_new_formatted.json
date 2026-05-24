@@ -1,0 +1,122 @@
+{
+  "Changes": [
+    {
+      "LogName": "События в лесу",
+      "Action": "EditData",
+      "Target": "Data/Events/Forest",
+      "Entries": {
+        "MyMod_HarveyStormComfortForest/GameStateQuery PLAYER_HAS_BUFF Current buffStressThunder/Weather storm/Friendship Harvey 750/Random 0.55": [
+          "rain/58 25/farmer 58 25 0 Harvey 1000 1000 0/skippable/viewport 58 25/",
+          "playSound thunder/emote farmer 8/animate farmer false true 2000 5 4/pause 1000/",
+          "playSound doorClose/warp Harvey 56 25 1/faceDirection Harvey 1/",
+          "speak Harvey \"$u Лес во время грозы?! Ты с ума сошла?!$a#$b#Деревья притягивают молнии!$u\"/",
+          "speed Harvey 6/move Harvey 2 0 1/pause 300/playSound thunder_small/emote farmer 8/",
+          "speak Harvey \"$0 Но... ты прибежала сюда, потому что деревья дают ощущение защиты?$0#$b#Я понимаю. Иногда нужно спрятаться.$0\"/",
+          "animate Harvey false true 5000 24/animate farmer false true 5000 101/pause 5000/",
+          "speak Harvey \"$0 Тогда позволь мне быть опорой.$0#$b#Более надёжной, чем любая сосна — потому что я врач.$0\"/",
+          "stopAnimation Harvey/stopAnimation farmer/",
+          "speak Harvey \"$0 Знаешь, что делают растения во время грозы?#$b#Они гнутся, но не ломаются.$u\"/",
+          "pause 800/",
+          "speak Harvey \"$0 Как и ты. Ты сгибаешься под тяжестью страха,#$b#но не ломаешься. Потому что я не дам.$0\"/",
+          "playSound thunder/emote farmer 8/",
+          "speak Harvey \"$0 Слышишь? Гром громкий, но мы в безопасном месте.$0#$b#Он не посмеет причинить тебе вред, пока ты под наблюдением.$0\"/",
+          "quickQuestion null#Сказать что чувствуешь себя защищённой#Извиниться за глупое поведение#Попросить научить не бояться",
+          "(break)",
+          "speak Harvey \"$h Именно этого я и добивался.$0\"\\",
+          "speak Harvey \"$0 Чтобы ты знала - рядом со мной ты в безопасности.$h\"\\",
+          "speak Harvey \"$0 Всегда.$0\"\\",
+          "addBuff buffStressImmunity 2880\\",
+          "removeConversationTopic topicStressThunder\\",
+          "friendship Harvey 50",
+          "(break)",
+          "speak Harvey \"$a Глупое? Нет! Инстинктивное!$u\"\\",
+          "speak Harvey \"$0 Ты искала укрытие. Это правильно.$0\"\\",
+          "speak Harvey \"$0 Просто теперь ты знаешь - лучшее укрытие это клиника или дом с генератором.$0\"\\",
+          "addBuff buffStressImmunity 1440\\",
+          "removeConversationTopic topicStressThunder\\",
+          "friendship Harvey 40",
+          "(break)",
+          "speak Harvey \"$h С удовольствием! Начнём с дыхательных упражнений.$u\"\\",
+          "speak Harvey \"$0 Страх - это химическая реакция. Её можно контролировать.$u\"\\",
+          "speak Harvey \"$0 А я буду твоим персональным инструктором.$0\"\\",
+          "addItem 395 3\\",
+          "addBuff buffStressImmunity 2160\\",
+          "removeConversationTopic topicStressThunder\\",
+          "friendship Harvey 55/",
+          "pause 2000/globalFade/viewport -1000 -1000/end"
+        ]
+      }
+    },
+    
+    {
+      "LogName": "События в больнице - слабый стресс",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "Entries": {
+        "MyMod_HarveyStressTiredCheck/Time 600 2200/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicStressTired/Friendship Harvey 250": [
+          "Hospital_Ambient/13 6/farmer 15 8 3 Harvey 13 6 1/skippable/viewport 13 6/pause 800/",
+          "speak Harvey \"$u Стой. Садись немедленно.#$b#Я вижу, как ты еле держишься на ногах.$a\"/",
+          "emote farmer 8/pause 500/",
+          "speak Harvey \"$0 Когда ты последний раз нормально спала? И не говори мне 'вчера вечером'.$u#$b#Твои глаза красные, руки дрожат...\"/",
+          "move Harvey 2 0 1/pause 400/",
+          "speak Harvey \"$a Пожалуйста, останься здесь — в таком состоянии домой идти нельзя.#$b#Ляжешь здесь. Мару принесёт успокоительный чай.$u\"/",
+          "quickQuestion null#Согласиться лечь отдохнуть#Сказать что справишься сама#Попытаться уйти",
+          "(break)",
+          "speak Harvey \"$h Умница. Наконец-то ты начинаешь слушать разум.\"\\",
+          "move farmer -2 2 2\\",
+          "animate farmer false true 5000 5\\",
+          "pause 2000\\",
+          "speak Harvey \"$0 Отдыхай. Я буду рядом как врач.\"\\",
+          "addItem 773 1\\",
+          "addBuff buffStressImmunity 1440\\",
+          "removeConversationTopic topicStressTired\\",
+          "friendship Harvey 25",
+          "(break)",
+          "speak Harvey \"$a Справишься? В таком состоянии? Ты даже говорить нормально не можешь.\"\\",
+          "pause 500\\",
+          "speak Harvey \"$u Хорошо. Но завтра же приходи на полный осмотр. Слышишь?\"\\",
+          "addItem 395 1\\",
+          "friendship Harvey 5\\",
+          "removeConversationTopic topicStressTired",
+          "(break)",
+          "move farmer 0 -2 0\\",
+          "pause 300\\",
+          "speak Harvey \"$a Даже не думай.\"\\",
+          "speed Harvey 6\\",
+          "move Harvey 2 2 0\\",
+          "speak Harvey \"$a Ты никуда не уйдёшь, пока я не убежусь, что ты в безопасности.\"\\",
+          "pause 800\\",
+          "speak Harvey \"$u Садись. Сейчас же.\"\\",
+          "move farmer 0 2 2\\",
+          "animate farmer false true 3000 5\\",
+          "speak Harvey \"$0 Вот так лучше. Я принесу тебе витамины.\"\\",
+          "addItem 395 2\\",
+          "addBuff buffStressImmunity 720\\",
+          "removeConversationTopic topicStressTired\\",
+          "friendship Harvey 15/",
+          "pause 2000/globalFade/viewport -1000 -1000/end"
+        ]
+      }
+    },
+    
+    {
+      "LogName": "События на ферме - экстренная помощь",
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "MyMod_HarveyUrgentFarmVisit/Time 600 2400/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicStressBreakdown topicStressCollapse/Friendship Harvey 1000": [
+          "spring_day_ambient/64 15/farmer 64 16 2 Harvey 64 18 0/skippable/pause 1000/",
+          "playSound doorClose/",
+          "speak Harvey \"$u Я почувствовал, что что-то не так.$a#$b#Врачебная интуиция. Где ты?$u\"/",
+          "move Harvey 0 -2 0/pause 400/emote Harvey 16/",
+          "speak Harvey \"$s Боже мой... В каком ты состоянии!$u#$b#Немедленно собираемся. Ты едешь со мной.$a\"/",
+          "speed Harvey 5/move Harvey 0 -1 0/",
+          "speak Harvey \"$a Никаких возражений. Ты нуждаешься в медицинской помощи.$u#$b#И в том, чтобы кто-то был рядом, пока состояние не стабилизируется.$0\"/",
+          "move Harvey 0 0 0/pause 500/",
+          "speak Harvey \"$0 Чувствуешь? Я здесь. Ты не одна.$0\"/",
+          "globalFade/viewport -1000 -1000/end"
+        ]
+      }
+    }
+  ]
+}

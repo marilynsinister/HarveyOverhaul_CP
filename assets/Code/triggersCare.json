@@ -1,0 +1,187 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_triggerHarveyNoteWife": {
+                    "Id": "{{ModId}}_triggerHarveyNoteWife",
+                    "Trigger": "DayStarted",
+                    "Condition": "DAY_OF_WEEK 1, PLAYER_NPC_RELATIONSHIP Current Harvey Married, !PLAYER_HAS_MAIL Current mailHarveyNoteWife Received",
+                    "Actions": [
+                        "AddMail Current mailHarveyNoteWife now"
+                    ],
+                    "LogName": "Load Triggers/Harvey Note Wife #1"
+                },
+                "{{ModId}}_triggerHarveyGentleCare": {
+                    "Id": "{{ModId}}_triggerHarveyGentleCare",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, RANDOM 0.4, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare",
+                    "Actions": [
+                        "AddConversationTopic topicHarveyGentleCare 7"
+                    ],
+                    "LogName": "Load Triggers/Harvey Gentle Care #1"
+                },
+                "{{ModId}}_triggerHarveyModerateCare": {
+                    "Id": "{{ModId}}_triggerHarveyModerateCare",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare, RANDOM 0.6, !PLAYER_HAS_MAIL Current mailHarveyModerateCare Received",
+                    "Actions": [
+                        "AddMail Current mailHarveyModerateCare now",
+                        "AddConversationTopic topicHarveyModerateCare 7"
+                    ],
+                    "LogName": "Load Triggers/Harvey Moderate Care #1"
+                },
+                "{{ModId}}_triggerHarveyIntensiveCare": {
+                    "Id": "{{ModId}}_triggerHarveyIntensiveCare",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, PLAYER_HAS_MAIL Current mailHarveyModerateCare Received, RANDOM 0.8, !PLAYER_HAS_MAIL Current mailHarveyIntensiveCare Received",
+                    "Actions": [
+                        "AddMail Current mailHarveyIntensiveCare now",
+                        "AddConversationTopic topicHarveyIntensiveCare 7"
+                    ],
+                    "LogName": "Load Triggers/Harvey Intensive Care #1"
+                },
+                "{{ModId}}_triggerHarveyNoteNote1": {
+                    "Id": "{{ModId}}_triggerHarveyNoteNote1",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare, RANDOM 0.5, !PLAYER_HAS_MAIL Current mailHarveyNote1 Received",
+                    "Actions": [
+                        "AddMail Current mailHarveyNote1 now"
+                    ],
+                    "LogName": "Load Triggers/Harvey Note Note1 #1"
+                },
+                "{{ModId}}_triggerHarveyNoteNote2": {
+                    "Id": "{{ModId}}_triggerHarveyNoteNote2",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, PLAYER_HAS_MAIL Current mailHarveyNote1 Received, RANDOM 0.6, !PLAYER_HAS_MAIL Current mailHarveyNote2 Received",
+                    "Actions": [
+                        "AddMail Current mailHarveyNote2 now"
+                    ],
+                    "LogName": "Load Triggers/Harvey Note Note2 #1"
+                },
+                "{{ModId}}_triggerHarveyNoteNote3": {
+                    "Id": "{{ModId}}_triggerHarveyNoteNote3",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, PLAYER_HAS_MAIL Current mailHarveyNote2 Received, RANDOM 0.7, !PLAYER_HAS_MAIL Current mailHarveyNote3 Received",
+                    "Actions": [
+                        "AddMail Current mailHarveyNote3 now"
+                    ],
+                    "LogName": "Load Triggers/Harvey Note Note3 #1"
+                },
+                "{{ModId}}_triggerHarveyNoteNote4": {
+                    "Id": "{{ModId}}_triggerHarveyNoteNote4",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, PLAYER_HAS_MAIL Current mailHarveyNote3 Received, RANDOM 0.8, !PLAYER_HAS_MAIL Current mailHarveyNote4 Received",
+                    "Actions": [
+                        "AddMail Current mailHarveyNote4 now"
+                    ],
+                    "LogName": "Load Triggers/Harvey Note Note4 #1"
+                },
+                "{{ModId}}_triggerHarveyMedicalCheckReminder": {
+                    "Id": "{{ModId}}_triggerHarveyMedicalCheckReminder",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married",
+                    "Actions": [
+                        "AddMail Current mailHarveyMedicalCheckReminder tomorrow"
+                    ],
+                    "LogName": "Load Triggers/Harvey Medical Check Reminder #1"
+                },
+                "{{ModId}}_triggerHarveySkullCaveWarning": {
+                    "Id": "{{ModId}}_triggerHarveySkullCaveWarning",
+                    "Trigger": "LocationChanged",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, PLAYER_LOCATION_NAME Current SkullCave, PLAYER_HAS_BUFF Current buffSurgicalWound buffBruisedRibs buffSprainedAnkle buffBackStrain buffDeepCuts buffBurnWounds buffTornMuscles buffConcussion buffFracturedBone buffShrapnelWounds buffInfectedWound",
+                    "Actions": [
+                        "AddMail Current mailHarveyCaveWarning now",
+                        "spacechase0.SpaceCore_PlayEvent eventHarveySkullCavePrevention"
+                    ],
+                    "LogName": "Load Triggers/Harvey Cave Warning #1"
+                },
+                "{{ModId}}_triggerHarveyMineWarning": {
+                    "Id": "{{ModId}}_triggerHarveyMineWarning",
+                    "Trigger": "LocationChanged",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, PLAYER_LOCATION_NAME Current Mine, PLAYER_HAS_BUFF Current buffSurgicalWound buffBruisedRibs buffSprainedAnkle buffBackStrain buffDeepCuts buffBurnWounds buffTornMuscles buffConcussion buffFracturedBone buffShrapnelWounds buffInfectedWound",
+                    "Actions": [
+                        "AddMail Current mailHarveyMineWarning now",
+                        "spacechase0.SpaceCore_PlayEvent eventHarveyMineInterception"
+                    ],
+                    "LogName": "Load Triggers/Harvey Mine Warning #1"
+                },
+                // ================== ВРЕМЕННЫЕ РЕАКЦИИ ==================
+                "{{ModId}}_triggerTimeReactionLate": {
+                    "Id": "{{ModId}}_triggerTimeReactionLate",
+                    "Trigger": "LocationChanged",
+                    "Condition": "TIME 2200 0200, PLAYER_FRIENDSHIP_POINTS Current Harvey 500",
+                    "Actions": [
+                        "AddConversationTopic timeReaction_Late 1",
+                        "AddMail Current HarveyMod_LateNightWarning now"
+                    ]
+                },
+                "{{ModId}}_triggerTimeReactionVeryLate": {
+                    "Id": "{{ModId}}_triggerTimeReactionVeryLate",
+                    "Trigger": "LocationChanged",
+                    "Condition": "TIME 2400 0200, PLAYER_FRIENDSHIP_POINTS Current Harvey 1000",
+                    "Actions": [
+                        "AddConversationTopic timeReaction_VeryLate 2",
+                        "AddBuff buffStressNoSleep -2",
+                        "AddMail Current HarveyMod_EmergencyNightWarning now"
+                    ]
+                },
+                // ================== ЛОКАЦИОННЫЕ РЕАКЦИИ ==================
+                "{{ModId}}_triggerLocationReactionMine": {
+                    "Id": "{{ModId}}_triggerLocationReactionMine",
+                    "Trigger": "LocationChanged",
+                    "Condition": "PLAYER_LOCATION_NAME Current Mine, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+                    "Actions": [
+                        "AddConversationTopic locationReaction_Mine 2",
+                        "AddMail Current HarveyMod_MineWarning now"
+                    ]
+                },
+                "{{ModId}}_triggerLocationReactionMineExit": {
+                    "Id": "{{ModId}}_triggerLocationReactionMineExit",
+                    "Trigger": "LocationChanged",
+                    "Condition": "PLAYER_LOCATION_NAME Current Mine, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+                    "Actions": [
+                        "AddConversationTopic locationReaction_Mine 1",
+                        "AddBuff buffStressTired -2",
+                        //"spacechase0.SpaceCore_PlayEvent eventHarveySkullCavePrevention" сделать событие для этого
+                    ]
+                },
+                "{{ModId}}_triggerLocationReactionSkullCaveExit": {
+                    "Id": "{{ModId}}_triggerLocationReactionSkullCaveExit",
+                    "Trigger": "LocationChanged",
+                    "Condition": "PLAYER_LOCATION_NAME Current SkullCave, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending",
+                    "Actions": [
+                        "AddConversationTopic locationReaction_SkullCave 2",
+                        "AddBuff buffStressTired -2",
+                        "spacechase0.SpaceCore_PlayEvent eventHarveySkullCavePrevention"
+                    ]
+                },
+                // ================== СПЕЦИАЛЬНЫЕ УСЛОВНЫЕ ТРИГГЕРЫ ==================
+                "{{ModId}}_triggerEmergencySupervision": {
+                    "Id": "{{ModId}}_triggerEmergencySupervision",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Current timeReaction_VeryLate locationReaction_SkullCave situationReaction_Drunk, PLAYER_FRIENDSHIP_POINTS Current Harvey 2000",
+                    "Actions": [
+                        "AddConversationTopic topicOverprotectiveMode 7",
+                        "AddBuff buffEmergencySupervision -2",
+                        "AddMail Current HarveyMod_EmergencySupervision now"
+                    ],
+                    "LogName": "Load Triggers/Emergency Supervision #1"
+                },
+                
+                // ================== ДОПОЛНИТЕЛЬНЫЕ ВРЕМЕННЫЕ РЕАКЦИИ ==================
+                "{{ModId}}_triggerTimeReactionEarly": {
+                    "Id": "{{ModId}}_triggerTimeReactionEarly",
+                    "Trigger": "LocationChanged",
+                    "Condition": "TIME 0600 0800, PLAYER_FRIENDSHIP_POINTS Current Harvey 300, RANDOM 0.4",
+                    "Actions": [
+                        "AddConversationTopic timeReaction_Early 1",
+                        "AddMail Current HarveyMod_EarlyMorningCare now"
+                    ],
+                    "LogName": "Load Triggers/Time Reaction Early #1"
+                }
+            }
+        }
+    ]
+}

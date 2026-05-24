@@ -1,0 +1,718 @@
+{
+    "Changes": [
+        {
+            "LogName": "AddCureBuffs",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                // ================== БАФФЫ ЛЕЧЕНИЯ ТРАВМ ==================
+                "buffHarveyTreatment": {
+                    "Id": "buffHarveyTreatment",
+                    "DisplayName": "Лечение Харви",
+                    "Description": "Харви назначил курс лечения для ваших травм. Лечение идёт хорошо.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 7200000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "Effects": {
+                        "MaxStamina": 5,
+                        "Speed": 1,
+                        "Luck": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "general"
+                    }
+                },
+                "buffHarveyIntensiveCare": {
+                    "Id": "buffHarveyIntensiveCare",
+                    "DisplayName": "Интенсивная терапия",
+                    "Description": "Харви проводит интенсивное лечение тяжёлых травм",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 7200000,
+                    "MaxDuration": -1,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 14,
+                    "Effects": {
+                        "MaxStamina": 2,
+                        "Immunity": 2,
+                        "Speed": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "intensive"
+                    }
+                },
+                "buffHarveyHealing": {
+                    "Id": "buffHarveyHealing",
+                    "DisplayName": "Исцеление",
+                    "Description": "Харви исцеляет ваши раны",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 4320000,
+                    "MaxDuration": -1,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "Effects": {
+                        "MaxStamina": 1,
+                        "Immunity": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "healing"
+                    }
+                },
+                "buffHarveyRecovery": {
+                    "Id": "buffHarveyRecovery",
+                    "DisplayName": "Восстановление",
+                    "Description": "Харви помогает вам восстановиться",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 5760000,
+                    "MaxDuration": -1,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 15,
+                    "Effects": {
+                        "MaxStamina": 3,
+                        "Immunity": 1,
+                        "Speed": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "recovery"
+                    }
+                },
+                "buffHarveyProtection": {
+                    "Id": "buffHarveyProtection",
+                    "DisplayName": "Защита Харви",
+                    "Description": "Харви защищает вас от дальнейших травм",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 3600000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 3,
+                    "Effects": {
+                        "Defense": 2,
+                        "MaxStamina": 5
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "protection"
+                    }
+                },
+                // ================== МЕДИКАМЕНТЫ ==================
+                "buffAntibioticsTreatment": {
+                    "Id": "buffAntibioticsTreatment",
+                    "DisplayName": "Курс антибиотиков",
+                    "Description": "Сильные антибиотики борются с инфекцией. Харви строго контролирует приём лекарств.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 14400000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 23,
+                    "Effects": {
+                        "Health": 10,
+                        "Stamina": -15,
+                        "Luck": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "antibiotics"
+                    }
+                },
+                "buffHarveyDropper": {
+                    "Id": "buffHarveyDropper",
+                    "DisplayName": "Капельница Харви",
+                    "Description": "Восстанавливает энергию",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 1800000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 24,
+                    "Effects": {
+                        "MaxStamina": 10,
+                        "Speed": 2,
+                        "Luck": 2,
+                        "Defense": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "dropper"
+                    }
+                },
+                "buffTeracitin": {
+                    "Id": "buffTeracitin",
+                    "DisplayName": "Терацитин",
+                    "Description": "Сильное успокоительное. Харви строго контролирует дозировку.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 2160000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 23,
+                    "Effects": {
+                        "MaxStamina": 10,
+                        "Speed": 2,
+                        "Luck": 2,
+                        "Defense": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "teracitin"
+                    }
+                },
+                "buffCalmTeaEffect": {
+                    "Id": "buffCalmTeaEffect",
+                    "DisplayName": "Чай с мелиссой",
+                    "Description": "Успокаивающий травяной чай, приготовленный Харви.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 480000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 18,
+                    "Effects": {
+                        "MaxStamina": 25,
+                        "LuckLevel": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "tea"
+                    }
+                },
+                // ================== НАБЛЮДЕНИЕ И УХОД ==================
+                "buffStrictSupervision": {
+                    "Id": "buffStrictSupervision",
+                    "DisplayName": "Строгое наблюдение",
+                    "Description": "Харви неотступно следит за твоим состоянием. Его присутствие успокаивает и лечит.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 21600000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 21,
+                    "Effects": {
+                        "Health": 20,
+                        "Stamina": 15,
+                        "Luck": 2,
+                        "MovementSpeed": -1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "supervision"
+                    }
+                },
+                "buffEmergencySupervision": {
+                    "Id": "buffEmergencySupervision",
+                    "DisplayName": "Экстренное наблюдение",
+                    "Description": "Харви активировал режим тотального контроля. Твоя безопасность - его приоритет №1.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 7200000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 21,
+                    "Effects": {
+                        "Speed": -5,
+                        "Defense": 2
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "emergency"
+                    }
+                },
+                "buffConstantSupervision": {
+                    "Id": "buffConstantSupervision",
+                    "DisplayName": "Постоянное наблюдение",
+                    "Description": "Харви не отходит от тебя ни на шаг. Максимальная защита и забота.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 10080000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 21,
+                    "Effects": {
+                        "MaxStamina": 30,
+                        "Health": 25,
+                        "Defense": 3,
+                        "Speed": -3
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "constant"
+                    }
+                },
+                "buffForcedSedation": {
+                    "Id": "buffForcedSedation",
+                    "DisplayName": "Принудительная седация",
+                    "Description": "Харви ввёл успокоительное для твоего же блага. Организм восстанавливается.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": 720000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 22,
+                    "Effects": {
+                        "Speed": -10,
+                        "MaxStamina": 20,
+                        "Health": 15
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "sedation"
+                    }
+                },
+                "buffPostSurgicalCare": {
+                    "Id": "buffPostSurgicalCare",
+                    "DisplayName": "Послеоперационный уход",
+                    "Description": "Харви лично контролирует каждый этап восстановления после операции.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 4320000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 23,
+                    "Effects": {
+                        "Health": 30,
+                        "MaxStamina": 20,
+                        "Defense": 2,
+                        "Speed": -5
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "postSurgical"
+                    }
+                },
+                // ================== ЛЕЧЕНИЕ СТРЕССА ==================
+                "buffTraumaHealing": {
+                    "Id": "buffTraumaHealing",
+                    "DisplayName": "Исцеление травмы",
+                    "Description": "Психологические раны начинают заживать под заботой Харви.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 10080000,
+                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+                    "IconSpriteIndex": 17,
+                    "Effects": {
+                        "MaxStamina": 15,
+                        "LuckLevel": 1,
+                        "Defense": 1
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "traumaHealing"
+                    }
+                },
+                // === ПЕРЕЛОМ ===
+                "HarveyMod_FracturedBone_Acute": {
+                    "Id": "HarveyMod_FracturedBone_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Перелом: Острая фаза (Фаза 1/3)",
+                    "Description": "Сильная боль, иммобилизация. Харви наложил фиксирующую повязку. Требуется полный покой. (Длительность: 7 дней) -30 макс здоровья, -2 скорости, -4 защиты.",
+                    "Effects": {
+                        "MaxStamina": -30,
+                        "Speed": -2,
+                        "Defense": -4
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_FracturedBone_Cast": {
+                    "Id": "HarveyMod_FracturedBone_Cast",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Перелом: Гипс (Фаза 2/3)",
+                    "Description": "Ограничение движений, гипсовая повязка. Кость срастается под контролем Харви. (Длительность: 35 дней) -20 макс здоровья, -1 скорости, -3 защиты, -2 атаки.",
+                    "Effects": {
+                        "MaxStamina": -20,
+                        "Speed": -1,
+                        "Defense": -3,
+                        "Attack": -2
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_FracturedBone_Recovery": {
+                    "Id": "HarveyMod_FracturedBone_Recovery",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Перелом: Реабилитация (Фаза 3/3)",
+                    "Description": "Гипс снят! Восстановление подвижности, укрепление кости. Последний этап лечения. (Длительность: 14 дней) -10 макс здоровья, -1 скорости, -1 защиты.",
+                    "Effects": {
+                        "MaxStamina": -10,
+                        "Speed": -1,
+                        "Defense": -1
+                    },
+                    "CustomFields": {}
+                },
+                // === СОТРЯСЕНИЕ ===
+                "HarveyMod_Concussion_Acute": {
+                    "Id": "HarveyMod_Concussion_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Сотрясение: Острая фаза (Фаза 1/3)",
+                    "Description": "Постельный режим, головокружение. Харви настаивает на строгом покое. (Длительность: 3 дня) -40 макс здоровья, -2 скорости.",
+                    "Effects": {
+                        "MaxStamina": -40,
+                        "Speed": -2
+                    },
+                    "CustomFields": {
+                        "VisualEffect": "blur"
+                    }
+                },
+                "HarveyMod_Concussion_Rest": {
+                    "Id": "HarveyMod_Concussion_Rest",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Сотрясение: Домашний режим (Фаза 2/3)",
+                    "Description": "Покой, периодические головные боли. Харви наблюдает за восстановлением. (Длительность: 11 дней) -25 макс здоровья, -1 скорости.",
+                    "Effects": {
+                        "MaxStamina": -25,
+                        "Speed": -1
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_Concussion_Limited": {
+                    "Id": "HarveyMod_Concussion_Limited",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Сотрясение: Ограничения (Фаза 3/3)",
+                    "Description": "Ограничение активности. Симптомы почти прошли. Последний этап восстановления. (Длительность: 7 дней) -15 макс здоровья, -1 скорости.",
+                    "Effects": {
+                        "MaxStamina": -15,
+                        "Speed": -1
+                    },
+                    "CustomFields": {}
+                },
+                // === ОСКОЛКИ/ОПЕРАЦИЯ ===
+                "HarveyMod_Shrapnel_Surgery": {
+                    "Id": "HarveyMod_Shrapnel_Surgery",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "После операции: Швы (Фаза 1/3)",
+                    "Description": "Послеоперационный период. Харви провёл операцию по извлечению осколков и наложил швы. Критичные дни после операции. (Длительность: 5 дней) -35 макс здоровья, -1 скорости, -2 атаки.",
+                    "Effects": {
+                        "MaxStamina": -35,
+                        "Speed": -1,
+                        "Attack": -2
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_Shrapnel_Healing": {
+                    "Id": "HarveyMod_Shrapnel_Healing",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Заживление швов (Фаза 2/3)",
+                    "Description": "Швы затягиваются, ткани восстанавливаются. Харви продолжает наблюдение за заживлением ран. (Длительность: 10 дней) -20 макс здоровья, -1 скорости, -2 атаки.",
+                    "Effects": {
+                        "MaxStamina": -20,
+                        "Speed": -1,
+                        "Attack": -2
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_Shrapnel_Recovery": {
+                    "Id": "HarveyMod_Shrapnel_Recovery",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Восстановление тканей (Фаза 3/3)",
+                    "Description": "Швы готовы к снятию! Регенерация повреждённых тканей, формирование рубцовой ткани. Последний этап восстановления. (Длительность: 7 дней) -10 макс здоровья, -1 скорости, -1 атаки.",
+                    "Effects": {
+                        "MaxStamina": -10,
+                        "Speed": -1,
+                        "Attack": -1
+                    },
+                    "CustomFields": {}
+                },
+                // === НАДРЫВ МЫШЦ ===
+                "HarveyMod_TornMuscles_Acute": {
+                    "Id": "HarveyMod_TornMuscles_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Надрыв мышц: Острая боль (Фаза 1/3)",
+                    "Description": "Сильная боль, иммобилизация. Харви наложил фиксирующую повязку и назначил покой. (Длительность: 7 дней) -25 макс здоровья, -2 скорости, -3 атаки.",
+                    "Effects": {
+                        "MaxStamina": -25,
+                        "Speed": -2,
+                        "Attack": -3
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_TornMuscles_Healing": {
+                    "Id": "HarveyMod_TornMuscles_Healing",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Надрыв мышц: Заживление (Фаза 2/3)",
+                    "Description": "Ограничение нагрузки. Мышечная ткань восстанавливается под наблюдением Харви. (Длительность: 14 дней) -15 макс здоровья, -1 скорости, -2 атаки.",
+                    "Effects": {
+                        "MaxStamina": -15,
+                        "Speed": -1,
+                        "Attack": -2
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_TornMuscles_Rehab": {
+                    "Id": "HarveyMod_TornMuscles_Rehab",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Надрыв мышц: Реабилитация (Фаза 3/3)",
+                    "Description": "Укрепление мышц. Постепенное возвращение к нормальной активности. Последний этап восстановления. (Длительность: 7 дней) -10 макс здоровья, -1 скорости, -1 атаки.",
+                    "Effects": {
+                        "MaxStamina": -10,
+                        "Speed": -1,
+                        "Attack": -1
+                    },
+                    "CustomFields": {}
+                },
+                // === РАСТЯЖЕНИЕ ===
+                "HarveyMod_SprainedAnkle_Acute": {
+                    "Id": "HarveyMod_SprainedAnkle_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Растяжение: Острая боль (Фаза 1/2)",
+                    "Description": "Отёк, боль при движении. Харви наложил эластичную повязку. Требуется покой. (Длительность: 7 дней) -20 макс здоровья, -1 скорости, -2 защиты.",
+                    "Effects": {
+                        "MaxStamina": -20,
+                        "Speed": -1,
+                        "Defense": -2
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_SprainedAnkle_Recovery": {
+                    "Id": "HarveyMod_SprainedAnkle_Recovery",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Растяжение: Восстановление (Фаза 2/2)",
+                    "Description": "Отёк спадает. Связки восстанавливаются. Последний этап лечения. (Длительность: 7 дней) -10 макс здоровья, -1 скорости, -1 защиты.",
+                    "Effects": {
+                        "MaxStamina": -10,
+                        "Speed": -1,
+                        "Defense": -1
+                    },
+                    "CustomFields": {}
+                },
+                // === УШИБ РЁБЕР ===
+                "HarveyMod_BruisedRibs_Acute": {
+                    "Id": "HarveyMod_BruisedRibs_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Ушиб рёбер: Острая боль (Фаза 1/2)",
+                    "Description": "Боль при дыхании. Харви наложил фиксирующую повязку. (Длительность: 10 дней) -25 макс здоровья, -3 защиты.",
+                    "Effects": {
+                        "MaxStamina": -25,
+                        "Defense": -3
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_BruisedRibs_Healing": {
+                    "Id": "HarveyMod_BruisedRibs_Healing",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Ушиб рёбер: Заживление (Фаза 2/2)",
+                    "Description": "Боль утихает. Гематома рассасывается. Последний этап лечения. (Длительность: 11 дней) -15 макс здоровья, -2 защиты.",
+                    "Effects": {
+                        "MaxStamina": -15,
+                        "Defense": -2
+                    },
+                    "CustomFields": {}
+                },
+                // === ГЛУБОКИЕ ПОРЕЗЫ ===
+                "HarveyMod_DeepCuts_Acute": {
+                    "Id": "HarveyMod_DeepCuts_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Глубокие порезы: Швы (Фаза 1/3)",
+                    "Description": "Кровотечение, свежие швы. Харви наложил швы и стерильную повязку. Критичные первые дни. (Длительность: 3 дня) -20 макс здоровья, -1 скорости.",
+                    "Effects": {
+                        "MaxStamina": -20,
+                        "Speed": -1
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "true",
+                        "InjuryType": "DeepCuts",
+                        "Phase": "1"
+                    }
+                },
+                "HarveyMod_DeepCuts_Healing": {
+                    "Id": "HarveyMod_DeepCuts_Healing",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Глубокие порезы: Заживление (Фаза 2/3)",
+                    "Description": "Швы затягиваются, воспаление спадает. Харви продолжает наблюдать за процессом. (Длительность: 7 дней) -10 макс здоровья.",
+                    "Effects": {
+                        "MaxStamina": -10
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "true",
+                        "InjuryType": "DeepCuts",
+                        "Phase": "2"
+                    }
+                },
+                "HarveyMod_DeepCuts_Recovery": {
+                    "Id": "HarveyMod_DeepCuts_Recovery",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": false,
+                    "GlowColor": "LightGreen",
+                    "DisplayName": "Глубокие порезы: Снятие швов (Фаза 3/3)",
+                    "Description": "Швы готовы к снятию! Кожа регенерирует, формируется здоровая ткань. Последний этап лечения. (Длительность: 4 дня) Минимальный дискомфорт.",
+                    "Effects": {
+                        "MaxStamina": 5
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "true",
+                        "InjuryType": "DeepCuts",
+                        "Phase": "3"
+                    }
+                },
+                // === ОЖОГИ ===
+                "HarveyMod_BurnWounds_Acute": {
+                    "Id": "HarveyMod_BurnWounds_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Ожоги: Острая боль (Фаза 1/2)",
+                    "Description": "Воспаление, сильная боль. Харви обработал ожоги и наложил специальную повязку. (Длительность: 7 дней) -25 макс здоровья, -1 скорости, -3 защиты.",
+                    "Effects": {
+                        "MaxStamina": -25,
+                        "Speed": -1,
+                        "Defense": -3
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_BurnWounds_Healing": {
+                    "Id": "HarveyMod_BurnWounds_Healing",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Ожоги: Регенерация (Фаза 2/2)",
+                    "Description": "Кожа восстанавливается. Образуется новая здоровая ткань. Последний этап лечения. (Длительность: 14 дней) -15 макс здоровья, -1 защиты.",
+                    "Effects": {
+                        "MaxStamina": -15,
+                        "Defense": -0.1
+                    },
+                    "CustomFields": {}
+                },
+                // === ИНФЕКЦИЯ ===
+                "HarveyMod_InfectedWound_Acute": {
+                    "Id": "HarveyMod_InfectedWound_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Инфекция: Лихорадка (Фаза 1/2)",
+                    "Description": "Интоксикация, высокая температура. Харви начал курс антибиотиков. (Длительность: 3 дня) -30 макс здоровья, -1 скорости.",
+                    "Effects": {
+                        "MaxStamina": -30,
+                        "Speed": -1
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_InfectedWound_Treatment": {
+                    "Id": "HarveyMod_InfectedWound_Treatment",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Инфекция: Антибиотики (Фаза 2/2)",
+                    "Description": "Курс антибиотиков. Инфекция отступает. Последний этап лечения. (Длительность: 11 дней) -15 макс здоровья.",
+                    "Effects": {
+                        "MaxStamina": -15
+                    },
+                    "CustomFields": {}
+                },
+                // === СПИНА ===
+                "HarveyMod_BackStrain_Acute": {
+                    "Id": "HarveyMod_BackStrain_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Спина: Острая боль (Фаза 1/2)",
+                    "Description": "Спазм мышц, боль при наклонах. Харви назначил покой и обезболивающие. (Длительность: 5 дней) -20 макс здоровья, -1 скорости.",
+                    "Effects": {
+                        "MaxStamina": -20,
+                        "Speed": -1
+                    },
+                    "CustomFields": {}
+                },
+                "HarveyMod_BackStrain_Recovery": {
+                    "Id": "HarveyMod_BackStrain_Recovery",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Спина: Восстановление (Фаза 2/2)",
+                    "Description": "Боль утихает. Мышцы спины восстанавливаются. Последний этап лечения. (Длительность: 7 дней) -10 макс здоровья.",
+                    "Effects": {
+                        "MaxStamina": -10
+                    },
+                    "CustomFields": {}
+                },
+                "buffHarveyCare": {
+                    "Id": "buffHarveyCare",
+                    "DisplayName": "Забота Харви",
+                    "Description": "Харви гордится тобой за успешное завершение лечения. Его забота даёт силы.",
+                    "IsDebuff": false,
+                    "GlowColor": "Pink",
+                    "Duration": 28800000,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 20,
+                    "Effects": {
+                        "MaxStamina": 30.0,
+                        "LuckLevel": 1.0,
+                        "Defense": 2.0,
+                        "Speed": 1.0
+                    },
+                    "CustomFields": {
+                        "HarveyTreatment": "care",
+                        "Category": "Completion"
+                    }
+                },
+                
+            }
+        }
+    ]
+}
