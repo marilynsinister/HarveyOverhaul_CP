@@ -587,7 +587,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 16,
                     "IsDebuff": false,
-                    "GlowColor": "LightGreen",
+                    "GlowColor": null,
                     "DisplayName": "Глубокие порезы: Снятие швов (Фаза 3/3)",
                     "Description": "Швы готовы к снятию! Кожа регенерирует, формируется здоровая ткань. Последний этап лечения. (Длительность: 4 дня) Минимальный дискомфорт.",
                     "Effects": {
@@ -691,12 +691,70 @@
                     },
                     "CustomFields": {}
                 },
+                // === ТЯЖЁЛЫЕ РАНЫ ===
+                "HarveyMod_BadlyHurt_Acute": {
+                    "Id": "HarveyMod_BadlyHurt_Acute",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Тяжёлая рана: Стабилизация (Фаза 1/3)",
+                    "Description": "Критическое состояние после обморока в шахте. Харви проводит интенсивную терапию и наблюдение. (Длительность: 3 дня) -35 макс здоровья, -2 защиты, -1 скорости.",
+                    "Effects": {
+                        "MaxStamina": -35,
+                        "Defense": -2,
+                        "Speed": -1
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "true",
+                        "InjuryType": "BadlyHurt",
+                        "Phase": "1"
+                    }
+                },
+                "HarveyMod_BadlyHurt_Healing": {
+                    "Id": "HarveyMod_BadlyHurt_Healing",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Тяжёлая рана: Заживление (Фаза 2/3)",
+                    "Description": "Состояние стабилизировано, раны заживают под наблюдением Харви. (Длительность: 3 дня) -20 макс здоровья, -1 защиты.",
+                    "Effects": {
+                        "MaxStamina": -20,
+                        "Defense": -1
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "true",
+                        "InjuryType": "BadlyHurt",
+                        "Phase": "2"
+                    }
+                },
+                "HarveyMod_BadlyHurt_Recovery": {
+                    "Id": "HarveyMod_BadlyHurt_Recovery",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "DisplayName": "Тяжёлая рана: Восстановление (Фаза 3/3)",
+                    "Description": "Последний этап восстановления после тяжёлой травмы. (Длительность: 2 дня) -10 макс здоровья.",
+                    "Effects": {
+                        "MaxStamina": -10
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "true",
+                        "InjuryType": "BadlyHurt",
+                        "Phase": "3"
+                    }
+                },
                 "buffHarveyCare": {
                     "Id": "buffHarveyCare",
                     "DisplayName": "Забота Харви",
                     "Description": "Харви гордится тобой за успешное завершение лечения. Его забота даёт силы.",
                     "IsDebuff": false,
-                    "GlowColor": "Pink",
+                    "GlowColor": null,
                     "Duration": 28800000,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 20,

@@ -16,16 +16,21 @@
     message \"Быстрые шаги эхом отзываются в шахте...\"/
     pause 800/
     warp Harvey 17 10/
+    faceDirection farmer 2/
+    animate farmer false true 2000 5 4/
     viewport 17 7 true/
     pause 500/
     fade false/
     pause 300/
     emote Harvey 16/
     speak Harvey \"@?! НЕТ!$8\"/
+    pause 300/
+    speed Harvey 6/
+    move Harvey 0 -2 0/
     pause 400/
-    move Harvey 0 -2 0 true/
-    pause 200/
-    animate Harvey false true 1000 22 20 21/
+    stopAnimation Harvey/
+    faceDirection Harvey 0/
+    animate Harvey false false 1000 22 20 21/
     speak Harvey \"*проверяет пульс* Слабый... Критически слабый!$8\"/
     pause 600/
     emote Harvey 12/
@@ -35,19 +40,18 @@
     pause 1200/
     globalFade/
     viewport -1000 -1000/
-    pause 2000/
+    pause 600/
     changeLocation Hospital/
     ignoreCollisions farmer/
     warp farmer 20 5/
     positionOffset farmer 32 -52/
     faceDirection farmer 2/
     animate farmer true true 10000 4 5/
-    warp Harvey 18 5/
+    warp Harvey 19 5/
     faceDirection Harvey 1/
-    viewport 14 6/
-    pause 500/
-    fade false/
+    stopAnimation Harvey/
     ambientLight 180 180 180/
+    viewport 14 6/
     pause 800/
     speak Harvey \"*срывающийся голос* Мару! Срочно реанимационный набор!$a\"/
     pause 400/
@@ -55,10 +59,12 @@
     pause 300/
     speak Harvey \"Критическое состояние! Адреналин, физраствор, кислород!$a\"/
     pause 600/
-    animate Harvey false true 100 22 20 21 20/
+    animate Harvey false false 250 22 20 21 20/
     playSound dwop/
     speak Harvey \"*вводит инъекцию* Давай... стабилизируем пульс...$s\"/
-    pause 1000/
+    pause 1200/
+    stopAnimation Harvey/
+    faceDirection Harvey 1/
     emote Harvey 28/
     speak Harvey \"*выдыхает* Пульс стабилизируется... Боже...$s#$b#Ещё минута — и могло быть хуже.$s\"/
     pause 1200/
@@ -77,6 +83,9 @@
     action AddConversationTopic topicMineInjuryRescue 2/
     friendship Harvey 60/
     mail mailHarveyAfterMineRescue/
+    stopAnimation Harvey/
+    stopAnimation farmer/
+    faceDirection farmer 3/
     globalFade/
     viewport -1000 -1000/
     end dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
