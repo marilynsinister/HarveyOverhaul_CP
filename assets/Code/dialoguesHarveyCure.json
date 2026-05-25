@@ -1193,6 +1193,10 @@
             }
         },
         {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
                 "Relationship:Harvey": "Married"
             },
             "Entries": {
@@ -1295,8 +1299,12 @@
                 
                 // === РАСТЯЖЕНИЕ СПИНЫ (2 фазы) ===
             }
-        }
+        },
         {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
                 "Relationship:Harvey": "Dating"
             },
             "Entries": {
