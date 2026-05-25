@@ -1,0 +1,177 @@
+{
+  "Proximity_Injury_Untreated_Low_0": "Вам стоит зайти в клинику.",
+  "Proximity_Injury_Untreated_Low_1": "Это нужно осмотреть.",
+  "Proximity_Injury_Untreated_Low_2": "Пожалуйста, не тяните.",
+
+  "Proximity_Injury_Untreated_Mid_0": "Ты ранена? Зайди ко мне.",
+  "Proximity_Injury_Untreated_Mid_1": "Не оставляй это без осмотра.",
+  "Proximity_Injury_Untreated_Mid_2": "Я вижу, тебе больно.",
+
+  "Proximity_Injury_Untreated_High_0": "Не геройствуй, пожалуйста.",
+  "Proximity_Injury_Untreated_High_1": "Зайди ко мне сегодня.",
+  "Proximity_Injury_Untreated_High_2": "Я волнуюсь. Покажись мне.",
+
+  "Proximity_Injury_Untreated_Romantic_0": "Ко мне. Я серьёзно.",
+  "Proximity_Injury_Untreated_Romantic_1": "Не скрывай от меня боль.",
+  "Proximity_Injury_Untreated_Romantic_2": "Я вижу. И я волнуюсь.",
+
+  "Proximity_Injury_InTreatment_Low_0": "Соблюдайте режим, пожалуйста.",
+  "Proximity_Injury_InTreatment_Low_1": "Не перегружайте себя.",
+  "Proximity_Injury_InTreatment_Low_2": "Двигайтесь осторожнее.",
+
+  "Proximity_Injury_InTreatment_Mid_0": "Режим, помнишь?",
+  "Proximity_Injury_InTreatment_Mid_1": "Сегодня без подвигов.",
+  "Proximity_Injury_InTreatment_Mid_2": "Береги себя, хорошо?",
+
+  "Proximity_Injury_InTreatment_High_0": "Я слежу за тобой.",
+  "Proximity_Injury_InTreatment_High_1": "Не перегружайся, пожалуйста.",
+  "Proximity_Injury_InTreatment_High_2": "Побереги силы.",
+
+  "Proximity_Injury_InTreatment_Romantic_0": "Сегодня без подвигов, милая.",
+  "Proximity_Injury_InTreatment_Romantic_1": "Я вижу, ты устала.",
+  "Proximity_Injury_InTreatment_Romantic_2": "Пожалуйста, береги себя.",
+
+  "Proximity_Phase_ReadyNextPhase_Low_0": "Пора на контрольный осмотр.",
+  "Proximity_Phase_ReadyNextPhase_Low_1": "Нужно проверить заживление.",
+  "Proximity_Phase_ReadyNextPhase_Low_2": "Зайдите в клинику.",
+
+  "Proximity_Phase_ReadyNextPhase_Mid_0": "Пора на контрольный осмотр.",
+  "Proximity_Phase_ReadyNextPhase_Mid_1": "Я хочу проверить рану.",
+  "Proximity_Phase_ReadyNextPhase_Mid_2": "Зайди ко мне сегодня.",
+
+  "Proximity_Phase_ReadyNextPhase_High_0": "Давай проверим заживление.",
+  "Proximity_Phase_ReadyNextPhase_High_1": "Мне нужно взглянуть.",
+  "Proximity_Phase_ReadyNextPhase_High_2": "Не откладывай осмотр.",
+
+  "Proximity_Phase_ReadyNextPhase_Romantic_0": "Ко мне на осмотр, хорошо?",
+  "Proximity_Phase_ReadyNextPhase_Romantic_1": "Я хочу убедиться сам.",
+  "Proximity_Phase_ReadyNextPhase_Romantic_2": "Почти лучше. Проверим.",
+
+  "Proximity_Recovery_ReadyRecovery_Low_0": "Нужен финальный осмотр.",
+  "Proximity_Recovery_ReadyRecovery_Low_1": "Давайте проверим результат.",
+  "Proximity_Recovery_ReadyRecovery_Low_2": "Выздоровление нужно подтвердить.",
+
+  "Proximity_Recovery_ReadyRecovery_Mid_0": "Финальный осмотр, хорошо?",
+  "Proximity_Recovery_ReadyRecovery_Mid_1": "Давай проверим результат.",
+  "Proximity_Recovery_ReadyRecovery_Mid_2": "Почти всё. Зайди ко мне.",
+
+  "Proximity_Recovery_ReadyRecovery_High_0": "Я хочу убедиться окончательно.",
+  "Proximity_Recovery_ReadyRecovery_High_1": "Почти всё. Не пропусти осмотр.",
+  "Proximity_Recovery_ReadyRecovery_High_2": "Давай завершим лечение правильно.",
+
+  "Proximity_Recovery_ReadyRecovery_Romantic_0": "Почти всё, милая. Ко мне.",
+  "Proximity_Recovery_ReadyRecovery_Romantic_1": "Я хочу убедиться сам.",
+  "Proximity_Recovery_ReadyRecovery_Romantic_2": "Последний осмотр. Не спорь.",
+
+  "Proximity_Complication_Multiple_Low_0": "Это нельзя оставлять.",
+  "Proximity_Complication_Multiple_Low_1": "Срочно в клинику.",
+  "Proximity_Complication_Multiple_Low_2": "Так ходить опасно.",
+
+  "Proximity_Complication_Multiple_Mid_0": "Срочно ко мне.",
+  "Proximity_Complication_Multiple_Mid_1": "Это рискованно.",
+  "Proximity_Complication_Multiple_Mid_2": "Нужно проверить немедленно.",
+
+  "Proximity_Complication_Multiple_High_0": "Я серьёзно. Ко мне.",
+  "Proximity_Complication_Multiple_High_1": "Не тяни с этим.",
+  "Proximity_Complication_Multiple_High_2": "Так оставлять нельзя.",
+
+  "Proximity_Complication_Multiple_Romantic_0": "Ко мне. Сейчас.",
+  "Proximity_Complication_Multiple_Romantic_1": "Не пугай меня так.",
+  "Proximity_Complication_Multiple_Romantic_2": "Я рядом. Быстро в клинику.",
+
+  "Proximity_Complication_WetBandage_Low_0": "Повязка промокла?",
+  "Proximity_Complication_WetBandage_Low_1": "Её нужно заменить.",
+  "Proximity_Complication_WetBandage_Low_2": "Так нельзя ходить.",
+
+  "Proximity_Complication_WetBandage_Mid_0": "Повязка промокла?",
+  "Proximity_Complication_WetBandage_Mid_1": "Её нужно заменить.",
+  "Proximity_Complication_WetBandage_Mid_2": "Так нельзя ходить.",
+
+  "Proximity_Complication_WetBandage_High_0": "Повязка промокла?",
+  "Proximity_Complication_WetBandage_High_1": "Её нужно заменить.",
+  "Proximity_Complication_WetBandage_High_2": "Так нельзя ходить.",
+
+  "Proximity_Complication_WetBandage_Romantic_0": "Повязка промокла?",
+  "Proximity_Complication_WetBandage_Romantic_1": "Её нужно заменить.",
+  "Proximity_Complication_WetBandage_Romantic_2": "Так нельзя ходить.",
+
+  "Proximity_Complication_DirtyWound_Low_0": "Рана загрязнена?",
+  "Proximity_Complication_DirtyWound_Low_1": "Нужно промыть немедленно.",
+  "Proximity_Complication_DirtyWound_Low_2": "Не трогай её руками.",
+
+  "Proximity_Complication_DirtyWound_Mid_0": "Рана загрязнена?",
+  "Proximity_Complication_DirtyWound_Mid_1": "Нужно промыть немедленно.",
+  "Proximity_Complication_DirtyWound_Mid_2": "Не трогай её руками.",
+
+  "Proximity_Complication_DirtyWound_High_0": "Рана загрязнена?",
+  "Proximity_Complication_DirtyWound_High_1": "Нужно промыть немедленно.",
+  "Proximity_Complication_DirtyWound_High_2": "Не трогай её руками.",
+
+  "Proximity_Complication_DirtyWound_Romantic_0": "Рана загрязнена?",
+  "Proximity_Complication_DirtyWound_Romantic_1": "Нужно промыть немедленно.",
+  "Proximity_Complication_DirtyWound_Romantic_2": "Не трогай её руками.",
+
+  "Proximity_Complication_WetStitches_Low_0": "Швы намокли?",
+  "Proximity_Complication_WetStitches_Low_1": "Это рискованно.",
+  "Proximity_Complication_WetStitches_Low_2": "Срочно ко мне.",
+
+  "Proximity_Complication_WetStitches_Mid_0": "Швы намокли?",
+  "Proximity_Complication_WetStitches_Mid_1": "Это рискованно.",
+  "Proximity_Complication_WetStitches_Mid_2": "Срочно ко мне.",
+
+  "Proximity_Complication_WetStitches_High_0": "Швы намокли?",
+  "Proximity_Complication_WetStitches_High_1": "Это рискованно.",
+  "Proximity_Complication_WetStitches_High_2": "Срочно ко мне.",
+
+  "Proximity_Complication_WetStitches_Romantic_0": "Швы намокли?",
+  "Proximity_Complication_WetStitches_Romantic_1": "Это рискованно.",
+  "Proximity_Complication_WetStitches_Romantic_2": "Срочно ко мне.",
+
+  "Proximity_Complication_Neglect_Low_0": "Ты пропустила осмотр.",
+  "Proximity_Complication_Neglect_Low_1": "Я ждал тебя.",
+  "Proximity_Complication_Neglect_Low_2": "Так нельзя, правда.",
+
+  "Proximity_Complication_Neglect_Mid_0": "Ты пропустила осмотр.",
+  "Proximity_Complication_Neglect_Mid_1": "Я ждал тебя.",
+  "Proximity_Complication_Neglect_Mid_2": "Так нельзя, правда.",
+
+  "Proximity_Complication_Neglect_High_0": "Ты пропустила осмотр.",
+  "Proximity_Complication_Neglect_High_1": "Я ждал тебя.",
+  "Proximity_Complication_Neglect_High_2": "Так нельзя, правда.",
+
+  "Proximity_Complication_Neglect_Romantic_0": "Ты пропустила осмотр.",
+  "Proximity_Complication_Neglect_Romantic_1": "Я ждал тебя.",
+  "Proximity_Complication_Neglect_Romantic_2": "Так нельзя, правда.",
+
+  "Proximity_Complication_AllergicRash_Low_0": "Сыпь усилилась?",
+  "Proximity_Complication_AllergicRash_Low_1": "Не расчёсывай.",
+  "Proximity_Complication_AllergicRash_Low_2": "Покажешь мне кожу?",
+
+  "Proximity_Complication_AllergicRash_Mid_0": "Сыпь усилилась?",
+  "Proximity_Complication_AllergicRash_Mid_1": "Не расчёсывай.",
+  "Proximity_Complication_AllergicRash_Mid_2": "Покажешь мне кожу?",
+
+  "Proximity_Complication_AllergicRash_High_0": "Сыпь усилилась?",
+  "Proximity_Complication_AllergicRash_High_1": "Не расчёсывай.",
+  "Proximity_Complication_AllergicRash_High_2": "Покажешь мне кожу?",
+
+  "Proximity_Complication_AllergicRash_Romantic_0": "Сыпь усилилась?",
+  "Proximity_Complication_AllergicRash_Romantic_1": "Не расчёсывай.",
+  "Proximity_Complication_AllergicRash_Romantic_2": "Покажешь мне кожу?",
+
+  "Proximity_Complication_PainFlare_Low_0": "Снова болит?",
+  "Proximity_Complication_PainFlare_Low_1": "Дыши. Медленно.",
+  "Proximity_Complication_PainFlare_Low_2": "Я вижу, боль вернулась.",
+
+  "Proximity_Complication_PainFlare_Mid_0": "Снова болит?",
+  "Proximity_Complication_PainFlare_Mid_1": "Дыши. Медленно.",
+  "Proximity_Complication_PainFlare_Mid_2": "Я вижу, боль вернулась.",
+
+  "Proximity_Complication_PainFlare_High_0": "Снова болит?",
+  "Proximity_Complication_PainFlare_High_1": "Дыши. Медленно.",
+  "Proximity_Complication_PainFlare_High_2": "Я вижу, боль вернулась.",
+
+  "Proximity_Complication_PainFlare_Romantic_0": "Снова болит?",
+  "Proximity_Complication_PainFlare_Romantic_1": "Дыши. Медленно.",
+  "Proximity_Complication_PainFlare_Romantic_2": "Я вижу, боль вернулась."
+}

@@ -157,6 +157,12 @@ Example: "%Abigail is lost in her music."
       "FromFile": "assets/Code/dialoguesHarveyPregnant.json",
       "Priority": "Late"
     },
+    {
+      "LogName": "Load Harvey proximity injury dialogue (C# bubbles)",
+      "Action": "Load",
+      "Target": "Data/HarveyOverhaul/HarveyProximityInjuryDialogue",
+      "FromFile": "assets/Dialogue/harvey_proximity_injury.json"
+    },
     // {
     //   "Action": "Include",
     //   "FromFile": "assets/Code/dialoguesHarveyStress.json",
