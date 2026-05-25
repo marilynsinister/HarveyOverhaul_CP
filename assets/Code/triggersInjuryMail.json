@@ -1,0 +1,74 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "marilynsinister.HarveyOverhaul.Injury_triggerFarmerPassedOutOnTooLate": null
+            },
+            "LogName": "Remove ungated sleep-control mail trigger (Injury mod)"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_triggerSleepControl_Neutral": {
+                    "Id": "{{ModId}}_triggerSleepControl_Neutral",
+                    "Trigger": "Spiderbuttons.BETAS_PassedOut",
+                    "Condition": "ITEM_ID Target Town, Spiderbuttons.BETAS_ITEM_MOD_DATA Target BETAS/PassedOut/WasUpTooLate true, !PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown, !PLAYER_HAS_BUFF Current buffSleepy, !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, PLAYER_HEARTS Current Harvey 0 1 2 3",
+                    "Actions": [
+                        "AddConversationTopic topicPassedOutInTown 2",
+                        "AddBuff buffSleepy -2",
+                        "AddMail Current mailHarveySleepControl_Neutral now",
+                        "spacechase0.SpaceCore_PlayEvent eventHarveyLateNightCollapse",
+                        "Spiderbuttons.BETAS_PlaySound debuffHit"
+                    ],
+                    "MarkActionApplied": true,
+                    "LogName": "Sleep control mail — neutral (0–3 ❤)"
+                },
+                "{{ModId}}_triggerSleepControl_Friend": {
+                    "Id": "{{ModId}}_triggerSleepControl_Friend",
+                    "Trigger": "Spiderbuttons.BETAS_PassedOut",
+                    "Condition": "ITEM_ID Target Town, Spiderbuttons.BETAS_ITEM_MOD_DATA Target BETAS/PassedOut/WasUpTooLate true, !PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown, !PLAYER_HAS_BUFF Current buffSleepy, !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, PLAYER_HEARTS Current Harvey 4 5 6 7 8 9 10",
+                    "Actions": [
+                        "AddConversationTopic topicPassedOutInTown 2",
+                        "AddBuff buffSleepy -2",
+                        "AddMail Current mailHarveySleepControl_Friend now",
+                        "spacechase0.SpaceCore_PlayEvent eventHarveyLateNightCollapse",
+                        "Spiderbuttons.BETAS_PlaySound debuffHit"
+                    ],
+                    "MarkActionApplied": true,
+                    "LogName": "Sleep control mail — friend (4–10 ❤ pre-Dating)"
+                },
+                "{{ModId}}_triggerSleepControl_Dating": {
+                    "Id": "{{ModId}}_triggerSleepControl_Dating",
+                    "Trigger": "Spiderbuttons.BETAS_PassedOut",
+                    "Condition": "ITEM_ID Target Town, Spiderbuttons.BETAS_ITEM_MOD_DATA Target BETAS/PassedOut/WasUpTooLate true, !PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown, !PLAYER_HAS_BUFF Current buffSleepy, PLAYER_NPC_RELATIONSHIP Current Harvey Dating",
+                    "Actions": [
+                        "AddConversationTopic topicPassedOutInTown 2",
+                        "AddBuff buffSleepy -2",
+                        "AddMail Current mailHarveySleepControl_Dating now",
+                        "spacechase0.SpaceCore_PlayEvent eventHarveyLateNightCollapse",
+                        "Spiderbuttons.BETAS_PlaySound debuffHit"
+                    ],
+                    "MarkActionApplied": true,
+                    "LogName": "Sleep control mail — Dating"
+                },
+                "{{ModId}}_triggerSleepControl_Married": {
+                    "Id": "{{ModId}}_triggerSleepControl_Married",
+                    "Trigger": "Spiderbuttons.BETAS_PassedOut",
+                    "Condition": "ITEM_ID Target Town, Spiderbuttons.BETAS_ITEM_MOD_DATA Target BETAS/PassedOut/WasUpTooLate true, !PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown, !PLAYER_HAS_BUFF Current buffSleepy, PLAYER_NPC_RELATIONSHIP Current Harvey Married",
+                    "Actions": [
+                        "AddConversationTopic topicPassedOutInTown 2",
+                        "AddBuff buffSleepy -2",
+                        "AddMail Current mailHarveySleepControl_Married now",
+                        "spacechase0.SpaceCore_PlayEvent eventHarveyLateNightCollapse",
+                        "Spiderbuttons.BETAS_PlaySound debuffHit"
+                    ],
+                    "MarkActionApplied": true,
+                    "LogName": "Sleep control mail — Married"
+                }
+            }
+        }
+    ]
+}

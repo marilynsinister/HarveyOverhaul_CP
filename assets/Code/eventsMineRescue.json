@@ -4,7 +4,8 @@
             "Action": "EditData",
             "Target": "Data/Events/Mine",
             "Entries": {
-                "eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "none/
+                "eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
+    none/
     -1000 -1000/
     farmer 17 7 2 Harvey 1000 1000 0/
     pause 1000/
@@ -90,17 +91,14 @@
     viewport -1000 -1000/
     end dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
 
-                "eventHarveyMinorMineRescue/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "none/
+                "eventHarveyMinorMineRescue/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
+    none/
     -1000 -1000/
     farmer 17 7 2 Harvey 17 10 0/
     pause 500/
     message \"Голова кружится, дыхание сбивается... Ещё шаг — и ноги точно подведут.\"/
     pause 400/
-    speak Harvey \"@! Стой!$8\"/
-    pause 200/
-    move Harvey 0 -2 0 true/
-    emote Harvey 16/
-    speak Harvey \"Ты на грани. В таком состоянии я не дам тебе идти дальше.$a#$b#Сейчас в клинику — покой и осмотр.$u\"/
+    speak Harvey \"@! Ты на грани.$8#$b#Сейчас в клинику — покой и осмотр.$u\"/
     pause 800/
     globalFade/
     changeLocation Hospital/
@@ -122,7 +120,8 @@
     viewport -1000 -1000/
     end dialogue Harvey \"Отдыхай. Я загляну позже.$h\"",
 
-                "eventHarveyMineRescueDating/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "none/
+                "eventHarveyMineRescueDating/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
+    none/
     -1000 -1000/
     farmer 17 7 2 Harvey 1000 1000 0/
     pause 900/
@@ -151,7 +150,7 @@
     emote Harvey 12/
     speak Harvey \"Кровь… ладно. Сейчас главное — вынести тебя отсюда.$a#$b#Я везу тебя в клинику. Пожалуйста, доверься мне.$a\"/
     pause 800/
-    speak Harvey \"Держись. Пожалуйста.$s#$b#Я рядом. Я не отпущу.$s\"/
+    speak Harvey \"Держись. Пожалуйста.$s#$b#Я рядом. Доверься мне — или скажи «стоп».$s\"/
     pause 600/
     globalFade/
     viewport -1000 -1000/

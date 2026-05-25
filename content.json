@@ -116,6 +116,11 @@ Example: "%Abigail is lost in her music."
       "Action": "Include",
       "FromFile": "assets/Code/questsStress.json"
     },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/quest_dialogues.json",
+      "Priority": "Late"
+    },
     //  ===== ДИАЛОГИ С ДРУГИМИ NPC =====
     {
       "Action": "Include",
@@ -182,6 +187,10 @@ Example: "%Abigail is lost in her music."
     {
       "Action": "Include",
       "FromFile": "assets/Code/triggersCare.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersInjuryMail.json"
     },
     // {
     //   "Action": "Include",
@@ -274,6 +283,6 @@ Example: "%Abigail is lost in her music."
       "Action": "Load",
       "Target": "Mods/marilynsinister.HarveyOverhaul/injuryIcons",
       "FromFile": "assets/Tilesheets/injuryIcon.png"
-    },
+    }
   ]
 }

@@ -1,0 +1,74 @@
+---
+description: Content Patcher JSON — multiline event scripts, no collapse, no strict JSON validation
+globs: assets/Code/**/*.json,content.json
+alwaysApply: false
+---
+
+# Content Patcher JSON (HarveyOverhaul [CP])
+
+Это **Content Patcher**, не strict JSON. SMAPI/CP парсит файлы с расширениями, которых нет в RFC 8259.
+
+## Content Patcher event formatting rules
+
+1. **Многострочные event scripts разрешены** в этом проекте. Строки событий Stardew Valley могут быть оформлены с переносами для читаемости.
+2. **Обычный JSON validator не является главным источником истины** для этих блоков. Не считать ошибкой переносы внутри event script, если CP/SMAPI принимают такой формат. Smoke-test в игре важнее `python -m json.tool`.
+3. **Нельзя схлопывать события в одну строку.** Никогда не сворачивать multiline event script в длинную строку с `\n` или тройным экранированием `\"` ради «валидного JSON».
+4. **Нельзя менять смысл события при форматировании.** Не менять ID событий, условия запуска, friendship/heart gates, mail flags, seen events, location, time, weather, season, реплики, команды или порядок команд — если это не запрошено явно. Ключи CP (`Target`, `When`, `Entries`, `Action`, `FromFile`, `Update`, `Load` и др.) не трогать без прямого задания.
+5. **Нельзя запускать автоформаттеры по всему файлу.** Не использовать JSON formatters, prettier JSON mode, mass Python/scripts для «cleanup» без отдельного разрешения. Не делать cleanup за пределами указанной области.
+6. **После форматирования проверить сохранность:** разделителей `/` между командами, кавычек в репликах, escape-последовательностей (если уже работают), условий Content Patcher, ID событий и текста реплик.
+
+### Предпочтительный стиль
+
+- Команды события разделены `/`.
+- Одна команда события = одна строка (или читаемый блок).
+- Не добавлять лишний `/` в конце, если его не было.
+- Не заменять переносы на `\n`, если это ухудшает читаемость и не требуется явно.
+
+```json
+"Harvey_Example": "event_command_1/
+event_command_2/
+speak Harvey \"Текст реплики.\"/
+pause 500/
+end"
+```
+
+## Не делать
+
+- **Не «исправлять» JSON** ради валидности strict JSON parser (json.load, jq, prettier JSON mode).
+- **Не сворачивать** multiline event-строки в одну строку.
+- **Не удалять** `//` комментарии и trailing commas, если CP их принимает.
+- **Не переписывать** событие целиком ради «валидного JSON».
+
+## Формат event script strings
+
+Как в `eventsCare.json`, `declineFood` / `refuseCheckup` в `events.json`:
+
+```json
+"eventKey/conditions": "
+    continue/
+    64 15/
+    speak Harvey \"Текст\"/
+    end",
+"forkLabel": "
+    speak Harvey \"Ветка fork\"/
+    end"
+```
+
+- После открывающей `"` — **перенос строки**, каждая команда на своей строке.
+- Кавычки внутри скрипта: `\"`, не `\\\"`.
+- `quickQuestion` с ветками — одна строка с `\\` между branch-командами (как в других событиях).
+- Fork-entries (`acceptWalk`, `declineFood`, …) — **отдельный ключ** с тем же multiline-форматом, не inline `\n`.
+
+## При правках events/dialogues
+
+1. Сверяться с соседними событиями в том же файле.
+2. Менять только текст/логику по задаче; формат переносов сохранять.
+3. Smoke-test в игре важнее прохождения `python -m json.tool`.
+
+## Тон Харви (ласковые обращения)
+
+См. `docs/harvey-relationship-tone-guide.md`. Кратко:
+
+- **Не использовать «дорогая»** как ласковое имя — ни в Dating, ни в Married.
+- Вместо неё: **«солнышко»**, **«моя девочка»**, **«девочка моя»** (по стадии отношений).
+- Не трогать прилагательное: «мне дорога», «дорогая стоимостью», «на дорогу» и т.п.

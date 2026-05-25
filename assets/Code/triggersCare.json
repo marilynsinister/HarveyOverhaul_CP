@@ -72,7 +72,7 @@
                 "{{ModId}}_triggerHarveyNoteNote4": {
                     "Id": "{{ModId}}_triggerHarveyNoteNote4",
                     "Trigger": "DayStarted",
-                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, PLAYER_HAS_MAIL Current mailHarveyNote3 Received, RANDOM 0.8, !PLAYER_HAS_MAIL Current mailHarveyNote4 Received",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current mailHarveyNote3 Received, RANDOM 0.8, !PLAYER_HAS_MAIL Current mailHarveyNote4 Received",
                     "Actions": [
                         "AddMail Current mailHarveyNote4 now"
                     ],
@@ -111,7 +111,7 @@
                 "{{ModId}}_triggerTimeReactionLate": {
                     "Id": "{{ModId}}_triggerTimeReactionLate",
                     "Trigger": "LocationChanged",
-                    "Condition": "TIME 2200 0200, PLAYER_FRIENDSHIP_POINTS Current Harvey 500",
+                    "Condition": "TIME 2200 0200, PLAYER_FRIENDSHIP_POINTS Current Harvey 750",
                     "Actions": [
                         "AddConversationTopic timeReaction_Late 1",
                         "AddMail Current HarveyMod_LateNightWarning now"
@@ -120,7 +120,7 @@
                 "{{ModId}}_triggerTimeReactionVeryLate": {
                     "Id": "{{ModId}}_triggerTimeReactionVeryLate",
                     "Trigger": "LocationChanged",
-                    "Condition": "TIME 2400 0200, PLAYER_FRIENDSHIP_POINTS Current Harvey 1000",
+                    "Condition": "TIME 2400 0200, PLAYER_FRIENDSHIP_POINTS Current Harvey 1500",
                     "Actions": [
                         "AddConversationTopic timeReaction_VeryLate 2",
                         "AddBuff buffStressNoSleep -2",
@@ -161,7 +161,7 @@
                 "{{ModId}}_triggerEmergencySupervision": {
                     "Id": "{{ModId}}_triggerEmergencySupervision",
                     "Trigger": "DayStarted",
-                    "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Current timeReaction_VeryLate locationReaction_SkullCave situationReaction_Drunk, PLAYER_FRIENDSHIP_POINTS Current Harvey 2000",
+                    "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Current timeReaction_VeryLate locationReaction_SkullCave situationReaction_Drunk, PLAYER_FRIENDSHIP_POINTS Current Harvey 2000, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married",
                     "Actions": [
                         "AddConversationTopic topicOverprotectiveMode 7",
                         "AddBuff buffEmergencySupervision -2",
@@ -174,7 +174,7 @@
                 "{{ModId}}_triggerTimeReactionEarly": {
                     "Id": "{{ModId}}_triggerTimeReactionEarly",
                     "Trigger": "LocationChanged",
-                    "Condition": "TIME 0600 0800, PLAYER_FRIENDSHIP_POINTS Current Harvey 300, RANDOM 0.4",
+                    "Condition": "TIME 0600 0800, PLAYER_FRIENDSHIP_POINTS Current Harvey 750, RANDOM 0.4",
                     "Actions": [
                         "AddConversationTopic timeReaction_Early 1",
                         "AddMail Current HarveyMod_EarlyMorningCare now"

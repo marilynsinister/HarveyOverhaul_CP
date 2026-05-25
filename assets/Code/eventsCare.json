@@ -11,30 +11,31 @@
     farmer 64 16 2 Harvey 64 18 0/
     skippable/
     pause 600/
-    speak Harvey \"Привет! Как дела? Просто хотел проверить, как ты себя чувствуешь.$h\"/
-    message \"Я... я в порядке, спасибо...\"/
-    speak Harvey \"Ты выглядишь немного уставшей. Долгая дорога?$s\"/
+    speak Harvey \"Здравствуйте. Как самочувствие? Хотел убедиться, что после переезда всё в порядке.$h\"/
+    message \"Я... в порядке, спасибо.\"/
+    speak Harvey \"Вы выглядите уставшей. Долгая дорога?$s\"/
     message \"Да, немного...\"/
-    speak Harvey \"Понимаю. Если тебе понадобится помощь - я всегда рядом.$h#$b#Но только если ты сама захочешь.$l\"/
-    quickQuestion ...#Спасибо за заботу#Я справлюсь сама#Мне нужно время привыкнуть(break)friendship Harvey 25\\speak Harvey \"Рад, что ты это ценишь.$h#$b#Но не стесняйся говорить, если что-то не так.$l\"\\emote farmer 60\\message \"Хорошо... Спасибо.\"\\speak Harvey \"Не за что. Просто забочусь о своих пациентах.$h\"\\action addConversationTopic topicHarveyFirstVisitAgree 7(break)friendship Harvey 15\\speak Harvey \"Конечно, ты сильная.$h#$b#Но помни - просить о помощи не стыдно.$l\"\\message \"Спасибо за понимание...\"\\speak Harvey \"Всегда пожалуйста.$h#$b#Если передумаешь - я здесь.$l\"\\action addConversationTopic topicHarveyFirstVisitNeutral 7(break)friendship Harvey 10\\speak Harvey \"Конечно, я понимаю.$s#$b#Каждому нужно время, чтобы привыкнуть к новому месту.$l\"\\message \"Да, именно так...\"\\speak Harvey \"Я буду рядом, когда будешь готова.$h#$b#Никакого давления.$l\"\\action addConversationTopic topicHarveyFirstVisitRefused 7/
+    speak Harvey \"Понимаю. Если понадобится помощь — клиника открыта.$h#$b#Без обязательств.$0\"/
+    quickQuestion ...#Спасибо#Справлюсь сама#Нужно время(break)friendship Harvey 25\\speak Harvey \"Рад, что вы это цените.$h#$b#Если что-то не так — скажите.$0\"\\emote farmer 60\\message \"Хорошо. Спасибо.\"\\speak Harvey \"Не за что. Это моя работа.$h\"\\action addConversationTopic topicHarveyFirstVisitAgree 7(break)friendship Harvey 15\\speak Harvey \"Конечно.$h#$b#Просить о помощи не стыдно, когда будете готовы.$0\"\\message \"Спасибо за понимание.\"\\speak Harvey \"Клиника рядом, если передумаете.$h\"\\action addConversationTopic topicHarveyFirstVisitNeutral 7(break)friendship Harvey 10\\speak Harvey \"Понимаю.$s#$b#Каждому нужно время, чтобы привыкнуть.$0\"\\message \"Да, именно так.\"\\speak Harvey \"Запишитесь на осмотр, когда будет удобно.$h\"\\action addConversationTopic topicHarveyFirstVisitRefused 7/
     pause 1000/
     globalFade/
     viewport -1000 -1000/
     action addConversationTopic topicHarveyFirstVisit 2/
     end
-","eventHarveySecondVisit/Time 600 1200/GameStateQuery DAYS_PLAYED 7/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitAgree/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitNeutral/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitRefused/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstVisit/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveySecondVisit": "
+",
+                "eventHarveySecondVisit/Time 600 1200/GameStateQuery DAYS_PLAYED 7/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitAgree/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitNeutral/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitRefused/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstVisit/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveySecondVisit": "
     continue/
     64 15/
     farmer 64 16 2 Harvey 64 18 0/
     skippable/
     pause 600/
-    speak Harvey \"Привет! Я принёс тебе витаминный чай. Он поможет восстановить силы.$h\"/
+    speak Harvey \"Здравствуйте. Принёс витаминный чай — для восстановления после переезда.$h\"/
     addItem 614 1/
     message \"Спасибо, но я не болею...\"/
-    speak Harvey \"Конечно, ты здорова!$h#$b#Но витамины никогда не помешают, особенно в новом месте.$l\"/
-    message \"Харви осторожно кладёт пакетик чая ей в карман.\"/
-    speak Harvey \"Попробуй, если захочешь. Никаких обязательств.$h\"/
-    quickQuestion ...#Попробую чай#Спасибо, но пока не хочу#Может быть позже(break)friendship Harvey 20\\speak Harvey \"Отлично! Надеюсь, тебе понравится.$h\"\\message \"Спасибо за заботу...\"\\speak Harvey \"Всегда пожалуйста.$l\"\\action addConversationTopic topicHarveySecondVisitAgree 7(break)friendship Harvey 15\\speak Harvey \"Конечно, никаких проблем.$h#$b#Чай будет ждать, когда ты будешь готова.$l\"\\message \"Спасибо за понимание...\"\\speak Harvey \"Конечно. Я не хочу давить.$h\"\\action addConversationTopic topicHarveySecondVisitNeutral 7(break)friendship Harvey 10\\speak Harvey \"Хорошо, я понимаю.$s#$b#Каждому нужно время.$l\"\\message \"Да, именно так...\"\\speak Harvey \"Я буду рядом, когда захочешь.$h\"\\action addConversationTopic topicHarveySecondVisitRefused 7/
+    speak Harvey \"Конечно.$h#$b#Витамины не помешают в новом месте.$0\"/
+    message \"Харви кладёт пакетик чая в карман.\"/
+    speak Harvey \"Попробуйте, если захотите. Без обязательств.$h\"/
+    quickQuestion ...#Попробую#Пока не хочу#Может позже(break)friendship Harvey 20\\speak Harvey \"Отлично. Надеюсь, понравится.$h\"\\message \"Спасибо.\"\\speak Harvey \"Обращайтесь, если понадобится.$0\"\\action addConversationTopic topicHarveySecondVisitAgree 7(break)friendship Harvey 15\\speak Harvey \"Конечно, без проблем.$h#$b#Чай подождёт.$0\"\\message \"Спасибо за понимание.\"\\speak Harvey \"Без давления.$h\"\\action addConversationTopic topicHarveySecondVisitNeutral 7(break)friendship Harvey 10\\speak Harvey \"Хорошо.$s#$b#Каждому нужно время.$0\"\\message \"Да.\"\\speak Harvey \"Клиника открыта, когда будете готовы.$h\"\\action addConversationTopic topicHarveySecondVisitRefused 7/
     pause 1000/
     globalFade/
     viewport -1000 -1000/
@@ -64,18 +65,19 @@
     warp Harvey 15 6/
     faceDirection Harvey 3/
     viewport 14 6/
-    speak Harvey \"ЧТО ТЫ НАДЕЛАЛА?!$a\"/
+    speak Harvey \"Вы получили травму — нужен осмотр.$a\"/
     pause 500/
-    speak Harvey \"Извини... Я не хотел кричать. Но ты чуть не погибла.$s\"/
+    speak Harvey \"Извините за резкий тон. Состояние серьёзное.$s\"/
     animate Harvey true true 1000 40 41/
-    speak Harvey \"Дай я осмотрю раны...$s\"/
+    speak Harvey \"Разрешите осмотреть раны...$s\"/
     pause 200/
     emote farmer 28/
     mail mailHarveyPostTrauma/
     globalFade/
     viewport -1000 -1000/
     end
-","eventHarveyExhaustion": "
+",
+                "eventHarveyExhaustion": "
     none/
     -1000 -1000/
     farmer 1000 1000 1 Harvey 1000 1000 1/
@@ -126,7 +128,8 @@
     pause 1000/
     globalFade/
     viewport -1000 -1000/
-    end","eventHarveyCheckup/Time 1400 1600/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicAgreedCheckup/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting/GameStateQuery DAYS_PLAYED 2": "
+    end",
+                "eventHarveyCheckup/Time 1400 1600/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicAgreedCheckup/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting/GameStateQuery DAYS_PLAYED 2": "
                     none/
                     4 6/
                     farmer 4 6 1 Harvey 4 5 3/
@@ -171,7 +174,8 @@
                     globalFade/
                     viewport -1000 -1000/
                     pause 500/
-                    end position 10 17","irregularEating": "
+                    end position 10 17",
+                "irregularEating": "
                     message \"Иногда забываю поесть... работы много...\"/
                     emote Harvey 12/
                     speak Harvey \"*обеспокоенно* Понимаю, ферма требует много сил.$s#$b#Но организм не может работать на пустом месте. *встает* Минуточку.$u\"/
@@ -222,7 +226,7 @@
                     speak Harvey \"*мягко* Понимаю, переезд - это стресс. Но вы дрожите... *снимает пиджак*$s#$b#Возьмите, пожалуйста. На улице довольно прохладно.$l\"/
                     stopJittering/
                     message \"Спасибо... но не обязательно...\"/
-                    speak Harvey \"*настойчиво, но мягко* Обязательно. *накидывает пиджак на плечи*$l#$b#Вы не забываете есть? Вы выглядите... очень хрупкой.$s\"/
+                    speak Harvey \"*настойчиво, но мягко* Пожалуйста. *накидывает пиджак на плечи*$l#$b#Вы не забываете есть? Вы выглядите очень бледной.$s\"/
                     emote farmer 60/
                     message \"Сегодня еще не успела поесть...\"/
                     emote Harvey 12/
@@ -318,7 +322,8 @@
     globalFade/
     viewport -1000 -1000/
     end
-","HarveySkullPromise": "
+",
+                "HarveySkullPromise": "
     speak Harvey \"Ресурсы?!$a#$b#Твоя жизнь дороже любых ресурсов!$a#$b#@, пожалуйста... не заставляй меня волноваться.$s\"/
     emote Harvey 28/
     speak Harvey \"Хорошо. Если тебе так нужно сюда ходить ...$s#$b#обещай быть осторожнее...И всегда сообщай мне, когда собираешься сюда...$l\"/
