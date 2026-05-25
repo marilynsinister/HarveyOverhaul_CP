@@ -173,5 +173,77 @@
 
   "Proximity_Complication_PainFlare_Romantic_0": "Снова болит?",
   "Proximity_Complication_PainFlare_Romantic_1": "Дыши. Медленно.",
-  "Proximity_Complication_PainFlare_Romantic_2": "Я вижу, боль вернулась."
+  "Proximity_Complication_PainFlare_Romantic_2": "Я вижу, боль вернулась.",
+
+  "Proximity_Prescription_Violated_Low_0": "Вы снова нарушили режим.",
+  "Proximity_Prescription_Violated_Low_1": "Это не без последствий.",
+  "Proximity_Prescription_Violated_Low_2": "Давайте обсудим в клинике.",
+
+  "Proximity_Prescription_Violated_Mid_0": "Ты снова нарушила режим.",
+  "Proximity_Prescription_Violated_Mid_1": "Я вижу последствия.",
+  "Proximity_Prescription_Violated_Mid_2": "Поговорим об этом.",
+
+  "Proximity_Prescription_Violated_High_0": "Ты снова нарушила режим.",
+  "Proximity_Prescription_Violated_High_1": "Мне это не нравится.",
+  "Proximity_Prescription_Violated_High_2": "Поговорим. Сейчас.",
+
+  "Proximity_Compliance_Low_Low_0": "Режим срывается.",
+  "Proximity_Compliance_Low_Low_1": "Мне придётся быть строже.",
+  "Proximity_Compliance_Low_Low_2": "Это не власть — это ответственность.",
+
+  "Proximity_Compliance_Low_Mid_0": "Режим снова срывается.",
+  "Proximity_Compliance_Low_Mid_1": "Твоё тело платит за риски.",
+  "Proximity_Compliance_Low_Mid_2": "Давай разберёмся.",
+
+  "Proximity_Compliance_Low_High_0": "Режим срывается.",
+  "Proximity_Compliance_Low_High_1": "Я не могу это игнорировать.",
+  "Proximity_Compliance_Low_High_2": "Поговорим.",
+
+  "Proximity_Compliance_High_Low_0": "Спасибо за дисциплину.",
+  "Proximity_Compliance_High_Low_1": "Лечение идёт хорошо.",
+  "Proximity_Compliance_High_Low_2": "Так и продолжайте.",
+
+  "Proximity_Compliance_High_Mid_0": "Спасибо, что слушаешь.",
+  "Proximity_Compliance_High_Mid_1": "Видишь результат?",
+  "Proximity_Compliance_High_Mid_2": "Мы справляемся.",
+
+  "Proximity_Compliance_High_High_0": "Спасибо, что слушаешь.",
+  "Proximity_Compliance_High_High_1": "Так быстрее заживает.",
+  "Proximity_Compliance_High_High_2": "Горжусь твоей дисциплиной.",
+
+  "Proximity_Rehab_Violated_Low_0": "Восстановление ещё не завершено.",
+  "Proximity_Rehab_Violated_Low_1": "Не торопитесь с нагрузками.",
+  "Proximity_Rehab_Violated_Low_2": "Щадящий режим обязателен.",
+
+  "Proximity_Rehab_Violated_Mid_0": "Реабилитация ещё не закончена.",
+  "Proximity_Rehab_Violated_Mid_1": "Ты снова перегрузилась.",
+  "Proximity_Rehab_Violated_Mid_2": "Дай телу время.",
+
+  "Proximity_Rehab_Violated_High_0": "Реабилитация не закончена.",
+  "Proximity_Rehab_Violated_High_1": "Ты снова рискуешь.",
+  "Proximity_Rehab_Violated_High_2": "Пожалуйста, остановись.",
+
+  "Proximity_Injury_Severe_Low_0": "Вам нужен покой.",
+  "Proximity_Injury_Severe_Low_1": "Травма серьёзная.",
+  "Proximity_Injury_Severe_Low_2": "Не откладывайте осмотр.",
+
+  "Proximity_Injury_Severe_Mid_0": "Тебе нужен покой.",
+  "Proximity_Injury_Severe_Mid_1": "Травма серьёзная.",
+  "Proximity_Injury_Severe_Mid_2": "Я рядом.",
+
+  "Proximity_Injury_Severe_High_0": "Тебе нужен покой.",
+  "Proximity_Injury_Severe_High_1": "Я вижу, как ты страдаешь.",
+  "Proximity_Injury_Severe_High_2": "Не уходи далеко.",
+
+  "Proximity_Injury_Light_Low_0": "Берегите себя.",
+  "Proximity_Injury_Light_Low_1": "Небольшая травма — но не игнорируйте.",
+  "Proximity_Injury_Light_Low_2": "Загляните в клинику.",
+
+  "Proximity_Injury_Light_Mid_0": "Береги себя.",
+  "Proximity_Injury_Light_Mid_1": "Не доводи до хуже.",
+  "Proximity_Injury_Light_Mid_2": "Покажешь рану?",
+
+  "Proximity_Injury_Light_High_0": "Береги себя.",
+  "Proximity_Injury_Light_High_1": "Даже мелочь может осложниться.",
+  "Proximity_Injury_Light_High_2": "Я проверю."
 }

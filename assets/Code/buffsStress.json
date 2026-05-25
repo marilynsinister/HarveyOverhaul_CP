@@ -133,7 +133,7 @@
           },
           "buffDarknessLevel3": {
             "DisplayName": "Фобия темноты",
-            "Description": "Парализующий страх темноты. Сердце колотится. Защита критически снижена.",
+            "Description": "Парализующий страх темноты. Сердце колотится.#$b#Защита критически снижена.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": -2,
@@ -147,7 +147,7 @@
             "DisplayName": "Приглушенный свет",
             "Description": "Мягкий свет помогает привыкнуть к темноте. Терапия работает.",
             "IsDebuff": false,
-            "GlowColor": "Yellow",
+            "GlowColor": null,
             "Duration": -2,
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 0,
@@ -158,7 +158,7 @@
             "DisplayName": "Свет надежды",
             "Description": "Виртуальный фонарь от Харви освещает путь. Его поддержка придаёт сил.",
             "IsDebuff": false,
-            "GlowColor": "LightBlue",
+            "GlowColor": null,
             "Duration": -2,
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 0,
@@ -168,9 +168,9 @@
           },
           "buffDarknessOvercome": {
             "DisplayName": "Преодоление",
-            "Description": "Ты преодолела страх темноты! Ночь больше не пугает. ПЕРМАНЕНТНЫЙ БОНУС.",
+            "Description": "Ты преодолела страх темноты! Ночь больше не пугает.#$b#Перманентный бонус.",
             "IsDebuff": false,
-            "GlowColor": "Gold",
+            "GlowColor": null,
             "Duration": -2,
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 0,
@@ -278,7 +278,7 @@
           },
           "buffSleepDeprivation": {
             "DisplayName": "Критический недосып",
-            "Description": "Хроническое нарушение режима сна. Харви настаивает на немедленной коррекции.",
+            "Description": "Хроническое нарушение режима сна.#$b#Харви настаивает на немедленной коррекции.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 10080000,
@@ -293,7 +293,7 @@
           
           "buffStressCritical": {
             "DisplayName": "Критический стресс",
-            "Description": "Состояние требует немедленного медицинского вмешательства. Харви должен начать лечение.",
+            "Description": "Состояние требует немедленного вмешательства.#$b#Харви должен начать лечение.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 7200000,
@@ -375,7 +375,7 @@
 
           "buffStressMentalBreakdown": {
             "DisplayName": "Психический срыв",
-            "Description": "Умственная усталость, тревога и паранойя привели к психическому срыву.",
+            "Description": "Умственная усталость, тревога и паранойя.#$b#Психический срыв.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 18000000,
@@ -459,7 +459,7 @@
 
           "buffStressCriticalExhaustion": {
             "DisplayName": "Критическое истощение",
-            "Description": "Эмоциональный срыв, коллапс и критический недосып создали состояние критического истощения.",
+            "Description": "Срыв, коллапс и недосып.#$b#Критическое истощение организма.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 28800000,

@@ -1,0 +1,157 @@
+{
+    "Changes": [
+        {
+            "LogName": "AddMedicalCareBuffs",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "HarveyMod_Prescription_Rest": {
+                    "Id": "HarveyMod_Prescription_Rest",
+                    "DisplayName": "Режим отдыха",
+                    "Description": "Харви назначил щадящий режим: больше сна, меньше нагрузок.#$b#Это не наказание — поддержка восстановления.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 17,
+                    "Effects": {
+                        "Speed": -0.5
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "prescription",
+                        "PrescriptionType": "Rest"
+                    }
+                },
+                "HarveyMod_Prescription_NoMine": {
+                    "Id": "HarveyMod_Prescription_NoMine",
+                    "DisplayName": "Без шахт",
+                    "Description": "Харви просит временно не ходить в шахту и вулкан.#$b#Риск загрязнения ран и перегрузки слишком высок.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 3,
+                    "Effects": {},
+                    "CustomFields": {
+                        "HarveyMod": "prescription",
+                        "PrescriptionType": "NoMine"
+                    }
+                },
+                "HarveyMod_Prescription_KeepDry": {
+                    "Id": "HarveyMod_Prescription_KeepDry",
+                    "DisplayName": "Держать сухим",
+                    "Description": "Повязку и швы нужно держать сухими.#$b#Дождь, вода и бассейн — только по необходимости и с осторожностью.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "Effects": {},
+                    "CustomFields": {
+                        "HarveyMod": "prescription",
+                        "PrescriptionType": "KeepDry"
+                    }
+                },
+                "HarveyMod_Prescription_LightWork": {
+                    "Id": "HarveyMod_Prescription_LightWork",
+                    "DisplayName": "Лёгкая работа",
+                    "Description": "Харви просит не перегружаться: меньше тяжёлых инструментов при низкой энергии.#$b#Работа через боль только откладывает выздоровление.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 15,
+                    "Effects": {
+                        "MaxStamina": -3
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "prescription",
+                        "PrescriptionType": "LightWork"
+                    }
+                },
+                "HarveyMod_Prescription_Checkup": {
+                    "Id": "HarveyMod_Prescription_Checkup",
+                    "DisplayName": "Контрольный осмотр",
+                    "Description": "Нужен осмотр у Харви, когда подойдёт срок фазы лечения.#$b#Без осмотра нельзя безопасно перейти к следующему этапу.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 21,
+                    "Effects": {},
+                    "CustomFields": {
+                        "HarveyMod": "prescription",
+                        "PrescriptionType": "Checkup"
+                    }
+                },
+                "buffHarveyRehab": {
+                    "Id": "buffHarveyRehab",
+                    "DisplayName": "Восстановительный режим",
+                    "Description": "Лечение завершено, но тело ещё восстанавливается.#$b#Харви просит несколько спокойных дней без перегрузок.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 15,
+                    "Effects": {
+                        "MaxStamina": -8,
+                        "Speed": -1
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "rehab"
+                    }
+                },
+                "HarveyMod_SelfCare": {
+                    "Id": "HarveyMod_SelfCare",
+                    "DisplayName": "Домашний уход",
+                    "Description": "Вы позаботились о себе дома. Харви это заметит на следующем осмотре.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 20,
+                    "Effects": {
+                        "Immunity": 1
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "selfcare"
+                    }
+                },
+                "HarveyMod_CleanBandage": {
+                    "Id": "HarveyMod_CleanBandage",
+                    "DisplayName": "Чистая повязка",
+                    "Description": "Свежая домашняя перевязка снижает риск осложнений.#$b#Это не заменяет осмотр у врача.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 16,
+                    "Effects": {},
+                    "CustomFields": {
+                        "HarveyMod": "selfcare",
+                        "SelfCareType": "CleanBandage"
+                    }
+                },
+                "HarveyMod_WarmTea": {
+                    "Id": "HarveyMod_WarmTea",
+                    "DisplayName": "Тёплый чай",
+                    "Description": "Тёплый напиток согревает и облегчает симптомы простуды.#$b#Лечение не заменяет, но помогает пережить день.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 18,
+                    "Effects": {
+                        "Defense": 1,
+                        "Immunity": 1,
+                        "MaxStamina": 5
+                    },
+                    "CustomFields": {
+                        "HarveyMod": "selfcare",
+                        "SelfCareType": "WarmTea"
+                    }
+                }
+            }
+        }
+    ]
+}

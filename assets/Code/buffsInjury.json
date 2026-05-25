@@ -26,7 +26,7 @@
                     "DisplayName": "Острая боль",
                     "Description": "Резкий приступ боли серьёзно ограничивает движения.",
                     "IsDebuff": true,
-                    "GlowColor": "Red",
+                    "GlowColor": null,
                     "Duration": 1080000, // 1.5 дня
                     "MaxDuration": -1,
                     "IconTexture": "TileSheets\\BuffsIcons",
@@ -241,7 +241,7 @@
                     "DisplayName": "Алкогольное отравление",
                     "Description": "Алкоголь взаимодействует с лекарствами. Нужна консультация врача.",
                     "IsDebuff": true,
-                    "GlowColor": "Red",
+                    "GlowColor": null,
                     "Duration": 1440000,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
@@ -314,7 +314,7 @@
                 "HarveyMod_MineForbidden": {
                     "Id": "HarveyMod_MineForbidden",
                     "DisplayName": "Харви запретил шахту",
-                    "Description": "Харви запретил посещение шахты и вулкана на время из-за твоих ран. Запрет снимется через несколько дней.",
+                    "Description": "Харви запретил шахту и вулкан из-за ран.#$b#Запрет снимется через несколько дней.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
@@ -423,7 +423,7 @@
                 "buffCold": {
                     "Id": "buffCold",
                     "DisplayName": "Простуда",
-                    "Description": "Ты простудился от долгого пребывания под дождём. Температура, слабость...",
+                    "Description": "Простуда после долгого пребывания под дождём.#$b#Температура и слабость.",
                     "Duration": -2,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
@@ -436,12 +436,12 @@
                 "HarveyMod_Cold_Acute": {
                     "Id": "HarveyMod_Cold_Acute",
                     "DisplayName": "Простуда (острая фаза)",
-                    "Description": "Температура 38°C, сильная слабость и чихание. Харви прописал жаропонижающее и строгий постельный режим.",
+                    "Description": "Температура 38°C, сильная слабость, чихание.#$b#Харви назначил жаропонижающее и постельный режим.",
                     "Duration": -2,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "IsDebuff": true,
-                    "GlowColor": "LightBlue",
+                    "GlowColor": null,
                     "Effects": {
                         "Speed": -2,
                         "MaxStamina": -40,
@@ -451,7 +451,7 @@
                 "HarveyMod_Cold_Recovery": {
                     "Id": "HarveyMod_Cold_Recovery",
                     "DisplayName": "Простуда (восстановление)",
-                    "Description": "Температура спала, но остаточный кашель и лёгкая слабость. Харви всё ещё наблюдает за тобой.",
+                    "Description": "Температура спала, но кашель и слабость остались.#$b#Харви всё ещё наблюдает за тобой.",
                     "Duration": -2,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 17,

@@ -37,6 +37,7 @@
                 // ================== БАФФЫ ЛЕЧЕНИЯ ХАРВИ ==================
                 "buffHarveyTreatment": true,
                 "buffHarveyIntensiveCare": true,
+                "HarveyMod_BadlyHurt_OutpatientCare": true,
                 "buffHarveyRecovery": true,
                 "buffHarveyProtection": true,
                 "buffHarveyHealing": true,
