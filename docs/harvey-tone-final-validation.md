@@ -6,12 +6,12 @@
 
 | Проверка | Статус | Найдено | Исправлено | Нужно вручную |
 |----------|--------|---------|------------|---------------|
-| 1. JSON валидность | FAIL | buffsInjury.json:30:42 Expecting property name enclosed in double quotes; dialoguesHarveyCure.json:1117:22 Expecting ',' delimiter | content.json trailing comma; buffsCure.json trailing comma | dialoguesHarveyCure.json — inline // в Entries (CP OK) |
+| 1. JSON валидность | FAIL | buffsInjury.json:30:42 Expecting property name enclosed in double quotes | content.json trailing comma; buffsCure.json trailing comma | dialoguesHarveyCure.json — inline // в Entries (CP OK) |
 | 2. When/Condition CP-формат | OK | скалярные When/Condition | — | — |
 | 3. Дубли ключей в Entries | FAIL | events.json:/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E13_MinesAgreement/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_C | — | разделить блоки |
 | 4. Dating/Married vs Hearts приоритет | WARN | 107 ключей (ungated+Dating) | — | CP Late + When OK если Dating специфичнее |
 | 5. Base/fallback 0–2 ❤ | OK | ungated без pet names | — | topic-gated ty — см. manual |
-| 6. Mail IDs используются | OK | определено 159, сирот 0 | — | — |
+| 6. Mail IDs используются | OK | определено 214, сирот 0 | — | — |
 | 7. Event IDs уникальны | OK | 58 entries, 56 unique IDs, 1 с time/cond вариантами | — | дубли ID с разными условиями — штатно (E13 утро/вечер) |
 | 8. Friendship gates (500/750/1500/2000/2500) | WARN | 15 non-canonical FP | — | events.json:HarveyOverhaulStory.E6_SayItOutLoud Friendship 1750 (non-canonical); events.json:HarveyMod_TreatmentReview Friendship 1000 (non-canonical); events.json:eventHarveyMountainDate Friendship 2 |
 | 9. Dating/Married events — rel gate | OK | 0 | — | — |
