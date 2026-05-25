@@ -75,11 +75,26 @@ def top_level_entry_keys(text: str) -> list[str]:
                     break
         block = text_no_comments[start:end]
         keys = []
-        for m in re.finditer(r'"([^"\\]+)"\s*:', block):
-            prefix = block[: m.start()]
+        i = 0
+        while i < len(block):
+            if block[i] != '"':
+                i += 1
+                continue
+            j = i + 1
+            while j < len(block):
+                if block[j] == "\\":
+                    j += 2
+                    continue
+                if block[j] == '"':
+                    break
+                j += 1
+            key = block[i + 1 : j]
+            rest = block[j + 1 :].lstrip()
+            prefix = block[:i]
             d = prefix.count("{") - prefix.count("}")
-            if d == 1:
-                keys.append(m.group(1))
+            if d == 1 and rest.startswith(":"):
+                keys.append(key)
+            i = j + 1
         seen: set[str] = set()
         for k in keys:
             if k in seen:

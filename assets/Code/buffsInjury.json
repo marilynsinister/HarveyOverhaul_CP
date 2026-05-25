@@ -27,7 +27,8 @@
                     "Description": "Резкий приступ боли серьёзно ограничивает движения.",
                     "IsDebuff": true,
                     "GlowColor": null,
-                    "Duration": 1080000, // 1.5 дня
+                    // 1.5 дня
+                    "Duration": 1080000,
                     "MaxDuration": -1,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 11,

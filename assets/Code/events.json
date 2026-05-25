@@ -3053,7 +3053,7 @@
       }
     },
     {
-      "LogName": "E13 — «Договор о шахтах» (BusStop, утро/вечер)",
+      "LogName": "E13 — «Договор о шахтах» (BusStop, утро)",
       "Action": "EditData",
       "Target": "Data/Events/BusStop",
       "Entries": {
@@ -3102,7 +3102,14 @@
         AddMail Current mailHarveyMinesAgreement tomorrow/
         addConversationTopic HarveyMod_CD_Global 3/
         addConversationTopic HarveyMod_CD_E13 7/
-        end",
+        end"
+      }
+    },
+    {
+      "LogName": "E13 — «Договор о шахтах» (BusStop, вечер)",
+      "Action": "EditData",
+      "Target": "Data/Events/BusStop",
+      "Entries": {
         "HarveyOverhaulStory.E13_MinesAgreement/Time 1800 2200/!FestivalDay/Friendship Harvey 3000/GameStateQuery ANY \"PLAYER_NPC_RELATIONSHIP Current Harvey Dating\" \"PLAYER_NPC_RELATIONSHIP Current Harvey Married\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E13_MinesAgreement/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E13": "
         none/
         24 23/
