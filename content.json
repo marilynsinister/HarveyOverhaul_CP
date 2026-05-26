@@ -267,6 +267,10 @@ Example: "%Abigail is lost in her music."
       "Action": "Include",
       "FromFile": "assets/Code/eventsMineRescue.json"
     },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsGotoroForestRescue.json"
+    },
     // =====  ПРЕДМЕТЫ ===== //
     {
       "Action": "Include",
