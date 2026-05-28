@@ -9,10 +9,9 @@
           "buffStressTired": {
             "DisplayName": "Усталость",
             "Description": "Вы чувствуете усталость.",
-            "IsDebuff": true,
-            "GlowColor": null,
-            "Duration": 2880000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 2880000, "IconTexture":
+"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 1,
             "Effects": {
               "MaxStamina": -10
@@ -21,10 +20,9 @@
           "buffStressLonely": {
             "DisplayName": "Одиночество",
             "Description": "Вы чувствуете себя одиноко.",
-            "IsDebuff": true,
-            "GlowColor": null,
-            "Duration": 4320000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 4320000, "IconTexture":
+"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 2,
             "Effects": {
               "Speed": -1
@@ -33,10 +31,9 @@
           "buffStressThunder": {
             "DisplayName": "Пугающая гроза",
             "Description": "Вы всё ещё дрожите после грома.",
-            "IsDebuff": true,
-            "GlowColor": null,
-            "Duration": 1440000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 1440000, "IconTexture":
+"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 4,
             "Effects": {
               "Speed": 1,
@@ -46,10 +43,9 @@
           "buffStressHunger": {
             "DisplayName": "Слабость от голода",
             "Description": "Вы не ели слишком долго.",
-            "IsDebuff": true,
-            "GlowColor": null,
-            "Duration": 360000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 360000, "IconTexture":
+"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 6,
             "Effects": {
               "StaminaRegen": -1,
@@ -58,11 +54,10 @@
           },
           "buffStressOverwork": {
             "DisplayName": "Переутомление",
-            "Description": "Ваше тело устало от работы без отдыха.",
-            "IsDebuff": true,
-            "GlowColor": null,
-            "Duration": 7200000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "Description": "Ваше тело устало от работы без\nотдыха.", "IsDebuff": true,
+"GlowColor": null,
+"Duration": 7200000, "IconTexture":
+"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 3,
             "Effects": {
               "MaxStamina": -20,
@@ -72,10 +67,9 @@
           "buffStressNoSleep": {
             "DisplayName": "Недосып",
             "Description": "Вы спали слишком мало.",
-            "IsDebuff": true,
-            "GlowColor": null,
-            "Duration": 1440000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 1440000, "IconTexture":
+"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 13,
             "Effects": {
               "LuckLevel": -1,
@@ -84,11 +78,10 @@
           },
           "buffStressTooCold": {
             "DisplayName": "Переохлаждение",
-            "Description": "Вы промокли и продрогли на ветру.",
-            "IsDebuff": true,
-            "GlowColor": null,
-            "Duration": 720000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+            "Description": "Вы промокли и продрогли на\nветру.",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 720000, "IconTexture":
+"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 11,
             "Effects": {
               "Speed": -2,
@@ -98,10 +91,9 @@
           "buffStressDarkness": {
             "DisplayName": "Боязнь темноты",
             "Description": "В темноте всё кажется опаснее.",
-            "IsDebuff": true,
-            "GlowColor": null,
-            "Duration": 180000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 180000, "IconTexture":
+"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 18,
             "Effects": {
               "Defense": -1
@@ -109,7 +101,7 @@
           },
           "buffDarknessLevel1": {
             "DisplayName": "Боязнь темноты (легкая)",
-            "Description": "Темнота вызывает легкое беспокойство. Защита снижена.",
+            "Description": "Темнота вызывает легкое\nбеспокойство. Защита снижена.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": -2,
@@ -121,7 +113,7 @@
           },
           "buffDarknessLevel2": {
             "DisplayName": "Боязнь темноты (сильная)",
-            "Description": "Страх темноты растет. Тени кажутся зловещими. Защита сильно снижена.",
+            "Description": "Страх темноты растет.\nТени кажутся зловещими.\nЗащита сильно снижена.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": -2,
@@ -133,7 +125,7 @@
           },
           "buffDarknessLevel3": {
             "DisplayName": "Фобия темноты",
-            "Description": "Парализующий страх темноты. Сердце колотится.#$b#Защита критически снижена.",
+            "Description": "Парализующий страх темноты.\nСердце колотится.\nЗащита критически снижена.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": -2,
@@ -145,7 +137,7 @@
           },
           "buffDimLight": {
             "DisplayName": "Приглушенный свет",
-            "Description": "Мягкий свет помогает привыкнуть к темноте. Терапия работает.",
+            "Description": "Мягкий свет помогает привыкнуть\nк темноте. Терапия работает.",
             "IsDebuff": false,
             "GlowColor": null,
             "Duration": -2,
@@ -156,7 +148,7 @@
           },
           "buffHarveyLantern": {
             "DisplayName": "Свет надежды",
-            "Description": "Виртуальный фонарь от Харви освещает путь. Его поддержка придаёт сил.",
+            "Description": "Виртуальный фонарь от Харви\nосвещает путь.\nЕго поддержка придаёт сил.",
             "IsDebuff": false,
             "GlowColor": null,
             "Duration": -2,
@@ -168,7 +160,7 @@
           },
           "buffDarknessOvercome": {
             "DisplayName": "Преодоление",
-            "Description": "Ты преодолела страх темноты! Ночь больше не пугает.#$b#Перманентный бонус.",
+            "Description": "Ты преодолела страх темноты!\nНочь больше не пугает.\nПерманентный бонус.",
             "IsDebuff": false,
             "GlowColor": null,
             "Duration": -2,
@@ -180,7 +172,7 @@
           },
           "buffStressSocial": {
             "DisplayName": "Социальная тревожность",
-            "Description": "Социальный стресс, критика и холод усилили вашу тревогу.",
+            "Description": "Социальный стресс,\nкритика и холод усилили вашу\nтревогу.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 9000000,
@@ -192,7 +184,7 @@
           },
           "buffStressBadDream": {
             "DisplayName": "Тревожный сон",
-            "Description": "Вы проснулись в тревоге после ночных кошмаров.",
+            "Description": "Вы проснулись в тревоге после\nночных кошмаров.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 360000,
@@ -205,7 +197,7 @@
           },
           "buffStressAnxietyWave": {
             "DisplayName": "Приступ тревоги",
-            "Description": "Сердце колотится, в голове шум. Всё кажется слишком.",
+            "Description": "Сердце колотится, в голове шум.\nВсё кажется слишком.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 240000,
@@ -219,7 +211,7 @@
        
           "buffStressBreakdown": {
             "DisplayName": "Эмоциональный срыв",
-            "Description": "Вы не можете совладать с эмоциями. Паника поглощает вас.",
+            "Description": "Вы не можете совладать с\nэмоциями. Паника поглощает вас.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
@@ -234,7 +226,7 @@
           },
           "buffStressCollapse": {
             "DisplayName": "Коллапс",
-            "Description": "Ваше тело не слушается. Всё словно во сне.",
+            "Description": "Ваше тело не слушается.\nВсё словно во сне.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 21600000,
@@ -249,7 +241,7 @@
          
           "buffStressDespair": {
             "DisplayName": "Отчаяние",
-            "Description": "Ничего не имеет смысла. Всё будто потеряло цвет.",
+            "Description": "Ничего не имеет смысла.\nВсё будто потеряло цвет.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 28800000,
@@ -264,7 +256,7 @@
          
           "buffStressPanic": {
             "DisplayName": "Паническая атака",
-            "Description": "Сердце колотится, дыхание сбивается. Мир кружится вокруг.",
+            "Description": "Сердце колотится,\nдыхание сбивается.\nМир кружится вокруг.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 180000,
@@ -278,7 +270,7 @@
           },
           "buffSleepDeprivation": {
             "DisplayName": "Критический недосып",
-            "Description": "Хроническое нарушение режима сна.#$b#Харви настаивает на немедленной коррекции.",
+            "Description": "Хроническое нарушение режима\nсна.\nХарви настаивает на немедленной\nкоррекции.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 10080000,
@@ -293,7 +285,7 @@
           
           "buffStressCritical": {
             "DisplayName": "Критический стресс",
-            "Description": "Состояние требует немедленного вмешательства.#$b#Харви должен начать лечение.",
+            "Description": "Состояние требует немедленного\nвмешательства.\nХарви должен начать лечение.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 7200000,
@@ -311,7 +303,7 @@
           // ================== НОВЫЕ БАФФЫ ДЛЯ КОМБИНАЦИЙ СТРЕССА ==================
           "buffStressExhaustion": {
             "DisplayName": "Полное истощение",
-            "Description": "Комбинация усталости, одиночества и недосыпа полностью истощила вас.",
+            "Description": "Комбинация усталости,\nодиночества и недосыпа полностью\nистощила вас.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
@@ -327,7 +319,7 @@
 
           "buffStressPhysicalDepletion": {
             "DisplayName": "Физическое истощение",
-            "Description": "Голод, переутомление и холод подорвали ваши силы.",
+            "Description": "Голод,\nпереутомление и холод подорвали\nваши силы.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 10800000,
@@ -343,7 +335,7 @@
 
           "buffStressNightTerror": {
             "DisplayName": "Ночные кошмары",
-            "Description": "Гроза, темнота и кошмары создали состояние постоянного страха.",
+            "Description": "Гроза, темнота и кошмары создали\nсостояние постоянного страха.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 7200000,
@@ -359,7 +351,7 @@
 
           "buffStressBurnout": {
             "DisplayName": "Эмоциональное выгорание",
-            "Description": "Усталость, голод и социальный стресс привели к полному истощению.",
+            "Description": "Усталость,\nголод и социальный стресс\nпривели к полному истощению.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 12600000,
@@ -375,7 +367,7 @@
 
           "buffStressMentalBreakdown": {
             "DisplayName": "Психический срыв",
-            "Description": "Умственная усталость, тревога и паранойя.#$b#Психический срыв.",
+            "Description": "Умственная усталость,\nтревога и паранойя.\nПсихический срыв.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 18000000,
@@ -392,7 +384,7 @@
 
           "buffStressPanicCollapse": {
             "DisplayName": "Панический коллапс",
-            "Description": "Эмоциональный срыв и паника привели к полному коллапсу.",
+            "Description": "Эмоциональный срыв и паника\nпривели к полному коллапсу.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 21600000,
@@ -408,7 +400,7 @@
 
           "buffStressDespairCollapse": {
             "DisplayName": "Коллапс отчаяния",
-            "Description": "Коллапс и отчаяние создали критическое состояние.",
+            "Description": "Коллапс и отчаяние создали\nкритическое состояние.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 25200000,
@@ -425,7 +417,7 @@
 
           "buffStressPanicBreakdown": {
             "DisplayName": "Панический срыв",
-            "Description": "Тревога, паника и критический недосып привели к психическому срыву.",
+            "Description": "Тревога,\nпаника и критический недосып\nпривели к психическому срыву.",
             "IsDebuff": true,
            "GlowColor": null,
             "Duration": 16200000,
@@ -442,7 +434,7 @@
 
           "buffStressParanoidCollapse": {
             "DisplayName": "Параноидальный коллапс",
-            "Description": "Умственная усталость, паранойя и паника привели к коллапсу.",
+            "Description": "Умственная усталость,\nпаранойя и паника привели к\nколлапсу.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 19800000,
@@ -459,7 +451,7 @@
 
           "buffStressCriticalExhaustion": {
             "DisplayName": "Критическое истощение",
-            "Description": "Срыв, коллапс и недосып.#$b#Критическое истощение организма.",
+            "Description": "Срыв, коллапс и недосып.\nКритическое истощение организма.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 28800000,
@@ -477,7 +469,7 @@
           // ================== ДОПОЛНИТЕЛЬНЫЕ БАФФЫ СТРЕССА ==================
           "buffStressNumbness": {
             "DisplayName": "Эмоциональное онемение",
-            "Description": "Вы не чувствуете эмоций. Это защитная реакция организма.",
+            "Description": "Вы не чувствуете эмоций.\nЭто защитная реакция организма.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
@@ -492,7 +484,7 @@
 
           "buffStressShadowParanoia": {
             "DisplayName": "Паранойя и страх теней",
-            "Description": "Вы видите угрозы в тенях. Реальность искажается.",
+            "Description": "Вы видите угрозы в тенях.\nРеальность искажается.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
@@ -507,7 +499,7 @@
 
           "buffStressFreezeResponse": {
             "DisplayName": "Реакция заморозки",
-            "Description": "В стрессовых ситуациях вы замираете. Контроль над телом потерян.",
+            "Description": "В стрессовых ситуациях вы\nзамираете.\nКонтроль над телом потерян.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
@@ -521,7 +513,7 @@
 
           "buffStressIsolation": {
             "DisplayName": "Добровольная изоляция",
-            "Description": "Вы добровольно изолируетесь от людей. Это опасно для психики.",
+            "Description": "Вы добровольно изолируетесь от\nлюдей. Это опасно для психики.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
@@ -535,7 +527,7 @@
 
           "buffStressCriticism": {
             "DisplayName": "Самокритика",
-            "Description": "Вы постоянно критикуете себя. Это разрушает вашу самооценку.",
+            "Description": "Вы постоянно критикуете себя.\nЭто разрушает вашу самооценку.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
@@ -550,7 +542,7 @@
 
           "buffStressMentalFatigue": {
             "DisplayName": "Умственная усталость",
-            "Description": "Ваш разум истощён. Когнитивные способности снижены.",
+            "Description": "Ваш разум истощён.\nКогнитивные способности снижены.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,

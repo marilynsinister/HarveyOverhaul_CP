@@ -9,7 +9,7 @@
                 "buffHarveyTreatmentBreakdown": {
                     "Id": "buffHarveyTreatmentBreakdown",
                     "DisplayName": "Лечение нервного срыва",
-                    "Description": "Харви начал лечение эмоционального срыва.#$b#Ты под его постоянным наблюдением.",
+                    "Description": "Харви начал лечение\nэмоционального срыва.\nТы под его постоянным\nнаблюдением.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -27,7 +27,7 @@
                 "buffHarveyTreatmentCollapse": {
                     "Id": "buffHarveyTreatmentCollapse",
                     "DisplayName": "Реабилитация после коллапса",
-                    "Description": "Реабилитация после потери сознания.#$b#Полный покой и наблюдение Харви.",
+                    "Description": "Реабилитация после потери\nсознания.\nПолный покой и наблюдение Харви.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -45,7 +45,7 @@
                 "buffHarveyTreatmentNumbness": {
                     "Id": "buffHarveyTreatmentNumbness",
                     "DisplayName": "Лечение эмоционального онемения",
-                    "Description": "Харви помогает вернуть эмоциональную чувствительность.#$b#Лечение идёт постепенно.",
+                    "Description": "Харви помогает вернуть\nэмоциональную чувствительность.\nЛечение идёт постепенно.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -62,7 +62,7 @@
                 "buffHarveyTreatmentDespair": {
                     "Id": "buffHarveyTreatmentDespair",
                     "DisplayName": "Интервенция отчаяния",
-                    "Description": "Харви проводит экстренную интервенцию. Ты не одна в этой борьбе.",
+                    "Description": "Харви проводит экстренную\nинтервенцию.\nТы не одна в этой борьбе.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -80,7 +80,7 @@
                 "buffHarveyTreatmentCritical": {
                     "Id": "buffHarveyTreatmentCritical",
                     "DisplayName": "Критическое лечение",
-                    "Description": "Экстренное лечение критического состояния.#$b#Максимальная защита Харви.",
+                    "Description": "Экстренное лечение критического\nсостояния.\nМаксимальная защита Харви.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -99,7 +99,7 @@
                 "buffHarveyTreatmentTired": {
                     "Id": "buffHarveyTreatmentTired",
                     "DisplayName": "Лечение хронической усталости",
-                    "Description": "Харви составил план восстановления.#$b#Строгий режим отдыха.",
+                    "Description": "Харви составил план\nвосстановления.\nСтрогий режим отдыха.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -116,7 +116,7 @@
                 "buffHarveyTreatmentLonely": {
                     "Id": "buffHarveyTreatmentLonely",
                     "DisplayName": "Лечение одиночества",
-                    "Description": "Харви помогает восстановить социальные связи. Ты не одна.",
+                    "Description": "Харви помогает восстановить\nсоциальные связи. Ты не одна.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -133,7 +133,7 @@
                 "buffHarveyTreatmentThunder": {
                     "Id": "buffHarveyTreatmentThunder",
                     "DisplayName": "Лечение страха грома",
-                    "Description": "Харви учит справляться со страхом перед грозами. Ты в безопасности.",
+                    "Description": "Харви учит справляться со\nстрахом перед грозами.\nТы в безопасности.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -150,7 +150,7 @@
                 "buffHarveyTreatmentHunger": {
                     "Id": "buffHarveyTreatmentHunger",
                     "DisplayName": "Лечение проблем с аппетитом",
-                    "Description": "Харви восстанавливает твои отношения с едой. Питание - это важно.",
+                    "Description": "Харви восстанавливает твои\nотношения с едой.\nПитание - это важно.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -167,7 +167,7 @@
                 "buffHarveyTreatmentOverwork": {
                     "Id": "buffHarveyTreatmentOverwork",
                     "DisplayName": "Лечение переутомления",
-                    "Description": "Харви запретил тяжёлую работу. Время восстановления и отдыха.",
+                    "Description": "Харви запретил тяжёлую работу.\nВремя восстановления и отдыха.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -185,7 +185,7 @@
                 "buffHarveyTreatmentNoSleep": {
                     "Id": "buffHarveyTreatmentNoSleep",
                     "DisplayName": "Лечение бессонницы",
-                    "Description": "Харви установил строгий режим сна. Восстановление циркадных ритмов.",
+                    "Description": "Харви установил строгий режим\nсна.\nВосстановление циркадных ритмов.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -202,7 +202,7 @@
                 "buffHarveyTreatmentTooCold": {
                     "Id": "buffHarveyTreatmentTooCold",
                     "DisplayName": "Лечение холодовой чувствительности",
-                    "Description": "Харви помогает адаптироваться к холоду. Тепло и комфорт.",
+                    "Description": "Харви помогает адаптироваться к\nхолоду. Тепло и комфорт.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -219,7 +219,7 @@
                 "buffHarveyTreatmentSocial": {
                     "Id": "buffHarveyTreatmentSocial",
                     "DisplayName": "Лечение социальной тревожности",
-                    "Description": "Харви постепенно возвращает уверенность в общении. Шаг за шагом.",
+                    "Description": "Харви постепенно возвращает\nуверенность в общении.\nШаг за шагом.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -236,7 +236,7 @@
                 "buffHarveyTreatmentDarkness": {
                     "Id": "buffHarveyTreatmentDarkness",
                     "DisplayName": "Лечение страха темноты",
-                    "Description": "Харви помогает чувствовать себя безопасно в любое время суток.",
+                    "Description": "Харви помогает чувствовать себя\nбезопасно в любое время суток.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -253,7 +253,7 @@
                 "buffHarveyTreatmentCriticism": {
                     "Id": "buffHarveyTreatmentCriticism",
                     "DisplayName": "Лечение самокритики",
-                    "Description": "Харви учит быть добрее к себе. Ты заслуживаешь любви и уважения.",
+                    "Description": "Харви учит быть добрее к себе.\nТы заслуживаешь любви и\nуважения.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -270,7 +270,7 @@
                 "buffHarveyTreatmentBadDream": {
                     "Id": "buffHarveyTreatmentBadDream",
                     "DisplayName": "Лечение кошмаров",
-                    "Description": "Харви помогает разобраться с плохими снами. Спокойный сон возвращается.",
+                    "Description": "Харви помогает разобраться с\nплохими снами.\nСпокойный сон возвращается.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -287,7 +287,7 @@
                 "buffHarveyTreatmentPanic": {
                     "Id": "buffHarveyTreatmentPanic",
                     "DisplayName": "Лечение панических атак",
-                    "Description": "Харви учит справляться с приступами паники. Ты в безопасности.",
+                    "Description": "Харви учит справляться с\nприступами паники.\nТы в безопасности.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -305,7 +305,7 @@
                 "buffHarveyTreatmentAnxietyWave": {
                     "Id": "buffHarveyTreatmentAnxietyWave",
                     "DisplayName": "Лечение тревожности",
-                    "Description": "Харви помогает обрести внутренний покой. Тревога отступает.",
+                    "Description": "Харви помогает обрести\nвнутренний покой.\nТревога отступает.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -322,7 +322,7 @@
                 "buffHarveyTreatmentMentalFatigue": {
                     "Id": "buffHarveyTreatmentMentalFatigue",
                     "DisplayName": "Лечение умственной усталости",
-                    "Description": "Харви восстанавливает когнитивные способности.#$b#Ясность мышления возвращается.",
+                    "Description": "Харви восстанавливает\nкогнитивные способности.\nЯсность мышления возвращается.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -339,7 +339,7 @@
                 "buffHarveyTreatmentShadowParanoia": {
                     "Id": "buffHarveyTreatmentShadowParanoia",
                     "DisplayName": "Лечение паранойи",
-                    "Description": "Харви помогает различать реальность и иллюзии.#$b#Безопасность возвращается.",
+                    "Description": "Харви помогает различать\nреальность и иллюзии.\nБезопасность возвращается.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -357,7 +357,7 @@
                 "buffHarveyTreatmentFreezeResponse": {
                     "Id": "buffHarveyTreatmentFreezeResponse",
                     "DisplayName": "Лечение реакции заморозки",
-                    "Description": "Харви учит справляться со стрессом без потери контроля.#$b#Ты управляешь ситуацией.",
+                    "Description": "Харви учит справляться со\nстрессом без потери контроля.\nТы управляешь ситуацией.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -374,7 +374,7 @@
                 "buffHarveyTreatmentIsolation": {
                     "Id": "buffHarveyTreatmentIsolation",
                     "DisplayName": "Лечение изоляции",
-                    "Description": "Харви помогает вернуться к людям. Социальные связи восстанавливаются.",
+                    "Description": "Харви помогает вернуться к\nлюдям. Социальные связи\nвосстанавливаются.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -392,7 +392,7 @@
                 "buffStressImmunity": {
                     "Id": "buffStressImmunity",
                     "DisplayName": "Иммунитет к стрессу",
-                    "Description": "Временная защита от стрессовых факторов благодаря лечению Харви.",
+                    "Description": "Временная защита от стрессовых\nфакторов благодаря лечению\nХарви.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 14400000,
@@ -409,7 +409,7 @@
                 "buffStressRecovery": {
                     "Id": "buffStressRecovery",
                     "DisplayName": "Восстановление от стресса",
-                    "Description": "Харви начал лечение. Стресс постепенно отступает.",
+                    "Description": "Харви начал лечение.\nСтресс постепенно отступает.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -427,7 +427,7 @@
                 "buffStressRecoveryAdvanced": {
                     "Id": "buffStressRecoveryAdvanced",
                     "DisplayName": "Продвинутое восстановление",
-                    "Description": "Лечение идёт хорошо. Ты чувствуешь себя значительно лучше.",
+                    "Description": "Лечение идёт хорошо.\nТы чувствуешь себя значительно\nлучше.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 3600000,
@@ -446,7 +446,7 @@
                 "buffStressRecoveryGlow": {
                     "Id": "buffStressRecoveryGlow",
                     "DisplayName": "Покой и восстановление",
-                    "Description": "Вы ощущаете, как возвращаются силы и спокойствие.",
+                    "Description": "Вы ощущаете,\nкак возвращаются силы и\nспокойствие.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -464,7 +464,7 @@
                 "buffRestingAtHome": {
                     "Id": "buffRestingAtHome",
                     "DisplayName": "Отдых дома",
-                    "Description": "Отдых в уютной обстановке дома.#$b#Стресс постепенно отступает.",
+                    "Description": "Отдых в уютной обстановке дома.\nСтресс постепенно отступает.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 60000,
@@ -485,7 +485,7 @@
                 "buffCalmingAtHospitalWithHarvey": {
                     "Id": "buffCalmingAtHospitalWithHarvey",
                     "DisplayName": "Спокойствие в больнице",
-                    "Description": "Ты в больнице рядом с Харви.#$b#Его присутствие помогает успокоиться.",
+                    "Description": "Ты в больнице рядом с Харви.\nЕго присутствие помогает\nуспокоиться.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 60000,
@@ -506,7 +506,7 @@
                 "buffOverworkBreak": {
                     "Id": "buffOverworkBreak",
                     "DisplayName": "Пауза отдыха",
-                    "Description": "Спокойный перерыв. Останься в безопасном месте и позволь себе выдохнуть.",
+                    "Description": "Спокойный перерыв.\nОстанься в безопасном месте и\nпозволь себе выдохнуть.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 60000,
@@ -527,7 +527,7 @@
                 "buffLightAndSafe": {
                     "Id": "buffLightAndSafe",
                     "DisplayName": "Свет и безопасность",
-                    "Description": "Вы находитесь в хорошо освещённом месте. Тьма больше не пугает вас.",
+                    "Description": "Вы находитесь в хорошо\nосвещённом месте.\nТьма больше не пугает вас.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 600000,

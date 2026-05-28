@@ -8,12 +8,11 @@
                 "buffHurt": {
                     "Id": "buffHurt",
                     "DisplayName": "Рана",
-                    "Description": "Вас ранили",
-                    "IsDebuff": true,
-                    "GlowColor": null,
-                    "Duration": 4320000,
-                    "MaxDuration": -1,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "Description": "Вас ранили.", "IsDebuff": true,
+"GlowColor": null,
+"Duration": 4320000,
+"MaxDuration": -1,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 11,
                     "Effects": {
                         "MaxStamina": -1
@@ -24,7 +23,7 @@
                 "buffPainFlare": {
                     "Id": "buffPainFlare",
                     "DisplayName": "Острая боль",
-                    "Description": "Резкий приступ боли серьёзно ограничивает движения.",
+                    "Description": "Резкий приступ боли серьёзно\nограничивает движения.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     // 1.5 дня
@@ -44,12 +43,11 @@
                 "buffBadlyHurt": {
                     "Id": "buffBadlyHurt",
                     "DisplayName": "Сильная рана",
-                    "Description": "Вас серьезно ранили",
-                    "IsDebuff": true,
-                    "GlowColor": null,
-                    "Duration": 7200000,
-                    "MaxDuration": -1,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "Description": "Вас серьёзно ранили.",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 7200000,
+"MaxDuration": -1,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 11,
                     "Effects": {
                         "MaxStamina": -2
@@ -60,11 +58,10 @@
                 "buffFarmerExhausted": {
                     "Id": "buffFarmerExhausted",
                     "DisplayName": "Истощение",
-                    "Description": "Переутомление",
-                    "IsDebuff": true,
-                    "GlowColor": null,
-                    "Duration": 2880000,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "Description": "Переутомление", "IsDebuff": true,
+"GlowColor": null,
+"Duration": 2880000,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 17,
                     "Effects": {
                         "MaxStamina": -30
@@ -73,11 +70,9 @@
                 "buffSleepy": {
                     "Id": "buffSleepy",
                     "DisplayName": "Нарушение режима",
-                    "Description": "Переутомление",
-                    "IsDebuff": true,
-                    "GlowColor": null,
-                    "Duration": 720000,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "Description": "Переутомление", "IsDebuff": true,
+"GlowColor": null, "Duration": 720000,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 17,
                     "Effects": {
                         "MaxStamina": -10
@@ -87,7 +82,7 @@
                 "buffBruisedRibs": {
                     "Id": "buffBruisedRibs",
                     "DisplayName": "Ушибленные рёбра",
-                    "Description": "Каждый вдох отдаёт болью в груди. Нужен осмотр врача и покой.",
+                    "Description": "Каждый вдох отдаёт болью в\nгруди.\nНужен осмотр врача и покой.",
                     "Effects": {
                         "Stamina": -25,
                         "MovementSpeed": -2,
@@ -101,7 +96,7 @@
                 "buffSprainedAnkle": {
                     "Id": "buffSprainedAnkle",
                     "DisplayName": "Растянутая лодыжка",
-                    "Description": "Хромота и боль при каждом шаге. Нужен осмотр и фиксация сустава.",
+                    "Description": "Хромота и боль при каждом шаге.\nНужен осмотр и фиксация сустава.",
                     "Effects": {
                         "Stamina": -20,
                         "MovementSpeed": -3,
@@ -115,7 +110,7 @@
                 "buffBackStrain": {
                     "Id": "buffBackStrain",
                     "DisplayName": "Растяжение спины",
-                    "Description": "Острая боль в пояснице. Нужен осмотр и покой.",
+                    "Description": "Острая боль в пояснице.\nНужен осмотр и покой.",
                     "Effects": {
                         "Stamina": -30,
                         "MovementSpeed": -2,
@@ -130,7 +125,7 @@
                 "buffDeepCuts": {
                     "Id": "buffDeepCuts",
                     "DisplayName": "Глубокие порезы",
-                    "Description": "Кровоточащие раны требуют перевязки и ухода. Нужен осмотр врача.",
+                    "Description": "Кровоточащие раны требуют\nперевязки и ухода.\nНужен осмотр врача.",
                     "Effects": {
                         "Stamina": -35,
                         "Health": -20,
@@ -145,7 +140,7 @@
                 "buffBurnWounds": {
                     "Id": "buffBurnWounds",
                     "DisplayName": "Ожоговые раны",
-                    "Description": "Болезненные ожоги второй степени. Нужна обработка и осмотр врача.",
+                    "Description": "Болезненные ожоги второй\nстепени.\nНужна обработка и осмотр врача.",
                     "Effects": {
                         "Stamina": -40,
                         "Health": -25,
@@ -160,7 +155,7 @@
                 "buffTornMuscles": {
                     "Id": "buffTornMuscles",
                     "DisplayName": "Разорванные мышцы",
-                    "Description": "Серьёзная мышечная травма. Нужен осмотр, покой и лечение.",
+                    "Description": "Серьёзная мышечная травма.\nНужен осмотр, покой и лечение.",
                     "Effects": {
                         "Stamina": -50,
                         "MovementSpeed": -4,
@@ -176,7 +171,7 @@
                 "buffConcussion": {
                     "Id": "buffConcussion",
                     "DisplayName": "Сотрясение мозга",
-                    "Description": "Головокружение и тошнота. Срочно нужен осмотр врача.",
+                    "Description": "Головокружение и тошнота.\nСрочно нужен осмотр врача.",
                     "Effects": {
                         "Stamina": -60,
                         "Health": -30,
@@ -191,7 +186,7 @@
                 "buffFracturedBone": {
                     "Id": "buffFracturedBone",
                     "DisplayName": "Перелом кости",
-                    "Description": "Сломанная кость. Нужна фиксация и осмотр врача.",
+                    "Description": "Сломанная кость.\nНужна фиксация и осмотр врача.",
                     "Effects": {
                         "Stamina": -70,
                         "MovementSpeed": -5,
@@ -206,7 +201,7 @@
                 "buffShrapnelWounds": {
                     "Id": "buffShrapnelWounds",
                     "DisplayName": "Осколочные ранения",
-                    "Description": "Множественные глубокие раны от осколков. Срочно нужна помощь врача.",
+                    "Description": "Множественные глубокие раны от\nосколков.\nСрочно нужна помощь врача.",
                     "Effects": {
                         "Stamina": -80,
                         "Health": -40,
@@ -222,7 +217,7 @@
                 "buffInfectedWound": {
                     "Id": "buffInfectedWound",
                     "DisplayName": "Инфицированная рана",
-                    "Description": "Рана воспалилась и требует антибиотиков",
+                    "Description": "Рана воспалилась и требует\nантибиотиков",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": 5760000,
@@ -240,7 +235,7 @@
                 "buffAlcoholPoisoning": {
                     "Id": "buffAlcoholPoisoning",
                     "DisplayName": "Алкогольное отравление",
-                    "Description": "Алкоголь взаимодействует с лекарствами. Нужна консультация врача.",
+                    "Description": "Алкоголь взаимодействует с\nлекарствами.\nНужна консультация врача.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": 1440000,
@@ -256,7 +251,7 @@
                 "buffSurgicalWound": {
                     "Id": "buffSurgicalWound",
                     "DisplayName": "Послеоперационная рана",
-                    "Description": "Швы после удаления осколков. Требует особого ухода.",
+                    "Description": "Швы после удаления осколков.\nТребует особого ухода.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": 10080000,
@@ -272,7 +267,7 @@
                 "HarveyMod_WetBandage": {
                     "Id": "HarveyMod_WetBandage",
                     "DisplayName": "Мокрая повязка",
-                    "Description": "Повязка промокла — лучше обсохнуть дома.",
+                    "Description": "Повязка промокла —\nлучше обсохнуть дома.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
@@ -286,7 +281,7 @@
                 "HarveyMod_DirtyWound": {
                     "Id": "HarveyMod_DirtyWound",
                     "DisplayName": "Грязная рана",
-                    "Description": "Пыль и грязь попали в рану. Риск инфекции.",
+                    "Description": "Пыль и грязь попали в рану.\nРиск инфекции.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
@@ -300,7 +295,7 @@
                 "HarveyMod_Neglect": {
                     "Id": "HarveyMod_Neglect",
                     "DisplayName": "Небрежность в лечении",
-                    "Description": "Игнорирование рекомендаций спровоцировало ухудшение.",
+                    "Description": "Игнорирование рекомендаций\nспровоцировало ухудшение.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
@@ -315,7 +310,7 @@
                 "HarveyMod_MineForbidden": {
                     "Id": "HarveyMod_MineForbidden",
                     "DisplayName": "Харви запретил шахту",
-                    "Description": "Харви запретил шахту и вулкан из-за ран.#$b#Запрет снимется через несколько дней.",
+                    "Description": "Харви запретил шахту и вулкан\nиз-за ран.\nЗапрет снимется через несколько\nдней.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
@@ -331,10 +326,9 @@
                     "Id": "HarveyMod_PainFlare",
                     "DisplayName": "Обострение боли",
                     "Description": "Гроза и давление усилили боль.",
-                    "IsDebuff": true,
-                    "GlowColor": null,
-                    "Duration": 14400000,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 14400000,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
                         "Speed": -1,
@@ -345,8 +339,8 @@
                     "Id": "HarveyMod_AllergicRash",
                     "DisplayName": "Аллергическая реакция",
                     "Description": "Пыльца раздражает свежие швы.",
-                    "Duration": 28800000,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+"Duration": 28800000, "IconTexture":
+"Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "IconSpriteIndex": 13,
@@ -358,11 +352,10 @@
                 "HarveyMod_WetStitches": {
                     "Id": "HarveyMod_WetStitches",
                     "DisplayName": "Намокшие швы",
-                    "Description": "Купание повредило шов. Нужен покой.",
-                    "IsDebuff": true,
-                    "GlowColor": null,
-                    "Duration": 21600000,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "Description": "Купание повредило шов.\nНужен покой.",
+"IsDebuff": true, "GlowColor": null,
+"Duration": 21600000,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
                         "Speed": -1,
@@ -372,7 +365,7 @@
                 "HarveyMod_ImpairedMobility": {
                     "Id": "HarveyMod_ImpairedMobility",
                     "DisplayName": "Нарушение подвижности",
-                    "Description": "Из-за отсутствия лечения подвижность ухудшилась.",
+                    "Description": "Из-за отсутствия лечения\nподвижность ухудшилась.",
                     "Duration": 10080000,
                     "IsDebuff": true,
                     "IconTexture": "TileSheets\\BuffsIcons",
@@ -384,7 +377,7 @@
                 "HarveyMod_MuscleAtrophy": {
                     "Id": "HarveyMod_MuscleAtrophy",
                     "DisplayName": "Атрофия мышц",
-                    "Description": "Мышцы ослабли из-за отсутствия лечения.",
+                    "Description": "Мышцы ослабли из-за отсутствия\nлечения.",
                     "Duration": 10080000,
                     "IsDebuff": true,
                     "IconTexture": "TileSheets\\BuffsIcons",
@@ -398,8 +391,8 @@
                     "Id": "HarveyMod_BreathingDifficulty",
                     "DisplayName": "Затруднённое дыхание",
                     "Description": "Боль в рёбрах мешает дышать.",
-                    "Duration": 10080000,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+"Duration": 10080000,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "IsDebuff": true,
                     "Effects": {
@@ -409,7 +402,7 @@
                 "HarveyMod_Sepsis": {
                     "Id": "HarveyMod_Sepsis",
                     "DisplayName": "Заражение крови",
-                    "Description": "КРИТИЧЕСКОЕ СОСТОЯНИЕ. Немедленно к врачу!",
+                    "Description": "КРИТИЧЕСКОЕ СОСТОЯНИЕ.\nНемедленно к врачу!",
                     "Duration": 20160000,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
@@ -424,7 +417,7 @@
                 "buffCold": {
                     "Id": "buffCold",
                     "DisplayName": "Простуда",
-                    "Description": "Простуда после долгого пребывания под дождём.#$b#Температура и слабость.",
+                    "Description": "Простуда после долгого\nпребывания под дождём.\nТемпература и слабость.",
                     "Duration": -2,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
@@ -437,7 +430,7 @@
                 "HarveyMod_Cold_Acute": {
                     "Id": "HarveyMod_Cold_Acute",
                     "DisplayName": "Простуда (острая фаза)",
-                    "Description": "Температура 38°C, сильная слабость, чихание.#$b#Харви назначил жаропонижающее и постельный режим.",
+                    "Description": "Температура 38°C,\nсильная слабость, чихание.\nХарви назначил жаропонижающее и\nпостельный режим.",
                     "Duration": -2,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
@@ -452,7 +445,7 @@
                 "HarveyMod_Cold_Recovery": {
                     "Id": "HarveyMod_Cold_Recovery",
                     "DisplayName": "Простуда (восстановление)",
-                    "Description": "Температура спала, но кашель и слабость остались.#$b#Харви всё ещё наблюдает за тобой.",
+                    "Description": "Температура спала,\nно кашель и слабость остались.\nХарви всё ещё наблюдает за\nтобой.",
                     "Duration": -2,
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 17,
