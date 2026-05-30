@@ -8,7 +8,7 @@
                 "HarveyMod_Prescription_Rest": {
                     "Id": "HarveyMod_Prescription_Rest",
                     "DisplayName": "Режим отдыха",
-                    "Description": "Харви назначил щадящий режим: больше сна, меньше нагрузок.#$b#Это не наказание — поддержка восстановления.",
+                    "Description": "Харви назначил щадящий режим:\nбольше сна, меньше нагрузок.\nЭто не наказание —\nподдержка восстановления.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
@@ -25,7 +25,7 @@
                 "HarveyMod_Prescription_NoMine": {
                     "Id": "HarveyMod_Prescription_NoMine",
                     "DisplayName": "Без шахт",
-                    "Description": "Харви просит временно не ходить в шахту и вулкан.#$b#Риск загрязнения ран и перегрузки слишком высок.",
+                    "Description": "Харви просит временно не ходить\nв шахту и вулкан.\nРиск загрязнения ран и\nперегрузки слишком высок.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
@@ -40,7 +40,7 @@
                 "HarveyMod_Prescription_KeepDry": {
                     "Id": "HarveyMod_Prescription_KeepDry",
                     "DisplayName": "Держать сухим",
-                    "Description": "Повязку и швы нужно держать сухими.#$b#Дождь, вода и бассейн — только по необходимости и с осторожностью.",
+                    "Description": "Повязку и швы нужно держать\nсухими. Дождь, вода и бассейн —\nтолько по необходимости и с\nосторожностью.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
@@ -55,7 +55,7 @@
                 "HarveyMod_Prescription_LightWork": {
                     "Id": "HarveyMod_Prescription_LightWork",
                     "DisplayName": "Лёгкая работа",
-                    "Description": "Харви просит не перегружаться: меньше тяжёлых инструментов при низкой энергии.#$b#Работа через боль только откладывает выздоровление.",
+                    "Description": "Харви просит не перегружаться:\nменьше тяжёлых инструментов при\nнизкой энергии.\nРабота через боль только\nоткладывает выздоровление.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
@@ -72,7 +72,7 @@
                 "HarveyMod_Prescription_Checkup": {
                     "Id": "HarveyMod_Prescription_Checkup",
                     "DisplayName": "Контрольный осмотр",
-                    "Description": "Нужен осмотр у Харви, когда подойдёт срок фазы лечения.#$b#Без осмотра нельзя безопасно перейти к следующему этапу.",
+                    "Description": "Нужен осмотр у Харви,\nкогда подойдёт срок фазы\nлечения.\nБез осмотра нельзя безопасно\nперейти к следующему этапу.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
@@ -87,7 +87,7 @@
                 "buffHarveyRehab": {
                     "Id": "buffHarveyRehab",
                     "DisplayName": "Восстановительный режим",
-                    "Description": "Лечение завершено, но тело ещё восстанавливается.#$b#Харви просит несколько спокойных дней без перегрузок.",
+                    "Description": "Лечение завершено,\nно тело ещё восстанавливается.\nХарви просит несколько спокойных\nдней без перегрузок.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
@@ -104,7 +104,7 @@
                 "HarveyMod_SelfCare": {
                     "Id": "HarveyMod_SelfCare",
                     "DisplayName": "Домашний уход",
-                    "Description": "Вы позаботились о себе дома. Харви это заметит на следующем осмотре.",
+                    "Description": "Вы позаботились о себе дома.\nХарви это заметит на следующем\nосмотре.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
@@ -120,7 +120,7 @@
                 "HarveyMod_CleanBandage": {
                     "Id": "HarveyMod_CleanBandage",
                     "DisplayName": "Чистая повязка",
-                    "Description": "Свежая домашняя перевязка снижает риск осложнений.#$b#Это не заменяет осмотр у врача.",
+                    "Description": "Свежая домашняя перевязка\nснижает риск осложнений.\nЭто не заменяет осмотр у врача.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
@@ -135,7 +135,7 @@
                 "HarveyMod_WarmTea": {
                     "Id": "HarveyMod_WarmTea",
                     "DisplayName": "Тёплый чай",
-                    "Description": "Тёплый напиток согревает и облегчает симптомы простуды.#$b#Лечение не заменяет, но помогает пережить день.",
+                    "Description": "Тёплый напиток согревает и\nоблегчает симптомы простуды.\nЛечение не заменяет,\nно помогает пережить день.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,

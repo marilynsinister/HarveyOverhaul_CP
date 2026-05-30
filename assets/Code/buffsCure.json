@@ -9,7 +9,7 @@
                 "buffHarveyTreatment": {
                     "Id": "buffHarveyTreatment",
                     "DisplayName": "Лечение Харви",
-                    "Description": "Харви назначил курс лечения для ваших травм. Лечение идёт хорошо.",
+                    "Description": "Харви назначил курс лечения для\nваших травм.\nЛечение идёт хорошо.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -27,7 +27,7 @@
                 "buffHarveyIntensiveCare": {
                     "Id": "buffHarveyIntensiveCare",
                     "DisplayName": "Интенсивная терапия",
-                    "Description": "Харви проводит интенсивное лечение тяжёлых травм",
+                    "Description": "Харви проводит интенсивное\nлечение тяжёлых травм.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -46,7 +46,7 @@
                 "HarveyMod_BadlyHurt_OutpatientCare": {
                     "Id": "HarveyMod_BadlyHurt_OutpatientCare",
                     "DisplayName": "Восстановление после тяжёлой травмы",
-                    "Description": "Харви выписал тебя, но настоял на строгом режиме.#$b#Никаких перегрузок.",
+                    "Description": "Харви выписал тебя,\nно настоял на строгом режиме.\nНикаких перегрузок.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -66,12 +66,11 @@
                 "buffHarveyHealing": {
                     "Id": "buffHarveyHealing",
                     "DisplayName": "Исцеление",
-                    "Description": "Харви исцеляет ваши раны",
-                    "IsDebuff": false,
-                    "GlowColor": null,
-                    "Duration": 4320000,
-                    "MaxDuration": -1,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "Description": "Харви исцеляет ваши раны.",
+"IsDebuff": false, "GlowColor": null,
+"Duration": 4320000,
+"MaxDuration": -1,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
                         "MaxStamina": 1,
@@ -84,12 +83,11 @@
                 "buffHarveyRecovery": {
                     "Id": "buffHarveyRecovery",
                     "DisplayName": "Восстановление",
-                    "Description": "Харви помогает вам восстановиться",
-                    "IsDebuff": false,
-                    "GlowColor": null,
-                    "Duration": 5760000,
-                    "MaxDuration": -1,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "Description": "Харви помогает вам\nвосстановиться.",
+"IsDebuff": false, "GlowColor": null,
+"Duration": 5760000,
+"MaxDuration": -1,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 15,
                     "Effects": {
                         "MaxStamina": 3,
@@ -103,7 +101,7 @@
                 "buffHarveyProtection": {
                     "Id": "buffHarveyProtection",
                     "DisplayName": "Защита Харви",
-                    "Description": "Харви защищает вас от дальнейших травм",
+                    "Description": "Харви защищает вас от дальнейших\nтравм.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 3600000,
@@ -121,7 +119,7 @@
                 "buffAntibioticsTreatment": {
                     "Id": "buffAntibioticsTreatment",
                     "DisplayName": "Курс антибиотиков",
-                    "Description": "Сильные антибиотики борются с инфекцией.#$b#Харви строго контролирует приём.",
+                    "Description": "Сильные антибиотики борются с\nинфекцией.\nХарви строго контролирует приём.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 14400000,
@@ -140,10 +138,9 @@
                     "Id": "buffHarveyDropper",
                     "DisplayName": "Капельница Харви",
                     "Description": "Восстанавливает энергию",
-                    "IsDebuff": false,
-                    "GlowColor": null,
-                    "Duration": 1800000,
-                    "IconTexture": "TileSheets\\BuffsIcons",
+"IsDebuff": false, "GlowColor": null,
+"Duration": 1800000,
+"IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 24,
                     "Effects": {
                         "MaxStamina": 10,
@@ -158,7 +155,7 @@
                 "buffTeracitin": {
                     "Id": "buffTeracitin",
                     "DisplayName": "Терацитин",
-                    "Description": "Сильное успокоительное. Харви строго контролирует дозировку.",
+                    "Description": "Сильное успокоительное.\nХарви строго контролирует\nдозировку.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 2160000,
@@ -177,7 +174,7 @@
                 "buffCalmTeaEffect": {
                     "Id": "buffCalmTeaEffect",
                     "DisplayName": "Чай с мелиссой",
-                    "Description": "Успокаивающий травяной чай, приготовленный Харви.",
+                    "Description": "Успокаивающий травяной чай,\nприготовленный Харви.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 480000,
@@ -195,7 +192,7 @@
                 "buffStrictSupervision": {
                     "Id": "buffStrictSupervision",
                     "DisplayName": "Строгое наблюдение",
-                    "Description": "Харви неотступно следит за твоим состоянием.#$b#Его присутствие успокаивает и лечит.",
+                    "Description": "Харви неотступно следит за твоим\nсостоянием.\nЕго присутствие успокаивает и\nлечит.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 21600000,
@@ -214,7 +211,7 @@
                 "buffEmergencySupervision": {
                     "Id": "buffEmergencySupervision",
                     "DisplayName": "Экстренное наблюдение",
-                    "Description": "Харви активировал режим тотального контроля.#$b#Твоя безопасность — его приоритет.",
+                    "Description": "Харви активировал режим\nтотального контроля.\nТвоя безопасность — его приоритет.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": 7200000,
@@ -231,7 +228,7 @@
                 "buffConstantSupervision": {
                     "Id": "buffConstantSupervision",
                     "DisplayName": "Постоянное наблюдение",
-                    "Description": "Харви не отходит от тебя ни на шаг. Максимальная защита и забота.",
+                    "Description": "Харви не отходит от тебя ни на\nшаг.\nМаксимальная защита и забота.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 10080000,
@@ -250,7 +247,7 @@
                 "buffForcedSedation": {
                     "Id": "buffForcedSedation",
                     "DisplayName": "Принудительная седация",
-                    "Description": "Харви ввёл успокоительное для твоего блага.#$b#Организм восстанавливается.",
+                    "Description": "Харви ввёл успокоительное для\nтвоего блага.\nОрганизм восстанавливается.",
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": 720000,
@@ -268,7 +265,7 @@
                 "buffPostSurgicalCare": {
                     "Id": "buffPostSurgicalCare",
                     "DisplayName": "Послеоперационный уход",
-                    "Description": "Харви лично контролирует каждый этап восстановления после операции.",
+                    "Description": "Харви лично контролирует каждый\nэтап восстановления после\nоперации.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 4320000,
@@ -288,7 +285,7 @@
                 "buffTraumaHealing": {
                     "Id": "buffTraumaHealing",
                     "DisplayName": "Исцеление травмы",
-                    "Description": "Психологические раны начинают заживать под заботой Харви.",
+                    "Description": "Психологические раны начинают\nзаживать под заботой Харви.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 10080000,
@@ -312,7 +309,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Перелом: Острая фаза (Фаза 1/3)",
-                    "Description": "Сильная боль, иммобилизация.#$b#Харви наложил фиксирующую повязку. Нужен полный покой.",
+                    "Description": "Сильная боль, иммобилизация.\nХарви наложил фиксирующую\nповязку. Нужен полный покой.",
                     "Effects": {
                         "MaxStamina": -30,
                         "Speed": -2,
@@ -328,7 +325,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Перелом: Гипс (Фаза 2/3)",
-                    "Description": "Движения ограничены гипсовой повязкой.#$b#Кость срастается под наблюдением Харви.",
+                    "Description": "Движения ограничены гипсовой\nповязкой.\nКость срастается под наблюдением\nХарви.",
                     "Effects": {
                         "MaxStamina": -20,
                         "Speed": -1,
@@ -345,7 +342,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Перелом: Реабилитация (Фаза 3/3)",
-                    "Description": "Гипс снят. Идёт восстановление подвижности.#$b#Последний этап лечения перелома.",
+                    "Description": "Гипс снят.\nИдёт восстановление подвижности.\nПоследний этап лечения перелома.",
                     "Effects": {
                         "MaxStamina": -10,
                         "Speed": -1,
@@ -362,7 +359,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Сотрясение: Острая фаза (Фаза 1/3)",
-                    "Description": "Постельный режим, головокружение.#$b#Харви настаивает на строгом покое.",
+                    "Description": "Постельный режим,\nголовокружение.\nХарви настаивает на строгом\nпокое.",
                     "Effects": {
                         "MaxStamina": -40,
                         "Speed": -2
@@ -379,7 +376,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Сотрясение: Домашний режим (Фаза 2/3)",
-                    "Description": "Покой, периодические головные боли.#$b#Харви наблюдает за восстановлением.",
+                    "Description": "Покой,\nпериодические головные боли.\nХарви наблюдает за\nвосстановлением.",
                     "Effects": {
                         "MaxStamina": -25,
                         "Speed": -1
@@ -394,7 +391,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Сотрясение: Ограничения (Фаза 3/3)",
-                    "Description": "Активность ограничена. Симптомы почти прошли.#$b#Последний этап восстановления.",
+                    "Description": "Активность ограничена.\nСимптомы почти прошли.\nПоследний этап восстановления.",
                     "Effects": {
                         "MaxStamina": -15,
                         "Speed": -1
@@ -410,7 +407,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "После операции: Швы (Фаза 1/3)",
-                    "Description": "Послеоперационный период. Харви извлёк осколки и наложил швы.#$b#Критичные дни после операции.",
+                    "Description": "Послеоперационный период.\nХарви извлёк осколки и наложил\nшвы.\nКритичные дни после операции.",
                     "Effects": {
                         "MaxStamina": -35,
                         "Speed": -1,
@@ -426,7 +423,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Заживление швов (Фаза 2/3)",
-                    "Description": "Швы затягиваются, ткани восстанавливаются.#$b#Харви наблюдает за заживлением.",
+                    "Description": "Швы затягиваются,\nткани восстанавливаются.\nХарви наблюдает за заживлением.",
                     "Effects": {
                         "MaxStamina": -20,
                         "Speed": -1,
@@ -442,7 +439,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Восстановление тканей (Фаза 3/3)",
-                    "Description": "Швы готовы к снятию. Регенерация тканей продолжается.#$b#Последний этап восстановления.",
+                    "Description": "Швы готовы к снятию.\nРегенерация тканей продолжается.\nПоследний этап восстановления.",
                     "Effects": {
                         "MaxStamina": -10,
                         "Speed": -1,
@@ -459,7 +456,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Надрыв мышц: Острая боль (Фаза 1/3)",
-                    "Description": "Сильная боль, иммобилизация.#$b#Харви наложил повязку и назначил покой.",
+                    "Description": "Сильная боль, иммобилизация.\nХарви наложил повязку и назначил\nпокой.",
                     "Effects": {
                         "MaxStamina": -25,
                         "Speed": -2,
@@ -475,7 +472,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Надрыв мышц: Заживление (Фаза 2/3)",
-                    "Description": "Нагрузка ограничена. Мышцы восстанавливаются.#$b#Харви продолжает наблюдение.",
+                    "Description": "Нагрузка ограничена.\nМышцы восстанавливаются.\nХарви продолжает наблюдение.",
                     "Effects": {
                         "MaxStamina": -15,
                         "Speed": -1,
@@ -491,7 +488,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Надрыв мышц: Реабилитация (Фаза 3/3)",
-                    "Description": "Укрепление мышц. Постепенное возвращение к активности.#$b#Последний этап восстановления.",
+                    "Description": "Укрепление мышц.\nПостепенное возвращение к\nактивности.\nПоследний этап восстановления.",
                     "Effects": {
                         "MaxStamina": -10,
                         "Speed": -1,
@@ -508,7 +505,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Растяжение: Острая боль (Фаза 1/2)",
-                    "Description": "Отёк, боль при движении.#$b#Харви наложил эластичную повязку. Нужен покой.",
+                    "Description": "Отёк, боль при движении.\nХарви наложил эластичную\nповязку. Нужен покой.",
                     "Effects": {
                         "MaxStamina": -20,
                         "Speed": -1,
@@ -524,7 +521,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Растяжение: Восстановление (Фаза 2/2)",
-                    "Description": "Отёк спадает, связки восстанавливаются.#$b#Последний этап лечения.",
+                    "Description": "Отёк спадает,\nсвязки восстанавливаются.\nПоследний этап лечения.",
                     "Effects": {
                         "MaxStamina": -10,
                         "Speed": -1,
@@ -541,7 +538,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Ушиб рёбер: Острая боль (Фаза 1/2)",
-                    "Description": "Боль при дыхании.#$b#Харви наложил фиксирующую повязку.",
+                    "Description": "Боль при дыхании.\nХарви наложил фиксирующую\nповязку.",
                     "Effects": {
                         "MaxStamina": -25,
                         "Defense": -3
@@ -556,7 +553,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Ушиб рёбер: Заживление (Фаза 2/2)",
-                    "Description": "Боль утихает, гематома рассасывается.#$b#Последний этап лечения.",
+                    "Description": "Боль утихает,\nгематома рассасывается.\nПоследний этап лечения.",
                     "Effects": {
                         "MaxStamina": -15,
                         "Defense": -2
@@ -572,7 +569,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Глубокие порезы: Швы (Фаза 1/3)",
-                    "Description": "Кровотечение, свежие швы.#$b#Харви наложил швы и стерильную повязку.",
+                    "Description": "Кровотечение, свежие швы.\nХарви наложил швы и стерильную\nповязку.",
                     "Effects": {
                         "MaxStamina": -20,
                         "Speed": -1
@@ -591,7 +588,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Глубокие порезы: Заживление (Фаза 2/3)",
-                    "Description": "Швы затягиваются, воспаление спадает.#$b#Харви наблюдает за процессом.",
+                    "Description": "Швы затягиваются,\nвоспаление спадает.\nХарви наблюдает за процессом.",
                     "Effects": {
                         "MaxStamina": -10
                     },
@@ -609,7 +606,7 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "DisplayName": "Глубокие порезы: Снятие швов (Фаза 3/3)",
-                    "Description": "Швы готовы к снятию. Кожа регенерирует.#$b#Последний этап лечения.",
+                    "Description": "Швы готовы к снятию.\nКожа регенерирует.\nПоследний этап лечения.",
                     "Effects": {
                         "MaxStamina": 5
                     },
@@ -628,7 +625,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Ожоги: Острая боль (Фаза 1/2)",
-                    "Description": "Воспаление, сильная боль.#$b#Харви обработал ожоги и наложил повязку.",
+                    "Description": "Воспаление, сильная боль.\nХарви обработал ожоги и наложил\nповязку.",
                     "Effects": {
                         "MaxStamina": -25,
                         "Speed": -1,
@@ -644,7 +641,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Ожоги: Регенерация (Фаза 2/2)",
-                    "Description": "Кожа восстанавливается, образуется новая ткань.#$b#Последний этап лечения.",
+                    "Description": "Кожа восстанавливается,\nобразуется новая ткань.\nПоследний этап лечения.",
                     "Effects": {
                         "MaxStamina": -15,
                         "Defense": -0.1
@@ -660,7 +657,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Инфекция: Лихорадка (Фаза 1/2)",
-                    "Description": "Интоксикация, высокая температура.#$b#Харви начал курс антибиотиков.",
+                    "Description": "Интоксикация,\nвысокая температура.\nХарви начал курс антибиотиков.",
                     "Effects": {
                         "MaxStamina": -30,
                         "Speed": -1
@@ -675,7 +672,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Инфекция: Антибиотики (Фаза 2/2)",
-                    "Description": "Курс антибиотиков. Инфекция отступает.#$b#Последний этап лечения.",
+                    "Description": "Курс антибиотиков.\nИнфекция отступает.\nПоследний этап лечения.",
                     "Effects": {
                         "MaxStamina": -15
                     },
@@ -690,7 +687,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Спина: Острая боль (Фаза 1/2)",
-                    "Description": "Спазм мышц, боль при наклонах.#$b#Харви назначил покой и обезболивающие.",
+                    "Description": "Спазм мышц, боль при наклонах.\nХарви назначил покой и\nобезболивающие.",
                     "Effects": {
                         "MaxStamina": -20,
                         "Speed": -1
@@ -705,7 +702,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Спина: Восстановление (Фаза 2/2)",
-                    "Description": "Боль утихает. Мышцы спины восстанавливаются.#$b#Последний этап лечения.",
+                    "Description": "Боль утихает.\nМышцы спины восстанавливаются.\nПоследний этап лечения.",
                     "Effects": {
                         "MaxStamina": -10
                     },
@@ -720,7 +717,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Тяжёлая рана: Стабилизация (Фаза 1/3)",
-                    "Description": "Критическое состояние после обморока в шахте.#$b#Харви проводит интенсивную терапию.",
+                    "Description": "Критическое состояние после\nобморока в шахте.\nХарви проводит интенсивную\nтерапию.",
                     "Effects": {
                         "MaxStamina": -35,
                         "Defense": -2,
@@ -740,7 +737,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Тяжёлая рана: Заживление (Фаза 2/3)",
-                    "Description": "Состояние стабилизировано. Раны заживают под наблюдением Харви.",
+                    "Description": "Состояние стабилизировано.\nРаны заживают под наблюдением\nХарви.",
                     "Effects": {
                         "MaxStamina": -20,
                         "Defense": -1
@@ -759,7 +756,7 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "DisplayName": "Тяжёлая рана: Восстановление (Фаза 3/3)",
-                    "Description": "Последний этап восстановления после тяжёлой травмы.",
+                    "Description": "Последний этап восстановления\nпосле тяжёлой травмы.",
                     "Effects": {
                         "MaxStamina": -10
                     },
@@ -772,7 +769,7 @@
                 "buffHarveyCare": {
                     "Id": "buffHarveyCare",
                     "DisplayName": "Забота Харви",
-                    "Description": "Харви гордится тобой за успешное лечение.#$b#Его забота даёт силы.",
+                    "Description": "Харви гордится тобой за успешное\nлечение. Его забота даёт силы.",
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": 28800000,

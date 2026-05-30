@@ -4,7 +4,7 @@
             "Action": "EditData",
             "Target": "Data/Events/Mine",
             "Entries": {
-                "eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
+                "eventHarveyMineRescue/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
     none/
     -1000 -1000/
     farmer 17 7 2 Harvey 1000 1000 0/
@@ -91,7 +91,7 @@
     viewport -1000 -1000/
     end dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
 
-                "eventHarveyMinorMineRescue/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
+                "eventHarveyMinorMineRescue/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
     none/
     -1000 -1000/
     farmer 17 7 2 Harvey 17 10 0/
@@ -120,7 +120,7 @@
     viewport -1000 -1000/
     end dialogue Harvey \"Отдыхай. Я загляну позже.$h\"",
 
-                "eventHarveyMineRescueDating/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
+                "eventHarveyMineRescueDating/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
     none/
     -1000 -1000/
     farmer 17 7 2 Harvey 1000 1000 0/
@@ -201,7 +201,66 @@
             "Action": "EditData",
             "Target": "Data/Mail",
             "Entries": {
-                "mailHarveyAfterMineRescue": "@,^Прошла ночь после инцидента в шахте.^^Когда я нашёл тебя без сознания, пришлось срочно доставить тебя в клинику и стабилизировать состояние.^^Раны всё ещё серьёзны. Мне нужно завершить осмотр и начать лечение. Приходи в клинику, как только сможешь встать. Или я приду сам — если увижу, что ты игнорируешь лечение.^^Это важно. Твоё здоровье важнее всего.^^С беспокойством,^Харви[#]Письмо от Харви"
+                "mailHarveyAfterMineRescue": "@,^Прошла ночь после инцидента в шахте.^^Когда тебя нашли без сознания, я стабилизировал состояние и наблюдал до утра.^^Раны всё ещё серьёзны. Мне нужно завершить осмотр и начать лечение. Приходи в клинику, как только сможешь встать — или я зайду сам, если увижу, что ты игнорируешь лечение.^^Это важно. Твоё здоровье важнее всего.^^С беспокойством,^Харви[#]Письмо от Харви"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "Entries": {
+                "eventHarveyMineRescueMorning/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorning, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorningDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
+    continue/
+    pause 600/
+    ambientLight 150 150 170/
+    message \"Утро. Ты просыпаешься в своей кровати — голова тяжёлая, тело ноет.\"/
+    pause 500/
+    message \"Вчера в шахте: удар, темнота… потом чужие шаги и провал в забытье.\"/
+    pause 400/
+    emote Harvey 16/
+    speak Harvey \"Вы проснулись.$u#$b#Не вставайте. Вчера вы потеряли сознание в шахте.$s\"/
+    pause 600/
+    speak Harvey \"Вас нашли без сознания. Мне пришлось срочно стабилизировать состояние и наблюдать до утра.$u\"/
+    pause 500/
+    animate Harvey false true 600 22 20 21/
+    speak Harvey \"Пульс держится, но раны серьёзные.$a#$b#Мне нужен полный осмотр и начало лечения.$u\"/
+    pause 800/
+    speak Harvey \"Шахта подождёт. Сейчас — покой и протокол.$0#$b#Я буду следить за вашим состоянием.$0\"/
+    pause 800/
+    action AddConversationTopic topicMineInjuryRescue 2/
+    friendship Harvey 60/
+    mail mailHarveyAfterMineRescue/
+    globalFade/
+    viewport -1000 -1000/
+    end dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
+
+                "eventHarveyMineRescueMorningDating/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorningDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorning, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
+    continue/
+    pause 600/
+    ambientLight 150 150 170/
+    message \"Утро. Своя кровать, знакомый потолок — но тело помнит вчерашнюю шахту.\"/
+    pause 500/
+    message \"Удар. Темнота. Потом — чужие шаги и провал в забытье.\"/
+    pause 400/
+    emote Harvey 16/
+    speak Harvey \"@… Наконец-то ты открыла глаза.$8\"/
+    pause 500/
+    speak Harvey \"Не вставай. Вчера ты потеряла сознание в шахте — меня вызвали, когда тебя нашли.$s\"/
+    pause 600/
+    speak Harvey \"Я стабилизировал состояние и провёл ночь рядом, пока ты приходила в себя дома.$u#$b#Сейчас важнее не встать, а дать мне закончить осмотр.$u\"/
+    pause 600/
+    animate Harvey false true 600 22 20 21/
+    speak Harvey \"Пульс держится… но раны серьёзные.$8\"/
+    pause 500/
+    emote Harvey 12/
+    speak Harvey \"Шахта подождёт. Сначала лечение.$a#$b#Если захочешь остановить меня — скажи «стоп».$s\"/
+    pause 800/
+    speak Harvey \"Я буду рядом, пока показатели не станут безопасными.$l\"/
+    pause 800/
+    action AddConversationTopic topicMineInjuryRescue 2/
+    friendship Harvey 50/
+    globalFade/
+    viewport -1000 -1000/
+    end dialogue Harvey \"Если боль усилится — сразу позови. Я не далеко.$u\""
             }
         }
     ]

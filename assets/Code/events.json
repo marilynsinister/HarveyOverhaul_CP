@@ -492,7 +492,7 @@
         skippable/
         pause 500/
         emote farmer 12/
-        speak Harvey \"Привет. Рад, что ты ${пришёл^пришла}$.$h\"/
+        speak Harvey \"Привет. Рад, что ты пришла.$h\"/
         pause 300/
         move Harvey 0 2 2 true/
         move farmer 0 -2 0 true/
@@ -805,29 +805,43 @@
         Hospital_Ambient/
         4 6/
         farmer 4 6 0 Harvey 4 5 2/
+        setSkipActions addConversationTopic topicFirstTreatmentComplete 7#action removeConversationTopic topicHarveyNeedsFirstTreatment/
         skippable/
+        viewport 5 8 true/
         pause 800/
-        move farmer 1 0 0/
+        move farmer 1 0 0 true/
         pause 500/
+        proceedPosition farmer/
         faceDirection Harvey 1/
         pause 500/
         emote Harvey 28/
         pause 500/
-        speak Harvey \"Наконец-то... Я так волновался за тебя.$0#$b#Садись сюда. Нужно провести полное обследование.$u\"/
+        speak Harvey \"Наконец-то... Я так волновался за тебя.$0\"/
+        speak Harvey \"Садись сюда. Нужно провести полное обследование.$u\"/
         pause 500/
         move farmer 0 -2 2/
+        proceedPosition farmer/
+        faceDirection farmer 2/
         showFrame farmer 107/
         pause 500/
         move Harvey 1 0 0/
+        proceedPosition Harvey/
+        faceDirection Harvey 0/
         pause 500/
-        speak Harvey \"Покажи руки. Посмотри на свет.$u #$b#*осторожно проверяет пульс* Твоё сердце бьётся слишком быстро...$s\"/
+        speak Harvey \"Покажи руки. Посмотри на свет.$u\"/
+        speak Harvey \"*осторожно проверяет пульс* Твоё сердце бьётся слишком быстро...$s\"/
         emote farmer 8/
         pause 400/
         speak Harvey \"Эй, всё хорошо. Я рядом.$0#$b#Я сделаю всё, чтобы с тобой ничего плохого не случилось.$0#$b#Доверься мне, @.\"/
         pause 300/
-        move Harvey -2 0 0/
-        pause 1000/
-        move Harvey 2 0 0/
+        move Harvey -1 0 3/
+        proceedPosition Harvey/
+        playSound openBox/
+        pause 500/
+        move Harvey 1 0 1/
+        proceedPosition Harvey/
+        faceDirection Harvey 0/
+        pause 300/
         speak Harvey \"С сегодняшнего дня - никаких походов в шахты сначала покажись мне!$a#$b#И каждый вечер - обязательный осмотр здесь, в клинике.$u#$b#Я очень прошу отнестись к этому серьёзно.$a\"/
         pause 500/
         emote farmer 16/
@@ -836,6 +850,7 @@
         viewport -1000 -1000/
         pause 700/
         addConversationTopic topicFirstTreatmentComplete 7/
+        action removeConversationTopic topicHarveyNeedsFirstTreatment/
         friendship Harvey 50/
         end",
 
@@ -914,7 +929,7 @@
         end newDay",
 
         // ================== СОБЫТИЕ: ДЕНЬ РОЖДЕНИЯ В БОЛЬНИЦЕ (DATING / MARRIED) ==================
-        "HarveyMod_BirthdayHospital_Dating/Friendship Harvey 2000/LocationName Hospital/Season summer/Day 9/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Dating/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Friend/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicBirthdayHospitalComplete": "spring_day_ambient/
+        "HarveyMod_BirthdayHospital_Dating/Friendship Harvey 2000/Season summer/Day 9/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Dating/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Friend/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicBirthdayHospitalComplete": "spring_day_ambient/
         10 15/
         Harvey 9 14 1 farmer 10 19 0/
         skippable/
@@ -943,7 +958,7 @@
         end",
 
         // ================== СОБЫТИЕ: ДЕНЬ РОЖДЕНИЯ В БОЛЬНИЦЕ (PRE-DATING) ==================
-        "HarveyMod_BirthdayHospital_Friend/Friendship Harvey 2000/LocationName Hospital/Season summer/Day 9/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Friend/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Dating/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicBirthdayHospitalComplete": "spring_day_ambient/
+        "HarveyMod_BirthdayHospital_Friend/Friendship Harvey 2000/Season summer/Day 9/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Friend/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Dating/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicBirthdayHospitalComplete": "spring_day_ambient/
         10 15/
         Harvey 9 14 1 farmer 10 19 0/
         skippable/
@@ -2638,7 +2653,7 @@
         speak Harvey \"Позволь мне быть твоим берегом, твоей опорой, твоим... *голос дрожит* ...мужем?$l\"/
         emote farmer 16/
         message \"...\"/
-        speak Harvey \"Не отвечай сейчас, если не ${готов^готова}$. Я просто хотел, чтобы ты ${знал^знала}$: я выбираю тебя. Но решение — только твоё.$l\"/
+        speak Harvey \"Не отвечай сейчас, если не готова. Я просто хотел, чтобы ты знала: я выбираю тебя. Но решение — только твоё.$l\"/
         pause 500/
         animate Harvey true false 5000 38/
         animate farmer true false 5000 101/
