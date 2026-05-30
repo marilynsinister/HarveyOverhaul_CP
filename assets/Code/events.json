@@ -493,6 +493,7 @@
         pause 500/
         emote farmer 12/
         speak Harvey \"Привет. Рад, что ты пришла.$h\"/
+        speak Harvey \"Привет. Рад, что ты пришла.$h\"/
         pause 300/
         move Harvey 0 2 2 true/
         move farmer 0 -2 0 true/
