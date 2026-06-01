@@ -15,7 +15,6 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 17,
                     "Effects": {
-                        "Speed": -0.5
                     },
                     "CustomFields": {
                         "HarveyMod": "prescription",
@@ -94,8 +93,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 15,
                     "Effects": {
-                        "MaxStamina": -8,
-                        "Speed": -1
+                        "MaxStamina": -8
                     },
                     "CustomFields": {
                         "HarveyMod": "rehab"

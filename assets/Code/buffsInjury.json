@@ -33,7 +33,7 @@
                     "IconSpriteIndex": 11,
                     "Effects": {
                         "MaxStamina": -40,
-                        "Speed": -3,
+                        "Speed": -1,
                         "AttackMultiplier": -0.5,
                         "DefenseMultiplier": -0.2
                     },
@@ -85,7 +85,6 @@
                     "Description": "Каждый вдох отдаёт болью в\nгруди.\nНужен осмотр врача и покой.",
                     "Effects": {
                         "Stamina": -25,
-                        "MovementSpeed": -2,
                         "Health": -10
                     },
                     "Duration": 14400000,
@@ -99,7 +98,7 @@
                     "Description": "Хромота и боль при каждом шаге.\nНужен осмотр и фиксация сустава.",
                     "Effects": {
                         "Stamina": -20,
-                        "MovementSpeed": -3,
+                        "MovementSpeed": -1,
                         "Luck": -1
                     },
                     "Duration": 10080000,
@@ -113,7 +112,6 @@
                     "Description": "Острая боль в пояснице.\nНужен осмотр и покой.",
                     "Effects": {
                         "Stamina": -30,
-                        "MovementSpeed": -2,
                         "Health": -5
                     },
                     "Duration": 7200000,
@@ -129,7 +127,7 @@
                     "Effects": {
                         "Stamina": -35,
                         "Health": -20,
-                        "MovementSpeed": -2,
+                        "MovementSpeed": -1,
                         "Luck": -2
                     },
                     "Duration": 10080000,
@@ -158,7 +156,7 @@
                     "Description": "Серьёзная мышечная травма.\nНужен осмотр, покой и лечение.",
                     "Effects": {
                         "Stamina": -50,
-                        "MovementSpeed": -4,
+                        "MovementSpeed": -1,
                         "Health": -15,
                         "Luck": -1
                     },
@@ -175,7 +173,7 @@
                     "Effects": {
                         "Stamina": -60,
                         "Health": -30,
-                        "MovementSpeed": -3,
+                        "MovementSpeed": -1,
                         "Luck": -4
                     },
                     "Duration": 21600000,
@@ -189,7 +187,7 @@
                     "Description": "Сломанная кость.\nНужна фиксация и осмотр врача.",
                     "Effects": {
                         "Stamina": -70,
-                        "MovementSpeed": -5,
+                        "MovementSpeed": -1,
                         "Health": -25,
                         "Luck": -3
                     },
@@ -205,7 +203,7 @@
                     "Effects": {
                         "Stamina": -80,
                         "Health": -40,
-                        "MovementSpeed": -4,
+                        "MovementSpeed": -1,
                         "Luck": -5
                     },
                     "Duration": 43200000,
@@ -242,7 +240,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -15,
+                        "Speed": -1,
                         "MaxStamina": -30,
                         "Health": -20
                     }
@@ -371,7 +369,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -3
+                        "Speed": -1
                     }
                 },
                 "HarveyMod_MuscleAtrophy": {
@@ -409,7 +407,7 @@
                     "IsDebuff": true,
                     "Effects": {
                         "Health": -50,
-                        "Speed": -4,
+                        "Speed": -1,
                         "Defense": -10
                     }
                 },
@@ -423,7 +421,6 @@
                     "IconSpriteIndex": 13,
                     "IsDebuff": true,
                     "Effects": {
-                        "Speed": -2,
                         "MaxStamina": -30
                     }
                 },
@@ -437,7 +434,6 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Effects": {
-                        "Speed": -2,
                         "MaxStamina": -40,
                         "Defense": -2
                     }
@@ -451,7 +447,6 @@
                     "IconSpriteIndex": 17,
                     "IsDebuff": true,
                     "Effects": {
-                        "Speed": -1,
                         "MaxStamina": -20
                     }
                 }

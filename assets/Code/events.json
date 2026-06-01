@@ -2087,10 +2087,11 @@
 
          "HarveyOverhaulStory.E1_SlipperyPath/Time 700 1400/Weather Wind/!FestivalDay/Friendship Harvey 500/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E1_SlipperyPath/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "
          none/
-         52 24/
-         farmer 20 23 1 Harvey 26 22 3/
+         10 23/
+         farmer 7 23 1 Harvey 13 22 3/
          setSkipActions AddMail Current HarveyOverhaul_E1_Note tomorrow/
          skippable/
+         viewport 10 23 true/
          pause 400/
          playSound sandyStep/
          move farmer 3 0 1 true/

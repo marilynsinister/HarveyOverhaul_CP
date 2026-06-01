@@ -25,7 +25,6 @@
 "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 2,
             "Effects": {
-              "Speed": -1
             }
           },
           "buffStressThunder": {
@@ -48,8 +47,7 @@
 "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 6,
             "Effects": {
-              "StaminaRegen": -1,
-              "Speed": -1
+              "StaminaRegen": -1
             }
           },
           "buffStressOverwork": {
@@ -60,8 +58,7 @@
 "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 3,
             "Effects": {
-              "MaxStamina": -20,
-              "Speed": -2
+              "MaxStamina": -20
             }
           },
           "buffStressNoSleep": {
@@ -72,8 +69,7 @@
 "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 13,
             "Effects": {
-              "LuckLevel": -1,
-              "Speed": -2
+              "LuckLevel": -1
             }
           },
           "buffStressTooCold": {
@@ -84,7 +80,6 @@
 "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 11,
             "Effects": {
-              "Speed": -2,
               "Defense": -1
             }
           },
@@ -191,8 +186,7 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 12,
             "Effects": {
-              "MaxStamina": -10,
-              "Speed": -1
+              "MaxStamina": -10
             }
           },
           "buffStressAnxietyWave": {
@@ -218,7 +212,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 8,
             "Effects": {
-              "Speed": -3,
               "Defense": -3,
               "LuckLevel": -2,
               "MaxStamina": -40
@@ -233,7 +226,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 7,
             "Effects": {
-              "Speed": -5,
               "MaxStamina": -50,
               "LuckLevel": -3
             }
@@ -248,7 +240,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 3,
             "Effects": {
-              "Speed": -3,
               "LuckLevel": -3,
               "Defense": -2
             }
@@ -263,7 +254,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 0,
             "Effects": {
-              "Speed": -3,
               "Defense": -3,
               "MaxStamina": -40
             }
@@ -277,7 +267,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 13,
             "Effects": {
-              "Speed": -1,
               "LuckLevel": -2,
               "MaxStamina": -20
             }
@@ -292,7 +281,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 23,
             "Effects": {
-              "Speed": -4,
               "MaxStamina": -60,
               "LuckLevel": -4,
               "Defense": -3,
@@ -310,7 +298,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 14,
             "Effects": {
-              "Speed": -3,
               "MaxStamina": -35,
               "LuckLevel": -2,
               "Defense": -2
@@ -326,7 +313,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 15,
             "Effects": {
-              "Speed": -2,
               "MaxStamina": -30,
               "Defense": -3,
               "Attack": -1
@@ -342,7 +328,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 16,
             "Effects": {
-              "Speed": -1,
               "MaxStamina": -20,
               "LuckLevel": -2,
               "Defense": -2
@@ -358,7 +343,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 18,
             "Effects": {
-              "Speed": -2,
               "MaxStamina": -30,
               "LuckLevel": -3,
               "Defense": -2
@@ -374,7 +358,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 19,
             "Effects": {
-              "Speed": -3,
               "MaxStamina": -45,
               "LuckLevel": -3,
               "Defense": -3,
@@ -391,7 +374,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 20,
             "Effects": {
-              "Speed": -4,
               "MaxStamina": -55,
               "LuckLevel": -4,
               "Defense": -3
@@ -407,7 +389,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 21,
             "Effects": {
-              "Speed": -5,
               "MaxStamina": -60,
               "LuckLevel": -4,
               "Defense": -3,
@@ -424,7 +405,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 22,
             "Effects": {
-              "Speed": -3,
               "MaxStamina": -40,
               "LuckLevel": -3,
               "Defense": -3,
@@ -441,7 +421,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 23,
             "Effects": {
-              "Speed": -4,
               "MaxStamina": -50,
               "LuckLevel": -3,
               "Defense": -3,
@@ -458,7 +437,6 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 24,
             "Effects": {
-              "Speed": -5,
               "MaxStamina": -65,
               "LuckLevel": -5,
               "Defense": -4,
@@ -477,7 +455,6 @@
             "IconSpriteIndex": 20,
             "Effects": {
               "MaxStamina": -30,
-              "Speed": -2,
               "Luck": -3
             }
           },
@@ -492,7 +469,6 @@
             "IconSpriteIndex": 12,
             "Effects": {
               "MaxStamina": -35,
-              "Speed": -3,
               "Defense": -2
             }
           },
@@ -506,8 +482,7 @@
             "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
             "IconSpriteIndex": 14,
             "Effects": {
-              "MaxStamina": -20,
-              "Speed": -3
+              "MaxStamina": -20
             }
           },
 
@@ -550,7 +525,6 @@
             "IconSpriteIndex": 11,
             "Effects": {
               "MaxStamina": -30,
-              "Speed": -2,
               "Luck": -2
             }
           }
