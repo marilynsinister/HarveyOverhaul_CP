@@ -339,6 +339,7 @@
     17 7/
     farmer 17 7 0 Harvey 17 10 0/
     skippable/
+    setSkipActions friendship Harvey 100#addConversationTopic HarveyMineIntercept 3#changeLocation Town#warp farmer 72 22#warp Harvey 73 22#faceDirection farmer 1#faceDirection Harvey 3/
     pause 800/
     speak Harvey \"Стой.$a#$b#Не делай и шага вниз.$a\"/
     pause 600/
@@ -394,9 +395,16 @@
     globalFade/
     viewport -1000 -1000/
     pause 700/
+    changeLocation Town/
+    warp farmer 72 22/
+    warp Harvey 73 22/
+    faceDirection farmer 1/
+    faceDirection Harvey 3/
+    viewport 72 22/
+    pause 300/
     friendship Harvey 100/
     addConversationTopic HarveyMineIntercept 3/
-    end
+    end position 72 22
 ",
             }
         }
