@@ -297,6 +297,7 @@
     5 5/
     farmer 5 5 0 Harvey 7 7 0/
     skippable/
+    setSkipActions warpOut/
     viewport 6 5 true/
     pause 1500/
     move Harvey 0 -2 3/
@@ -321,12 +322,16 @@
     speak Harvey \"Спасибо. Теперь я буду спокоен. Пойдём домой.$l\"/
     globalFade/
     viewport -1000 -1000/
+    warpOut/
     end
 ",
                 "HarveySkullPromise": "
     speak Harvey \"Ресурсы?!$a#$b#Твоя жизнь дороже любых ресурсов!$a#$b#@, пожалуйста... не заставляй меня волноваться.$s\"/
     emote Harvey 28/
     speak Harvey \"Хорошо. Если тебе так нужно сюда ходить ...$s#$b#обещай быть осторожнее...И всегда сообщай мне, когда собираешься сюда...$l\"/
+    globalFade/
+    viewport -1000 -1000/
+    warpOut/
     end"
             }
         },

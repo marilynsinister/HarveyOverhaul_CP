@@ -89,7 +89,7 @@
     faceDirection farmer 3/
     globalFade/
     viewport -1000 -1000/
-    end dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
+    end position 20 5 dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
 
                 "eventHarveyMinorMineRescue/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
     none/
@@ -118,7 +118,7 @@
     friendship Harvey 35/
     globalFade/
     viewport -1000 -1000/
-    end dialogue Harvey \"Отдыхай. Я загляну позже.$h\"",
+    end position 14 6 dialogue Harvey \"Отдыхай. Я загляну позже.$h\"",
 
                 "eventHarveyMineRescueDating/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
     none/
@@ -194,7 +194,7 @@
     friendship Harvey 50/
     globalFade/
     viewport -1000 -1000/
-    end dialogue Harvey \"Если боль усилится — скажи сразу. Я не далеко.$u\""
+    end position 20 5 dialogue Harvey \"Если боль усилится — скажи сразу. Я не далеко.$u\""
             }
         },
         {
