@@ -1,0 +1,5738 @@
+{
+  "blocks": [
+    {
+      "index": 1,
+      "target": "strings/schedules/Harvey",
+      "when": null,
+      "when_label": "(нет When)",
+      "priority": "Late",
+      "entry_count": 4,
+      "keys": [
+        "Fri.000",
+        "Fri.001",
+        "Sat.000",
+        "winter_15.000"
+      ]
+    },
+    {
+      "index": 2,
+      "target": "strings/schedules/Harvey",
+      "when": {
+        "Relationship:Harvey": "Married"
+      },
+      "when_label": "Relationship:Harvey=Married",
+      "priority": "Late",
+      "entry_count": 3,
+      "keys": [
+        "marriageJob.000",
+        "marriage_Mon.001",
+        "marriage_Mon.000"
+      ]
+    },
+    {
+      "index": 3,
+      "target": "Characters/Dialogue/Harvey",
+      "when": null,
+      "when_label": "(нет When)",
+      "priority": "Late",
+      "entry_count": 180,
+      "keys": [
+        "eventHarveyMedicalCheck_memory_oneday",
+        "breakUp",
+        "DumpsterDiveComment",
+        "HitBySlingshot",
+        "Hospital_Entry",
+        "Farm_Entry",
+        "Introduction",
+        "GreenRain",
+        "GreenRain_2",
+        "eventSeen_58_memory_oneweek",
+        "eventSeen_58_memory_twoweeks",
+        "eventSeen_58_memory_fourweeks",
+        "eventSeen_528013_oneweek",
+        "eventSeen_528013_twoweek",
+        "eventSeen_528013_fourweeks",
+        "eventSeen_56_memory_fourweeks",
+        "eventSeen_56_memory_twoweeks",
+        "eventSeen_56",
+        "event_heart1",
+        "event_heart2",
+        "event_grave1",
+        "event_grave2",
+        "eventSeen_eventHarveyFirstMeeting_oneday",
+        "eventSeen_eventHarveyFirstMeeting_oneweek",
+        "eventSeen_eventHarveyFirstMeeting_twoweek",
+        "eventSeen_eventHarveyFirstMeeting_fourweeks",
+        "topicHarveyDeclineFirstWalk",
+        "topicHarveyWalkGood",
+        "topicHarveyWalkNeutral",
+        "topicHarveyWalkBad",
+        "topicHarveyAcceptFirstWalk",
+        "topicHarveyFirstVisitAgree",
+        "topicHarveyFirstVisitRefused",
+        "topicHarveyFirstVisitNeutral",
+        "topicHarvey_WetBandage",
+        "topicHarvey_DirtyWound",
+        "topicHarvey_AllergicRash",
+        "topicHarvey_Neglect",
+        "topicHarvey_WetStitches",
+        "topicHarvey_PainFlare",
+        "topicHarvey_ForcedHospitalization",
+        "topicHarveyTrust_Water",
+        "topicHarveyTrust_Breakfast",
+        "topicHarveyTrust_Rest",
+        "topicHarveyTrust_DoctorDecides",
+        "topicHarveyTrust_TouchOk",
+        "topicHarveyTrust_BreathHard",
+        "topicHarveyTrust_NeedsSpace",
+        "topicHarveyStorm_Clinic",
+        "topicHarveyStorm_Home",
+        "topicHarveyStorm_Note",
+        "topicHarveyStorm_Escort",
+        "topicHarveyDoorSignal_Close",
+        "topicHarveyDoorSignal_Boundary",
+        "topicHarveyDoorSignal_Note",
+        "topicHarveyBadDay_Silent",
+        "topicHarveyBadDay_Water",
+        "topicHarveyBadDay_NoQuestions",
+        "topicHarveyTrust_FullExam",
+        "topicHarveyTrust_SmallExam",
+        "topicHarveyTrust_JustSit",
+        "topicHarveyTrust_LeftClinic",
+        "topicHarveyApologyAccepted",
+        "topicHarveyQuietFiveMinutes",
+        "topicHarveyNeedsSpace",
+        "topicHarveySafetyKit_Door",
+        "topicHarveySafetyKit_Bed",
+        "topicHarveySafetyKit_Kitchen",
+        "topicHarveySafetyKit_NoKit",
+        "topicHarveyWasCaredFor",
+        "topicHarveyMines_ReturnTime",
+        "topicHarveyMines_Supplies",
+        "topicHarveyMines_Note",
+        "topicHarveyMines_CallMe",
+        "topicHarveyHelp_Asks",
+        "topicHarveyHelp_Spotter",
+        "topicHarveyHelp_Independent",
+        "topicHarvey_WetBandage_memory_oneday",
+        "topicHarvey_WetBandage_memory_oneweek",
+        "topicHarvey_WetStitches_memory_oneday",
+        "topicHarvey_WetStitches_memory_oneweek",
+        "topicHarvey_DirtyWound_memory_oneday",
+        "topicHarvey_DirtyWound_memory_oneweek",
+        "topicHarvey_AllergicRash_memory_oneday",
+        "topicHarvey_AllergicRash_memory_oneweek",
+        "topicHarvey_Neglect_memory_oneday",
+        "topicHarvey_Neglect_memory_oneweek",
+        "topicHarvey_ForcedHospitalization_memory_oneday",
+        "topicHarvey_ForcedHospitalization_memory_oneweek",
+        "topicHarvey_NightRound_memory_oneday",
+        "topicHarvey_NightRound_memory_oneweek",
+        "topicHarvey_EscalatedCare_memory_oneday",
+        "topicHarvey_EscalatedCare_memory_oneweek",
+        "Treat_Hurt_Before",
+        "Treat_Hurt_After",
+        "WipedMemory",
+        "AcceptBouquet",
+        "RejectBouquet_VeryLowHearts",
+        "RejectBouquet_LowHearts",
+        "RejectBouquet_Divorced",
+        "RejectBouquet_AlreadyAccepted",
+        "RejectGift_Divorced",
+        "RejectItem_category_alcohol",
+        "RejectItem_category_junk",
+        "RejectMermaidPendant_Under8Hearts",
+        "RejectMermaidPendant_Under10Hearts",
+        "RejectMermaidPendant_NeedHouseUpgrade",
+        "RejectMermaidPendant_Divorced",
+        "MovieInvitation",
+        "RejectMovieTicket_AlreadyWatchedThisWeek",
+        "RejectMovieTicket_DontWantToSeeThatMovie",
+        "RejectRoommateProposal_LowFriendship",
+        "RejectRoommateProposal_SmallHouse",
+        "FlowerDance_Decline",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun",
+        "spring_12",
+        "spring_14",
+        "spring_23",
+        "summer_10",
+        "summer_19",
+        "summer_27",
+        "fall_15",
+        "fall_26",
+        "winter_7",
+        "winter_11",
+        "winter_14",
+        "winter_24",
+        "Mon2",
+        "Tue2",
+        "Wed2",
+        "Thu2",
+        "Fri2",
+        "Sat2",
+        "Sun2",
+        "spring_Mon",
+        "spring_Tue",
+        "spring_Wed",
+        "spring_Thu",
+        "spring_Fri",
+        "spring_Sat",
+        "spring_Sun",
+        "summer_Mon",
+        "summer_Tue",
+        "summer_Wed",
+        "summer_Thu",
+        "summer_Fri",
+        "summer_Sat",
+        "summer_Sun",
+        "fall_Mon",
+        "fall_Tue",
+        "fall_Wed",
+        "fall_Thu",
+        "fall_Fri",
+        "fall_Sat",
+        "fall_Sun",
+        "winter_Mon",
+        "winter_Tue",
+        "winter_Wed",
+        "winter_Thu",
+        "winter_Fri",
+        "winter_Sat",
+        "winter_Sun",
+        "timeReaction_Late",
+        "timeReaction_VeryLate",
+        "timeReaction_Early",
+        "locationReaction_Mine",
+        "locationReaction_SkullCave",
+        "emotionalReaction_Crying",
+        "emotionalReaction_Scared",
+        "situationReaction_Drunk",
+        "situationReaction_Exhausted",
+        "situationReaction_Injured",
+        "summer_9",
+        "winter_30"
+      ]
+    },
+    {
+      "index": 4,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Hearts:Harvey": "6,7,8,9,10"
+      },
+      "when_label": "Hearts:Harvey=6,7,8,9,10",
+      "priority": "Late",
+      "entry_count": 24,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Tue",
+        "Hospital_Wed",
+        "Hospital_Thu",
+        "Hospital_Fri",
+        "Hospital_Sat",
+        "Hospital_Sun",
+        "Spring_5",
+        "Summer_12",
+        "Fall_20",
+        "Winter_3",
+        "Saloon",
+        "Saloon2",
+        "Hospital",
+        "Hospital2",
+        "Desert",
+        "Desert2",
+        "HarveyRoom",
+        "HarveyRoom2",
+        "ArchaeologyHouse",
+        "ArchaeologyHouse2",
+        "Beach",
+        "Beach2",
+        "topicHarvey_ForcedHospitalization"
+      ]
+    },
+    {
+      "index": 5,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Hearts:Harvey": "4,5,6,7"
+      },
+      "when_label": "Hearts:Harvey=4,5,6,7",
+      "priority": "Late",
+      "entry_count": 99,
+      "keys": [
+        "timeReaction_Late",
+        "timeReaction_VeryLate",
+        "timeReaction_Early",
+        "locationReaction_Mine",
+        "locationReaction_SkullCave",
+        "emotionalReaction_Crying",
+        "emotionalReaction_Scared",
+        "situationReaction_Drunk",
+        "situationReaction_Exhausted",
+        "situationReaction_Injured",
+        "summer_9",
+        "winter_30",
+        "spring_14",
+        "GreenRain",
+        "GreenRain_2",
+        "Resort_Entering",
+        "Resort_Leaving",
+        "Resort_Shore",
+        "Resort_Chair",
+        "Resort_Bar",
+        "Resort",
+        "FlowerDance_Accept",
+        "Saloon4",
+        "Saloon6",
+        "Hospital4",
+        "Hospital6",
+        "Desert4",
+        "Desert6",
+        "HarveyRoom4",
+        "HarveyRoom6",
+        "ArchaeologyHouse4",
+        "ArchaeologyHouse6",
+        "Beach4",
+        "Beach6",
+        "Hospital_Mon",
+        "Hospital_Tue",
+        "Hospital_Wed",
+        "Hospital_Thu",
+        "Hospital_Fri",
+        "Hospital_Sat",
+        "Hospital_Sun",
+        "spring_Mon",
+        "spring_Tue",
+        "spring_Wed",
+        "spring_Thu",
+        "spring_Fri",
+        "spring_Sat",
+        "spring_Sun",
+        "summer_Mon",
+        "summer_Tue",
+        "summer_Wed",
+        "summer_Thu",
+        "summer_Fri",
+        "summer_Sat",
+        "summer_Sun",
+        "fall_Mon",
+        "fall_Tue",
+        "fall_Wed",
+        "fall_Thu",
+        "fall_Fri",
+        "fall_Sat",
+        "fall_Sun",
+        "winter_Mon",
+        "winter_Tue",
+        "winter_Wed",
+        "winter_Thu",
+        "winter_Fri",
+        "winter_Sat",
+        "winter_Sun",
+        "Mon4",
+        "Tue4",
+        "Wed4",
+        "Thu4",
+        "Fri4",
+        "Sat4",
+        "Sun4",
+        "Mon6",
+        "Tue6",
+        "Wed6",
+        "Thu6",
+        "Fri6",
+        "Sat6",
+        "Sun6",
+        "spring_12",
+        "spring_15",
+        "spring_16",
+        "spring_23",
+        "summer_10",
+        "summer_19",
+        "summer_27",
+        "fall_15",
+        "fall_26",
+        "winter_7",
+        "winter_11",
+        "winter_12",
+        "winter_14",
+        "winter_15",
+        "winter_16",
+        "winter_24"
+      ]
+    },
+    {
+      "index": 6,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Hearts:Harvey": "8,9,10"
+      },
+      "when_label": "Hearts:Harvey=8,9,10",
+      "priority": "Late",
+      "entry_count": 87,
+      "keys": [
+        "timeReaction_Late",
+        "timeReaction_VeryLate",
+        "timeReaction_Early",
+        "locationReaction_Mine",
+        "locationReaction_SkullCave",
+        "emotionalReaction_Crying",
+        "emotionalReaction_Scared",
+        "situationReaction_Drunk",
+        "situationReaction_Exhausted",
+        "situationReaction_Injured",
+        "summer_9",
+        "winter_30",
+        "spring_14",
+        "GreenRain",
+        "GreenRain_2",
+        "Resort_Entering",
+        "Resort_Leaving",
+        "Resort_Shore",
+        "Resort_Chair",
+        "Resort_Bar",
+        "Resort",
+        "FlowerDance_Accept",
+        "Saloon8",
+        "Saloon10",
+        "Hospital8",
+        "Hospital10",
+        "Desert8",
+        "Desert10",
+        "HarveyRoom8",
+        "HarveyRoom10",
+        "ArchaeologyHouse8",
+        "ArchaeologyHouse10",
+        "Beach8",
+        "Beach10",
+        "Mon8",
+        "Tue8",
+        "Wed8",
+        "Thu8",
+        "Fri8",
+        "Sat8",
+        "Sun8",
+        "Mon10",
+        "Tue10",
+        "Wed10",
+        "Thu10",
+        "Fri10",
+        "Sat10",
+        "Sun10",
+        "spring_Mon",
+        "spring_Tue",
+        "spring_Wed",
+        "spring_Thu",
+        "spring_Fri",
+        "spring_Sat",
+        "spring_Sun",
+        "summer_Mon",
+        "summer_Tue",
+        "summer_Wed",
+        "summer_Thu",
+        "summer_Fri",
+        "summer_Sat",
+        "summer_Sun",
+        "fall_Mon",
+        "fall_Tue",
+        "fall_Wed",
+        "fall_Thu",
+        "fall_Fri",
+        "fall_Sat",
+        "fall_Sun",
+        "winter_Mon",
+        "winter_Tue",
+        "winter_Wed",
+        "winter_Thu",
+        "winter_Fri",
+        "winter_Sat",
+        "winter_Sun",
+        "Hospital_Mon",
+        "Hospital_Tue",
+        "Hospital_Wed",
+        "Hospital_Thu",
+        "Hospital_Fri",
+        "Hospital_Sat",
+        "Hospital_Sun",
+        "spring_13",
+        "summer_11",
+        "fall_16",
+        "winter_8"
+      ]
+    },
+    {
+      "index": 7,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Hearts:Harvey": "0,1,2"
+      },
+      "when_label": "Hearts:Harvey=0,1,2",
+      "priority": "Late",
+      "entry_count": 50,
+      "keys": [
+        "AcceptBirthdayGift_Positive",
+        "AcceptBirthdayGift_Negative",
+        "AcceptBirthdayGift_Loved",
+        "AcceptBirthdayGift_Liked",
+        "AcceptBirthdayGift_Neutral",
+        "AcceptBirthdayGift_Hated",
+        "AcceptGift_(O)StardropTea",
+        "AcceptGift_(O)395",
+        "AcceptGift_(O)432",
+        "AcceptGift_(O)348",
+        "AcceptGift_(O)342",
+        "AcceptGift_(O)237",
+        "AcceptGift_(O)196",
+        "AcceptGift_(O)200",
+        "AcceptGift_(O)201",
+        "AcceptGift_(O)610",
+        "AcceptGift_(O)618",
+        "AcceptGift_(O)651",
+        "AcceptGift_(O)614",
+        "AcceptGift_(O)24",
+        "AcceptGift_(O)192",
+        "AcceptGift_(O)18",
+        "AcceptGift_(O)22",
+        "AcceptGift_(O)20",
+        "AcceptGift_(O)78",
+        "AcceptGift_(O)404",
+        "AcceptGift_(O)281",
+        "AcceptGift_(O)257",
+        "AcceptGift_(O)422",
+        "AcceptGift_(O)436",
+        "AcceptGift_(O)438",
+        "AcceptGift_(O)442",
+        "AcceptGift_(O)444",
+        "AcceptGift_(O)349",
+        "AcceptGift_(O)773",
+        "AcceptGift_(O)80",
+        "AcceptGift_(O)72",
+        "AcceptGift_(O)74",
+        "AcceptGift_(O)279",
+        "AcceptGift_(O)373",
+        "AcceptGift_(O)446",
+        "AcceptGift_(O)797",
+        "AcceptGift_(O)346",
+        "AcceptGift_(O)303",
+        "AcceptGift_(O)296",
+        "AcceptGift_(O)396",
+        "AcceptGift_(O)88",
+        "AcceptGift_(O)90",
+        "AcceptGift_(O)2",
+        "AcceptGift_(O)30"
+      ]
+    },
+    {
+      "index": 8,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Hearts:Harvey": "3,4,5"
+      },
+      "when_label": "Hearts:Harvey=3,4,5",
+      "priority": "Late",
+      "entry_count": 50,
+      "keys": [
+        "AcceptBirthdayGift_Positive",
+        "AcceptBirthdayGift_Negative",
+        "AcceptBirthdayGift_Loved",
+        "AcceptBirthdayGift_Liked",
+        "AcceptBirthdayGift_Neutral",
+        "AcceptBirthdayGift_Hated",
+        "AcceptGift_(O)StardropTea",
+        "AcceptGift_(O)395",
+        "AcceptGift_(O)432",
+        "AcceptGift_(O)348",
+        "AcceptGift_(O)342",
+        "AcceptGift_(O)237",
+        "AcceptGift_(O)196",
+        "AcceptGift_(O)200",
+        "AcceptGift_(O)201",
+        "AcceptGift_(O)610",
+        "AcceptGift_(O)618",
+        "AcceptGift_(O)651",
+        "AcceptGift_(O)614",
+        "AcceptGift_(O)24",
+        "AcceptGift_(O)192",
+        "AcceptGift_(O)18",
+        "AcceptGift_(O)22",
+        "AcceptGift_(O)20",
+        "AcceptGift_(O)78",
+        "AcceptGift_(O)404",
+        "AcceptGift_(O)281",
+        "AcceptGift_(O)257",
+        "AcceptGift_(O)422",
+        "AcceptGift_(O)436",
+        "AcceptGift_(O)438",
+        "AcceptGift_(O)442",
+        "AcceptGift_(O)444",
+        "AcceptGift_(O)349",
+        "AcceptGift_(O)773",
+        "AcceptGift_(O)80",
+        "AcceptGift_(O)72",
+        "AcceptGift_(O)74",
+        "AcceptGift_(O)279",
+        "AcceptGift_(O)373",
+        "AcceptGift_(O)446",
+        "AcceptGift_(O)797",
+        "AcceptGift_(O)346",
+        "AcceptGift_(O)303",
+        "AcceptGift_(O)296",
+        "AcceptGift_(O)396",
+        "AcceptGift_(O)88",
+        "AcceptGift_(O)90",
+        "AcceptGift_(O)2",
+        "AcceptGift_(O)30"
+      ]
+    },
+    {
+      "index": 9,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Hearts:Harvey": "6,7,8,9,10"
+      },
+      "when_label": "Hearts:Harvey=6,7,8,9,10",
+      "priority": "Late",
+      "entry_count": 50,
+      "keys": [
+        "AcceptBirthdayGift_Positive",
+        "AcceptBirthdayGift_Negative",
+        "AcceptBirthdayGift_Loved",
+        "AcceptBirthdayGift_Liked",
+        "AcceptBirthdayGift_Neutral",
+        "AcceptBirthdayGift_Hated",
+        "AcceptGift_(O)StardropTea",
+        "AcceptGift_(O)395",
+        "AcceptGift_(O)432",
+        "AcceptGift_(O)348",
+        "AcceptGift_(O)342",
+        "AcceptGift_(O)237",
+        "AcceptGift_(O)196",
+        "AcceptGift_(O)200",
+        "AcceptGift_(O)201",
+        "AcceptGift_(O)610",
+        "AcceptGift_(O)618",
+        "AcceptGift_(O)651",
+        "AcceptGift_(O)614",
+        "AcceptGift_(O)24",
+        "AcceptGift_(O)192",
+        "AcceptGift_(O)18",
+        "AcceptGift_(O)22",
+        "AcceptGift_(O)20",
+        "AcceptGift_(O)78",
+        "AcceptGift_(O)404",
+        "AcceptGift_(O)281",
+        "AcceptGift_(O)257",
+        "AcceptGift_(O)422",
+        "AcceptGift_(O)436",
+        "AcceptGift_(O)438",
+        "AcceptGift_(O)442",
+        "AcceptGift_(O)444",
+        "AcceptGift_(O)349",
+        "AcceptGift_(O)773",
+        "AcceptGift_(O)80",
+        "AcceptGift_(O)72",
+        "AcceptGift_(O)74",
+        "AcceptGift_(O)279",
+        "AcceptGift_(O)373",
+        "AcceptGift_(O)446",
+        "AcceptGift_(O)797",
+        "AcceptGift_(O)346",
+        "AcceptGift_(O)303",
+        "AcceptGift_(O)296",
+        "AcceptGift_(O)396",
+        "AcceptGift_(O)88",
+        "AcceptGift_(O)90",
+        "AcceptGift_(O)2",
+        "AcceptGift_(O)30"
+      ]
+    },
+    {
+      "index": 10,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Relationship:Harvey": "Married"
+      },
+      "when_label": "Relationship:Harvey=Married",
+      "priority": "Late",
+      "entry_count": 50,
+      "keys": [
+        "AcceptBirthdayGift_Positive",
+        "AcceptBirthdayGift_Negative",
+        "AcceptBirthdayGift_Loved",
+        "AcceptBirthdayGift_Liked",
+        "AcceptBirthdayGift_Neutral",
+        "AcceptBirthdayGift_Hated",
+        "AcceptGift_(O)StardropTea",
+        "AcceptGift_(O)395",
+        "AcceptGift_(O)432",
+        "AcceptGift_(O)348",
+        "AcceptGift_(O)342",
+        "AcceptGift_(O)237",
+        "AcceptGift_(O)196",
+        "AcceptGift_(O)200",
+        "AcceptGift_(O)201",
+        "AcceptGift_(O)610",
+        "AcceptGift_(O)618",
+        "AcceptGift_(O)651",
+        "AcceptGift_(O)614",
+        "AcceptGift_(O)24",
+        "AcceptGift_(O)192",
+        "AcceptGift_(O)18",
+        "AcceptGift_(O)22",
+        "AcceptGift_(O)20",
+        "AcceptGift_(O)78",
+        "AcceptGift_(O)404",
+        "AcceptGift_(O)281",
+        "AcceptGift_(O)257",
+        "AcceptGift_(O)422",
+        "AcceptGift_(O)436",
+        "AcceptGift_(O)438",
+        "AcceptGift_(O)442",
+        "AcceptGift_(O)444",
+        "AcceptGift_(O)349",
+        "AcceptGift_(O)773",
+        "AcceptGift_(O)80",
+        "AcceptGift_(O)72",
+        "AcceptGift_(O)74",
+        "AcceptGift_(O)279",
+        "AcceptGift_(O)373",
+        "AcceptGift_(O)446",
+        "AcceptGift_(O)797",
+        "AcceptGift_(O)346",
+        "AcceptGift_(O)303",
+        "AcceptGift_(O)296",
+        "AcceptGift_(O)396",
+        "AcceptGift_(O)88",
+        "AcceptGift_(O)90",
+        "AcceptGift_(O)2",
+        "AcceptGift_(O)30"
+      ]
+    },
+    {
+      "index": 11,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Relationship:Harvey": "Dating"
+      },
+      "when_label": "Relationship:Harvey=Dating",
+      "priority": "Late",
+      "entry_count": 182,
+      "keys": [
+        "AcceptBirthdayGift_Positive",
+        "AcceptBirthdayGift_Negative",
+        "AcceptBirthdayGift_Loved",
+        "AcceptBirthdayGift_Liked",
+        "AcceptBirthdayGift_Neutral",
+        "AcceptBirthdayGift_Hated",
+        "AcceptGift_(O)StardropTea",
+        "AcceptGift_(O)395",
+        "AcceptGift_(O)432",
+        "AcceptGift_(O)348",
+        "AcceptGift_(O)342",
+        "AcceptGift_(O)237",
+        "AcceptGift_(O)196",
+        "AcceptGift_(O)200",
+        "AcceptGift_(O)201",
+        "AcceptGift_(O)610",
+        "AcceptGift_(O)618",
+        "AcceptGift_(O)651",
+        "AcceptGift_(O)614",
+        "AcceptGift_(O)24",
+        "AcceptGift_(O)192",
+        "AcceptGift_(O)18",
+        "AcceptGift_(O)22",
+        "AcceptGift_(O)20",
+        "AcceptGift_(O)78",
+        "AcceptGift_(O)404",
+        "AcceptGift_(O)281",
+        "AcceptGift_(O)257",
+        "AcceptGift_(O)422",
+        "AcceptGift_(O)436",
+        "AcceptGift_(O)438",
+        "AcceptGift_(O)442",
+        "AcceptGift_(O)444",
+        "AcceptGift_(O)349",
+        "AcceptGift_(O)773",
+        "AcceptGift_(O)80",
+        "AcceptGift_(O)72",
+        "AcceptGift_(O)74",
+        "AcceptGift_(O)279",
+        "AcceptGift_(O)373",
+        "AcceptGift_(O)446",
+        "AcceptGift_(O)797",
+        "AcceptGift_(O)346",
+        "AcceptGift_(O)303",
+        "AcceptGift_(O)296",
+        "AcceptGift_(O)396",
+        "AcceptGift_(O)88",
+        "AcceptGift_(O)90",
+        "AcceptGift_(O)2",
+        "AcceptGift_(O)30",
+        "timeReaction_Late",
+        "timeReaction_VeryLate",
+        "timeReaction_Early",
+        "locationReaction_Mine",
+        "locationReaction_SkullCave",
+        "emotionalReaction_Crying",
+        "emotionalReaction_Scared",
+        "situationReaction_Drunk",
+        "situationReaction_Exhausted",
+        "situationReaction_Injured",
+        "summer_9",
+        "winter_30",
+        "spring_14",
+        "GreenRain",
+        "GreenRain_2",
+        "Resort_Entering",
+        "Resort_Leaving",
+        "Resort_Shore",
+        "Resort_Chair",
+        "Resort_Bar",
+        "Resort",
+        "FlowerDance_Accept",
+        "Saloon8",
+        "Saloon10",
+        "Hospital8",
+        "Hospital10",
+        "Desert8",
+        "Desert10",
+        "HarveyRoom8",
+        "HarveyRoom10",
+        "ArchaeologyHouse8",
+        "ArchaeologyHouse10",
+        "Beach8",
+        "Beach10",
+        "Hospital_Mon",
+        "Hospital_Tue",
+        "Hospital_Wed",
+        "Hospital_Thu",
+        "Hospital_Fri",
+        "Hospital_Sat",
+        "Hospital_Sun",
+        "Mon8",
+        "Tue8",
+        "Wed8",
+        "Thu8",
+        "Fri8",
+        "Sat8",
+        "Sun8",
+        "Mon10",
+        "Tue10",
+        "Wed10",
+        "Thu10",
+        "Fri10",
+        "Sat10",
+        "Sun10",
+        "spring_Mon",
+        "spring_Tue",
+        "spring_Wed",
+        "spring_Thu",
+        "spring_Fri",
+        "spring_Sat",
+        "spring_Sun",
+        "summer_Mon",
+        "summer_Tue",
+        "summer_Wed",
+        "summer_Thu",
+        "summer_Fri",
+        "summer_Sat",
+        "summer_Sun",
+        "fall_Mon",
+        "fall_Tue",
+        "fall_Wed",
+        "fall_Thu",
+        "fall_Fri",
+        "fall_Sat",
+        "fall_Sun",
+        "winter_Mon",
+        "winter_Tue",
+        "winter_Wed",
+        "winter_Thu",
+        "winter_Fri",
+        "winter_Sat",
+        "winter_Sun",
+        "spring_12",
+        "spring_15",
+        "spring_16",
+        "spring_23",
+        "summer_10",
+        "summer_19",
+        "summer_20",
+        "summer_27",
+        "fall_15",
+        "fall_26",
+        "winter_7",
+        "winter_11",
+        "winter_12",
+        "winter_14",
+        "winter_15",
+        "winter_16",
+        "winter_24",
+        "spring_13",
+        "summer_11",
+        "fall_16",
+        "winter_8",
+        "topicHarveyBadDay_Silent",
+        "topicHarveyBadDay_Water",
+        "topicHarveyBadDay_NoQuestions",
+        "topicHarveyTrust_FullExam",
+        "topicHarveyTrust_SmallExam",
+        "topicHarveyTrust_JustSit",
+        "topicHarveyTrust_LeftClinic",
+        "topicHarveyApologyAccepted",
+        "topicHarveyQuietFiveMinutes",
+        "topicHarveyNeedsSpace",
+        "topicHarveySafetyKit_Door",
+        "topicHarveySafetyKit_Bed",
+        "topicHarveySafetyKit_Kitchen",
+        "topicHarveySafetyKit_NoKit",
+        "topicHarveyWasCaredFor",
+        "topicHarveyDate_Kiss",
+        "topicHarveyDate_NotYet",
+        "topicHarveyDate_Hug",
+        "topicHarveyDate_SitLonger",
+        "topicHarveyMines_ReturnTime",
+        "topicHarveyMines_Supplies",
+        "topicHarveyMines_Note",
+        "topicHarveyMines_CallMe",
+        "topicHarveyNotOnlyPatient",
+        "topicHarveyFuturePlan",
+        "topicHarveyFuturePlan_CheckIn",
+        "topicHarveyFuturePlan_StillLearning",
+        "topicHarveyFuturePlan_TeaSignal"
+      ]
+    },
+    {
+      "index": 12,
+      "target": "Characters/Dialogue/MarriageDialogueHarvey",
+      "when": {
+        "Relationship:Harvey": "Married"
+      },
+      "when_label": "Relationship:Harvey=Married",
+      "priority": "Late",
+      "entry_count": 113,
+      "keys": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Sat",
+        "Resort_Entering",
+        "Resort_Bar",
+        "Resort_Shore",
+        "FlowerDance_Decline",
+        "topicHarveyFuturePlan",
+        "topicHarveyFuturePlan_CheckIn",
+        "topicHarveyFuturePlan_StillLearning",
+        "topicHarveyFuturePlan_TeaSignal",
+        "Mountain_10_20",
+        "Mountain_15_25",
+        "Town_15_30",
+        "Town_20_35",
+        "Beach_5_12",
+        "Beach_10_15",
+        "Farm_30_40",
+        "Farm_25_38",
+        "Forest_8_18",
+        "Forest_12_22",
+        "Mine_5_5",
+        "Mine_10_10",
+        "Hospital_20_15",
+        "Hospital_18_12",
+        "Store_15_10",
+        "Store_12_8",
+        "Lake_7_22",
+        "Lake_10_25",
+        "Hospital_Mon",
+        "Saloon_Fri",
+        "Farm2",
+        "Town4",
+        "Farm6",
+        "Town8",
+        "Farm10",
+        "Town10",
+        "Island_Resort",
+        "Island_Resort_10_15",
+        "Island_Resort_Fri",
+        "Rainy_Day_0",
+        "Rainy_Day_1",
+        "Rainy_Day_2",
+        "Rainy_Day_3",
+        "Rainy_Day_4",
+        "Rainy_Night_0",
+        "Rainy_Night_1",
+        "Rainy_Night_2",
+        "Rainy_Night_3",
+        "Rainy_Night_4",
+        "Indoor_Day_0",
+        "Indoor_Day_1",
+        "Indoor_Day_2",
+        "Indoor_Day_3",
+        "Indoor_Day_4",
+        "Indoor_Night_0",
+        "Indoor_Night_1",
+        "Indoor_Night_2",
+        "Indoor_Night_3",
+        "Indoor_Night_4",
+        "patio_Harvey",
+        "Outdoor_0",
+        "Outdoor_1",
+        "Outdoor_2",
+        "Outdoor_3",
+        "Outdoor_4",
+        "OneKid_0",
+        "OneKid_1",
+        "OneKid_3",
+        "TwoKids_0",
+        "TwoKids_1",
+        "TwoKids_2",
+        "TwoKids_3",
+        "Good_0",
+        "Good_1",
+        "Good_2",
+        "Good_3",
+        "Good_6",
+        "funLeave_Harvey",
+        "funReturn_Harvey",
+        "spring_12",
+        "spring_14",
+        "spring_15",
+        "spring_16",
+        "spring_23",
+        "summer_10",
+        "summer_19",
+        "summer_20",
+        "summer_27",
+        "fall_15",
+        "fall_26",
+        "winter_7",
+        "winter_11",
+        "winter_12",
+        "winter_14",
+        "winter_15",
+        "winter_16",
+        "winter_24",
+        "spring_1",
+        "summer_1",
+        "fall_1",
+        "winter_1",
+        "winter_28",
+        "funLeave",
+        "jobLeave",
+        "funReturn",
+        "jobReturn",
+        "Outdoor2",
+        "spouseRoom",
+        "Good_5",
+        "Neutral_2",
+        "Bad_0"
+      ]
+    },
+    {
+      "index": 13,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyTraumaReveal",
+        "Hearts:Harvey": "0,1,2"
+      },
+      "when_label": "HasConversationTopic=topicHarveyTraumaReveal, Hearts:Harvey=0,1,2",
+      "priority": "Late",
+      "entry_count": 4,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun"
+      ]
+    },
+    {
+      "index": 14,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyTraumaReveal",
+        "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+      },
+      "when_label": "HasConversationTopic=topicHarveyTraumaReveal, Hearts:Harvey=3,4,5,6,7,8,9,10",
+      "priority": "Late",
+      "entry_count": 4,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun"
+      ]
+    },
+    {
+      "index": 15,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyTraumaReveal",
+        "Relationship:Harvey": "Dating"
+      },
+      "when_label": "HasConversationTopic=topicHarveyTraumaReveal, Relationship:Harvey=Dating",
+      "priority": "Late",
+      "entry_count": 4,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun"
+      ]
+    },
+    {
+      "index": 16,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyTraumaReveal",
+        "Relationship:Harvey": "Married"
+      },
+      "when_label": "HasConversationTopic=topicHarveyTraumaReveal, Relationship:Harvey=Married",
+      "priority": "Late",
+      "entry_count": 4,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun"
+      ]
+    },
+    {
+      "index": 17,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicFirstMeeting",
+        "Hearts:Harvey": "0,1,2"
+      },
+      "when_label": "HasConversationTopic=topicFirstMeeting, Hearts:Harvey=0,1,2",
+      "priority": "Late",
+      "entry_count": 8,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun",
+        "Town",
+        "Saloon",
+        "Beach",
+        "ArchaeologyHouse"
+      ]
+    },
+    {
+      "index": 18,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicFirstMeeting",
+        "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+      },
+      "when_label": "HasConversationTopic=topicFirstMeeting, Hearts:Harvey=3,4,5,6,7,8,9,10",
+      "priority": "Late",
+      "entry_count": 8,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun",
+        "Town",
+        "Saloon",
+        "Beach",
+        "ArchaeologyHouse"
+      ]
+    },
+    {
+      "index": 19,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicFirstMeeting",
+        "Relationship:Harvey": "Dating"
+      },
+      "when_label": "HasConversationTopic=topicFirstMeeting, Relationship:Harvey=Dating",
+      "priority": "Late",
+      "entry_count": 8,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun",
+        "Town",
+        "Saloon",
+        "Beach",
+        "ArchaeologyHouse"
+      ]
+    },
+    {
+      "index": 20,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicFirstMeeting",
+        "Relationship:Harvey": "Married"
+      },
+      "when_label": "HasConversationTopic=topicFirstMeeting, Relationship:Harvey=Married",
+      "priority": "Late",
+      "entry_count": 8,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun",
+        "Town",
+        "Saloon",
+        "Beach",
+        "ArchaeologyHouse"
+      ]
+    },
+    {
+      "index": 21,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyWalkGood",
+        "Hearts:Harvey": "0,1,2"
+      },
+      "when_label": "HasConversationTopic=topicHarveyWalkGood, Hearts:Harvey=0,1,2",
+      "priority": "Late",
+      "entry_count": 4,
+      "keys": [
+        "eventSeen_eventHarveyFirstWalk_oneday",
+        "eventSeen_eventHarveyFirstWalk_oneweek",
+        "eventSeen_eventHarveyFirstWalk_twoweek",
+        "eventSeen_eventHarveyFirstWalk_fourweeks"
+      ]
+    },
+    {
+      "index": 22,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyWalkGood",
+        "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+      },
+      "when_label": "HasConversationTopic=topicHarveyWalkGood, Hearts:Harvey=3,4,5,6,7,8,9,10",
+      "priority": "Late",
+      "entry_count": 4,
+      "keys": [
+        "eventSeen_eventHarveyFirstWalk_oneday",
+        "eventSeen_eventHarveyFirstWalk_oneweek",
+        "eventSeen_eventHarveyFirstWalk_twoweek",
+        "eventSeen_eventHarveyFirstWalk_fourweeks"
+      ]
+    },
+    {
+      "index": 23,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyWalkGood",
+        "Relationship:Harvey": "Dating"
+      },
+      "when_label": "HasConversationTopic=topicHarveyWalkGood, Relationship:Harvey=Dating",
+      "priority": "Late",
+      "entry_count": 4,
+      "keys": [
+        "eventSeen_eventHarveyFirstWalk_oneday",
+        "eventSeen_eventHarveyFirstWalk_oneweek",
+        "eventSeen_eventHarveyFirstWalk_twoweek",
+        "eventSeen_eventHarveyFirstWalk_fourweeks"
+      ]
+    },
+    {
+      "index": 24,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyWalkGood",
+        "Relationship:Harvey": "Married"
+      },
+      "when_label": "HasConversationTopic=topicHarveyWalkGood, Relationship:Harvey=Married",
+      "priority": "Late",
+      "entry_count": 4,
+      "keys": [
+        "eventSeen_eventHarveyFirstWalk_oneday",
+        "eventSeen_eventHarveyFirstWalk_oneweek",
+        "eventSeen_eventHarveyFirstWalk_twoweek",
+        "eventSeen_eventHarveyFirstWalk_fourweeks"
+      ]
+    },
+    {
+      "index": 25,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyExhaustion",
+        "Hearts:Harvey": "0,1,2"
+      },
+      "when_label": "HasConversationTopic=topicHarveyExhaustion, Hearts:Harvey=0,1,2",
+      "priority": "Late",
+      "entry_count": 8,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun",
+        "Town",
+        "Saloon",
+        "Beach",
+        "Mountain"
+      ]
+    },
+    {
+      "index": 26,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyExhaustion",
+        "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+      },
+      "when_label": "HasConversationTopic=topicHarveyExhaustion, Hearts:Harvey=3,4,5,6,7,8,9,10",
+      "priority": "Late",
+      "entry_count": 8,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun",
+        "Town",
+        "Saloon",
+        "Beach",
+        "Mountain"
+      ]
+    },
+    {
+      "index": 27,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyExhaustion",
+        "Relationship:Harvey": "Dating"
+      },
+      "when_label": "HasConversationTopic=topicHarveyExhaustion, Relationship:Harvey=Dating",
+      "priority": "Late",
+      "entry_count": 8,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun",
+        "Town",
+        "Saloon",
+        "Beach",
+        "Mountain"
+      ]
+    },
+    {
+      "index": 28,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "HasConversationTopic": "topicHarveyExhaustion",
+        "Relationship:Harvey": "Married"
+      },
+      "when_label": "HasConversationTopic=topicHarveyExhaustion, Relationship:Harvey=Married",
+      "priority": "Late",
+      "entry_count": 8,
+      "keys": [
+        "Hospital_Mon",
+        "Hospital_Wed",
+        "Hospital_Fri",
+        "Hospital_Sun",
+        "Town",
+        "Saloon",
+        "Beach",
+        "Mountain"
+      ]
+    },
+    {
+      "index": 29,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Relationship:Harvey": "Married",
+        "Weather": "Storm"
+      },
+      "when_label": "Relationship:Harvey=Married, Weather=Storm",
+      "priority": "Late",
+      "entry_count": 10,
+      "keys": [
+        "Rainy_Day_0",
+        "Rainy_Day_1",
+        "Rainy_Day_2",
+        "Rainy_Day_3",
+        "Rainy_Day_4",
+        "Rainy_Night_0",
+        "Rainy_Night_1",
+        "Rainy_Night_2",
+        "Rainy_Night_3",
+        "Rainy_Night_4"
+      ]
+    },
+    {
+      "index": 30,
+      "target": "Characters/Dialogue/Harvey",
+      "when": {
+        "Relationship:Harvey": "Married",
+        "LocationName": "FarmHouse"
+      },
+      "when_label": "Relationship:Harvey=Married, LocationName=FarmHouse",
+      "priority": "Late",
+      "entry_count": 110,
+      "keys": [
+        "spring_1",
+        "spring_2",
+        "spring_3",
+        "spring_4",
+        "spring_5",
+        "spring_6",
+        "spring_7",
+        "spring_8",
+        "spring_9",
+        "spring_10",
+        "spring_11",
+        "spring_12",
+        "spring_13",
+        "spring_14",
+        "spring_15",
+        "spring_16",
+        "spring_17",
+        "spring_18",
+        "spring_19",
+        "spring_20",
+        "spring_21",
+        "spring_22",
+        "spring_23",
+        "spring_24",
+        "spring_25",
+        "spring_26",
+        "spring_27",
+        "spring_28",
+        "summer_1",
+        "summer_2",
+        "summer_3",
+        "summer_4",
+        "summer_5",
+        "summer_6",
+        "summer_7",
+        "summer_8",
+        "summer_10",
+        "summer_11",
+        "summer_12",
+        "summer_13",
+        "summer_14",
+        "summer_15",
+        "summer_16",
+        "summer_17",
+        "summer_18",
+        "summer_19",
+        "summer_20",
+        "summer_21",
+        "summer_22",
+        "summer_23",
+        "summer_24",
+        "summer_25",
+        "summer_26",
+        "summer_27",
+        "summer_28",
+        "fall_1",
+        "fall_2",
+        "fall_3",
+        "fall_4",
+        "fall_5",
+        "fall_6",
+        "fall_7",
+        "fall_8",
+        "fall_9",
+        "fall_10",
+        "fall_11",
+        "fall_12",
+        "fall_13",
+        "fall_14",
+        "fall_15",
+        "fall_16",
+        "fall_17",
+        "fall_18",
+        "fall_19",
+        "fall_20",
+        "fall_21",
+        "fall_22",
+        "fall_23",
+        "fall_24",
+        "fall_25",
+        "fall_26",
+        "fall_27",
+        "fall_28",
+        "winter_1",
+        "winter_2",
+        "winter_3",
+        "winter_4",
+        "winter_5",
+        "winter_6",
+        "winter_7",
+        "winter_8",
+        "winter_9",
+        "winter_10",
+        "winter_11",
+        "winter_12",
+        "winter_13",
+        "winter_15",
+        "winter_16",
+        "winter_17",
+        "winter_18",
+        "winter_19",
+        "winter_20",
+        "winter_21",
+        "winter_22",
+        "winter_23",
+        "winter_24",
+        "winter_25",
+        "winter_26",
+        "winter_27",
+        "winter_28"
+      ]
+    },
+    {
+      "index": 31,
+      "target": "Characters/Dialogue/Harvey",
+      "when": null,
+      "when_label": "(нет When)",
+      "priority": "Late",
+      "entry_count": 6,
+      "keys": [
+        "topicHarveyFirstVisitAgree",
+        "topicHarveyFirstVisitNeutral",
+        "topicHarveyFirstVisitRefused",
+        "topicHarveySecondVisitAgree",
+        "topicHarveySecondVisitNeutral",
+        "topicHarveySecondVisitRefused"
+      ]
+    }
+  ],
+  "duplicates_count": 210,
+  "duplicates": {
+    "AcceptBirthdayGift_Hated": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptBirthdayGift_Liked": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptBirthdayGift_Loved": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptBirthdayGift_Negative": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptBirthdayGift_Neutral": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptBirthdayGift_Positive": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)18": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)192": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)196": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)2": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)20": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)200": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)201": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)22": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)237": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)24": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)257": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)279": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)281": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)296": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)30": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)303": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)342": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)346": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)348": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)349": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)373": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)395": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)396": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)404": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)422": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)432": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)436": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)438": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)442": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)444": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)446": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)610": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)614": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)618": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)651": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)72": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)74": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)773": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)78": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)797": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)80": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)88": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)90": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "AcceptGift_(O)StardropTea": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ArchaeologyHouse": [
+      4,
+      17,
+      18,
+      19,
+      20
+    ],
+    "ArchaeologyHouse10": [
+      6,
+      11
+    ],
+    "ArchaeologyHouse8": [
+      6,
+      11
+    ],
+    "Beach": [
+      4,
+      17,
+      18,
+      19,
+      20,
+      25,
+      26,
+      27,
+      28
+    ],
+    "Beach10": [
+      6,
+      11
+    ],
+    "Beach8": [
+      6,
+      11
+    ],
+    "Desert10": [
+      6,
+      11
+    ],
+    "Desert8": [
+      6,
+      11
+    ],
+    "FlowerDance_Accept": [
+      5,
+      6,
+      11
+    ],
+    "FlowerDance_Decline": [
+      3,
+      12
+    ],
+    "Fri10": [
+      6,
+      11
+    ],
+    "Fri8": [
+      6,
+      11
+    ],
+    "GreenRain": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "GreenRain_2": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "HarveyRoom10": [
+      6,
+      11
+    ],
+    "HarveyRoom8": [
+      6,
+      11
+    ],
+    "Hospital10": [
+      6,
+      11
+    ],
+    "Hospital8": [
+      6,
+      11
+    ],
+    "Hospital_Fri": [
+      4,
+      5,
+      6,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      25,
+      26,
+      27,
+      28
+    ],
+    "Hospital_Mon": [
+      4,
+      5,
+      6,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      25,
+      26,
+      27,
+      28
+    ],
+    "Hospital_Sat": [
+      4,
+      5,
+      6,
+      11
+    ],
+    "Hospital_Sun": [
+      4,
+      5,
+      6,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      25,
+      26,
+      27,
+      28
+    ],
+    "Hospital_Thu": [
+      4,
+      5,
+      6,
+      11
+    ],
+    "Hospital_Tue": [
+      4,
+      5,
+      6,
+      11
+    ],
+    "Hospital_Wed": [
+      4,
+      5,
+      6,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      25,
+      26,
+      27,
+      28
+    ],
+    "Mon": [
+      3,
+      12
+    ],
+    "Mon10": [
+      6,
+      11
+    ],
+    "Mon8": [
+      6,
+      11
+    ],
+    "Mountain": [
+      25,
+      26,
+      27,
+      28
+    ],
+    "Rainy_Day_0": [
+      12,
+      29
+    ],
+    "Rainy_Day_1": [
+      12,
+      29
+    ],
+    "Rainy_Day_2": [
+      12,
+      29
+    ],
+    "Rainy_Day_3": [
+      12,
+      29
+    ],
+    "Rainy_Day_4": [
+      12,
+      29
+    ],
+    "Rainy_Night_0": [
+      12,
+      29
+    ],
+    "Rainy_Night_1": [
+      12,
+      29
+    ],
+    "Rainy_Night_2": [
+      12,
+      29
+    ],
+    "Rainy_Night_3": [
+      12,
+      29
+    ],
+    "Rainy_Night_4": [
+      12,
+      29
+    ],
+    "Resort": [
+      5,
+      6,
+      11
+    ],
+    "Resort_Bar": [
+      5,
+      6,
+      11,
+      12
+    ],
+    "Resort_Chair": [
+      5,
+      6,
+      11
+    ],
+    "Resort_Entering": [
+      5,
+      6,
+      11,
+      12
+    ],
+    "Resort_Leaving": [
+      5,
+      6,
+      11
+    ],
+    "Resort_Shore": [
+      5,
+      6,
+      11,
+      12
+    ],
+    "Saloon": [
+      4,
+      17,
+      18,
+      19,
+      20,
+      25,
+      26,
+      27,
+      28
+    ],
+    "Saloon10": [
+      6,
+      11
+    ],
+    "Saloon8": [
+      6,
+      11
+    ],
+    "Sat": [
+      3,
+      12
+    ],
+    "Sat10": [
+      6,
+      11
+    ],
+    "Sat8": [
+      6,
+      11
+    ],
+    "Sun10": [
+      6,
+      11
+    ],
+    "Sun8": [
+      6,
+      11
+    ],
+    "Thu10": [
+      6,
+      11
+    ],
+    "Thu8": [
+      6,
+      11
+    ],
+    "Town": [
+      17,
+      18,
+      19,
+      20,
+      25,
+      26,
+      27,
+      28
+    ],
+    "Tue": [
+      3,
+      12
+    ],
+    "Tue10": [
+      6,
+      11
+    ],
+    "Tue8": [
+      6,
+      11
+    ],
+    "Wed": [
+      3,
+      12
+    ],
+    "Wed10": [
+      6,
+      11
+    ],
+    "Wed8": [
+      6,
+      11
+    ],
+    "emotionalReaction_Crying": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "emotionalReaction_Scared": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "eventSeen_eventHarveyFirstWalk_fourweeks": [
+      21,
+      22,
+      23,
+      24
+    ],
+    "eventSeen_eventHarveyFirstWalk_oneday": [
+      21,
+      22,
+      23,
+      24
+    ],
+    "eventSeen_eventHarveyFirstWalk_oneweek": [
+      21,
+      22,
+      23,
+      24
+    ],
+    "eventSeen_eventHarveyFirstWalk_twoweek": [
+      21,
+      22,
+      23,
+      24
+    ],
+    "fall_1": [
+      12,
+      30
+    ],
+    "fall_15": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "fall_16": [
+      6,
+      11,
+      30
+    ],
+    "fall_26": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "fall_Fri": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "fall_Mon": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "fall_Sat": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "fall_Sun": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "fall_Thu": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "fall_Tue": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "fall_Wed": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "locationReaction_Mine": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "locationReaction_SkullCave": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "situationReaction_Drunk": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "situationReaction_Exhausted": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "situationReaction_Injured": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "spring_1": [
+      12,
+      30
+    ],
+    "spring_12": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "spring_13": [
+      6,
+      11,
+      30
+    ],
+    "spring_14": [
+      3,
+      5,
+      6,
+      11,
+      12,
+      30
+    ],
+    "spring_15": [
+      5,
+      11,
+      12,
+      30
+    ],
+    "spring_16": [
+      5,
+      11,
+      12,
+      30
+    ],
+    "spring_23": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "spring_Fri": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "spring_Mon": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "spring_Sat": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "spring_Sun": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "spring_Thu": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "spring_Tue": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "spring_Wed": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "summer_1": [
+      12,
+      30
+    ],
+    "summer_10": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "summer_11": [
+      6,
+      11,
+      30
+    ],
+    "summer_19": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "summer_20": [
+      11,
+      12,
+      30
+    ],
+    "summer_27": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "summer_9": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "summer_Fri": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "summer_Mon": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "summer_Sat": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "summer_Sun": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "summer_Thu": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "summer_Tue": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "summer_Wed": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "timeReaction_Early": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "timeReaction_Late": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "timeReaction_VeryLate": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "topicHarveyApologyAccepted": [
+      3,
+      11
+    ],
+    "topicHarveyBadDay_NoQuestions": [
+      3,
+      11
+    ],
+    "topicHarveyBadDay_Silent": [
+      3,
+      11
+    ],
+    "topicHarveyBadDay_Water": [
+      3,
+      11
+    ],
+    "topicHarveyFirstVisitAgree": [
+      3,
+      31
+    ],
+    "topicHarveyFirstVisitNeutral": [
+      3,
+      31
+    ],
+    "topicHarveyFirstVisitRefused": [
+      3,
+      31
+    ],
+    "topicHarveyFuturePlan": [
+      11,
+      12
+    ],
+    "topicHarveyFuturePlan_CheckIn": [
+      11,
+      12
+    ],
+    "topicHarveyFuturePlan_StillLearning": [
+      11,
+      12
+    ],
+    "topicHarveyFuturePlan_TeaSignal": [
+      11,
+      12
+    ],
+    "topicHarveyMines_CallMe": [
+      3,
+      11
+    ],
+    "topicHarveyMines_Note": [
+      3,
+      11
+    ],
+    "topicHarveyMines_ReturnTime": [
+      3,
+      11
+    ],
+    "topicHarveyMines_Supplies": [
+      3,
+      11
+    ],
+    "topicHarveyNeedsSpace": [
+      3,
+      11
+    ],
+    "topicHarveyQuietFiveMinutes": [
+      3,
+      11
+    ],
+    "topicHarveySafetyKit_Bed": [
+      3,
+      11
+    ],
+    "topicHarveySafetyKit_Door": [
+      3,
+      11
+    ],
+    "topicHarveySafetyKit_Kitchen": [
+      3,
+      11
+    ],
+    "topicHarveySafetyKit_NoKit": [
+      3,
+      11
+    ],
+    "topicHarveyTrust_FullExam": [
+      3,
+      11
+    ],
+    "topicHarveyTrust_JustSit": [
+      3,
+      11
+    ],
+    "topicHarveyTrust_LeftClinic": [
+      3,
+      11
+    ],
+    "topicHarveyTrust_SmallExam": [
+      3,
+      11
+    ],
+    "topicHarveyWasCaredFor": [
+      3,
+      11
+    ],
+    "topicHarvey_ForcedHospitalization": [
+      3,
+      4
+    ],
+    "winter_1": [
+      12,
+      30
+    ],
+    "winter_11": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "winter_12": [
+      5,
+      11,
+      12,
+      30
+    ],
+    "winter_14": [
+      3,
+      5,
+      11,
+      12
+    ],
+    "winter_15": [
+      5,
+      11,
+      12,
+      30
+    ],
+    "winter_16": [
+      5,
+      11,
+      12,
+      30
+    ],
+    "winter_24": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "winter_28": [
+      12,
+      30
+    ],
+    "winter_30": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "winter_7": [
+      3,
+      5,
+      11,
+      12,
+      30
+    ],
+    "winter_8": [
+      6,
+      11,
+      30
+    ],
+    "winter_Fri": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "winter_Mon": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "winter_Sat": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "winter_Sun": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "winter_Thu": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "winter_Tue": [
+      3,
+      5,
+      6,
+      11
+    ],
+    "winter_Wed": [
+      3,
+      5,
+      6,
+      11
+    ]
+  },
+  "pattern_dupes": {
+    "GreenRain": [
+      "GreenRain",
+      "GreenRain_2"
+    ],
+    "other": [
+      "topicHarveyFirstVisitAgree",
+      "topicHarveyFirstVisitRefused",
+      "topicHarveyFirstVisitNeutral",
+      "topicHarvey_ForcedHospitalization",
+      "topicHarveyBadDay_Silent",
+      "topicHarveyBadDay_Water",
+      "topicHarveyBadDay_NoQuestions",
+      "topicHarveyTrust_FullExam",
+      "topicHarveyTrust_SmallExam",
+      "topicHarveyTrust_JustSit",
+      "topicHarveyTrust_LeftClinic",
+      "topicHarveyApologyAccepted",
+      "topicHarveyQuietFiveMinutes",
+      "topicHarveyNeedsSpace",
+      "topicHarveySafetyKit_Door",
+      "topicHarveySafetyKit_Bed",
+      "topicHarveySafetyKit_Kitchen",
+      "topicHarveySafetyKit_NoKit",
+      "topicHarveyWasCaredFor",
+      "topicHarveyMines_ReturnTime",
+      "topicHarveyMines_Supplies",
+      "topicHarveyMines_Note",
+      "topicHarveyMines_CallMe",
+      "FlowerDance_Decline",
+      "spring_12",
+      "spring_14",
+      "spring_23",
+      "summer_10",
+      "summer_19",
+      "summer_27",
+      "fall_15",
+      "fall_26",
+      "winter_7",
+      "winter_11",
+      "winter_14",
+      "winter_24",
+      "spring_Mon",
+      "spring_Tue",
+      "spring_Wed",
+      "spring_Thu",
+      "spring_Fri",
+      "spring_Sat",
+      "spring_Sun",
+      "summer_Mon",
+      "summer_Tue",
+      "summer_Wed",
+      "summer_Thu",
+      "summer_Fri",
+      "summer_Sat",
+      "summer_Sun",
+      "fall_Mon",
+      "fall_Tue",
+      "fall_Wed",
+      "fall_Thu",
+      "fall_Fri",
+      "fall_Sat",
+      "fall_Sun",
+      "winter_Mon",
+      "winter_Tue",
+      "winter_Wed",
+      "winter_Thu",
+      "winter_Fri",
+      "winter_Sat",
+      "winter_Sun",
+      "summer_9",
+      "winter_30",
+      "Saloon",
+      "ArchaeologyHouse",
+      "Beach",
+      "FlowerDance_Accept",
+      "spring_15",
+      "spring_16",
+      "winter_12",
+      "winter_15",
+      "winter_16",
+      "Saloon8",
+      "Saloon10",
+      "Hospital8",
+      "Hospital10",
+      "Desert8",
+      "Desert10",
+      "HarveyRoom8",
+      "HarveyRoom10",
+      "ArchaeologyHouse8",
+      "ArchaeologyHouse10",
+      "Beach8",
+      "Beach10",
+      "spring_13",
+      "summer_11",
+      "fall_16",
+      "winter_8",
+      "summer_20",
+      "topicHarveyFuturePlan",
+      "topicHarveyFuturePlan_CheckIn",
+      "topicHarveyFuturePlan_StillLearning",
+      "topicHarveyFuturePlan_TeaSignal",
+      "Rainy_Day_0",
+      "Rainy_Day_1",
+      "Rainy_Day_2",
+      "Rainy_Day_3",
+      "Rainy_Day_4",
+      "Rainy_Night_0",
+      "Rainy_Night_1",
+      "Rainy_Night_2",
+      "Rainy_Night_3",
+      "Rainy_Night_4",
+      "spring_1",
+      "summer_1",
+      "fall_1",
+      "winter_1",
+      "winter_28",
+      "Town",
+      "eventSeen_eventHarveyFirstWalk_oneday",
+      "eventSeen_eventHarveyFirstWalk_oneweek",
+      "eventSeen_eventHarveyFirstWalk_twoweek",
+      "eventSeen_eventHarveyFirstWalk_fourweeks",
+      "Mountain"
+    ],
+    "Mon/Tue/.../Sun": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Sat"
+    ],
+    "timeReaction_*": [
+      "timeReaction_Late",
+      "timeReaction_VeryLate",
+      "timeReaction_Early"
+    ],
+    "locationReaction_*": [
+      "locationReaction_Mine",
+      "locationReaction_SkullCave"
+    ],
+    "emotionalReaction_*": [
+      "emotionalReaction_Crying",
+      "emotionalReaction_Scared"
+    ],
+    "situationReaction_*": [
+      "situationReaction_Drunk",
+      "situationReaction_Exhausted",
+      "situationReaction_Injured"
+    ],
+    "Hospital_Mon..Sun": [
+      "Hospital_Mon",
+      "Hospital_Tue",
+      "Hospital_Wed",
+      "Hospital_Thu",
+      "Hospital_Fri",
+      "Hospital_Sat",
+      "Hospital_Sun"
+    ],
+    "Resort_*": [
+      "Resort_Entering",
+      "Resort_Leaving",
+      "Resort_Shore",
+      "Resort_Chair",
+      "Resort_Bar",
+      "Resort"
+    ],
+    "Mon8/Tue8...": [
+      "Mon8",
+      "Tue8",
+      "Wed8",
+      "Thu8",
+      "Fri8",
+      "Sat8",
+      "Sun8"
+    ],
+    "Mon10/Tue10...": [
+      "Mon10",
+      "Tue10",
+      "Wed10",
+      "Thu10",
+      "Fri10",
+      "Sat10",
+      "Sun10"
+    ],
+    "AcceptGift_*": [
+      "AcceptBirthdayGift_Positive",
+      "AcceptBirthdayGift_Negative",
+      "AcceptBirthdayGift_Loved",
+      "AcceptBirthdayGift_Liked",
+      "AcceptBirthdayGift_Neutral",
+      "AcceptBirthdayGift_Hated",
+      "AcceptGift_(O)StardropTea",
+      "AcceptGift_(O)395",
+      "AcceptGift_(O)432",
+      "AcceptGift_(O)348",
+      "AcceptGift_(O)342",
+      "AcceptGift_(O)237",
+      "AcceptGift_(O)196",
+      "AcceptGift_(O)200",
+      "AcceptGift_(O)201",
+      "AcceptGift_(O)610",
+      "AcceptGift_(O)618",
+      "AcceptGift_(O)651",
+      "AcceptGift_(O)614",
+      "AcceptGift_(O)24",
+      "AcceptGift_(O)192",
+      "AcceptGift_(O)18",
+      "AcceptGift_(O)22",
+      "AcceptGift_(O)20",
+      "AcceptGift_(O)78",
+      "AcceptGift_(O)404",
+      "AcceptGift_(O)281",
+      "AcceptGift_(O)257",
+      "AcceptGift_(O)422",
+      "AcceptGift_(O)436",
+      "AcceptGift_(O)438",
+      "AcceptGift_(O)442",
+      "AcceptGift_(O)444",
+      "AcceptGift_(O)349",
+      "AcceptGift_(O)773",
+      "AcceptGift_(O)80",
+      "AcceptGift_(O)72",
+      "AcceptGift_(O)74",
+      "AcceptGift_(O)279",
+      "AcceptGift_(O)373",
+      "AcceptGift_(O)446",
+      "AcceptGift_(O)797",
+      "AcceptGift_(O)346",
+      "AcceptGift_(O)303",
+      "AcceptGift_(O)296",
+      "AcceptGift_(O)396",
+      "AcceptGift_(O)88",
+      "AcceptGift_(O)90",
+      "AcceptGift_(O)2",
+      "AcceptGift_(O)30"
+    ]
+  },
+  "mixed_vy_ty": [
+    {
+      "block": 31,
+      "target": "Characters/Dialogue/Harvey",
+      "when": "(нет When)",
+      "key": "topicHarveySecondVisitAgree",
+      "preview": "Вы согласилась на чай — это уже шаг к восстановлению.$h#$b#Я приготовил для Вас особый травяной сбор, чтобы Вы могла рас…"
+    },
+    {
+      "block": 31,
+      "target": "Characters/Dialogue/Harvey",
+      "when": "(нет When)",
+      "key": "topicHarveySecondVisitRefused",
+      "preview": "Я не буду настаивать, если Вы не готовы принять мою заботу.$s#$b#Ваше состояние требует особого уважения, и я это понима…"
+    }
+  ],
+  "problems": {
+    "котёнок": [
+      {
+        "block": 2,
+        "when": "Relationship:Harvey=Married",
+        "key": "marriageJob.000",
+        "target": "strings/schedules/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptBirthdayGift_Positive",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptBirthdayGift_Loved",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptBirthdayGift_Neutral",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptBirthdayGift_Hated",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)StardropTea",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)395",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)432",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)342",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)196",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)201",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)618",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)614",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)192",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)22",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)78",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)281",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)422",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)438",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)349",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)74",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)446",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)303",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)396",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "timeReaction_VeryLate",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Saloon10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Mon10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_20",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_11",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_16",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Mine_5_5",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Store_15_10",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Farm2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Farm10",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Island_Resort_Fri",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Rainy_Day_2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Indoor_Day_2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Indoor_Night_2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Outdoor_4",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "TwoKids_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Good_2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "spring_15",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "summer_10",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "summer_27",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_11",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_16",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "funReturn",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "spouseRoom",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Day_2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Night_1",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_5",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_9",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_12",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_18",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_25",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_7",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "малышка": [
+      {
+        "block": 2,
+        "when": "Relationship:Harvey=Married",
+        "key": "marriage_Mon.001",
+        "target": "strings/schedules/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "timeReaction_Late",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "timeReaction_Early",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "locationReaction_Mine",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "locationReaction_SkullCave",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "emotionalReaction_Crying",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "situationReaction_Exhausted",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_30",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_14",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "GreenRain_2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Resort_Leaving",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "FlowerDance_Accept",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "HarveyRoom8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "ArchaeologyHouse8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Beach10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Tue",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Sun",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Thu8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Thu10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Tue",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Fri",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Tue",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_Sun",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_12",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_19",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_11",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_14",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_11",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Tue",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Resort_Entering",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Mountain_15_25",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Town_20_35",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Beach_10_15",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Farm_25_38",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Forest_12_22",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Hospital_18_12",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Lake_7_22",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Saloon_Fri",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Town8",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Island_Resort",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Rainy_Day_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Rainy_Night_0",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Rainy_Night_4",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Indoor_Day_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Indoor_Day_4",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Indoor_Night_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Indoor_Night_3",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "patio_Harvey",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Outdoor_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Outdoor_3",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "OneKid_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "TwoKids_3",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Good_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "funLeave_Harvey",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "spring_14",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "spring_23",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "summer_19",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "fall_15",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_7",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_14",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_24",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "fall_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "jobLeave",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Good_5",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Bad_0",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Day_1",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Night_0",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Night_4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_1",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_3",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_5",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_7",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_11",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_13",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_18",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_19",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_21",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_24",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_26",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_1",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_12",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_13",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_17",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_22",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_25",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_27",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_11",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_16",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_19",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_23",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_28",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_3",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_9",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_13",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_16",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_17",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_20",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_22",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_24",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_25",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_27",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "я не дам": [
+      {
+        "block": 2,
+        "when": "Relationship:Harvey=Married",
+        "key": "marriage_Mon.000",
+        "target": "strings/schedules/Harvey"
+      },
+      {
+        "block": 3,
+        "when": "(нет When)",
+        "key": "locationReaction_SkullCave",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "spring_Mon",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "spring_Fri",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "summer_Fri",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "Wed4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "Fri6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "locationReaction_SkullCave",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "Hospital10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "timeReaction_VeryLate",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "locationReaction_SkullCave",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "situationReaction_Drunk",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "situationReaction_Exhausted",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "situationReaction_Injured",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_30",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Resort_Entering",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Saloon10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Desert10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Beach8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Beach10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Thu",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Fri",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Sun",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Mon",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Mon",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Fri",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_Mon",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Hospital_20_15",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Town10",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Rainy_Day_0",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Indoor_Day_2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Good_6",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "spring_15",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "summer_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Outdoor2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Day_3",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_1",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_11",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_27",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_17",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_23",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 31,
+        "when": "(нет When)",
+        "key": "topicHarveySecondVisitRefused",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "девочка моя": [
+      {
+        "block": 2,
+        "when": "Relationship:Harvey=Married",
+        "key": "marriage_Mon.000",
+        "target": "strings/schedules/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptBirthdayGift_Negative",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptBirthdayGift_Liked",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)395",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)348",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)237",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)200",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)651",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)18",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)404",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)436",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)444",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)773",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)72",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)373",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)797",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 10,
+        "when": "Relationship:Harvey=Married",
+        "key": "AcceptGift_(O)88",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "AcceptBirthdayGift_Hated",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Resort_Chair",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Desert8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "ArchaeologyHouse10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Sun10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Sun",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_Thu",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_Tue",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_16",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_26",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_12",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_24",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Wed",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Resort_Shore",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Mine_10_10",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Lake_10_25",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Town4",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Rainy_Day_3",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Rainy_Night_2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Indoor_Day_3",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Good_3",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "spring_12",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "spring_23",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "summer_20",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "fall_26",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_12",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_24",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "jobReturn",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Day_3",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Night_2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_11",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_14",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_17",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_22",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_27",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_3",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_20",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_23",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_13",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_21",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_26",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_19",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "я прослежу": [
+      {
+        "block": 3,
+        "when": "(нет When)",
+        "key": "timeReaction_VeryLate",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 3,
+        "when": "(нет When)",
+        "key": "situationReaction_Exhausted",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "summer_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "summer_Sun",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "fall_Tue",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "fall_Fri",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "fall_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "winter_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "winter_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "Fri4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "Sat4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "Tue6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "Sat6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "timeReaction_VeryLate",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "situationReaction_Exhausted",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "GreenRain_2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "Saloon10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "ArchaeologyHouse10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "Beach10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "winter_8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "timeReaction_VeryLate",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "situationReaction_Drunk",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "situationReaction_Exhausted",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_9",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_30",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Resort_Chair",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Saloon10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "HarveyRoom10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "ArchaeologyHouse10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Beach8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Beach10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Fri",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Mon",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Tue",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Thu",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_Fri",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_13",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Resort_Entering",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Saloon_Fri",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Rainy_Day_2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Indoor_Night_3",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Outdoor2",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Day_1",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Night_1",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Night_3",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_1",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_14",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_16",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_21",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_26",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_28",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_1",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_5",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_7",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_16",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_17",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_24",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_28",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_14",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_19",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_20",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_25",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_7",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_12",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_19",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_20",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_23",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_25",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 31,
+        "when": "(нет When)",
+        "key": "topicHarveySecondVisitAgree",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "ты рядом со мной": [
+      {
+        "block": 4,
+        "when": "Hearts:Harvey=6,7,8,9,10",
+        "key": "Hospital_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "FlowerDance_Accept",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "spring_Sun",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "Mon4",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "Sun6",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "spring_14",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "FlowerDance_Accept",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "Saloon8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "Hospital8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "Hospital10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "HarveyRoom8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "timeReaction_Late",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "situationReaction_Exhausted",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "HarveyRoom8",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "HarveyRoom10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Mon",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Thu",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Sun",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_Tue",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_Thu",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_12",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_14",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "winter_24",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Mon",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Rainy_Night_4",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Outdoor_1",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_24",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "jobLeave",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_16",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_25",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_27",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_28",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_9",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_14",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_5",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_11",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_27",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_28",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 31,
+        "when": "(нет When)",
+        "key": "topicHarveySecondVisitAgree",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 31,
+        "when": "(нет When)",
+        "key": "topicHarveySecondVisitRefused",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "не отпущу": [
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "locationReaction_SkullCave",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "я сам всё": [
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "summer_Fri",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "fall_Thu",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "winter_Tue",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "winter_Sat",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "fall_16",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Mine_10_10",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Hospital_18_12",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_4",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "не спорь": [
+      {
+        "block": 5,
+        "when": "Hearts:Harvey=4,5,6,7",
+        "key": "winter_Wed",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "timeReaction_Late",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "situationReaction_Drunk",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "situationReaction_Exhausted",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Hospital_Mon",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_20",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "Forest_8_18",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_7",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      }
+    ],
+    "только моя": [
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "spring_14",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "summer_Sun",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 12,
+        "when": "Relationship:Harvey=Married",
+        "key": "winter_24",
+        "target": "Characters/Dialogue/MarriageDialogueHarvey"
+      }
+    ],
+    "кормит с ложки": [
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "Saloon10",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "я всегда рядом, даже ночью": [
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "Hospital10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_28",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "под моим контролем": [
+      {
+        "block": 6,
+        "when": "Hearts:Harvey=8,9,10",
+        "key": "Beach10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "Beach10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 29,
+        "when": "Relationship:Harvey=Married, Weather=Storm",
+        "key": "Rainy_Day_2",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "spring_24",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "summer_10",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "fall_28",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_15",
+        "target": "Characters/Dialogue/Harvey"
+      },
+      {
+        "block": 30,
+        "when": "Relationship:Harvey=Married, LocationName=FarmHouse",
+        "key": "winter_23",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "без возражений": [
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_14",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ],
+    "открой ротик": [
+      {
+        "block": 11,
+        "when": "Relationship:Harvey=Dating",
+        "key": "spring_Tue",
+        "target": "Characters/Dialogue/Harvey"
+      }
+    ]
+  }
+}

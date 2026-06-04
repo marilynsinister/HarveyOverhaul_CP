@@ -171,7 +171,13 @@ Example: "%Abigail is lost in her music."
       "LogName": "Load Harvey proximity injury dialogue (C# bubbles)",
       "Action": "Load",
       "Target": "Data/HarveyOverhaul/HarveyProximityInjuryDialogue",
-      "FromFile": "assets/Dialogue/harvey_proximity_injury.json"
+      "FromFile": "assets/Code/dialogues/harvey_proximity_injury.json"
+    },
+    {
+      "LogName": "Load Harvey proximity pregnancy dialogue (C# bubbles — needs Injury hook)",
+      "Action": "Load",
+      "Target": "Data/HarveyOverhaul/HarveyProximityPregnancyDialogue",
+      "FromFile": "assets/Code/dialogues/harvey_proximity_pregnancy.json"
     },
     // {
     //   "Action": "Include",
@@ -207,6 +213,14 @@ Example: "%Abigail is lost in her music."
     {
       "Action": "Include",
       "FromFile": "assets/Code/triggersCare.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersPregnancy.json",
+      "When": {
+        "Relationship:Harvey": "Married",
+        "Pregnant": "@{{playerName}}"
+      }
     },
     {
       "Action": "Include",

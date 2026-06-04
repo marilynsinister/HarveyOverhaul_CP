@@ -1,0 +1,235 @@
+harvey_hospital.json:Hospital10:{'Hearts:Harvey': '8,9,10'}
+harvey_hospital.json:Hospital10:{'Relationship:Harvey': 'Dating'}
+harvey_hospital.json:Hospital2:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_hospital.json:Hospital4:{'Hearts:Harvey': '4,5,6,7'}
+harvey_hospital.json:Hospital6:{'Hearts:Harvey': '4,5,6,7'}
+harvey_hospital.json:Hospital8:{'Hearts:Harvey': '8,9,10'}
+harvey_hospital.json:Hospital8:{'Relationship:Harvey': 'Dating'}
+harvey_hospital.json:Hospital:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_hospital.json:Hospital_Entry:default
+harvey_hospital.json:Hospital_Fri:{'Hearts:Harvey': '4,5,6,7'}
+harvey_hospital.json:Hospital_Fri:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_hospital.json:Hospital_Fri:{'Hearts:Harvey': '8,9,10'}
+harvey_hospital.json:Hospital_Fri:{'Relationship:Harvey': 'Dating'}
+harvey_hospital.json:Hospital_Mon:{'Hearts:Harvey': '4,5,6,7'}
+harvey_hospital.json:Hospital_Mon:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_hospital.json:Hospital_Mon:{'Hearts:Harvey': '8,9,10'}
+harvey_hospital.json:Hospital_Mon:{'Relationship:Harvey': 'Dating'}
+harvey_hospital.json:Hospital_Sat:{'Hearts:Harvey': '4,5,6,7'}
+harvey_hospital.json:Hospital_Sat:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_hospital.json:Hospital_Sat:{'Hearts:Harvey': '8,9,10'}
+harvey_hospital.json:Hospital_Sat:{'Relationship:Harvey': 'Dating'}
+harvey_hospital.json:Hospital_Sun:{'Hearts:Harvey': '4,5,6,7'}
+harvey_hospital.json:Hospital_Sun:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_hospital.json:Hospital_Sun:{'Hearts:Harvey': '8,9,10'}
+harvey_hospital.json:Hospital_Sun:{'Relationship:Harvey': 'Dating'}
+harvey_hospital.json:Hospital_Thu:{'Hearts:Harvey': '4,5,6,7'}
+harvey_hospital.json:Hospital_Thu:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_hospital.json:Hospital_Thu:{'Hearts:Harvey': '8,9,10'}
+harvey_hospital.json:Hospital_Thu:{'Relationship:Harvey': 'Dating'}
+harvey_hospital.json:Hospital_Tue:{'Hearts:Harvey': '4,5,6,7'}
+harvey_hospital.json:Hospital_Tue:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_hospital.json:Hospital_Tue:{'Hearts:Harvey': '8,9,10'}
+harvey_hospital.json:Hospital_Tue:{'Relationship:Harvey': 'Dating'}
+harvey_hospital.json:Hospital_Wed:{'Hearts:Harvey': '4,5,6,7'}
+harvey_hospital.json:Hospital_Wed:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_hospital.json:Hospital_Wed:{'Hearts:Harvey': '8,9,10'}
+harvey_hospital.json:Hospital_Wed:{'Relationship:Harvey': 'Dating'}
+harvey_hospital.json:topicHarvey_ForcedHospitalization:{'Hearts:Harvey': '6,7,8,9,10'}
+harvey_locations.json:GreenRain:default
+harvey_locations.json:GreenRain:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:GreenRain:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:GreenRain_2:default
+harvey_locations.json:GreenRain_2:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:GreenRain_2:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:emotionalReaction_Crying:default
+harvey_locations.json:emotionalReaction_Crying:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:emotionalReaction_Crying:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:emotionalReaction_Scared:default
+harvey_locations.json:emotionalReaction_Scared:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:emotionalReaction_Scared:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:locationReaction_Mine:default
+harvey_locations.json:locationReaction_Mine:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:locationReaction_Mine:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:locationReaction_SkullCave:default
+harvey_locations.json:locationReaction_SkullCave:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:locationReaction_SkullCave:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:situationReaction_Drunk:default
+harvey_locations.json:situationReaction_Drunk:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:situationReaction_Drunk:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:situationReaction_Exhausted:default
+harvey_locations.json:situationReaction_Exhausted:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:situationReaction_Exhausted:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:situationReaction_Injured:default
+harvey_locations.json:situationReaction_Injured:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:situationReaction_Injured:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:timeReaction_Early:default
+harvey_locations.json:timeReaction_Early:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:timeReaction_Early:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:timeReaction_Late:default
+harvey_locations.json:timeReaction_Late:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:timeReaction_Late:{'Hearts:Harvey': '8,9,10'}
+harvey_locations.json:timeReaction_VeryLate:default
+harvey_locations.json:timeReaction_VeryLate:{'Hearts:Harvey': '4,5,6,7'}
+harvey_locations.json:timeReaction_VeryLate:{'Hearts:Harvey': '8,9,10'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicFirstMeeting', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicFirstMeeting', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicFirstMeeting', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicFirstMeeting', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicHarveyExhaustion', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicHarveyExhaustion', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicHarveyExhaustion', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicHarveyExhaustion', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Fri:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicFirstMeeting', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicFirstMeeting', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicFirstMeeting', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicFirstMeeting', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicHarveyExhaustion', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicHarveyExhaustion', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicHarveyExhaustion', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicHarveyExhaustion', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Mon:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicFirstMeeting', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicFirstMeeting', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicFirstMeeting', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicFirstMeeting', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicHarveyExhaustion', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicHarveyExhaustion', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicHarveyExhaustion', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicHarveyExhaustion', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Sun:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicFirstMeeting', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicFirstMeeting', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicFirstMeeting', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicFirstMeeting', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicHarveyExhaustion', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicHarveyExhaustion', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicHarveyExhaustion', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicHarveyExhaustion', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:Hospital_Wed:{'HasConversationTopic': 'topicHarveyTraumaReveal', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:Treat_Hurt_After:default
+harvey_topics_medical.json:Treat_Hurt_Before:default
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_fourweeks:{'HasConversationTopic': 'topicHarveyWalkGood', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_fourweeks:{'HasConversationTopic': 'topicHarveyWalkGood', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_fourweeks:{'HasConversationTopic': 'topicHarveyWalkGood', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_fourweeks:{'HasConversationTopic': 'topicHarveyWalkGood', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_oneday:{'HasConversationTopic': 'topicHarveyWalkGood', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_oneday:{'HasConversationTopic': 'topicHarveyWalkGood', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_oneday:{'HasConversationTopic': 'topicHarveyWalkGood', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_oneday:{'HasConversationTopic': 'topicHarveyWalkGood', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_oneweek:{'HasConversationTopic': 'topicHarveyWalkGood', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_oneweek:{'HasConversationTopic': 'topicHarveyWalkGood', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_oneweek:{'HasConversationTopic': 'topicHarveyWalkGood', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_oneweek:{'HasConversationTopic': 'topicHarveyWalkGood', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_twoweek:{'HasConversationTopic': 'topicHarveyWalkGood', 'Hearts:Harvey': '0,1,2'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_twoweek:{'HasConversationTopic': 'topicHarveyWalkGood', 'Hearts:Harvey': '3,4,5,6,7,8,9,10'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_twoweek:{'HasConversationTopic': 'topicHarveyWalkGood', 'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:eventSeen_eventHarveyFirstWalk_twoweek:{'HasConversationTopic': 'topicHarveyWalkGood', 'Relationship:Harvey': 'Married'}
+harvey_topics_medical.json:topicHarveyAcceptFirstWalk:default
+harvey_topics_medical.json:topicHarveyApologyAccepted:default
+harvey_topics_medical.json:topicHarveyApologyAccepted:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyBadDay_NoQuestions:default
+harvey_topics_medical.json:topicHarveyBadDay_NoQuestions:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyBadDay_Silent:default
+harvey_topics_medical.json:topicHarveyBadDay_Silent:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyBadDay_Water:default
+harvey_topics_medical.json:topicHarveyBadDay_Water:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyDate_Hug:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyDate_Kiss:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyDate_NotYet:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyDate_SitLonger:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyDeclineFirstWalk:default
+harvey_topics_medical.json:topicHarveyDoorSignal_Boundary:default
+harvey_topics_medical.json:topicHarveyDoorSignal_Close:default
+harvey_topics_medical.json:topicHarveyDoorSignal_Note:default
+harvey_topics_medical.json:topicHarveyFirstVisitAgree:default
+harvey_topics_medical.json:topicHarveyFirstVisitNeutral:default
+harvey_topics_medical.json:topicHarveyFirstVisitRefused:default
+harvey_topics_medical.json:topicHarveyFuturePlan:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyFuturePlan_CheckIn:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyFuturePlan_StillLearning:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyFuturePlan_TeaSignal:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyHelp_Asks:default
+harvey_topics_medical.json:topicHarveyHelp_Independent:default
+harvey_topics_medical.json:topicHarveyHelp_Spotter:default
+harvey_topics_medical.json:topicHarveyMines_CallMe:default
+harvey_topics_medical.json:topicHarveyMines_CallMe:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyMines_Note:default
+harvey_topics_medical.json:topicHarveyMines_Note:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyMines_ReturnTime:default
+harvey_topics_medical.json:topicHarveyMines_ReturnTime:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyMines_Supplies:default
+harvey_topics_medical.json:topicHarveyMines_Supplies:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyNeedsSpace:default
+harvey_topics_medical.json:topicHarveyNeedsSpace:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyNotOnlyPatient:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyQuietFiveMinutes:default
+harvey_topics_medical.json:topicHarveyQuietFiveMinutes:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveySafetyKit_Bed:default
+harvey_topics_medical.json:topicHarveySafetyKit_Bed:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveySafetyKit_Door:default
+harvey_topics_medical.json:topicHarveySafetyKit_Door:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveySafetyKit_Kitchen:default
+harvey_topics_medical.json:topicHarveySafetyKit_Kitchen:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveySafetyKit_NoKit:default
+harvey_topics_medical.json:topicHarveySafetyKit_NoKit:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyStorm_Clinic:default
+harvey_topics_medical.json:topicHarveyStorm_Escort:default
+harvey_topics_medical.json:topicHarveyStorm_Home:default
+harvey_topics_medical.json:topicHarveyStorm_Note:default
+harvey_topics_medical.json:topicHarveyTrust_Breakfast:default
+harvey_topics_medical.json:topicHarveyTrust_BreathHard:default
+harvey_topics_medical.json:topicHarveyTrust_DoctorDecides:default
+harvey_topics_medical.json:topicHarveyTrust_FullExam:default
+harvey_topics_medical.json:topicHarveyTrust_FullExam:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyTrust_JustSit:default
+harvey_topics_medical.json:topicHarveyTrust_JustSit:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyTrust_LeftClinic:default
+harvey_topics_medical.json:topicHarveyTrust_LeftClinic:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyTrust_NeedsSpace:default
+harvey_topics_medical.json:topicHarveyTrust_Rest:default
+harvey_topics_medical.json:topicHarveyTrust_SmallExam:default
+harvey_topics_medical.json:topicHarveyTrust_SmallExam:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarveyTrust_TouchOk:default
+harvey_topics_medical.json:topicHarveyTrust_Water:default
+harvey_topics_medical.json:topicHarveyWalkBad:default
+harvey_topics_medical.json:topicHarveyWalkGood:default
+harvey_topics_medical.json:topicHarveyWalkNeutral:default
+harvey_topics_medical.json:topicHarveyWasCaredFor:default
+harvey_topics_medical.json:topicHarveyWasCaredFor:{'Relationship:Harvey': 'Dating'}
+harvey_topics_medical.json:topicHarvey_AllergicRash:default
+harvey_topics_medical.json:topicHarvey_AllergicRash_memory_oneday:default
+harvey_topics_medical.json:topicHarvey_AllergicRash_memory_oneweek:default
+harvey_topics_medical.json:topicHarvey_DirtyWound:default
+harvey_topics_medical.json:topicHarvey_DirtyWound_memory_oneday:default
+harvey_topics_medical.json:topicHarvey_DirtyWound_memory_oneweek:default
+harvey_topics_medical.json:topicHarvey_EscalatedCare_memory_oneday:default
+harvey_topics_medical.json:topicHarvey_EscalatedCare_memory_oneweek:default
+harvey_topics_medical.json:topicHarvey_ForcedHospitalization:default
+harvey_topics_medical.json:topicHarvey_ForcedHospitalization_memory_oneday:default
+harvey_topics_medical.json:topicHarvey_ForcedHospitalization_memory_oneweek:default
+harvey_topics_medical.json:topicHarvey_Neglect:default
+harvey_topics_medical.json:topicHarvey_Neglect_memory_oneday:default
+harvey_topics_medical.json:topicHarvey_Neglect_memory_oneweek:default
+harvey_topics_medical.json:topicHarvey_NightRound_memory_oneday:default
+harvey_topics_medical.json:topicHarvey_NightRound_memory_oneweek:default
+harvey_topics_medical.json:topicHarvey_PainFlare:default
+harvey_topics_medical.json:topicHarvey_WetBandage:default
+harvey_topics_medical.json:topicHarvey_WetBandage_memory_oneday:default
+harvey_topics_medical.json:topicHarvey_WetBandage_memory_oneweek:default
+harvey_topics_medical.json:topicHarvey_WetStitches:default
+harvey_topics_medical.json:topicHarvey_WetStitches_memory_oneday:default
+harvey_topics_medical.json:topicHarvey_WetStitches_memory_oneweek:default

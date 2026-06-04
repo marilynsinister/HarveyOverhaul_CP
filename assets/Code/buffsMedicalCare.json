@@ -83,6 +83,34 @@
                         "PrescriptionType": "Checkup"
                     }
                 },
+                "HarveyMod_Hospitalized": {
+                    "Id": "HarveyMod_Hospitalized",
+                    "DisplayName": "Госпитализация",
+                    "Description": "Под наблюдением Харви в клинике.\nОставшееся время до выписки\nотображается в длительности\nбаффа и уведомлениях.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 21,
+                    "Effects": {},
+                    "CustomFields": {
+                        "HarveyMod": "hospitalization_status"
+                    }
+                },
+                "HarveyMod_DoctorVisitNeeded": {
+                    "Id": "HarveyMod_DoctorVisitNeeded",
+                    "DisplayName": "Нужен приём у Харви",
+                    "Description": "Состояние изменилось. Нужно зайти к Харви на контрольный приём.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 21,
+                    "Effects": {},
+                    "CustomFields": {
+                        "HarveyMod": "doctor_visit_reminder"
+                    }
+                },
                 "buffHarveyRehab": {
                     "Id": "buffHarveyRehab",
                     "DisplayName": "Восстановительный режим",

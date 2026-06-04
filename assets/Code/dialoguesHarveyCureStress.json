@@ -123,7 +123,8 @@
                 "topicStressTreatmentDespairCured": "Превосходно! Вернула веру.#$b#Надежда с тобой.#$b#Будущее светло.#$b#Рад.$l"
             },
             "When": {
-                "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+                "Hearts:Harvey": "3,4,5,6,7,8,9,10",
+                "Relationship:Harvey": "Unmet, Friendly, Divorced"
             }
         },
         {
