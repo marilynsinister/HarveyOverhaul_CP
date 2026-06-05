@@ -1,0 +1,52 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "Entries": {
+                "eventHarveyMorningAfterExhaustion/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_MorningAfterExhaustion/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married": "
+    continue/
+    skippable/
+    pause 300/
+    emote Harvey 16/
+    speak Harvey \"Доброе утро.$s\"/
+    pause 300/
+    speak Harvey \"Нет, не вставай резко. Сначала сядь. Медленно.$a\"/
+    pause 400/
+    message \"Харви ставит на стол воду и что-то тёплое, завёрнутое в салфетку.\"/
+    pause 400/
+    speak Harvey \"Вчера ты не просто устала. Ты довела организм до отключения.$u\"/
+    pause 300/
+    speak Harvey \"Я понимаю, что ферма требует сил. Но ты не машина, и я не позволю тебе обращаться с собой как с инструментом.$a\"/
+    pause 400/
+    message \"Он проверяет твой пульс, потом чуть смягчается.\"/
+    pause 300/
+    animate Harvey false true 800 22 20 21/
+    playSound dwop/
+    emote farmer 20/
+    speak Harvey \"Уже лучше. Но сегодня — щадящий режим.$s\"/
+    pause 300/
+    addItem 614 1/
+    speak Harvey \"Вода. Завтрак. Никаких тяжёлых инструментов до полудня.$a\"/
+    pause 400/
+    speak Harvey \"Если начнёт кружиться голова — сразу ко мне. Не вечером. Не «потом». Сразу.$a\"/
+    pause 300/
+    message \"Он поправляет чашку ближе к тебе.\"/
+    pause 400/
+    speak Harvey \"Я не ругаю тебя.$s\"/
+    pause 300/
+    speak Harvey \"Я просто слишком хорошо представляю, что могло случиться, если бы тебя нашли позже.$u\"/
+    pause 400/
+    speak Harvey \"Поэтому сегодня я буду упрямым за нас двоих.$l\"/
+    pause 500/
+    action removeConversationTopic topicHarvey_MorningAfterExhaustion/
+    action addConversationTopic topicHarvey_ExhaustionFollowup 2/
+    friendship Harvey 20/
+    globalFade/
+    viewport -1000 -1000/
+    end dialogue Harvey \"Щадящий режим — не наказание. Это то, что сегодня нужно твоему телу. Я проверю.$l\""
+            }
+        }
+    ]
+}

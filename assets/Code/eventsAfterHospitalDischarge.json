@@ -1,0 +1,43 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "Entries": {
+                "eventHarveyAfterHospitalDischargeHome/Time 1800 2600/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_AfterHospitalDischargeHome/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married": "
+    continue/
+    skippable/
+    pause 300/
+    speak Harvey \"Осторожно. Не торопись.$s\"/
+    speak Harvey \"Дом — не повод сразу делать вид, что всё закончилось.$a\"/
+    pause 300/
+    message \"Харви закрывает дверь и внимательно смотрит, как ты держишься на ногах.\"/
+    pause 400/
+    speak Harvey \"До кровати дойдём медленно. Если закружится голова — сразу скажешь жестом, хорошо?$u\"/
+    pause 300/
+    message \"Он ставит воду рядом с кроватью и раскладывает лекарства так, чтобы их было видно.\"/
+    pause 400/
+    speak Harvey \"Вот вода. Вот лекарства. Вот чистая повязка.$s\"/
+    speak Harvey \"А вот список того, чего ты сегодня не делаешь: шахта, инструменты, тяжёлые ящики и попытки доказать мне, что ты уже в порядке.$a\"/
+    pause 300/
+    speak Harvey \"Я видел твои показатели. Ты восстанавливаешься, но это не то же самое, что «можно всё».$u\"/
+    pause 300/
+    message \"Он поправляет подушку и на секунду задерживается рядом.\"/
+    emote farmer 20/
+    pause 400/
+    speak Harvey \"Я знаю, ты не любишь, когда за тобой следят.$s\"/
+    speak Harvey \"Но сегодня я всё равно прослежу.$a\"/
+    speak Harvey \"Не потому что не доверяю тебе. Потому что слишком люблю, чтобы рисковать.$l\"/
+    speak Harvey \"Отдыхай. Я останусь, пока дыхание не станет ровнее.$l\"/
+    pause 500/
+    action removeConversationTopic topicHarvey_AfterHospitalDischargeHome/
+    action addConversationTopic topicHarvey_HospitalDischargeFollowup 3/
+    friendship Harvey 25/
+    globalFade/
+    viewport -1000 -1000/
+    end dialogue Harvey \"Если станет хуже — позови. Я недалеко.$u\""
+            }
+        }
+    ]
+}

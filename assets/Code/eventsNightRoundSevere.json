@@ -1,0 +1,52 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "Entries": {
+                "eventHarveyNightRoundSevereFirst/Time 2200 2600/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_NightRoundSevereFirst/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married": "
+    continue/
+    skippable/
+    pause 400/
+    ambientLight 65 70 105/
+    playSound doorClose/
+    message \"Дверь спальни едва слышно открывается — кто-то входит на цыпочках.\"/
+    pause 300/
+    faceDirection farmer 2/
+    emote Harvey 16/
+    speak Harvey \"Тише. Это я.$s\"/
+    pause 400/
+    speak Harvey \"Не вставай. Я только проверю, как ты держишься.$u\"/
+    pause 300/
+    addItem 614 1/
+    message \"Харви ставит стакан воды на тумбочку и осторожно садится рядом.\"/
+    pause 400/
+    animate Harvey false true 800 22 20 21/
+    playSound dwop/
+    speak Harvey \"Температуры нет... хорошо.$s\"/
+    pause 300/
+    speak Harvey \"Но пульс говорит мне, что день был хуже, чем ты собиралась признать.$a\"/
+    pause 400/
+    speak Harvey \"Я не буду читать лекцию ночью. Не сегодня.$s\"/
+    pause 300/
+    speak Harvey \"Сегодня ты пьёшь воду, ложишься удобнее и позволяешь мне убедиться, что боль не усиливается.$a\"/
+    pause 400/
+    message \"Он поправляет одеяло и на секунду задерживает руку у твоего запястья.\"/
+    pause 300/
+    emote farmer 20/
+    speak Harvey \"Вот так. Дыши медленнее.$u\"/
+    pause 300/
+    speak Harvey \"Я рядом. Если станет хуже — разбудишь меня сразу.$l\"/
+    pause 400/
+    speak Harvey \"И да, это предписание, а не просьба.$a\"/
+    pause 500/
+    action removeConversationTopic topicHarvey_NightRoundSevereFirst/
+    action addConversationTopic topicHarvey_NightRoundFollowup 2/
+    globalFade/
+    viewport -1000 -1000/
+    end dialogue Harvey \"Спи. Я загляну ещё раз перед рассветом.$u\""
+            }
+        }
+    ]
+}
