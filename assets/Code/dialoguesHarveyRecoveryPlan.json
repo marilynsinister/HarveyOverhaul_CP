@@ -1,0 +1,69 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Hearts:Harvey": "0,1,2"
+            },
+            "Entries": {
+                "HarveyMod_RecoveryPlanStarted": "Три дня щадящего режима. Без шахты, без ночных подвигов и без «я только быстро».$u#$b#Я всё записал в вашу карту.$0",
+                "HarveyMod_RecoveryPlanViolated": "Вы правда думали, я не узнаю?$a#$b#Садитесь. Сначала осмотр, потом разговор о режиме.$u",
+                "HarveyMod_RecoveryPlanCompleted": "Хорошо. Я снимаю режим.$0#$b#Не потому что перестал беспокоиться — просто вы доказали, что можете беречь себя.$h"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Hearts:Harvey": "3,4,5"
+            },
+            "Entries": {
+                "HarveyMod_RecoveryPlanStarted": "Три дня щадящего режима. Без шахты, без ночных подвигов и без «я только быстро».$u#$b#Я всё записал.$0",
+                "HarveyMod_RecoveryPlanViolated": "Ты правда думала, я не узнаю?$a#$b#Садись. Сначала осмотр, потом лекция.$u",
+                "HarveyMod_RecoveryPlanCompleted": "Хорошо. Я снимаю режим.$0#$b#Не потому что перестал волноваться — не надейся.$a#$b#Просто ты доказала, что можешь беречь себя.$h"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Hearts:Harvey": "6,7,8,9,10"
+            },
+            "Entries": {
+                "HarveyMod_RecoveryPlanStarted": "Три дня щадящего режима. Без шахты, без ночных подвигов и без «я только быстро».$u#$b#Я всё записал — и буду следить, что рекомендации выполняются.$0",
+                "HarveyMod_RecoveryPlanViolated": "Ты правда думала, я не узнаю?$a#$b#Садись. Сначала осмотр, потом лекция — без оправданий.$u",
+                "HarveyMod_RecoveryPlanCompleted": "Хорошо. Я снимаю режим.$0#$b#Не потому что перестал волноваться — не надейся.$a#$b#Просто ты доказала, что можешь беречь себя.$h"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Relationship:Harvey": "Dating"
+            },
+            "Entries": {
+                "HarveyMod_RecoveryPlanStarted": "Три дня щадящего режима, солнышко. Без шахты, без ночных подвигов и без «я только быстро».$u#$b#Я всё записал — и буду проверять.$a",
+                "HarveyMod_RecoveryPlanViolated": "Ты правда думала, я не узнаю?$a#$b#Садись. Сначала осмотр, потом лекция — и никаких «извини, больше не буду».$s",
+                "HarveyMod_RecoveryPlanCompleted": "Хорошо. Я снимаю режим.$l#$b#Не потому что перестал волноваться — не надейся.$a#$b#Ты доказала, что можешь беречь себя. Не разочаровывай меня снова.$l"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Relationship:Harvey": "Married"
+            },
+            "Entries": {
+                "HarveyMod_RecoveryPlanStarted": "Три дня щадящего режима. Без шахты, без ночных подвигов и без «я только быстро».$u#$b#Дома я всё вижу — и всё записал.$l",
+                "HarveyMod_RecoveryPlanViolated": "Ты правда думала, дома я не узнаю?$a#$b#Садись. Сначала осмотр, потом лекция — за столом.$u",
+                "HarveyMod_RecoveryPlanCompleted": "Хорошо. Снимаю режим.$l#$b#Не потому что перестал волноваться — не надейся.$a#$b#Ты доказала, что можешь беречь себя. Я горжусь — но слежу дальше.$h"
+            }
+        }
+    ]
+}
