@@ -59,7 +59,7 @@
         64 15/
         farmer 64 16 2 Harvey 64 18 0/
         skippable/
-        setSkipActions changeLocation Hospital#warp farmer 20 5#faceDirection farmer 3#positionOffset farmer 32 -32#warp Harvey 19 5#faceDirection Harvey 1/
+        setSkipActions changeLocation Hospital#ignoreCollisions farmer#warp farmer 20 5#faceDirection farmer 3#positionOffset farmer 32 -32#warp Harvey 19 5#faceDirection Harvey 1/
         pause 600/
         speak Harvey \"Ты выглядишь ужасно!$8#$b#*быстро подходит* Давай проверим...$u\"/
         pause 500/
@@ -94,6 +94,7 @@
         changeLocation Hospital/
         playMusic Hospital_Ambient/
         pause 500/
+        ignoreCollisions farmer/
         warp farmer 20 5/
         faceDirection farmer 3/
         positionOffset farmer 32 -32/
@@ -107,7 +108,19 @@
         message \"Это перебор...\"/
         speak Harvey \"Перебор - это твоё состояние! *ставит капельницу* Я отменил все приёмы - сегодня ты мой единственный пациент.$a\"/
         message \"Харви привязывает её к койке (шутливо), ставит капельницу и запрещает вставать.\"/
-        end position 20 5 dialogue Harvey \"Если увижу, что ты взяла кирку — вызову санитаров!$a\"",
+        pause 600/
+        speak Harvey \"Если увижу, что ты взяла кирку — вызову санитаров!$a\"/
+        pause 800/
+        globalFade/
+        viewport -1000 -1000/
+        changeLocation Hospital/
+        ignoreCollisions farmer/
+        warp farmer 20 5/
+        faceDirection farmer 3/
+        positionOffset farmer 32 -32/
+        warp Harvey 19 5/
+        faceDirection Harvey 1/
+        end position 20 5",
         "eventHarveyCheckFarmerOutsideAfter22/Time 2200 0200/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating Married": "
         continue/
         64 15/
