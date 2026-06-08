@@ -344,7 +344,8 @@
     17 7/
     farmer 17 7 0 Harvey 17 10 0/
     skippable/
-    setSkipActions friendship Harvey 100#addConversationTopic HarveyMineIntercept 3#changeLocation Town#warp farmer 72 22#warp Harvey 73 22#faceDirection farmer 1#faceDirection Harvey 3/
+    addConversationTopic HarveyMineIntercept 3/
+    setSkipActions friendship Harvey 100#addConversationTopic HarveyMineIntercept 3#changeLocation Mountain#warp farmer 53 8#warp Harvey 54 8#faceDirection farmer 2#faceDirection Harvey 2#fade false#viewport 53 8 true/
     pause 800/
     speak Harvey \"Стой.$a#$b#Не делай и шага вниз.$a\"/
     pause 600/
@@ -359,6 +360,7 @@
     pause 800/
     animate Harvey false true 100 19/
     speak Harvey \"*снимает с себя куртку и накидывает на фермера*#$b#На сегодня — наверх. Сначала согреемся и успокоим дыхание.$a\"/
+    stopAnimation Harvey/
     pause 600/
     message \"Но мне нужна руда для...\"/
     speak Harvey \"Руда подождёт.$8 Руда всегда подождёт.$a#$b#А вот воспаление или срыв швов — нет.$a\"/
@@ -390,8 +392,10 @@
     speak Harvey \"*смотрит прямо, без угрозы — только тревога*#$b#Тогда я буду настаивать.$a#$b#Я не могу спокойно смотреть, как ты рискуешь.$s#$b#И, честно, сегодня я буду упрямее, чем ты.$a\"/
     pause 1000/
     speak Harvey \"*встаёт и протягивает руку*#$b#Нет. На сегодня шахта закончена.$a#$b#Я выведу тебя наверх. Медленно. Без героизма — просто береги себя.$u\"/
-    move Harvey 0 3 2 true/
-    move farmer 0 3 2 true/
+    move Harvey 0 3 2/
+    move farmer 0 3 2/
+    proceedPosition Harvey/
+    proceedPosition farmer/
     pause 600/
     message \"Харви ведёт тебя наверх, к выходу из шахты, поддерживая за локоть.\"/
     pause 1200/
@@ -400,16 +404,17 @@
     globalFade/
     viewport -1000 -1000/
     pause 700/
-    changeLocation Town/
-    warp farmer 72 22/
-    warp Harvey 73 22/
-    faceDirection farmer 1/
-    faceDirection Harvey 3/
-    viewport 72 22/
+    changeLocation Mountain/
+    warp farmer 53 8/
+    warp Harvey 54 8/
+    faceDirection farmer 2/
+    faceDirection Harvey 2/
+    fade false/
+    viewport 53 8 true/
     pause 300/
     friendship Harvey 100/
     addConversationTopic HarveyMineIntercept 3/
-    end position 72 22
+    end position 53 8
 ",
             }
         }

@@ -102,10 +102,9 @@
                     "Trigger": "LocationChanged",
                     "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMineIntercept, PLAYER_LOCATION_NAME Current Mine, PLAYER_HAS_BUFF Current HarveyMod_MineForbidden",
                     "Actions": [
-                        "AddMail Current mailHarveyMineWarning now",
-                        "spacechase0.SpaceCore_PlayEvent eventHarveyMineInterception"
+                        "AddMail Current mailHarveyMineWarning now"
                     ],
-                    "LogName": "Load Triggers/Harvey Mine Warning #1 (MineForbidden only)"
+                    "LogName": "Load Triggers/Harvey Mine Warning #1 (MineForbidden only; event via C# Injury mod)"
                 },
                 // ================== ВРЕМЕННЫЕ РЕАКЦИИ ==================
                 "{{ModId}}_triggerTimeReactionLate": {
