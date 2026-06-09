@@ -152,11 +152,21 @@ Example: "%Abigail is lost in her music."
       "FromFile": "assets/Code/stressTopicsUnimplementedDisabled.json",
       "Priority": "Late + 10"
     },
-    {
-      "Action": "Include",
-      "FromFile": "assets/Code/dialoguesHarveyInjury.json",
-      "Priority": "Late"
-    },
+        {
+            "Action": "Include",
+            "FromFile": "assets/Code/dialoguesHarveyInjury.json",
+            "Priority": "Late"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "assets/Code/dialoguesHarveyTreatmentNeeded.json",
+            "Priority": "Late + 1"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "assets/Code/dialoguesHarveyTreatmentNeededRomantic.json",
+            "Priority": "Late + 2"
+        },
     {
       "Action": "Include",
       "FromFile": "assets/Code/dialoguesHarveyMedicalCare.json",
