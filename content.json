@@ -164,6 +164,11 @@ Example: "%Abigail is lost in her music."
         },
         {
             "Action": "Include",
+            "FromFile": "assets/Code/dialoguesHarveyTreatmentNeededClose.json",
+            "Priority": "Late + 2"
+        },
+        {
+            "Action": "Include",
             "FromFile": "assets/Code/dialoguesHarveyTreatmentNeededRomantic.json",
             "Priority": "Late + 2"
         },
