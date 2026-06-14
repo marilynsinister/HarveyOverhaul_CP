@@ -1,0 +1,91 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_triggerNPCReaction_Marlon_MineRescue": {
+          "Id": "{{ModId}}_triggerNPCReaction_Marlon_MineRescue",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Marlon_MineRescue 2"
+          ],
+          "LogName": "Marlon HarveyOverhaul_NPCReaction_Marlon_MineRescue"
+        },
+        "{{ModId}}_triggerNPCReaction_Marlon_SevereInjury": {
+          "Id": "{{ModId}}_triggerNPCReaction_Marlon_SevereInjury",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHealthDamageCritical\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHealthDamageSevere\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Marlon_SevereInjury 2"
+          ],
+          "LogName": "Marlon HarveyOverhaul_NPCReaction_Marlon_SevereInjury"
+        },
+        "{{ModId}}_triggerNPCReaction_Marlon_RecoveryActive": {
+          "Id": "{{ModId}}_triggerNPCReaction_Marlon_RecoveryActive",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Marlon_RecoveryActive 2"
+          ],
+          "LogName": "Marlon HarveyOverhaul_NPCReaction_Marlon_RecoveryActive"
+        },
+        "{{ModId}}_triggerNPCReaction_Marlon_MineBanRespected": {
+          "Id": "{{ModId}}_triggerNPCReaction_Marlon_MineBanRespected",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Marlon_MineBanRespected 2"
+          ],
+          "LogName": "Marlon HarveyOverhaul_NPCReaction_Marlon_MineBanRespected"
+        },
+        "{{ModId}}_triggerNPCReaction_Marlon_MinesTooEarly": {
+          "Id": "{{ModId}}_triggerNPCReaction_Marlon_MinesTooEarly",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Marlon_MinesTooEarly 2"
+          ],
+          "LogName": "Marlon HarveyOverhaul_NPCReaction_Marlon_MinesTooEarly"
+        },
+        "{{ModId}}_triggerNPCReaction_Marlon_MineBanViolated": {
+          "Id": "{{ModId}}_triggerNPCReaction_Marlon_MineBanViolated",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_BUFF Current HarveyMod_MineForbidden, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Marlon_MineBanViolated 2"
+          ],
+          "LogName": "Marlon HarveyOverhaul_NPCReaction_Marlon_MineBanViolated"
+        },
+        "{{ModId}}_triggerNPCReaction_Marlon_Dating": {
+          "Id": "{{ModId}}_triggerNPCReaction_Marlon_Dating",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHealthDamageCritical\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHealthDamageSevere\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\" \"PLAYER_HAS_BUFF Current HarveyMod_MineForbidden\" \"PLAYER_HAS_BUFF Current HarveyMod_MineRestricted\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Marlon_Dating 2"
+          ],
+          "LogName": "Marlon HarveyOverhaul_NPCReaction_Marlon_Dating"
+        },
+        "{{ModId}}_triggerNPCReaction_Marlon_Engaged": {
+          "Id": "{{ModId}}_triggerNPCReaction_Marlon_Engaged",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHealthDamageCritical\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHealthDamageSevere\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\" \"PLAYER_HAS_BUFF Current HarveyMod_MineForbidden\" \"PLAYER_HAS_BUFF Current HarveyMod_MineRestricted\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Marlon_Engaged 2"
+          ],
+          "LogName": "Marlon HarveyOverhaul_NPCReaction_Marlon_Engaged"
+        },
+        "{{ModId}}_triggerNPCReaction_Marlon_Married": {
+          "Id": "{{ModId}}_triggerNPCReaction_Marlon_Married",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHealthDamageCritical\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHealthDamageSevere\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\" \"PLAYER_HAS_BUFF Current HarveyMod_MineForbidden\" \"PLAYER_HAS_BUFF Current HarveyMod_MineRestricted\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Marlon_Married 2"
+          ],
+          "LogName": "Marlon HarveyOverhaul_NPCReaction_Marlon_Married"
+        }
+      }
+    }
+  ]
+}

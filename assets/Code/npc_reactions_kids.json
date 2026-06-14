@@ -1,0 +1,96 @@
+{
+  "Changes": [
+    {
+      "LogName": "HarveyOverhaul Kids NPC reaction bridge topics",
+      "Action": "EditData",
+      "Target": "Data/ConversationTopics",
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Kids_Rest": "1",
+        "HarveyOverhaul_NPCReaction_Kids_Kind": "1",
+        "HarveyOverhaul_NPCReaction_Kids_Storm": "1",
+        "HarveyOverhaul_NPCReaction_Kids_Cooldown": "4"
+      }
+    },
+
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Kids_Rest — Jas",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jas",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Kids_Rest",
+        "Hearts:Jas": "2,3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Kids_Rest": "У тебя пластырь…$0#$b#Мисс Марни говорит: если болит — надо отдыхать.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Kids_Rest — Vincent",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Vincent",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Kids_Rest",
+        "Hearts:Vincent": "2,3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Kids_Rest": "Ты устала?..$s#$b#Мама говорит — после тёплого чая лучше спать. Попробуй?$l"
+      }
+    },
+
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Kids_Kind — Jas",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jas",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Kids_Kind",
+        "Hearts:Jas": "2,3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Kids_Kind": "Доктор Харви правда помогает, да?$l#$b#Он всегда такой добрый.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Kids_Kind — Vincent",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Vincent",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Kids_Kind",
+        "Hearts:Vincent": "2,3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Kids_Kind": "Ты победила монстров, но поцарапалась?$h#$b#Это всё равно победа! Главное — скорее в порядок.$0"
+      }
+    },
+
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Kids_Storm — Jas",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jas",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Kids_Storm",
+        "Hearts:Jas": "2,3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Kids_Storm": "Сегодня грозно…$s#$b#Я лучше дома играю. Тебе тоже не страшно, когда гром?$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Kids_Storm — Vincent",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Vincent",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Kids_Storm",
+        "Hearts:Vincent": "2,3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Kids_Storm": "Я бы тоже не хотел гулять в грозу.$s#$b#Под крышей уютно. И печенька есть.$h"
+      }
+    }
+  ]
+}

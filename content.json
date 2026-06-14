@@ -251,6 +251,78 @@ Example: "%Abigail is lost in her music."
       "Action": "Include",
       "FromFile": "assets/Code/triggersInjuryMail.json"
     },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersNpcReactionsInjuryStress.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersNpcReactionsHarveyRel.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/npc_reactions_injury_stress.json",
+      "Priority": "Late + 3"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/npc_reactions_harvey_relationship.json",
+      "Priority": "Late + 4"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersNpcReactionsRumorSoft.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/npc_reactions_rumor_soft.json",
+      "Priority": "Late + 5"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersNpcReactionsMaru.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/npc_reactions_maru.json",
+      "Priority": "Late + 6"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersNpcReactionsMarlon.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/npc_reactions_marlon.json",
+      "Priority": "Late + 6"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersNpcReactionsHomeCare.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/npc_reactions_home_care.json",
+      "Priority": "Late + 5"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersNpcReactionsYoung.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/npc_reactions_young.json",
+      "Priority": "Late + 6"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersNpcReactionsKids.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/npc_reactions_kids.json",
+      "Priority": "Late + 6"
+    },
     // {
     //   "Action": "Include",
     //   "FromFile": "assets/Code/triggersCure.json"

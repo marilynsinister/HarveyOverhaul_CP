@@ -1,0 +1,305 @@
+{
+  "Changes": [
+    {
+      "LogName": "HarveyOverhaul Harvey relationship NPC reaction bridge topics",
+      "Action": "EditData",
+      "Target": "Data/ConversationTopics",
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "2",
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "2",
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "2",
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating_Mine": "2",
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged_Mine": "2",
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married_Mine": "2"
+      }
+    },
+
+    // ===== Evelyn =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Dating — Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Dating", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "Харви смотрит на тебя внимательнее — не только как врач.$l#$b#Просил передать: отдыхай, не гонись.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged — Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "Забота — не слабость. Харви это показывает каждый день.$h#$b#Просил передать: береги себя.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Married — Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Married", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "Приятно видеть, что ты не одна.$h#$b#Харви заходил за печеньем — спрашивал, не устала ли.$0"
+      }
+    },
+
+    // ===== George =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Dating — George",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Dating", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "Доктор теперь будет ещё строже. Привыкай.$a#$b#Зато не отпустит, пока не вылечит.$s"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged — George",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "Слушай его. Врачи не для красоты существуют.$a#$b#Просил передать — без геройства.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Married — George",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Married", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "Женился — значит, будет придирать до конца жизни.$a#$b#...Неплохой выбор, кстати.$h"
+      }
+    },
+
+    // ===== Marnie =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Dating — Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Dating", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "Харви заглядывал — спрашивал, не перегружена ли ты.$h#$b#Ну конечно волнуется.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged — Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "Он просил передать: не таскай тяжёлое.$0#$b#Живые мужчины так и делают — переживают.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Married — Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Married", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "Вы уже как семья, хоть и без детей пока.$h#$b#Харви на рынке всё выбирал сам — «для дома».$0"
+      }
+    },
+
+    // ===== Robin =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Dating — Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Dating", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "Харви пробегал мимо мастерской — спрашивал, не помочь ли с работой.$0#$b#Редко так спешит не по делу.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged — Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "Просил передать: режим не обсуждается.$0#$b#Строгий — но от сердца.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Married — Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Married", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "Вам обоим повезло.$h#$b#Он вчера мерил что-то для крыльца — «чтобы не падала».$0"
+      }
+    },
+
+    // ===== Gus =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Dating — Gus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Dating", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "Харви заказывал лёгкий ужин на вынос — «если устанет».$h#$b#Просил передать: загляни поесть.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged — Gus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "Столик на двоих потом отметим.$h#$b#А пока — ешь нормально. Он просил следить.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Married — Gus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Married", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "Для семьи готовлю чаще.$h#$b#Харви вчера сам проверял, хватит ли порции.$0"
+      }
+    },
+
+    // ===== Linus =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Dating — Linus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Dating", "Hearts:Linus": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "Харви спрашивал, не слишком ли тяжёлый труд на ферме.$0#$b#Редко видел его таким настойчивым.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged — Linus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged", "Hearts:Linus": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "Забота — это когда просят передать: «отдыхай».$0#$b#Он просил. Послушай.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Married — Linus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Married", "Hearts:Linus": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "Двое у костра теплее.$h#$b#Харви заглядывал — всё ли в порядке на ферме.$0"
+      }
+    },
+
+    // ===== Penny =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Dating — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Dating", "Hearts:Penny": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "Харви спрашивал в библиотеке, не нужна ли тебе тишина.$l#$b#Трогательно — без лишних слов.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged", "Hearts:Penny": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "Он просил передать: не переутомляйся.$l#$b#Забота — когда думают заранее.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Married — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Married", "Hearts:Penny": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "Приятно видеть, что у вас дома есть опора.$l#$b#Харви улыбается, когда ты здорова — это заметно.$h"
+      }
+    },
+
+    // ===== Leah =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Dating — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Dating", "Hearts:Leah": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "Харви оставлял тебе место у реки — «если нужен покой».$0#$b#Заметила, как он смотрит? Это не про врача.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged", "Hearts:Leah": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "Забота бывает тихой — как река.$l#$b#Просил передать: береги себя.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Married — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Married", "Hearts:Leah": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "Два корня держат берег крепче.$h#$b#Харви просил не таскать тяжёлое — уступи ему хотя бы это.$0"
+      }
+    },
+
+    // ===== Elliott =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Dating — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Dating", "Hearts:Elliott": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Dating": "Харви просил передать без стихов: отдыхай.$l#$b#В его глазах — забота, не приказ.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Engaged", "Hearts:Elliott": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Engaged": "Любовь и долг у него не спорят — дополняют.$l#$b#Просил сказать: слушай его.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HarveyRel_Married — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 4",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_HarveyRel_Married", "Hearts:Elliott": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HarveyRel_Married": "Ваш дом — глава, где забота звучит громче слов.$l#$b#Хорошая глава.$h"
+      }
+    }
+  ]
+}

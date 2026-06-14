@@ -1,0 +1,451 @@
+{
+  "Changes": [
+    {
+      "LogName": "HarveyOverhaul HomeCare bridge topics",
+      "Action": "EditData",
+      "Target": "Data/ConversationTopics",
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Tired": "2",
+        "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment": "2",
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant": "2",
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated": "2",
+        "HarveyOverhaul_NPCReaction_HomeCare_Storm": "2",
+        "HarveyOverhaul_NPCReaction_HomeCare_Social": "2"
+      }
+    },
+
+    // ===== Evelyn =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Evelyn_Tired",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Tired", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Tired": "Солнышко, ты сегодня еле держишься на ногах.$s#$b#Садись у камина. Печенье никуда не денется.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Evelyn_AfterTreatment",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment": "Рада, что заглянула.$h#$b#После врача нужен дом и чай. Заходи.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Evelyn_RecoveryCompliant",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant": "Молодец, солнышко — слушаешь.$h#$b#Так и надо. Я горжусь.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Evelyn_RecoveryViolated",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated": "Ох… опять не послушала?$s#$b#Ладно, без лекций. Просто — отдохни.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Evelyn_Storm",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Storm", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Storm": "Гроза за окном? Заходи к нам.$h#$b#У Джорджа тоже свет приглушён. Не одна.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Evelyn_Social",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Social", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Social": "Если хочется тихо — у нас можно посидеть.$h#$b#Без разговоров, если не хочется.$l"
+      }
+    },
+
+    // ===== George =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_George_Tired",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Tired", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Tired": "Опять весь день на ногах?$a#$b#Садись. Старики знают, когда хватит.$s"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_George_AfterTreatment",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment": "Из клиники? Хорошо.$a#$b#Теперь домой — и не геройствуй.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_George_RecoveryCompliant",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant": "Вот так и надо.$a#$b#Не как я в молодости.$s"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_George_RecoveryViolated",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated": "Опять?$a#$b#Слушай врача. Я не лечу — но вижу, когда плохо.$s"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_George_Storm",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Storm", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Storm": "Гром — не для прогулок.$a#$b#Оставайся дома. Эвелин чай заварит.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_George_Social",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Social", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Social": "Людей много — утомляет.$a#$b#Но совсем одной не сиди. Заходи — шум небольшой.$s"
+      }
+    },
+
+    // ===== Marnie =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Marnie_Tired",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Tired", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Tired": "Ты сегодня будто сил нет.$s#$b#Оставь тяжёлое — суп на плите.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Marnie_AfterTreatment",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment": "После больницы всегда хочется домашнего.$h#$b#Загляни — накормлю.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Marnie_RecoveryCompliant",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant": "На режиме? Молодец.$h#$b#Суп всё равно приготовлю — на всякий случай.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Marnie_RecoveryViolated",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated": "Опять с рассвета на ногах?$s#$b#Сначала поешь. Работа подождёт.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Marnie_Storm",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Storm", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Storm": "Гроза? Заходи в дом.$h#$b#У камина тепло. Животные тоже прячутся.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Marnie_Social",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Social", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Social": "Если людей много — можно просто посидеть у меня.$h#$b#Тихо. Без лишних вопросов.$l"
+      }
+    },
+
+    // ===== Robin =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Robin_Tired",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Tired", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Tired": "Ты сегодня на ногах с рассвета — видно.$s#$b#Не таскай тяжёлое. Скажешь — помогу.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Robin_AfterTreatment",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment": "Видела, выходишь из клиники.$0#$b#Отдых — тоже работа. Не забывай.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Robin_RecoveryCompliant",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant": "Без героизма сегодня — правильно.$h#$b#Так держать.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Robin_RecoveryViolated",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated": "Работа на ферме подождёт.$0#$b#Ладно — помогу с делами, но ты не таскай мешки.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Robin_Storm",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Storm", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Storm": "В такую погоду лучше быть дома.$0#$b#У меня в мастерской сухо — если нужно.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Robin_Social",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Social", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Social": "Если толпа утомляет — загляни.$0#$b#Можно просто посидеть. Без обязательств.$l"
+      }
+    },
+
+    // ===== Jodi =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Jodi_Tired",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Tired", "Hearts:Jodi": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Tired": "Ты сегодня такая уставшая…$s#$b#Оставь работу. Пирог ещё тёплый — возьми кусок.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Jodi_AfterTreatment",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment", "Hearts:Jodi": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment": "Слышала, ты из клиники.$l#$b#Домашняя еда поможет. Загляни, если голодна.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Jodi_RecoveryCompliant",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant", "Hearts:Jodi": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant": "Рада, что бережёшь себя.$h#$b#Матери это видно сразу.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Jodi_RecoveryViolated",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated", "Hearts:Jodi": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated": "Опять не отдыхаешь?$s#$b#Поешь хотя бы. Я не ругаю — просто переживаю.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Jodi_Storm",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Storm", "Hearts:Jodi": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Storm": "Гроза пугает детей — и меня тоже.$s#$b#Приходи к нам. Вместе не так страшно.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Jodi_Social",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Social", "Hearts:Jodi": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Social": "Если одиноко — заходи на ужин.$h#$b#Не обязательно много говорить. Просто рядом.$l"
+      }
+    },
+
+    // ===== Caroline =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Caroline_Tired",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Tired", "Hearts:Caroline": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Tired": "Ты сегодня выглядишь измотанной.$s#$b#Присядь в саду — чай с мятой поможет.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Caroline_AfterTreatment",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment", "Hearts:Caroline": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment": "После врача нужен покой.$0#$b#Заходи — заварю травяной чай.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Caroline_RecoveryCompliant",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant", "Hearts:Caroline": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant": "Хорошо, что слушаешь.$h#$b#Тело благодарит — это чувствуется.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Caroline_RecoveryViolated",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated", "Hearts:Caroline": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated": "Ты снова не отдыхаешь?$s#$b#Без лекций. Просто — ложись пораньше сегодня.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Caroline_Storm",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Storm", "Hearts:Caroline": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Storm": "Гроза? У нас уютно.$h#$b#Чай, тишина — переждёшь.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Caroline_Social",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Social", "Hearts:Caroline": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Social": "Если хочется тишины — сад всегда открыт.$h#$b#Можно просто посидеть. Я не буду мешать.$l"
+      }
+    },
+
+    // ===== Gus =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Gus_Tired",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Tired", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Tired": "Ты сегодня на ногах еле держишься.$s#$b#Садись. Поем — потом отдых.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Gus_AfterTreatment",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment": "После врача — лёгкий ужин.$h#$b#Салун тёплый. Угощаю.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Gus_RecoveryCompliant",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Gus_RecoveryCompliant": "На режиме? Молодец.$h#$b#Заходи — угощу чем-нибудь тёплым.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Gus_RecoveryViolated",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Gus_RecoveryViolated": "Опять на ногах весь день?$s#$b#Садись. Принесу воды. Работа подождёт.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Gus_Storm",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Storm", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Gus_Storm": "Гроза? В салуне тепло и сухо.$h#$b#Пережди здесь — без спешки.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_HomeCare_Gus_Social",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_HomeCare_Social", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_HomeCare_Gus_Social": "Если людей много — у окна тихий угол.$h#$b#Садись. Никто не обязан разговаривать.$l"
+      }
+    }
+  ]
+}

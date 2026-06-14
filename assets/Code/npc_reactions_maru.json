@@ -1,0 +1,133 @@
+{
+  "Changes": [
+    {
+      "LogName": "HarveyOverhaul Maru NPC reaction bridge topics",
+      "Action": "EditData",
+      "Target": "Data/ConversationTopics",
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_Injury": "2",
+        "HarveyOverhaul_NPCReaction_Maru_AfterTreatment": "2",
+        "HarveyOverhaul_NPCReaction_Maru_RecoveryViolated": "2",
+        "HarveyOverhaul_NPCReaction_Maru_RecoveryCompliant": "2",
+        "HarveyOverhaul_NPCReaction_Maru_MineRescue": "2",
+        "HarveyOverhaul_NPCReaction_Maru_Overwork": "2",
+        "HarveyOverhaul_NPCReaction_Maru_SocialAnxiety": "2",
+        "HarveyOverhaul_NPCReaction_Maru_StormFear": "2",
+        "HarveyOverhaul_NPCReaction_Maru_Dating": "2",
+        "HarveyOverhaul_NPCReaction_Maru_Engaged": "2",
+        "HarveyOverhaul_NPCReaction_Maru_Married": "2"
+      }
+    },
+
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_Injury",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_Injury" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_Injury": "Если назначен осмотр — не пропускай, ладно?$0#$b#Доктор сегодня сосредоточеннее обычного. Я не драматизирую — просто замечаю.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_AfterTreatment",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_AfterTreatment" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_AfterTreatment": "Сегодня всё выглядит аккуратно — это хороший знак.$h#$b#Восстановление идёт ровнее, когда не торопишься. Так обычно и бывает.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_RecoveryViolated",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_RecoveryViolated" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_RecoveryViolated": "Харви сегодня сосредоточеннее обычного.$s#$b#Я не лезу в детали — это не моё. Но режим он составляет не для галочки.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_RecoveryCompliant",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_RecoveryCompliant" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_RecoveryCompliant": "Вижу — сегодня без героизма.$h#$b#Так процесс и работает: медленно, но стабильно. Цифры любят терпение.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_MineRescue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_MineRescue" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_MineRescue": "После шахтного случая…$s#$b#Осмотры по расписанию, без пропусков. Звучит банально — но это реально помогает.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_Overwork",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_Overwork" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_Overwork": "Усталость накапливается быстрее, чем кажется — так устроен организм.$0#$b#Перерыв — не лень, а часть процесса. Серьёзно.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_SocialAnxiety",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_SocialAnxiety" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_SocialAnxiety": "Если толпа давит — можно выйти подышать.$0#$b#В коридоре клиники тихо. Я… не буду стоять над душой.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_StormFear",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_StormFear" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_StormFear": "Гроза многих нервничает — это нормальная реакция нервной системы.$0#$b#Если нужно укрытие — в здании обычно спокойно. Можешь просто посидеть.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_Dating",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_Dating" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_Dating": "Э-э… доктор просил напомнить: щадящий режим.$0#$b#На работе я не комментирую личное. Но сегодня он… очень внимателен. Заметно.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_Engaged",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_Engaged" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_Engaged": "Помолвка не отменяет осмотры.$h#$b#Харви старается — поддерживай его, поддерживая себя. Банально, но правда.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Maru_Married",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Priority": "Late + 6",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_Maru_Married" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Maru_Married": "Дома вы вместе — это хорошо.$h#$b#В клинике он врач. Но когда просит передать «не переутомляйся»… я передаю.$l"
+      }
+    }
+  ]
+}

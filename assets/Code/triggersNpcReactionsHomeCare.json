@@ -1,0 +1,64 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_triggerNPCReaction_HomeCare_Tired": {
+          "Id": "{{ModId}}_triggerNPCReaction_HomeCare_Tired",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressTired\" \"PLAYER_HAS_BUFF Current buffStressOverwork\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicOverworkBreakActive\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFarmerExhausted\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_HomeCare_Tired 2"
+          ],
+          "LogName": "HomeCare bridge HarveyOverhaul_NPCReaction_HomeCare_Tired"
+        },
+        "{{ModId}}_triggerNPCReaction_HomeCare_AfterTreatment": {
+          "Id": "{{ModId}}_triggerNPCReaction_HomeCare_AfterTreatment",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstTreatmentComplete\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTreatmentCompleted\" \"PLAYER_HAS_BUFF Current buffHarveyTreatment\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment 2"
+          ],
+          "LogName": "HomeCare bridge HarveyOverhaul_NPCReaction_HomeCare_AfterTreatment"
+        },
+        "{{ModId}}_triggerNPCReaction_HomeCare_RecoveryCompliant": {
+          "Id": "{{ModId}}_triggerNPCReaction_HomeCare_RecoveryCompliant",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Perfect\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_WithWarnings\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Normal\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant 2"
+          ],
+          "LogName": "HomeCare bridge HarveyOverhaul_NPCReaction_HomeCare_RecoveryCompliant"
+        },
+        "{{ModId}}_triggerNPCReaction_HomeCare_RecoveryViolated": {
+          "Id": "{{ModId}}_triggerNPCReaction_HomeCare_RecoveryViolated",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowStamina\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowHealth\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LateNight\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Rain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mild\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Medium\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Severe\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated 2"
+          ],
+          "LogName": "HomeCare bridge HarveyOverhaul_NPCReaction_HomeCare_RecoveryViolated"
+        },
+        "{{ModId}}_triggerNPCReaction_HomeCare_Storm": {
+          "Id": "{{ModId}}_triggerNPCReaction_HomeCare_Storm",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_HomeCare_Storm 2"
+          ],
+          "LogName": "HomeCare bridge HarveyOverhaul_NPCReaction_HomeCare_Storm"
+        },
+        "{{ModId}}_triggerNPCReaction_HomeCare_Social": {
+          "Id": "{{ModId}}_triggerNPCReaction_HomeCare_Social",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressSocial\" \"PLAYER_HAS_BUFF Current buffStressLonely\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressTreatmentSocialFollowup\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_HomeCare_Social 2"
+          ],
+          "LogName": "HomeCare bridge HarveyOverhaul_NPCReaction_HomeCare_Social"
+        }
+      }
+    }
+  ]
+}

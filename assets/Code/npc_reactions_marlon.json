@@ -1,0 +1,111 @@
+{
+  "Changes": [
+    {
+      "LogName": "HarveyOverhaul Marlon NPC reaction bridge topics",
+      "Action": "EditData",
+      "Target": "Data/ConversationTopics",
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_MineRescue": "2",
+        "HarveyOverhaul_NPCReaction_Marlon_SevereInjury": "2",
+        "HarveyOverhaul_NPCReaction_Marlon_RecoveryActive": "2",
+        "HarveyOverhaul_NPCReaction_Marlon_MineBanRespected": "2",
+        "HarveyOverhaul_NPCReaction_Marlon_MinesTooEarly": "2",
+        "HarveyOverhaul_NPCReaction_Marlon_MineBanViolated": "2",
+        "HarveyOverhaul_NPCReaction_Marlon_Dating": "2",
+        "HarveyOverhaul_NPCReaction_Marlon_Engaged": "2",
+        "HarveyOverhaul_NPCReaction_Marlon_Married": "2"
+      }
+    },
+
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Marlon_MineRescue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Marlon_MineRescue" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_MineRescue": "Тебя вытащили — запомни это.$u#$b#Шахта никуда не денется. Приказ врача важнее гордости.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Marlon_SevereInjury",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Marlon_SevereInjury" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_SevereInjury": "Такие травмы не терпят спешки.$u#$b#Харви знает, что делает. Не спорь с ним — вернись, когда разрешит.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Marlon_RecoveryActive",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Marlon_RecoveryActive" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_RecoveryActive": "Режим есть режим.$0#$b#Соблюдай его — потом скажешь спасибо. Я тоже знаю цену спешке.$u"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Marlon_MineBanRespected",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Marlon_MineBanRespected" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_MineBanRespected": "Вижу — в шахты не лезешь.$0#$b#Правильно. Пара дней покоя стоят любой жилы.$u"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Marlon_MinesTooEarly",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Marlon_MinesTooEarly" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_MinesTooEarly": "Снова внизу?$u#$b#Рано. Харви запретил не из вредности — отложи поход. К нему, если сомневаешься.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Marlon_MineBanViolated",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 6",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Marlon_MineBanViolated" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_MineBanViolated": "Шахта для тебя закрыта — это приказ врача, не мой.$u#$b#Я не лечу. Но советую послушать Харви и не спорить.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Marlon_Dating",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 6",
+      "When": { "Relationship:Harvey": "Dating", "HasConversationTopic": "HarveyOverhaul_NPCReaction_Marlon_Dating" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_Dating": "Харви волновался не зря.$0#$b#Не про ваши дела — про безопасность. Он был прав. Шахта подождёт.$u"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Marlon_Engaged",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 6",
+      "When": { "Relationship:Harvey": "Engaged", "HasConversationTopic": "HarveyOverhaul_NPCReaction_Marlon_Engaged" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_Engaged": "Помолвка не делает тебя неуязвимой.$u#$b#Приказ врача важнее гордости. Харви заботится — слушай.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Marlon_Married",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 6",
+      "When": { "Relationship:Harvey": "Married", "HasConversationTopic": "HarveyOverhaul_NPCReaction_Marlon_Married" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Marlon_Married": "Он ждал дома.$u#$b#Харви был прав настаивать. Я не лезу в вашу жизнь — только в безопасность: отложи поход.$0"
+      }
+    }
+  ]
+}

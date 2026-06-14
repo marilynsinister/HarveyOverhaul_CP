@@ -9,26 +9,26 @@
                 "Relationship:Harvey": "Friendly"
             },
             "Entries": {
-                "HarveyMod_TreatmentNeeded_Hurt": "Покажи, где болит. Сейчас обработаю — быстро и аккуратно.$u#$b#Не откладывай — я переживаю.$a#$action HarveyOverhaulInjury_StartTreatment buffHurt",
-                "HarveyMod_TreatmentNeeded_BadlyHurt": "Травма серьёзная — вижу.$a#$b#Садись, не двигайся. Начинаем лечение прямо сейчас.$a#$action HarveyOverhaulInjury_StartTreatment buffBadlyHurt",
-                "HarveyMod_TreatmentNeeded_SprainedAnkle": "Растяжение связок.$a#$b#Не наступай на эту ногу. Сейчас зафиксирую — я буду следить.$a#$action HarveyOverhaulInjury_StartTreatment buffSprainedAnkle",
+                "HarveyMod_TreatmentNeeded_Hurt": "Покажи, где болит — я слишком хорошо тебя знаю, чтобы поверить, что «ничего страшного».$u#$b#Сейчас обработаю, быстро и аккуратно. Не откладывай.$a#$action HarveyOverhaulInjury_StartTreatment buffHurt",
+                "HarveyMod_TreatmentNeeded_BadlyHurt": "Травма серьёзная — я вижу.$a#$b#Садись, не двигайся. Начинаем лечение прямо сейчас — я не отойду.$a#$action HarveyOverhaulInjury_StartTreatment buffBadlyHurt",
+                "HarveyMod_TreatmentNeeded_SprainedAnkle": "Растяжение связок.$a#$b#Не наступай на эту ногу. Сейчас зафиксирую — я буду следить, пока не станет безопасно.$a#$action HarveyOverhaulInjury_StartTreatment buffSprainedAnkle",
                 "HarveyMod_TreatmentNeeded_BruisedRibs": "Ушиб рёбер.$s#$b#Дыши медленно — осмотрю. Похоже, перелома нет, но покой и повязка обязательны.$a#$action HarveyOverhaulInjury_StartTreatment buffBruisedRibs",
-                "HarveyMod_TreatmentNeeded_BackStrain": "Спазм в спине.$s#$b#Сначала покой. Сниму боль и наложу повязку — сегодня без героизма.$a#$action HarveyOverhaulInjury_StartTreatment buffBackStrain",
-                "HarveyMod_TreatmentNeeded_DeepCuts": "Подожди. Глубокий порез.$s#$b#Садись — обработаю сейчас. Не терпи боль.$a#$action HarveyOverhaulInjury_StartTreatment buffDeepCuts",
+                "HarveyMod_TreatmentNeeded_BackStrain": "Спазм в спине.$s#$b#Ложись — сниму боль и наложу повязку. Сегодня без героизма, ладно?$u#$action HarveyOverhaulInjury_StartTreatment buffBackStrain",
+                "HarveyMod_TreatmentNeeded_DeepCuts": "Подожди. Глубокий порез.$s#$b#Садись — обработаю сейчас. Не терпи боль, пожалуйста.$a#$action HarveyOverhaulInjury_StartTreatment buffDeepCuts",
                 "HarveyMod_TreatmentNeeded_BurnWounds": "Ожог.$a#$b#Стерильная повязка и мазь — сейчас. Не мочи рану.$u#$action HarveyOverhaulInjury_StartTreatment buffBurnWounds",
                 "HarveyMod_TreatmentNeeded_InfectedWound": "Похоже, есть признаки воспаления раны.$a#$b#Это серьёзно. Начинаем лечение немедленно — я не успокоюсь, пока не стабилизирую.$a#$action HarveyOverhaulInjury_StartTreatment buffInfectedWound",
-                "HarveyMod_TreatmentNeeded_TornMuscles": "Надрыв мышцы.$a#$b#Зафиксирую конечность. Никаких нагрузок до следующего осмотра.$a#$action HarveyOverhaulInjury_StartTreatment buffTornMuscles",
-                "HarveyMod_TreatmentNeeded_Concussion": "Подозрение на сотрясение.$a#$b#Проверю зрачки и рефлексы. Полный покой — я рядом.$a#$action HarveyOverhaulInjury_StartTreatment buffConcussion",
+                "HarveyMod_TreatmentNeeded_TornMuscles": "Надрыв мышцы.$a#$b#Зафиксирую конечность. Никаких нагрузок до следующего осмотра — я рядом.$a#$action HarveyOverhaulInjury_StartTreatment buffTornMuscles",
+                "HarveyMod_TreatmentNeeded_Concussion": "Подозрение на сотрясение.$a#$b#Проверю зрачки и рефлексы. Полный покой — я рядом на каждом шаге.$a#$action HarveyOverhaulInjury_StartTreatment buffConcussion",
                 "HarveyMod_TreatmentNeeded_FracturedBone": "Похоже на перелом.$a#$b#Не двигайся — сейчас зафиксирую. Я переживаю, но всё под контролем.$a#$action HarveyOverhaulInjury_StartTreatment buffFracturedBone",
                 "HarveyMod_TreatmentNeeded_ShrapnelWounds": "Несколько осколочных ран.$a#$b#Подготовлю инструменты. Долго, но я не отойду, пока не закончу.$a#$action HarveyOverhaulInjury_StartTreatment buffShrapnelWounds",
                 "HarveyMod_TreatmentNeeded_SurgicalWound": "Послеоперационный шов нужно проверить.$a#$b#Осмотрю на воспаление — начинаем уход прямо сейчас.$a#$action HarveyOverhaulInjury_StartTreatment buffSurgicalWound",
-                "HarveyMod_TreatmentNeeded_Cold": "Похоже, простуда.$s#$b#Есть признаки воспаления — жаропонижающее, покой и чай. Начинаем лечение.$a#$action HarveyOverhaulInjury_StartTreatment buffCold",
-                "HarveyMod_TreatmentNeeded_WetBandage": "Повязка промокла — риск инфекции.$a#$b#Сменю прямо сейчас. Не откладывай.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_WetBandage",
+                "HarveyMod_TreatmentNeeded_Cold": "Похоже, простуда.$s#$b#Есть признаки воспаления — жаропонижающее, покой и чай. Начинаем лечение — не тяни.$u#$action HarveyOverhaulInjury_StartTreatment buffCold",
+                "HarveyMod_TreatmentNeeded_WetBandage": "Повязка промокла — риск инфекции.$a#$b#Сменю прямо сейчас. Пожалуйста, не откладывай.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_WetBandage",
                 "HarveyMod_TreatmentNeeded_DirtyWound": "Рана загрязнена — это опасно.$a#$b#Сейчас полная обработка. Не двигайся — я уже всё подготовил.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_DirtyWound",
-                "HarveyMod_TreatmentNeeded_WetStitches": "Швы намокли.$a#$b#Проверю и зафиксирую заново. Мне не нравится, что так вышло — но исправим.$a#$action HarveyOverhaulInjury_TreatComplication HarveyMod_WetStitches",
-                "HarveyMod_TreatmentNeeded_AllergicRash": "Похоже, аллергия на перевязочный материал.$a#$b#Сниму повязку и подберу другой состав. Покажи, где зуд.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_AllergicRash",
+                "HarveyMod_TreatmentNeeded_WetStitches": "Швы намокли.$a#$b#Проверю и зафиксирую заново. Мне не нравится, что так вышло — но мы исправим.$a#$action HarveyOverhaulInjury_TreatComplication HarveyMod_WetStitches",
+                "HarveyMod_TreatmentNeeded_AllergicRash": "Похоже, аллергия на перевязочный материал.$a#$b#Сниму повязку и подберу другой состав. Покажи, где зуд — не терпи.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_AllergicRash",
                 "HarveyMod_TreatmentNeeded_PainFlare": "Боль усилилась — так быть не должно.$a#$b#Проверю рану и скорректирую обезболивание. Садись — я рядом.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_PainFlare",
-                "HarveyMod_TreatmentNeeded_Neglect": "Уход за раной срывался — вижу последствия.$a#$b#Сейчас полная обработка. Мне тревожно за инфекцию — больше так нельзя.$s#$action HarveyOverhaulInjury_TreatComplication HarveyMod_Neglect"
+                "HarveyMod_TreatmentNeeded_Neglect": "Уход за раной срывался — вижу последствия.$s#$b#Сейчас полная обработка. Мне тревожно за инфекцию — давай больше так не будем.$a#$action HarveyOverhaulInjury_TreatComplication HarveyMod_Neglect"
             }
         }
     ]

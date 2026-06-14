@@ -1,0 +1,1481 @@
+{
+  "Changes": [
+    {
+      "LogName": "HarveyOverhaul Young NPC reaction bridge topics",
+      "Action": "EditData",
+      "Target": "Data/ConversationTopics",
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "2",
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "2",
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "2",
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "2",
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "2",
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "2",
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "2",
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "2",
+        "HarveyOverhaul_NPCReaction_Young_Social": "2",
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "2"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Опять урон в шахте?##Шутка. Но если болит — не тянут."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Шутки в сторону.##Я знаю, как там бывает. Отдыхай."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Режим «не герой» — самый сложный босс.##Но ты справишься."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Эй, ты же на режиме…##Шахта никуда не денется. Серьёзно."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Слышала про шахту.##На этот раз без шуток — отлежись."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Ты как после рейда без сейва.##Поспи. Это не слабость."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гроза орует…##Если страшно — в подвале темно, но привычно."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Темнота мне норм.##Но если тяжело — это не «ты слабая». Просто нервы."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Толпы тоже бесят иногда.##Можно не смотреть на всех сразу."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Abigail": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Сохранение не забудь.##И в жизни тоже — стоп, когда тело просит."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Эй, аккуратнее!##Поле подождёт — ты важнее."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Ого…##Сядь. Принесу воды или что скажешь."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Харви составил план?##Давай, ты умеешь держаться."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "План нарушил?##Ладно, все косячат. Завтра снова."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Про шахту слышал.##Жутко. Рад, что вытащили."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Ты на нуле, да?##Присядь — поговорим. Без обязаловки."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гром — как плохой рефрен.##Можем тихо посидеть, если надо."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Без света — как сцена до спецэффектов.##Страшновато. Это нормально."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Толпа может поджать.##Хочешь — уйдём подышать. Я не обидчусь."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Sam": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Ты опять на пределе.##Перерыв — не поражение. Как пауза между треками."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Видел, что ты не в форме.##Не геройствуй."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "…##Я знаю, как больно бывает. Пусть тело восстановится."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Медленно — не значит слабо.##Так и идёт."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Ты снова перегнула…##Режим есть не зря. Я тихо напомню."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Шахта…##Я там тоже не чувствую себя в безопасности. Отдыхай."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Ты выжата.##Тишина дома помогает. Попробуй."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гроза давит на голову.##Я обычно ухожу в тёмную комнату. Можешь тоже."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Темнота… я с ней на «ты».##Если тебе тяжело — не стыдно."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Людей много — шум в голове.##Можно просто уйти. Без объяснений."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Sebastian",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Sebastian": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Ты не спишь.##Одному тоже нужен сон. Я знаю."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Э-э… ты ранена?##Не знаю, что сказать… отдыхай."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Это… серьёзно?##Я принесу воды. Сиди. Учусь заботиться."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Харви дал правила?##Я бы их нарушила сразу… но ты умнее."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Ты же на режиме…##Я тоже вечно «ещё чуть-чуть». Плохая привычка."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Про шахту…##Страшно. Я бы не выдержала."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Ты бледная.##Присядь. Я… не смешная сейчас, правда."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гроза…##Можем в салон. Там хотя бы не гремит снаружи."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Темнота — не мой кадр.##Но если страшно — скажи. Я не буду снимать."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Толпа давит… понимаю.##Можно просто уйти. Я иногда так делаю."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Haley": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Ты перерабатываешь.##Даже я знаю: без отдыха всё мутное. И ты тоже."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Травма? Не тренируйся на ней.##Сначала восстановление — потом спорт."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Это серьёзно.##Отдых, растяжка по врачу. Без экстрима."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "План восстановления — как программа тренировок.##Следуй ему. Результат будет."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Опять перегруз?##Тело не обманешь. Вернись к режиму."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Шахта — не лёгкая травма.##Отлежись. Мышцы не вечные."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Ты без сил.##Ешь, спи, воду пей. Базовые правила."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гром — как свисточек на трибуне.##Пугает. Можно уйти под крышу."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Темнота мешает видеть поляну.##Страх нормален. Не геройствуй."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Толпа — как публика.##Не обязан всем нравиться. Выйди, если тесно."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Alex": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Перетрен.##План дня должен быть с отдыхом. Я тоже учусь."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Ты осторожнее обычного…##Не таскай тяжёлое. Пожалуйста."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Мне больно за тебя…##Послушай Харви. Тихой тебе недели."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Молодец, что соблюдаешь режим.##Перерыв — не слабость."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Харви расстраивается, когда режим нарушают…##А тебе вредно. Согласишься?"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Про шахту…##Дети иногда спрашивают. Я скажу, что всё наладится."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Ты устала до дрожи…##Сядь. Я не буду требовать разговора."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гроза страшная…##Можно просто посидеть тихо. Я рядом."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Темнота тревожит…##Ты не одна. Дыши медленно."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Не обязательно говорить.##Можно просто быть рядом. Я подожду."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Penny": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Ты снова не отдыхаешь…##Закрой глаза хоть на десять минут."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Тело просит покой…##Земля подождёт."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Больно, да?##Не торопи заживление. Оно идёт своим темпом."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Хорошо — ты бережёшь себя.##Ритм важнее скорости."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Ритм сбился…##Вернись к простым шагам. Завтра легче."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Шахта — холод и темнота…##Тепло и тишина помогут сейчас."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Усталость как мутная вода.##Дай себе осять."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гроза над лесом…##Укрытие — не бегство. Это забота."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Тьма в лесу — другая, но страх настоящий.##Свет внутри тоже считается."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "У реки тихо…##Загляни, если людей слишком много."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Leah": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Даже река останавливается в камнях.##Отдых — часть пути."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Тело — хрупкий пергамент.##Береги его, как первый черновик."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Рана глубока…##Дай время. Произведения не торопятся."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Восстановление — тихая глава.##Пишется медленно, но верно."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Глава снова в риске…##Вернись к строкам режима."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Шахта — мрачный сюжет.##Сегодня — отдых у причала."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Усталость — пустая страница.##Закрой глаза. Завтра чернила вернутся."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гром — стих в небе.##Страх перед ним тоже поэзия, не стыд."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Тьма держит тайну.##Если давит — свети в себе, понемногу."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Можно молчать у воды.##Тишина не слабость."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Elliott": "3,4,5,6,7,8,9,10",
+        "Relationship:Harvey |contains=Married,Engaged,Dating": false
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Перепись без паузы изнурила…##Перерыв — как запятая. Нужен."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Чувствую, тебе больно…##Побудь спокойно. Я рядом."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Энергия тонкая сейчас…##Дыши. Тело знает, как заживать."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Ты на верной частоте.##Слушай тело — оно мудрее обычного."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Ритм сбился…##Вдох — выдох. Завтра снова."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Шахта — тяжёлые вибрации…##Постель — мягкий цвет сегодня."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Аура уставшая…##Тёплый чай и пять вдохов. Попробуй."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гроза шумит громко…##Заземлись: ступни в пол, дыхание."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Тьма плотная…##Маленький свет внутри тоже сияет."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Толпа давит волнами…##Можно отойти и подышать. Я понимаю."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Emily": "3,4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Перегретые чакры…##Сядь. Молчание — тоже лечение."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Опять влип?##Не умничай — отдыхай."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Не шутки.##Я знаю, как быстро плохо бывает. Сиди."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Режим — скучно. Работает.##Харви не придумал просто так."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Нарушил опять?##Упрямство не суперсила. Запиши."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Шахта…##Я бы не полез. Ты тоже больше не лезь."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Ты на нуле.##Как я по понедельникам. Только не геройствуй."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гром — мерзко.##Можно спрятаться. Я не смеюсь."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Темнота — хреново.##Если давит — включи что поярче. Без героизма."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Люди — утомительно.##Уйди, если надо. Честно."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Shane": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Переработка — плохая идея.##Закрывающийся салон в голове. Отдых."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Injury — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Injury",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Injury": "Э-э… ты ранена?##Я… не знал бы куда смотреть. Отдыхай."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_InjurySevere — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_InjurySevere",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_InjurySevere": "Я… слышал.##Заказ подождёт. Я понимаю — важнее."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryPlan",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryPlan": "Харви дал правила?##Я бы забыл через час… но ты старайся."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_RecoveryViolated",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_RecoveryViolated": "Опять не слушаешь?##Я тоже упрямый. Но это не помогает."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_MineRescue — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_MineRescue",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_MineRescue": "Шахта…##Страшно. Напарник бы — сразу."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Exhaustion — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Exhaustion",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Exhaustion": "Ты устала…##Сядь. Я молчу. Это тоже помощь."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Thunder — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Thunder",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Thunder": "Гром…##Мастерская громче, но всё равно неприятно."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Darkness — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Darkness",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Darkness": "Темно…##Я привык у горна, но понимаю — страшно."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Social — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Social",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Social": "Э-э… люди…##Можно отойти. Я часто так делаю."
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Young_Overwork — Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Priority": "Late + 6",
+      "When": {
+        "HasConversationTopic": "HarveyOverhaul_NPCReaction_Young_Overwork",
+        "Hearts:Clint": "4,5,6,7,8,9,10"
+      },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Young_Overwork": "Работа к кости…##Я знаю. Заказ подождёт. Правда."
+      }
+    }
+  ]
+}

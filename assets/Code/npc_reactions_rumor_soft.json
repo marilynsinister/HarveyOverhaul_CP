@@ -1,0 +1,146 @@
+{
+  "Changes": [
+    {
+      "LogName": "HarveyOverhaul NPC reaction bridge topic — RumorSoft",
+      "Action": "EditData",
+      "Target": "Data/ConversationTopics",
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "1"
+      }
+    },
+
+    // Ключ диалога = bridge topic; LogName — полный префикс HarveyOverhaul_NPCReaction_RumorSoft_{Npc}
+    // Два варианта на NPC через $c; без диагнозов и «Харви рассказал»
+
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#Тебя давно не было в городе — всё в порядке?$0#$b#Отдых — тоже работа. Не забывай.$h#Харви утром вышел из клиники быстрее обычного.$0#$b#Выглядел занятым. Если нужна помощь — скажи.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#Ты сегодня чуть бледнее обычного.$s#$b#Загляни — напою чаем.$h#Видела, как ты шла мимо ранчо.$0#$b#После таких дней лучше никуда не спешить.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Gus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#Место у окна свободно — согрейся.$h#$b#После визита к доктору пустой желудок не к месту.$0#Харви заходил на минуту — забрал суп на вынос.$0#$b#Если тебе тоже нужно — скажи. Без счёта.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Lewis",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lewis",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Lewis": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#Фермер должен быть здоров — это не просьба, а здравый смысл.$0#$b#Если нужен день передышки — договоримся.$h#Тебя давно не видели на площади.$0#$b#Городу нужен ты в форме, не на износ.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#Солнышко, ты устала.$s#$b#Садись. Нечего всё время бежать.$h#Харви выглядел озабоченным утром.$0#$b#Береги себя. Пожалуйста.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_George",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#Опять еле идёшь?$a#$b#Садись. Геройство надоело всем.$s#Харви старается — ты хоть слушай.$a#$b#Отдых не смертный грех.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Marlon",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marlon",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#На этой неделе в шахтах было неспокойно.$u#$b#После таких историй — пару дней без геройства.$0#Тебя давно не было у входа — и это хорошо.$u#$b#Два дня покоя — не роскошь, а здравый смысл.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Linus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Linus": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#Тело просит покоя — слышно по шагам.$0#$b#Послушай его.$l#Тебя давно не было в лесу.$0#$b#Скучал по твоему смеху. Отдыхай.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Leah",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Leah": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#У реки тихо — загляни, если шум города давит.$0#$b#Природа не торопит.$l#Ты чуть вялее обычного.$s#$b#Пару дней без тяжёлого — и вернётся свет в глазах.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Penny",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Penny": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#Ты в порядке?$l#$b#Можно просто помолчать рядом — я не буду спрашивать лишнего.$0#Харви утром торопился — так бывает, когда переживает.$0#$b#Тебе сейчас важнее отдых, не объяснения.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Abigail": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#После шахт лучше пару дней не геройствовать.$0#$b#Серьёзно. Я тоже иногда забываю.$s#Тебя давно не было на вечерних прогулках.$0#$b#Похоже, клиника стала частым маршрутом.$s#$b#Не гонись.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Shane",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Shane": "4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#...Выглядишь уставшей.$s#$b#Отдых. Работает.$u#Харви мелькнул у салуна — длинный день.$0#$b#Тебе тоже не помешает замедлиться.$u"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RumorSoft_Pam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Pam",
+      "Priority": "Late + 5",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RumorSoft", "Hearts:Pam": "4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RumorSoft": "$c 0.5#Эй. Сядь, если кружится.$s#$b#Не геройствуй на моих глазах.$u#Тебя давно не было на остановке.$0#$b#В автобусе хоть передохнёшь.$h"
+      }
+    }
+  ]
+}

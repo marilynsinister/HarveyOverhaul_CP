@@ -1,0 +1,331 @@
+{
+  "Changes": [
+    {
+      "LogName": "HarveyOverhaul NPC reaction bridge topics",
+      "Action": "EditData",
+      "Target": "Data/ConversationTopics",
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_InjuryRecent": "2",
+        "HarveyOverhaul_NPCReaction_InjuryMine": "2",
+        "HarveyOverhaul_NPCReaction_AfterTreatment": "2",
+        "HarveyOverhaul_NPCReaction_RecoveryViolated": "2",
+        "HarveyOverhaul_NPCReaction_RecoveryViolatedMine": "2",
+        "HarveyOverhaul_NPCReaction_RecoveryCompliant": "2",
+        "HarveyOverhaul_NPCReaction_StormFear": "2",
+        "HarveyOverhaul_NPCReaction_SocialAnxiety": "2",
+        "HarveyOverhaul_NPCReaction_Overwork": "2"
+      }
+    },
+
+    // ===== A. После травмы =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_InjuryRecent — Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_InjuryRecent", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_InjuryRecent": "Ты сегодня осторожнее обычного — видно по походке.$0#$b#Не таскай тяжёлое одна. Скажешь — помогу.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_InjuryRecent — Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_InjuryRecent", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_InjuryRecent": "Слышала, ты не в форме.$0#$b#Не таскай сегодня тяжёлое — сено и мешки подождут.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_InjuryRecent — Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_InjuryRecent", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_InjuryRecent": "Солнышко, не спеши.$h#$b#Отдых — тоже дело. Я подожду.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_InjuryRecent — George",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_InjuryRecent", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_InjuryRecent": "Молодёжь думает, что бессмертная.$a#$b#Однажды тело напомнит. Харви хоть смотрит — слушай его.$s"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_InjuryRecent — Linus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_InjuryRecent", "Hearts:Linus": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_InjuryRecent": "Тело шепчет, когда пора остановиться.$0#$b#Слыши его — земля подождёт.$l"
+      }
+    },
+    // ===== B. После лечения у Харви =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_AfterTreatment — Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_AfterTreatment", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_AfterTreatment": "Видела, выходишь из клиники — уже ровнее идёшь.$h#$b#Харви знает своё дело. Не спорь с ним сегодня.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_AfterTreatment — Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_AfterTreatment", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_AfterTreatment": "После врача — чай и печенье. Заходи, солнышко.$h#$b#Харви умеет лечить. Я видела, как он за тобой присматривает.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_AfterTreatment — Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_AfterTreatment", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_AfterTreatment": "Ты уже лучше выглядишь.$h#$b#После больницы хочется домашнего — загляни, если голодна.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_AfterTreatment — Gus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_AfterTreatment", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_AfterTreatment": "Лёгкий ужин — не ударь по желудку после лечения.$h#$b#Харви знает, что делает. Отдохни.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_AfterTreatment — Linus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_AfterTreatment", "Hearts:Linus": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_AfterTreatment": "Тебе полегчало? Хорошо.$h#$b#Принять помощь — тоже сила.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_AfterTreatment — George",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_AfterTreatment", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_AfterTreatment": "Харви тебя починил? Тогда не ломайся опять.$a#$b#Врач старался — уважай это.$s"
+      }
+    },
+
+    // ===== C. Нарушение режима =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RecoveryViolated — George",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RecoveryViolated", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RecoveryViolated": "В молодости тоже думали, что нас не догонит.$a#$b#Догонит. Послушай Харви.$s"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RecoveryViolated — Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RecoveryViolated", "Hearts:Marnie": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RecoveryViolated": "Опять на ногах с рассвета?$s#$b#Сначала поешь. Режим — не для галочки.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RecoveryViolated — Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RecoveryViolated", "Hearts:Robin": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RecoveryViolated": "Работа подождёт.$0#$b#Ладно, помогу с делами — но ты сядь.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RecoveryViolatedMine — Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 4",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RecoveryViolatedMine", "Hearts:Robin": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RecoveryViolatedMine": "Я видела тебя у входа в шахту…$s#$b#Ты же на режиме. Работа подождёт — правда.$0"
+      }
+    },
+
+    // ===== D. Соблюдение режима =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RecoveryCompliant — Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RecoveryCompliant", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RecoveryCompliant": "Молодец, солнышко. Я знала, что у тебя получится.$h#$b#Так держать.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RecoveryCompliant — Linus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RecoveryCompliant", "Hearts:Linus": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RecoveryCompliant": "Восстановление — тоже труд.$0#$b#Ты выбрала покой. Это мудро.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RecoveryCompliant — Gus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RecoveryCompliant", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RecoveryCompliant": "На режиме? Молодец.$h#$b#Заходи — угощу чем-нибудь тёплым.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_RecoveryCompliant — Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_RecoveryCompliant", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_RecoveryCompliant": "Рада, что слушаешь Харви.$h#$b#Суп всё равно приготовлю — на всякий случай.$0"
+      }
+    },
+
+    // ===== E. Страх грозы =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_StormFear — Linus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_StormFear", "Hearts:Linus": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_StormFear": "Гром пугает многих — это не слабость.$0#$b#Я тоже предпочитаю укрытие, когда небо рычит.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_StormFear — Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_StormFear", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_StormFear": "Гроза за окном? Заходи к нам.$h#$b#У камина тепло. Переждём вместе.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_StormFear — Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_StormFear", "Weather": "storm", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_StormFear": "В такую погоду лучше быть дома.$0#$b#Работа на улице подождёт.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_StormFear — Wizard",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_StormFear", "Hearts:Wizard": "5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_StormFear": "Небо говорит громко — уши слышат.$0#$b#Страх перед громом древнее слов. Уважай его, не стыдись.$l"
+      }
+    },
+
+    // ===== G. Переутомление =====
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Overwork — Robin",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Overwork", "Hearts:Robin": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Overwork": "Ты снова на ногах с рассвета.$s#$b#Хоть воду пей. Скажи, что снять с тебя — помогу.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Overwork — Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Overwork", "Hearts:Marnie": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Overwork": "Оставь инструмент. Суп на плите.$h#$b#Ты пахнешь сеном и усталостью. Садись.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Overwork — Gus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Overwork", "Hearts:Gus": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Overwork": "Ешь. Не на пустой — усталость хуже.$s#$b#Принесу что-нибудь тёплое.$h"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Overwork — Linus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Overwork", "Hearts:Linus": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Overwork": "Даже река останавливается в камнях.$0#$b#Отдых — не лень.$l"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Overwork — Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Overwork", "Hearts:Evelyn": "2,3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Overwork": "Солнышко, садись. Печенье не сбежит.$h#$b#Отдых — тоже забота о себе.$0"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Overwork — George",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Overwork", "Hearts:George": "3,4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Overwork": "В моё время тоже гнулись.$a#$b#Потом спина напомнила. Садись.$s"
+      }
+    },
+    {
+      "LogName": "HarveyOverhaul_NPCReaction_Overwork — Pam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Pam",
+      "Priority": "Late + 3",
+      "When": { "HasConversationTopic": "HarveyOverhaul_NPCReaction_Overwork", "Hearts:Pam": "4,5,6,7,8,9,10" },
+      "Entries": {
+        "HarveyOverhaul_NPCReaction_Overwork": "Опять мёртвая на ногах?$s#$b#Садись. Я не кусаюсь.$u"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_triggerNPCReaction_RumorSoft": {
+          "Id": "{{ModId}}_triggerNPCReaction_RumorSoft",
+          "Trigger": "DayStarted",
+          "Condition": "RANDOM 0.18, !FestivalDay, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyOverhaul_NPCReaction_RumorSoft, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSprainedAnkle\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBruisedRibs\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBackStrain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicDeepCuts\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBurnWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTornMuscles\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicCold\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFarmerExhausted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstTreatmentComplete\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTreatmentCompleted\" \"PLAYER_HAS_BUFF Current buffHarveyTreatment\" \"PLAYER_HAS_BUFF Current buffHarveyIntensiveCare\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\" \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\" \"PLAYER_HAS_BUFF Current buffStressSocial\" \"PLAYER_HAS_BUFF Current buffStressOverwork\" \"PLAYER_HAS_BUFF Current buffStressTired\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicOverworkBreakActive\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_RumorSoft 1"
+          ],
+          "LogName": "Rare ambient HarveyOverhaul_NPCReaction_RumorSoft bridge (1 day)"
+        }
+      }
+    }
+  ]
+}

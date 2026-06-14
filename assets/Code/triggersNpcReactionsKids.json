@@ -1,0 +1,40 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_triggerNPCReaction_Kids_Rest": {
+          "Id": "{{ModId}}_triggerNPCReaction_Kids_Rest",
+          "Trigger": "DayStarted",
+          "Condition": "RANDOM 0.12, !FestivalDay, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyOverhaul_NPCReaction_Kids_Cooldown, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSprainedAnkle\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBackStrain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBruisedRibs\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFarmerExhausted\" \"PLAYER_HAS_BUFF Current buffStressTired\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Kids_Rest 1",
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Kids_Cooldown 4"
+          ],
+          "LogName": "Kids bridge HarveyOverhaul_NPCReaction_Kids_Rest (rare, 4d cooldown)"
+        },
+        "{{ModId}}_triggerNPCReaction_Kids_Kind": {
+          "Id": "{{ModId}}_triggerNPCReaction_Kids_Kind",
+          "Trigger": "DayStarted",
+          "Condition": "RANDOM 0.12, !FestivalDay, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyOverhaul_NPCReaction_Kids_Cooldown, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstTreatmentComplete\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTreatmentCompleted\" \"PLAYER_HAS_BUFF Current buffHarveyTreatment\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Kids_Kind 1",
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Kids_Cooldown 4"
+          ],
+          "LogName": "Kids bridge HarveyOverhaul_NPCReaction_Kids_Kind (rare, 4d cooldown)"
+        },
+        "{{ModId}}_triggerNPCReaction_Kids_Storm": {
+          "Id": "{{ModId}}_triggerNPCReaction_Kids_Storm",
+          "Trigger": "DayStarted",
+          "Condition": "RANDOM 0.12, !FestivalDay, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyOverhaul_NPCReaction_Kids_Cooldown, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Kids_Storm 1",
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Kids_Cooldown 4"
+          ],
+          "LogName": "Kids bridge HarveyOverhaul_NPCReaction_Kids_Storm (rare, 4d cooldown)"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_triggerNPCReaction_Young_Injury": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_Injury",
+          "Trigger": "DayStarted",
+          "Condition": "GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSprainedAnkle\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBruisedRibs\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBackStrain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicDeepCuts\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBurnWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTornMuscles\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicCold\", !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue, !PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion, !PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone, !PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds, !PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_Injury 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_Injury"
+        },
+        "{{ModId}}_triggerNPCReaction_Young_InjurySevere": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_InjurySevere",
+          "Trigger": "DayStarted",
+          "Condition": "GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\", !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_InjurySevere 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_InjurySevere"
+        },
+        "{{ModId}}_triggerNPCReaction_Young_RecoveryPlan": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_RecoveryPlan",
+          "Trigger": "DayStarted",
+          "Condition": "GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Perfect\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_WithWarnings\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Normal\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanPerfect\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_RecoveryPlan 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_RecoveryPlan"
+        },
+        "{{ModId}}_triggerNPCReaction_Young_RecoveryViolated": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_RecoveryViolated",
+          "Trigger": "DayStarted",
+          "Condition": "GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowStamina\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowHealth\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LateNight\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Rain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mild\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Medium\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Severe\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_RecoveryViolated 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_RecoveryViolated"
+        },
+        "{{ModId}}_triggerNPCReaction_Young_MineRescue": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_MineRescue",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_MineRescue 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_MineRescue"
+        },
+        "{{ModId}}_triggerNPCReaction_Young_Exhaustion": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_Exhaustion",
+          "Trigger": "DayStarted",
+          "Condition": "GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFarmerExhausted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown\" \"PLAYER_HAS_BUFF Current buffStressTired\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_Exhaustion 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_Exhaustion"
+        },
+        "{{ModId}}_triggerNPCReaction_Young_Thunder": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_Thunder",
+          "Trigger": "DayStarted",
+          "Condition": "GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_Thunder 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_Thunder"
+        },
+        "{{ModId}}_triggerNPCReaction_Young_Darkness": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_Darkness",
+          "Trigger": "DayStarted",
+          "Condition": "GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressDarkness\" \"PLAYER_HAS_BUFF Current buffDarknessLevel1\" \"PLAYER_HAS_BUFF Current buffDarknessLevel2\" \"PLAYER_HAS_BUFF Current buffDarknessLevel3\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicDarknessTherapyStart\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressDarkness\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressDarknessLevel2\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressDarknessLevel3\" \"PLAYER_HAS_QUEST Current HarveyMod_DarknessStep1\" \"PLAYER_HAS_QUEST Current HarveyMod_DarknessStep2\" \"PLAYER_HAS_QUEST Current HarveyMod_DarknessStep3\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_Darkness 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_Darkness"
+        },
+        "{{ModId}}_triggerNPCReaction_Young_Social": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_Social",
+          "Trigger": "DayStarted",
+          "Condition": "GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressSocial\" \"PLAYER_HAS_BUFF Current buffStressLonely\" \"PLAYER_HAS_QUEST Current HarveyMod_SocialRecovery\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressTreatmentSocialFollowup\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_Social 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_Social"
+        },
+        "{{ModId}}_triggerNPCReaction_Young_Overwork": {
+          "Id": "{{ModId}}_triggerNPCReaction_Young_Overwork",
+          "Trigger": "DayStarted",
+          "Condition": "GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressOverwork\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicOverworkBreakActive\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Young_Overwork 2"
+          ],
+          "LogName": "Young bridge HarveyOverhaul_NPCReaction_Young_Overwork"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_triggerNPCReaction_Maru_Injury": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_Injury",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSprainedAnkle\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBruisedRibs\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBackStrain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicDeepCuts\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBurnWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTornMuscles\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicCold\", !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_Injury 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_Injury"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_MineRescue": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_MineRescue",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_MineRescue 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_MineRescue"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_AfterTreatment": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_AfterTreatment",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstTreatmentComplete\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTreatmentCompleted\" \"PLAYER_HAS_BUFF Current buffHarveyTreatment\" \"PLAYER_HAS_BUFF Current buffHarveyIntensiveCare\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_AfterTreatment 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_AfterTreatment"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_RecoveryViolated": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_RecoveryViolated",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowStamina\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowHealth\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LateNight\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Rain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mild\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Medium\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Severe\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_RecoveryViolated 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_RecoveryViolated"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_RecoveryCompliant": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_RecoveryCompliant",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Perfect\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_WithWarnings\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Normal\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanPerfect\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_RecoveryCompliant 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_RecoveryCompliant"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_Overwork": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_Overwork",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressOverwork\" \"PLAYER_HAS_BUFF Current buffStressTired\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicOverworkBreakActive\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_Overwork 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_Overwork"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_SocialAnxiety": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_SocialAnxiety",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressSocial\" \"PLAYER_HAS_QUEST Current HarveyMod_SocialRecovery\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressTreatmentSocialFollowup\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_SocialAnxiety 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_SocialAnxiety"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_StormFear": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_StormFear",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_StormFear 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_StormFear"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_Dating": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_Dating",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSprainedAnkle\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBruisedRibs\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBackStrain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicDeepCuts\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBurnWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTornMuscles\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicCold\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstTreatmentComplete\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTreatmentCompleted\" \"PLAYER_HAS_BUFF Current buffHarveyTreatment\" \"PLAYER_HAS_BUFF Current buffHarveyIntensiveCare\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowStamina\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowHealth\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LateNight\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Rain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mild\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Medium\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Severe\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Perfect\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_WithWarnings\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Normal\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanPerfect\" \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\" \"PLAYER_HAS_BUFF Current buffStressSocial\" \"PLAYER_HAS_QUEST Current HarveyMod_SocialRecovery\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressTreatmentSocialFollowup\" \"PLAYER_HAS_BUFF Current buffStressOverwork\" \"PLAYER_HAS_BUFF Current buffStressTired\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicOverworkBreakActive\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_Dating 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_Dating"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_Engaged": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_Engaged",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSprainedAnkle\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBruisedRibs\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBackStrain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicDeepCuts\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBurnWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTornMuscles\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicCold\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstTreatmentComplete\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTreatmentCompleted\" \"PLAYER_HAS_BUFF Current buffHarveyTreatment\" \"PLAYER_HAS_BUFF Current buffHarveyIntensiveCare\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowStamina\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowHealth\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LateNight\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Rain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mild\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Medium\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Severe\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Perfect\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_WithWarnings\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Normal\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanPerfect\" \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\" \"PLAYER_HAS_BUFF Current buffStressSocial\" \"PLAYER_HAS_QUEST Current HarveyMod_SocialRecovery\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressTreatmentSocialFollowup\" \"PLAYER_HAS_BUFF Current buffStressOverwork\" \"PLAYER_HAS_BUFF Current buffStressTired\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicOverworkBreakActive\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_Engaged 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_Engaged"
+        },
+        "{{ModId}}_triggerNPCReaction_Maru_Married": {
+          "Id": "{{ModId}}_triggerNPCReaction_Maru_Married",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSprainedAnkle\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBruisedRibs\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBackStrain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicDeepCuts\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBurnWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTornMuscles\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicCold\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstTreatmentComplete\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTreatmentCompleted\" \"PLAYER_HAS_BUFF Current buffHarveyTreatment\" \"PLAYER_HAS_BUFF Current buffHarveyIntensiveCare\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowStamina\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowHealth\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LateNight\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Rain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mild\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Medium\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Severe\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Perfect\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_WithWarnings\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Normal\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanPerfect\" \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\" \"PLAYER_HAS_BUFF Current buffStressSocial\" \"PLAYER_HAS_QUEST Current HarveyMod_SocialRecovery\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressTreatmentSocialFollowup\" \"PLAYER_HAS_BUFF Current buffStressOverwork\" \"PLAYER_HAS_BUFF Current buffStressTired\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicOverworkBreakActive\"",
+          "Actions": [
+            "AddConversationTopic HarveyOverhaul_NPCReaction_Maru_Married 2"
+          ],
+          "LogName": "Maru bridge HarveyOverhaul_NPCReaction_Maru_Married"
+        }
+      }
+    }
+  ]
+}

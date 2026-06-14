@@ -15,7 +15,7 @@
     pause 300/
     faceDirection farmer 2/
     emote Harvey 16/
-    speak Harvey \"Тише. Это я.$s\"/
+    speak Harvey \"Солнышко, тише. Это я.$s\"/
     pause 400/
     speak Harvey \"Не вставай. Я только проверю, как ты держишься.$u\"/
     pause 300/
@@ -26,11 +26,11 @@
     playSound dwop/
     speak Harvey \"Температуры нет... хорошо.$s\"/
     pause 300/
-    speak Harvey \"Но пульс говорит мне, что день был хуже, чем ты собиралась признать.$a\"/
+    speak Harvey \"Но пульс говорит мне, что день был тяжелее, чем ты, кажется, думаешь.$s\"/
     pause 400/
     speak Harvey \"Я не буду читать лекцию ночью. Не сегодня.$s\"/
     pause 300/
-    speak Harvey \"Сегодня ты пьёшь воду, ложишься удобнее и позволяешь мне убедиться, что боль не усиливается.$a\"/
+    speak Harvey \"Сегодня — вода, удобнее уложиться и дать мне убедиться, что боль не растёт.$u\"/
     pause 400/
     message \"Он поправляет одеяло и на секунду задерживает руку у твоего запястья.\"/
     pause 300/
@@ -39,7 +39,7 @@
     pause 300/
     speak Harvey \"Я рядом. Если станет хуже — разбудишь меня сразу.$l\"/
     pause 400/
-    speak Harvey \"И да, это предписание, а не просьба.$a\"/
+    speak Harvey \"Это предписание — не упрямство с моей стороны, а то, что сейчас нужно.$s\"/
     pause 500/
     action removeConversationTopic topicHarvey_NightRoundSevereFirst/
     action addConversationTopic topicHarvey_NightRoundFollowup 2/
