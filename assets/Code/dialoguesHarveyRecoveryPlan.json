@@ -26,7 +26,10 @@
                 "HarveyMod_RecoveryPlanViolated_Severe": "Это уже не «усталость» — это риск.$a#$b#Сегодня не засчитано. Я продлеваю режим на один день и жду вас на осмотре.$u",
                 "HarveyMod_RecoveryPlanExtended": "Я добавил ещё один день к плану.$s#$b#Не как наказание — как страховку. Пожалуйста, соблюдайте режим.$u",
                 "HarveyMod_RecoveryPlanMaxExtensionsReached": "Я больше не буду удлинять план.$a#$b#Режим закончится по сроку — но контрольный визит обязателен.$u",
-                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a"
+                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a",
+                "HarveyMod_RecoveryPlan_NeedVisit": "Я записал, что нам нужно поговорить о режиме восстановления. Сначала осмотр — потом остальное.$u#$action HarveyOverhaulInjury_RecoveryPlanTalk NeedVisit",
+                "HarveyMod_RecoveryPlan_Completed_Perfect": "Вы выполнили весь план. Без срывов, без тайных походов в шахту.$h#$b#Я горжусь вами. Честно.$l#$b#Сегодня я впервые за долгое время могу выдохнуть.$h#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedPerfect",
+                "HarveyMod_RecoveryPlan_Completed_WithWarnings": "План завершён. Да, с парой моментов, от которых у меня до сих пор напрягаются плечи.$u#$b#Но вы остановились, когда это было важно. И дошли до конца.$h#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedWithWarnings"
             }
         },
         {
@@ -55,7 +58,10 @@
                 "HarveyMod_RecoveryPlanViolated_Severe": "Это уже не усталость — это риск.$a#$b#Сегодня не засчитано. Продлеваю режим на день и жду тебя на осмотре.$u",
                 "HarveyMod_RecoveryPlanExtended": "Добавил ещё один день к плану.$s#$b#Не как наказание — как страховку. Пожалуйста, соблюдай режим.$u",
                 "HarveyMod_RecoveryPlanMaxExtensionsReached": "Больше не буду удлинять план.$a#$b#Режим закончится по сроку — но контрольный визит обязателен.$u",
-                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a"
+                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a",
+                "HarveyMod_RecoveryPlan_NeedVisit": "Нам нужно поговорить о режиме восстановления. Сядь — сначала осмотр.$u#$action HarveyOverhaulInjury_RecoveryPlanTalk NeedVisit",
+                "HarveyMod_RecoveryPlan_Completed_Perfect": "Ты выполнила весь план. Без срывов, без тайных походов в шахту, без «я только ещё одну грядку».$h#$b#Я горжусь тобой. Очень.$l#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedPerfect",
+                "HarveyMod_RecoveryPlan_Completed_WithWarnings": "План завершён. Да, с парой моментов, от которых у меня до сих пор дёргается глаз.$u#$b#Но ты остановилась, когда это было важно. И дошла до конца.$h#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedWithWarnings"
             }
         },
         {
@@ -84,7 +90,10 @@
                 "HarveyMod_RecoveryPlanViolated_Severe": "Это уже не «устала» — это опасно.$a#$b#Сегодня не засчитано. Продлеваю режим на день. И ты идёшь на осмотр — я не отпущу.$u",
                 "HarveyMod_RecoveryPlanExtended": "Добавил ещё один день.$s#$b#Не как наказание — как страховку. Пожалуйста, соблюдай режим.$u",
                 "HarveyMod_RecoveryPlanMaxExtensionsReached": "Больше не буду удлинять план.$a#$b#Режим закончится по сроку — но контрольный визит обязателен.$u",
-                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a"
+                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a",
+                "HarveyMod_RecoveryPlan_NeedVisit": "Нам нужно поговорить о режиме восстановления. Сядь — сначала осмотр.$u#$action HarveyOverhaulInjury_RecoveryPlanTalk NeedVisit",
+                "HarveyMod_RecoveryPlan_Completed_Perfect": "Весь план. Без срывов. Без тайных шахт. Без твоего вечного «ещё пять минут».$h#$b#Я горжусь тобой — и это не врачебная формулировка, это я сам.$l#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedPerfect",
+                "HarveyMod_RecoveryPlan_Completed_WithWarnings": "План завершён — с парой моментов, от которых у меня до сих пор сжимается желудок.$u#$b#Но ты остановилась. Ты слушала. Дошла до конца.$h#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedWithWarnings"
             }
         },
         {
@@ -113,7 +122,10 @@
                 "HarveyMod_RecoveryPlanViolated_Severe": "Это уже опасно, солнышко.$a#$b#Сегодня не засчитано. Продлеваю режим на день — и ты идёшь на осмотр. Я не отпущу.$u",
                 "HarveyMod_RecoveryPlanExtended": "Добавил ещё один день к плану.$s#$b#Не как наказание — как страховку. Пожалуйста, береги себя.$u",
                 "HarveyMod_RecoveryPlanMaxExtensionsReached": "Больше не буду удлинять план.$a#$b#Режим закончится по сроку — но контрольный визит обязателен.$u",
-                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a"
+                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a",
+                "HarveyMod_RecoveryPlan_NeedVisit": "Солнышко, нам нужно поговорить о режиме. Сядь — сначала осмотр.$u#$action HarveyOverhaulInjury_RecoveryPlanTalk NeedVisit",
+                "HarveyMod_RecoveryPlan_Completed_Perfect": "Ты выполнила весь план, солнышко. Без срывов, без тайных шахт, без «я только ещё одну грядку».$h#$b#Я горжусь тобой — и мне хочется обнять тебя прямо здесь.$l#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedPerfect",
+                "HarveyMod_RecoveryPlan_Completed_WithWarnings": "План завершён — с моментами, от которых у меня до сих пор дёргается глаз.$u#$b#Но ты остановилась, когда нужно. Дошла до конца.$h#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedWithWarnings"
             }
         },
         {
@@ -142,7 +154,20 @@
                 "HarveyMod_RecoveryPlanViolated_Severe": "Это уже не «я справлюсь» — это опасно.$a#$b#Сегодня не засчитано. Продлеваю режим на день. И ты идёшь на осмотр — за нашим столом или в клинике.$u",
                 "HarveyMod_RecoveryPlanExtended": "Добавил ещё один день к плану.$s#$b#Не как наказание — как страховку. Пожалуйста, береги себя.$u",
                 "HarveyMod_RecoveryPlanMaxExtensionsReached": "Больше не буду удлинять план.$a#$b#Режим закончится по сроку — но контрольный визит обязателен.$u",
-                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a"
+                "HarveyMod_RecoveryPlanStrictFollowUpRequired": "Я мог бы продлить режим ещё раз. И ещё. И ещё.$s#$b#Но это уже перестанет быть лечением и станет клеткой. Я не хочу так.$u#$b#Поэтому так: режим заканчивается по сроку, но контрольный осмотр обязателен. И на этот раз я буду очень внимателен.$a",
+                "HarveyMod_RecoveryPlan_NeedVisit": "Дома я тоже вижу, когда режим сорван. Садись — сначала осмотр.$u#$action HarveyOverhaulInjury_RecoveryPlanTalk NeedVisit",
+                "HarveyMod_RecoveryPlan_Completed_Perfect": "Ты выполнила весь план. Без срывов, без шахты, без твоего вечного «ещё пять минут и всё».$h#$b#Я горжусь тобой — и это слышно не только в голосе врача.$l#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedPerfect",
+                "HarveyMod_RecoveryPlan_Completed_WithWarnings": "План завершён. Были моменты, когда я чуть не поседел — честно.$u#$b#Но ты остановилась. Дошла до конца. И я это помню.$h#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedWithWarnings"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+            "Priority": "Late",
+            "Entries": {
+                "HarveyMod_RecoveryPlan_NeedVisit": "Я ждал момента поговорить о режиме. Садись — сначала осмотр, потом всё остальное.$u#$action HarveyOverhaulInjury_RecoveryPlanTalk NeedVisit",
+                "HarveyMod_RecoveryPlan_Completed_Perfect": "Ты выполнила весь план. Без срывов, без шахты, без твоего вечного «ещё пять минут и всё».$h#$b#Я горжусь тобой — и это слышно не только в голосе врача.$l#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedPerfect",
+                "HarveyMod_RecoveryPlan_Completed_WithWarnings": "План завершён. Были моменты, когда я чуть не поседел — честно.$u#$b#Но ты остановилась. Дошла до конца. И я это помню.$h#$action HarveyOverhaulInjury_RecoveryPlanTalk CompletedWithWarnings"
             }
         }
     ]

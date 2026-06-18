@@ -1,0 +1,81 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late + 5",
+            "When": {
+                "Relationship:Harvey": "Married"
+            },
+            "Entries": {
+                "HarveyMod_HiddenInjury_Suspected_Generic": "Милая, посмотри на меня.$u#$b#Ты с самого утра держишься так, будто каждое движение отдаёт болью.",
+                "HarveyMod_HiddenInjury_Confessed_Generic": "Иди сюда.$l#$b#Сейчас я врач. А потом просто обниму тебя, если позволишь.",
+                "HarveyMod_HiddenInjury_Obvious_Generic": "Милая... у тебя кровь на рукаве.$s#$b#Садись. Я рядом.",
+                "HarveyMod_HiddenInjury_Unhideable_Generic": "Милая, мне не нужно рентгеновское зрение, чтобы увидеть, что тебе больно идти.",
+
+                "HarveyMod_HiddenInjury_Obvious_buffDeepCuts": "Милая... у тебя кровь на рукаве.$s#$b#Садись. Сейчас. Я обработаю порезы.",
+                "HarveyMod_HiddenInjury_Obvious_DeepCuts": "Милая... у тебя кровь на рукаве.$s#$b#Садись. Сейчас. Я обработаю порезы.$action HarveyOverhaulInjury_RevealAndStartTreatment buffDeepCuts",
+                "HarveyMod_HiddenInjury_Confessed_buffDeepCuts": "Милая, это не царапина.$u#$b#Я знаю, ты храбрая. Но сейчас нужна не храбрость, а чистая повязка.",
+                "HarveyMod_HiddenInjury_Confessed_buffDeepCuts_02": "Нет, любимая.$s#$b#С такими порезами в шахту не возвращаются. Сначала обработка.",
+                "HarveyMod_HiddenInjury_Confessed_buffDeepCuts_03": "Ты вся дрожишь.$u#$b#От боли или от того, что боялась сказать мне?",
+                "HarveyMod_HiddenInjury_Complicated_buffDeepCuts": "Ты ходила с этим несколько дней?$s#$b#Края воспалены. Это уже не просто порез.$u#$b#Я испугался, милая. Правда испугался.$action HarveyOverhaulInjury_RevealAndStartTreatment buffDeepCuts",
+                "HarveyMod_HiddenInjury_Complicated_DeepCuts": "Ты ходила с этим несколько дней?$s#$b#Края воспалены. Это уже не просто порез.$u#$b#Я испугался, милая. Правда испугался.$action HarveyOverhaulInjury_RevealAndStartTreatment buffDeepCuts",
+
+                "HarveyMod_HiddenInjury_Unhideable_buffFracturedBone": "Милая, нет.$s#$b#Ты не можешь скрыть от врача то, как ставишь ногу. И от мужа — тоже.",
+                "HarveyMod_HiddenInjury_Unhideable_FracturedBone": "Милая, нет.$s#$b#Ты не можешь скрыть от врача то, как ставишь ногу. И от мужа — тоже.$action HarveyOverhaulInjury_RevealAndStartTreatment buffFracturedBone",
+
+                "HarveyMod_HiddenInjury_Obvious_buffConcussion": "Милая, не закрывай глаза.$s#$b#Сначала я проверю реакцию зрачков.",
+                "HarveyMod_HiddenInjury_Obvious_Concussion": "Милая, не закрывай глаза.$s#$b#Сначала я проверю реакцию зрачков.$action HarveyOverhaulInjury_RevealAndStartTreatment buffConcussion",
+
+                "HarveyMod_HiddenInjury_Suspected_buffSprainedAnkle": "Милая, я заметил ещё у двери.$u#$b#Ты ставишь ногу осторожнее. Покажи мне лодыжку.",
+                "HarveyMod_HiddenInjury_Confessed_buffSprainedAnkle": "Милая, грядки подождут.$u#$b#Сначала холод, фиксация и покой.",
+
+                "HarveyMod_HiddenInjury_Suspected_buffBruisedRibs": "Милая, если больно дышать — это не мелочь.",
+                "HarveyMod_HiddenInjury_Confessed_buffBruisedRibs": "Милая, если больно дышать — это не мелочь.",
+
+                "HarveyMod_HiddenInjury_Obvious_buffBurnWounds": "Милая, руку ко мне.$u#$b#Ожоги часто выглядят безобиднее, чем есть на самом деле.",
+                "HarveyMod_HiddenInjury_Obvious_BurnWounds": "Милая, руку ко мне.$u#$b#Ожоги часто выглядят безобиднее, чем есть на самом деле.$action HarveyOverhaulInjury_RevealAndStartTreatment buffBurnWounds",
+
+                "HarveyMod_HiddenInjury_Complicated_buffInfectedWound": "Милая... сколько дней ты это скрывала?",
+                "HarveyMod_HiddenInjury_Complicated_InfectedWound": "Милая... сколько дней ты это скрывала?$action HarveyOverhaulInjury_RevealAndStartTreatment buffInfectedWound",
+                "HarveyMod_HiddenInjury_Confessed_buffInfectedWound": "Я сейчас очень стараюсь говорить спокойно.$u#$b#Но ты рисковала куда сильнее, чем думаешь.",
+
+                "HarveyMod_HiddenInjury_Obvious_buffShrapnelWounds": "Милая, очень осторожно.$s#$b#Я вижу повреждение. Не трогай. Я сам осмотрю.",
+                "HarveyMod_HiddenInjury_Obvious_ShrapnelWounds": "Милая, очень осторожно.$s#$b#Я вижу повреждение. Не трогай. Я сам осмотрю.$action HarveyOverhaulInjury_RevealAndStartTreatment buffShrapnelWounds",
+
+                "HarveyMod_HiddenInjury_Festival_Notice_Generic": "Милая, я заметил.$s#$b#Я не стану устраивать сцену на фестивале. Но после — домой или в клинику. Без споров.$action HarveyOverhaulInjury_MarkFestivalNotice buffHurt",
+
+                "HarveyMod_HiddenInjury_MorningHome_DeepCuts": "Милая, на простыне кровь.$s#$b#Сядь. Не пугайся. Я посмотрю.",
+                "HarveyMod_HiddenInjury_EveningHome_Strict": "Нет, милая.$s#$b#Сегодня ты больше ничего не делаешь. Садишься, показываешь, где болит."
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late + 5",
+            "When": {
+                "Relationship:Harvey": "Dating"
+            },
+            "Entries": {
+                "HarveyMod_HiddenInjury_Suspected_Generic": "Подожди, пожалуйста.$u#$b#Ты стараешься выглядеть так, будто всё в порядке, но я вижу, что тебе больно.$s",
+                "HarveyMod_HiddenInjury_Confessed_Generic": "Спасибо, что доверилась мне.$h#$b#Скажешь, если будет больно, хорошо?",
+                "HarveyMod_HiddenInjury_Obvious_Generic": "Пожалуйста, не отворачивайся.$u#$b#Я вижу признаки травмы. Дай мне помочь.",
+                "HarveyMod_HiddenInjury_Unhideable_Generic": "Ты очень стараешься держаться.$u#$b#Но это серьёзно. Позволь мне быть врачом."
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late + 5",
+            "When": {
+                "Relationship:Harvey": "Engaged"
+            },
+            "Entries": {
+                "HarveyMod_HiddenInjury_Suspected_Generic": "Нет, стой.$u#$b#Я не как врач сейчас спрашиваю... хотя и как врач тоже. Ты что-то скрываешь?$s",
+                "HarveyMod_HiddenInjury_Confessed_Generic": "Иди сюда.$u#$b#Нет, я не злюсь. Я испугался. Но сейчас главное — обработать рану.",
+                "HarveyMod_HiddenInjury_Obvious_Generic": "Нет, я не отпущу тебя так.$s#$b#Ты можешь злиться на меня сколько угодно, но сначала я проверю рану.",
+                "HarveyMod_HiddenInjury_Unhideable_Generic": "Я вижу травму.$s#$b#И вижу, что ты боишься моей реакции. Я не буду кричать. Я буду лечить."
+            }
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+            "Priority": "Late + 6",
+            "Entries": {
+                "HarveyMod_HiddenInjury_Complicated_DeepCuts": "Ты ходила с этим несколько дней?$s#$b#Края воспалены. Это уже не просто порез.$u#$b#Я испугался, милая. Правда испугался.$action HarveyOverhaulInjury_RevealAndStartTreatment buffDeepCuts",
+                "HarveyMod_HiddenInjury_Complicated_InfectedWound": "Милая... сколько дней ты это скрывала?$action HarveyOverhaulInjury_RevealAndStartTreatment buffInfectedWound",
+                "HarveyMod_HiddenInjury_Complicated_buffDeepCuts": "Ты ходила с этим несколько дней?$s#$b#Края воспалены. Это уже не просто порез.$u#$b#Я испугался, милая. Правда испугался.$action HarveyOverhaulInjury_RevealAndStartTreatment buffDeepCuts",
+                "HarveyMod_HiddenInjury_Denied_Generic": "Милая, я могу сделать вид, что поверил.$u#$b#Но ты же знаешь, что это будет неправда.$action HarveyOverhaulInjury_DenyHiddenInjury buffHurt",
+                "HarveyMod_HiddenInjury_Denied_Generic_Dating": "Милая, я могу сделать вид, что поверил.$u#$b#Но ты же знаешь, что это будет неправда.$action HarveyOverhaulInjury_DenyHiddenInjury buffHurt",
+                "HarveyMod_HiddenInjury_Denied_Generic_Engaged": "Милая, я могу сделать вид, что поверил.$u#$b#Но ты же знаешь, что это будет неправда.$action HarveyOverhaulInjury_DenyHiddenInjury buffHurt",
+                "HarveyMod_HiddenInjury_Denied_Generic_Married": "Милая, я могу сделать вид, что поверил.$u#$b#Но ты же знаешь, что это будет неправда.$action HarveyOverhaulInjury_DenyHiddenInjury buffHurt",
+                "HarveyMod_HiddenInjury_Detected_BruisedRibs": "Милая, похоже на ушиб рёбер.$s#$b#Нужно убедиться, что нет ничего серьёзнее. Покажи, где отдаёт.$action HarveyOverhaulInjury_RevealAndStartTreatment buffBruisedRibs",
+                "HarveyMod_HiddenInjury_Detected_BurnWounds": "Милая, кожа повреждена сильнее, чем кажется.$s#$b#Я обработаю это сейчас — не терпи.$action HarveyOverhaulInjury_RevealAndStartTreatment buffBurnWounds",
+                "HarveyMod_HiddenInjury_Detected_Concussion": "Нет, любимая — это не просто усталость.$s#$b#Я вижу признаки сотрясения. Сейчас осмотрю.$action HarveyOverhaulInjury_RevealAndStartTreatment buffConcussion",
+                "HarveyMod_HiddenInjury_Detected_DeepCuts": "Края раны глубокие, милая.$s#$b#Это нельзя оставлять без обработки. Дай мне руку — я рядом.$action HarveyOverhaulInjury_RevealAndStartTreatment buffDeepCuts",
+                "HarveyMod_HiddenInjury_Detected_FracturedBone": "Милая, я почти уверен, что кость повреждена.$s#$b#Не спорь. Чем меньше двигаешься сейчас — тем лучше заживёт.$action HarveyOverhaulInjury_RevealAndStartTreatment buffFracturedBone",
+                "HarveyMod_HiddenInjury_Detected_InfectedWound": "Нет, милая — это уже не обычное воспаление.$s#$b#Нужно лечение. Немедленно.$action HarveyOverhaulInjury_RevealAndStartTreatment buffInfectedWound",
+                "HarveyMod_HiddenInjury_Detected_ShrapnelWounds": "Милая, я должен обработать это сейчас.$s#$b#И, возможно, понадобится более серьёзная помощь. Я не отойду.$action HarveyOverhaulInjury_RevealAndStartTreatment buffShrapnelWounds",
+                "HarveyMod_HiddenInjury_Detected_SprainedAnkle": "Милая, отёк уже заметен.$s#$b#Садись — зафиксирую лодыжку. Не ходи так весь день.$action HarveyOverhaulInjury_RevealAndStartTreatment buffSprainedAnkle",
+                "HarveyMod_HiddenInjury_Detected_buffBruisedRibs": "Милая, похоже на ушиб рёбер.$s#$b#Нужно убедиться, что нет ничего серьёзнее. Покажи, где отдаёт.$action HarveyOverhaulInjury_RevealAndStartTreatment buffBruisedRibs",
+                "HarveyMod_HiddenInjury_Detected_buffBurnWounds": "Милая, кожа повреждена сильнее, чем кажется.$s#$b#Я обработаю это сейчас — не терпи.$action HarveyOverhaulInjury_RevealAndStartTreatment buffBurnWounds",
+                "HarveyMod_HiddenInjury_Detected_buffConcussion": "Нет, любимая — это не просто усталость.$s#$b#Я вижу признаки сотрясения. Сейчас осмотрю.$action HarveyOverhaulInjury_RevealAndStartTreatment buffConcussion",
+                "HarveyMod_HiddenInjury_Detected_buffDeepCuts": "Края раны глубокие, милая.$s#$b#Это нельзя оставлять без обработки. Дай мне руку — я рядом.$action HarveyOverhaulInjury_RevealAndStartTreatment buffDeepCuts",
+                "HarveyMod_HiddenInjury_Detected_buffFracturedBone": "Милая, я почти уверен, что кость повреждена.$s#$b#Не спорь. Чем меньше двигаешься сейчас — тем лучше заживёт.$action HarveyOverhaulInjury_RevealAndStartTreatment buffFracturedBone",
+                "HarveyMod_HiddenInjury_Detected_buffInfectedWound": "Нет, милая — это уже не обычное воспаление.$s#$b#Нужно лечение. Немедленно.$action HarveyOverhaulInjury_RevealAndStartTreatment buffInfectedWound",
+                "HarveyMod_HiddenInjury_Detected_buffShrapnelWounds": "Милая, я должен обработать это сейчас.$s#$b#И, возможно, понадобится более серьёзная помощь. Я не отойду.$action HarveyOverhaulInjury_RevealAndStartTreatment buffShrapnelWounds",
+                "HarveyMod_HiddenInjury_Detected_buffSprainedAnkle": "Милая, отёк уже заметен.$s#$b#Садись — зафиксирую лодыжку. Не ходи так весь день.$action HarveyOverhaulInjury_RevealAndStartTreatment buffSprainedAnkle",
+                "HarveyMod_HiddenInjury_Festival_Notice_Concussion": "Ты выглядишь рассеянной, любимая.$s#$b#Если это был удар головой — фестиваль для тебя закончен.$action HarveyOverhaulInjury_MarkFestivalNotice buffConcussion",
+                "HarveyMod_HiddenInjury_Festival_Notice_DeepCuts": "Милая, это кровь?$s#$b#Я обработаю самое срочное сейчас, но полный осмотр — сразу после фестиваля. Без споров.$action HarveyOverhaulInjury_MarkFestivalNotice buffDeepCuts",
+                "HarveyMod_HiddenInjury_Festival_Notice_Fracture": "Милая, ты едва наступаешь на ногу.$s#$b#Если это перелом — фестиваль для тебя уже закончился.$action HarveyOverhaulInjury_MarkFestivalNotice buffFracturedBone",
+                "HarveyMod_HiddenInjury_Festival_Notice_Generic": "Милая, я заметил.$s#$b#Я не стану устраивать сцену на фестивале. Но после — домой или в клинику. Без споров.$action HarveyOverhaulInjury_MarkFestivalNotice buffHurt",
+                "HarveyMod_HiddenInjury_NotNow_Dating": "Я дам тебе немного времени.$s#$b#Немного, милая.$action HarveyOverhaulInjury_PostponeHiddenInjury buffHurt",
+                "HarveyMod_HiddenInjury_NotNow_Engaged": "Я дам тебе немного времени.$s#$b#Немного, милая.$action HarveyOverhaulInjury_PostponeHiddenInjury buffHurt",
+                "HarveyMod_HiddenInjury_NotNow_Generic": "Я дам тебе немного времени.$s#$b#Немного, милая.$action HarveyOverhaulInjury_PostponeHiddenInjury buffHurt",
+                "HarveyMod_HiddenInjury_NotNow_Married": "Я дам тебе немного времени.$s#$b#Немного, милая.$action HarveyOverhaulInjury_PostponeHiddenInjury buffHurt",
+                "HarveyMod_HiddenInjury_Obvious_BurnWounds": "Милая, руку ко мне.$u#$b#Ожоги часто выглядят безобиднее, чем есть на самом деле.$action HarveyOverhaulInjury_RevealAndStartTreatment buffBurnWounds",
+                "HarveyMod_HiddenInjury_Obvious_Concussion": "Милая, не закрывай глаза.$s#$b#Сначала я проверю реакцию зрачков.$action HarveyOverhaulInjury_RevealAndStartTreatment buffConcussion",
+                "HarveyMod_HiddenInjury_Obvious_DeepCuts": "Милая... у тебя кровь на рукаве.$s#$b#Садись. Сейчас. Я обработаю порезы.$action HarveyOverhaulInjury_RevealAndStartTreatment buffDeepCuts",
+                "HarveyMod_HiddenInjury_Obvious_ShrapnelWounds": "Милая, очень осторожно.$s#$b#Я вижу повреждение. Не трогай. Я сам осмотрю.$action HarveyOverhaulInjury_RevealAndStartTreatment buffShrapnelWounds",
+                "HarveyMod_HiddenInjury_Unhideable_FracturedBone": "Милая, нет.$s#$b#Ты не можешь скрыть от врача то, как ставишь ногу. И от мужа — тоже.$action HarveyOverhaulInjury_RevealAndStartTreatment buffFracturedBone"
+            }
+        }
+    ]
+}

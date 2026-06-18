@@ -90,7 +90,7 @@
                 "{{ModId}}_triggerHarveySkullCaveWarning": {
                     "Id": "{{ModId}}_triggerHarveySkullCaveWarning",
                     "Trigger": "LocationChanged",
-                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, PLAYER_LOCATION_NAME Current SkullCave, PLAYER_HAS_BUFF Current buffSurgicalWound buffBruisedRibs buffSprainedAnkle buffBackStrain buffDeepCuts buffBurnWounds buffTornMuscles buffConcussion buffFracturedBone buffShrapnelWounds buffInfectedWound",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, PLAYER_LOCATION_NAME Current SkullCave, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_KnownSevereInjury\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanActive\" \"PLAYER_HAS_BUFF Current HarveyMod_MineForbidden\", PLAYER_HAS_BUFF Current buffSurgicalWound buffBruisedRibs buffSprainedAnkle buffBackStrain buffDeepCuts buffBurnWounds buffTornMuscles buffConcussion buffFracturedBone buffShrapnelWounds buffInfectedWound",
                     "Actions": [
                         "AddMail Current mailHarveyCaveWarning now",
                         "spacechase0.SpaceCore_PlayEvent eventHarveySkullCavePrevention"

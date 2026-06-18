@@ -160,6 +160,18 @@
             "When": {
                 "Relationship:Harvey": "Married"
             }
+        },
+        {
+            "Action": "EditData",
+            "Priority": "Late + 1",
+            "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+            "When": {
+                "Relationship:Harvey": "Married"
+            },
+            "Entries": {
+                "topicStressSocial": "Любимая, в толпе тебе снова не по себе.$s#$b#Я рядом — дома и здесь. Начнём лечение мягко, в твоём темпе.$l#$action HarveyStress_SocialAnxiety_Start",
+                "topicStressTreatmentSocialReadyForReview": "Солнышко, ты сделала ровно столько, сколько нужно.#$b#Не больше — не через колено.#$b#Тебе стало немного легче. Я это вижу.$l#$action HarveyStress_SocialAnxiety_Complete"
+            }
         }
     ]
 }
