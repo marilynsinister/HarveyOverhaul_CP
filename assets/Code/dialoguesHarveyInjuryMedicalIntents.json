@@ -30,6 +30,7 @@
                 "HarveyMod_Injury_TreatComplication_HarveyMod_WetStitches": "Швы намокли — это опасно.$a#$b#Сейчас проверю и зафиксирую заново.$a#$action HarveyOverhaulInjury_TreatComplication HarveyMod_WetStitches",
                 "HarveyMod_Injury_TreatComplication_HarveyMod_AllergicRash": "Аллергическая реакция на перевязочный материал.$a#$b#Сниму повязку и подберу другой состав.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_AllergicRash",
                 "HarveyMod_Injury_TreatComplication_HarveyMod_PainFlare": "Боль усилилась — это не норма.$a#$b#Проверю рану и скорректирую обезболивание.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_PainFlare",
+                "HarveyMod_PainFlare_Ask": "Боль усилилась?$s#$b#Это обострение — гроза или тяжёлая работа так отзываются на травме. Заново лечить не нужно.$0#$b#Дай телу покой: без тяжёлой работы и не под дождём. После ночного сна станет легче. Если появится жар — сразу ко мне.$u",
                 "HarveyMod_Injury_TreatComplication_HarveyMod_Neglect": "Уход за раной срывался — я вижу последствия.$s#$b#Сейчас полная обработка.$a#$action HarveyOverhaulInjury_TreatComplication HarveyMod_Neglect"
             }
         },
@@ -63,6 +64,7 @@
                 "HarveyMod_Injury_TreatComplication_HarveyMod_WetStitches": "Швы намокли.$a#$b#Проверю и зафиксирую заново. Исправим.$a#$action HarveyOverhaulInjury_TreatComplication HarveyMod_WetStitches",
                 "HarveyMod_Injury_TreatComplication_HarveyMod_AllergicRash": "Похоже, аллергия на перевязочный материал.$a#$b#Сниму повязку и подберу другой состав.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_AllergicRash",
                 "HarveyMod_Injury_TreatComplication_HarveyMod_PainFlare": "Боль усилилась — так быть не должно.$a#$b#Проверю рану и скорректирую обезболивание. Я рядом.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_PainFlare",
+                "HarveyMod_PainFlare_Ask": "Опять болит, солнышко?$s#$b#Это обострение — от грозы или нагрузки. Заново лечить не нужно, нужен покой.$0#$b#Сегодня без тяжёлой работы, ладно? К утру станет легче. А если появится жар — скажи мне сразу.$u",
                 "HarveyMod_Injury_TreatComplication_HarveyMod_Neglect": "Уход за раной срывался — вижу последствия.$s#$b#Сейчас полная обработка. Больше так нельзя.$s#$action HarveyOverhaulInjury_TreatComplication HarveyMod_Neglect"
             }
         }

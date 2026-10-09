@@ -33,7 +33,7 @@
                     "IconSpriteIndex": 11,
                     "Effects": {
                         "MaxStamina": -40,
-                        "Speed": -1,
+                        "Speed": 0,
                         "AttackMultiplier": -0.5,
                         "DefenseMultiplier": -0.2
                     },
@@ -224,7 +224,7 @@
                     "IconSpriteIndex": 13,
                     "Effects": {
                         "MaxStamina": -2,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "ActionsOnApply": null,
                     "CustomFields": null
@@ -240,7 +240,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "MaxStamina": -30,
                         "Health": -20
                     }
@@ -272,7 +272,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "MagneticRadius": -128
                     }
                 },
@@ -286,7 +286,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -1
                     }
                 },
@@ -300,7 +300,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -2,
                         "MaxStamina": -20
                     }
@@ -315,7 +315,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 11,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "Luck": -1
                     }
                 },
@@ -339,7 +339,7 @@
 "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "Attack": -1
                     }
                 },
@@ -353,7 +353,7 @@
                     "GlowColor": null,
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "Immunity": -1
                     }
                 },
@@ -366,7 +366,7 @@
 "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -1
                     }
                 },
@@ -379,7 +379,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 13,
                     "Effects": {
-                        "Speed": -1
+                        "Speed": 0
                     }
                 },
                 "HarveyMod_MuscleAtrophy": {
@@ -417,7 +417,7 @@
                     "IsDebuff": true,
                     "Effects": {
                         "Health": -50,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -10
                     }
                 },

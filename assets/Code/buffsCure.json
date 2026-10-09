@@ -56,7 +56,7 @@
                     "Effects": {
                         "MaxStamina": 3,
                         "Immunity": 1,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {
                         "HarveyTreatment": "outpatient",
@@ -217,7 +217,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 21,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": 2
                     },
                     "CustomFields": {
@@ -237,7 +237,7 @@
                         "MaxStamina": 30,
                         "Health": 25,
                         "Defense": 3,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {
                         "HarveyTreatment": "constant"
@@ -253,7 +253,7 @@
                     "IconTexture": "TileSheets\\BuffsIcons",
                     "IconSpriteIndex": 22,
                     "Effects": {
-                        "Speed": -1,
+                        "Speed": 0,
                         "MaxStamina": 20,
                         "Health": 15
                     },
@@ -274,7 +274,7 @@
                         "Health": 30,
                         "MaxStamina": 20,
                         "Defense": 2,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {
                         "HarveyTreatment": "postSurgical"
@@ -311,7 +311,7 @@
                     "Description": "Сильная боль, иммобилизация.\nХарви наложил фиксирующую\nповязку. Нужен полный покой.",
                     "Effects": {
                         "MaxStamina": -30,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -4
                     },
                     "CustomFields": {}
@@ -327,7 +327,7 @@
                     "Description": "Движения ограничены гипсовой\nповязкой.\nКость срастается под наблюдением\nХарви.",
                     "Effects": {
                         "MaxStamina": -20,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -3,
                         "Attack": -2
                     },
@@ -344,7 +344,7 @@
                     "Description": "Гипс снят.\nИдёт восстановление подвижности.\nПоследний этап лечения перелома.",
                     "Effects": {
                         "MaxStamina": -10,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -1
                     },
                     "CustomFields": {}
@@ -361,7 +361,7 @@
                     "Description": "Постельный режим,\nголовокружение.\nХарви настаивает на строгом\nпокое.",
                     "Effects": {
                         "MaxStamina": -40,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {
                         "VisualEffect": "blur"
@@ -378,7 +378,7 @@
                     "Description": "Покой,\nпериодические головные боли.\nХарви наблюдает за\nвосстановлением.",
                     "Effects": {
                         "MaxStamina": -25,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {}
                 },
@@ -393,7 +393,7 @@
                     "Description": "Активность ограничена.\nСимптомы почти прошли.\nПоследний этап восстановления.",
                     "Effects": {
                         "MaxStamina": -15,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {}
                 },
@@ -409,7 +409,7 @@
                     "Description": "Послеоперационный период.\nХарви извлёк осколки и наложил\nшвы.\nКритичные дни после операции.",
                     "Effects": {
                         "MaxStamina": -35,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Attack": -2
                     },
                     "CustomFields": {}
@@ -425,7 +425,7 @@
                     "Description": "Швы затягиваются,\nткани восстанавливаются.\nХарви наблюдает за заживлением.",
                     "Effects": {
                         "MaxStamina": -20,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Attack": -2
                     },
                     "CustomFields": {}
@@ -441,7 +441,7 @@
                     "Description": "Швы готовы к снятию.\nРегенерация тканей продолжается.\nПоследний этап восстановления.",
                     "Effects": {
                         "MaxStamina": -10,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Attack": -1
                     },
                     "CustomFields": {}
@@ -458,7 +458,7 @@
                     "Description": "Сильная боль, иммобилизация.\nХарви наложил повязку и назначил\nпокой.",
                     "Effects": {
                         "MaxStamina": -25,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Attack": -3
                     },
                     "CustomFields": {}
@@ -474,7 +474,7 @@
                     "Description": "Нагрузка ограничена.\nМышцы восстанавливаются.\nХарви продолжает наблюдение.",
                     "Effects": {
                         "MaxStamina": -15,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Attack": -2
                     },
                     "CustomFields": {}
@@ -490,7 +490,7 @@
                     "Description": "Укрепление мышц.\nПостепенное возвращение к\nактивности.\nПоследний этап восстановления.",
                     "Effects": {
                         "MaxStamina": -10,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Attack": -1
                     },
                     "CustomFields": {}
@@ -507,7 +507,7 @@
                     "Description": "Отёк, боль при движении.\nХарви наложил эластичную\nповязку. Нужен покой.",
                     "Effects": {
                         "MaxStamina": -20,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -2
                     },
                     "CustomFields": {}
@@ -523,7 +523,7 @@
                     "Description": "Отёк спадает,\nсвязки восстанавливаются.\nПоследний этап лечения.",
                     "Effects": {
                         "MaxStamina": -10,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -1
                     },
                     "CustomFields": {}
@@ -571,7 +571,7 @@
                     "Description": "Кровотечение, свежие швы.\nХарви наложил швы и стерильную\nповязку.",
                     "Effects": {
                         "MaxStamina": -20,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {
                         "HarveyMod": "true",
@@ -627,7 +627,7 @@
                     "Description": "Воспаление, сильная боль.\nХарви обработал ожоги и наложил\nповязку.",
                     "Effects": {
                         "MaxStamina": -25,
-                        "Speed": -1,
+                        "Speed": 0,
                         "Defense": -3
                     },
                     "CustomFields": {}
@@ -659,7 +659,7 @@
                     "Description": "Интоксикация,\nвысокая температура.\nХарви начал курс антибиотиков.",
                     "Effects": {
                         "MaxStamina": -30,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {}
                 },
@@ -689,7 +689,7 @@
                     "Description": "Спазм мышц, боль при наклонах.\nХарви назначил покой и\nобезболивающие.",
                     "Effects": {
                         "MaxStamina": -20,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {}
                 },
@@ -720,7 +720,7 @@
                     "Effects": {
                         "MaxStamina": -35,
                         "Defense": -2,
-                        "Speed": -1
+                        "Speed": 0
                     },
                     "CustomFields": {
                         "HarveyMod": "true",
