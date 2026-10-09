@@ -7,7 +7,7 @@
         "{{ModId}}_triggerNPCReaction_InjuryRecent": {
           "Id": "{{ModId}}_triggerNPCReaction_InjuryRecent",
           "Trigger": "DayStarted",
-          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSprainedAnkle\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBruisedRibs\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBackStrain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicDeepCuts\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBurnWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTornMuscles\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicCold\", !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBadlyHurt\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSprainedAnkle\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBruisedRibs\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBackStrain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicDeepCuts\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicBurnWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicInfectedWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTornMuscles\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicConcussion\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFracturedBone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicShrapnelWounds\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicSurgicalWound\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicCold\", !PLAYER_HAS_CONVERSATION_TOPIC Current topicMineInjuryRescue",
           "Actions": [
             "AddConversationTopic HarveyOverhaul_NPCReaction_InjuryRecent 2"
           ],
@@ -25,7 +25,7 @@
         "{{ModId}}_triggerNPCReaction_AfterTreatment": {
           "Id": "{{ModId}}_triggerNPCReaction_AfterTreatment",
           "Trigger": "DayStarted",
-          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstTreatmentComplete\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTreatmentCompleted\" \"PLAYER_HAS_BUFF Current buffHarveyTreatment\" \"PLAYER_HAS_BUFF Current buffHarveyIntensiveCare\"",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstTreatmentComplete\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicTreatmentCompleted\" \"PLAYER_HAS_BUFF Current buffHarveyTreatment\" \"PLAYER_HAS_BUFF Current buffHarveyIntensiveCare\"",
           "Actions": [
             "AddConversationTopic HarveyOverhaul_NPCReaction_AfterTreatment 2"
           ],
@@ -34,7 +34,7 @@
         "{{ModId}}_triggerNPCReaction_RecoveryViolated": {
           "Id": "{{ModId}}_triggerNPCReaction_RecoveryViolated",
           "Trigger": "DayStarted",
-          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowStamina\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowHealth\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LateNight\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Rain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mild\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Medium\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Severe\", !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowStamina\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LowHealth\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_LateNight\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Rain\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mild\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Medium\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Severe\", !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanViolated_Mine",
           "Actions": [
             "AddConversationTopic HarveyOverhaul_NPCReaction_RecoveryViolated 2"
           ],
@@ -52,7 +52,7 @@
         "{{ModId}}_triggerNPCReaction_RecoveryCompliant": {
           "Id": "{{ModId}}_triggerNPCReaction_RecoveryCompliant",
           "Trigger": "DayStarted",
-          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Perfect\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_WithWarnings\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Normal\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanPerfect\"",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanStarted\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanSoftTone\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Perfect\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_WithWarnings\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanCompleted_Normal\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_RecoveryPlanPerfect\"",
           "Actions": [
             "AddConversationTopic HarveyOverhaul_NPCReaction_RecoveryCompliant 2"
           ],
@@ -61,7 +61,7 @@
         "{{ModId}}_triggerNPCReaction_StormFear": {
           "Id": "{{ModId}}_triggerNPCReaction_StormFear",
           "Trigger": "DayStarted",
-          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"",
           "Actions": [
             "AddConversationTopic HarveyOverhaul_NPCReaction_StormFear 2"
           ],
@@ -70,7 +70,7 @@
         "{{ModId}}_triggerNPCReaction_SocialAnxiety": {
           "Id": "{{ModId}}_triggerNPCReaction_SocialAnxiety",
           "Trigger": "DayStarted",
-          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressSocial\" \"PLAYER_HAS_QUEST Current HarveyMod_SocialRecovery\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressTreatmentSocialFollowup\"",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, ANY \"PLAYER_HAS_BUFF Current buffStressSocial\" \"Spiderbuttons.BETAS_PLAYER_HAS_QUEST Current HarveyMod_SocialRecovery\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicStressTreatmentSocialFollowup\"",
           "Actions": [
             "AddConversationTopic HarveyOverhaul_NPCReaction_SocialAnxiety 2"
           ],
@@ -79,7 +79,7 @@
         "{{ModId}}_triggerNPCReaction_Overwork": {
           "Id": "{{ModId}}_triggerNPCReaction_Overwork",
           "Trigger": "DayStarted",
-          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressOverwork\" \"PLAYER_HAS_BUFF Current buffStressTired\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicOverworkBreakActive\"",
+          "Condition": "!PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_NPC_RELATIONSHIP Current Harvey Engaged, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, ANY \"PLAYER_HAS_BUFF Current buffStressOverwork\" \"PLAYER_HAS_BUFF Current buffStressTired\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicOverworkBreakActive\"",
           "Actions": [
             "AddConversationTopic HarveyOverhaul_NPCReaction_Overwork 2"
           ],

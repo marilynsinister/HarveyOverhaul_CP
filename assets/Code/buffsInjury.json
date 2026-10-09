@@ -319,6 +319,16 @@
                         "Luck": -1
                     }
                 },
+                "HarveyMod_MineRestricted": {
+                    "Id": "HarveyMod_MineRestricted",
+                    "DisplayName": "Шахта — с осторожностью",
+                    "Description": "Харви не запрещает шахту,\nно рана ещё не зажила.\nОдин спуск в день — с предупреждением,\nповторный грозит обострением\nили полным запретом.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 11
+                },
 
                 "HarveyMod_PainFlare": {
                     "Id": "HarveyMod_PainFlare",
@@ -412,6 +422,17 @@
                     }
                 },
                 // ================== ПРОСТУДА ==================
+                // Накладывает Injury (PlayerEventHandler.CheckEnvironmentalConditions) после долгого холода без защиты.
+                // Название отличается от стрессового «Переохлаждения» (buffStressTooCold), чтобы игрок их не путал.
+                "buffTooCold": {
+                    "Id": "buffTooCold",
+                    "DisplayName": "Озноб",
+                    "Description": "Слишком долго на холоде\nбез тёплой одежды.\nЗайди в тепло и покажись Харви,\nпока не началась простуда.",
+                    "Duration": -2,
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 13,
+                    "IsDebuff": true
+                },
                 "buffCold": {
                     "Id": "buffCold",
                     "DisplayName": "Простуда",

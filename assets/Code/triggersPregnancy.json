@@ -7,7 +7,7 @@
         "{{ModId}}_triggerPregnancyGentleCare": {
           "Id": "{{ModId}}_triggerPregnancyGentleCare",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare topicHarvey_PregnancyCareStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCareStarted",
           "Actions": [
             "AddConversationTopic topicHarvey_PregnancyCareStarted 14",
             "AddConversationTopic topicHarveyGentleCare 7"
@@ -67,7 +67,7 @@
         "{{ModId}}_triggerPregnancyTender": {
           "Id": "{{ModId}}_triggerPregnancyTender",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_01 topicHarvey_PregnancyTender_02 topicHarvey_PregnancyTender_03",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_01, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_02, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_03",
           "Actions": [
             "AddConversationTopic topicHarvey_PregnancyTender_01 3"
           ],
@@ -112,7 +112,7 @@
         "{{ModId}}_triggerPregnancyRain": {
           "Id": "{{ModId}}_triggerPregnancyRain",
           "Trigger": "LocationChanged",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, WEATHER Here Rain Storm, RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyRainWarning_01 topicHarvey_PregnancyRainWarning_02",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, WEATHER Here Rain Storm, RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyRainWarning_01, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyRainWarning_02",
           "Actions": [
             "AddConversationTopic topicHarvey_PregnancyRainWarning_01 2"
           ],
@@ -157,7 +157,7 @@
         "{{ModId}}_triggerPregnancyFood": {
           "Id": "{{ModId}}_triggerPregnancyFood",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.3, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFood_01 topicHarvey_PregnancyFoodCooldown",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.3, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFood_01, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFoodCooldown",
           "Actions": [
             "AddConversationTopic topicHarvey_PregnancyFoodCooldown 2",
             "AddConversationTopic topicHarvey_PregnancyFood_01 2"
