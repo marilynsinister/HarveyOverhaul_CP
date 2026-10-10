@@ -69,9 +69,9 @@
                 "HarveyMod_HiddenInjury_Obvious_Dating": "Пожалуйста, не отворачивайся.$u#$b#Я вижу признаки травмы. Дай мне помочь.",
                 "HarveyMod_HiddenInjury_Obvious_Engaged": "Нет, я не отпущу тебя так.$s#$b#Ты можешь злиться на меня сколько угодно, но сначала я проверю рану.",
 
-                "HarveyMod_HiddenInjury_Unhideable_Generic": "Не наступай на эту ногу.$s#$b#Я серьёзно. Ни шага.",
-                "HarveyMod_HiddenInjury_Unhideable_Generic_02": "Ты переносишь вес неправильно.$s#$b#Это может быть перелом.",
-                "HarveyMod_HiddenInjury_Unhideable_Generic_03": "Скрыть перелом от врача невозможно.$u#$b#И от мужа, кстати, тоже.",
+                "HarveyMod_HiddenInjury_Unhideable_Generic": "Стой.$s#$b#Я вижу, что тебе больно. Не делай вид, что всё в порядке.",
+                "HarveyMod_HiddenInjury_Unhideable_Generic_02": "Ты двигаешься так, будто каждое движение даётся через боль.$s#$b#Это серьёзно. Покажи мне.",
+                "HarveyMod_HiddenInjury_Unhideable_Generic_03": "Такое от врача не скрыть.$u#$b#Я вижу, как тебе больно двигаться. Давай посмотрим.",
                 "HarveyMod_HiddenInjury_Unhideable_Married": "Милая, мне не нужно рентгеновское зрение, чтобы увидеть, что тебе больно идти.",
                 "HarveyMod_HiddenInjury_Unhideable_Married_02": "Сейчас мы зафиксируем конечность.$s#$b#А потом решим, нужна ли госпитализация.",
                 "HarveyMod_HiddenInjury_Unhideable_Married_03": "Я понимаю, что ты хотела дойти сама.$u#$b#Но дальше ты не идёшь. Я помогу.",
