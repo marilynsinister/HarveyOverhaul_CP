@@ -157,9 +157,10 @@
   "buffStressIsolation": 155,
   "buffStressCriticism": 156,
   "buffStressMentalFatigue": 157,
-  "HarveyMod_Resilience": 158,
-  "HarveyMod_Splinter": 159,
-  "HarveyMod_BeeSting": 160,
-  "HarveyMod_Sunstroke": 161,
-  "HarveyMod_Frostbite": 162
+  "buffStressLoadTier": 158,
+  "HarveyMod_Resilience": 159,
+  "HarveyMod_Splinter": 160,
+  "HarveyMod_BeeSting": 161,
+  "HarveyMod_Sunstroke": 162,
+  "HarveyMod_Frostbite": 163
 }

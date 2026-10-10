@@ -19,7 +19,7 @@
                     "GlowColor": null,
                     "Duration": -2,
                     "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
-                    "IconSpriteIndex": 158,
+                    "IconSpriteIndex": 159,
                     "Effects": {
                         "Defense": 1,
                         "MaxStamina": 15
@@ -34,7 +34,7 @@
                     "GlowColor": null,
                     "Duration": -2,
                     "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
-                    "IconSpriteIndex": 159,
+                    "IconSpriteIndex": 160,
                     "Effects": {
                         "ForagingLevel": -1,
                         "FarmingLevel": -1
@@ -49,7 +49,7 @@
                     "GlowColor": null,
                     "Duration": -2,
                     "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
-                    "IconSpriteIndex": 160,
+                    "IconSpriteIndex": 161,
                     "Effects": {
                         "MaxStamina": -10,
                         "Attack": -1
@@ -64,7 +64,7 @@
                     "GlowColor": null,
                     "Duration": -2,
                     "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
-                    "IconSpriteIndex": 161,
+                    "IconSpriteIndex": 162,
                     "Effects": {
                         "MaxStamina": -30,
                         "Speed": -1
@@ -79,7 +79,7 @@
                     "GlowColor": null,
                     "Duration": -2,
                     "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
-                    "IconSpriteIndex": 162,
+                    "IconSpriteIndex": 163,
                     "Effects": {
                         "MaxStamina": -15,
                         "Attack": -1,

@@ -748,6 +748,16 @@ def cobweb(c):
     c.line([(9, 4), (4, 9)], LGREY)
 
 
+def tension_gauge(c):
+    """Шкала напряжения: полукруг зелёный→красный, стрелка в красной зоне."""
+    c.d.pieslice([1, 3, 14, 16], 180, 240, fill=rgba(GREEN))
+    c.d.pieslice([1, 3, 14, 16], 240, 300, fill=rgba(YELLOW))
+    c.d.pieslice([1, 3, 14, 16], 300, 360, fill=rgba(RED))
+    c.oval(5, 7, 10, 12, CREAM)
+    c.line([(7, 9), (12, 5)], INK, 1)
+    c.rect(7, 9, 8, 10, INK)
+
+
 def bed_cross(c):
     bed(c)
     c.rect(10, 1, 11, 5, RED)
@@ -856,6 +866,7 @@ def build_recipes():
     r["buffDimLight"] = R(lambda c: candle(c, 0.4))
     r["buffHarveyLantern"] = R(lantern)
     r["buffDarknessOvercome"] = R(sunrise)
+    r["buffStressLoadTier"] = R(tension_gauge)
 
     # --- лечение стресса у Харви: символ проблемы + зелёный плюс
     cure_map = {

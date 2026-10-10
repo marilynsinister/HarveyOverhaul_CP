@@ -527,6 +527,16 @@
               "MaxStamina": -30,
               "LuckLevel": -2
             }
+          },
+          "buffStressLoadTier": {
+            "DisplayName": "Напряжение",
+            "Description": "Накопленный стресс давит.\nЧем выше шкала, тем меньше сил.\nОтдых, Харви и любимые занятия\nпомогут его снять.",
+            "IsDebuff": true,
+            "GlowColor": null,
+            "Duration": -2,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 158,
+            "Effects": {}
           }
         }
       }
