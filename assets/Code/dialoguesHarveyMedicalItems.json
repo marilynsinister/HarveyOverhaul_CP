@@ -1,0 +1,70 @@
+{
+    // Реакции Харви на самопомощь медицинскими предметами (topics ставит C#: MedicalItemManager).
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Hearts:Harvey": "0,1,2"
+            },
+            "Entries": {
+                "topicHarvey_UsedAntiseptic": "Вы обработали рану сразу после шахты? Хорошо.$h#$b#Это самое важное, что можно сделать до того, как дойдёте до клиники.$0",
+                "topicHarvey_UsedFirstAidKit": "Вижу, вы сами обработали рану. Аккуратно, по правилам.$0#$b#Если начнёт краснеть или болеть сильнее — сразу ко мне.$u",
+                "topicHarvey_PainkillerOveruse": "Вы слишком часто принимаете обезболивающее.$s#$b#Оно глушит сигнал, но не лечит причину. Пожалуйста, придите на осмотр.$u"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Hearts:Harvey": "3,4,5"
+            },
+            "Entries": {
+                "topicHarvey_UsedAntiseptic": "Ты обработала рану сразу после шахты? Хорошо.$h#$b#Вот так и надо. Я спокоен, когда ты не тянешь до вечера.$0",
+                "topicHarvey_UsedFirstAidKit": "Сама обработала рану? Аккуратно получилось.$h#$b#Только обещай: если станет хуже — сразу ко мне.$u",
+                "topicHarvey_PainkillerOveruse": "Ты опять пила обезболивающее. Часто.$s#$b#Боль — это сигнал. Я хочу понять, что она говорит. Зайди ко мне.$u"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Hearts:Harvey": "6,7,8,9,10"
+            },
+            "Entries": {
+                "topicHarvey_UsedAntiseptic": "Антисептиком пахнет. Значит, ты обработала рану сама.$h#$b#Горжусь, честно. И всё равно покажи мне её при случае.$0",
+                "topicHarvey_UsedFirstAidKit": "Аптечка пригодилась? Я так и знал, что ты не будешь ждать до клиники.$h#$b#Ты молодец. Но серьёзное — всё ещё ко мне.$u",
+                "topicHarvey_PainkillerOveruse": "Ты слишком часто глушишь боль таблетками.$s#$b#Я не ругаюсь. Я волнуюсь. Давай посмотрим вместе, что происходит.$u"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Relationship:Harvey": "Dating"
+            },
+            "Entries": {
+                "topicHarvey_UsedAntiseptic": "Ты обработала рану сама, сразу после шахты.$h#$b#Знаешь, как это меня успокаивает? Очень. Но вечером я всё равно посмотрю.$l",
+                "topicHarvey_UsedFirstAidKit": "Моя аптечка пригодилась... Я рад. И немного ревную к ней.$h#$b#В следующий раз зови меня. Я сам хочу о тебе заботиться.$l",
+                "topicHarvey_PainkillerOveruse": "Солнышко, ты снова пьёшь обезболивающее.$s#$b#Не прячь от меня боль. Я хочу знать, где болит. Сегодня вечером — ко мне.$l"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Relationship:Harvey": "Married"
+            },
+            "Entries": {
+                "topicHarvey_UsedAntiseptic": "Пахнет антисептиком — ты снова обработала рану сама.$h#$b#Умница моя. Но вечером я проверю. Это не обсуждается... почти.$l",
+                "topicHarvey_UsedFirstAidKit": "Аптечка открыта, бинтов меньше. Ты сама справилась?$h#$b#Я горжусь тобой. И всё-таки дома лечу тебя я. Покажи.$l",
+                "topicHarvey_PainkillerOveruse": "Ты пьёшь обезболивающее и молчишь. Я заметил.$s#$b#Девочка моя, не терпи в одиночку. Сядь, я посмотрю.$l"
+            }
+        }
+    ]
+}

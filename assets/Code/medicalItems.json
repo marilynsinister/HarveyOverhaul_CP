@@ -1,0 +1,176 @@
+{
+    // Медицинские предметы самопомощи. Эффекты при использовании — C# (HarveyOverhaulInjury: MedicalItemManager).
+    // ID в C#: Core/Constants.cs → MedicalItems.
+    "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/MedicalItems",
+            "FromFile": "assets/Items/medicalItems.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_CleanBandage": {
+                    "Name": "{{ModId}}_CleanBandage",
+                    "DisplayName": "Чистый бинт",
+                    "Description": "Стерильная повязка для перевязки дома. Снижает риск инфекции, может спасти намокшую повязку. Используй, держа в руках.",
+                    "Type": "Basic",
+                    "Category": 0,
+                    "Price": 30,
+                    "Texture": "Mods/{{ModId}}/MedicalItems",
+                    "SpriteIndex": 0,
+                    "Edibility": -300,
+                    "ExcludeFromShippingCollection": true,
+                    "ContextTags": [ "medicine_item", "{{ModId}}_medical_item" ]
+                },
+                "{{ModId}}_Antiseptic": {
+                    "Name": "{{ModId}}_Antiseptic",
+                    "DisplayName": "Антисептик",
+                    "Description": "Обработка раны после шахты. Убирает загрязнение раны и снижает риск занести грязь сегодня. Используй, держа в руках.",
+                    "Type": "Basic",
+                    "Category": 0,
+                    "Price": 75,
+                    "Texture": "Mods/{{ModId}}/MedicalItems",
+                    "SpriteIndex": 1,
+                    "Edibility": -300,
+                    "ExcludeFromShippingCollection": true,
+                    "ContextTags": [ "medicine_item", "{{ModId}}_medical_item" ]
+                },
+                "{{ModId}}_Painkiller": {
+                    "Name": "{{ModId}}_Painkiller",
+                    "DisplayName": "Обезболивающее",
+                    "Description": "Снимает обострение боли. Харви просит не злоупотреблять: боль — это сигнал, а не помеха. Используй, держа в руках.",
+                    "Type": "Basic",
+                    "Category": 0,
+                    "Price": 100,
+                    "Texture": "Mods/{{ModId}}/MedicalItems",
+                    "SpriteIndex": 2,
+                    "Edibility": -300,
+                    "ExcludeFromShippingCollection": true,
+                    "ContextTags": [ "medicine_item", "{{ModId}}_medical_item" ]
+                },
+                "{{ModId}}_HerbalTea": {
+                    "Name": "{{ModId}}_HerbalTea",
+                    "DisplayName": "Травяной сбор",
+                    "Description": "Горячий настой по рецепту Харви. Согревает, облегчает простуду и немного успокаивает.",
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Price": 50,
+                    "Texture": "Mods/{{ModId}}/MedicalItems",
+                    "SpriteIndex": 3,
+                    "Edibility": 15,
+                    "IsDrink": true,
+                    "ExcludeFromShippingCollection": true,
+                    "ContextTags": [ "hot_drink_item", "drink_item", "{{ModId}}_medical_item" ]
+                },
+                "{{ModId}}_FirstAidKit": {
+                    "Name": "{{ModId}}_FirstAidKit",
+                    "DisplayName": "Аптечка",
+                    "Description": "Собрана по списку Харви. Позволяет самой обработать лёгкую травму, а в остальных случаях восстанавливает немного здоровья. Используй, держа в руках.",
+                    "Type": "Basic",
+                    "Category": 0,
+                    "Price": 250,
+                    "Texture": "Mods/{{ModId}}/MedicalItems",
+                    "SpriteIndex": 4,
+                    "Edibility": -300,
+                    "ExcludeFromShippingCollection": true,
+                    "ContextTags": [ "medicine_item", "{{ModId}}_medical_item" ]
+                }
+            }
+        },
+        {
+            // Формат: ингредиенты/не используется/результат количество/big craftable/условие открытия/название.
+            // Рецепты не открываются сами — их присылает Харви письмом (Data/TriggerActions ниже).
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "{{ModId}}_CleanBandage": "771 8/Home/{{ModId}}_CleanBandage 2/false/none/",
+                "{{ModId}}_Antiseptic": "303 1 771 2/Home/{{ModId}}_Antiseptic 2/false/none/",
+                "{{ModId}}_FirstAidKit": "{{ModId}}_CleanBandage 2 {{ModId}}_Antiseptic 1 709 1/Home/{{ModId}}_FirstAidKit 1/false/none/"
+            }
+        },
+        {
+            // -81 — любая лесная зелень (одуванчик, лук-порей, папоротник и т.д.).
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "Entries": {
+                "{{ModId}}_HerbalTea": "-81 2/1 10/{{ModId}}_HerbalTea 1/none/"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Hospital", "Items" ],
+            "Entries": {
+                "{{ModId}}_CleanBandage": {
+                    "Id": "{{ModId}}_CleanBandage",
+                    "ItemId": "(O){{ModId}}_CleanBandage",
+                    "Price": 60
+                },
+                "{{ModId}}_HerbalTea": {
+                    "Id": "{{ModId}}_HerbalTea",
+                    "ItemId": "(O){{ModId}}_HerbalTea",
+                    "Price": 100
+                },
+                "{{ModId}}_Antiseptic": {
+                    "Id": "{{ModId}}_Antiseptic",
+                    "ItemId": "(O){{ModId}}_Antiseptic",
+                    "Price": 150
+                },
+                "{{ModId}}_Painkiller": {
+                    "Id": "{{ModId}}_Painkiller",
+                    "ItemId": "(O){{ModId}}_Painkiller",
+                    "Price": 200,
+                    "Condition": "PLAYER_HEARTS Current Harvey 2"
+                },
+                "{{ModId}}_FirstAidKit": {
+                    "Id": "{{ModId}}_FirstAidKit",
+                    "ItemId": "(O){{ModId}}_FirstAidKit",
+                    "Price": 500,
+                    "Condition": "PLAYER_HEARTS Current Harvey 4"
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "{{ModId}}_mailRecipeBandage": "@,^^Вы часто заходите ко мне с порезами, а между приёмами раны остаются без присмотра.^Прилагаю инструкцию, как сделать чистые повязки из волокна. Кипятите волокно перед работой и держите бинты сухими.^^Если повязка намокла — смените её как можно скорее.^^— Доктор Харви%item craftingRecipe {{ModId}}_CleanBandage %%[#]Как сделать повязку",
+                "{{ModId}}_mailRecipeHerbalTea": "@,^^Записал для тебя рецепт травяного сбора — того самого, который я завариваю себе в сезон простуд.^Две горсти любой лесной зелени, горячая вода и десять минут тишины.^^Он не заменяет лечение, но согревает. И да, я спрошу, пила ли ты его.^^— Харви%item cookingRecipe {{ModId}}_HerbalTea %%[#]Травяной сбор",
+                "{{ModId}}_mailRecipeAntiseptic": "@,^^После шахты ты приносишь ко мне не только раны, но и половину пещерной пыли.^Вот как приготовить простой антисептик. Обрабатывай рану сразу, как поднимешься наверх, а не вечером.^^Это правда снижает риск инфекции. Я проверю.^^— Харви%item craftingRecipe {{ModId}}_Antiseptic %%[#]Антисептик",
+                "{{ModId}}_mailRecipeFirstAidKit": "@,^^Я собрал список того, что должно лежать у тебя дома и в рюкзаке. Бинты, антисептик, всё по порядку.^С лёгкой раной справишься сама — я тебе доверяю.^^С серьёзной — сразу ко мне. Это не обсуждается... ладно, обсуждается. Но потом.^^— Харви%item craftingRecipe {{ModId}}_FirstAidKit %%[#]Аптечка"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_triggerRecipeBandage": {
+                    "Id": "{{ModId}}_triggerRecipeBandage",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HEARTS Current Harvey 2, !PLAYER_HAS_MAIL Current {{ModId}}_mailRecipeBandage Any",
+                    "Actions": [ "AddMail Current {{ModId}}_mailRecipeBandage" ]
+                },
+                "{{ModId}}_triggerRecipeHerbalTea": {
+                    "Id": "{{ModId}}_triggerRecipeHerbalTea",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HEARTS Current Harvey 3, !PLAYER_HAS_MAIL Current {{ModId}}_mailRecipeHerbalTea Any",
+                    "Actions": [ "AddMail Current {{ModId}}_mailRecipeHerbalTea" ]
+                },
+                "{{ModId}}_triggerRecipeAntiseptic": {
+                    "Id": "{{ModId}}_triggerRecipeAntiseptic",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HEARTS Current Harvey 4, !PLAYER_HAS_MAIL Current {{ModId}}_mailRecipeAntiseptic Any",
+                    "Actions": [ "AddMail Current {{ModId}}_mailRecipeAntiseptic" ]
+                },
+                "{{ModId}}_triggerRecipeFirstAidKit": {
+                    "Id": "{{ModId}}_triggerRecipeFirstAidKit",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HEARTS Current Harvey 6, !PLAYER_HAS_MAIL Current {{ModId}}_mailRecipeFirstAidKit Any",
+                    "Actions": [ "AddMail Current {{ModId}}_mailRecipeFirstAidKit" ]
+                }
+            }
+        }
+    ]
+}
