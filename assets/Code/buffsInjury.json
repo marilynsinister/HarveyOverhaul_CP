@@ -12,8 +12,8 @@
 "GlowColor": null,
 "Duration": 4320000,
 "MaxDuration": -1,
-"IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 11,
+"IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 75,
                     "Effects": {
                         "MaxStamina": -1
                     },
@@ -29,8 +29,8 @@
                     // 1.5 дня
                     "Duration": 1080000,
                     "MaxDuration": -1,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 11,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 76,
                     "Effects": {
                         "MaxStamina": -40,
                         "Speed": 0,
@@ -47,8 +47,8 @@
 "IsDebuff": true, "GlowColor": null,
 "Duration": 7200000,
 "MaxDuration": -1,
-"IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 11,
+"IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 77,
                     "Effects": {
                         "MaxStamina": -2
                     },
@@ -61,8 +61,8 @@
                     "Description": "Переутомление", "IsDebuff": true,
 "GlowColor": null,
 "Duration": 2880000,
-"IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 17,
+"IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 78,
                     "Effects": {
                         "MaxStamina": -30
                     }
@@ -72,8 +72,8 @@
                     "DisplayName": "Нарушение режима",
                     "Description": "Переутомление", "IsDebuff": true,
 "GlowColor": null, "Duration": 720000,
-"IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 17,
+"IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 79,
                     "Effects": {
                         "MaxStamina": -10
                     }
@@ -89,8 +89,8 @@
                     },
                     "Duration": 14400000,
                     "IsDebuff": true,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
-                    "IconSpriteIndex": 3
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 80
                 },
                 "buffSprainedAnkle": {
                     "Id": "buffSprainedAnkle",
@@ -103,8 +103,8 @@
                     },
                     "Duration": 10080000,
                     "IsDebuff": true,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
-                    "IconSpriteIndex": 5
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 81
                 },
                 "buffBackStrain": {
                     "Id": "buffBackStrain",
@@ -116,8 +116,8 @@
                     },
                     "Duration": 7200000,
                     "IsDebuff": true,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
-                    "IconSpriteIndex": 6
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 82
                 },
                 // ================== СРЕДНИЕ ТРАВМЫ ==================
                 "buffDeepCuts": {
@@ -132,8 +132,8 @@
                     },
                     "Duration": 10080000,
                     "IsDebuff": true,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
-                    "IconSpriteIndex": 7
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 83
                 },
                 "buffBurnWounds": {
                     "Id": "buffBurnWounds",
@@ -147,8 +147,8 @@
                     },
                     "Duration": 10080000,
                     "IsDebuff": true,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
-                    "IconSpriteIndex": 3
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 84
                 },
                 "buffTornMuscles": {
                     "Id": "buffTornMuscles",
@@ -162,8 +162,8 @@
                     },
                     "Duration": 14400000,
                     "IsDebuff": true,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
-                    "IconSpriteIndex": 1
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 85
                 },
                 // ================== ТЯЖЁЛЫЕ ТРАВМЫ ==================
                 "buffConcussion": {
@@ -178,8 +178,8 @@
                     },
                     "Duration": 21600000,
                     "IsDebuff": true,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
-                    "IconSpriteIndex": 9
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 86
                 },
                 "buffFracturedBone": {
                     "Id": "buffFracturedBone",
@@ -193,8 +193,8 @@
                     },
                     "Duration": 43200000,
                     "IsDebuff": true,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
-                    "IconSpriteIndex": 11
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 87
                 },
                 "buffShrapnelWounds": {
                     "Id": "buffShrapnelWounds",
@@ -208,8 +208,8 @@
                     },
                     "Duration": 43200000,
                     "IsDebuff": true,
-                    "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
-                    "IconSpriteIndex": 7
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 88
                 },
                 // ================== ОСЛОЖНЕНИЯ ==================
                 "buffInfectedWound": {
@@ -220,8 +220,8 @@
                     "GlowColor": null,
                     "Duration": 5760000,
                     "MaxDuration": -1,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 89,
                     "Effects": {
                         "MaxStamina": -2,
                         "Speed": 0
@@ -237,8 +237,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": 1440000,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 90,
                     "Effects": {
                         "Speed": 0,
                         "MaxStamina": -30,
@@ -253,8 +253,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": 10080000,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 19,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 91,
                     "Effects": {
                         "MaxStamina": -15
                     },
@@ -269,8 +269,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 92,
                     "Effects": {
                         "Speed": 0,
                         "MagneticRadius": -128
@@ -283,8 +283,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 93,
                     "Effects": {
                         "Speed": 0,
                         "Defense": -1
@@ -297,8 +297,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 94,
                     "Effects": {
                         "Speed": 0,
                         "Defense": -2,
@@ -312,8 +312,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 11,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 95,
                     "Effects": {
                         "Speed": 0,
                         "LuckLevel": -1
@@ -326,8 +326,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 11
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 96
                 },
 
                 "HarveyMod_PainFlare": {
@@ -336,8 +336,8 @@
                     "Description": "Гроза и давление усилили боль.",
 "IsDebuff": true, "GlowColor": null,
 "Duration": 14400000,
-"IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+"IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 97,
                     "Effects": {
                         "Speed": 0,
                         "Attack": -1
@@ -348,10 +348,10 @@
                     "DisplayName": "Аллергическая реакция",
                     "Description": "Пыльца раздражает свежие швы.",
 "Duration": 28800000, "IconTexture":
-"Mods\\marilynsinister.HarveyOverhaul\\injuryIcons",
+"Mods/{{ModId}}/HarveyBuffIcons",
                     "IsDebuff": true,
                     "GlowColor": null,
-                    "IconSpriteIndex": 13,
+                    "IconSpriteIndex": 98,
                     "Effects": {
                         "Speed": 0,
                         "Immunity": -1
@@ -363,8 +363,8 @@
                     "Description": "Купание повредило шов.\nНужен покой.",
 "IsDebuff": true, "GlowColor": null,
 "Duration": 21600000,
-"IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+"IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 99,
                     "Effects": {
                         "Speed": 0,
                         "Defense": -1
@@ -376,8 +376,8 @@
                     "Description": "Из-за отсутствия лечения\nподвижность ухудшилась.",
                     "Duration": 10080000,
                     "IsDebuff": true,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 100,
                     "Effects": {
                         "Speed": 0
                     }
@@ -388,8 +388,8 @@
                     "Description": "Мышцы ослабли из-за отсутствия\nлечения.",
                     "Duration": 10080000,
                     "IsDebuff": true,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 101,
                     "Effects": {
                         "Attack": -0.3,
                         "MaxStamina": -50
@@ -400,8 +400,8 @@
                     "DisplayName": "Затруднённое дыхание",
                     "Description": "Боль в рёбрах мешает дышать.",
 "Duration": 10080000,
-"IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+"IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 102,
                     "IsDebuff": true,
                     "Effects": {
                         "MaxStamina": -60
@@ -412,8 +412,8 @@
                     "DisplayName": "Заражение крови",
                     "Description": "КРИТИЧЕСКОЕ СОСТОЯНИЕ.\nНемедленно к врачу!",
                     "Duration": 20160000,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 103,
                     "IsDebuff": true,
                     "Effects": {
                         "Defense": -10,
@@ -428,8 +428,8 @@
                     "DisplayName": "Озноб",
                     "Description": "Слишком долго на холоде\nбез тёплой одежды.\nЗайди в тепло и покажись Харви,\nпока не началась простуда.",
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 104,
                     "IsDebuff": true
                 },
                 "buffCold": {
@@ -437,8 +437,8 @@
                     "DisplayName": "Простуда",
                     "Description": "Простуда после долгого\nпребывания под дождём.\nТемпература и слабость.",
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 105,
                     "IsDebuff": true,
                     "Effects": {
                         "MaxStamina": -30
@@ -449,8 +449,8 @@
                     "DisplayName": "Простуда (острая фаза)",
                     "Description": "Температура 38°C,\nсильная слабость, чихание.\nХарви назначил жаропонижающее и\nпостельный режим.",
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 13,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 106,
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Effects": {
@@ -463,8 +463,8 @@
                     "DisplayName": "Простуда (восстановление)",
                     "Description": "Температура спала,\nно кашель и слабость остались.\nХарви всё ещё наблюдает за\nтобой.",
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 17,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 107,
                     "IsDebuff": true,
                     "Effects": {
                         "MaxStamina": -20

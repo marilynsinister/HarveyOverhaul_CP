@@ -468,6 +468,12 @@ Example: "%Abigail is lost in her music."
       "FromFile": "assets/Character/Sprites/Harvey_Beach.png"
     },
     {
+      "LogName": "Load Harvey Buff Icons",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/HarveyBuffIcons",
+      "FromFile": "assets/Tilesheets/harveyBuffIcons.png"
+    },
+    {
       "LogName": "Load Stress Icons",
       "Action": "Load",
       "Target": "Mods/marilynsinister.HarveyOverhaul/stressIcons",

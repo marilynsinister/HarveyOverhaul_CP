@@ -12,8 +12,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 17,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 108,
                     "Effects": {
                     },
                     "CustomFields": {
@@ -28,8 +28,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 3,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 109,
                     "Effects": {},
                     "CustomFields": {
                         "HarveyMod": "prescription",
@@ -43,8 +43,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 16,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 110,
                     "Effects": {},
                     "CustomFields": {
                         "HarveyMod": "prescription",
@@ -58,8 +58,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 15,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 111,
                     "Effects": {
                         "MaxStamina": -3
                     },
@@ -75,8 +75,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 21,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 112,
                     "Effects": {},
                     "CustomFields": {
                         "HarveyMod": "prescription",
@@ -90,8 +90,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 21,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 113,
                     "Effects": {},
                     "CustomFields": {
                         "HarveyMod": "hospitalization_status"
@@ -104,8 +104,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 21,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 114,
                     "Effects": {},
                     "CustomFields": {
                         "HarveyMod": "doctor_visit_reminder"
@@ -118,8 +118,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 15,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 115,
                     "Effects": {
                         "MaxStamina": -8
                     },
@@ -134,8 +134,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 20,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 116,
                     "Effects": {
                         "Immunity": 1
                     },
@@ -150,8 +150,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 16,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 117,
                     "Effects": {},
                     "CustomFields": {
                         "HarveyMod": "selfcare",
@@ -165,8 +165,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 18,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 118,
                     "Effects": {
                         "Defense": 1,
                         "Immunity": 1,

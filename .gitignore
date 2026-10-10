@@ -1,0 +1,6 @@
+# Python
+__pycache__/
+*.pyc
+
+# Превью генераторов спрайтов
+scripts/_prev*.png

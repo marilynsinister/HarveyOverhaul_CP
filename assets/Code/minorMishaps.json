@@ -18,8 +18,8 @@
                     "IsDebuff": false,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
-                    "IconSpriteIndex": 0,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 158,
                     "Effects": {
                         "Defense": 1,
                         "MaxStamina": 15
@@ -33,8 +33,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
-                    "IconSpriteIndex": 1,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 159,
                     "Effects": {
                         "ForagingLevel": -1,
                         "FarmingLevel": -1
@@ -48,8 +48,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
-                    "IconSpriteIndex": 2,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 160,
                     "Effects": {
                         "MaxStamina": -10,
                         "Attack": -1
@@ -63,8 +63,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
-                    "IconSpriteIndex": 3,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 161,
                     "Effects": {
                         "MaxStamina": -30,
                         "Speed": -1
@@ -78,8 +78,8 @@
                     "IsDebuff": true,
                     "GlowColor": null,
                     "Duration": -2,
-                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
-                    "IconSpriteIndex": 4,
+                    "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+                    "IconSpriteIndex": 162,
                     "Effects": {
                         "MaxStamina": -15,
                         "Attack": -1,

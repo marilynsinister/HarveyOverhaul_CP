@@ -11,8 +11,8 @@
             "Description": "Вы чувствуете усталость.",
 "IsDebuff": true, "GlowColor": null,
 "Duration": 2880000, "IconTexture":
-"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 1,
+"Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 119,
             "Effects": {
               "MaxStamina": -10
             }
@@ -22,8 +22,8 @@
             "Description": "Вы чувствуете себя одиноко.",
 "IsDebuff": true, "GlowColor": null,
 "Duration": 4320000, "IconTexture":
-"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 2,
+"Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 120,
             "Effects": {
             }
           },
@@ -32,8 +32,8 @@
             "Description": "Вы всё ещё дрожите после грома.",
 "IsDebuff": true, "GlowColor": null,
 "Duration": 1440000, "IconTexture":
-"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 4,
+"Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 121,
             "Effects": {
               "Speed": 1,
               "Defense": -1
@@ -44,8 +44,8 @@
             "Description": "Вы не ели слишком долго.",
 "IsDebuff": true, "GlowColor": null,
 "Duration": 360000, "IconTexture":
-"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 6,
+"Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 122,
             "Effects": {
               "MaxStamina": -15
             }
@@ -55,8 +55,8 @@
             "Description": "Ваше тело устало от работы без\nотдыха.", "IsDebuff": true,
 "GlowColor": null,
 "Duration": 7200000, "IconTexture":
-"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 3,
+"Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 123,
             "Effects": {
               "MaxStamina": -20
             }
@@ -66,8 +66,8 @@
             "Description": "Вы спали слишком мало.",
 "IsDebuff": true, "GlowColor": null,
 "Duration": 1440000, "IconTexture":
-"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 13,
+"Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 124,
             "Effects": {
               "LuckLevel": -1
             }
@@ -77,8 +77,8 @@
             "Description": "Вы промокли и продрогли на\nветру.",
 "IsDebuff": true, "GlowColor": null,
 "Duration": 720000, "IconTexture":
-"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 11,
+"Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 125,
             "Effects": {
               "Defense": -1
             }
@@ -88,8 +88,8 @@
             "Description": "В темноте всё кажется опаснее.",
 "IsDebuff": true, "GlowColor": null,
 "Duration": 180000, "IconTexture":
-"Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 18,
+"Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 126,
             "Effects": {
               "Defense": -1
             }
@@ -100,8 +100,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": -2,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 18,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 127,
             "Effects": {
               "Defense": -1
             }
@@ -112,8 +112,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": -2,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 18,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 128,
             "Effects": {
               "Defense": -2
             }
@@ -124,8 +124,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": -2,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 18,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 129,
             "Effects": {
               "Defense": -3
             }
@@ -136,8 +136,8 @@
             "IsDebuff": false,
             "GlowColor": null,
             "Duration": -2,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 0,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 130,
             "Effects": {
             }
           },
@@ -147,8 +147,8 @@
             "IsDebuff": false,
             "GlowColor": null,
             "Duration": -2,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 0,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 131,
             "Effects": {
               "Defense": 2
             }
@@ -159,8 +159,8 @@
             "IsDebuff": false,
             "GlowColor": null,
             "Duration": -2,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 0,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 132,
             "Effects": {
               "Defense": 1
             }
@@ -171,8 +171,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 9000000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 17,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 133,
             "Effects": {
               "Defense": -1
             }
@@ -183,8 +183,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 360000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 12,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 134,
             "Effects": {
               "MaxStamina": -10
             }
@@ -195,8 +195,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 240000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 0,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 135,
             "Effects": {
               "Speed": 2,
               "Defense": -2
@@ -209,8 +209,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 8,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 136,
             "Effects": {
               "Defense": -3,
               "LuckLevel": -2,
@@ -223,8 +223,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 21600000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 7,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 137,
             "Effects": {
               "MaxStamina": -50,
               "LuckLevel": -3
@@ -237,8 +237,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 28800000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 3,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 138,
             "Effects": {
               "LuckLevel": -3,
               "Defense": -2
@@ -251,8 +251,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 180000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 0,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 139,
             "Effects": {
               "Defense": -3,
               "MaxStamina": -40
@@ -264,8 +264,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 10080000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 13,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 140,
             "Effects": {
               "LuckLevel": -2,
               "MaxStamina": -20
@@ -278,8 +278,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 7200000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 23,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 141,
             "Effects": {
               "MaxStamina": -60,
               "LuckLevel": -4,
@@ -295,8 +295,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 14,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 142,
             "Effects": {
               "MaxStamina": -35,
               "LuckLevel": -2,
@@ -310,8 +310,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 10800000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 15,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 143,
             "Effects": {
               "MaxStamina": -30,
               "Defense": -3,
@@ -325,8 +325,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 7200000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 16,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 144,
             "Effects": {
               "MaxStamina": -20,
               "LuckLevel": -2,
@@ -340,8 +340,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 12600000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 18,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 145,
             "Effects": {
               "MaxStamina": -30,
               "LuckLevel": -3,
@@ -355,8 +355,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 18000000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 19,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 146,
             "Effects": {
               "MaxStamina": -45,
               "LuckLevel": -3,
@@ -371,8 +371,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 21600000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 20,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 147,
             "Effects": {
               "MaxStamina": -55,
               "LuckLevel": -4,
@@ -386,8 +386,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 25200000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 21,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 148,
             "Effects": {
               "MaxStamina": -60,
               "LuckLevel": -4,
@@ -402,8 +402,8 @@
             "IsDebuff": true,
            "GlowColor": null,
             "Duration": 16200000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 22,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 149,
             "Effects": {
               "MaxStamina": -40,
               "LuckLevel": -3,
@@ -418,8 +418,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 19800000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 23,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 150,
             "Effects": {
               "MaxStamina": -50,
               "LuckLevel": -3,
@@ -434,8 +434,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 28800000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 24,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 151,
             "Effects": {
               "MaxStamina": -65,
               "LuckLevel": -5,
@@ -451,8 +451,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 20,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 152,
             "Effects": {
               "MaxStamina": -30,
               "LuckLevel": -3
@@ -465,8 +465,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 12,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 153,
             "Effects": {
               "MaxStamina": -35,
               "Defense": -2
@@ -479,8 +479,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 14,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 154,
             "Effects": {
               "MaxStamina": -20
             }
@@ -492,8 +492,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 15,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 155,
             "Effects": {
               "MaxStamina": -25,
               "LuckLevel": -3
@@ -506,8 +506,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 54,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 156,
             "Effects": {
               "MaxStamina": -20,
               "LuckLevel": -2,
@@ -521,8 +521,8 @@
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": 14400000,
-            "IconTexture": "Mods\\marilynsinister.HarveyOverhaul\\stressIcons",
-            "IconSpriteIndex": 11,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 157,
             "Effects": {
               "MaxStamina": -30,
               "LuckLevel": -2
