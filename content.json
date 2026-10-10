@@ -444,24 +444,13 @@ Example: "%Abigail is lost in her music."
       "FromFile": "assets/Code/eventsGotoroForestRescue.json"
     },
     {
-      "LogName": "Load Characters/Harvey #1",
+      "LogName": "Load Characters/Harvey",
       "Action": "Load",
       "Target": "Characters/Harvey",
       "FromFile": "assets/Character/Sprites/Harvey.png",
       "Priority": "High"
     },
-    {
-      "LogName": "Load Characters/Harvey #2",
-      "Action": "Load",
-      "Target": "Characters/Harvey",
-      "FromFile": "assets/Character/Sprites/Harvey_coat.png",
-      "PatchMode": "Replace",
-      "Priority": "High",
-      "When": {
-        "LocationName": "Hospital"
-      },
-      "Update": "OnLocationChange"
-    },
+    // Белый халат в клинике вынесен в отдельный мод: HarveyWhiteCoat [CP].
     {
       "Action": "Load",
       "Target": "Characters/Harvey_Beach",
