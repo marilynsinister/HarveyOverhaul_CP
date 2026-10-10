@@ -1,0 +1,74 @@
+{
+    // Тихие вечера в комнате Харви (хобби: радио, модели самолётов, медицинский журнал).
+    // Снимают стресс через trigger action HarveyStressMeter (ComfortActivityService).
+    // Расстановка как в eventHarveyRoomCheckup (events.json): вход 6 12, Харви у стола 9 9.
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/HarveyRoom",
+            "Entries": {
+                "{{ModId}}_eventHarveyEveningRadio/Time 1900 2300/Friendship Harvey 1000/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom": "continue/
+        8 9/
+        farmer 1000 1000 0 Harvey 9 9 3/
+        skippable/
+        warp farmer 6 12/
+        move farmer 0 -3 1 true/
+        move Harvey -1 0 3 true/
+        move farmer 1 0 1 true/
+        pause 300/
+        speak Harvey \"О, @! Заходи. Только тише... слышишь?$h\"/
+        message \"Из старого приёмника доносится треск и далёкие голоса.\"/
+        speak Harvey \"Это частота диспетчерской Зузу-Сити. Они ведут самолёты на посадку.#$b#Когда день тяжёлый, я просто сижу и слушаю. Кто-то там, наверху, тоже держит курс домой.$0\"/
+        pause 500/
+        emote farmer 32/
+        speak Harvey \"Посидишь со мной немного? Ничего делать не нужно. Просто слушать.$h\"/
+        pause 1500/
+        message \"Вы долго молчите под тихий треск эфира. Становится удивительно спокойно.\"/
+        speak Harvey \"Спасибо, что зашла. Мне редко есть с кем это разделить.$h\"/
+        friendship Harvey 40/
+        action marilynsinister.HarveyStressMeter_ComfortRelief 15/
+        end",
+                "{{ModId}}_eventHarveyEveningPlanes/Time 1900 2300/Friendship Harvey 1500/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom": "continue/
+        8 9/
+        farmer 1000 1000 0 Harvey 9 9 3/
+        skippable/
+        warp farmer 6 12/
+        move farmer 0 -3 1 true/
+        move Harvey -1 0 3 true/
+        move farmer 1 0 1 true/
+        pause 300/
+        speak Harvey \"@! Ты как раз вовремя. Подержишь крыло? Клей схватывается тридцать секунд.$h\"/
+        message \"На столе — почти собранная модель самолёта. Ты осторожно придерживаешь крыло.\"/
+        pause 1000/
+        speak Harvey \"...двадцать восемь, двадцать девять... Всё. Отпускай.$u\"/
+        emote Harvey 32/
+        speak Harvey \"В детстве я хотел стать пилотом. Зрение подвело.#$b#А потом понял: врач тоже ведёт людей на посадку. Только на мягкую.$0\"/
+        pause 600/
+        speak Harvey \"Следующую соберём вместе? С самого начала.$h\"/
+        friendship Harvey 50/
+        action marilynsinister.HarveyStressMeter_ComfortRelief 15/
+        end",
+                "{{ModId}}_eventHarveyEveningJournal/Time 1900 2300/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom": "continue/
+        8 9/
+        farmer 1000 1000 0 Harvey 9 9 3/
+        skippable/
+        warp farmer 6 12/
+        move farmer 0 -3 1 true/
+        move Harvey -1 0 3 true/
+        move farmer 1 0 1 true/
+        pause 300/
+        speak Harvey \"Солнышко, ты пришла. Я как раз дочитывал статью... садись рядом.$l\"/
+        message \"Харви читает вслух медицинский журнал. Слова сливаются в тихий ровный голос.\"/
+        pause 1200/
+        emote farmer 24/
+        speak Harvey \"...и таким образом... @? Ты заснула?$h\"/
+        pause 800/
+        speak Harvey \"Спи. Это лучшее лечение, какое я знаю.$l\"/
+        message \"Он укрывает тебя пледом и приглушает лампу.\"/
+        friendship Harvey 60/
+        action marilynsinister.HarveyStressMeter_ComfortRelief 25/
+        end"
+            }
+        }
+    ]
+}

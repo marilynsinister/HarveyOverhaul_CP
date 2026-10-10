@@ -1,0 +1,158 @@
+{
+    // Мелкие неприятности (C#: HarveyOverhaulInjury/Managers/MishapManager.cs) и «Закалка» (MedicalCardManager).
+    // Проходят за ночь: в снимок баффов на следующий день не попадают.
+    "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/MishapBuffIcons",
+            "FromFile": "assets/Items/mishapBuffIcons.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "HarveyMod_Resilience": {
+                    "Id": "HarveyMod_Resilience",
+                    "DisplayName": "Закалка",
+                    "Description": "Ты пережила тяжёлую травму.\nТело помнит и стало крепче.",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
+                    "IconSpriteIndex": 0,
+                    "Effects": {
+                        "Defense": 1,
+                        "MaxStamina": 15
+                    },
+                    "CustomFields": { "HarveyMod": "medicalcard" }
+                },
+                "HarveyMod_Splinter": {
+                    "Id": "HarveyMod_Splinter",
+                    "DisplayName": "Заноза",
+                    "Description": "Палец саднит при каждом движении.\nПоможет бинт, антисептик\nили аптечка.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
+                    "IconSpriteIndex": 1,
+                    "Effects": {
+                        "ForagingLevel": -1,
+                        "FarmingLevel": -1
+                    },
+                    "CustomFields": { "HarveyMod": "mishap" }
+                },
+                "HarveyMod_BeeSting": {
+                    "Id": "HarveyMod_BeeSting",
+                    "DisplayName": "Укус пчелы",
+                    "Description": "Рука опухла и горит.\nПоможет антисептик,\nобезболивающее или аптечка.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
+                    "IconSpriteIndex": 2,
+                    "Effects": {
+                        "MaxStamina": -10,
+                        "Attack": -1
+                    },
+                    "CustomFields": { "HarveyMod": "mishap" }
+                },
+                "HarveyMod_Sunstroke": {
+                    "Id": "HarveyMod_Sunstroke",
+                    "DisplayName": "Солнечный удар",
+                    "Description": "Слишком долго на жаре.\nВыпей что-нибудь\nи уйди в тень.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
+                    "IconSpriteIndex": 3,
+                    "Effects": {
+                        "MaxStamina": -30,
+                        "Speed": -1
+                    },
+                    "CustomFields": { "HarveyMod": "mishap" }
+                },
+                "HarveyMod_Frostbite": {
+                    "Id": "HarveyMod_Frostbite",
+                    "DisplayName": "Обморожение",
+                    "Description": "Пальцы онемели от холода.\nПоможет горячий напиток\nили аптечка.",
+                    "IsDebuff": true,
+                    "GlowColor": null,
+                    "Duration": -2,
+                    "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
+                    "IconSpriteIndex": 4,
+                    "Effects": {
+                        "MaxStamina": -15,
+                        "Attack": -1,
+                        "FishingLevel": -1
+                    },
+                    "CustomFields": { "HarveyMod": "mishap" }
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": { "Hearts:Harvey": "0,1,2" },
+            "Entries": {
+                "topicHarvey_Splinter": "Покажите палец. Заноза? Не ковыряйте её ногтем — занесёте грязь.$u#$b#Пинцет и антисептик. Ну, или ко мне.$0",
+                "topicHarvey_BeeSting": "Вас ужалила пчела? Если отёк пойдёт выше локтя или станет трудно дышать — сразу в клинику.$u",
+                "topicHarvey_Sunstroke": "Вы перегрелись. Вода, тень и никакой работы до вечера.$u#$b#Шляпа — это не украшение, а медицинская рекомендация.$0",
+                "topicHarvey_Frostbite": "Руки ледяные. Не растирайте снегом — это миф. Тёплая вода и горячий чай.$u",
+                "topicHarvey_MedicalMilestone": "Я заглянул в вашу медицинскую карту.$0#$b#Вы неплохо справляетесь. Как пациент — и как человек.$h"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": { "Hearts:Harvey": "3,4,5" },
+            "Entries": {
+                "topicHarvey_Splinter": "Опять заноза? Дай посмотрю. Не ковыряй ногтем, ладно?$u#$b#Вот. Готово. Даже не больно было... почти.$h",
+                "topicHarvey_BeeSting": "Пчела ужалила? Если отёк начнёт расти — сразу ко мне. Я серьёзно.$u",
+                "topicHarvey_Sunstroke": "Ты перегрелась. Вода, тень, шляпа. Именно в таком порядке.$u#$b#И не спорь с солнцем, оно всё равно сильнее.$0",
+                "topicHarvey_Frostbite": "У тебя ледяные пальцы. Только не растирай снегом — горячий чай и тёплая вода.$u",
+                "topicHarvey_MedicalMilestone": "Смотрю на твою медицинскую карту... ты стала куда внимательнее к себе.$h#$b#Мне это правда важно.$0"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": { "Hearts:Harvey": "6,7,8,9,10" },
+            "Entries": {
+                "topicHarvey_Splinter": "Заноза, да? Давай сюда руку. Держу крепко — не дёргайся.$u#$b#Всё. Храбрая ты.$h",
+                "topicHarvey_BeeSting": "Пчела? Покажи. Отёк небольшой... но я всё равно буду за ним следить.$u",
+                "topicHarvey_Sunstroke": "Ты перегрелась на солнце. Я принёс воды. Пей, пожалуйста, всю.$u#$b#И завтра — в шляпе.$0",
+                "topicHarvey_Frostbite": "У тебя ледяные руки. Держи кружку обеими ладонями — я налью горячего чая.$u",
+                "topicHarvey_MedicalMilestone": "Твоя медицинская карта толще, чем мне бы хотелось.$s#$b#Но в каждой записи ты выздоравливаешь. Горжусь тобой.$h"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": { "Relationship:Harvey": "Dating" },
+            "Entries": {
+                "topicHarvey_Splinter": "Солнышко, дай руку. Заноза... Сейчас вытащу.$u#$b#Вот и всё. Можно поцеловать, чтобы не болело?$l",
+                "topicHarvey_BeeSting": "Тебя ужалила пчела? Покажи. Я посмотрю отёк — и не спорь, мне так спокойнее.$u",
+                "topicHarvey_Sunstroke": "Ты перегрелась. Сегодня ты в тени и с водой, а я рядом.$u#$b#Шляпу я тебе подарю. И буду проверять, носишь ли.$l",
+                "topicHarvey_Frostbite": "Твои пальцы как лёд. Давай их сюда, в мои ладони.$l#$b#И горячий чай. Я уже поставил чайник.$u",
+                "topicHarvey_MedicalMilestone": "Я веду твою медицинскую карту и думаю: какая же ты сильная.$l#$b#Только не заставляй меня дописывать её слишком часто.$h"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": { "Relationship:Harvey": "Married" },
+            "Entries": {
+                "topicHarvey_Splinter": "Заноза? Иди сюда, у меня пинцет всегда в кармане. Да, даже дома.$u#$b#Готово. Теперь поцелуй — это часть лечения.$l",
+                "topicHarvey_BeeSting": "Пчела ужалила мою жену? Как она посмела.$h#$b#Покажи руку. Холодный компресс — и сегодня никакого сада.$u",
+                "topicHarvey_Sunstroke": "Ты перегрелась. Сядь. Вот вода. Вот шляпа. Вот я.$u#$b#В таком порядке и никак иначе.$l",
+                "topicHarvey_Frostbite": "Девочка моя, у тебя ледяные руки. Давай их сюда, под мой свитер.$l#$b#Чай уже заварен.$u",
+                "topicHarvey_MedicalMilestone": "Знаешь, я перечитал твою медицинскую карту.$s#$b#Каждый раз ты поднималась. Я люблю тебя за это — и за многое другое.$l"
+            }
+        }
+    ]
+}
