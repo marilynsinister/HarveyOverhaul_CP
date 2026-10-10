@@ -1,0 +1,72 @@
+{
+    // Помощь в клинике: сезонные поручения Харви (раз в сезон) и «сезон гриппа» зимой.
+    // Повтор каждый год: ключи писем содержат {{Year}}, триггеры с MarkActionApplied=false.
+    // Формат квеста: тип/название/описание/цель/требование/следующий/награда/-1/можно отменить/реакция.
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Quests",
+            "Entries": {
+                "{{ModId}}_ErrandSpring": "ItemDelivery/Отвар от кашля/Весной в клинику идут с кашлем. Харви просит принести лук-порей для отвара./Принеси Харви 3 лука-порея./Harvey (O)20 3/-1/400/-1/true/Как раз вовремя. Утром у меня было шесть кашляющих пациентов.$h#$b#Спасибо. Без тебя пришлось бы закрывать клинику и идти в лес самому.$0",
+                "{{ModId}}_ErrandSummer": "ItemDelivery/Ягодный сироп/Харви делает сироп для детей — горькие таблетки они пить отказываются./Принеси Харви 3 пряные ягоды./Harvey (O)396 3/-1/450/-1/true/Отлично. Винсент обещал выпить лекарство, если оно будет «как конфета».$h#$b#Теперь будет. Спасибо.$0",
+                "{{ModId}}_ErrandFall": "ItemDelivery/Морс для пациентов/Осенью у многих падает иммунитет. Харви хочет поить пациентов ягодным морсом./Принеси Харви 6 ежевик./Harvey (O)410 6/-1/400/-1/true/Ежевика! Витамины, которые никто не отказывается пить.$h#$b#Спасибо, что выручаешь клинику.$0",
+                "{{ModId}}_ErrandWinter": "ItemDelivery/Согревающий бульон/Зимой Харви готовит бульон для пожилых пациентов. Не хватает корнеплодов./Принеси Харви 3 зимних корня./Harvey (O)412 3/-1/450/-1/true/Зимний корень — то, что нужно для бульона.$h#$b#Джордж будет ворчать, что невкусно. Но съест.$0",
+                "{{ModId}}_FluGeorge": "ItemDelivery/Сезон гриппа: Джордж/В долине грипп, Харви не успевает обойти всех. Джордж простудился и отказывается идти в клинику./Отнеси Джорджу травяной сбор./George (O){{ModId}}_HerbalTea 1/{{ModId}}_FluEvelyn/250/-1/true/Хм. Доктор прислал? Ладно, выпью... Только Эвелин не говори, что я заболел.",
+                "{{ModId}}_FluEvelyn": "ItemDelivery/Сезон гриппа: Эвелин/Эвелин ухаживает за Джорджем и сама начала кашлять./Отнеси Эвелин травяной сбор./Evelyn (O){{ModId}}_HerbalTea 1/{{ModId}}_FluLinus/250/-1/true/Ох, дорогая, как мило! Джордж, конечно, сказал, что он не болеет. Он всегда так говорит.",
+                "{{ModId}}_FluLinus": "ItemDelivery/Сезон гриппа: Линус/Линус живёт один в палатке. Харви волнуется, что о нём никто не вспомнит./Отнеси Линусу травяной сбор./Linus (O){{ModId}}_HerbalTea 1/-1/400/-1/true/Ты пришла ко мне... с лекарством? Спасибо. Не все в долине помнят, что я тоже тут живу."
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "{{ModId}}_mailErrandSpring{{Year}}": "@,^^В клинике снова очередь из кашляющих. Отвар из лука-порея помогает лучше сиропов из Джоджа-марта, но собирать его мне некогда.^^Если будешь в лесу — принеси, пожалуйста, несколько стеблей. Я в долгу не останусь.^^— Харви%item quest {{ModId}}_ErrandSpring true %%[#]Просьба из клиники",
+                "{{ModId}}_mailErrandSummer{{Year}}": "@,^^Дети в долине упорно отказываются от горьких лекарств. Я сдаюсь и делаю сироп.^^Нужны пряные ягоды. Если попадутся — я буду очень благодарен. И Винсент тоже, хотя он об этом пока не знает.^^— Харви%item quest {{ModId}}_ErrandSummer true %%[#]Просьба из клиники",
+                "{{ModId}}_mailErrandFall{{Year}}": "@,^^Осенью иммунитет у всех проседает, и у меня тоже.^Хочу поить пациентов ягодным морсом. Ежевики в этом году много, но у меня нет времени её собирать.^^Поможешь?^^— Харви%item quest {{ModId}}_ErrandFall true %%[#]Просьба из клиники",
+                "{{ModId}}_mailErrandWinter{{Year}}": "@,^^Зимой я варю бульон для пожилых пациентов. Тёплая еда лечит не хуже таблеток, особенно когда за окном метель.^^Мне не хватает зимних корней. Если найдёшь — принеси, пожалуйста.^^— Харви%item quest {{ModId}}_ErrandWinter true %%[#]Просьба из клиники",
+                "{{ModId}}_mailFluSeason{{Year}}": "@,^^В долине грипп. Я не успеваю обойти всех, а некоторые упрямо не идут в клинику.^^Джордж, Эвелин и Линус — им сейчас тяжелее всех. Можешь отнести каждому травяной сбор? Рецепт у тебя есть, а если нет — в клинике есть готовый.^^И сама береги себя. Мне хватит одного пациента-фермера.^^— Харви%item quest {{ModId}}_FluGeorge true %%[#]Сезон гриппа"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_triggerErrandSpring": {
+                    "Id": "{{ModId}}_triggerErrandSpring",
+                    "Trigger": "DayStarted",
+                    "Condition": "SEASON spring, DAY_OF_MONTH 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20, PLAYER_HEARTS Current Harvey 3, RANDOM 0.2, !PLAYER_HAS_MAIL Current {{ModId}}_mailErrandSpring{{Year}} Any",
+                    "Actions": [ "AddMail Current {{ModId}}_mailErrandSpring{{Year}} now" ],
+                    "MarkActionApplied": false
+                },
+                "{{ModId}}_triggerErrandSummer": {
+                    "Id": "{{ModId}}_triggerErrandSummer",
+                    "Trigger": "DayStarted",
+                    "Condition": "SEASON summer, DAY_OF_MONTH 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20, PLAYER_HEARTS Current Harvey 3, RANDOM 0.2, !PLAYER_HAS_MAIL Current {{ModId}}_mailErrandSummer{{Year}} Any",
+                    "Actions": [ "AddMail Current {{ModId}}_mailErrandSummer{{Year}} now" ],
+                    "MarkActionApplied": false
+                },
+                "{{ModId}}_triggerErrandFall": {
+                    "Id": "{{ModId}}_triggerErrandFall",
+                    "Trigger": "DayStarted",
+                    "Condition": "SEASON fall, DAY_OF_MONTH 8 9 10 11 12 13 14 15 16 17 18 19 20, PLAYER_HEARTS Current Harvey 3, RANDOM 0.2, !PLAYER_HAS_MAIL Current {{ModId}}_mailErrandFall{{Year}} Any",
+                    "Actions": [ "AddMail Current {{ModId}}_mailErrandFall{{Year}} now" ],
+                    "MarkActionApplied": false
+                },
+                "{{ModId}}_triggerErrandWinter": {
+                    "Id": "{{ModId}}_triggerErrandWinter",
+                    "Trigger": "DayStarted",
+                    "Condition": "SEASON winter, DAY_OF_MONTH 1 2 3 4 5 22 23 24 25 26, PLAYER_HEARTS Current Harvey 3, RANDOM 0.25, !PLAYER_HAS_MAIL Current {{ModId}}_mailErrandWinter{{Year}} Any",
+                    "Actions": [ "AddMail Current {{ModId}}_mailErrandWinter{{Year}} now" ],
+                    "MarkActionApplied": false
+                },
+                "{{ModId}}_triggerFluSeason": {
+                    "Id": "{{ModId}}_triggerFluSeason",
+                    "Trigger": "DayStarted",
+                    "Condition": "SEASON winter, DAY_OF_MONTH 8 9 10 11 12 13 14 15 16 17 18, PLAYER_HEARTS Current Harvey 3, RANDOM 0.3, !PLAYER_HAS_MAIL Current {{ModId}}_mailFluSeason{{Year}} Any",
+                    "Actions": [ "AddMail Current {{ModId}}_mailFluSeason{{Year}} now" ],
+                    "MarkActionApplied": false
+                }
+            }
+        }
+    ]
+}

@@ -396,6 +396,10 @@ Example: "%Abigail is lost in her music."
     },
     {
       "Action": "Include",
+      "FromFile": "assets/Code/clinicErrands.json"
+    },
+    {
+      "Action": "Include",
       "FromFile": "assets/Code/buffsStress.json"
     },
     // =====  СОБЫТИЯ ===== //
