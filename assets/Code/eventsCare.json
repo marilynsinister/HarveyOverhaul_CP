@@ -133,6 +133,7 @@
                     none/
                     4 6/
                     farmer 4 6 1 Harvey 4 5 3/
+                    ignoreCollisions farmer/
                     skippable/
                     speak Harvey \"*поднимает голову от бумаг* А, вы пришли! *улыбается* Проходите, располагайтесь.$h#$b#*указывает на кушетку* Садитесь, пожалуйста. Это займет совсем немного времени.$l\"/
                     pause 1000/
@@ -140,6 +141,7 @@
                     pause 200/
                     move farmer 0 -2 2/
                     pause 100/
+                    stopAnimation farmer/
                     showFrame farmer true 117/
                     pause 1000/
                     pause 1000/
@@ -272,7 +274,7 @@
                     addConversationTopic topicAgreedCheckup 5/
                     speak Harvey \"*заботливо* А пока - отдыхайте. И ешьте регулярно, пожалуйста.$l#$b#*смущенно* Прости, если показался навязчивым. Профессиональная деформация.$s\"/
                     message \"Нет, вы... очень внимательный. Спасибо.\"/
-                    emote Harvey 32
+                    emote Harvey 32/
                     speak Harvey \"*тепло улыбается* Добро пожаловать в Стардью Вэлли. Надеюсь, вам здесь понравится.$h\"/
                     globalFade/
                     viewport -1000 -1000/
