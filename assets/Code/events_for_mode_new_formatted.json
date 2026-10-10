@@ -105,7 +105,7 @@
       "Target": "Data/Events/Farm",
       "Entries": {
         "MyMod_HarveyUrgentFarmVisit/Time 600 2400/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicStressBreakdown topicStressCollapse/Friendship Harvey 1000": [
-          "spring_day_ambient/64 15/farmer 64 16 2 Harvey 64 18 0/skippable/pause 1000/",
+          "spring_day_ambient/{{HO_FarmX}} {{HO_FarmY0}}/farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/skippable/pause 1000/",
           "playSound doorClose/",
           "speak Harvey \"$u Я почувствовал, что что-то не так.$a#$b#Врачебная интуиция. Где ты?$u\"/",
           "move Harvey 0 -2 0/pause 400/emote Harvey 16/",

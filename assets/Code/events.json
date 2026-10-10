@@ -7,8 +7,8 @@
       "Entries": {
        "eventHarveyFirstWalk/Time 600 1200/Weather Sunny/GameStateQuery DAYS_PLAYED 11/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveySecondVisitAgree/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveySecondVisitNeutral/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveySecondVisitRefused/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveySecondVisit/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstWalk": "
         continue/
-        64 15/
-        farmer 64 16 2 Harvey 64 18 0/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
         skippable/
         pause 600/
         speak Harvey \"Привет. Я заметил, что ты часто бываешь в лесу.$h#$b#Сегодня хорошая погода для прогулки.$0\"/
@@ -56,8 +56,8 @@
         viewport -1000 -1000/
         addConversationTopic topicHarveyAcceptFirstWalk 7/
         end position 51 13","eventHarveyCheckHealthFarmer/Time 600 1200/GameStateQuery PLAYER_HAS_SEEN_EVENT Current PlayerKilled/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating": "continue/
-        64 15/
-        farmer 64 16 2 Harvey 64 18 0/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
         skippable/
         setSkipActions changeLocation Hospital#ignoreCollisions farmer#warp farmer 20 5#faceDirection farmer 3#positionOffset farmer 32 -32#warp Harvey 19 5#faceDirection Harvey 1/
         pause 600/
@@ -123,8 +123,8 @@
         end position 20 5",
         "eventHarveyCheckFarmerOutsideAfter22/Time 2200 0200/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating Married": "
         continue/
-        64 15/
-        farmer 64 16 2 Harvey 64 18 0/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
         pause 600/
         skippable/
         playSound owl/
@@ -151,8 +151,8 @@
         addConversationTopic topicHarveyMandatoryCheckup 1/
         end","eventHarveyMorningCheckup/Time 0600 0800/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyMandatoryCheckup/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating": "
         continue/
-        64 15/
-        farmer 64 16 2 Harvey 64 17 0/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY2}} 0/
         pause 1000/
         skippable/
         speak Harvey \"@? Проснись, солнышко...$l\"/
@@ -174,8 +174,8 @@
         viewport -1000 -1000/
         end","eventHarveyStormComfortFarm/Weather storm/Time 2000 2600/Friendship Harvey 750/Random 0.6/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
         none/
-        64 15/
-        farmer 64 16 2 Harvey 64 18 0/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
         skippable/
         setSkipActions action addBuff buffStressImmunity -2#action removeConversationTopic topicStressThunder#action removeConversationTopic topicHarveyStormStress#action addConversationTopic HarveyMod_CD_StormComfort 3#friendship Harvey 35/
         playSound thunder/
@@ -209,8 +209,8 @@
         viewport -1000 -1000/
         end","HarveyOverhaulStory.E7_DoorSignal/Time 1800 2330/!FestivalDay/Friendship Harvey 2000/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E6_SayItOutLoud, !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_DoorSignal, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E6": "
         none/
-        64 15/
-        farmer 64 16 2 Harvey -1000 -1000 0/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey -1000 -1000 0/
         skippable/
         setSkipActions AddConversationTopic Current HarveyMod_CD_Global 3#AddConversationTopic Current HarveyMod_CD_E7 7/
         ambientLight 80 70 55/
@@ -220,7 +220,7 @@
         emote farmer 40/
         pause 500/
         playSound grassyStep/
-        warp Harvey 64 20/
+        warp Harvey {{HO_FarmX}} {{HO_FarmY5}}/
         faceDirection Harvey 2/
         pause 400/
         emote Harvey 16/
@@ -318,10 +318,10 @@
       "Action": "EditData",
       "Target": "Data/Events/Hospital",
       "Entries": {
-        "HarveyOverhaulStory.E5_StormBeside/Weather Storm/Time 1400 2000/!FestivalDay/Friendship Harvey 1500/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E4B_TooQuiet, !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E5_StormBeside, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E4B": "
+        "HarveyOverhaulStory.E5_StormBeside/Weather Storm/Time 1000 1500/!FestivalDay/Friendship Harvey 1500/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E4B_TooQuiet, !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E5_StormBeside, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E4B": "
         none/
         10 19/
-        farmer 10 19 0 Harvey 9 19 1/
+        farmer 10 19 0 Harvey 9 18 1/
         setSkipActions AddConversationTopic Current HarveyMod_CD_Global 2#AddConversationTopic Current HarveyMod_CD_E5 5/
         skippable/
         ambientLight 80 80 110/
@@ -331,7 +331,7 @@
         speak Harvey \"Ко мне. Сейчас — внутрь.$8\"/
         playSound doorClose/
         pause 200/
-        move Harvey 0 -4 0 true/
+        move Harvey 0 -3 0 true/
         pause 200/
         move farmer 0 -4 3 true/
         pause 100/
@@ -368,15 +368,15 @@
         globalFade/
         viewport -1000 -1000/
         end",
-        "HarveyOverhaulStory.E6_SayItOutLoud/Time 1900 2330/!FestivalDay/Friendship Harvey 1750/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E5_StormBeside, !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E6_SayItOutLoud, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E5": "
+        "HarveyOverhaulStory.E6_SayItOutLoud/Time 1300 1500/!FestivalDay/Friendship Harvey 1750/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E5_StormBeside, !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E6_SayItOutLoud, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E5": "
         Hospital_Ambient/
         10 16/
-        Harvey 9 19 1 farmer 10 19 0/
+        Harvey 9 18 1 farmer 10 19 0/
         skippable/
         setSkipActions AddConversationTopic Current HarveyMod_CD_Global 4#AddConversationTopic Current HarveyMod_CD_E6 7#AddConversationTopic Current topicHarveyCareAgreement 7/
         ambientLight 100 90 75/
         pause 400/
-        move Harvey 0 -3 0 true/
+        move Harvey 0 -2 0 true/
         move farmer 0 -3 3 true/
         proceedPosition Harvey/
         proceedPosition farmer/
@@ -412,10 +412,10 @@
         globalFade/
         viewport -1000 -1000/
         end",
-        "HarveyOverhaulStory.E9_CameByHerself/Time 0900 1500/!FestivalDay/Friendship Harvey 2500/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E8_BadDayNoReason/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E9_CameByHerself/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E9/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicFarmerExhausted/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicStressCollapse/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyNeedsFirstTreatment/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_ForcedHospitalization/GameStateQuery !PLAYER_HAS_BUFF Current buffEmergencySupervision": "
+        "HarveyOverhaulStory.E9_CameByHerself/Time 0900 1500/!FestivalDay/Friendship Harvey 2200/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E8_BadDayNoReason/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E9_CameByHerself/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E9/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicFarmerExhausted/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicStressCollapse/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyNeedsFirstTreatment/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_ForcedHospitalization/GameStateQuery !PLAYER_HAS_BUFF Current buffEmergencySupervision": "
         Hospital_Ambient/
         10 16/
-        Harvey 9 19 1 farmer -1000 -1000 0/
+        Harvey 9 16 1 farmer -1000 -1000 0/
         skippable/
         setSkipActions AddConversationTopic Current HarveyMod_CD_Global 3#AddConversationTopic Current HarveyMod_CD_E9 7/
         playSound doorOpen/
@@ -763,6 +763,7 @@
          speak Harvey \"До двери — медленно. Завтра пришлю время встречи на пирсе.$0\"/
          emote farmer 56/
          friendship Harvey 35/
+         action AddMail Current HarveyOverhaul_E2_PierInvite tomorrow/
          end dialogue Harvey \"Завтра — пирс, после шести. Я буду ждать.$0\"",
         // "HarveyMod_TreatmentReview/Time 1400 1700/GameStateQuery PLAYER_HAS_COMPLETED_QUEST Current HarveyMod_FatigueTreatment HarveyMod_SleepTherapy/Friendship Harvey 1000": "Hospital_Ambient/13 6/
         // farmer 15 8 1 Harvey 16 8 3/
@@ -946,7 +947,7 @@
         "58/f Harvey 1500/t 1100 1500": "
         aerobics/
         -1000 -1000/
-        farmer 14 12 1 Harvey 23 20 0 Marnie 23 18 0 Emily 23 16 0 Robin 25 18 0 Pam 25 16 0 Caroline 24 14 2 Jodi 27 16 0 Leah 27 18 0/
+        farmer 14 12 1 Harvey 23 20 0 Marnie 23 18 0 Emily 23 16 0 Robin 25 18 0 Pam 25 16 0 Olivia 25 20 0 Caroline 24 14 2 Jodi 27 16 0 Leah 27 18 0/
         addConversationTopic HarveyAerobics 0/
         eventSeen 58 true/
         skippable/
@@ -2182,6 +2183,7 @@
          globalFade/
          viewport -1000 -1000/
          pause 700/
+         action AddMail Current HarveyOverhaul_E1_Note tomorrow/
          end",
         // "eventHarveyFirstMeeting/Time 0600 2600/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstMeeting": "none/19 23/
         // farmer 19 23 1 Harvey 27 23 3/
@@ -2408,6 +2410,7 @@
           pause 300/
           globalFade/
           viewport -1000 -1000/
+          action AddMail Current HarveyOverhaul_E3_Reminder tomorrow/
           end",
           "HarveyOverhaulStory.E3B_WingPatient/Time 1200 1800/!FestivalDay/Friendship Harvey 1000/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E3_ForestApothecary/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E3B_WingPatient/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E3": "none/
           48 14/
@@ -2449,7 +2452,7 @@
           globalFade/
           viewport -1000 -1000/
           end",
-          "HarveyOverhaulStory.E8_BadDayNoReason/Time 1000 1700/!FestivalDay/Friendship Harvey 2250/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_DoorSignal/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E8_BadDayNoReason/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E8": "none/
+          "HarveyOverhaulStory.E8_BadDayNoReason/Time 1000 1700/!FestivalDay/Friendship Harvey 2100/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_DoorSignal/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E8_BadDayNoReason/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E8": "none/
           48 14/
           farmer 48 14 2 Harvey -1000 -1000 0/
           skippable/
@@ -2790,7 +2793,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Town",
       "Entries": {
-        "HarveyOverhaulStory.E9_LightInWindow/Time 2000 2330/!FestivalDay/Friendship Harvey 2250/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E8_QuietShelf/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E9_LightInWindow/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E8": "
+        "HarveyOverhaulStory.E9_LightInWindow/Time 2000 2330/!FestivalDay/Friendship Harvey 2150/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E8_QuietShelf/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E9_LightInWindow/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E8": "
         none/
         35 88/
         farmer 35 88 0 Harvey -1000 -1000 0/
@@ -2825,6 +2828,7 @@
         addConversationTopic topicHarveyTrustFinal 10/
         globalFade/
         viewport -1000 -1000/
+        action AddMail Current HarveyOverhaul_E9_LightNote tomorrow/
         end",
       }
     },
@@ -2833,7 +2837,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Town",
       "Entries": {
-        "HarveyOverhaulStory.E10_HarveyWasWrong/Time 1700 2300/!FestivalDay/Friendship Harvey 2750/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E9_CameByHerself/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E10/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
+        "HarveyOverhaulStory.E10_HarveyWasWrong/Time 1700 2300/!FestivalDay/Friendship Harvey 2200/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E9_CameByHerself/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E10/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
         none/
         26 22/
         farmer 26 22 1 Harvey -1000 -1000 0/
@@ -2880,7 +2884,7 @@
         globalFade/
         viewport -1000 -1000/
         end",
-        "HarveyOverhaulStory.E10_HarveyWasWrong_Dating/Time 1700 2300/!FestivalDay/Friendship Harvey 2750/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E9_CameByHerself/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong_Dating/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E10/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
+        "HarveyOverhaulStory.E10_HarveyWasWrong_Dating/Time 1700 2300/!FestivalDay/Friendship Harvey 2250/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E9_CameByHerself/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong_Dating/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E10/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
         none/
         26 22/
         farmer 26 22 1 Harvey -1000 -1000 0/
@@ -2934,7 +2938,7 @@
       "Action": "EditData",
       "Target": "Data/Events/FarmHouse",
       "Entries": {
-        "HarveyOverhaulStory.E11_HomeSafetyProtocol/Time 1000 2000/Weather Sunny Rain Wind Snow/!FestivalDay/Friendship Harvey 3000/GameStateQuery ANY \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong\" \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong_Dating\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E11_HomeSafetyProtocol/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E11": "
+        "HarveyOverhaulStory.E11_HomeSafetyProtocol/Time 1000 2000/Weather Sunny Rain Wind Snow/!FestivalDay/Friendship Harvey 2200/GameStateQuery ANY \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong\" \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong_Dating\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E11_HomeSafetyProtocol/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E11": "
         none/
         12 7/
         farmer 11 6 2 Harvey -1000 -1000 0/
@@ -2986,7 +2990,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Hospital",
       "Entries": {
-        "HarveyOverhaulStory.E12_HarveyIsTired/Time 1800 2300/!FestivalDay/Friendship Harvey 3250/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E11_HomeSafetyProtocol/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E12/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
+        "HarveyOverhaulStory.E12_HarveyIsTired/Time 1300 1500/!FestivalDay/Friendship Harvey 2200/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E11_HomeSafetyProtocol/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E12/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
         Hospital_Ambient/
         10 15/
         Harvey 10 14 2 farmer -1000 -1000 0/
@@ -3028,7 +3032,7 @@
         globalFade/
         viewport -1000 -1000/
         end",
-        "HarveyOverhaulStory.E12_HarveyIsTired_Dating/Time 1800 2300/!FestivalDay/Friendship Harvey 3250/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E11_HomeSafetyProtocol/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired_Dating/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E12/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
+        "HarveyOverhaulStory.E12_HarveyIsTired_Dating/Time 1300 1500/!FestivalDay/Friendship Harvey 2300/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E11_HomeSafetyProtocol/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired_Dating/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E12/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
         Hospital_Ambient/
         10 15/
         Harvey 10 14 2 farmer -1000 -1000 0/
@@ -3077,7 +3081,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Beach",
       "Entries": {
-        "HarveyOverhaulRomance.E1_NotAnExamDate/Time 1800 2300/!FestivalDay/Friendship Harvey 3500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery ANY \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired\" \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired_Dating\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulRomance.E1_NotAnExamDate/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_RomE1": "
+        "HarveyOverhaulRomance.E1_NotAnExamDate/Time 1800 2300/!FestivalDay/Friendship Harvey 2350/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery ANY \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired\" \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired_Dating\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulRomance.E1_NotAnExamDate/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_RomE1": "
         ocean/
         28 18/
         farmer 26 18 1 Harvey 28 18 3/
@@ -3122,7 +3126,7 @@
       "Action": "EditData",
       "Target": "Data/Events/BusStop",
       "Entries": {
-        "HarveyOverhaulStory.E13_MinesAgreement/Time 0700 1200/!FestivalDay/Friendship Harvey 3000/GameStateQuery ANY \"PLAYER_NPC_RELATIONSHIP Current Harvey Dating\" \"PLAYER_NPC_RELATIONSHIP Current Harvey Married\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E13_MinesAgreement/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E13": "
+        "HarveyOverhaulStory.E13_MinesAgreement/Time 0700 1200/!FestivalDay/Friendship Harvey 2200/GameStateQuery ANY \"PLAYER_NPC_RELATIONSHIP Current Harvey Dating\" \"PLAYER_NPC_RELATIONSHIP Current Harvey Married\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E13_MinesAgreement/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E13": "
         none/
         24 23/
         farmer 22 23 1 Harvey 30 23 3/
@@ -3142,7 +3146,7 @@
         speak Harvey \"Стой.$a\"/
         pause 400/
         speak Harvey \"Я хочу сказать: «запрещаю».$a\"/
-        speak Harvey \"Это было бы честно. И совершенно бесполезно.$s\"/
+        speak Harvey \"И не думай, что это пустая угроза. Но запрет ты обойдёшь тихо, а договор — выполнишь. Я тебя знаю.$s\"/
         pause 400/
         speak Harvey \"Поэтому я скажу как врач: если риск нельзя убрать, его нужно измерить, ограничить и подготовить выход.$u\"/
         speak Harvey \"Мы составим договор.$0\"/
@@ -3175,7 +3179,7 @@
       "Action": "EditData",
       "Target": "Data/Events/BusStop",
       "Entries": {
-        "HarveyOverhaulStory.E13_MinesAgreement/Time 1800 2200/!FestivalDay/Friendship Harvey 3000/GameStateQuery ANY \"PLAYER_NPC_RELATIONSHIP Current Harvey Dating\" \"PLAYER_NPC_RELATIONSHIP Current Harvey Married\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E13_MinesAgreement/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E13": "
+        "HarveyOverhaulStory.E13_MinesAgreement/Time 1800 2200/!FestivalDay/Friendship Harvey 2200/GameStateQuery ANY \"PLAYER_NPC_RELATIONSHIP Current Harvey Dating\" \"PLAYER_NPC_RELATIONSHIP Current Harvey Married\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating\" \"PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E13_MinesAgreement/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E13": "
         none/
         24 23/
         farmer 22 23 1 Harvey 30 23 3/
@@ -3195,7 +3199,7 @@
         speak Harvey \"Стой.$a\"/
         pause 400/
         speak Harvey \"Я хочу сказать: «запрещаю».$a\"/
-        speak Harvey \"Это было бы честно. И совершенно бесполезно.$s\"/
+        speak Harvey \"И не думай, что это пустая угроза. Но запрет ты обойдёшь тихо, а договор — выполнишь. Я тебя знаю.$s\"/
         pause 400/
         speak Harvey \"Поэтому я скажу как врач: если риск нельзя убрать, его нужно измерить, ограничить и подготовить выход.$u\"/
         speak Harvey \"Мы составим договор.$0\"/
@@ -3228,7 +3232,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Forest",
       "Entries": {
-        "HarveyOverhaulStory.E14_NotOnlyPatient/Time 1700 2300/!FestivalDay/Friendship Harvey 4000/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulRomance.E1_NotAnExamDate/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E13_MinesAgreement/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E14_NotOnlyPatient/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E14": "
+        "HarveyOverhaulStory.E14_NotOnlyPatient/Time 1700 2300/!FestivalDay/Friendship Harvey 2500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulRomance.E1_NotAnExamDate/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E13_MinesAgreement/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E14_NotOnlyPatient/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E14": "
         none/
         36 30/
         farmer 32 30 1 Harvey 38 30 3/
@@ -3288,7 +3292,7 @@
       "Action": "EditData",
       "Target": "Data/Events/FarmHouse",
       "Entries": {
-        "HarveyOverhaulStory.E15_FuturePlan/Time 1900 2400/!FestivalDay/Friendship Harvey 4500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E14_NotOnlyPatient/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan_Married/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E15": "
+        "HarveyOverhaulStory.E15_FuturePlan/Time 1900 2400/!FestivalDay/Friendship Harvey 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E14_NotOnlyPatient/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan_Married/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E15": "
         none/
         12 7/
         farmer 11 6 2 Harvey -1000 -1000 0/
@@ -3341,7 +3345,7 @@
         addConversationTopic HarveyMod_CD_Global 3/
         addConversationTopic HarveyMod_CD_E15 7/
         end",
-        "HarveyOverhaulStory.E15_FuturePlan_Married/Time 1900 2400/!FestivalDay/Friendship Harvey 4500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E14_NotOnlyPatient/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan_Married/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E15": "
+        "HarveyOverhaulStory.E15_FuturePlan_Married/Time 1900 2400/!FestivalDay/Friendship Harvey 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E14_NotOnlyPatient/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan_Married/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E15": "
         none/
         12 7/
         farmer 11 6 2 Harvey 13 6 3/

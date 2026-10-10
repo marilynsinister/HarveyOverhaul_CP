@@ -88,7 +88,21 @@ Example: "%Abigail is lost in her music."
       "When": {
         "Weather": "rain, storm"
       }
-    }
+    },
+    // Крыльцо фермерского дома для событий в Data/Events/Farm.
+    // Стандартные фермы: вход 64 15. Frontier Farm (SVE): вход 118 26.
+    { "Name": "HO_FarmX", "Value": "64" },
+    { "Name": "HO_FarmY0", "Value": "15" },
+    { "Name": "HO_FarmY1", "Value": "16" },
+    { "Name": "HO_FarmY2", "Value": "17" },
+    { "Name": "HO_FarmY3", "Value": "18" },
+    { "Name": "HO_FarmY5", "Value": "20" },
+    { "Name": "HO_FarmX", "Value": "118", "When": { "FarmType": "FrontierFarm" } },
+    { "Name": "HO_FarmY0", "Value": "26", "When": { "FarmType": "FrontierFarm" } },
+    { "Name": "HO_FarmY1", "Value": "27", "When": { "FarmType": "FrontierFarm" } },
+    { "Name": "HO_FarmY2", "Value": "28", "When": { "FarmType": "FrontierFarm" } },
+    { "Name": "HO_FarmY3", "Value": "29", "When": { "FarmType": "FrontierFarm" } },
+    { "Name": "HO_FarmY5", "Value": "31", "When": { "FarmType": "FrontierFarm" } }
   ],
   "Changes": [
     //NPCDispositions
@@ -442,6 +456,19 @@ Example: "%Abigail is lost in her music."
     {
       "Action": "Include",
       "FromFile": "assets/Code/eventsGotoroForestRescue.json"
+    },
+    // Арка 3 «Право на заботу» — генерируется scripts/build_arc3_events.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsArc3.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/mailArc3.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/dialogues/harvey_arc3_topics.json"
     },
     {
       "LogName": "Load Characters/Harvey",

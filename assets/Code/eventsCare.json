@@ -7,8 +7,8 @@
             "Entries": {
                 "eventHarveyFirstVisit/Time 600 1200/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstMeeting/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstVisit/GameStateQuery DAYS_PLAYED 3": "
     continue/
-    64 15/
-    farmer 64 16 2 Harvey 64 18 0/
+    {{HO_FarmX}} {{HO_FarmY0}}/
+    farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
     skippable/
     pause 600/
     speak Harvey \"Здравствуйте. Как самочувствие? Хотел убедиться, что после переезда всё в порядке.$h\"/
@@ -25,8 +25,8 @@
 ",
                 "eventHarveySecondVisit/Time 600 1200/GameStateQuery DAYS_PLAYED 7/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitAgree/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitNeutral/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyFirstVisitRefused/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstVisit/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveySecondVisit": "
     continue/
-    64 15/
-    farmer 64 16 2 Harvey 64 18 0/
+    {{HO_FarmX}} {{HO_FarmY0}}/
+    farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
     skippable/
     pause 600/
     speak Harvey \"Здравствуйте. Принёс витаминный чай — для восстановления после переезда.$h\"/
