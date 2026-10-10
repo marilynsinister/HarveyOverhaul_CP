@@ -1,0 +1,77 @@
+{
+  "Changes": [
+    {
+      "LogName": "Adult A1/A4 — «Обеденный перерыв», «Белый халат» (HarveyRoom, Married, 18+)",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyRoom",
+      "Entries": {
+        "HarveyOverhaulAdult.A1_LunchBreak/DayOfWeek Thu/Time 1200 1500/Friendship Harvey 2750/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyAdult_LunchNote Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulAdult.A1_LunchBreak/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "harveys_theme_jazz/8 9/farmer -1000 -1000 0 Harvey 9 9 3/skippable/setSkipActions AddConversationTopic Current HarveyMod_CD_Global 3#AddConversationTopic Current HarveyAdult_LunchBreak 2/warp farmer 6 12/move farmer 0 -3 1/move Harvey -1 0 3/move farmer 1 0 1/pause 300/message \"Наверху, в его старой квартире, задёрнуты шторы. Белый халат висит на спинке стула.\"/speak Harvey \"Пришла по записке. Пунктуальная пациентка.$h\"/message \"Он проходит мимо тебя к двери и поворачивает ключ. Щелчок звучит очень громко.\"/speak Harvey \"У меня сорок минут обеденного перерыва. Я решил провести их с пользой.$l#$b#Плановый осмотр. Полный. Провожу я — если ты не против.$a\"/quickQuestion #«Доктор, это вообще законно?»#Расстегнуть ему верхнюю пуговицу#«Не сегодня»(break)speak Harvey \"В этой квартире действует одно законодательство — моё.$h\"\\speak Harvey \"А если серьёзно: скажи «да» или скажи «нет». Мне нужно это услышать.$l\"\\emote farmer 20\\friendship Harvey 30(break)message \"Пуговица поддаётся не сразу. На секунду он перестаёт дышать.\"\\speak Harvey \"…Пациентка проявляет инициативу. Это меняет протокол.$l\"\\friendship Harvey 35(break)speak Harvey \"Хорошо. Тогда просто обед.$0\"\\message \"Он целует тебя в лоб и достаёт из шкафа два бутерброда. Без тени обиды.\"\\speak Harvey \"Сорок минут с тобой — уже отдых. Остальное подождёт, я терпеливый.$h\"\\friendship Harvey 25\\addConversationTopic HarveyMod_CD_Global 3\\globalFade\\viewport -1000 -1000\\end/message \"Он снимает с тебя шляпу, потом осторожно вынимает заколку из волос. Движения те же, что на приёме: точные, неторопливые.\"/speak Harvey \"Пульс… сто десять. Нестабильный. Требует наблюдения.$l#$b#Очень. Близкого. Наблюдения.$l\"/message \"Он целует тебя — сначала осторожно, будто спрашивает. Потом уже не спрашивает.\"/speak Harvey \"Скажешь «стоп» — остановлюсь. В любую секунду. Это единственное правило, которое правда не обсуждается.$a\"/quickQuestion #Притянуть его за галстук#Прошептать: «Не останавливайся»(break)message \"Галстук оказывается очень удобной ручкой. Харви, кажется, не возражает.\"\\friendship Harvey 30(break)speak Harvey \"…Принято.$l\"\\friendship Harvey 30/globalFade/message \"Шторы так и остаются задёрнутыми. Халат соскальзывает со стула на пол — его никто не поднимает.\"/pause 800/message \"Через сорок минут доктор Харви спускается в клинику. Галстук завязан неправильно. Улыбается он всю вторую половину дня.\"/addConversationTopic HarveyAdult_LunchBreak 2/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end",
+        "HarveyOverhaulAdult.A4_WhiteCoat/DayOfWeek Tue/Time 1200 1500/Friendship Harvey 3000/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulAdult.A1_LunchBreak/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulAdult.A4_WhiteCoat/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "harveys_theme_jazz/8 9/farmer -1000 -1000 0 Harvey 9 9 0/skippable/setSkipActions AddConversationTopic Current HarveyMod_CD_Global 3#AddConversationTopic Current HarveyAdult_WhiteCoat 2/warp farmer 6 12/move farmer 0 -3 1/move farmer 1 0 1/pause 300/message \"Харви стоит у окна спиной к двери и не слышит, как ты входишь. Его белый халат висит на вешалке.\"/message \"Ты надеваешь халат. Рукава закрывают ладони, подол — почти до колен.\"/faceDirection Harvey 3/emote Harvey 16/speak Harvey \"Это… мой халат.$u\"/speak Harvey \"Двенадцать лет я принимаю в нём пациентов. И ни разу — ни разу — он не выглядел так.$l\"/quickQuestion #«Доктор, у меня жалобы»#Медленно расстегнуть одну пуговицу#«Шучу. Держи, тебе на приём»(break)speak Harvey \"Жалобы. Хорошо. Будем разбираться… по одной. Очень подробно.$l\"\\friendship Harvey 30(break)message \"Одна пуговица. Он смотрит на неё так, будто это самый сложный случай в его практике.\"\\speak Harvey \"…Через тридцать минут пациент. Тридцать минут — это очень мало. И очень много.$l\"\\friendship Harvey 35(break)message \"Ты снимаешь халат и протягиваешь ему. Он берёт его — и целует тебя в висок.\"\\speak Harvey \"Спасибо. Теперь не смогу надеть его без улыбки. Пациенты решат, что у меня хорошие новости.$h\"\\friendship Harvey 25\\addConversationTopic HarveyMod_CD_Global 3\\globalFade\\viewport -1000 -1000\\end/move Harvey -1 0 3/message \"Он подходит и двумя пальцами поправляет воротник халата у тебя на шее. Потом не убирает руку.\"/speak Harvey \"Скажешь «стоп» — остановлюсь. Как всегда.$a#$b#Но, кажется, мы оба знаем, что ты не скажешь.$l\"/globalFade/message \"Халат снова висит на спинке стула. Немного помятый.\"/pause 800/message \"На приём доктор Харви опаздывает на семь минут. Впервые за двенадцать лет.\"/addConversationTopic HarveyAdult_WhiteCoat 2/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Adult A2 — «Ночное купание» (Beach, Married, 18+)",
+      "Action": "EditData",
+      "Target": "Data/Events/Beach",
+      "Entries": {
+        "HarveyOverhaulAdult.A2_NightSwim/Season Summer/Weather Sunny/Time 2000 2400/Friendship Harvey 3000/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulAdult.A2_NightSwim/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/41 22/farmer 40 23 2 Harvey 41 23 2/skippable/setSkipActions AddConversationTopic Current HarveyMod_CD_Global 3#AddConversationTopic Current HarveyAdult_NightSwim 2/viewport 41 22 true/pause 600/message \"Летняя ночь. Море тёплое, как чай. Харви стоит у кромки воды и подозрительно смотрит на волны.\"/speak Harvey \"Вода — градусов двадцать четыре. Течения нет. Медуз нет, я проверил фонариком.$a#$b#Да, я провёл разведку. Нет, мне не стыдно.$h\"/faceDirection Harvey 3/quickQuestion #Скинуть сандалии и шагнуть в воду#Брызнуть на него водой#«Может, просто посидим?»(break)message \"Ты заходишь по колено. Вода тёплая и чёрная, в ней дрожат звёзды.\"\\speak Harvey \"…Ладно. Иду. Не дальше, чем по пояс, и держись за мою руку. Я не прошу — настаиваю.$l\"\\friendship Harvey 30(break)message \"Брызги летят ему прямо на рубашку.\"\\speak Harvey \"Ах так. Это объявление войны.$a\"\\message \"Через секунду он уже в воде — прямо в брюках — и ловит тебя за талию.\"\\speak Harvey \"Поймал. Пациентка задержана до выяснения обстоятельств.$h\"\\friendship Harvey 35(break)speak Harvey \"Посидим.$0\"\\message \"Он садится рядом на ещё тёплый песок. Вы долго смотрите на воду, и больше ничего не нужно.\"\\speak Harvey \"Так тоже хорошо. С тобой любой вариант правильный.$l\"\\friendship Harvey 30\\addConversationTopic HarveyMod_CD_Global 3\\globalFade\\viewport -1000 -1000\\end/message \"Одежда остаётся на песке — сначала его рубашка, потом всё остальное. Вокруг ни души, только луна.\"/speak Harvey \"Ты красивая. Говорю как врач — с полной медицинской ответственностью.$l\"/message \"Он притягивает тебя к себе. Вода тёплая, а его руки ещё теплее.\"/speak Harvey \"Замёрзнешь — скажи. Захочешь на берег — скажи. Захочешь меня… можно не говорить. Я пойму.$l\"/globalFade/message \"Волны долго стирают с песка две цепочки следов.\"/pause 800/message \"Домой вы возвращаетесь далеко за полночь — в одном пледе на двоих. Он ворчит, что это было крайне негигиенично. И улыбается.\"/addConversationTopic HarveyAdult_NightSwim 2/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Adult A3 — «Ливень» (Farm, Married, 18+)",
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "HarveyOverhaulAdult.A3_Downpour/Weather Rain/Time 1800 2300/Friendship Harvey 3000/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulAdult.A3_Downpour/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "rain/{{HO_FarmX}} {{HO_FarmY0}}/farmer {{HO_FarmX}} {{HO_FarmY3}} 0 Harvey {{HO_FarmX}} {{HO_FarmY1}} 2/skippable/setSkipActions AddConversationTopic Current HarveyMod_CD_Global 3#AddConversationTopic Current HarveyAdult_RainBath 2/pause 500/message \"Ливень. Ты возвращаешься с поля промокшая до нитки: с волос течёт, рубашка прилипла к коже.\"/emote Harvey 16/speak Harvey \"Ты… вся мокрая.$u\"/pause 500/speak Harvey \"Это был медицинский комментарий. Наполовину.$h\"/speak Harvey \"Внутрь. Переохлаждение — не шутка. Ванна набрана, и это не обсуждается.$a\"/quickQuestion #«Набрана на одного?»#Шагнуть к нему вплотную, мокрой#«Я сама справлюсь»(break)speak Harvey \"…На одного. Но ванна большая. А я тоже продрог, пока стоял тут с зонтом.$l\"\\friendship Harvey 30(break)move farmer 0 -1 0\\message \"Ты прижимаешься к нему. Его рубашка мгновенно промокает насквозь.\"\\speak Harvey \"Вот теперь мы оба в группе риска. Придётся лечить обоих. Одновременно.$l\"\\friendship Harvey 35(break)speak Harvey \"Справишься, я знаю.$0\"\\speak Harvey \"Тогда поставлю чайник и буду ждать с полотенцем у двери. Позови, если понадоблюсь.$l\"\\friendship Harvey 25\\addConversationTopic HarveyMod_CD_Global 3\\globalFade\\viewport -1000 -1000\\end/message \"Он подхватывает тебя на руки — мокрую, тяжёлую от воды — и несёт в дом, не обращая внимания на лужи на полу.\"/speak Harvey \"Сначала тепло. Потом сухое полотенце. Потом… посмотрим, что ещё назначит доктор.$l\"/speak Harvey \"Скажешь «стоп» — остановлюсь. Скажешь «ещё» — тоже послушаюсь.$a\"/globalFade/message \"Ванна остывает. Этого никто не замечает.\"/pause 800/message \"Мокрая одежда так и лежит у двери до самого утра.\"/addConversationTopic HarveyAdult_RainBath 2/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Adult — письмо-«назначение» к A1",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "HarveyAdult_LunchNote": "Котёнок,^в четверг обеденный перерыв с 13:00. Наверху, в моей старой квартире. Дверь будет не заперта — пока ты не войдёшь.^Это назначение. Явка обязательна. Форма одежды — на твоё усмотрение.^   — Твой доктор[#]Назначение"
+      }
+    },
+    {
+      "LogName": "Adult — письмо к A1 приходит в среду",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_AdultLunchNote": {
+          "Id": "{{ModId}}_AdultLunchNote",
+          "Trigger": "DayStarted",
+          "Condition": "DAY_OF_WEEK Wednesday, PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_FRIENDSHIP_POINTS Current Harvey 2750, !PLAYER_HAS_MAIL Current HarveyAdult_LunchNote Any",
+          "Actions": [
+            "AddMail Current HarveyAdult_LunchNote now"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Adult — реплики Харви на следующий день",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyAdult_WhiteCoat": "Надел халат — и забыл, что хотел сказать пациенту.$h#$b#Ты испортила мне рабочую форму. Навсегда. Я не жалуюсь.$l",
+        "HarveyAdult_LunchBreak": "Мару спросила, почему у меня галстук завязан «бабушкиным» узлом.$u#$b#Я сказал, что торопился. Технически — правда.$h#$b#…Обеденный перерыв в следующий четверг тоже свободен. Просто к сведению.$l",
+        "HarveyAdult_NightSwim": "У меня песок в местах, о которых врачу неловко говорить вслух.$h#$b#Повторим? Только в этот раз я возьму полотенца. Два.$l",
+        "HarveyAdult_RainBath": "Прогноз на неделю — дожди.$h#$b#Я абсолютно не рад. Совершенно. Это прекрасно видно по моему лицу.$l"
+      },
+      "Priority": "Late",
+      "When": {
+        "Relationship:Harvey": "Married"
+      }
+    },
+    {
+      "LogName": "Adult — Мару замечает",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Entries": {
+        "HarveyAdult_WhiteCoat": "Доктор опоздал на приём. На семь минут! Я записала дату — для истории.$h",
+        "HarveyAdult_LunchBreak": "Доктор после обеда напевал. Доктор никогда не напевает.$h#$b#Не знаю, что ты подмешала ему в обед, но дай рецепт.$0"
+      },
+      "Priority": "Late + 6"
+    }
+  ]
+}

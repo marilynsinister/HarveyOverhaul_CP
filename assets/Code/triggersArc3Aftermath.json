@@ -1,0 +1,91 @@
+{
+  "Changes": [
+    {
+      "LogName": "Arc3 aftermath — темы «люблю» / «жду» (DayStarted)",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_Arc3Love_0": {
+          "Id": "{{ModId}}_Arc3Love_0",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyArc3_Confessed Received, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, DAY_OF_MONTH 1 7 13 19 25, RANDOM 0.35",
+          "Actions": [
+            "RemoveMail Current Harvey_HarveyArc3_Love_0 Received",
+            "AddConversationTopic HarveyArc3_Love_0 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Arc3Love_1": {
+          "Id": "{{ModId}}_Arc3Love_1",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyArc3_Confessed Received, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, DAY_OF_MONTH 2 8 14 20 26, RANDOM 0.35",
+          "Actions": [
+            "RemoveMail Current Harvey_HarveyArc3_Love_1 Received",
+            "AddConversationTopic HarveyArc3_Love_1 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Arc3Love_2": {
+          "Id": "{{ModId}}_Arc3Love_2",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyArc3_Confessed Received, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, DAY_OF_MONTH 3 9 15 21 27, RANDOM 0.35",
+          "Actions": [
+            "RemoveMail Current Harvey_HarveyArc3_Love_2 Received",
+            "AddConversationTopic HarveyArc3_Love_2 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Arc3Love_3": {
+          "Id": "{{ModId}}_Arc3Love_3",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyArc3_Confessed Received, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, DAY_OF_MONTH 4 10 16 22 28, RANDOM 0.35",
+          "Actions": [
+            "RemoveMail Current Harvey_HarveyArc3_Love_3 Received",
+            "AddConversationTopic HarveyArc3_Love_3 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Arc3Love_4": {
+          "Id": "{{ModId}}_Arc3Love_4",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyArc3_Confessed Received, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, DAY_OF_MONTH 5 11 17 23, RANDOM 0.35",
+          "Actions": [
+            "RemoveMail Current Harvey_HarveyArc3_Love_4 Received",
+            "AddConversationTopic HarveyArc3_Love_4 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Arc3Love_5": {
+          "Id": "{{ModId}}_Arc3Love_5",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyArc3_Confessed Received, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married, DAY_OF_MONTH 6 12 18 24, RANDOM 0.35",
+          "Actions": [
+            "RemoveMail Current Harvey_HarveyArc3_Love_5 Received",
+            "AddConversationTopic HarveyArc3_Love_5 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Arc3Waiting_0": {
+          "Id": "{{ModId}}_Arc3Waiting_0",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyArc3_ConfessionPending Received, !PLAYER_HAS_MAIL Current HarveyArc3_Confessed Received, PLAYER_NPC_RELATIONSHIP Current Harvey Dating, DAY_OF_MONTH 1 3 5 7 9 11 13 15 17 19 21 23 25 27, RANDOM 0.3",
+          "Actions": [
+            "RemoveMail Current Harvey_HarveyArc3_Waiting_0 Received",
+            "AddConversationTopic HarveyArc3_Waiting_0 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Arc3Waiting_1": {
+          "Id": "{{ModId}}_Arc3Waiting_1",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyArc3_ConfessionPending Received, !PLAYER_HAS_MAIL Current HarveyArc3_Confessed Received, PLAYER_NPC_RELATIONSHIP Current Harvey Dating, DAY_OF_MONTH 2 4 6 8 10 12 14 16 18 20 22 24 26 28, RANDOM 0.3",
+          "Actions": [
+            "RemoveMail Current Harvey_HarveyArc3_Waiting_1 Received",
+            "AddConversationTopic HarveyArc3_Waiting_1 1"
+          ],
+          "MarkActionApplied": false
+        }
+      }
+    }
+  ]
+}

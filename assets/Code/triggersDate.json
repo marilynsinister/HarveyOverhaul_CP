@@ -4,16 +4,17 @@
             "Action": "EditData",
             "Target": "Data/TriggerActions",
             "Entries": {
-                //todo - добавить событие для свидания у фонтана
-                // "{{ModId}}_triggerHarveyNoteGirlfriend": {
-                //   "Id": "{{ModId}}_triggerHarveyNoteGirlfriend",
-                //   "Trigger": "DayStarted",
-                //   "Condition": "DAY_OF_WEEK 6, PLAYER_HEARTS Current Harvey 8, !PLAYER_HAS_MAIL Current mailHarveyNoteGirlfriend Received",
-                //   "Actions": [
-                //     "AddMail Current mailHarveyNoteGirlfriend now"
-                //   ],
-                //   "LogName": "Load Triggers/Harvey Note Girlfriend #1"
-                // },
+                // В субботу после начала отношений Харви зовёт на свидание у фонтана —
+                // событие HarveyOverhaulDate.D1_Fountain (eventsMarriage.json), воскресенье 14:00–17:00.
+                "{{ModId}}_triggerHarveyNoteGirlfriend": {
+                    "Id": "{{ModId}}_triggerHarveyNoteGirlfriend",
+                    "Trigger": "DayStarted",
+                    "Condition": "DAY_OF_WEEK Saturday, PLAYER_NPC_RELATIONSHIP Current Harvey Dating, !PLAYER_HAS_MAIL Current mailHarveyNoteGirlfriend Any",
+                    "Actions": [
+                        "AddMail Current mailHarveyNoteGirlfriend now"
+                    ],
+                    "LogName": "Load Triggers/Harvey Note Girlfriend #1"
+                }
             }
         }
     ]

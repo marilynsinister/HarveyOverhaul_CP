@@ -1,8 +1,8 @@
 {
-  "Name": "Harvey Overhaul - Stress System",
+  "Name": "Harvey Overhaul",
   "Author": "marilynsinister",
   "Version": "1.0.0",
-  "Description": "Комплексная система стресса с визуальной шкалой и реалистичными эффектами",
+  "Description": "Харви — заботливо-властный врач: сюжетные арки, реплики по стадиям отношений, травмы и стресс, брак (контент для Content Patcher). 18+: откровенные сцены брака — по желанию, включаются в настройках (AdultEvents), по умолчанию выключены.",
   "UniqueID": "marilynsinister.HarveyOverhaul",
   "ContentPackFor": {
     "UniqueID": "Pathoschild.ContentPatcher",

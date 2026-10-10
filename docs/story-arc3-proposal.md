@@ -282,3 +282,72 @@ C#-моды (Core / Injury / StressMeter) этот потолок не меня�
 **Проверить в игре** (`debug ebi <id>`):
 `HarveyOverhaulArc3.N1_NightShift`, `.N2_Spring`, `.N3_ContactCard`, `.N4_BlueMoon`,
 `.N5_ReversedKit`, `.N5_ReversedKit_Confess`, `.N6_StormCall`, `.N7_Key`.
+
+---
+
+## 7. Последствия арки 3, свидание и брак (2026-10-10)
+
+**Реплики на флаги арки 3** — `assets/Code/dialogues/harvey_arc3_aftermath.json`:
+
+- `HarveyArc3_Confessed` → темы `HarveyArc3_Love_0…5`: «люблю» в обычных разговорах (Dating и Married — разные тексты).
+  Ставит `triggersArc3Aftermath.json` (генератор `scripts/build_arc3_aftermath_triggers.py`): вариант по дню месяца, шанс 35 %.
+  Игра показывает реплику темы один раз и помечает это флагом `Harvey_<тема>`, поэтому триггер снимает флаг перед каждым показом.
+- `HarveyArc3_ConfessionPending` без `Confessed` → `HarveyArc3_Waiting_0/1` («я жду»).
+- `HarveyArc3_Graduated` (N7) → в `MarriageDialogueHarvey` заменены `jobLeave`, `funLeave`, `funLeave_Harvey`, `Sat`,
+  `Mine_5_5`, `Mine_10_10`, `Indoor_Night_4`, `Town8`: он доверяет ей остаться одной и проверяет реже.
+  Беременность (`dialoguesHarveyPregnant.json`) по-прежнему перекрывает эти ключи.
+- Жители (`npc_reactions_arc3.json`): Мару, Марлон, Гас — на хромоту Харви после N5; Мару и Линус — на выбор в грозу (N6).
+
+**Новые сцены** — `assets/Code/eventsMarriage.json`, генератор `scripts/build_marriage_events.py`:
+
+| ID | Где / когда | Условия |
+|----|-------------|---------|
+| `HarveyOverhaulDate.D1_Fountain` | Town (SVE), фонтан, вс 14:00–17:00 | Dating + письмо `mailHarveyNoteGirlfriend` (приходит в субботу, `triggersDate.json`) |
+| `HarveyOverhaulMarriage.M1_FirstShift` | Farm, крыльцо, 6:00–9:00 | Married |
+| `HarveyOverhaulMarriage.M2_SickDay` | Farm, крыльцо, зима 6:00–9:00 | Married, после M1 — Харви болеет, она не пускает его на смену |
+| `HarveyOverhaulMarriage.M3_Anniversary` | Beach, 18:00–23:00 | Married + флаг `HarveyMarriage_AnniversaryToday` |
+| `HarveyOverhaulMarriage.M4_HarveyBirthday` | Hospital, 14 зимы, 9:00–15:00 | Dating или Married |
+
+Годовщину считает **HarveyOverhaulCore** (`Services/HarveyMarriageMilestones.cs`): в день, когда `DaysMarried` кратно 112,
+ставит флаг и снимает M3 из просмотренных — сцена повторяется каждый год.
+
+Тайлы: фонтан SVE — 24–28 × 25–28, актёры на 26,29…26,32 и 27,29. Пляж — 40–41,23 (песок 38–46 × 17–24).
+Hospital — только точки из §2.1. **TherapistNPC** тоже правит `Maps/Hospital`, но только x 15–23, y 8–19 — наши точки не задеты.
+
+**Проверка:** `python scripts/validate_story_events.py` — актёры, кавычки, ветки quickQuestion, GameStateQuery по списку из
+`Stardew Valley.dll`, письма и реплики для всех тем. Сценарии для ручного прогона —
+`HarveyOverhaulInjury/docs/testing/scenarios/10-story-arc3-marriage.json`.
+
+### 7.1 Забота в обе стороны и 18+ (2026-10-10)
+
+Он заботится о ней (`eventsMarriage.json`):
+
+| ID | Где / когда | Суть |
+|----|-------------|------|
+| `M5_Overworked` | Farm, вечер лета/осени, после M1 | Она на нуле — он моет ей руки, сам полил поле: «когда ты на нуле — я главный» |
+| `M6_HerCold` | Farm, утро осени/зимы, после M2 | Ответ на «Больничный»: он отменил приём и не пускает её на ферму |
+| `M7_LateReturn` | Farm, 23:00–2:00 | Ждал на крыльце под фонарём с пледом и пластырем |
+
+M5–M7 вызывают `HarveyStressMeter_ComfortRelief 15`.
+
+**18+** — `assets/Code/eventsAdult.json` (генератор `scripts/build_adult_events.py`), подключается только при
+`AdultEvents = true` (`ConfigSchema` в `content.json`, по умолчанию `false`; есть пометка в `manifest.json`).
+Уровень — чувственные сцены с затемнением, без описания секса. В каждой — явное согласие («скажешь „стоп“ — остановлюсь»)
+и ветка отказа, после которой он спокойно отступает и сцена завершается.
+
+| ID | Где / когда |
+|----|-------------|
+| `HarveyOverhaulAdult.A1_LunchBreak` | HarveyRoom, чт 12:00–15:00, после письма `HarveyAdult_LunchNote` (среда) |
+| `HarveyOverhaulAdult.A2_NightSwim` | Beach, лето, ясно, 20:00–24:00 |
+| `HarveyOverhaulAdult.A3_Downpour` | Farm, дождь, 18:00–23:00 |
+
+### 7.2 Ещё сцены брака (2026-10-10)
+
+| ID | Где / когда | Кто о ком заботится |
+|----|-------------|---------------------|
+| `M8_SleeplessNight` | Farm, рассвет, после M1 | Она: ему приснился Зузу, она укладывает его спать |
+| `M9_ForestPharmacy` | Forest SVE 48–49,14, весна, ясно | Вместе: она учит его собирать травы, он «стажёр» |
+| `M10_FountainDance` | Town SVE 25–26,30, сб 20:00–24:00, ясно | Обещанный танец вместо пропущенного Танца цветов |
+| `M11_BadDay` | Hospital, палата A, 13:00–15:00, после M8 | Она: он не спас пациента, Мару позвала её |
+| `M12_SundayPancakes` | Farm, вс утро, после M1 | Он: «никакой фермы до завтрака» |
+| `HarveyOverhaulAdult.A4_WhiteCoat` (18+) | HarveyRoom, вт 12:00–15:00, после A1 | Она надевает его белый халат |

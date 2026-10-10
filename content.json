@@ -73,6 +73,13 @@ Example: "%Abigail is lost in her music."
 {
   "$schema": "https://smapi.io/schemas/content-patcher.json",
   "Format": "2.7.0",
+  "ConfigSchema": {
+    "AdultEvents": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "18+. Откровенные сцены брака с Харви (чувственные, с затемнением). По умолчанию выключены."
+    }
+  },
   "DynamicTokens": [
     {
       "Name": "health",
@@ -469,6 +476,30 @@ Example: "%Abigail is lost in her music."
     {
       "Action": "Include",
       "FromFile": "assets/Code/dialogues/harvey_arc3_topics.json"
+    },
+    // Последствия арки 3: «люблю» / «жду» в разговорах, реакции жителей
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersArc3Aftermath.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/npc_reactions_arc3.json"
+    },
+    // Свидание у фонтана и сцены брака — генерируется scripts/build_marriage_events.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersDate.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsMarriage.json"
+    },
+    // 18+ — только при AdultEvents = true. Генерируется scripts/build_adult_events.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsAdult.json",
+      "When": { "AdultEvents": "true" }
     },
     {
       "LogName": "Load Characters/Harvey",
