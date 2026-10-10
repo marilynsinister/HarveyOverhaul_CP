@@ -76,8 +76,8 @@ Example: "%Abigail is lost in her music."
   "ConfigSchema": {
     "AdultEvents": {
       "AllowValues": "true, false",
-      "Default": "false",
-      "Description": "18+. Откровенные сцены брака с Харви (чувственные, с затемнением). По умолчанию выключены."
+      "Default": "true",
+      "Description": "18+. Откровенные сцены брака с Харви (чувственные, с затемнением). По умолчанию включены."
     }
   },
   "DynamicTokens": [
