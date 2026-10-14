@@ -1,0 +1,51 @@
+{
+  // Харви тоже устаёт и болеет (C#: HarveyOverhaulInjury/Managers/HarveyWellbeingManager.cs).
+  // Темы ставит C# утром (HarveyWellbeing_Tired / _Sick) и после заботы фермерши (_Relieved — подарок, _Visited — разговор).
+  // Флаги-письма на сегодня: HarveyState_Tired, HarveyState_Sick, HarveyState_Cared.
+  "Changes": [
+    {
+      "LogName": "Wellbeing — бафф «Забота в ответ»",
+      "Action": "EditData",
+      "Target": "Data/Buffs",
+      "Entries": {
+        "HarveyWellbeing_Grateful": {
+          "DisplayName": "Забота в ответ",
+          "Description": "Ты позаботилась о Харви. Тепло, как от его заботы о тебе.",
+          "Duration": -2,
+          "IconTexture": "Mods/{{ModId}}/MishapBuffIcons",
+          "IconSpriteIndex": 0,
+          "Effects": {
+            "LuckLevel": 1
+          }
+        }
+      }
+    },
+    {
+      "LogName": "Wellbeing — реплики Харви (друг, 6♥+)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Priority": "Late",
+      "Entries": {
+        "HarveyWellbeing_Tired": "Не обращай внимания на круги под глазами. Ночной вызов, вернулся в пять.$s#$b#Я в порядке. Кофе — мой второй врач.$h",
+        "HarveyWellbeing_Sick": "*кашляет в локоть* Не подходи близко. Это просто простуда.$s#$b#Врач с простудой — всё равно врач. Почти.$u",
+        "HarveyWellbeing_Relieved": "Спасибо. Я всё время забываю, что о врачах тоже можно заботиться.$s#$b#Ты напомнила.$h",
+        "HarveyWellbeing_Visited": "Ты зашла просто так? Это лучше любого кофе.$h#$b#Ну… почти любого.$h"
+      }
+    },
+    {
+      "LogName": "Wellbeing — реплики Харви (Dating / Married)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Priority": "Late",
+      "When": {
+        "Relationship:Harvey": "Dating, Engaged, Married"
+      },
+      "Entries": {
+        "HarveyWellbeing_Tired": "Я не спал. Ночной вызов. Нет, не делай такое лицо — это моё лицо, я его так делаю.$u#$b#…Ладно. Принесёшь кофе — спорить не буду. Впервые в жизни.$h",
+        "HarveyWellbeing_Sick": "*хрипло* Солнышко, не целуй меня сегодня. Я заразный и упрямый. Второе хуже.$s#$b#Суп? …Я сказал «не надо». Но если вдруг…$u",
+        "HarveyWellbeing_Relieved": "Ты принесла мне это сама. Обычно это я приношу.$s#$b#Не знаю, что сказать. Спасибо, солнышко. Правда.$l",
+        "HarveyWellbeing_Visited": "Ты пришла меня проведать? Сегодня я пациент, а ты мой врач.$h#$b#Мне, кажется, нравится такой порядок. Только никому не говори.$l"
+      }
+    }
+  ]
+}

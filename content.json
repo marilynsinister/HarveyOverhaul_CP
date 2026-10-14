@@ -522,6 +522,42 @@ Example: "%Abigail is lost in her music."
       "FromFile": "assets/Code/eventsAdult.json",
       "When": { "AdultEvents": "true" }
     },
+    // Повторяющиеся мини-сцены брака (ротация с кулдауном) — scripts/build_marriage_rotation.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsMarriageRotation.json"
+    },
+    // Праздники: реплики Харви по стадиям и вечер после праздника — scripts/build_festival_content.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/festivalsHarvey.json"
+    },
+    // Своя жизнь Харви: предложение из Зузу, Кент, Линус — scripts/build_harvey_life_events.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsHarveyLife.json"
+    },
+    // Арка «Шрамы» (C1–C8), мазь, рубцы на холоде, запах дыма — scripts/build_scars_events.py.
+    // Внутри патчи с When TraumaBackstory: при false остаётся только снятие флага механики.
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsScars.json"
+    },
+    // «Стоп» в осмотрах: ветки, куда уходят осмотры при отказе — scripts/build_exam_consent.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsExamConsent.json"
+    },
+    // Харви устал / простыл: реплики и бафф «Забота в ответ» (C#: HarveyWellbeingManager)
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/dialogues/harvey_wellbeing.json"
+    },
+    // Вкладка «История» в окне Харви — scripts/build_story_journal.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/storyJournal.json"
+    },
     {
       "LogName": "Load Characters/Harvey",
       "Action": "Load",

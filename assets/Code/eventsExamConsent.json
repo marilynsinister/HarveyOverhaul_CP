@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "LogName": "Осмотры — ветки «стоп» (согласие в осмотрах, build_exam_consent.py)",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "Entries": {
+        "HarveyExam_CheckupStopped": "speak Harvey \"*сразу опускает стетоскоп и кладёт его на стол* Хорошо. Остановился.$0#$b#Стетоскоп там, я здесь. Продолжим, только если вы сами захотите.$s\"/action marilynsinister.HarveyStressMeter_ExamStopRespected/pause 600/speak Harvey \"Тогда без приборов — просто пара вопросов. Вы регулярно едите? Спите хотя бы семь часов?$0\"/message \"Стараюсь...\"/speak Harvey \"*кивает* «Стараюсь» — уже хорошо. Пейте больше воды и не работайте до изнеможения.$l\"/speak Harvey \"И спасибо, что сказали «стоп». Мне проще помогать, когда я знаю, где ваша граница.$h#$b#Приходите через месяц. Или раньше — не обязательно на осмотр.$l\"/addConversationTopic topicAfterCheckup 5/removeConversationTopic topicAgreedCheckup/globalFade/viewport -1000 -1000/pause 500/end position 10 17",
+        "HarveyExam_MedCheckStopped": "stopAnimation Harvey/speak Harvey \"Стоп — значит стоп.$0#$b#*откладывает манжету* Видишь? Руки на виду.$s\"/action marilynsinister.HarveyStressMeter_ExamStopRespected/pause 600/speak Harvey \"Тогда без осмотра. Просто скажи: когда ты последний раз ела?$a\"/message \"Ты пожимаешь плечами.\"/speak Harvey \"Так я и думал.$s#$b#Вот кофе — и обещание поесть до вечера. Обещание — тоже лечение, если его выполнять.$a\"/addItem 395 1/speak Harvey \"спасибо, что сказала прямо. Мне так спокойнее, чем гадать по лицу.$l\"/pause 600/globalFade/viewport -1000 -1000/end dialogue Harvey \"Ты становишься сильнее с каждым днём. Если что-то беспокоит — приходи сразу. Я помогу.$0\"",
+        "HarveyExam_MedCheckStoppedDating": "stopAnimation Harvey/speak Harvey \"Стоп — значит стоп.$0#$b#*откладывает манжету* Видишь? Руки на виду.$s\"/action marilynsinister.HarveyStressMeter_ExamStopRespected/pause 600/speak Harvey \"Тогда без осмотра. Просто скажи: когда ты последний раз ела?$a\"/message \"Ты пожимаешь плечами.\"/speak Harvey \"Так я и думал.$s#$b#Вот кофе — и обещание поесть до вечера. Обещание — тоже лечение, если его выполнять.$a\"/addItem 395 1/speak Harvey \"Солнышко, спасибо, что сказала прямо. Мне так спокойнее, чем гадать по лицу.$l\"/pause 600/globalFade/viewport -1000 -1000/end dialogue Harvey \"Ты становишься сильнее с каждым днём. Я рядом, если понадоблюсь.$l\""
+      }
+    }
+  ]
+}

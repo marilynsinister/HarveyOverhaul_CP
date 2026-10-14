@@ -21,12 +21,16 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CODE = os.path.join(ROOT, 'assets', 'Code')
 GAME = sys.argv[1] if len(sys.argv) > 1 else r'D:\Games\Steam\steamapps\common\Stardew Valley'
 
-EVENT_FILES = ['eventsArc3.json', 'eventsMarriage.json', 'eventsAdult.json']
-TRIGGER_FILES = ['triggersArc3Aftermath.json', 'triggersDate.json']
+EVENT_FILES = ['eventsArc3.json', 'eventsMarriage.json', 'eventsAdult.json', 'eventsScars.json',
+               'eventsHarveyLife.json', 'festivalsHarvey.json', 'eventsMarriageRotation.json', 'eventsExamConsent.json']
+TRIGGER_FILES = ['triggersArc3Aftermath.json', 'triggersDate.json', 'eventsScars.json', 'eventsMarriageRotation.json']
 # Флаги-«письма» без текста: их читают условия и диалоги, в почтовый ящик они не попадают.
-ALLOWED_FLAGS = {'HarveyArc3_Confessed', 'HarveyArc3_ConfessionPending', 'HarveyArc3_Graduated'}
-# Темы-служебки без реплик.
-SILENT_TOPICS = {'HarveyMod_CD_Global'}
+ALLOWED_FLAGS = {'HarveyArc3_Confessed', 'HarveyArc3_ConfessionPending', 'HarveyArc3_Graduated',
+                 'HarveyScars_LetterSent', 'HarveyScars_LetterBurned', 'HarveyScars_LetterKept',
+                 'HarveyScars_Enabled', 'HarveyBackstory_FireKnown', 'HarveyLife_SaidGo'}
+# Темы-служебки без реплик (кулдауны).
+SILENT_TOPICS = {'HarveyMod_CD_Global', 'HarveyRotation_CD'}
+SILENT_TOPIC_PREFIXES = ('HarveyRot_',)
 
 errors, warnings = [], []
 
@@ -88,21 +92,25 @@ def game_queries():
         warnings.append(f'нет {dll} — GameStateQuery не проверены')
         return None
     data = open(dll, 'rb').read()
-    return {m.decode() for m in re.findall(rb'(?:PLAYER|LOCATION|WORLD|SEASON|DAY|RANDOM|TIME|WEATHER|ANY|IS)_?[A-Z_]{0,40}', data)}
+    return {m.decode() for m in re.findall(rb'(?:PLAYER|LOCATION|WORLD|SEASON|DAY|RANDOM|TIME|WEATHER|YEAR|ANY|IS)_?[A-Z_]{0,40}', data)}
 
 
 def split_commands(script):
     return script.split('/')
 
 
-def check_event(eid, script, actors_known_ids):
+def check_event(eid, script, actors_known_ids, is_fork=False):
     cmds = split_commands(script)
     if not cmds[-1].startswith('end'):
         errors.append(f'{eid}: последняя команда не end ({cmds[-1]!r})')
     actors = {'farmer'}
-    parts = cmds[2].split()
-    for i in range(0, len(parts), 4):
-        actors.add(parts[i])
+    if is_fork:
+        # Ветка-форк: без шапки (музыка/вид/актёры), актёры — из события, которое в неё уходит.
+        actors.update(['Harvey', 'Maru'])
+    else:
+        parts = cmds[2].split()
+        for i in range(0, len(parts), 4):
+            actors.add(parts[i])
     used = []
     for c in cmds:
         for piece in re.split(r'\(break\)|\\', c):
@@ -155,7 +163,7 @@ def main():
                     if queries is not None and q not in queries:
                         errors.append(f'{eid}: неизвестный GameStateQuery {q}')
                 seen_refs.update(re.findall(r'PLAYER_HAS_SEEN_EVENT Current (\S+?)"?(?:\s|$)', cond))
-        topics, mails = check_event(eid, v, event_ids)
+        topics, mails = check_event(eid, v, event_ids, is_fork='/' not in k)
         topics_all.update(topics)
         mails_all.update(mails)
         skip = re.search(r'setSkipActions ([^/]*)', v)
@@ -178,16 +186,20 @@ def main():
 
     for fn in TRIGGER_FILES:
         for ch in load(fn)['Changes']:
+            if ch.get('Target') != 'Data/TriggerActions':
+                continue
             for tid, t in ch['Entries'].items():
                 for a in t.get('Actions', []):
                     m = re.match(r'AddConversationTopic (\S+)', a)
                     if m:
                         topics_all.add(m.group(1))
                     m = re.match(r'AddMail Current (\S+)', a)
-                    if m and m.group(1) not in mail:
+                    if m and m.group(1) not in mail and m.group(1) not in ALLOWED_FLAGS:
                         errors.append(f'{tid}: письмо {m.group(1)} без текста')
 
     for t in sorted(topics_all - SILENT_TOPICS):
+        if t.startswith(SILENT_TOPIC_PREFIXES):
+            continue
         if t not in dialogue:
             warnings.append(f'тема {t}: ни у одного NPC нет реплики')
 
