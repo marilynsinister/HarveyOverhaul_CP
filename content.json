@@ -266,6 +266,10 @@ Example: "%Abigail is lost in her music."
     },
     {
       "Action": "Include",
+      "FromFile": "assets/Code/onboarding.json"
+    },
+    {
+      "Action": "Include",
       "FromFile": "assets/Code/mailCare.json"
     },
     {

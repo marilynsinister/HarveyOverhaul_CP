@@ -530,12 +530,22 @@
           },
           "buffStressLoadTier": {
             "DisplayName": "Напряжение",
-            "Description": "Накопленный стресс давит.\nЧем выше шкала, тем меньше сил.\nОтдых, Харви и любимые занятия\nпомогут его снять.",
+            "Description": "Накопленный стресс давит.\nНапряжение — меньше сил.\nВысокий — ещё и дрожат руки.\nКритический — всё валится из рук.\nНаведи на шкалу, чтобы увидеть причины.",
             "IsDebuff": true,
             "GlowColor": null,
             "Duration": -2,
             "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
             "IconSpriteIndex": 158,
+            "Effects": {}
+          },
+          "buffStressClearMind": {
+            "DisplayName": "Ясная голова",
+            "Description": "Стресса почти нет —\nдень складывается удачнее.\nДержится, пока шкала\nне выше 10.",
+            "IsDebuff": false,
+            "GlowColor": null,
+            "Duration": -2,
+            "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
+            "IconSpriteIndex": 67,
             "Effects": {}
           }
         }

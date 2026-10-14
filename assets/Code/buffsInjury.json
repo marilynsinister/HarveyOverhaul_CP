@@ -152,7 +152,7 @@
                 },
                 "buffTornMuscles": {
                     "Id": "buffTornMuscles",
-                    "DisplayName": "Разорванные мышцы",
+                    "DisplayName": "Надрыв мышцы",
                     "Description": "Серьёзная мышечная травма.\nНужен осмотр, покой и лечение.",
                     "Effects": {
                         "MaxStamina": -50,
