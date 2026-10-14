@@ -78,9 +78,21 @@ Example: "%Abigail is lost in her music."
       "AllowValues": "true, false",
       "Default": "true",
       "Description": "18+. Откровенные сцены брака с Харви (чувственные, с затемнением). По умолчанию включены."
+    },
+    "TraumaBackstory": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Прошлое фермерши: побег из готоранского плена, шрамы и ожоги на спине и руках, флешбеки в грозу. Выключи, если не хочешь таких сцен: события останутся, но без плена и шрамов."
     }
   },
   "DynamicTokens": [
+    // Варианты фрагментов событий из i18n/default.json (ключи trauma.*).
+    { "Name": "HO_Trauma", "Value": "on" },
+    { "Name": "HO_Trauma", "Value": "off", "When": { "TraumaBackstory": "false" } },
+    // Осмотр спины в eventRescueOperation: впервые видит шрамы / уже видел в eventHarveyTraumaExam / шрамов нет.
+    { "Name": "HO_TraumaScars", "Value": "first" },
+    { "Name": "HO_TraumaScars", "Value": "known", "When": { "HasSeenEvent": "eventHarveyTraumaExam" } },
+    { "Name": "HO_TraumaScars", "Value": "off", "When": { "TraumaBackstory": "false" } },
     {
       "Name": "health",
       "Value": "healthy"
@@ -467,6 +479,11 @@ Example: "%Abigail is lost in her music."
     {
       "Action": "Include",
       "FromFile": "assets/Code/eventsGotoroForestRescue.json"
+    },
+    // Харви узнаёт о прошлом фермерши (шрамы и ожоги) — варианты по TraumaBackstory
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsTraumaBackstory.json"
     },
     // Арка 3 «Право на заботу» — генерируется scripts/build_arc3_events.py
     {

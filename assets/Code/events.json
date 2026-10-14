@@ -495,7 +495,7 @@
         speak Harvey \"Сначала просто подыши... вот так.$u\"/
         pause 1000/
         speak Harvey \"Ты похудела. Когда последний раз ела?$a\"/
-        quickQuestion Харви с беспокойством смотрит на тебя...#Вчера...#Не помню...(break)speak Harvey \"Я приготовил питательный коктейль.$a\"\\addItem 403 1(break)speak Harvey \"Это уже клинический случай.$a\"\\pause 800\\speak Harvey \"Теперь давление... будь осторожна, манжета может напомнить тебе о...\"\\pause 300\\emote farmer 28\\pause 500\\speak Harvey \"Прости. Я нашел специальную детскую манжету - она мягче.\"\\pause 1200\\speak Harvey \"110\/70... приемлемо.$u\"\\pause 500\\speak Harvey \"Покажи руки...$s\"\\pause 400\\emote farmer 16\\pause 800\\speak Harvey \"Новые мозоли поверх старых шрамов...$s#$b#Я приготовил мазь с алоэ и лидокаином.\"\\addItem 349 1\\pause 1000\\speak Harvey \"Теперь послушаю сердце...$u\"\\pause 1500\\speak Harvey \"Оно бьется так быстро... будто ты все еще там, в том месте.$s\"\\pause 600\\emote farmer 12\\pause 800\\speak Harvey \"Но ты здесь. В безопасности. Я позабочусь об этом.$l\"\\pause 1000\\speak Harvey \"Вот расписание: 1. Есть каждые 4 часа. 2. Спать не менее 7 часов. 3. Приходить ко мне при любом дискомфорте\"\\pause 1000\\speak Harvey \"И... возьми это.\"\\addItem 395 1\\pause 500\\speak Harvey \"Если станет страшно — позвони. Я приду.\"/
+        quickQuestion Харви с беспокойством смотрит на тебя...#Вчера...#Не помню...(break)speak Harvey \"Я приготовил питательный коктейль.$a\"\\addItem 403 1(break)speak Harvey \"Это уже клинический случай.$a\"{{i18n:trauma.medcheck.dating.{{HO_Trauma}}}}\\pause 1000\\speak Harvey \"Вот расписание: 1. Есть каждые 4 часа. 2. Спать не менее 7 часов. 3. Приходить ко мне при любом дискомфорте\"\\pause 1000\\speak Harvey \"И... возьми это.\"\\addItem 395 1\\pause 500\\speak Harvey \"Если станет страшно — позвони. Я приду.\"/
         pause 800/
         globalFade/
         viewport -1000 -1000/
@@ -511,7 +511,6 @@
         skippable/
         pause 500/
         emote farmer 12/
-        speak Harvey \"Привет. Рад, что ты пришла.$h\"/
         speak Harvey \"Привет. Рад, что ты пришла.$h\"/
         pause 300/
         move Harvey 0 2 2 true/
@@ -552,40 +551,11 @@
         speak Harvey \"Сначала просто подыши... вот так.$u\"/
         pause 1000/
         speak Harvey \"Ты похудела. Когда последний раз ела?$a\"/
-        quickQuestion Харви с беспокойством смотрит на тебя...#Вчера...#Не помню...(break)speak Harvey \"Я приготовил питательный коктейль.$a\"\\addItem 403 1(break)speak Harvey \"Это уже клинический случай.$a\"\\pause 800\\speak Harvey \"Теперь давление... будь осторожна, манжета может напомнить тебе о...\"\\pause 300\\emote farmer 28\\pause 500\\speak Harvey \"Прости. Я нашел специальную детскую манжету - она мягче.\"\\pause 1200\\speak Harvey \"110\/70... приемлемо.$u\"\\pause 500\\speak Harvey \"Покажи руки...$s\"\\pause 400\\emote farmer 16\\pause 800\\speak Harvey \"Новые мозоли поверх старых шрамов...$s#$b#Я приготовил мазь с алоэ и лидокаином.\"\\addItem 349 1\\pause 1000\\speak Harvey \"Теперь послушаю сердце...$u\"\\pause 1500\\speak Harvey \"Оно бьется так быстро... будто ты все еще там, в том месте.$s\"\\pause 600\\emote farmer 12\\pause 800\\speak Harvey \"Но ты здесь. В безопасности. Я сделаю всё необходимое.$0\"\\pause 1000\\speak Harvey \"Вот расписание: 1. Есть каждые 4 часа. 2. Спать не менее 7 часов. 3. Приходить ко мне при любом дискомфорте\"\\pause 1000\\speak Harvey \"И... возьми это.\"\\addItem 395 1\\pause 500\\speak Harvey \"Если станет хуже — приходи сразу. Я помогу.\"/
+        quickQuestion Харви с беспокойством смотрит на тебя...#Вчера...#Не помню...(break)speak Harvey \"Я приготовил питательный коктейль.$a\"\\addItem 403 1(break)speak Harvey \"Это уже клинический случай.$a\"{{i18n:trauma.medcheck.friend.{{HO_Trauma}}}}\\pause 1000\\speak Harvey \"Вот расписание: 1. Есть каждые 4 часа. 2. Спать не менее 7 часов. 3. Приходить ко мне при любом дискомфорте\"\\pause 1000\\speak Harvey \"И... возьми это.\"\\addItem 395 1\\pause 500\\speak Harvey \"Если станет хуже — приходи сразу. Я помогу.\"/
         pause 800/
         globalFade/
         viewport -1000 -1000/
         end dialogue Harvey \"Ты становишься сильнее с каждым днём... Пока постарайся не доводить себя до такого состояния. Если что-то беспокоит — приходи сразу. Я помогу.$0\"",
-        
-        
-        "eventHarveyTraumaExam/Time 0800 1800/Friendship Harvey 2000": "none/
-        5 6/
-        farmer 5 6 3 Harvey 4 6 1/
-        animate Harvey false true 1000 22 20 21 20/
-        skippable/
-        speak Harvey \"Одну минуту... Ты дышишь неровно. Мне нужно проверить твои рёбра.$u\"/
-        pause 500/
-        emote farmer 28/
-        message \"Нет, всё в порядке...\"/
-        pause 300/
-        animate Harvey false true 1000 22 20 21 20 22/
-        pause 300/
-        speak Harvey \" Это приказ, а не просьба. *берёт стетоскоп*$a\"/
-        playSound backpackIN/
-        speak Harvey \"Боже... У тебя... *замолкает*$8\"/
-        emote Harvey 16/
-        pause 1000/
-        speak Harvey \"Эти шрамы... Готоранские лагеря?$s\"/
-        pause 1500/
-        message \" ...\"/
-        pause 2000/
-        speak Harvey \"*осторожно накладывает повязку* Теперь я понимаю, почему ты не жалуешься на боль.$s\"/
-        addItem 351 1/
-        pause 500/
-        speak Harvey \"Приходи ко мне, когда вспомнишь что-то... Я буду слушать.$s\"/
-        addConversationTopic topicHarveyTraumaReveal 7/
-        end",
         "eventHarveyTreatmentCollapse": "none/
         -1000 -1000/
         farmer 1000 1000 0 Harvey 1000 1000 0/
@@ -1233,35 +1203,7 @@
         pause 1000/
         positionOffset farmer 0 -1/
         pause 1000/
-        message \"*отползает глубже* Опасно...\"/
-        pause 1000/
-        speak Harvey \"Что опасно? Я врач, я помогу.$s\"/
-        pause 600/
-        message \"*качает головой* Спрячься... они услышат...\"/
-        pause 1200/
-        speak Lewis \"О чём она говорит?$s\"/
-        pause 400/
-        speak Harvey \"Льюис, отойди. Дай мне поговорить с ней.$a\"/
-        pause 800/
-        move Lewis 0 2 2/
-        move Lewis 2 0 3/
-        animate Harvey false false 500 40 41 40/
-        speak Harvey \"*тихо* @, посмотри на меня. Кто услышит?$s\"/
-        pause 1000/
-        stopAnimation Harvey 41/
-        playSound thunder/
-        emote farmer 28/
-        startJittering/
-        message \"*прижимается к земле* Прячься!...\"/
-        pause 1500/
-        speak Harvey \"*понимающе* Не бойся... Это гром.$s#$b#*медленно протягивает руку* Возьми, если готова. Если нет — я подожду.$0\"/
-        pause 1000/
-        message \"*боится прикосновений* Нет... не трогай...\"/
-        pause 1200/
-        speak Harvey \"Я не сделаю тебе больно. Обещаю.$0#$b#Но мне нужно вытащить тебя отсюда.$a\"/
-        pause 1500/
-        message \"*шёпотом* Ты спрячешься?\"/
-        speak Harvey \"Да, мы спрячемся. В клинике. Там безопасно.$0\"/
+        {{i18n:trauma.rescue.flashback.{{HO_Trauma}}}}/
         pause 1200/
         animate Harvey true false 1000 19/
         stopAnimation Harvey 10/
@@ -1341,49 +1283,7 @@
         emote Harvey 16/
         speak Harvey \"Обширная гематома... *пальпирует* Есть болезненность, но перелома нет.$u\"/
         pause 1200/
-        speak Harvey \"Повернись. Нужно проверить, нет ли травм спины.$a\"/
-        pause 800/
-        message \"*замирает, боится*\"/
-        pause 1000/
-        speak Harvey \"Что-то не так? Там тоже болит?$s\"/
-        pause 800/
-        message \"*очень медленно поворачивается спиной*\"/
-        pause 2500/
-        emote Harvey 8/
-        speak Harvey \"*резко втягивает воздух* Что... Боже мой...$8\"/
-        pause 1500/
-        message \"*быстро поворачивается, опускает рубашку*\"/
-        pause 1200/
-        emote Harvey 28/
-        speak Harvey \"@... *дрожащим голосом* Эти шрамы... Кто это сделал?$s\"/
-        pause 1500/
-        message \"*молчит, обнимает себя руками*\"/
-        stopAnimation Harvey 22/
-        pause 1500/
-        positionOffset Harvey 0 -4/
-        pause 500/
-        positionOffset Harvey 0 -4/
-        pause 500/
-        positionOffset Harvey 0 -4/
-        pause 500/
-        positionOffset Harvey 4 0/
-        pause 500/
-        positionOffset Harvey 4 0/
-        pause 500/
-        positionOffset Harvey 4 0/
-        pause 500/
-        speak Harvey \"*подходит ближе* Сколько раз ломали рёбра? Сколько раз били?$s\"/
-        pause 1200/
-        message \"*качает головой, не может говорить*\"/
-        pause 1500/
-        showFrame Harvey 21/
-        speak Harvey \"*медленно протягивает руки — ждёт, пока ты сама не ответишь* Всё позади. Понимаешь? Всё позади.$0\"/
-        pause 2000/
-        speak Harvey \"*голос становится жёстким* Тот, кто это сделал... если он когда-нибудь появится здесь...$a\"/
-        pause 1500/
-        message \"*прижимается к нему*\"/
-        pause 1200/
-        speak Harvey \"*успокаивается* Прости. Не хотел пугать.$s#$b#*кладёт ладонь на плечо — ненадолго* Ты в безопасности.$0\"/
+        {{i18n:trauma.rescue.back.{{HO_TraumaScars}}}}/
         pause 2500/
         speak Harvey \"Сейчас обработаю рану на голове, и я предложу тебе остаться под моим присмотром.$a#$b#Никаких больниц, никаких чужих людей. Только я буду дежурить.$0\"/
         pause 2000/

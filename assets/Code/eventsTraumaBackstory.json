@@ -1,0 +1,161 @@
+{
+  // Сцены, где Харви узнаёт о прошлом фермерши (плен у готоро: шрамы и ожоги на спине и руках).
+  // Настройка TraumaBackstory: true — полная версия, false — та же сцена без плена и шрамов.
+  // Частичные отличия в других событиях — в i18n/default.json (ключи trauma.*).
+  "Changes": [
+    {
+      "LogName": "Trauma exam: scars and burns (TraumaBackstory on)",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "When": { "TraumaBackstory": "true" },
+      "Entries": {
+        // Если первой была eventRescueOperation, шрамы Харви уже видел там — эта сцена не нужна.
+        "eventHarveyTraumaExam/Time 0800 1800/Friendship Harvey 2000/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventRescueOperation": "none/
+        5 6/
+        farmer 5 6 3 Harvey 4 6 1/
+        skippable/
+        animate Harvey false true 1000 22 20 21 20/
+        speak Harvey \"Одну минуту... Ты дышишь неровно. Мне нужно проверить рёбра.$u\"/
+        pause 500/
+        emote farmer 28/
+        message \"Нет, всё в порядке...\"/
+        pause 300/
+        stopAnimation Harvey/
+        speak Harvey \"Я ничего не сделаю без твоего разрешения.$s#$b#Только бок. Рубашку снимать не нужно — просто приподними край.$u\"/
+        pause 800/
+        message \"*медленно приподнимает край рубашки*\"/
+        pause 1000/
+        emote Harvey 16/
+        speak Harvey \"*замолкает*$8\"/
+        pause 1000/
+        speak Harvey \"Это ожоги. Старые... На спине немного, а дальше — на руках.$s#$b#Огонь шёл сверху. Ты закрывала руками голову.$s\"/
+        pause 1200/
+        speak Harvey \"Я видел такие в Зузу. В приёмном отделении — у тех, кто вернулся из-за линии фронта.$s#$b#Готоранские лагеря?$s\"/
+        pause 1500/
+        message \"*едва заметно кивает*\"/
+        pause 2000/
+        speak Harvey \"*перевязывает свежий ушиб, не касаясь старых шрамов* Теперь я понимаю, почему ты не жалуешься на боль.$s\"/
+        addItem 351 1/
+        pause 500/
+        speak Harvey \"Ты не обязана ничего мне рассказывать. Ни сегодня, ни потом.$s#$b#Захочешь — я выслушаю. Не захочешь — буду просто лечить.$0\"/
+        addConversationTopic topicHarveyTraumaReveal 7/
+        end"
+      }
+    },
+    {
+      "LogName": "Trauma exam: plain rib check (TraumaBackstory off)",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "When": { "TraumaBackstory": "false" },
+      "Entries": {
+        "eventHarveyTraumaExam/Time 0800 1800/Friendship Harvey 2000": "none/
+        5 6/
+        farmer 5 6 3 Harvey 4 6 1/
+        skippable/
+        animate Harvey false true 1000 22 20 21 20/
+        speak Harvey \"Одну минуту... Ты дышишь неровно. Мне нужно проверить рёбра.$u\"/
+        pause 500/
+        emote farmer 28/
+        message \"Нет, всё в порядке...\"/
+        pause 300/
+        stopAnimation Harvey/
+        speak Harvey \"Я ничего не сделаю без твоего разрешения.$s#$b#Только бок. Просто приподними край рубашки.$u\"/
+        pause 800/
+        message \"*медленно приподнимает край рубашки*\"/
+        pause 1000/
+        emote Harvey 16/
+        speak Harvey \"Межрёберная мышца. Ты потянула её, когда поднимала что-то тяжёлое, — и неделю молчала.$a\"/
+        pause 1200/
+        speak Harvey \"*накладывает повязку* Вот почему ты так странно держишь плечо.$s\"/
+        addItem 351 1/
+        pause 500/
+        speak Harvey \"В следующий раз приходи, когда только начнёт болеть. А не когда уже трудно дышать.$s\"/
+        end"
+      }
+    },
+
+    // ===== Её история (только TraumaBackstory = true) =====
+    // Канон: город бомбили, прятаться было негде; кто сопротивлялся — убиты, остальных угнали в плен.
+    // Пленных согнали в деревянный склад и подожгли; она провалилась под пол (ожоги на руках, немного на спине).
+    // Потом долго пряталась в лесах; вернулась — города больше нет. Она последняя выжившая.
+    // Гром = бомбы — Харви понимает это в eventRescueOperation (i18n trauma.rescue.flashback.on).
+    {
+      "LogName": "Backstory: what I remember (clinic)",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "When": { "TraumaBackstory": "true" },
+      "Entries": {
+        // T1. Она приходит и рассказывает сама: всё / только про огонь / не сегодня.
+        "HarveyOverhaulStory.T1_WhatIRemember/Time 1300 1500/!FestivalDay/Friendship Harvey 2000/GameStateQuery ANY \"PLAYER_HAS_SEEN_EVENT Current eventHarveyTraumaExam\" \"PLAYER_HAS_SEEN_EVENT Current eventRescueOperation\"/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "Hospital_Ambient/
+        10 16/
+        Harvey 9 18 1 farmer 10 19 0/
+        skippable/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 4/
+        pause 600/
+        message \"Приём закончился. Харви дописывает карту и не поднимает головы — даёт тебе время.\"/
+        speak Harvey \"Если ты пришла посидеть — сиди. Если сказать — я слушаю.$0\"/
+        pause 800/
+        message \"Ты долго молчишь. Потом начинаешь — тихо, будто боишься кого-то разбудить.\"/
+        quickQuestion #Рассказать всё#Только про огонь#Не сегодня(break)message \"Мой город был маленький. Как Пеликан. Когда начали бомбить, прятаться было негде — ни подвалов, ни бункеров.\"\\pause 600\\message \"Кто сопротивлялся — тех убили. Остальных погнали в плен. Меня тоже.\"\\pause 800\\emote Harvey 28\\speak Harvey \"*откладывает ручку*$s\"\\pause 600\\message \"Потом они решили, что пленных слишком много. Согнали всех в деревянный склад. И подожгли.\"\\pause 1000\\message \"Пол прогорел подо мной. Я провалилась вниз, под доски. Руками закрывала голову...\"\\pause 1200\\speak Harvey \"...Поэтому руки. И спина — немного.$s#$b#*тихо* Гром — это бомбы. Огонь — это склад. Я понял.$s\"\\pause 1000\\speak Harvey \"Спасибо, что рассказала. Я не буду записывать это в карту. Это не для карты.$l\"\\friendship Harvey 120\\addConversationTopic topicHarveyBackstoryFull 14(break)message \"Нас держали в деревянном складе. Однажды ночью двери заперли снаружи. Потом запахло дымом.\"\\pause 1000\\message \"Пол прогорел. Я провалилась под доски. Только поэтому жива.\"\\pause 1200\\speak Harvey \"*кивает и ни о чём не спрашивает* Ты закрывала голову руками. Поэтому ожоги там.$s\"\\pause 800\\speak Harvey \"Спасибо, что сказала. Остальное — когда захочешь. Или никогда. Оба ответа правильные.$0\"\\friendship Harvey 80\\addConversationTopic topicHarveyBackstoryFire 14(break)message \"...Не сегодня.\"\\pause 800\\speak Harvey \"Хорошо. Тогда просто посиди. Чай ещё горячий.$0\"\\friendship Harvey 40/
+        pause 600/
+        globalFade/
+        viewport -1000 -1000/
+        addConversationTopic HarveyMod_CD_Global 4/
+        end"
+      }
+    },
+    {
+      "LogName": "Backstory: last survivor (forest)",
+      "Action": "EditData",
+      "Target": "Data/Events/Forest",
+      "When": { "TraumaBackstory": "true" },
+      "Entries": {
+        // T2. Лес её спрятал после склада — поэтому в грозу она бежит сюда. Город стёрт, она последняя.
+        "HarveyOverhaulStory.T2_LastOne/Time 0900 1800/!FestivalDay/Friendship Harvey 2100/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.T1_WhatIRemember/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/
+        48 14/
+        farmer 48 14 3 Harvey 49 14 3/
+        skippable/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 4#AddConversationTopic topicHarveyBackstorySurvivor 14/
+        pause 500/
+        viewport 48 14/
+        message \"Ты стоишь на тропе и смотришь в чащу. Шаги за спиной ты узнаёшь раньше, чем голос.\"/
+        speak Harvey \"Ты часто сюда приходишь. В грозу — особенно.$0\"/
+        faceDirection farmer 1/
+        pause 600/
+        message \"Тогда, после склада, меня спрятал лес. Я жила в нём... не знаю сколько. Месяцы. От людей пряталась.\"/
+        pause 1000/
+        message \"Потом пошла домой. Думала: соседи, наша улица. Кто-нибудь же остался.\"/
+        pause 1000/
+        message \"А там ничего нет. Ни домов, ни улиц. Трава и воронки. Я искала два дня. Никого.\"/
+        pause 1200/
+        emote Harvey 28/
+        message \"Я последняя. Из всего города — последняя.\"/
+        pause 1500/
+        speak Harvey \"*не сразу* Ты не последняя.$s#$b#Ты — выжившая, @. Это разные слова.$s\"/
+        pause 800/
+        speak Harvey \"Последний — это когда за тобой никого. А у тебя теперь есть Долина. Ферма твоего деда. И я — если позволишь.$l\"/
+        quickQuestion #*кивнуть*#Позволю.#*молча взять его за рукав*(break)speak Harvey \"Хорошо. Этого достаточно.$0\"(break)speak Harvey \"*выдыхает* Спасибо.$l\"(break)speak Harvey \"*стоит неподвижно, чтобы не спугнуть* Я здесь.$l\"/
+        friendship Harvey 100/
+        addConversationTopic topicHarveyBackstorySurvivor 14/
+        addConversationTopic HarveyMod_CD_Global 4/
+        pause 600/
+        globalFade/
+        viewport -1000 -1000/
+        end"
+      }
+    },
+    {
+      "LogName": "Backstory: Harvey follow-up lines",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Priority": "Late",
+      "When": { "TraumaBackstory": "true" },
+      "Entries": {
+        "topicHarveyThunderBombs": "Я теперь слышу грозу по-другому.$s#$b#Когда начинается гром, я думаю о тебе раньше, чем о крыше клиники. Если станет плохо — иди сюда или домой. Не в одиночку.$0",
+        "topicHarveyBackstoryFull": "Я всю ночь думал о твоём городе. Не как врач.$s#$b#Если захочешь — расскажи мне его. Не войну, а город: улицы, пекарню, кто жил напротив.$l#$b#Его стёрли с карты. Но не из тебя.$l",
+        "topicHarveyBackstoryFire": "Я убрал свечи из процедурной. Не из-за тебя... ладно, из-за тебя.$s#$b#Если запах дыма где-то станет невыносимым — скажи. Это не каприз. Это память тела.$0",
+        "topicHarveyBackstorySurvivor": "Я посмотрел карту. Твоего города на ней нет — даже названия.$s#$b#Я вписал его карандашом. Маленькой точкой. Чтобы он где-то был.$l"
+      }
+    }
+  ]
+}
