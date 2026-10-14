@@ -76,6 +76,21 @@
                     "Edibility": -300,
                     "ExcludeFromShippingCollection": true,
                     "ContextTags": [ "medicine_item", "{{ModId}}_medical_item" ]
+                },
+                // Терапия страха темноты, шаг 3: Харви отдаёт после шага 2 (C#: DarknessService, HarveyLanternLightService).
+                // В руках светит в темноте. Без него ночь в горах не засчитывается.
+                "{{ModId}}_HarveyLantern": {
+                    "Name": "{{ModId}}_HarveyLantern",
+                    "DisplayName": "Фонарь Харви",
+                    "Description": "Старый медный фонарь Харви. Он носил его на ночных вызовах в Зузу. В руках светит в темноте.",
+                    "Type": "Basic",
+                    "Category": 0,
+                    "Price": 0,
+                    "Texture": "Mods/{{ModId}}/MedicalItems",
+                    "SpriteIndex": 6,
+                    "Edibility": -300,
+                    "ExcludeFromShippingCollection": true,
+                    "ContextTags": [ "not_giftable", "prevent_loss_on_death", "{{ModId}}_medical_item" ]
                 }
             }
         },
