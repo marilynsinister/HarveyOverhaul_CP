@@ -46,7 +46,7 @@ def rkey(eid, *conds):
 
 def rscript(eid, music, view, actors, body, extra=()):
     cds = [f'{own_cd(eid)} {REPEAT_DAYS}', f'{ROT_CD} {BETWEEN_DAYS}', f'{CD} 2']
-    skip = [f'AddConversationTopic Current {c}' for c in cds]
+    skip = [f'AddConversationTopic {c}' for c in cds]
     cmds = [music, view, actors, 'skippable', 'setSkipActions ' + '#'.join(skip), *extra, *body,
             *[f'addConversationTopic {c}' for c in cds],
             'globalFade', 'viewport -1000 -1000', 'end']

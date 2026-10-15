@@ -22,8 +22,10 @@ CODE = os.path.join(ROOT, 'assets', 'Code')
 GAME = sys.argv[1] if len(sys.argv) > 1 else r'D:\Games\Steam\steamapps\common\Stardew Valley'
 
 EVENT_FILES = ['eventsArc3.json', 'eventsMarriage.json', 'eventsAdult.json', 'eventsScars.json',
-               'eventsHarveyLife.json', 'festivalsHarvey.json', 'eventsMarriageRotation.json', 'eventsExamConsent.json']
-TRIGGER_FILES = ['triggersArc3Aftermath.json', 'triggersDate.json', 'eventsScars.json', 'eventsMarriageRotation.json']
+               'eventsHarveyLife.json', 'festivalsHarvey.json', 'eventsMarriageRotation.json', 'eventsExamConsent.json',
+               'clinicSeasonal.json']
+TRIGGER_FILES = ['triggersArc3Aftermath.json', 'triggersDate.json', 'eventsScars.json', 'eventsMarriageRotation.json',
+                 'clinicSeasonal.json']
 # Флаги-«письма» без текста: их читают условия и диалоги, в почтовый ящик они не попадают.
 ALLOWED_FLAGS = {'HarveyArc3_Confessed', 'HarveyArc3_ConfessionPending', 'HarveyArc3_Graduated',
                  'HarveyScars_LetterSent', 'HarveyScars_LetterBurned', 'HarveyScars_LetterKept',

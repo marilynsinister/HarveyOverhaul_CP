@@ -47,7 +47,7 @@ c1_key = key(NS, 'C1_LongSleeves', 'Season Summer', 'Weather Sunny', 'Time 1200 
              'Friendship Harvey 1000', TRAUMA_SEEN)
 c1 = script(
     'continue', '26 29', 'farmer 25 29 2 Harvey 26 34 0 Gus 29 30 3',
-    skip_cd('AddConversationTopic Current HarveyScars_Sleeves 3'),
+    skip_cd('AddConversationTopic HarveyScars_Sleeves 3'),
     [
         'viewport 26 29 true', 'pause 500',
         msg('Полдень. Над площадью дрожит воздух, и даже фонтан не спасает. Ты сидишь на бортике — в рубашке с длинными рукавами.'),
@@ -81,7 +81,7 @@ c1 = script(
 c2_key = key(NS, 'C2_Pop', 'Weather Sunny', 'Time 1900 2300', 'Friendship Harvey 1250', YEAR2, seen('C1_LongSleeves'))
 c2 = script(
     'none', '44 73', 'farmer 44 74 0 Gus 45 72 2 Kent 47 74 3 Harvey 41 74 1',
-    skip_cd('AddConversationTopic Current HarveyScars_Pop 3'),
+    skip_cd('AddConversationTopic HarveyScars_Pop 3'),
     [
         'viewport 44 73 true', 'pause 500',
         msg('Вечер у салуна. Гас выкатил на крыльцо бочонок нового сидра и ящик бутылок — праздник урожая в миниатюре.'),
@@ -124,7 +124,7 @@ c3_key = key(NS, 'C3_ScarSalve', 'Season Fall Winter', 'Time 0900 1500', 'Friend
              'GameStateQuery PLAYER_HAS_MAIL Current HarveyCareTrust_L2 Received', seen('C1_LongSleeves'))
 c3 = script(
     'Hospital_Ambient', '14 6', 'farmer 14 6 1 Harvey 15 6 3',
-    skip_cd('AddConversationTopic Current HarveyScars_Salve 3', f'AddItem {SALVE} 3'),
+    skip_cd('AddConversationTopic HarveyScars_Salve 3', f'AddItem {SALVE} 3'),
     [
         'viewport 14 6 true', 'pause 500',
         msg('Палата пустая. На тумбочке — маленькая жестяная банка, подписанная его ужасным почерком.'),
@@ -160,7 +160,7 @@ c4_key = key(NS, 'C4_ZuzuLetter', 'Time 0900 1500', 'Friendship Harvey 1750',
              'GameStateQuery PLAYER_HAS_MAIL Current HarveyScars_VeteransLetter Received', seen('C3_ScarSalve'))
 c4 = script(
     'Hospital_Ambient', '10 15', 'Harvey 10 14 2 farmer -1000 -1000 0',
-    skip_cd('AddConversationTopic Current HarveyScars_Letter 3', 'AddMail Current HarveyScars_LetterKept Received'),
+    skip_cd('AddConversationTopic HarveyScars_Letter 3', 'AddMail Current HarveyScars_LetterKept Received'),
     [
         'viewport 10 15 true', 'pause 400', 'playSound doorOpen',
         'warp farmer 10 19', 'faceDirection farmer 0', 'move farmer 0 -3 0', 'pause 300',
@@ -195,7 +195,7 @@ c6_key = key(NS, 'C6_Stranger', 'Weather Sunny', 'Time 1000 1600', 'Friendship H
              seen('C4_ZuzuLetter'))
 c6 = script(
     'continue', '22 22', 'farmer 20 23 1 Harvey 21 22 2 Kent 26 23 3',
-    skip_cd('AddConversationTopic Current HarveyScars_Stranger 3'),
+    skip_cd('AddConversationTopic HarveyScars_Stranger 3'),
     [
         'viewport 22 22 true', 'pause 500',
         msg('Остановка. Ты ждёшь посылку из города, Харви — коробку лекарств. Чуть поодаль переминается Кент.'),
@@ -235,7 +235,7 @@ c7_key = key(NS, 'C7_SleevesUp', 'Season Summer', 'Weather Sunny', 'Time 1100 17
              'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married', seen('C6_Stranger'))
 c7 = script(
     'continue', '40 20', 'farmer 40 21 2 Harvey 41 21 2 Sam 44 19 2 Haley 37 20 1',
-    skip_cd('AddConversationTopic Current HarveyScars_SleevesUp 3'),
+    skip_cd('AddConversationTopic HarveyScars_SleevesUp 3'),
     [
         'viewport 40 20 true', 'pause 500',
         msg('Жаркий день на пляже. Полгорода у воды. Ты сидишь на песке — рукава, как всегда, до запястий.'),
@@ -269,7 +269,7 @@ c8_key = key(NS, 'C8_Map', 'Time 2000 2400', 'Friendship Harvey 3000',
              'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married', seen('C7_SleevesUp'))
 c8 = script(
     'none', f'{FX} {FY0}', f'farmer {FX} {FY1} 2 Harvey {FX} {FY2} 0',
-    skip_cd('AddConversationTopic Current HarveyScars_Map 3'),
+    skip_cd('AddConversationTopic HarveyScars_Map 3'),
     [
         'ambientLight 120 120 60', 'pause 600',
         msg('Поздний вечер. Крыльцо, плед, две кружки. Харви держит тебя за руку — уже по привычке.'),

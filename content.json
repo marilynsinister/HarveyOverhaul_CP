@@ -436,6 +436,11 @@ Example: "%Abigail is lost in her music."
       "FromFile": "assets/Code/clinicErrands.json"
     },
     {
+      // Сезонные сцены клиники: день прививок (весна), тент на луау и тепловой удар (лето). Генератор: scripts/build_clinic_seasonal.py
+      "Action": "Include",
+      "FromFile": "assets/Code/clinicSeasonal.json"
+    },
+    {
       "Action": "Include",
       "FromFile": "assets/Code/minorMishaps.json"
     },

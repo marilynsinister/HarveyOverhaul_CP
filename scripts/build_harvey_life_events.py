@@ -7,6 +7,7 @@
                          Два варианта по ответу в H2: «Езжай, если это твоё» (H3_Answer_Go) и остальные (H3_Answer).
 Совместные сцены с жителями:
   K1 «Двое с войной»     Town у дома Кента (11–13, 89–91), вечер, 2-й год — Харви и Кент о ночах после войны.
+  LW1 «Прости старого дурака» Town у клиники — через 2 дня после eventRescueOperation Льюис извиняется за аварию.
   L1 «Чай у Линуса»      Mountain у палатки (31–33, 9–11) — Харви приходит с осмотром, Линус учит его отдыхать.
 
 Тон по стадиям — docs/harvey-relationship-tone-guide.md: сцены доступны с 6–8♥ до отношений,
@@ -35,7 +36,7 @@ def seen(eid):
 h1_key = key(NS, 'H1_Offer', 'Time 0900 1500', 'Friendship Harvey 2000', AFTER_E12)
 h1 = script(
     'Hospital_Ambient', '10 15', 'Harvey 10 14 2 farmer -1000 -1000 0',
-    skip_cd('AddConversationTopic Current HarveyLife_Offer 7'),
+    skip_cd('AddConversationTopic HarveyLife_Offer 7'),
     [
         'viewport 10 15 true', 'pause 400', 'playSound doorOpen',
         'warp farmer 10 19', 'faceDirection farmer 0', 'move farmer 0 -3 0', 'pause 300',
@@ -66,7 +67,7 @@ h1 = script(
 h2_key = key(NS, 'H2_Doubts', 'Weather Sunny', 'Time 1800 2100', 'Friendship Harvey 2000', seen('H1_Offer'))
 h2 = script(
     'none', '40 20', 'farmer 38 21 1 Harvey 41 21 2',
-    skip_cd('AddConversationTopic Current HarveyLife_Doubts 3'),
+    skip_cd('AddConversationTopic HarveyLife_Doubts 3'),
     [
         'viewport 40 20 true', 'pause 600',
         msg('Закат. Харви сидит на песке, ботинки рядом. Ты подходишь — он сдвигается, освобождая место.'),
@@ -126,7 +127,7 @@ def h3(went_go):
         'addConversationTopic HarveyLife_Stayed 7',
     ]
     return k, script('continue', '36 58', 'farmer 35 59 0 Harvey 36 58 2',
-                     skip_cd('AddConversationTopic Current HarveyLife_Stayed 7'), body)
+                     skip_cd('AddConversationTopic HarveyLife_Stayed 7'), body)
 
 
 h3_key, h3_script = h3(False)
@@ -136,7 +137,7 @@ h3g_key, h3g_script = h3(True)
 k1_key = key(NS, 'K1_TwoWars', 'Weather Sunny', 'Time 1700 2000', 'Friendship Harvey 1500', YEAR2)
 k1 = script(
     'none', '12 90', 'farmer 12 92 0 Harvey 11 90 2 Kent 13 90 2',
-    skip_cd('AddConversationTopic Current HarveyLife_Kent 5'),
+    skip_cd('AddConversationTopic HarveyLife_Kent 5'),
     [
         'viewport 12 90 true', 'pause 600',
         msg('Вечер. У дома Кента на лавке сидят двое: Кент и Харви. На земле между ними — две кружки и шахматная доска без фигур.'),
@@ -170,7 +171,7 @@ k1 = script(
 l1_key = key(NS, 'L1_LinusTea', 'Weather Sunny', 'Time 1600 1900', 'Friendship Harvey 1000')
 l1 = script(
     'continue', '32 9', 'farmer 32 11 0 Harvey 33 9 3 Linus 31 9 1',
-    skip_cd('AddConversationTopic Current HarveyLife_Linus 5'),
+    skip_cd('AddConversationTopic HarveyLife_Linus 5'),
     [
         'viewport 32 9 true', 'pause 500',
         msg('У палатки Линуса горит маленький костерок под котелком. Харви сидит на бревне — с саквояжем, который так и не открыл.'),
@@ -196,11 +197,61 @@ l1 = script(
         'addConversationTopic HarveyLife_Linus 5',
     ])
 
+# ---------------------------------------------------------------- LW1
+# Через 2 дня после eventRescueOperation (тема HarveyLewis_Wait ставится в конце сцены спасения).
+# Реплики Харви к фермерше — без «ты/Вы»: сцена доступна на любой стадии отношений.
+lw1_key = key(NS, 'LW1_LewisSorry', 'Weather Sunny', 'Time 0900 1600',
+              'GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventRescueOperation',
+              'GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyLewis_Wait')
+GIFT = ['addItem 340 1', 'addItem 216 1']  # мёд и хлеб
+lw1 = script(
+    'continue', '36 59', 'farmer 35 60 0 Harvey 36 58 2 Lewis 38 59 3',
+    skip_cd('AddConversationTopic HarveyLewis_Sorry 7'),
+    [
+        'viewport 36 59 true', 'pause 500',
+        msg('У клиники топчется Льюис. В руках — корзинка под полотенцем и шляпа, которую он мнёт так, будто она в чём-то виновата.'),
+        sp('Lewis', '@! Доброе утро. Я… не то чтобы ждал. Просто проходил мимо. В третий раз.$s'),
+        'emote Harvey 16',
+        msg('Харви выходит на крыльцо и встаёт на полшага ближе к тебе, чем нужно.'),
+        sp(H, 'Льюис.$0'),
+        sp('Lewis', 'Доктор. Я ненадолго.$s'),
+        'pause 400',
+        sp('Lewis', 'Я сорок лет езжу по этой дороге. Знаю каждую яму. А в ту ночь не увидел человека.$s#$b#Дождь, фары, дворники… Это объяснения. Не оправдания.$s'),
+        sp('Lewis', 'Прости меня. Я две ночи не спал. Всё вижу, как ты выбегаешь на дорогу, а я жму на тормоз — и поздно.$s'),
+        sp('Lewis', 'Я ведь даже не спросил тогда, почему ты…$u'),
+        sp(H, 'И не нужно, Льюис. Её причины — её дело. Захочет — расскажет сама.$a'),
+        sp('Lewis', 'Да. Конечно. Прости, док.$s'),
+        msg('Льюис протягивает корзинку. Мёд, свежий хлеб от Пьера и записка корявым почерком: «Прости старого дурака».'),
+        qq(['Простить', '«Я сама выбежала под колёса»', '«Мне нужно время»'], [
+            [msg('Ты киваешь и берёшь корзинку.'),
+             sp('Lewis', 'Спасибо. Правда. Будто камень с плеч.$h'),
+             sp(H, 'Он караулил крыльцо клиники с рассвета. Я уже собирался мерить ему давление.$h'),
+             *GIFT, 'friendship Lewis 60', 'friendship Harvey 15'],
+            [sp('Lewis', 'Может быть. Но за рулём был я. Это моя часть, не твоя.$s'),
+             sp(H, 'Льюис прав — наполовину. Была гроза, было темно, и виноватого тут нет. Есть дорога без единого фонаря.$0'),
+             sp('Lewis', 'Без фонаря… Будут фонари. Три. Совет одобрит — или оплачу сам.$a'),
+             *GIFT, 'friendship Lewis 50', 'friendship Harvey 15'],
+            [sp('Lewis', 'Конечно. Сколько угодно.$s'),
+             msg('Льюис ставит корзинку на ступеньку и не настаивает.'),
+             sp(H, 'Правильно. Прощать не обязательно сегодня. И вообще не обязательно.$0'),
+             *GIFT, 'friendship Lewis 20', 'friendship Harvey 25'],
+        ]),
+        sp('Lewis', 'Ну… не буду мешать. Доктор.$s'),
+        'move Lewis 3 0 1', 'pause 300',
+        'faceDirection Harvey 3',
+        sp(H, 'Как голова? Не закружилась, пока он говорил?$u'),
+        sp(H, 'Хорошо. Тогда сегодня — без тяжестей и без лестниц. Вечером зайти на перевязку, я проверю швы. Это не просьба, это часть лечения.$a'),
+        'pause 400',
+        sp(H, 'И… Льюис хороший человек. В ту ночь он гнал пикап так, что я дважды ударился головой о крышу. Но плечо держал всю дорогу.$s'),
+        'addConversationTopic HarveyLewis_Sorry 7',
+    ])
+
 TOPICS = {
     'HarveyLife_Offer': 'Письмо Элены всё ещё на столе. Я каждое утро его переворачиваю — то лицом вверх, то вниз.$s#$b#Видимо, так и выглядит «думать».$u',
     'HarveyLife_Doubts': 'Спасибо за вечер на пляже. Я давно ни с кем не говорил о себе. Это непривычно.$s',
     'HarveyLife_Stayed': 'Элена ответила. Говорит, я упрямый осёл, но консультации берёт.$h#$b#Мару завела мне «журнал ученицы». С печатями. Я в ужасе и очень горжусь.$h',
     'HarveyLife_Kent': 'Мы с Кентом так и не расставили фигуры. Думаю, это была лучшая партия в моей жизни.$h',
+    'HarveyLewis_Sorry': 'Льюис вчера заходил спросить, какие фонари светят ярче. Я впервые видел, как мэр краснеет.$h#$b#Голова не болит? Хорошо. Я всё равно спрошу завтра.$u',
     'HarveyLife_Linus': 'Я попробовал лечь спать, когда стемнело. Продержался до одиннадцати.$u#$b#Линус сказал, это прогресс.$h',
 }
 
@@ -208,9 +259,12 @@ data = {'Changes': [
     patch('Life H1 — «Письмо на столе» (Hospital)', 'Data/Events/Hospital', {h1_key: h1}),
     patch('Life H2 — «Сомнения» (Beach, закат)', 'Data/Events/Beach', {h2_key: h2}),
     patch('Life H3 — «Ответ» (Town у клиники); K1 — «Двое с войной» (Town у дома Кента)', 'Data/Events/Town',
-          {h3_key: h3_script, h3g_key: h3g_script, k1_key: k1}),
+          {h3_key: h3_script, h3g_key: h3g_script, k1_key: k1, lw1_key: lw1}),
     patch('Life L1 — «Чай у Линуса» (Mountain)', 'Data/Events/Mountain', {l1_key: l1}),
     {**patch('Life — реплики Харви на темы', 'Characters/Dialogue/Harvey', TOPICS), 'Priority': 'Late'},
+    patch('Life LW1 — реплика Льюиса после извинения', 'Characters/Dialogue/Lewis', {
+        'HarveyLewis_Sorry': 'Фонари у лесной дороги заказал. Три штуки. Пусть хоть что-то хорошее выйдет из той ночи.$s#$b#И… береги себя, хорошо? Док за тобой присматривает, но я тоже буду.$h',
+    }),
 ]}
 
 with open(OUT, 'w', encoding='utf-8') as f:

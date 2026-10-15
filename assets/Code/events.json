@@ -392,14 +392,15 @@
         speak Harvey \"Если я вижу риск — я вмешиваюсь. Иногда раньше, чем человек успевает попросить.$a\"/
         speak Harvey \"С тобой это стало… заметнее.$u\"/
         speak Harvey \"Я забочусь. И иногда забочусь слишком сильно.$0\"/
-        speak Harvey \"Но я не хочу, чтобы моя забота стала клеткой.$a\"/
+        speak Harvey \"Но я хочу, чтобы рядом со мной тебе было спокойно, а не тесно.$l\"/
         pause 500/
-        quickQuestion \"Как ответить?\"#Кивнуть#Сделать шаг ближе#Сделать шаг назад#Посмотреть на дверь(break)emote farmer 40\\speak Harvey \"Спасибо.$0\"\\speak Harvey \"Тогда я скажу правило: я рядом. Не впереди тебя. Не вместо тебя. Рядом.$l\"\\speak Harvey \"За исключением случаев, когда ты падаешь, истекаешь кровью или идёшь в шахту с температурой. Там я снова становлюсь невыносимым.$a\"\\friendship Harvey 50(break)message \"Ты делаешь шаг ближе.\"\\move farmer -1 0 3\\speak Harvey \"Вот так?$0\"\\speak Harvey \"Хорошо. Я не буду двигаться. Ты сама выбрала расстояние.$l\"\\speak Harvey \"Запомню. Это важно.$0\"\\friendship Harvey 55(break)message \"Ты делаешь шаг назад.\"\\move farmer 1 0 1\\faceDirection farmer 3\\speak Harvey \"Понял. Больше воздуха.$0\"\\speak Harvey \"Я могу быть настойчивым и отсюда. Проверено медицинской практикой.$a\"\\speak Harvey \"Но спасибо, что показала.$0\"\\friendship Harvey 45(break)faceDirection farmer 0\\message \"Ты смотришь на дверь.\"\\speak Harvey \"Хочешь уйти?$0\"\\speak Harvey \"Хорошо. Разговор не должен быть ловушкой.$0\"\\speak Harvey \"Я провожу до выхода. Только до выхода. Дальше — как выберешь.$0\"\\friendship Harvey 40/
+        quickQuestion \"Как ответить?\"#Кивнуть#Сделать шаг ближе#Сделать шаг назад#Посмотреть на дверь(break)emote farmer 40\\speak Harvey \"Спасибо.$0\"\\speak Harvey \"Тогда я скажу правило: я рядом. Не впереди тебя. Не вместо тебя. Рядом.$l\"\\speak Harvey \"За исключением случаев, когда ты падаешь, истекаешь кровью или идёшь в шахту с температурой. Там я снова становлюсь невыносимым.$a\"\\friendship Harvey 50(break)message \"Ты делаешь шаг ближе.\"\\move farmer -1 0 3\\speak Harvey \"Вот так?$0\"\\speak Harvey \"Хорошо. Я не буду двигаться. Ты сама выбрала расстояние.$l\"\\speak Harvey \"Запомню. Это важно.$0\"\\friendship Harvey 55(break)message \"Ты делаешь шаг назад.\"\\move farmer 1 0 1\\faceDirection farmer 3\\speak Harvey \"Понял. Больше воздуха.$0\"\\speak Harvey \"Я могу быть настойчивым и отсюда. Проверено медицинской практикой.$a\"\\speak Harvey \"Но спасибо, что показала.$0\"\\friendship Harvey 45(break)faceDirection farmer 0\\message \"Ты смотришь на дверь.\"\\speak Harvey \"Хочешь уйти?$0\"\\speak Harvey \"Хорошо. Разговор подождёт — он никуда не убежит.$0\"\\addItem 613 1\\speak Harvey \"Только яблоко возьми. Ты опять без обеда, я же вижу.$h\"\\speak Harvey \"Я провожу до двери. Дальше — как выберешь.$0\"\\friendship Harvey 40/
         pause 400/
         speak Harvey \"Я всё равно буду напоминать про еду, воду и отдых.$a\"/
         speak Harvey \"Ты всё равно будешь делать вид, что не слышишь.$0\"/
         speak Harvey \"Но теперь между нами есть договор: я спрашиваю, когда могу. Ты показываешь, когда слов нет.$l\"/
         speak Harvey \"Для начала этого достаточно.$0\"/
+        speak Harvey \"И ещё. Ужин у тебя сегодня будет — я попросил Гаса отложить порцию. Возражения принимаются после еды.$h\"/
         pause 300/
         move farmer 0 2 0 true/
         move Harvey 0 2 0 true/
@@ -1084,7 +1085,7 @@
         -1000 -1000/
         farmer 1000 1000 0 Harvey 1000 1000 0 Lewis 1000 1000 0/
         skippable/
-        setSkipActions addConversationTopic topicRescueComplete 21#action removeConversationTopic topicRescueOperation#changeLocation Hospital#ignoreCollisions farmer#warp farmer 20 5#positionOffset farmer 32 -52#faceDirection farmer 2#warp Harvey 18 5#faceDirection Harvey 1/
+        setSkipActions addConversationTopic topicRescueComplete 21#addConversationTopic HarveyLewis_Wait 2#action removeConversationTopic topicRescueOperation#changeLocation Hospital#ignoreCollisions farmer#warp farmer 20 5#positionOffset farmer 32 -52#faceDirection farmer 2#warp Harvey 18 5#faceDirection Harvey 1/
         pause 500/
         changeLocation Hospital/
         warp Harvey 3 15/
@@ -1250,6 +1251,7 @@
         globalFade/
         viewport -1000 -1000/
         addConversationTopic topicRescueComplete 21/
+        addConversationTopic HarveyLewis_Wait 2/
         action removeConversationTopic topicRescueOperation/
         end position 20 5"
       }
@@ -2649,21 +2651,20 @@
         speak Harvey \"Домой. Сейчас. Без споров.$a\"/
         pause 600/
         emote farmer 28/
-        message \"Ты не двигаешься. Не потому что упрямишься — потому что его тон сжал воздух вокруг.\"/
+        message \"Ты не двигаешься — сил хватает только на то, чтобы стоять. Его голос звучит резче обычного, и от этого почему-то щиплет глаза.\"/
         pause 500/
         emote Harvey 8/
         pause 400/
-        speak Harvey \"...Стой.$8\"/
+        speak Harvey \"...Подожди.$8\"/
         pause 300/
-        quickQuestion #Отступить на шаг#Закрыть лицо рукой#Показать на его блокнот#Сказать: «Ты меня не слышишь»(break)move farmer -1 0 3\\pause 400\\faceDirection Harvey 3(break)message \"Ты прикрываешь лицо ладонью — коротко, без театра.\"\\emote farmer 28\\pause 400(break)message \"Ты указываешь на блокнот в его руке — тот, куда он записывает каждый ваш разговор.\"\\speak Harvey \"...$8\"\\pause 400(break)message \"«Ты меня не слышишь» — тихо, но чётко.\"\\emote Harvey 28\\pause 400/
+        quickQuestion #Отступить на шаг#Закрыть лицо рукой#Показать на его блокнот#Сказать: «Ты меня не слышишь»(break)move farmer -1 0 3\\pause 400\\faceDirection Harvey 3(break)message \"Ты прикрываешь лицо ладонью — коротко, без театра.\"\\emote farmer 28\\pause 400(break)message \"Ты указываешь на блокнот в его руке — тот, где записано твоё давление за последний месяц.\"\\speak Harvey \"...$8\"\\pause 400(break)message \"«Ты меня не слышишь» — тихо, но чётко.\"\\emote Harvey 28\\pause 400/
         pause 400/
-        speak Harvey \"...Я сейчас звучал как человек, который отдаёт приказ, а не как человек, которому ты доверилась.$8\"/
-        speak Harvey \"Прости.$s\"/
-        speak Harvey \"Я испугался. Но это не делает мой тон правильным.$a\"/
-        speak Harvey \"Давай сначала заново. Что ты можешь сделать сейчас?$u\"/
-        speak Harvey \"Не что я считаю идеальным. Что ты можешь.$0\"/
+        speak Harvey \"...Это прозвучало как команда на плацу. Прости.$8\"/
+        speak Harvey \"Я испугался — и страх заговорил вместо меня.$s\"/
+        speak Harvey \"Смысл я назад не забираю: сегодня ты больше ничего не делаешь. И одна в таком состоянии домой не пойдёшь.$a\"/
+        speak Harvey \"А тон — забираю. Скажи, как тебе сейчас легче дойти?$u\"/
         pause 400/
-        quickQuestion #Вода и домой#Пять минут тишины#Попросить проводить#Попросить уйти(break)addItem 614 1\\speak Harvey \"Вода. И домой — твоим темпом.$0\"\\speak Harvey \"Я не буду идти впереди. Только рядом, если позволишь.$l\"\\friendship Harvey 40\\addConversationTopic topicHarveyApologyAccepted 7(break)speak Harvey \"Пять минут.$0\"\\speak Harvey \"Я молчу. Ты дыши.$u\"\\textAboveHead Harvey \"Вдох… выдох…\"\\pause 2000\\friendship Harvey 45\\addConversationTopic topicHarveyQuietFiveMinutes 7(break)speak Harvey \"Конечно.$0\"\\speak Harvey \"Я буду рядом. Не впереди — рядом.$l\"\\move Harvey -1 0 3\\move farmer -1 0 3\\faceDirection Harvey 3\\faceDirection farmer 1\\friendship Harvey 50\\addConversationTopic topicHarveyApologyAccepted 7(break)speak Harvey \"Хорошо.$0\"\\speak Harvey \"Я уйду. Чай останется здесь — без подписи и без лекции.$l\"\\addItem 614 1\\move Harvey 2 0 1\\pause 300\\move Harvey 3 0 1\\message \"Он кладёт записку на край лавки и действительно отходит.\"\\friendship Harvey 55\\addConversationTopic topicHarveyNeedsSpace 7/
+        quickQuestion #Чай и домой#Пять минут посидеть#Опереться на его руку#«Я дойду сама»(break)addItem 614 1\\speak Harvey \"Зелёный чай. Ещё тёплый — я нёс его из клиники, как знал.$h\"\\speak Harvey \"Пей по дороге. Я рядом, твоим темпом.$l\"\\friendship Harvey 40\\addConversationTopic topicHarveyApologyAccepted 7(break)speak Harvey \"Пять минут.$0\"\\speak Harvey \"Я молчу. Ты дышишь. Потом провожу — медленно, сколько нужно.$u\"\\textAboveHead Harvey \"Вдох… выдох…\"\\pause 2000\\friendship Harvey 45\\addConversationTopic topicHarveyQuietFiveMinutes 7(break)speak Harvey \"Конечно.$0\"\\speak Harvey \"Опирайся сколько нужно. Я выдержу — и тебя, и твоё «я в порядке».$h\"\\move Harvey -1 0 3\\move farmer -1 0 3\\faceDirection Harvey 3\\faceDirection farmer 1\\friendship Harvey 50\\addConversationTopic topicHarveyApologyAccepted 7(break)speak Harvey \"Хорошо. Сама.$0\"\\speak Harvey \"Тогда я пойду в десяти шагах позади. Это не слежка — это мои нервы.$h\"\\addItem 614 1\\speak Harvey \"И чай возьми. Вот это уже не обсуждается.$a\"\\move Harvey 2 0 1\\message \"Он отступает на пару шагов — и правда идёт позади до самой фермы.\"\\friendship Harvey 55\\addConversationTopic topicHarveyNeedsSpace 7/
         pause 400/
         addConversationTopic HarveyMod_CD_Global 3/
         addConversationTopic HarveyMod_CD_E10 7/
@@ -2697,21 +2698,20 @@
         speak Harvey \"Домой. Сейчас. Без споров.$a\"/
         pause 600/
         emote farmer 28/
-        message \"Ты не двигаешься. Не из упрямства — от его тона.\"/
+        message \"Ты не двигаешься — сил хватает только на то, чтобы стоять. Его голос звучит резче обычного, и от этого почему-то щиплет глаза.\"/
         pause 500/
         emote Harvey 8/
         pause 400/
-        speak Harvey \"...Стой.$8\"/
+        speak Harvey \"...Подожди.$8\"/
         pause 300/
         quickQuestion #Отступить на шаг#Закрыть лицо рукой#Показать на его блокнот#Сказать: «Ты меня не слышишь»(break)move farmer -1 0 3\\pause 400\\faceDirection Harvey 3(break)message \"Ты прикрываешь лицо ладонью.\"\\emote farmer 28\\pause 400(break)message \"Ты указываешь на его блокнот — тот, где он записывает каждый твой кашель.\"\\speak Harvey \"...$8\"\\pause 400(break)message \"«Ты меня не слышишь» — тихо, но чётко.\"\\emote Harvey 28\\pause 400/
         pause 400/
-        speak Harvey \"...Я сейчас звучал как человек, который отдаёт приказ, а не как человек, которому ты доверилась.$8\"/
-        speak Harvey \"Прости.$s\"/
-        speak Harvey \"Я испугался. Но это не делает мой тон правильным.$a\"/
-        speak Harvey \"Давай сначала заново. Что ты можешь сделать сейчас?$u\"/
-        speak Harvey \"Не что я считаю идеальным. Что ты можешь.$0\"/
+        speak Harvey \"...Это прозвучало как команда на плацу. Прости.$8\"/
+        speak Harvey \"Я испугался — и страх заговорил вместо меня.$s\"/
+        speak Harvey \"Смысл я назад не забираю: сегодня ты больше ничего не делаешь. И одна в таком состоянии домой не пойдёшь.$a\"/
+        speak Harvey \"А тон — забираю. Скажи, солнышко, как тебе сейчас легче дойти?$u\"/
         pause 400/
-        quickQuestion #Вода и домой#Пять минут тишины#Попросить проводить#Попросить уйти(break)addItem 614 1\\speak Harvey \"Вода. И домой — твоим темпом.$0\"\\speak Harvey \"Не впереди. Рядом — если позволишь.$l\"\\friendship Harvey 40\\addConversationTopic topicHarveyApologyAccepted 7(break)speak Harvey \"Пять минут.$0\"\\speak Harvey \"Я молчу. Ты дыши.$u\"\\textAboveHead Harvey \"Вдох… выдох…\"\\pause 2000\\friendship Harvey 45\\addConversationTopic topicHarveyQuietFiveMinutes 7(break)speak Harvey \"Конечно.$0\"\\speak Harvey \"Я буду рядом. Не впереди — рядом.$l\"\\move Harvey -1 0 3\\move farmer -1 0 3\\faceDirection Harvey 3\\faceDirection farmer 1\\friendship Harvey 50\\addConversationTopic topicHarveyApologyAccepted 7(break)speak Harvey \"Хорошо.$0\"\\speak Harvey \"Я уйду. Чай останется здесь — без подписи и без лекции.$l\"\\addItem 614 1\\move Harvey 2 0 1\\pause 300\\move Harvey 3 0 1\\message \"Он кладёт записку на край лавки и действительно отходит.\"\\friendship Harvey 55\\addConversationTopic topicHarveyNeedsSpace 7/
+        quickQuestion #Чай и домой#Пять минут посидеть#Опереться на его руку#«Я дойду сама»(break)addItem 614 1\\speak Harvey \"Зелёный чай. Ещё тёплый — я нёс его из клиники, как знал.$h\"\\speak Harvey \"Пей по дороге. Я рядом, твоим темпом.$l\"\\friendship Harvey 40\\addConversationTopic topicHarveyApologyAccepted 7(break)speak Harvey \"Пять минут.$0\"\\speak Harvey \"Я молчу. Ты дышишь. Потом провожу — медленно, сколько нужно.$u\"\\textAboveHead Harvey \"Вдох… выдох…\"\\pause 2000\\friendship Harvey 45\\addConversationTopic topicHarveyQuietFiveMinutes 7(break)speak Harvey \"Конечно.$0\"\\speak Harvey \"Опирайся, солнышко. Я выдержу — и тебя, и твоё «я в порядке».$h\"\\move Harvey -1 0 3\\move farmer -1 0 3\\faceDirection Harvey 3\\faceDirection farmer 1\\friendship Harvey 50\\addConversationTopic topicHarveyApologyAccepted 7(break)speak Harvey \"Хорошо. Сама.$0\"\\speak Harvey \"Тогда я пойду в десяти шагах позади. Это не слежка — это мои нервы.$h\"\\addItem 614 1\\speak Harvey \"И чай возьми. Вот это уже не обсуждается.$a\"\\move Harvey 2 0 1\\message \"Он отступает на пару шагов — и правда идёт позади до самой фермы.\"\\friendship Harvey 55\\addConversationTopic topicHarveyNeedsSpace 7/
         pause 400/
         addConversationTopic HarveyMod_CD_Global 3/
         addConversationTopic HarveyMod_CD_E10 7/
@@ -2930,10 +2930,12 @@
         faceDirection farmer 1/
         pause 300/
         emote Harvey 16/
-        speak Harvey \"Стой.$a\"/
+        speak Harvey \"Стоп. Покажи запястье.$a\"/
         pause 400/
-        speak Harvey \"Я хочу сказать: «запрещаю».$a\"/
-        speak Harvey \"И не думай, что это пустая угроза. Но запрет ты обойдёшь тихо, а договор — выполнишь. Я тебя знаю.$s\"/
+        message \"Он разматывает повязку и заматывает заново — туже и ровнее, проверяя каждый палец.\"/
+        speak Harvey \"Сегодня — без шахты. Запястью нужны сутки покоя. Это не обсуждается, это физиология.$a\"/
+        speak Harvey \"А дальше… Мне очень хочется сказать «запрещаю» насовсем. Честно — уже почти сказал.$s\"/
+        speak Harvey \"Но запрет ты тихо обойдёшь, я тебя знаю. А договор — выполнишь. Значит, будет договор. И в каждом пункте я буду невыносимо настойчив.$h\"/
         pause 400/
         speak Harvey \"Поэтому я скажу как врач: если риск нельзя убрать, его нужно измерить, ограничить и подготовить выход.$u\"/
         speak Harvey \"Мы составим договор.$0\"/
@@ -2983,10 +2985,12 @@
         faceDirection farmer 1/
         pause 300/
         emote Harvey 16/
-        speak Harvey \"Стой.$a\"/
+        speak Harvey \"Стоп. Покажи запястье.$a\"/
         pause 400/
-        speak Harvey \"Я хочу сказать: «запрещаю».$a\"/
-        speak Harvey \"И не думай, что это пустая угроза. Но запрет ты обойдёшь тихо, а договор — выполнишь. Я тебя знаю.$s\"/
+        message \"Он разматывает повязку и заматывает заново — туже и ровнее, проверяя каждый палец.\"/
+        speak Harvey \"Сегодня — без шахты. Запястью нужны сутки покоя. Это не обсуждается, это физиология.$a\"/
+        speak Harvey \"А дальше… Мне очень хочется сказать «запрещаю» насовсем. Честно — уже почти сказал.$s\"/
+        speak Harvey \"Но запрет ты тихо обойдёшь, я тебя знаю. А договор — выполнишь. Значит, будет договор. И в каждом пункте я буду невыносимо настойчив.$h\"/
         pause 400/
         speak Harvey \"Поэтому я скажу как врач: если риск нельзя убрать, его нужно измерить, ограничить и подготовить выход.$u\"/
         speak Harvey \"Мы составим договор.$0\"/
@@ -3118,6 +3122,7 @@
         pause 400/
         quickQuestion #Поставить галочку в блокноте#Закрыть блокнот#Прижаться к нему#Поставить чай между вами(break)message \"Ты ставишь галочку — короткую, уверенную.\"\\speak Harvey \"Официально утверждено.$h\"\\speak Harvey \"Почерк всё ещё ужасный. Это тоже часть договора.$l\"\\friendship Harvey 50(break)message \"Ты закрываешь блокнот — медленно, будто кладешь точку.\"\\speak Harvey \"Хорошо. Сегодня без списков.$0\"\\speak Harvey \"Завтра я, вероятно, снова принесу блокнот. Но сегодня — можно.$l\"\\friendship Harvey 45(break)message \"Ты прижимаешься к нему — без спешки, без оправданий.\"\\speak Harvey \"...$l\"\\speak Harvey \"Я всё ещё врач. Но сейчас — просто рядом.$l\"\\friendship Harvey 65(break)message \"Ты ставишь чашку чая между вами — ровно посередине.\"\\speak Harvey \"Лучший вид договора, который я знаю.$l\"\\addConversationTopic topicHarveyFuturePlan_TeaSignal 30\\friendship Harvey 55/
         pause 400/
+        speak Harvey \"Один пункт в левую колонку я впишу сам: «ужинать вместе». Обсуждению подлежит — за ужином.$h\"/
         speak Harvey \"Это не конец истории.$0\"/
         speak Harvey \"Просто конец арки, где я пытался спасать тебя в одиночку.$l\"/
         speak Harvey \"Дальше — жить рядом. С травмами, стрессом и моей привычкой перепроверять пульс.$u\"/
@@ -3162,6 +3167,7 @@
         pause 400/
         quickQuestion #Поставить галочку в блокноте#Закрыть блокнот#Прижаться к нему#Поставить чай между вами(break)message \"Ты ставишь галочку — короткую, уверенную.\"\\speak Harvey \"Официально утверждено.$h\"\\speak Harvey \"Почерк всё ещё ужасный. Это тоже часть договора.$l\"\\friendship Harvey 50(break)message \"Ты закрываешь блокнот — медленно, будто кладешь точку.\"\\speak Harvey \"Хорошо. Сегодня без списков.$0\"\\speak Harvey \"Завтра я, вероятно, снова открою блокнот. Но сегодня — можно.$l\"\\friendship Harvey 45(break)message \"Ты прижимаешься к нему — без спешки, без оправданий.\"\\speak Harvey \"...$l\"\\speak Harvey \"Я всё ещё врач. Но сейчас — просто твой.$l\"\\friendship Harvey 65(break)message \"Ты ставишь чашку чая между вами — ровно посередине.\"\\speak Harvey \"Лучший вид договора, который я знаю.$l\"\\addConversationTopic topicHarveyFuturePlan_TeaSignal 30\\friendship Harvey 55/
         pause 400/
+        speak Harvey \"Один пункт в левую колонку я впишу сам: «ужинать вместе». Обсуждению подлежит — за ужином.$h\"/
         speak Harvey \"Это не конец истории.$0\"/
         speak Harvey \"Просто конец арки, где я пытался спасать тебя в одиночку.$l\"/
         speak Harvey \"Дальше — жить рядом. С травмами, стрессом и моей привычкой перепроверять пульс.$u\"/

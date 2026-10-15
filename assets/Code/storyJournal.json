@@ -473,6 +473,30 @@
           "Condition": "",
           "Repeatable": false
         },
+        "{{ModId}}_HarveyOverhaulClinic.V1_VaccineDay": {
+          "Arc": "Своя жизнь Харви",
+          "ArcOrder": 5,
+          "Order": 6,
+          "EventIds": "HarveyOverhaulClinic.V1_VaccineDay",
+          "Title": "День прививок",
+          "Summary": "Винсент, наклейки-звёздочки и одно храброе плечо.",
+          "Hint": "Весной, после письма из клиники (3 сердца).",
+          "Requires": "",
+          "Condition": "",
+          "Repeatable": true
+        },
+        "{{ModId}}_HarveyOverhaulClinic.HS1_Heatstroke": {
+          "Arc": "Своя жизнь Харви",
+          "ArcOrder": 5,
+          "Order": 7,
+          "EventIds": "HarveyOverhaulClinic.HS1_Heatstroke",
+          "Title": "Тепловой удар",
+          "Summary": "Наутро после луау Пэм оказалась в клинике — и ты помогла.",
+          "Hint": "Через день-два после луау, утром в клинике (3 сердца).",
+          "Requires": "",
+          "Condition": "",
+          "Repeatable": true
+        },
         "{{ModId}}_eventHarveyFirstDate": {
           "Arc": "Свидания и брак",
           "ArcOrder": 6,
@@ -864,10 +888,22 @@
           "Condition": "",
           "Repeatable": false
         },
-        "{{ModId}}_eventHarveyTraumaExam": {
+        "{{ModId}}_HarveyOverhaulLife.LW1_LewisSorry": {
           "Arc": "Прошлое",
           "ArcOrder": 10,
           "Order": 2,
+          "EventIds": "HarveyOverhaulLife.LW1_LewisSorry",
+          "Title": "Прости старого дурака",
+          "Summary": "Льюис извинился за ту ночь на дороге.",
+          "Hint": "Через пару дней после грозы — утром у клиники.",
+          "Requires": "eventRescueOperation",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_eventHarveyTraumaExam": {
+          "Arc": "Прошлое",
+          "ArcOrder": 10,
+          "Order": 3,
           "EventIds": "eventHarveyTraumaExam",
           "Title": "Осмотр спины",
           "Summary": "Харви увидел ожоги и не стал расспрашивать.",
@@ -879,7 +915,7 @@
         "{{ModId}}_HarveyOverhaulStory.T1_WhatIRemember": {
           "Arc": "Прошлое",
           "ArcOrder": 10,
-          "Order": 3,
+          "Order": 4,
           "EventIds": "HarveyOverhaulStory.T1_WhatIRemember",
           "Title": "Что я помню",
           "Summary": "Ты рассказала столько, сколько захотела.",
@@ -891,7 +927,7 @@
         "{{ModId}}_HarveyOverhaulStory.T2_LastOne": {
           "Arc": "Прошлое",
           "ArcOrder": 10,
-          "Order": 4,
+          "Order": 5,
           "EventIds": "HarveyOverhaulStory.T2_LastOne",
           "Title": "Последняя",
           "Summary": "«Ты не последняя. Ты — выжившая».",

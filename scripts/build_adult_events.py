@@ -37,7 +37,7 @@ a1_key = key(NS, 'A1_LunchBreak', 'DayOfWeek Thu', 'Time 1200 1500', 'Friendship
              'GameStateQuery PLAYER_HAS_MAIL Current HarveyAdult_LunchNote Received')
 a1 = script(
     'harveys_theme_jazz', '8 9', 'farmer -1000 -1000 0 Harvey 9 9 3',
-    skip_cd('AddConversationTopic Current HarveyAdult_LunchBreak 2'),
+    skip_cd('AddConversationTopic HarveyAdult_LunchBreak 2'),
     [
         'warp farmer 6 12', 'move farmer 0 -3 1', 'move Harvey -1 0 3', 'move farmer 1 0 1', 'pause 300',
         msg('Наверху, в его старой квартире, задёрнуты шторы. Белый халат висит на спинке стула.'),
@@ -76,7 +76,7 @@ a2_key = key(NS, 'A2_NightSwim', 'Season Summer', 'Weather Sunny', 'Time 2000 24
              'Friendship Harvey 3000', MARRIED)
 a2 = script(
     'none', '41 22', 'farmer 40 23 2 Harvey 41 23 2',
-    skip_cd('AddConversationTopic Current HarveyAdult_NightSwim 2'),
+    skip_cd('AddConversationTopic HarveyAdult_NightSwim 2'),
     [
         'viewport 41 22 true', 'pause 600',
         msg('Летняя ночь. Море тёплое, как чай. Харви стоит у кромки воды и подозрительно смотрит на волны.'),
@@ -111,7 +111,7 @@ a2 = script(
 a3_key = key(NS, 'A3_Downpour', 'Weather Rain', 'Time 1800 2300', 'Friendship Harvey 3000', MARRIED)
 a3 = script(
     'rain', f'{FX} {FY0}', f'farmer {FX} {FY3} 0 Harvey {FX} {FY1} 2',
-    skip_cd('AddConversationTopic Current HarveyAdult_RainBath 2'),
+    skip_cd('AddConversationTopic HarveyAdult_RainBath 2'),
     [
         'pause 500',
         msg('Ливень. Ты возвращаешься с поля промокшая до нитки: с волос течёт, рубашка прилипла к коже.'),
@@ -146,7 +146,7 @@ a4_key = key(NS, 'A4_WhiteCoat', 'DayOfWeek Tue', 'Time 1200 1500', 'Friendship 
              f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.A1_LunchBreak')
 a4 = script(
     'harveys_theme_jazz', '8 9', 'farmer -1000 -1000 0 Harvey 9 9 0',
-    skip_cd('AddConversationTopic Current HarveyAdult_WhiteCoat 2'),
+    skip_cd('AddConversationTopic HarveyAdult_WhiteCoat 2'),
     [
         'warp farmer 6 12', 'move farmer 0 -3 1', 'move farmer 1 0 1', 'pause 300',
         msg('Харви стоит у окна спиной к двери и не слышит, как ты входишь. Его белый халат висит на вешалке.'),
@@ -178,7 +178,7 @@ a5_key = key(NS, 'A5_ReverseExam', 'DayOfWeek Fri', 'Time 1300 1500', 'Friendshi
              f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.A1_LunchBreak')
 a5 = script(
     'none', '14 6', 'farmer 14 6 1 Harvey 15 6 3',
-    skip_cd('AddConversationTopic Current HarveyAdult_ReverseExam 2'),
+    skip_cd('AddConversationTopic HarveyAdult_ReverseExam 2'),
     [
         'viewport 14 6 true', 'pause 500',
         msg('Пятница, обеденный перерыв. Мару уехала за лекарствами в Зузу. Ты закрываешь дверь палаты и снимаешь с вешалки его стетоскоп.'),
@@ -214,7 +214,7 @@ a6_key = key(NS, 'A6_Vineyard', 'Season Summer Fall', 'Weather Sunny', 'Time 190
              'Friendship Harvey 3200', MARRIED)
 a6 = script(
     'harveys_theme_jazz', '29 48', 'farmer 28 49 1 Harvey 30 49 3',
-    skip_cd('AddConversationTopic Current HarveyAdult_Vineyard 2'),
+    skip_cd('AddConversationTopic HarveyAdult_Vineyard 2'),
     [
         'viewport 29 48 true', 'pause 600',
         msg('Вечер на винограднике «Голубая луна». Харви занял последний столик и выбрал вино, которое, по его словам, «одобряет кардиология».'),
@@ -244,7 +244,7 @@ a7_key = key(NS, 'A7_NightSpring', 'Season Spring Summer', 'Time 2000 2400', 'Fr
              'GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N2_Spring')
 a7 = script(
     'none', '47 24', 'farmer 46 24 3 Harvey 48 24 3',
-    skip_cd('AddConversationTopic Current HarveyAdult_Spring 2'),
+    skip_cd('AddConversationTopic HarveyAdult_Spring 2'),
     [
         'viewport 47 24 true', 'pause 600',
         msg('Ночью источник светится ярче, чем днём. Над водой кружат светлячки — а может, феи.'),
@@ -275,7 +275,7 @@ a7 = script(
 a8_key = key(NS, 'A8_Frozen', 'Season Winter', 'Time 1800 2300', 'Friendship Harvey 3200', MARRIED)
 a8 = script(
     'none', f'{FX} {FY0}', f'farmer {FX} {FY1} 2 Harvey {FX} {{{{HO_FarmY5}}}} 0',
-    skip_cd('AddConversationTopic Current HarveyAdult_Frozen 2'),
+    skip_cd('AddConversationTopic HarveyAdult_Frozen 2'),
     [
         'pause 600',
         msg('Зимний вечер, метель. По дороге к дому бредёт фигура в синем пальто, засыпанная снегом по самые плечи.'),

@@ -1,168 +1,317 @@
 {
   "Changes": [
     {
+      "LogName": "Pregnancy — темы Харви (повторяемые)",
       "Action": "EditData",
       "Target": "Data/TriggerActions",
       "Entries": {
-        "{{ModId}}_triggerPregnancyGentleCare": {
-          "Id": "{{ModId}}_triggerPregnancyGentleCare",
+        "{{ModId}}_preg_Start_v2": {
+          "Id": "{{ModId}}_preg_Start_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCareStarted",
+          "Condition": "!PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCareStarted",
           "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyCareStarted 14",
+            "AddConversationTopic topicHarvey_PregnancyCareStarted 30",
             "AddConversationTopic topicHarveyGentleCare 7"
           ],
-          "LogName": "Pregnancy — start gentle care topic"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — начало: мягкая забота"
         },
-        "{{ModId}}_triggerPregnancyCheck01": {
-          "Id": "{{ModId}}_triggerPregnancyCheck01",
+        "{{ModId}}_preg_Check_01_v2": {
+          "Id": "{{ModId}}_preg_Check_01_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.2, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCooldown, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_01",
+          "Condition": "!PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_01",
           "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyCheckCooldown 1",
+            "AddConversationTopic topicHarvey_PregnancyCheckCD 2",
             "AddConversationTopic topicHarvey_PregnancyCheck_01 2"
           ],
-          "LogName": "Pregnancy — daily check topic 01"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — утренняя проверка (Check_01)"
         },
-        "{{ModId}}_triggerPregnancyCheck02": {
-          "Id": "{{ModId}}_triggerPregnancyCheck02",
+        "{{ModId}}_preg_Check_02_v2": {
+          "Id": "{{ModId}}_preg_Check_02_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.2, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCooldown, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_02",
+          "Condition": "!PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_02",
           "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyCheckCooldown 1",
+            "AddConversationTopic topicHarvey_PregnancyCheckCD 2",
             "AddConversationTopic topicHarvey_PregnancyCheck_02 2"
           ],
-          "LogName": "Pregnancy — daily check topic 02"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — утренняя проверка (Check_02)"
         },
-        "{{ModId}}_triggerPregnancyCheck03": {
-          "Id": "{{ModId}}_triggerPregnancyCheck03",
+        "{{ModId}}_preg_Check_03_v2": {
+          "Id": "{{ModId}}_preg_Check_03_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.2, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCooldown, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_03",
+          "Condition": "!PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_03",
           "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyCheckCooldown 1",
+            "AddConversationTopic topicHarvey_PregnancyCheckCD 2",
             "AddConversationTopic topicHarvey_PregnancyCheck_03 2"
           ],
-          "LogName": "Pregnancy — daily check topic 03"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — утренняя проверка (Check_03)"
         },
-        "{{ModId}}_triggerPregnancyCheck04": {
-          "Id": "{{ModId}}_triggerPregnancyCheck04",
+        "{{ModId}}_preg_Check_04_v2": {
+          "Id": "{{ModId}}_preg_Check_04_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.2, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCooldown, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_04",
+          "Condition": "!PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_04",
           "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyCheckCooldown 1",
+            "AddConversationTopic topicHarvey_PregnancyCheckCD 2",
             "AddConversationTopic topicHarvey_PregnancyCheck_04 2"
           ],
-          "LogName": "Pregnancy — daily check topic 04"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — утренняя проверка (Check_04)"
         },
-        "{{ModId}}_triggerPregnancyCheck05": {
-          "Id": "{{ModId}}_triggerPregnancyCheck05",
+        "{{ModId}}_preg_Check_05_v2": {
+          "Id": "{{ModId}}_preg_Check_05_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.2, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCooldown, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_05",
+          "Condition": "!PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyGentleCare, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheckCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyCheck_05",
           "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyCheckCooldown 1",
+            "AddConversationTopic topicHarvey_PregnancyCheckCD 2",
             "AddConversationTopic topicHarvey_PregnancyCheck_05 2"
           ],
-          "LogName": "Pregnancy — daily check topic 05"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — утренняя проверка (Check_05)"
         },
-        "{{ModId}}_triggerPregnancyTender": {
-          "Id": "{{ModId}}_triggerPregnancyTender",
+        "{{ModId}}_preg_Tender_01_v2": {
+          "Id": "{{ModId}}_preg_Tender_01_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_01, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_02, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_03",
+          "Condition": "RANDOM 0.15, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTenderCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_01",
           "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyTenderCD 3",
             "AddConversationTopic topicHarvey_PregnancyTender_01 3"
           ],
-          "LogName": "Pregnancy — tender topic"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — нежность (Tender_01)"
         },
-        "{{ModId}}_triggerPregnancyMine01": {
-          "Id": "{{ModId}}_triggerPregnancyMine01",
-          "Trigger": "LocationChanged",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_LOCATION_NAME Current Mine, RANDOM 0.34, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyMineWarning_01",
-          "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyMineWarning_01 3"
-          ],
-          "LogName": "Pregnancy — mine warning 01"
-        },
-        "{{ModId}}_triggerPregnancyMine02": {
-          "Id": "{{ModId}}_triggerPregnancyMine02",
-          "Trigger": "LocationChanged",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_LOCATION_NAME Current Mine, RANDOM 0.34, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyMineWarning_02",
-          "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyMineWarning_02 3"
-          ],
-          "LogName": "Pregnancy — mine warning 02"
-        },
-        "{{ModId}}_triggerPregnancyMine03": {
-          "Id": "{{ModId}}_triggerPregnancyMine03",
-          "Trigger": "LocationChanged",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_LOCATION_NAME Current Mine, RANDOM 0.34, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyMineWarning_03",
-          "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyMineWarning_03 3"
-          ],
-          "LogName": "Pregnancy — mine warning 03"
-        },
-        "{{ModId}}_triggerPregnancySkullCave": {
-          "Id": "{{ModId}}_triggerPregnancySkullCave",
-          "Trigger": "LocationChanged",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_LOCATION_NAME Current SkullCave",
-          "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyMineWarning_03 4"
-          ],
-          "LogName": "Pregnancy — skull cave warning"
-        },
-        "{{ModId}}_triggerPregnancyRain": {
-          "Id": "{{ModId}}_triggerPregnancyRain",
-          "Trigger": "LocationChanged",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, WEATHER Here Rain Storm, RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyRainWarning_01, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyRainWarning_02",
-          "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyRainWarning_01 2"
-          ],
-          "LogName": "Pregnancy — rain warning"
-        },
-        "{{ModId}}_triggerPregnancyStorm": {
-          "Id": "{{ModId}}_triggerPregnancyStorm",
+        "{{ModId}}_preg_Tender_02_v2": {
+          "Id": "{{ModId}}_preg_Tender_02_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, WEATHER Here Storm, RANDOM 0.6, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyStorm_01",
+          "Condition": "RANDOM 0.15, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTenderCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_02",
           "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyStorm_01 2"
+            "AddConversationTopic topicHarvey_PregnancyTenderCD 3",
+            "AddConversationTopic topicHarvey_PregnancyTender_02 3"
           ],
-          "LogName": "Pregnancy — storm day topic"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — нежность (Tender_02)"
         },
-        "{{ModId}}_triggerPregnancyHeat": {
-          "Id": "{{ModId}}_triggerPregnancyHeat",
+        "{{ModId}}_preg_Tender_03_v2": {
+          "Id": "{{ModId}}_preg_Tender_03_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, SEASON Summer, WEATHER Here Sun Wind, RANDOM 0.35, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyHeat_01",
+          "Condition": "RANDOM 0.15, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTenderCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyTender_03",
           "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyHeat_01 2"
+            "AddConversationTopic topicHarvey_PregnancyTenderCD 3",
+            "AddConversationTopic topicHarvey_PregnancyTender_03 3"
           ],
-          "LogName": "Pregnancy — summer heat topic"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — нежность (Tender_03)"
         },
-        "{{ModId}}_triggerPregnancyNight": {
-          "Id": "{{ModId}}_triggerPregnancyNight",
-          "Trigger": "LocationChanged",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, TIME 2200 2600, RANDOM 0.4, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyNight_01",
-          "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyNight_01 2"
-          ],
-          "LogName": "Pregnancy — late night topic"
-        },
-        "{{ModId}}_triggerPregnancyExhausted": {
-          "Id": "{{ModId}}_triggerPregnancyExhausted",
+        "{{ModId}}_preg_Food_01_v2": {
+          "Id": "{{ModId}}_preg_Food_01_v2",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_CONVERSATION_TOPIC Current timeReaction_VeryLate, RANDOM 0.7, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyExhausted_01",
+          "Condition": "RANDOM 0.15, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFoodCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFood_01",
           "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyExhausted_01 3"
-          ],
-          "LogName": "Pregnancy — exhausted after very late"
-        },
-        "{{ModId}}_triggerPregnancyFood": {
-          "Id": "{{ModId}}_triggerPregnancyFood",
-          "Trigger": "DayStarted",
-          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, RANDOM 0.3, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFood_01, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFoodCooldown",
-          "Actions": [
-            "AddConversationTopic topicHarvey_PregnancyFoodCooldown 2",
+            "AddConversationTopic topicHarvey_PregnancyFoodCD 3",
             "AddConversationTopic topicHarvey_PregnancyFood_01 2"
           ],
-          "LogName": "Pregnancy — skipped meal topic"
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — еда (Food_01)"
+        },
+        "{{ModId}}_preg_Food_02_v2": {
+          "Id": "{{ModId}}_preg_Food_02_v2",
+          "Trigger": "DayStarted",
+          "Condition": "RANDOM 0.15, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFoodCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFood_02",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyFoodCD 3",
+            "AddConversationTopic topicHarvey_PregnancyFood_02 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — еда (Food_02)"
+        },
+        "{{ModId}}_preg_Food_03_v2": {
+          "Id": "{{ModId}}_preg_Food_03_v2",
+          "Trigger": "DayStarted",
+          "Condition": "RANDOM 0.15, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFoodCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFood_03",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyFoodCD 3",
+            "AddConversationTopic topicHarvey_PregnancyFood_03 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — еда (Food_03)"
+        },
+        "{{ModId}}_preg_Exhausted_01_v2": {
+          "Id": "{{ModId}}_preg_Exhausted_01_v2",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Current timeReaction_VeryLate, RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyExhaustedCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyExhausted_01",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyExhaustedCD 2",
+            "AddConversationTopic topicHarvey_PregnancyExhausted_01 3"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — после очень позднего отбоя (Exhausted_01)"
+        },
+        "{{ModId}}_preg_Exhausted_02_v2": {
+          "Id": "{{ModId}}_preg_Exhausted_02_v2",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Current timeReaction_VeryLate, RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyExhaustedCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyExhausted_02",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyExhaustedCD 2",
+            "AddConversationTopic topicHarvey_PregnancyExhausted_02 3"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — после очень позднего отбоя (Exhausted_02)"
+        },
+        "{{ModId}}_preg_Exhausted_03_v2": {
+          "Id": "{{ModId}}_preg_Exhausted_03_v2",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Current timeReaction_VeryLate, RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyExhaustedCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyExhausted_03",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyExhaustedCD 2",
+            "AddConversationTopic topicHarvey_PregnancyExhausted_03 3"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — после очень позднего отбоя (Exhausted_03)"
+        },
+        "{{ModId}}_preg_Storm_01_v2": {
+          "Id": "{{ModId}}_preg_Storm_01_v2",
+          "Trigger": "DayStarted",
+          "Condition": "WEATHER Here Storm, RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyStormCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyStorm_01",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyStormCD 1",
+            "AddConversationTopic topicHarvey_PregnancyStorm_01 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — гроза (Storm_01)"
+        },
+        "{{ModId}}_preg_Storm_02_v2": {
+          "Id": "{{ModId}}_preg_Storm_02_v2",
+          "Trigger": "DayStarted",
+          "Condition": "WEATHER Here Storm, RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyStormCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyStorm_02",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyStormCD 1",
+            "AddConversationTopic topicHarvey_PregnancyStorm_02 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — гроза (Storm_02)"
+        },
+        "{{ModId}}_preg_Heat_01_v2": {
+          "Id": "{{ModId}}_preg_Heat_01_v2",
+          "Trigger": "DayStarted",
+          "Condition": "SEASON Summer, WEATHER Here Sun Wind, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyHeatCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyHeat_01",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyHeatCD 3",
+            "AddConversationTopic topicHarvey_PregnancyHeat_01 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — летняя жара (Heat_01)"
+        },
+        "{{ModId}}_preg_Heat_02_v2": {
+          "Id": "{{ModId}}_preg_Heat_02_v2",
+          "Trigger": "DayStarted",
+          "Condition": "SEASON Summer, WEATHER Here Sun Wind, RANDOM 0.25, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyHeatCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyHeat_02",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyHeatCD 3",
+            "AddConversationTopic topicHarvey_PregnancyHeat_02 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — летняя жара (Heat_02)"
+        },
+        "{{ModId}}_preg_Night_02_v2": {
+          "Id": "{{ModId}}_preg_Night_02_v2",
+          "Trigger": "DayStarted",
+          "Condition": "RANDOM 0.1, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyNightOwlCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyNight_02",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyNightOwlCD 4",
+            "AddConversationTopic topicHarvey_PregnancyNight_02 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — беспокойная ночь (Night_02)"
+        },
+        "{{ModId}}_preg_MineWarning_01_v2": {
+          "Id": "{{ModId}}_preg_MineWarning_01_v2",
+          "Trigger": "LocationChanged",
+          "Condition": "ANY \"PLAYER_LOCATION_NAME Current Mine\" \"PLAYER_LOCATION_NAME Current SkullCave\", RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyMineCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyMineWarning_01",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyMineCD 2",
+            "AddConversationTopic topicHarvey_PregnancyMineWarning_01 3"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — шахта (MineWarning_01)"
+        },
+        "{{ModId}}_preg_MineWarning_02_v2": {
+          "Id": "{{ModId}}_preg_MineWarning_02_v2",
+          "Trigger": "LocationChanged",
+          "Condition": "ANY \"PLAYER_LOCATION_NAME Current Mine\" \"PLAYER_LOCATION_NAME Current SkullCave\", RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyMineCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyMineWarning_02",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyMineCD 2",
+            "AddConversationTopic topicHarvey_PregnancyMineWarning_02 3"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — шахта (MineWarning_02)"
+        },
+        "{{ModId}}_preg_MineWarning_03_v2": {
+          "Id": "{{ModId}}_preg_MineWarning_03_v2",
+          "Trigger": "LocationChanged",
+          "Condition": "ANY \"PLAYER_LOCATION_NAME Current Mine\" \"PLAYER_LOCATION_NAME Current SkullCave\", RANDOM 0.5, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyMineCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyMineWarning_03",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyMineCD 2",
+            "AddConversationTopic topicHarvey_PregnancyMineWarning_03 3"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — шахта (MineWarning_03)"
+        },
+        "{{ModId}}_preg_RainWarning_01_v2": {
+          "Id": "{{ModId}}_preg_RainWarning_01_v2",
+          "Trigger": "LocationChanged",
+          "Condition": "WEATHER Here Rain Storm, LOCATION_IS_OUTDOORS Here, RANDOM 0.4, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyRainCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyRainWarning_01",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyRainCD 2",
+            "AddConversationTopic topicHarvey_PregnancyRainWarning_01 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — дождь на улице (RainWarning_01)"
+        },
+        "{{ModId}}_preg_RainWarning_02_v2": {
+          "Id": "{{ModId}}_preg_RainWarning_02_v2",
+          "Trigger": "LocationChanged",
+          "Condition": "WEATHER Here Rain Storm, LOCATION_IS_OUTDOORS Here, RANDOM 0.4, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyRainCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyRainWarning_02",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyRainCD 2",
+            "AddConversationTopic topicHarvey_PregnancyRainWarning_02 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — дождь на улице (RainWarning_02)"
+        },
+        "{{ModId}}_preg_Night_01_v2": {
+          "Id": "{{ModId}}_preg_Night_01_v2",
+          "Trigger": "LocationChanged",
+          "Condition": "TIME 2200 2600, RANDOM 0.4, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyNightCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyNight_01",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyNightCD 2",
+            "AddConversationTopic topicHarvey_PregnancyNight_01 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — поздно на ногах (Night_01)"
+        },
+        "{{ModId}}_preg_FarmHeavy_01_v2": {
+          "Id": "{{ModId}}_preg_FarmHeavy_01_v2",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_LOCATION_NAME Current Farm, TIME 0900 1800, RANDOM 0.15, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFarmHeavyCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFarmHeavy_01",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyFarmHeavyCD 3",
+            "AddConversationTopic topicHarvey_PregnancyFarmHeavy_01 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — тяжёлая работа на ферме (FarmHeavy_01)"
+        },
+        "{{ModId}}_preg_FarmHeavy_02_v2": {
+          "Id": "{{ModId}}_preg_FarmHeavy_02_v2",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_LOCATION_NAME Current Farm, TIME 0900 1800, RANDOM 0.15, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFarmHeavyCD, !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_PregnancyFarmHeavy_02",
+          "Actions": [
+            "AddConversationTopic topicHarvey_PregnancyFarmHeavyCD 3",
+            "AddConversationTopic topicHarvey_PregnancyFarmHeavy_02 2"
+          ],
+          "MarkActionApplied": false,
+          "LogName": "Pregnancy — тяжёлая работа на ферме (FarmHeavy_02)"
         }
       }
     }

@@ -43,7 +43,7 @@ d1_key = key(NS_DATE, 'D1_Fountain', 'DayOfWeek Sun', 'Time 1400 1700',
              cooldown=False)
 d1 = script(
     'harveys_theme_jazz', '26 28', 'farmer 26 32 0 Harvey 27 29 2',
-    skip_cd('AddConversationTopic Current HarveyDate_Fountain 7'),
+    skip_cd('AddConversationTopic HarveyDate_Fountain 7'),
     [
         'viewport 26 28 true', 'pause 500',
         msg('Без пяти два. У фонтана кто-то ходит кругами и сверяется с часами.'),
@@ -84,7 +84,7 @@ d1 = script(
 m1_key = key(NS, 'M1_FirstShift', 'Time 0600 0900', 'Friendship Harvey 2500', MARRIED)
 m1 = script(
     'continue', f'{FX} {FY0}', f'farmer {FX} {FY1} 2 Harvey {FX} {FY3} 0',
-    skip_cd('AddConversationTopic Current HarveyMarriage_FirstShift 3'),
+    skip_cd('AddConversationTopic HarveyMarriage_FirstShift 3'),
     [
         'pause 600',
         msg('Утро. Харви стоит у крыльца — уже в пальто, с сумкой через плечо. И никуда не уходит.'),
@@ -118,7 +118,7 @@ m2_key = key(NS, 'M2_SickDay', 'Season Winter', 'Time 0600 0900', 'Friendship Ha
              f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.M1_FirstShift')
 m2 = script(
     'continue', f'{FX} {FY0}', f'farmer {FX} {FY1} 2 Harvey {FX} {FY3} 0',
-    skip_cd('AddConversationTopic Current HarveyMarriage_SickDay 2'),
+    skip_cd('AddConversationTopic HarveyMarriage_SickDay 2'),
     [
         'pause 600',
         msg('Морозное утро. Харви у крыльца в пальто — и кашляет так, что вздрагивают куры.'),
@@ -153,7 +153,7 @@ m3_key = key(NS, 'M3_Anniversary', 'Time 1800 2300', MARRIED,
              cooldown=False)
 m3 = script(
     'harveys_theme_jazz', '41 22', 'farmer 40 23 2 Harvey 41 23 2',
-    skip_cd('AddConversationTopic Current HarveyMarriage_Anniversary 2', 'AddItem (O)221 1'),
+    skip_cd('AddConversationTopic HarveyMarriage_Anniversary 2', 'AddItem (O)221 1'),
     [
         'viewport 41 22 true', 'pause 600',
         msg('Вечер у моря. Харви расстелил на песке плед, поставил термос и, кажется, заранее проверил направление ветра.'),
@@ -192,16 +192,16 @@ m4_key = key(NS, 'M4_HarveyBirthday', 'Season Winter', 'DayOfMonth 14', 'Time 09
              cooldown=False)
 m4 = script(
     'Hospital_Ambient', '10 15', 'Harvey 10 14 2 farmer -1000 -1000 0 Maru -1000 -1000 0',
-    skip_cd('AddConversationTopic Current HarveyBirthday_Celebrated 3'),
+    skip_cd('AddConversationTopic HarveyBirthday_Celebrated 3'),
     [
         'viewport 10 15 true', 'pause 400', 'playSound doorOpen',
         'warp farmer 10 19', 'faceDirection farmer 0', 'move farmer 0 -3 0', 'pause 300',
         sp(H, 'А, это ты. Я как раз работаю. Обычный день. Ничего особенного.$0'),
         msg('На столе — стопка карт, остывший кофе и ни одного намёка на то, что сегодня его день рождения.'),
         sp(H, 'Если ты про дату — я не праздную. Врачам некогда. Да и кому это…$s'),
-        'playSound doorOpen', 'warp Maru 10 19', 'faceDirection Maru 0', 'move Maru 0 -1 0',
+        'playSound doorOpen', 'warp Maru 10 19', 'faceDirection Maru 0', 'move Maru 0 -1 0', 'faceDirection farmer 2',
         sp('Maru', 'Доктор, приём на сегодня закрыт. Распоряжение старшей медсестры. То есть моё.$h'),
-        sp(H, 'Мару, какое ещё…$a'),
+        'faceDirection farmer 0', sp(H, 'Мару, какое ещё…$a'),
         msg('Мару ставит на стойку коробку с тортом. Сверху — свечка в форме стетоскопа.'),
         sp('Maru', 'Идея @. Я только достала свечку. С днём рождения, доктор!$h'),
         'emote Harvey 16',
@@ -226,7 +226,7 @@ m5_key = key(NS, 'M5_Overworked', 'Season Summer Fall', 'Time 1800 2200', 'Frien
              f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.M1_FirstShift')
 m5 = script(
     'continue', f'{FX} {FY0}', f'farmer {FX} {FY1} 2 Harvey {FX} {FY3} 0',
-    skip_cd('AddConversationTopic Current HarveyMarriage_Overworked 2'),
+    skip_cd('AddConversationTopic HarveyMarriage_Overworked 2'),
     [
         'pause 500',
         msg('Вечер. Ты едва переставляешь ноги — лейка, мешки, грядки. Руки гудят до самых плеч.'),
@@ -261,7 +261,7 @@ m6_key = key(NS, 'M6_HerCold', 'Season Fall Winter', 'Time 0600 0900', 'Friendsh
              f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.M2_SickDay')
 m6 = script(
     'continue', f'{FX} {FY0}', f'farmer {FX} {FY1} 2 Harvey {FX} {FY3} 0',
-    skip_cd('AddConversationTopic Current HarveyMarriage_HerCold 2'),
+    skip_cd('AddConversationTopic HarveyMarriage_HerCold 2'),
     [
         'pause 500',
         msg('Голова тяжёлая, горло дерёт. Ты всё равно выходишь на крыльцо — куры сами себя не покормят.'),
@@ -291,7 +291,7 @@ m6 = script(
 m7_key = key(NS, 'M7_LateReturn', 'Time 2300 2600', 'Friendship Harvey 2600', MARRIED)
 m7 = script(
     'none', f'{FX} {FY0}', f'farmer {FX} {FY5} 0 Harvey {FX} {FY1} 2',
-    skip_cd('AddConversationTopic Current HarveyMarriage_LateReturn 2'),
+    skip_cd('AddConversationTopic HarveyMarriage_LateReturn 2'),
     [
         'ambientLight 120 120 60', 'pause 600',
         msg('Глубокая ночь. На крыльце горит фонарь. Под ним кто-то сидит, закутавшись в плед.'),
@@ -322,7 +322,7 @@ m8_key = key(NS, 'M8_SleeplessNight', 'Time 0600 0800', 'Friendship Harvey 2800'
              f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.M1_FirstShift')
 m8 = script(
     'none', f'{FX} {FY0}', f'farmer {FX} {FY1} 2 Harvey {FX} {FY3} 2',
-    skip_cd('AddConversationTopic Current HarveyMarriage_Nightmare 2'),
+    skip_cd('AddConversationTopic HarveyMarriage_Nightmare 2'),
     [
         'pause 600',
         msg('Рассвет. Харви сидит на нижней ступеньке крыльца во вчерашней рубашке. Кружка в руках давно остыла.'),
@@ -349,7 +349,7 @@ m9_key = key(NS, 'M9_ForestPharmacy', 'Season Spring', 'Weather Sunny', 'Time 10
              'Friendship Harvey 2700', MARRIED)
 m9 = script(
     'continue', '49 14', 'farmer 48 14 1 Harvey 49 14 3',
-    skip_cd('AddConversationTopic Current HarveyMarriage_ForestPharmacy 3', 'AddItem (O)16 3'),
+    skip_cd('AddConversationTopic HarveyMarriage_ForestPharmacy 3', 'AddItem (O)16 3'),
     [
         'viewport 49 14 true', 'pause 500',
         msg('Весенний лес. Харви несёт корзину и блокнот — подписывать всё, что ты соберёшь.'),
@@ -374,7 +374,7 @@ m10_key = key(NS, 'M10_FountainDance', 'DayOfWeek Sat', 'Weather Sunny', 'Time 2
               'Friendship Harvey 2800', MARRIED)
 m10 = script(
     'none', '26 28', 'farmer 25 30 1 Harvey 26 30 3',
-    skip_cd('AddConversationTopic Current HarveyMarriage_FountainDance 3'),
+    skip_cd('AddConversationTopic HarveyMarriage_FountainDance 3'),
     [
         'viewport 26 28 true', 'pause 600',
         msg('Субботний вечер. Из салуна доносится музыка. Площадь пуста, фонтан тихо шумит в темноте.'),
@@ -401,7 +401,7 @@ m11_key = key(NS, 'M11_BadDay', 'Time 1300 1500', 'Friendship Harvey 3000', MARR
               f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.M8_SleeplessNight')
 m11 = script(
     'none', '14 6', 'farmer 14 6 1 Harvey 15 6 3',
-    skip_cd('AddConversationTopic Current HarveyMarriage_BadDay 2'),
+    skip_cd('AddConversationTopic HarveyMarriage_BadDay 2'),
     [
         'viewport 14 6 true', 'pause 600',
         msg('Приём закончился раньше обычного. Харви сидит в пустой палате и смотрит на аккуратно заправленную койку.'),
@@ -430,7 +430,7 @@ m12_key = key(NS, 'M12_SundayPancakes', 'DayOfWeek Sun', 'Time 0600 0900', 'Frie
               f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.M1_FirstShift')
 m12 = script(
     'continue', f'{FX} {FY0}', f'farmer {FX} {FY1} 2 Harvey {FX} {FY3} 0',
-    skip_cd('AddConversationTopic Current HarveyMarriage_Pancakes 2', 'AddItem (O)211 1'),
+    skip_cd('AddConversationTopic HarveyMarriage_Pancakes 2', 'AddItem (O)211 1'),
     [
         'pause 500',
         msg('Воскресное утро. Пахнет блинчиками. У крыльца накрыт маленький стол, Харви в фартуке поверх пижамы.'),

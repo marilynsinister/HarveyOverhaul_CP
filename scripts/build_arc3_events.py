@@ -47,7 +47,7 @@ def script(music, view, actors, skip, body, ending='end'):
 
 
 def skip_cd(*extra):
-    return [f'AddConversationTopic Current {CD} 3', *extra]
+    return [f'AddConversationTopic {CD} 3', *extra]
 
 
 H = 'Harvey'
@@ -58,7 +58,7 @@ n1_key = key('N1_NightShift', 'Time 2000 2400', 'Friendship Harvey 2000',
              'GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married')
 n1 = script(
     'none', '36 57', 'farmer 36 58 0 Harvey -1000 -1000 2',
-    skip_cd('AddConversationTopic Current HarveyArc3_KnowsWhy 7',
+    skip_cd('AddConversationTopic HarveyArc3_KnowsWhy 7',
             'AddMail Current HarveyArc3_N1_Bandage tomorrow'),
     [
         'viewport 36 57 true', 'pause 600',
@@ -114,7 +114,7 @@ n2_key = key('N2_Spring', 'Weather Sunny', 'Time 1000 1700', 'Friendship Harvey 
              'GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Married')
 n2 = script(
     'continue', '47 24', 'farmer 46 24 3 Harvey 48 24 3',
-    skip_cd('AddConversationTopic Current HarveyArc3_Spring 7'),
+    skip_cd('AddConversationTopic HarveyArc3_Spring 7'),
     [
         'viewport 47 24 true', 'pause 600',
         msg('Ты привела Харви туда, куда не водишь никого: к источнику за западным лесом. Вода светится, будто помнит что-то своё.'),
@@ -151,7 +151,7 @@ n3_key = key('N3_ContactCard', 'Time 0900 1500', 'Friendship Harvey 2000',
              'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating')
 n3 = script(
     'Hospital_Ambient', '10 15', 'Harvey 10 14 2 farmer -1000 -1000 0',
-    skip_cd('AddConversationTopic Current HarveyArc3_Rules 7',
+    skip_cd('AddConversationTopic HarveyArc3_Rules 7',
             'AddMail Current HarveyArc3_N3_Rules tomorrow'),
     [
         'viewport 10 15 true', 'pause 400', 'playSound doorOpen',
@@ -298,7 +298,7 @@ def n5_body(confess):
     return body
 
 
-N5_SKIP = skip_cd('AddConversationTopic Current HarveyArc3_HighlandsPact 14',
+N5_SKIP = skip_cd('AddConversationTopic HarveyArc3_HighlandsPact 14',
                   'AddMail Current HarveyArc3_N5_Ankle tomorrow')
 N5_ACTORS = 'farmer 30 26 1 Harvey 35 26 3 Marlon -1000 -1000 1'
 n5a_key = key('N5_ReversedKit', *N5_COMMON,
@@ -328,9 +328,9 @@ n6 = script(
         sp(H, 'Дыши со мной. Вдох на четыре, выдох на шесть. Я считаю.$0'),
         'pause 1000',
         msg('Гром уходит за холмы. Харви не выпускает твою ладонь.'),
-        'pause 600', 'playSound doorOpen', 'warp Maru 10 19', 'move Maru 0 -1 0',
+        'pause 600', 'playSound doorOpen', 'warp Maru 10 19', 'move Maru 0 -1 0', 'faceDirection farmer 2',
         sp('Maru', 'Доктор! Простите… Линус сорвался со склона у палатки. Рука, похоже, сломана, сам он не спустится.$s'),
-        sp(H, '…$s'),
+        'faceDirection farmer 0', sp(H, '…$s'),
         msg('Он смотрит на тебя, на окно, на дверь. Видно, как тяжело ему выбирать.'),
         sp(H, 'Мару, возьми шину и… нет. Я не могу её оставить. Не в грозу.$a'),
         qq(['«Иди»', 'Попросить остаться', '«Иди — и возьми меня с собой»'], [
@@ -362,7 +362,7 @@ n7_key = key('N7_Key', 'Time 1300 1500', 'Friendship Harvey 3250',
              f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.N6_StormCall')
 n7 = script(
     'Hospital_Ambient', '14 6', 'farmer 14 6 1 Harvey 15 6 3',
-    skip_cd('AddConversationTopic Current HarveyArc3_KeyGiven 14',
+    skip_cd('AddConversationTopic HarveyArc3_KeyGiven 14',
             'AddMail Current HarveyArc3_Graduated received'),
     [
         'viewport 14 6 true', 'pause 500',

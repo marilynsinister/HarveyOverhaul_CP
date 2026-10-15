@@ -45,7 +45,7 @@ def script(music, view, actors, skip, body, ending='end'):
 
 
 def skip_cd(*extra):
-    return [f'AddConversationTopic Current {CD} 3', *extra]
+    return [f'AddConversationTopic {CD} 3', *extra]
 
 
 def patch(log, target, entries):

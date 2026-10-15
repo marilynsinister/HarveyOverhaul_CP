@@ -11,11 +11,11 @@
 | 3. Дубли ключей в Entries | OK | 0 | — | — |
 | 4. Dating/Married vs Hearts приоритет | WARN | 65 ключей (ungated+Dating) | — | CP Late + When OK если Dating специфичнее |
 | 5. Base/fallback 0–2 ❤ | OK | ungated без pet names | — | topic-gated ty — см. manual |
-| 6. Mail IDs используются | OK | определено 229, сирот 0 | — | — |
-| 7. Event IDs уникальны | OK | 89 entries, 87 unique IDs, 1 с time/cond вариантами | — | дубли ID с разными условиями — штатно (E13 утро/вечер) |
+| 6. Mail IDs используются | OK | определено 237, сирот 0 | — | — |
+| 7. Event IDs уникальны | OK | 117 entries, 116 unique IDs, 1 с time/cond вариантами | — | дубли ID с разными условиями — штатно (E13 утро/вечер) |
 | 8. Friendship gates (500/750/1500/2000/2500) | WARN | 15 non-canonical FP | — | events.json:HarveyOverhaulStory.E6_SayItOutLoud Friendship 1750 (non-canonical); events.json:HarveyOverhaulStory.E9_CameByHerself Friendship 2200 (non-canonical); events.json:HarveyMod_TreatmentReview |
 | 9. Dating/Married events — rel gate | OK | 0 | — | — |
-| 10. Pet names вне Dating/Married | WARN | 31 в dialogue | — | dialoguesHarveyCareTrust.json:HarveyCareTrust_TreatmentStart_Low_Married_03 gate=ungated; dialoguesHarveyCareTrust.json:HarveyCareTrust_TreatmentStart_High_Married_02 gate=ungated; dialoguesHarveyCare |
+| 10. Pet names вне Dating/Married | WARN | 32 в dialogue | — | dialoguesHarveyCareTrust.json:HarveyCareTrust_TreatmentStart_Low_Married_03 gate=ungated; dialoguesHarveyCareTrust.json:HarveyCareTrust_TreatmentStart_High_Married_02 gate=ungated; dialoguesHarveyCare |
 | Include: quest_dialogues.json | WARN | не в content.json | — | подключить или игнорировать |
 | Include: dialoguesHarveyStress.json | WARN | закомментирован | — | правки darkness не в игре |
 | Include: events_for_mode_new_formatted.json | OK | не подключён (SKIP) | — | — |

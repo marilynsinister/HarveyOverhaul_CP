@@ -8,12 +8,17 @@
    Dating или Married, по одному разу:
      F1 «После Танца цветов», F2 «После луау», F3 «После Ночи духов», F4 «Под Зимней звездой».
    Без общего кулдауна сюжета: праздник бывает раз в год.
+3. Реплики накануне и на следующий день после всех 12 праздников 1.6 (ключи «<сезон>_<день>»,
+   тексты — festival_around_data.py), по пяти стадиям. Priority Late + 10: перекрывают старые строки на эти дни
+   из harvey_locations/dating/married. Беременность (dialoguesHarveyPregnant.json) — Late + 15, она главнее.
 Запуск:  python scripts/build_festival_content.py
 """
 import json
 import os
+import re
 
 from event_builder import CD, H, msg, patch, qq, sp
+from festival_around_data import AROUND, FESTIVAL_DAY_FRIEND
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'assets', 'Code', 'festivalsHarvey.json')
@@ -61,6 +66,43 @@ def festival_patches():
     return patches
 
 
+# ---------------------------------------------------------------- накануне и после праздника
+STAGE_WHEN = {
+    'doc': {'Relationship:Harvey': 'Unmet, Friendly', 'Hearts:Harvey': '0, 1, 2'},
+    'friend': {'Relationship:Harvey': 'Friendly', 'Hearts:Harvey': '3, 4, 5, 6, 7'},
+    'close': {'Relationship:Harvey': 'Friendly', 'Hearts:Harvey': '8, 9, 10'},
+    'dating': {'Relationship:Harvey': 'Dating, Engaged'},
+    'married': {'Relationship:Harvey': 'Married'},
+}
+TY = re.compile(r'(?<![а-яё])(ты|тебя|тебе|тобой|твой|твоя|твоё|твои|твою|твоих|сама)(?![а-яё])', re.I)
+ROMANTIC = re.compile(r'солнышк|котён|любимая|люблю|дорогая|поцел', re.I)
+
+
+def check_stage(stage, text):
+    assert '"' not in text, text
+    if stage == 'doc':
+        assert not TY.search(text), ('doc: «ты»', text)
+    if stage in ('doc', 'friend', 'close'):
+        assert not ROMANTIC.search(text), (stage, 'романтика до отношений', text)
+
+
+def around_patches():
+    out = []
+    for stage, when in STAGE_WHEN.items():
+        entries = {}
+        for day, lines in AROUND.items():
+            check_stage(stage, lines[stage])
+            entries[day] = lines[stage]
+        out.append({**patch(f'Festival around — накануне и после праздников ({stage})', 'Characters/Dialogue/Harvey',
+                            entries), 'Priority': 'Late + 10', 'When': when})
+    for text in FESTIVAL_DAY_FRIEND.values():
+        check_stage('friend', text)
+    out.append({**patch('Festival around — утро праздника, 3–10 сердец без отношений', 'Characters/Dialogue/Harvey',
+                        FESTIVAL_DAY_FRIEND), 'Priority': 'Late + 10',
+                'When': {'Relationship:Harvey': 'Friendly', 'Hearts:Harvey': '3, 4, 5, 6, 7, 8, 9, 10'}})
+    return out
+
+
 # ---------------------------------------------------------------- вечер после праздника
 
 def fkey(eid, season, day):
@@ -71,7 +113,7 @@ def fkey(eid, season, day):
 
 def fscript(actors, topic, body):
     cmds = ['none', f'{FX} {FY0}', actors, 'skippable',
-            f'setSkipActions AddConversationTopic Current {topic} 2#AddConversationTopic Current {CD} 2',
+            f'setSkipActions AddConversationTopic {topic} 2#AddConversationTopic {CD} 2',
             'ambientLight 120 120 60', 'pause 600', *body,
             f'addConversationTopic {topic} 2', f'addConversationTopic {CD} 2',
             'globalFade', 'viewport -1000 -1000', 'end']
@@ -157,6 +199,7 @@ TOPICS = {
 
 data = {'Changes': [
     *festival_patches(),
+    *around_patches(),
     patch('Festival — вечер после праздника (Farm, Dating/Married)', 'Data/Events/Farm', EVENTS),
     {**patch('Festival — реплики Харви после праздника', 'Characters/Dialogue/Harvey', TOPICS), 'Priority': 'Late'},
 ]}
