@@ -1,0 +1,454 @@
+{
+  "Changes": [
+    {
+      "LogName": "Аптекарский сад — иконки",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/HerbalItems",
+      "FromFile": "assets/Items/herbalItems.png"
+    },
+    {
+      "LogName": "Аптекарский сад — стадии роста",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/HerbalCrops",
+      "FromFile": "assets/Crops/herbalCrops.png"
+    },
+    {
+      "LogName": "Аптекарский сад — травы и семена",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_GlassDewberry": {
+          "Name": "{{ModId}}_GlassDewberry",
+          "DisplayName": "Стеклянная росница",
+          "Description": "Крупные голубые ягоды похожи на стеклянные шарики. Харви добавляет их в согревающий травяной сбор. Сырьё: сначала приготовьте по рецепту.",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 22,
+          "Texture": "Mods/{{ModId}}/HerbalItems",
+          "SpriteIndex": 0,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "herb_item",
+            "{{ModId}}_medicinal_herb"
+          ]
+        },
+        "{{ModId}}_GlassDewberrySeeds": {
+          "Name": "{{ModId}}_GlassDewberrySeeds",
+          "DisplayName": "Семена стеклянной росницы",
+          "Description": "Высаживайте весной и летом. Первый сбор через 8 дн., затем каждые 3 дн.",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 30,
+          "Texture": "Mods/{{ModId}}/HerbalItems",
+          "SpriteIndex": 4,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true
+        },
+        "{{ModId}}_Moonvelvet": {
+          "Name": "{{ModId}}_Moonvelvet",
+          "DisplayName": "Лунная бархатница",
+          "Description": "Сиреневые колокольчики с мягкими серебристыми листьями. Придают травяному сбору нежный цветочный аромат. Сырьё: сначала приготовьте по рецепту.",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 28,
+          "Texture": "Mods/{{ModId}}/HerbalItems",
+          "SpriteIndex": 1,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "herb_item",
+            "{{ModId}}_medicinal_herb"
+          ]
+        },
+        "{{ModId}}_MoonvelvetSeeds": {
+          "Name": "{{ModId}}_MoonvelvetSeeds",
+          "DisplayName": "Семена лунной бархатницы",
+          "Description": "Высаживайте весной и осенью. Первый сбор через 6 дн., затем каждые 2 дн.",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 32,
+          "Texture": "Mods/{{ModId}}/HerbalItems",
+          "SpriteIndex": 5,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true
+        },
+        "{{ModId}}_AmberHeartleaf": {
+          "Name": "{{ModId}}_AmberHeartleaf",
+          "DisplayName": "Янтарный сердцелист",
+          "Description": "Золотистые листья в форме сердца пахнут тёплой смолой. Используются в питательном бульоне Харви. Сырьё: сначала приготовьте по рецепту.",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 35,
+          "Texture": "Mods/{{ModId}}/HerbalItems",
+          "SpriteIndex": 2,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "herb_item",
+            "{{ModId}}_medicinal_herb"
+          ]
+        },
+        "{{ModId}}_AmberHeartleafSeeds": {
+          "Name": "{{ModId}}_AmberHeartleafSeeds",
+          "DisplayName": "Семена янтарного сердцелиста",
+          "Description": "Высаживайте летом и осенью. Первый сбор через 8 дн., затем каждые 3 дн.",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 37,
+          "Texture": "Mods/{{ModId}}/HerbalItems",
+          "SpriteIndex": 6,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true
+        },
+        "{{ModId}}_SilverSeamleaf": {
+          "Name": "{{ModId}}_SilverSeamleaf",
+          "DisplayName": "Серебряный шовник",
+          "Description": "На серебристых листьях видна жилка, похожая на ровный шов. Сырьё для мягкой мази по рецепту Харви. Сырьё: сначала приготовьте по рецепту.",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 30,
+          "Texture": "Mods/{{ModId}}/HerbalItems",
+          "SpriteIndex": 3,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "herb_item",
+            "{{ModId}}_medicinal_herb"
+          ]
+        },
+        "{{ModId}}_SilverSeamleafSeeds": {
+          "Name": "{{ModId}}_SilverSeamleafSeeds",
+          "DisplayName": "Семена серебряного шовника",
+          "Description": "Высаживайте весной, летом и осенью. Первый сбор через 7 дн., затем каждые 3 дн.",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 32,
+          "Texture": "Mods/{{ModId}}/HerbalItems",
+          "SpriteIndex": 7,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true
+        }
+      }
+    },
+    {
+      "LogName": "Аптекарский сад — культуры",
+      "Action": "EditData",
+      "Target": "Data/Crops",
+      "Entries": {
+        "{{ModId}}_GlassDewberrySeeds": {
+          "Seasons": [
+            "spring",
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 3,
+          "HarvestItemId": "{{ModId}}_GlassDewberry",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "HarvestMethod": "Grab",
+          "IsRaised": false,
+          "NeedsWatering": true,
+          "Texture": "Mods/{{ModId}}/HerbalCrops",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_MoonvelvetSeeds": {
+          "Seasons": [
+            "spring",
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 2,
+          "HarvestItemId": "{{ModId}}_Moonvelvet",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "HarvestMethod": "Grab",
+          "IsRaised": false,
+          "NeedsWatering": true,
+          "Texture": "Mods/{{ModId}}/HerbalCrops",
+          "SpriteIndex": 1,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_AmberHeartleafSeeds": {
+          "Seasons": [
+            "summer",
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 3,
+          "HarvestItemId": "{{ModId}}_AmberHeartleaf",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "HarvestMethod": "Grab",
+          "IsRaised": false,
+          "NeedsWatering": true,
+          "Texture": "Mods/{{ModId}}/HerbalCrops",
+          "SpriteIndex": 2,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_SilverSeamleafSeeds": {
+          "Seasons": [
+            "spring",
+            "summer",
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 3,
+          "HarvestItemId": "{{ModId}}_SilverSeamleaf",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "HarvestMethod": "Grab",
+          "IsRaised": false,
+          "NeedsWatering": true,
+          "Texture": "Mods/{{ModId}}/HerbalCrops",
+          "SpriteIndex": 3,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        }
+      }
+    },
+    {
+      "LogName": "Аптекарский сад — ассортимент клиники",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Hospital",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_GlassDewberrySeeds": {
+          "Id": "{{ModId}}_GlassDewberrySeeds",
+          "ItemId": "(O){{ModId}}_GlassDewberrySeeds",
+          "Price": 60,
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGarden Received",
+          "PriceModifiers": [
+            {
+              "Id": "{{ModId}}_HerbalGardenDiscount",
+              "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received",
+              "Modification": "Multiply",
+              "Amount": 0.9
+            }
+          ]
+        },
+        "{{ModId}}_GlassDewberry": {
+          "Id": "{{ModId}}_GlassDewberry",
+          "ItemId": "(O){{ModId}}_GlassDewberry",
+          "Price": 80,
+          "AvailableStock": 3,
+          "AvailableStockLimit": "Player",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGarden Received"
+        },
+        "{{ModId}}_MoonvelvetSeeds": {
+          "Id": "{{ModId}}_MoonvelvetSeeds",
+          "ItemId": "(O){{ModId}}_MoonvelvetSeeds",
+          "Price": 65,
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGarden Received",
+          "PriceModifiers": [
+            {
+              "Id": "{{ModId}}_HerbalGardenDiscount",
+              "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received",
+              "Modification": "Multiply",
+              "Amount": 0.9
+            }
+          ]
+        },
+        "{{ModId}}_Moonvelvet": {
+          "Id": "{{ModId}}_Moonvelvet",
+          "ItemId": "(O){{ModId}}_Moonvelvet",
+          "Price": 85,
+          "AvailableStock": 3,
+          "AvailableStockLimit": "Player",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGarden Received"
+        },
+        "{{ModId}}_AmberHeartleafSeeds": {
+          "Id": "{{ModId}}_AmberHeartleafSeeds",
+          "ItemId": "(O){{ModId}}_AmberHeartleafSeeds",
+          "Price": 75,
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGarden Received",
+          "PriceModifiers": [
+            {
+              "Id": "{{ModId}}_HerbalGardenDiscount",
+              "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received",
+              "Modification": "Multiply",
+              "Amount": 0.9
+            }
+          ]
+        },
+        "{{ModId}}_AmberHeartleaf": {
+          "Id": "{{ModId}}_AmberHeartleaf",
+          "ItemId": "(O){{ModId}}_AmberHeartleaf",
+          "Price": 95,
+          "AvailableStock": 3,
+          "AvailableStockLimit": "Player",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGarden Received"
+        },
+        "{{ModId}}_SilverSeamleafSeeds": {
+          "Id": "{{ModId}}_SilverSeamleafSeeds",
+          "ItemId": "(O){{ModId}}_SilverSeamleafSeeds",
+          "Price": 65,
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGarden Received",
+          "PriceModifiers": [
+            {
+              "Id": "{{ModId}}_HerbalGardenDiscount",
+              "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received",
+              "Modification": "Multiply",
+              "Amount": 0.9
+            }
+          ]
+        },
+        "{{ModId}}_SilverSeamleaf": {
+          "Id": "{{ModId}}_SilverSeamleaf",
+          "ItemId": "(O){{ModId}}_SilverSeamleaf",
+          "Price": 90,
+          "AvailableStock": 3,
+          "AvailableStockLimit": "Player",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGarden Received"
+        }
+      }
+    },
+    {
+      "LogName": "Аптекарский сад — кухонные рецепты",
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_GardenTeaRecipe": "{{ModId}}_GlassDewberry 1 {{ModId}}_Moonvelvet 1/1 10/{{ModId}}_HerbalTea 1/none/Травяной сбор с росницей",
+        "{{ModId}}_GardenBrothRecipe": "{{ModId}}_AmberHeartleaf 1 -5 1/1 10/{{ModId}}_HarveyBroth 1/none/Бульон с сердцелистом"
+      }
+    },
+    {
+      "LogName": "Аптекарский сад — мазь с шовником",
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "When": {
+        "TraumaBackstory": "true"
+      },
+      "Entries": {
+        "{{ModId}}_GardenSalveRecipe": "{{ModId}}_SilverSeamleaf 2 247 1/Home/{{ModId}}_ScarSalve 1/false/none/Мазь с шовником"
+      }
+    },
+    {
+      "LogName": "Аптекарский сад — описание вариантов мази",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "When": {
+        "TraumaBackstory": "true"
+      },
+      "Fields": {
+        "{{ModId}}_ScarSalve": {
+          "Description": "Мягкая травяная мазь по рецепту Харви. Зимой снимает стянутость старых рубцов на весь день. Используй, держа в руках."
+        }
+      },
+      "Priority": "Late"
+    },
+    {
+      "LogName": "Аптекарский сад — пять заданий",
+      "Action": "EditData",
+      "Target": "Data/Quests",
+      "Entries": {
+        "{{ModId}}_GardenGlass": "ItemDelivery/Ягоды из стекла/Харви хочет завести маленький аптекарский сад. Для первого образца ему нужны ягоды стеклянной росницы./Принесите Харви 3 пучка стеклянной росницы. Вырастите их из семян или купите в клинике (до 3 в день круглый год). Срока нет./Harvey (O){{ModId}}_GlassDewberry 3/{{ModId}}_GardenVelvet/180/-1/false/Посмотрите, как они ловят свет. Мару уже спросила, почему я храню шарики в коробке для образцов.$h#$b#Теперь нужны три пучка лунной бархатницы. Семена есть на стойке, а готовый сбор — в небольшом запасе.#$action AddMail Current {{ModId}}_mailGardenMoonSeeds",
+        "{{ModId}}_GardenVelvet": "ItemDelivery/Тихие колокольчики/У росницы яркий вкус. Харви ищет к ней мягкую цветочную пару — лунную бархатницу./Принесите Харви 3 пучка лунной бархатницы. Вырастите их из семян или купите в клинике (до 3 в день круглый год). Срока нет./Harvey (O){{ModId}}_Moonvelvet 3/{{ModId}}_GardenAmber/180/-1/false/Именно эти колокольчики. Положим рядом с росницей — и в клинике наконец будет пахнуть садом.$h#$b#Пришлю рецепт завтра. А следующими будут три пучка янтарного сердцелиста.#$action AddMail Current {{ModId}}_mailGardenTea#$action AddMail Current {{ModId}}_mailGardenAmberSeeds",
+        "{{ModId}}_GardenAmber": "ItemDelivery/Листья, которые греют/Харви записывает новый вариант своего бульона. Для него нужны золотистые листья сердцелиста./Принесите Харви 3 пучка янтарного сердцелиста. Вырастите их из семян или купите в клинике (до 3 в день круглый год). Срока нет./Harvey (O){{ModId}}_AmberHeartleaf 3/{{ModId}}_GardenSilver/180/-1/false/Красивые листья. И цвет у бульона получится тёплый.$h#$b#Когда у Вас будет мой основной рецепт бульона, пришлю вариант с сердцелистом. Теперь нужны три пучка серебряного шовника.#$action AddMail Current {{ModId}}_GardenAmberStudied Received#$action AddMail Current {{ModId}}_mailGardenSilverSeeds",
+        "{{ModId}}_GardenSilver": "ItemDelivery/Серебряная строчка/Для следующей записи в тетради Харви нужны листья серебряного шовника. Он исследует новый состав мази./Принесите Харви 3 пучка серебряного шовника. Вырастите их из семян или купите в клинике (до 3 в день круглый год). Срока нет./Harvey (O){{ModId}}_SilverSeamleaf 3/{{ModId}}_GardenTea/180/-1/false/Жилка и правда как маленький шов. Хорошо, что этот сад обойдётся без иглы.$h#$b#Если мы уже подобрали мазь для рубцов, пришлю её новый состав. Осталась самая приятная часть: две порции травяного сбора.#$action AddMail Current {{ModId}}_GardenSilverStudied Received",
+        "{{ModId}}_GardenTea": "ItemDelivery/Чай на двоих/Все четыре образца уже в тетради Харви. Осталось испытать рецепт травяного сбора и оставить вторую чашку врачу./Принесите Харви 2 травяных сбора. Рецепт с росницей придёт письмом после бархатницы. Можно использовать и обычный сбор из клиники./Harvey (O){{ModId}}_HerbalTea 2/-1/600/-1/false/Одна чашка мне? Спасибо. Свою я обычно оставляю остывать между приёмами.$h#$b#Сегодня сделаю перерыв. И семена для Вашего сада теперь будут на десять процентов дешевле.#$action AddMail Current {{ModId}}_HerbalGardenFinished Received"
+      }
+    },
+    {
+      "LogName": "Аптекарский сад — письма",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_mailHerbalGarden": "@,^^Хочу предложить небольшое общее дело: аптекарский сад. Четыре местных растения, четыре страницы в моей тетради. Начнём со стеклянной росницы — её ягоды похожи на голубые шарики.^^Вторым письмом отправил семена. Выберите подходящий сезон; торопиться не нужно. Если образец понадобится зимой, на стойке клиники есть небольшой запас всех четырёх трав: до трёх пучков каждого вида в день.^^Принесите три пучка росницы, когда будет удобно.^^— Доктор Харви%item quest {{ModId}}_GardenGlass true %%[#]Аптекарский сад",
+        "{{ModId}}_mailHerbalGardenSeeds": "@,^^Для первого образца — три пакетика семян росницы. Остальные семена буду присылать по мере нашего исследования; все четыре вида также продаются в клинике круглый год.^^Росница: весна и лето, 8 дней, затем каждые 3 дня.^Бархатница: весна и осень, 6 дней, затем каждые 2 дня.^Сердцелист: лето и осень, 8 дней, затем каждые 3 дня.^Шовник: весна, лето и осень, 7 дней, затем каждые 3 дня.^^Поливайте каждый день. Зимой выращивайте только в теплице или дома в садовом горшке.^^— Харви%item id (O){{ModId}}_GlassDewberrySeeds 3 %%[#]Семена аптекарского сада",
+        "{{ModId}}_mailGardenTea": "@,^^Вот наш первый рецепт: одна порция росницы и один пучок бархатницы. Заварите на кухне — получится знакомый Вам травяной сбор, только из собственного сада.^^Он действует так же, как обычный сбор. Для следующей чашки не придётся искать случайную лесную зелень.^^— Харви%item cookingRecipe {{ModId}}_GardenTeaRecipe %%[#]Сбор с росницей",
+        "{{ModId}}_mailGardenBroth": "@,^^Вы уже знаете мой рецепт бульона. Теперь можно заменить лесную зелень одним пучком янтарного сердцелиста; яйцо остаётся.^^Получается тот же питательный бульон. Листья дают ему золотистый оттенок и чуть смолистый аромат.^^— Харви%item cookingRecipe {{ModId}}_GardenBrothRecipe %%[#]Бульон с сердцелистом",
+        "{{ModId}}_mailGardenSalve": "@,^^Мы уже подобрали уход для рубцов, и у меня есть ещё один вариант состава: два пучка шовника и порция масла.^^Получится та же мягкая мазь, которой Вы уже пользуетесь. Состав записан отдельно — в меню изготовления.^^— Харви%item craftingRecipe {{ModId}}_GardenSalveRecipe %%[#]Мазь с шовником",
+        "{{ModId}}_mailHerbalGardenFinished": "@,^^В тетради теперь четыре новых страницы. На полке — образцы, а рядом с чайником — вторая чашка.^^Спасибо за помощь. Я попросил Мару сделать семена нашего аптекарского сада на десять процентов дешевле для Вас. Скидка действует на все четыре вида.^^Сад можно продолжать в своём темпе. Мне нравится знать, что часть клиники теперь растёт на Вашей ферме.^^— Харви[#]Четыре страницы и две чашки",
+        "{{ModId}}_mailGardenMoonSeeds": "@,^^Следующие три пакетика — бархатница. Высаживайте весной или осенью. Она созревает за 6 дней, а потом даёт новый сбор каждые 2 дня.^^Если сезон не подходит, в клинике есть готовое сырьё. Я никуда не тороплюсь.^^— Харви%item id (O){{ModId}}_MoonvelvetSeeds 3 %%[#]Семена бархатницы",
+        "{{ModId}}_mailGardenAmberSeeds": "@,^^Для золотистой страницы в тетради — три пакетика сердцелиста. Лето или осень, 8 дней до первого сбора и ещё 3 дня до каждого следующего.^^Если сезон не подходит, в клинике есть готовое сырьё. Я никуда не тороплюсь.^^— Харви%item id (O){{ModId}}_AmberHeartleafSeeds 3 %%[#]Семена сердцелиста",
+        "{{ModId}}_mailGardenSilverSeeds": "@,^^Последние три пакетика — шовник. Растёт весной, летом и осенью: первый сбор за 7 дней, повторный через 3 дня.^^Если сезон не подходит, в клинике есть готовое сырьё. Я никуда не тороплюсь.^^— Харви%item id (O){{ModId}}_SilverSeamleafSeeds 3 %%[#]Семена шовника"
+      }
+    },
+    {
+      "LogName": "Аптекарский сад — приглашение и рецепты",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_HerbalGardenInvite": {
+          "Id": "{{ModId}}_HerbalGardenInvite",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HEARTS Current Harvey 3, !PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGarden Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailHerbalGarden",
+            "AddMail Current {{ModId}}_mailHerbalGardenSeeds"
+          ]
+        },
+        "{{ModId}}_HerbalGardenBroth": {
+          "Id": "{{ModId}}_HerbalGardenBroth",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_GardenAmberStudied Received, PLAYER_HAS_COOKING_RECIPE Current {{ModId}}_HarveyBroth, !PLAYER_HAS_MAIL Current {{ModId}}_mailGardenBroth Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailGardenBroth"
+          ]
+        },
+        "{{ModId}}_HerbalGardenFinished": {
+          "Id": "{{ModId}}_HerbalGardenFinished",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailHerbalGardenFinished Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailHerbalGardenFinished"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Аптекарский сад — рецепт мази после знакомства с уходом",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "When": {
+        "TraumaBackstory": "true"
+      },
+      "Entries": {
+        "{{ModId}}_HerbalGardenSalve": {
+          "Id": "{{ModId}}_HerbalGardenSalve",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_GardenSilverStudied Received, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulScars.C3_ScarSalve, !PLAYER_HAS_MAIL Current {{ModId}}_mailGardenSalve Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailGardenSalve"
+          ]
+        }
+      }
+    }
+  ]
+}

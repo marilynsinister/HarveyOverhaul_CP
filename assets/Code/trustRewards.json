@@ -1,0 +1,123 @@
+{
+  // Награды за доверие Харви (шкала «Доверие» в окне H, владелец — HarveyStressMeter).
+  // Флаги HarveyCareTrust_L1…L4 ставит C# (HarveyCareTrustService.SyncLevelFlags), пока уровень держится.
+  //   L1 «Знакомый врач» — рецепт «Бульон Харви»;
+  //   L2 «Доверенный врач» — скидка 25% на медицинское в клинике (PriceModifiers в medicalItems.json);
+  //   L3 «Надёжный человек» — меньше проверок: запрет шахты на день короче, вечерних проверок скрытых травм нет (C#: Injury);
+  //   L4 «Опора» — «Сумка Харви»: раз в день, когда здоровье падает ниже четверти, бинт и вдох возвращают половину (C#: HarveyBagManager).
+  // Письма приходят один раз, когда уровень впервые достигнут.
+  "Changes": [
+    {
+      "LogName": "Trust rewards — предметы",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_HarveyBroth": {
+          "Name": "{{ModId}}_HarveyBroth",
+          "DisplayName": "Бульон Харви",
+          "Description": "Яйцо, лесная зелень и терпение. Рецепт Харви «для тех, кто опять забыл пообедать». Согревает, держит силы и немного защищает.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 120,
+          "Texture": "Mods/{{ModId}}/MedicalItems",
+          "SpriteIndex": 8,
+          "Edibility": 50,
+          "ExcludeFromShippingCollection": true,
+          "Buffs": [
+            {
+              "Id": "{{ModId}}_HarveyBroth",
+              "BuffId": "{{ModId}}_HarveyBroth",
+              "Duration": 480
+            }
+          ],
+          "ContextTags": [ "food_soup", "{{ModId}}_medical_item" ]
+        },
+        "{{ModId}}_HarveyBag": {
+          "Name": "{{ModId}}_HarveyBag",
+          "DisplayName": "Сумка Харви",
+          "Description": "Его старый докторский саквояж. Внутри — бинты, жгут и записка: «Сначала дыши. Потом — домой». Носи с собой: раз в день, когда станет совсем плохо, поможет продержаться.",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 0,
+          "Texture": "Mods/{{ModId}}/MedicalItems",
+          "SpriteIndex": 7,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "CanBeTrashed": false,
+          "ContextTags": [ "not_giftable", "not_placeable", "prevent_loss_on_death", "{{ModId}}_medical_item" ]
+        }
+      }
+    },
+    {
+      "LogName": "Trust rewards — бафф бульона",
+      "Action": "EditData",
+      "Target": "Data/Buffs",
+      "Entries": {
+        "{{ModId}}_HarveyBroth": {
+          "DisplayName": "Бульон Харви",
+          "Description": "Тепло изнутри. Сил больше, простуда обходит стороной.",
+          "IsDebuff": false,
+          "Duration": 28800000,
+          "IconTexture": "Mods/{{ModId}}/MedicalItems",
+          "IconSpriteIndex": 8,
+          "Effects": {
+            "MaxStamina": 30,
+            "Defense": 1,
+            "Immunity": 2
+          }
+        }
+      }
+    },
+    {
+      "LogName": "Trust rewards — рецепт бульона",
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        // -5 — любое яйцо, -81 — любая лесная зелень.
+        "{{ModId}}_HarveyBroth": "-5 1 -81 2/1 10/{{ModId}}_HarveyBroth 1/none/"
+      }
+    },
+    {
+      "LogName": "Trust rewards — письма",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_mailTrustL1": "@,^^Ты стала заходить, когда что-то не так. Не через неделю, не «когда само пройдёт» — сразу. Для врача это самое ценное, что может сделать пациент.^^Поэтому — рецепт, который я никому не давал. Бульон на случай, когда нет сил готовить, а поесть надо. Яйцо, лесная зелень, десять минут.^^— Харви%item cookingRecipe {{ModId}}_HarveyBroth %%[#]Бульон Харви",
+        "{{ModId}}_mailTrustL2": "@,^^Я сказал Мару, что бинты, антисептик и всё из аптечного шкафа тебе теперь на четверть дешевле. Она спросила почему.^^Я ответил: потому что ты ими правда пользуешься. Это не поблажка. Это расчёт: человек, который обрабатывает рану сам и вовремя, реже оказывается у меня на кушетке.^^— Харви[#]Скидка в клинике",
+        "{{ModId}}_mailTrustL3": "@,^^Я долго думал, как написать это письмо. Вот как:^^Я больше не буду проверять тебя каждый вечер. Ты скажешь сама, если что-то не так, — ты уже много раз это доказала.^И если я запрещу шахту после травмы, то на день короче. Ты знаешь своё тело. Я знаю, что ты знаешь.^^Мне это трудно, честно. Но доверие — тоже лечение. Для нас обоих.^^— Харви[#]Меньше проверок",
+        "{{ModId}}_mailTrustL4": "@,^^Это моя сумка. Я носил её на ночных вызовах в Зузу — у неё замок заедает, если не нажать снизу.^^Внутри всё, что нужно, чтобы продержаться, пока помощь в пути: бинты, жгут, и записка. Прочитаешь, когда будет плохо.^Я не прошу тебя не рисковать. Я прошу брать её с собой.^^Ты на меня опираешься — я знаю, и я этому рад. Но в шахте меня рядом не будет. Пусть там у тебя будет своя опора.^^— Харви%item id (O){{ModId}}_HarveyBag 1 %%[#]Сумка Харви"
+      }
+    },
+    {
+      "LogName": "Trust rewards — письма по уровню доверия",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_TrustRewardL1": {
+          "Id": "{{ModId}}_TrustRewardL1",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyCareTrust_L1 Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailTrustL1 Any",
+          "Actions": [ "AddMail Current {{ModId}}_mailTrustL1" ]
+        },
+        "{{ModId}}_TrustRewardL2": {
+          "Id": "{{ModId}}_TrustRewardL2",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyCareTrust_L2 Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailTrustL2 Any",
+          "Actions": [ "AddMail Current {{ModId}}_mailTrustL2" ]
+        },
+        "{{ModId}}_TrustRewardL3": {
+          "Id": "{{ModId}}_TrustRewardL3",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyCareTrust_L3 Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailTrustL3 Any",
+          "Actions": [ "AddMail Current {{ModId}}_mailTrustL3" ]
+        },
+        "{{ModId}}_TrustRewardL4": {
+          "Id": "{{ModId}}_TrustRewardL4",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyCareTrust_L4 Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailTrustL4 Any",
+          "Actions": [ "AddMail Current {{ModId}}_mailTrustL4" ]
+        }
+      }
+    }
+  ]
+}

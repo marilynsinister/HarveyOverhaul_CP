@@ -5,11 +5,12 @@
       "Action": "EditData",
       "Target": "Data/Events/Farm",
       "Entries": {
-       "eventHarveyFirstWalk/Time 600 1200/Weather Sunny/GameStateQuery DAYS_PLAYED 11/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveySecondVisitAgree/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveySecondVisitNeutral/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveySecondVisitRefused/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveySecondVisit/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstWalk": "
+       "eventHarveyFirstWalk/Time 600 1200/Weather sunny/GameStateQuery DAYS_PLAYED 11/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveySecondVisitAgree/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveySecondVisitNeutral/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveySecondVisitRefused/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveySecondVisit/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstWalk": "
         continue/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
         skippable/
+        setSkipActions AddConversationTopic topicHarveyDeclineFirstWalk 7/
         pause 600/
         speak Harvey \"Привет. Я заметил, что ты часто бываешь в лесу.$h#$b#Сегодня хорошая погода для прогулки.$0\"/
         message \"Да... я люблю этот лес.\"/
@@ -55,11 +56,10 @@
         globalFade/
         viewport -1000 -1000/
         addConversationTopic topicHarveyAcceptFirstWalk 7/
-        end position 51 13","eventHarveyCheckHealthFarmer/Time 600 1200/GameStateQuery PLAYER_HAS_SEEN_EVENT Current PlayerKilled/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating": "continue/
+        end position 51 13","eventHarveyCheckHealthFarmer/Time 600 1200/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_CheckHealthAfterCollapse/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married": "continue/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
         skippable/
-        setSkipActions changeLocation Hospital#ignoreCollisions farmer#warp farmer 20 5#faceDirection farmer 3#positionOffset farmer 32 -32#warp Harvey 19 5#faceDirection Harvey 1/
         pause 600/
         speak Harvey \"Ты выглядишь ужасно!$8#$b#*быстро подходит* Давай проверим...$u\"/
         pause 500/
@@ -71,13 +71,13 @@
         speak Harvey \"*берёт за запястье* Пульс 110, зрачки расширены... *ощупывает лоб* И температура повышена!$u\"/
         emote Harvey 28/
         pause 400/
-        speak Harvey \"Немедленно в клинику! Я не спрашиваю — я приказываю.$a\"/
+        speak Harvey \"Пойдём в клинику, прямо сейчас. Пожалуйста — мне нужно тебя осмотреть.$u\"/
         pause 200/
         move Harvey 0 -1 0/
         pause 200/
         emote farmer 12/
         message \"Но я просто устала...\"/
-        speak Harvey \"Нет! *сжимает её плечи* Ты даже дрожишь.$a\"/
+        speak Harvey \"*мягко берёт за плечи* Ты дрожишь, солнышко. Я рядом.$s\"/
         pause 300/
         speak Harvey \"*крепко берёт под руку* Ты еле стоишь. Вот опора.$a#$b#Шаг за шагом... *поддерживает* Я буду рядом на каждом шагу.$a\"/
         emote farmer 24/
@@ -121,12 +121,13 @@
         warp Harvey 19 5/
         faceDirection Harvey 1/
         end position 20 5",
-        "eventHarveyCheckFarmerOutsideAfter22/Time 2200 0200/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating Married": "
+        "eventHarveyCheckFarmerOutsideAfter22/Time 2200 0200/GameStateQuery {{HO_EveningChecksQuery}}/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating Married": "
         continue/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
         pause 600/
         skippable/
+        setSkipActions AddConversationTopic topicHarveyMandatoryCheckup 1/
         playSound owl/
         pause 500/
         speak Harvey \"@?!$a\"/
@@ -155,6 +156,7 @@
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY2}} 0/
         pause 1000/
         skippable/
+        setSkipActions AddItem 201 1#AddItem 614 1/
         speak Harvey \"@? Проснись, солнышко...$l\"/
         emote Harvey 20/
         pause 800/
@@ -172,12 +174,12 @@
         pause 1000/
         globalFade/
         viewport -1000 -1000/
-        end","eventHarveyStormComfortFarm/Weather storm/Time 2000 2600/Friendship Harvey 750/Random 0.6/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
+        end","eventHarveyStormComfortFarm/Weather Storm/Time 2000 2600/Friendship Harvey 750/Random 0.6/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
         none/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
         skippable/
-        setSkipActions action addBuff buffStressImmunity -2#action removeConversationTopic topicStressThunder#action removeConversationTopic topicHarveyStormStress#action addConversationTopic HarveyMod_CD_StormComfort 3#friendship Harvey 35/
+        setSkipActions addBuff buffStressImmunity -2#RemoveConversationTopic topicStressThunder#RemoveConversationTopic topicHarveyStormStress#AddConversationTopic HarveyMod_CD_StormComfort 3#AddFriendshipPoints Harvey 35/
         playSound thunder/
         emote farmer 8/
         animate farmer false true 2000 5 4/
@@ -212,7 +214,7 @@
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey -1000 -1000 0/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E7 7/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E7 7#AddFriendshipPoints Harvey 40/
         ambientLight 80 70 55/
         pause 400/
         message \"Вечер. У порога — кружка, сложенная записка и платок. Тихий знак, который Харви научился читать.\"/
@@ -419,7 +421,7 @@
         10 16/
         Harvey 9 16 1 farmer -1000 -1000 0/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E9 7/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E9 7#AddItem 614 1/
         playSound doorOpen/
         warp farmer 10 19/
         faceDirection farmer 0/
@@ -567,7 +569,6 @@
         -1000 -1000/
         farmer 1000 1000 0 Harvey 1000 1000 0/
         skippable/
-        setSkipActions changeLocation Hospital#warp farmer 14 6#positionOffset farmer 0 10#faceDirection farmer 2#warp Harvey 15 6#faceDirection Harvey 3/
         message \"Голова кружится... Всё плывёт... Я не могу...\"/
         changeLocation Hospital/
         pause 200/
@@ -627,7 +628,7 @@
          6 10/
          Harvey 2 5 2 farmer 5 10 0/
          ignoreCollisions farmer/
-         setSkipActions AddMail Current HarveyOverhaul_E2_PierInvite tomorrow/
+         setSkipActions AddMail Current HarveyOverhaul_E2_PierInvite tomorrow#AddItem 614 1#AddFriendshipPoints Harvey 35/
          skippable/
          playSound doorOpen/
          doAction 5 9/
@@ -767,7 +768,7 @@
         4 6/
         farmer 4 6 0 Harvey 4 5 2/
         ignoreCollisions farmer/
-        setSkipActions addConversationTopic topicFirstTreatmentComplete 7#action removeConversationTopic topicHarveyNeedsFirstTreatment/
+        setSkipActions AddConversationTopic topicFirstTreatmentComplete 7#RemoveConversationTopic topicHarveyNeedsFirstTreatment#AddFriendshipPoints Harvey 50/
         skippable/
         viewport 5 8 true/
         pause 800/
@@ -826,6 +827,7 @@
         10 15/
         Harvey 9 14 1 farmer 10 19 0/
         skippable/
+        setSkipActions AddItem (O)74 1#AddConversationTopic topicBirthdayHospitalComplete 14#AddFriendshipPoints Harvey 100/
         viewport 10 15 true/
         pause 500/
         playSound doorOpen/
@@ -855,6 +857,7 @@
         10 15/
         Harvey 9 14 1 farmer 10 19 0/
         skippable/
+        setSkipActions AddItem (O)74 1#AddConversationTopic topicBirthdayHospitalComplete 14#AddFriendshipPoints Harvey 100/
         viewport 10 15 true/
         pause 500/
         playSound doorOpen/
@@ -893,6 +896,7 @@
         addConversationTopic HarveyAerobics 0/
         eventSeen 58 true/
         skippable/
+        setSkipActions AddConversationTopic HarveyAerobics 0/
         showFrame Harvey 26/
         viewport 24 17 true/
         pause 500/
@@ -1085,7 +1089,7 @@
         -1000 -1000/
         farmer 1000 1000 0 Harvey 1000 1000 0 Lewis 1000 1000 0/
         skippable/
-        setSkipActions addConversationTopic topicRescueComplete 21#addConversationTopic HarveyLewis_Wait 2#action removeConversationTopic topicRescueOperation#changeLocation Hospital#ignoreCollisions farmer#warp farmer 20 5#positionOffset farmer 32 -52#faceDirection farmer 2#warp Harvey 18 5#faceDirection Harvey 1/
+        setSkipActions AddConversationTopic topicRescueComplete 21#AddConversationTopic HarveyLewis_Wait 2#RemoveConversationTopic topicRescueOperation/
         pause 500/
         changeLocation Hospital/
         warp Harvey 3 15/
@@ -1265,7 +1269,7 @@
         none/
         44 21/
         farmer 42 21 1 Harvey 45 21 3/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E4B 5#AddConversationTopic topicHarveyTooQuiet 5/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E4B 5#AddConversationTopic topicHarveyTooQuiet 5#AddFriendshipPoints Harvey 30/
         skippable/
         ambientLight 90 85 110/
         pause 400/
@@ -1339,12 +1343,12 @@
       "Action": "EditData",
       "Target": "Data/Events/Custom_AdventurerSummit",
       "Entries": {
-        "eventHarveyStormComfortMountain/Weather storm/Friendship Harvey 750/Random 0.4/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
+        "eventHarveyStormComfortMountain/Weather Storm/Friendship Harvey 750/Random 0.4/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
         rain/
         41 27/
         farmer 41 28 1 Harvey 1000 1000 0/
         skippable/
-        setSkipActions changeLocation Mountain#warp farmer 79 1#warp Harvey 79 0#faceDirection farmer 2#faceDirection Harvey 2#action addBuff buffStressImmunity -2#action removeConversationTopic topicStressThunder#action removeConversationTopic topicHarveyStormStress#action addConversationTopic HarveyMod_CD_StormComfort 3#friendship Harvey 45/
+        setSkipActions addBuff buffStressImmunity -2#RemoveConversationTopic topicStressThunder#RemoveConversationTopic topicHarveyStormStress#AddConversationTopic HarveyMod_CD_StormComfort 3#AddFriendshipPoints Harvey 45/
         playSound thunder/
         emote farmer 16/
         faceDirection farmer 2/
@@ -1401,6 +1405,7 @@
          36 57/
          farmer 36 59 0 Harvey 1000 1000 2/
          skippable/
+         setSkipActions AddConversationTopic topicNightCrisisComplete 5#AddFriendshipPoints Harvey 75/
          viewport 36 57 true/
          pause 600/
          move farmer 0 -1 0/
@@ -1440,6 +1445,7 @@
          36 57/
          farmer 36 59 0 Harvey 1000 1000 2/
          skippable/
+         setSkipActions AddConversationTopic topicNightCrisisComplete 5#AddFriendshipPoints Harvey 75/
          viewport 36 57 true/
          pause 600/
          move farmer 0 -1 0/
@@ -1480,7 +1486,7 @@
          37 58/
          farmer 37 58 2 Harvey 41 58 1/
          ignoreCollisions farmer/
-         setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E2B 3#AddConversationTopic topicHarveyTrust_PublicCare 5/
+         setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E2B 3#AddConversationTopic topicHarveyTrust_PublicCare 5#AddFriendshipPoints Harvey 25/
          skippable/
          pause 400/
          emote farmer 56/
@@ -1514,13 +1520,13 @@
          globalFade/
          viewport -1000 -1000/
          end",
-         "HarveyOverhaulStory.E7_TownSip_Sunny/Weather Sunny/Time 1200 1500/!FestivalDay/Friendship Harvey 2000/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_DoorSignal/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_TownSip_Sunny/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E7": "
+         "HarveyOverhaulStory.E7_TownSip_Sunny/Weather sunny/Time 1200 1500/!FestivalDay/Friendship Harvey 2000/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_DoorSignal/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_TownSip_Sunny/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E7": "
          none/
          26 22/
          farmer 26 22 1 Harvey 29 22 3/
          ignoreCollisions farmer/
          skippable/
-         setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E7 2/
+         setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E7 2#AddFriendshipPoints Harvey 30/
          pause 300/
          emote farmer 56/
          message \"Солнце греет камни на площади. На секунду шум города становится слишком густым.\"/
@@ -1572,7 +1578,7 @@
         faceDirection farmer 2/
         animate farmer false true 3000 5 4/
         skippable/
-        setSkipActions changeLocation Hospital#warp farmer 20 5#faceDirection farmer 2#positionOffset farmer 32 -32#warp Harvey 19 5#faceDirection Harvey 1#addItem 349 5/
+        setSkipActions AddItem 349 5/
         pause 1000/
         playSound doorClose/
         pause 400/
@@ -1636,7 +1642,6 @@
         -300 -300/
         Harvey -100 -100 0 farmer 90 72 1/
         skippable/
-        setSkipActions changeLocation Custom_GrampletonFields_Small#warp farmer 16 42#warp Harvey 24 41#faceDirection farmer 1#faceDirection Harvey 0/
         viewport 90 72 true/
         viewport move 2 0 6000 true/
         move farmer 12 0 1 true/
@@ -1848,12 +1853,12 @@
         speak Harvey \"Это был самый прекрасный полет в моей жизни, @. Но теперь нам нужно спуститься - ты выглядишь уставшей, а твой пульс учащен.$l#$b#Завтра я принесу тебе витамины и проверю, не поднялось ли давление. И не спорь - это приказ твоего врача!$a\"/
         pause 2000/
         end position 16 42",
-        "eventHarveyStormComfortTown/Weather storm/Friendship Harvey 750/Random 0.3/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
+        "eventHarveyStormComfortTown/Weather Storm/Friendship Harvey 750/Random 0.3/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
         none/
         39 73/
         farmer 39 73 2 Harvey 1000 1000 0 Gus 1000 1000 2/
         skippable/
-        setSkipActions changeLocation Saloon#warp farmer 14 23#warp Harvey 13 23#faceDirection farmer 0#faceDirection Harvey 0#action addBuff buffStressImmunity -2#action removeConversationTopic topicStressThunder#action removeConversationTopic topicHarveyStormStress#action addConversationTopic HarveyMod_CD_StormComfort 3#friendship Harvey 35/
+        setSkipActions addBuff buffStressImmunity -2#RemoveConversationTopic topicStressThunder#RemoveConversationTopic topicHarveyStormStress#AddConversationTopic HarveyMod_CD_StormComfort 3#AddFriendshipPoints Harvey 35/
         playSound thunder/
         emote farmer 16/
         animate farmer false true 2000 5 4/
@@ -1925,7 +1930,7 @@
          none/
          22 23/
          farmer 18 23 1 Harvey 28 23 3/
-         setSkipActions AddMail Current HarveyOverhaul_E1_Note tomorrow/
+         setSkipActions AddMail Current HarveyOverhaul_E1_Note tomorrow#AddFriendshipPoints Harvey 20#AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E1 3/
          skippable/
          viewport 22 23 true/
          pause 400/
@@ -2167,7 +2172,7 @@
           50 13/
           farmer 50 13 1 Harvey 51 13 3/
           skippable/
-          setSkipActions AddMail Current HarveyOverhaul_E3_Reminder tomorrow/
+          setSkipActions AddMail Current HarveyOverhaul_E3_Reminder tomorrow#AddFriendshipPoints Harvey 35#AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E3 3/
           pause 400/
           speak Harvey \"Ты обещала показать лес. Я буду тихим — обещаю.$h\"/
           faceDirection Harvey 1/
@@ -2201,7 +2206,7 @@
           48 14/
           farmer 48 14 1 Harvey 49 14 3/
           skippable/
-          setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E3B 3#AddConversationTopic topicHarveyWingPatient 5/
+          setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E3B 3#AddConversationTopic topicHarveyWingPatient 5#AddFriendshipPoints Harvey 30/
           pause 400/
           move farmer -2 0 3 true/
           move Harvey -2 0 3 true/
@@ -2241,7 +2246,7 @@
           48 14/
           farmer 48 14 2 Harvey -1000 -1000 0/
           skippable/
-          setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E8 5/
+          setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E8 5#AddFriendshipPoints Harvey 35/
           pause 400/
           viewport 48 14/
           emote farmer 40/
@@ -2287,7 +2292,7 @@
           viewport -1000 -1000/
           end",
        
-        "eventHarveyFirstDate/Weather Sunny/Friendship Harvey 2000/Time 1800 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery SEASON Spring Summer Fall": "kindadumbautumn/
+        "eventHarveyFirstDate/Weather sunny/Friendship Harvey 2000/Time 1800 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery SEASON Spring Summer Fall": "kindadumbautumn/
         65 45/
         farmer 65 38 2 Harvey 65 46 1/
         temporaryAnimatedSprite LooseSprites\\Cursors 0 1810 87 58 999999 1 999999 66 44 false false 5 0 1 0 0 0 hold_last_frame/
@@ -2348,7 +2353,7 @@
         stopAnimation farmer/
         pause 700/
         end",
-        "eventHarveyStormComfortForest/Weather storm/Friendship Harvey 750/Random 0.55/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
+        "eventHarveyStormComfortForest/Weather Storm/Friendship Harvey 750/Random 0.55/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
         rain/
         23 13/
         farmer 23 13 1 Harvey 1000 1000 0/
@@ -2402,7 +2407,7 @@
         39 23/
         farmer 40 17 2 Harvey 39 23 1/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E4 3/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E4 3#AddConversationTopic topicHarveyPierBreath 7#AddFriendshipPoints Harvey 30/
         ambientLight 110 110 140/
         move farmer 0 6 2/
         faceDirection Harvey 1/
@@ -2442,7 +2447,7 @@
         viewport -1000 -1000/
         end",
 
-        "eventHarveyPropose/Weather Sunny/Friendship Harvey 2500/Time 1800 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery SEASON Spring Summer Fall": "night_market/
+        "eventHarveyPropose/Weather sunny/Friendship Harvey 2500/Time 1800 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery SEASON Spring Summer Fall": "night_market/
         40 16/
         farmer 40 7 2 Harvey 39 23 2/
         temporaryAnimatedSprite LooseSprites\\Cursors 0 1810 87 58 999999 1 999999 41 16 false false 28 0 1 0 0 0 hold_last_frame/
@@ -2520,7 +2525,7 @@
         16 9/
         farmer 16 9 2 Gunther 11 9 0 Harvey -1000 -1000 0/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E8 2/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E8 2#AddFriendshipPoints Harvey 30/
         pause 200/
         faceDirection Gunther 1/
         pause 400/
@@ -2553,11 +2558,11 @@
         message \"Ты сортируешь карточки, стараясь не шуметь. Бумага шелестит, как сухие листья.\"/
         pause 500/
         playSound doorClose/
-        warp Gunther 11 5/
+        warp Gunther 12 5/
         faceDirection Gunther 2/
         move Gunther 2 0 2/
-        move Gunther 0 4 0/
-        move Gunther 3 0 1/
+        move Gunther 0 4 2/
+        move Gunther 1 0 1/
         speak Gunther \"Спасибо, @. И вам, доктор — каталог снова в порядке.$h\"/
         pause 300/
         faceDirection Harvey 3/
@@ -2585,7 +2590,7 @@
         35 88/
         farmer 35 88 0 Harvey -1000 -1000 0/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 4#AddConversationTopic HarveyMod_CD_E9 7#AddConversationTopic topicHarveyTrustFinal 10#AddMail Current HarveyOverhaul_E9_LightNote tomorrow/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 4#AddConversationTopic HarveyMod_CD_E9 7#AddConversationTopic topicHarveyTrustFinal 10#AddMail Current HarveyOverhaul_E9_LightNote tomorrow#AddFriendshipPoints Harvey 45/
         ambientLight 80 70 55/
         viewport 35 88 true/
         pause 400/
@@ -2725,13 +2730,13 @@
       "Action": "EditData",
       "Target": "Data/Events/FarmHouse",
       "Entries": {
-        "HarveyOverhaulStory.E11_HomeSafetyProtocol/Time 1000 2000/Weather Sunny Rain Wind Snow/!FestivalDay/Friendship Harvey 2200/GameStateQuery ANY \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong\" \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong_Dating\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E11_HomeSafetyProtocol/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E11": "
+        "HarveyOverhaulStory.E11_HomeSafetyProtocol/Time 1000 2000/Weather sunny Rain Wind Snow/!FestivalDay/Friendship Harvey 2200/GameStateQuery ANY \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong\" \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E10_HarveyWasWrong_Dating\"/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E11_HomeSafetyProtocol/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E11": "
         none/
-        12 7/
-        farmer 11 6 2 Harvey -1000 -1000 0/
+        {{HO_HomeHX}} 7/
+        farmer {{HO_HomeFX}} 6 2 Harvey -1000 -1000 0/
         skippable/
         setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E11 7#AddMail Current mailHarveyHomeSafetyProtocol tomorrow/
-        viewport 10 7 true/
+        viewport {{HO_HomeVX}} 7 true/
         pause 400/
         message \"День тихий. Ты как раз собиралась передохнуть минуту — и слышишь стук в дверь.\"/
         pause 400/
@@ -2741,7 +2746,7 @@
         emote farmer 40/
         pause 300/
         playSound doorOpen/
-        warp Harvey 12 10/
+        warp Harvey {{HO_HomeHX}} 10/
         faceDirection Harvey 0/
         move Harvey 0 -2 0/
         proceedPosition Harvey/
@@ -2782,7 +2787,7 @@
         10 15/
         Harvey 10 14 2 farmer -1000 -1000 0/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E12 7/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E12 7#AddConversationTopic topicHarveyWasCaredFor 7/
         ambientLight 75 70 60/
         viewport 10 15 true/
         pause 400/
@@ -2824,7 +2829,7 @@
         10 15/
         Harvey 10 14 2 farmer -1000 -1000 0/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E12 7/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E12 7#AddConversationTopic topicHarveyWasCaredFor 7/
         ambientLight 75 70 60/
         viewport 10 15 true/
         pause 400/
@@ -2918,7 +2923,7 @@
         24 23/
         farmer 22 23 1 Harvey 30 23 3/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E13 7#AddMail Current mailHarveyMinesAgreement tomorrow/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E13 7#AddMail Current mailHarveyMinesAgreement tomorrow#AddConversationTopic topicHarveyMines_ReturnTime 7#AddConversationTopic topicHarveyMines_Supplies 7#AddConversationTopic topicHarveyMines_Note 7#AddConversationTopic topicHarveyMines_CallMe 7#AddFriendshipPoints Harvey 40/
         viewport 24 23 true/
         pause 400/
         message \"У обочины — кирка, следы пыли на сапогах, на запястье свежая повязка.\"/
@@ -2973,7 +2978,7 @@
         24 23/
         farmer 22 23 1 Harvey 30 23 3/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E13 7#AddMail Current mailHarveyMinesAgreement tomorrow/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E13 7#AddMail Current mailHarveyMinesAgreement tomorrow#AddConversationTopic topicHarveyMines_ReturnTime 7#AddConversationTopic topicHarveyMines_Supplies 7#AddConversationTopic topicHarveyMines_Note 7#AddConversationTopic topicHarveyMines_CallMe 7#AddFriendshipPoints Harvey 40/
         viewport 24 23 true/
         pause 400/
         message \"У обочины — кирка, следы пыли на сапогах, на запястье свежая повязка.\"/
@@ -3028,7 +3033,7 @@
         36 30/
         farmer 32 30 1 Harvey 38 30 3/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E14 7/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E14 7#AddConversationTopic topicHarveyNotOnlyPatient 14/
         ambientLight 110 95 75/
         viewport 35 30 true/
         pause 400/
@@ -3085,12 +3090,12 @@
       "Entries": {
         "HarveyOverhaulStory.E15_FuturePlan/Time 1900 2400/!FestivalDay/Friendship Harvey 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E14_NotOnlyPatient/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E15_FuturePlan_Married/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E15": "
         none/
-        12 7/
-        farmer 11 6 2 Harvey -1000 -1000 0/
+        {{HO_HomeHX}} 7/
+        farmer {{HO_HomeFX}} 6 2 Harvey -1000 -1000 0/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E15 7#AddMail Current mailHarveyFuturePlanNote tomorrow/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E15 7#AddMail Current mailHarveyFuturePlanNote tomorrow#AddConversationTopic topicHarveyFuturePlan 30#AddConversationTopic topicHarveyFuturePlan_CheckIn 14#AddConversationTopic topicHarveyFuturePlan_StillLearning 14#AddFriendshipPoints Harvey 40/
         ambientLight 85 75 60/
-        viewport 10 7 true/
+        viewport {{HO_HomeVX}} 7 true/
         pause 400/
         message \"Вечер тихий. Ты как раз собиралась закрыть день — и снова слышишь стук.\"/
         pause 400/
@@ -3099,7 +3104,7 @@
         emote farmer 40/
         pause 300/
         playSound doorOpen/
-        warp Harvey 12 10/
+        warp Harvey {{HO_HomeHX}} 10/
         faceDirection Harvey 0/
         move Harvey 0 -2 0/
         proceedPosition Harvey/
@@ -3142,7 +3147,7 @@
         12 7/
         farmer 11 6 2 Harvey 13 6 3/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E15 7#AddMail Current mailHarveyFuturePlanNote tomorrow/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E15 7#AddMail Current mailHarveyFuturePlanNote tomorrow#AddConversationTopic topicHarveyFuturePlan 30#AddConversationTopic topicHarveyFuturePlan_CheckIn 14#AddConversationTopic topicHarveyFuturePlan_StillLearning 14#AddFriendshipPoints Harvey 40/
         ambientLight 85 75 60/
         viewport 10 7 true/
         pause 400/
@@ -3189,7 +3194,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Desert",
       "Entries": {
-        "eventHarveyStormComfortDesert/Weather storm/Friendship Harvey 750/Random 0.3/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
+        "eventHarveyStormComfortDesert/Weather Storm/Friendship Harvey 750/Random 0.3/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
         rain/
         15 23/
         farmer 15 23 2 Harvey 1000 1000 0/
@@ -3230,12 +3235,12 @@
       "Target": "Data/Events/Mine",
       "Entries": {
 
-        "eventHarveyStormComfortMine/Weather storm/Friendship Harvey 750/Random 0.8/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
+        "eventHarveyStormComfortMine/Weather Storm/Friendship Harvey 750/Random 0.8/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
         rain/
         15 5/
         farmer 15 5 2 Harvey 1000 1000 0/
         skippable/
-        setSkipActions changeLocation Town#warp farmer 72 22#warp Harvey 73 22#faceDirection farmer 1#faceDirection Harvey 3#action addBuff buffStressImmunity -2#action removeConversationTopic topicStressThunder#action removeConversationTopic topicHarveyStormStress#action addConversationTopic HarveyMod_CD_StormComfort 3#friendship Harvey 45/
+        setSkipActions addBuff buffStressImmunity -2#RemoveConversationTopic topicStressThunder#RemoveConversationTopic topicHarveyStormStress#AddConversationTopic HarveyMod_CD_StormComfort 3#AddFriendshipPoints Harvey 45/
         playSound thunder/
         emote farmer 16/
         animate farmer false true 2000 5 4/

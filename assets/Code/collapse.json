@@ -1,0 +1,117 @@
+{
+  // Потеря сознания: своя сцена в клинике после гибели (Dating/Engaged), письмо Харви после ночного обморока,
+  // письма при повторах и реплики по уровням отношений.
+  // C#: HarveyOverhaulInjury/EventHandlers/PassOutHandler.cs (RegisterCollapse, ProcessOvernightPassOut, ProcessDeathRevive).
+  "Changes": [
+    {
+      // Ванильная сцена: «кто-то нашёл вас и принёс». Для романа — Харви сам.
+      // {0} — имя фермера (игра подставляет через LoadString). Married — у SpousesReactToPlayerDeath.
+      // Не skippable: команда hospitaldeath (потеря вещей) должна выполниться.
+      "LogName": "Гибель — сцена в клинике (Dating)",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "Priority": "Late",
+      "When": {
+        "Relationship:Harvey": "Dating"
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3/pause 1500/showFrame 5/message \" ...{0}?\"/pause 1000/message \"Знакомый голос. Тёплая ладонь на лбу.\"/viewport 20 12 true/pause 800/speak Harvey \"Солнышко... ты меня слышишь? Не вставай. Просто открой глаза.$s\"/pause 600/showFrame 0/emote farmer 28/speak Harvey \"Тебя принесли без сознания. Раны я обработал, всё под контролем.$u#$b#Я здесь. Я никуда не уйду.$s\"/pause 500/emote Harvey 28/speak Harvey \"*тихо* Когда открылась дверь и я увидел тебя на носилках... у меня руки дрожали. Впервые за много лет.$s\"/pause 400/speak Harvey \"Сегодня — только покой. Встанешь, когда перестанет кружиться голова.$0#$b#А вечером я зайду к тебе домой. Просто посмотреть, как ты. Хорошо?$l\"/pause 800/action MarkEventSeen Current HarveyOverhaulCare.DeathHospitalDating true/hospitaldeath/end dialogue Harvey \"Не торопись. Я рядом, если закружится голова.$s\""
+      }
+    },
+    {
+      // Engaged: если стоит SpousesReactToPlayerDeath, он уже показывает «супружескую» сцену (Spouse = жених).
+      "LogName": "Гибель — сцена в клинике (Engaged без SpousesReact)",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "Priority": "Late",
+      "When": {
+        "Relationship:Harvey": "Engaged",
+        "HasMod |contains=Torsang.SpousesReactToDeath": false
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3/pause 1500/showFrame 5/message \" ...{0}?\"/pause 1000/message \"Знакомый голос. Кольцо на твоей руке кто-то бережно придерживает.\"/viewport 20 12 true/pause 800/speak Harvey \"Любимая... слышишь меня? Не вставай. Просто открой глаза.$s\"/pause 600/showFrame 0/emote farmer 28/speak Harvey \"Тебя принесли без сознания. Раны я обработал, всё под контролем.$u#$b#Я здесь. Я никуда не уйду.$s\"/pause 500/emote Harvey 28/speak Harvey \"*тихо* Я пообещал себе, что на свадьбе у меня не будут дрожать руки. А сейчас дрожат.$s\"/pause 400/speak Harvey \"Сегодня — только покой. Вечером я приду к тебе домой. Не спорь, ладно? Просто позволь мне.$l\"/pause 800/action MarkEventSeen Current HarveyOverhaulCare.DeathHospitalDating true/hospitaldeath/end dialogue Harvey \"Не торопись. Я рядом.$s\""
+      }
+    },
+    {
+      // Ночной обморок вне дома (2:00 / истощение): вместо Джоджи/Гюнтера — Харви сам довёз до дома и денег не взял.
+      // Married — у CSS' Harvey Cares. Marlon (33%, ваниль) остаётся первым.
+      "LogName": "Обморок ночью — письмо Харви (Dating/Engaged)",
+      "Action": "EditData",
+      "Target": "Data/LocationContexts",
+      "TargetField": [ "Default", "PassOutMail" ],
+      "Entries": {
+        "{{ModId}}_DatingHarvey": {
+          "Id": "{{ModId}}_DatingHarvey",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Target Harvey Dating Engaged",
+          "Mail": "passedOut.{{ModId}}_Harvey",
+          "MaxPassOutCost": 0,
+          "SkipRandomSelection": true
+        }
+      }
+    },
+    {
+      "LogName": "Обмороки — письма",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "passedOut.{{ModId}}_Harvey_NotBilled": "@,^^Ночью тебя нашли без сознания — прямо на улице. Мне позвонили, и я довёз тебя до дома. Ты спала так крепко, что не проснулась, даже когда я снимал с тебя сапоги.^^Денег за это я, конечно, не возьму. Даже не думай.^Пообещай мне только одно: когда почувствуешь, что валишься с ног, просто иди домой. Я лучше подожду тебя у двери, чем снова буду искать в темноте.^^— Харви[#]Харви нашёл тебя ночью",
+        "passedOut.{{ModId}}_Harvey_Billed": "@,^^Ночью тебя нашли без сознания — прямо на улице. Мне позвонили, и я довёз тебя до дома.^^Денег за это я, конечно, не возьму. Даже не думай.^Пообещай мне только одно: когда почувствуешь, что валишься с ног, просто иди домой.^^— Харви[#]Харви нашёл тебя ночью",
+        "mailHarveyFriendCollapse": "@,^^Дошли новости, что ты потеряла сознание. Лекцию читать не буду — ты и сама всё знаешь.^Просто загляни в клинику, когда сможешь. Я поставлю чайник и проверю давление, это пять минут.^^Береги себя. Друзей у меня в долине не так много, чтобы ими разбрасываться.^^— Харви[#]Записка от Харви",
+        "mailHarveyCollapsePattern": "@,^^Я пишу это, а не говорю, потому что вслух у меня не получится спокойно.^За две недели ты теряла сознание уже не раз. Я не сержусь, правда. Мне страшно.^^Давай вместе посмотрим, что можно поменять: где ты не досыпаешь, где не ешь, что можно отложить. Не правила от врача — просто план, который мы составим вдвоём, за ужином. Что в нём будет, решаешь ты.^Я только хочу, чтобы ты была рядом — живая и здоровая.^^— Харви^^P.S. Я приготовлю суп. Можно отказаться. Но я всё равно приготовлю.[#]Письмо от Харви"
+      }
+    },
+    {
+      "LogName": "Обмороки — реплики (0–5 сердец, «Вы»)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Priority": "Late",
+      "Entries": {
+        "topicPassedOutOutside": "Говорят, вы уснули прямо под открытым небом.$8#$b#Ночью холодно, а во сне тело почти не греется. Пожалуйста, возвращайтесь домой до полуночи.$0",
+        "topicHarvey_RepeatCollapse": "Это уже второй раз за короткое время.$8#$b#Я бы хотел вас осмотреть — не для галочки. Повторные обмороки просто так не случаются.$0",
+        "topicHarvey_CollapsePattern": "Несколько случаев за две недели.$8#$b#Как врач я обязан сказать: это уже закономерность. Давайте вместе найдём причину — я освобожу для вас время.$0"
+      }
+    },
+    {
+      "LogName": "Обмороки — реплики (друг, 6+ сердец)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Priority": "Late",
+      "When": {
+        "Hearts:Harvey": "6, 7, 8, 9, 10, 11, 12, 13, 14"
+      },
+      "Entries": {
+        "topicPassedOutOutside": "Ты уснула прямо на улице, @.$8#$b#Ночью легко простыть или пораниться. Обещай уходить домой пораньше, ладно?$0",
+        "topicHarvey_RepeatCollapse": "Второй раз за две недели, @.$8#$b#Давай без героизма: зайди ко мне на осмотр. Пять минут — и мне будет спокойнее.$0",
+        "topicHarvey_CollapsePattern": "@... это уже не первый и не второй раз.$8#$b#Я твой друг, а не только врач. Мне по-настоящему страшно. Давай сядем и подумаем, что можно облегчить.$s"
+      }
+    },
+    {
+      "LogName": "Обмороки — реплики (Dating / Engaged)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Priority": "Late",
+      "When": {
+        "Relationship:Harvey": "Dating, Engaged"
+      },
+      "Entries": {
+        "topicPassedOutOutside": "Солнышко, ты уснула под открытым небом.$8#$b#Я всё утро представлял, как ты лежишь там одна в темноте. Пожалуйста — домой до полуночи. Ради меня.$s",
+        "topicHarvey_RepeatCollapse": "Солнышко, это уже второй раз.$s#$b#Я не ругаюсь. Я просто хочу понять, что происходит, и помочь. Зайдёшь ко мне сегодня?$l",
+        "topicHarvey_CollapsePattern": "Я перечитывал твою карту всю ночь.$s#$b#Я не буду ничего запрещать. Давай просто вместе составим план, который тебе самой будет по силам. Хорошо?$l"
+      }
+    },
+    {
+      "LogName": "Обмороки — реплики (Married)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Priority": "Late",
+      "When": {
+        "Relationship:Harvey": "Married"
+      },
+      "Entries": {
+        "topicPassedOutOutside": "Ты не пришла домой ночью. Я проснулся — а твоя половина кровати пустая.$s#$b#Если засиживаешься — позвони, я приду за тобой. В любое время.$l",
+        "topicHarvey_RepeatCollapse": "Второй раз, любимая.$s#$b#Давай вечером просто посидим и разберёмся, где ты себя загоняешь. Вместе. Без упрёков.$l",
+        "topicHarvey_CollapsePattern": "Я написал тебе письмо, потому что вслух не получается спокойно.$s#$b#Ты — самое важное, что у меня есть. Давай вместе решим, что убрать из твоих дней. Я рядом, что бы ты ни решила.$l"
+      }
+    }
+  ]
+}

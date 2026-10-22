@@ -20,6 +20,7 @@ import json
 import os
 
 from event_builder import CD, H, msg, patch, qq, sp
+from skip_actions import complete_skip
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'assets', 'Code', 'eventsMarriageRotation.json')
@@ -47,9 +48,9 @@ def rkey(eid, *conds):
 def rscript(eid, music, view, actors, body, extra=()):
     cds = [f'{own_cd(eid)} {REPEAT_DAYS}', f'{ROT_CD} {BETWEEN_DAYS}', f'{CD} 2']
     skip = [f'AddConversationTopic {c}' for c in cds]
-    cmds = [music, view, actors, 'skippable', 'setSkipActions ' + '#'.join(skip), *extra, *body,
-            *[f'addConversationTopic {c}' for c in cds],
-            'globalFade', 'viewport -1000 -1000', 'end']
+    tail = [*[f'addConversationTopic {c}' for c in cds], 'globalFade', 'viewport -1000 -1000', 'end']
+    cmds = [music, view, actors, 'skippable', 'setSkipActions ' + '#'.join(complete_skip(skip, [*extra, *body, *tail])),
+            *extra, *body, *tail]
     for c in cmds:
         assert '/' not in c, c
     return '/'.join(cmds)
@@ -71,7 +72,7 @@ SCENES['R1_Umbrella'] = (rkey('R1_Umbrella', 'Season Spring', 'Weather Rain', 'T
         ]),
     ]))
 
-SCENES['R2_Stars'] = (rkey('R2_Stars', 'Season Summer', 'Weather Sunny', 'Time 2100 2500'), rscript(
+SCENES['R2_Stars'] = (rkey('R2_Stars', 'Season Summer', 'Weather sunny', 'Time 2100 2500'), rscript(
     'R2_Stars', 'none', f'{FX} {FY0}', PORCH, [
         'pause 600',
         msg('Тёплая ночь. Вы сидите на ступеньках, голова к голове, и смотрите вверх.'),
@@ -84,7 +85,7 @@ SCENES['R2_Stars'] = (rkey('R2_Stars', 'Season Summer', 'Weather Sunny', 'Time 2
         ]),
     ], extra=['ambientLight 120 120 60']))
 
-SCENES['R3_FallLeaves'] = (rkey('R3_FallLeaves', 'Season Fall', 'Weather Sunny', 'Time 1000 1600'), rscript(
+SCENES['R3_FallLeaves'] = (rkey('R3_FallLeaves', 'Season Fall', 'Weather sunny', 'Time 1000 1600'), rscript(
     'R3_FallLeaves', 'continue', '49 14', 'farmer 48 14 1 Harvey 49 14 3', [
         'viewport 49 14 true', 'pause 500',
         msg('Осенний лес шуршит под ногами. Харви собирает листья — каждый внимательно, как образец для анализа.'),
@@ -155,7 +156,7 @@ SCENES['R7_Heartbeat'] = (rkey('R7_Heartbeat', 'Time 2100 2400'), rscript(
         ]),
     ], extra=['ambientLight 120 120 60']))
 
-SCENES['R8_FountainWalk'] = (rkey('R8_FountainWalk', 'DayOfWeek Fri', 'Weather Sunny', 'Time 1800 2100'), rscript(
+SCENES['R8_FountainWalk'] = (rkey('R8_FountainWalk', 'DayOfWeek Fri', 'Weather sunny', 'Time 1800 2100'), rscript(
     'R8_FountainWalk', 'none', '26 28', 'farmer 25 30 1 Harvey 26 30 3', [
         'viewport 26 28 true', 'pause 500',
         msg('Пятничный вечер у фонтана. Харви достаёт из кармана монетку.'),

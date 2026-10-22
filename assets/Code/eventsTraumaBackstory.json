@@ -14,6 +14,7 @@
         5 6/
         farmer 5 6 3 Harvey 4 6 1/
         skippable/
+        setSkipActions AddItem 351 1#AddConversationTopic topicHarveyTraumaReveal 7/
         animate Harvey false true 1000 22 20 21 20/
         speak Harvey \"Одну минуту... Ты дышишь неровно. Мне нужно проверить рёбра.$u\"/
         pause 500/
@@ -52,6 +53,7 @@
         5 6/
         farmer 5 6 3 Harvey 4 6 1/
         skippable/
+        setSkipActions AddItem 351 1/
         animate Harvey false true 1000 22 20 21 20/
         speak Harvey \"Одну минуту... Ты дышишь неровно. Мне нужно проверить рёбра.$u\"/
         pause 500/
@@ -86,7 +88,7 @@
       "When": { "TraumaBackstory": "true" },
       "Entries": {
         // T1. Она приходит и рассказывает сама: всё / только про огонь / не сегодня.
-        "HarveyOverhaulStory.T1_WhatIRemember/Time 1300 1500/!FestivalDay/Friendship Harvey 2000/GameStateQuery ANY \"PLAYER_HAS_SEEN_EVENT Current eventHarveyTraumaExam\" \"PLAYER_HAS_SEEN_EVENT Current eventRescueOperation\"/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "Hospital_Ambient/
+        "HarveyOverhaulStory.T1_WhatIRemember/Time 1300 1500/!FestivalDay/Friendship Harvey 2000/GameStateQuery PLAYER_HAS_MAIL Current HarveyCareTrust_L3 Received/GameStateQuery ANY \"PLAYER_HAS_SEEN_EVENT Current eventHarveyTraumaExam\" \"PLAYER_HAS_SEEN_EVENT Current eventRescueOperation\"/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "Hospital_Ambient/
         10 16/
         Harvey 9 18 1 farmer 10 19 0/
         skippable/
@@ -115,7 +117,7 @@
         48 14/
         farmer 48 14 3 Harvey 49 14 3/
         skippable/
-        setSkipActions AddConversationTopic HarveyMod_CD_Global 4#AddConversationTopic topicHarveyBackstorySurvivor 14/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 4#AddConversationTopic topicHarveyBackstorySurvivor 14#AddFriendshipPoints Harvey 100/
         pause 500/
         viewport 48 14/
         message \"Ты стоишь на тропе и смотришь в чащу. Шаги за спиной ты узнаёшь раньше, чем голос.\"/

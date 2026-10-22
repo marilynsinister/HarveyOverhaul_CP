@@ -545,7 +545,7 @@
             "GlowColor": null,
             "Duration": -2,
             "IconTexture": "Mods/{{ModId}}/HarveyBuffIcons",
-            "IconSpriteIndex": 67,
+            "IconSpriteIndex": 164,
             "Effects": {}
           }
         }

@@ -1,0 +1,37 @@
+{
+  "Changes": [
+    {
+      "LogName": "Первый осмотр — повторная запись в клинике",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "Entries": {
+        "eventHarveyCheckupInvitation/Time 1400 1600/GameStateQuery DAYS_PLAYED 2/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyCheckup/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicAgreedCheckup/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicRefusedCheckup/GameStateQuery !PLAYER_HAS_MAIL Current HarveyIntro_CheckupAgreed Received": "none/4 6/farmer 4 6 1 Harvey 4 5 3/skippable/setSkipActions AddConversationTopic topicRefusedCheckup 7/speak Harvey \"Здравствуйте. Если захотите, можно записаться на обычный осмотр: давление, пульс, несколько вопросов.$0#$b#Я принимаю после обеда, с двух до четырёх. Записать вас?$h\"/quickQuestion #Записаться на осмотр#Пока не хочу(break)action AddMail Current HarveyIntro_CheckupAgreed Received\\addConversationTopic topicAgreedCheckup 5\\speak Harvey \"Хорошо, я подготовлю кабинет.$h#$b#Приходите с двух до четырёх, когда будет удобно. Запись не пропадёт, даже если не получится прийти сразу.$0\"(break)addConversationTopic topicRefusedCheckup 7\\speak Harvey \"Конечно. Решение за вами.$0#$b#Если передумаете, можно будет записаться позже.$h\"/globalFade/viewport -1000 -1000/end position 10 17"
+      }
+    },
+    {
+      "LogName": "Первый осмотр — сохранить согласие и вернуть предложение после отказа",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_KeepCheckupConsent": {
+          "Id": "{{ModId}}_KeepCheckupConsent",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Current topicAgreedCheckup, !PLAYER_HAS_SEEN_EVENT Current eventHarveyCheckup, !PLAYER_HAS_MAIL Current HarveyIntro_CheckupAgreed Received",
+          "Actions": [
+            "AddMail Current HarveyIntro_CheckupAgreed Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_OfferCheckupAgain": {
+          "Id": "{{ModId}}_OfferCheckupAgain",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyCheckupInvitation, !PLAYER_HAS_SEEN_EVENT Current eventHarveyCheckup, !PLAYER_HAS_MAIL Current HarveyIntro_CheckupAgreed Received, !PLAYER_HAS_CONVERSATION_TOPIC Current topicAgreedCheckup, !PLAYER_HAS_CONVERSATION_TOPIC Current topicRefusedCheckup",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyCheckupInvitation false"
+          ],
+          "MarkActionApplied": false
+        }
+      }
+    }
+  ]
+}

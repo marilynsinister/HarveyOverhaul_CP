@@ -1,0 +1,32 @@
+--- a/content.json
++++ b/content.json
+@@ -456,6 +456,11 @@
+       "Action": "Include",
+       "FromFile": "assets/Code/trustRewards.json"
+     },
++    // Аптекарский сад: четыре травы, семена, рецепты и цепочка поручений Харви.
++    {
++      "Action": "Include",
++      "FromFile": "assets/Code/herbalGarden.json"
++    },
+     // Серии «Хороших недель»: письма за 2 недели и за месяц, пикник у крыльца — scripts/build_good_week.py (C#: GoodWeekService)
+     {
+       "Action": "Include",
+--- a/scripts/check_all.py
++++ b/scripts/check_all.py
+@@ -4,6 +4,7 @@
+   validate_event_coords   — координаты на реальных картах (SVE, Alchemistry, ферма, дом, музей)
+   audit_event_exits       — setSkipActions и выход из сцен (HIGH и MEDIUM должны быть 0)
+   final_technical_validation — JSON как в CP, дубли ключей, ласковые имена до отношений
++  validate_herbal_garden — травы, рецепты, цепочка поручений и игровой атлас роста
+   fix_skip_actions --dry  — в ручных событиях нечего чинить
+ 
+ Запуск:  python scripts/check_all.py      (deploy.sh вызывает его до сборки)
+@@ -17,6 +18,7 @@
+ ENV = {**os.environ, "PYTHONIOENCODING": "utf-8"}
+ 
+ CHECKS = [
++    ("аптекарский сад", ["validate_herbal_garden.py"], lambda out: "Herbal garden: all static checks passed." in out),
+     ("сюжет", ["validate_story_events.py"], lambda out: out.strip().splitlines()[-1:] == ["OK"]),
+     ("координаты", ["-I", "validate_event_coords.py"], lambda out: re.search(r"замечаний: 0\b", out)),
+     ("пропуск и выход из сцен", ["-I", "audit_event_exits.py"], lambda out: re.search(r"HIGH 0, MEDIUM 0\b", out)),

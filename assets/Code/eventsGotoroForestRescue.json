@@ -10,6 +10,7 @@
     -1000 -1000/
     farmer -1 -1 2 Harvey -1 -1 3/
     skippable/
+    setSkipActions RemoveConversationTopic topicStressGotoroForestRescuePending#AddConversationTopic topicStressGotoroForestRescueDone 1/
     ignoreCollisions Harvey/
     ignoreCollisions farmer/
     positionOffset Harvey 64 0/
@@ -46,6 +47,7 @@
     -1000 -1000/
     farmer -1 -1 2 Harvey -1 -1 3/
     skippable/
+    setSkipActions RemoveConversationTopic topicStressGotoroForestRescuePending#AddConversationTopic topicStressGotoroForestRescueDone 1/
     ignoreCollisions Harvey/
     ignoreCollisions farmer/
     positionOffset Harvey 64 0/
@@ -67,7 +69,7 @@
     speak Harvey \"Назови три вещи, которые видишь. Любые.$u#$b#Гром далеко. Дождь здесь. Сейчас опасности нет.$u\"/
     pause 500/
     emote Harvey 32/
-    speak Harvey \"Хорошо. Я рядом. Никуда не ухожу.$l\"/
+    speak Harvey \"$query marilynsinister.HarveyStressMeter_CONSENT HoldHand Granted#Вот моя рука. Возьми, когда захочешь, и держи, сколько нужно. Я никуда не ухожу.$l|Хорошо. Я рядом. Никуда не ухожу.$l\"/
     pause 400/
     stopIgnoringCollisions farmer/
     stopIgnoringCollisions Harvey/
@@ -81,6 +83,7 @@
     -1000 -1000/
     farmer -1 -1 2 Harvey -1 -1 3/
     skippable/
+    setSkipActions RemoveConversationTopic topicStressGotoroForestRescuePending#AddConversationTopic topicStressGotoroForestRescueDone 1/
     ignoreCollisions Harvey/
     ignoreCollisions farmer/
     positionOffset Harvey 64 0/
@@ -102,7 +105,7 @@
     speak Harvey \"Посмотри на меня. Гром далеко. Дождь здесь.$u#$b#Ты в лесу. Сейчас опасности нет.$u\"/
     pause 600/
     emote Harvey 32/
-    speak Harvey \"Я здесь. Я не буду тянуть тебя за руку.$l\"/
+    speak Harvey \"$query marilynsinister.HarveyStressMeter_CONSENT HoldHand Granted#Вот моя рука, солнышко. Возьмёшь сама, и я буду держать, пока гром не уйдёт.$l|Я здесь. Я не буду тянуть тебя за руку.$l\"/
     pause 400/
     stopIgnoringCollisions farmer/
     stopIgnoringCollisions Harvey/
@@ -116,6 +119,7 @@
     -1000 -1000/
     farmer -1 -1 2 Harvey -1 -1 3/
     skippable/
+    setSkipActions RemoveConversationTopic topicStressGotoroForestRescuePending#AddConversationTopic topicStressGotoroForestRescueDone 1/
     ignoreCollisions Harvey/
     ignoreCollisions farmer/
     positionOffset Harvey 64 0/
@@ -139,7 +143,7 @@
     speak Harvey \"Назови три вещи, которые видишь. Деревья. Я. Небо сквозь ветки.$l\"/
     pause 500/
     emote Harvey 32/
-    speak Harvey \"Хорошо. Я никуда не уйду.$l\"/
+    speak Harvey \"$query marilynsinister.HarveyStressMeter_CONSENT HoldHand Granted#*протягивает ладонь* Держись за меня. Я никуда не уйду.$l|Хорошо. Я рядом, на том расстоянии, какое тебе нужно. Никуда не уйду.$l\"/
     pause 400/
     stopIgnoringCollisions farmer/
     stopIgnoringCollisions Harvey/

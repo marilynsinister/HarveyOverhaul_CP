@@ -1,0 +1,291 @@
+{
+  "Changes": [
+    {
+      "LogName": "Повторяемые сцены заботы — вернуть после кулдауна",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_Repeat_eventHarveyStormComfortFarm_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortFarm_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortFarm, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortFarm Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyStormComfortFarm Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyStormComfortFarm 10"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortFarm_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortFarm_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortFarm, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortFarm Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyStormComfortFarm",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyStormComfortFarm false",
+            "RemoveMail Current HarveyRepeat_eventHarveyStormComfortFarm Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortTown_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortTown_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortTown, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortTown Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyStormComfortTown Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyStormComfortTown 10"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortTown_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortTown_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortTown, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortTown Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyStormComfortTown",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyStormComfortTown false",
+            "RemoveMail Current HarveyRepeat_eventHarveyStormComfortTown Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortForest_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortForest_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortForest, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortForest Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyStormComfortForest Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyStormComfortForest 10"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortForest_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortForest_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortForest, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortForest Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyStormComfortForest",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyStormComfortForest false",
+            "RemoveMail Current HarveyRepeat_eventHarveyStormComfortForest Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortMountain_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortMountain_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortMountain, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortMountain Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyStormComfortMountain Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyStormComfortMountain 10"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortMountain_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortMountain_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortMountain, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortMountain Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyStormComfortMountain",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyStormComfortMountain false",
+            "RemoveMail Current HarveyRepeat_eventHarveyStormComfortMountain Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortDesert_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortDesert_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortDesert, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortDesert Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyStormComfortDesert Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyStormComfortDesert 10"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortDesert_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortDesert_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortDesert, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortDesert Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyStormComfortDesert",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyStormComfortDesert false",
+            "RemoveMail Current HarveyRepeat_eventHarveyStormComfortDesert Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortMine_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortMine_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortMine, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortMine Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyStormComfortMine Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyStormComfortMine 10"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyStormComfortMine_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyStormComfortMine_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyStormComfortMine, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyStormComfortMine Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyStormComfortMine",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyStormComfortMine false",
+            "RemoveMail Current HarveyRepeat_eventHarveyStormComfortMine Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyRoomCheckup_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyRoomCheckup_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyRoomCheckup, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyRoomCheckup Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyRoomCheckup Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyRoomCheckup 28"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyRoomCheckup_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyRoomCheckup_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyRoomCheckup, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyRoomCheckup Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyRoomCheckup",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyRoomCheckup false",
+            "RemoveMail Current HarveyRepeat_eventHarveyRoomCheckup Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyRoomCheckup2_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyRoomCheckup2_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyRoomCheckup2, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyRoomCheckup2 Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyRoomCheckup2 Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyRoomCheckup2 28"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyRoomCheckup2_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyRoomCheckup2_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyRoomCheckup2, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyRoomCheckup2 Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyRoomCheckup2",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyRoomCheckup2 false",
+            "RemoveMail Current HarveyRepeat_eventHarveyRoomCheckup2 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyMedicalCheck_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyMedicalCheck_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyMedicalCheck, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyMedicalCheck Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyMedicalCheck Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyMedicalCheck 56"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyMedicalCheck_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyMedicalCheck_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyMedicalCheck, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyMedicalCheck Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyMedicalCheck",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyMedicalCheck false",
+            "RemoveMail Current HarveyRepeat_eventHarveyMedicalCheck Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyMedicalCheck_Dating_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyMedicalCheck_Dating_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyMedicalCheck_Dating, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyMedicalCheck_Dating Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyMedicalCheck_Dating Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyMedicalCheck_Dating 56"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyMedicalCheck_Dating_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyMedicalCheck_Dating_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyMedicalCheck_Dating, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyMedicalCheck_Dating Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyMedicalCheck_Dating",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyMedicalCheck_Dating false",
+            "RemoveMail Current HarveyRepeat_eventHarveyMedicalCheck_Dating Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyLateNightCollapse_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyLateNightCollapse_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyLateNightCollapse, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyLateNightCollapse Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyLateNightCollapse Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyLateNightCollapse 14"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyLateNightCollapse_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyLateNightCollapse_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyLateNightCollapse, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyLateNightCollapse Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyLateNightCollapse",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyLateNightCollapse false",
+            "RemoveMail Current HarveyRepeat_eventHarveyLateNightCollapse Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyCheckFarmerOutsideAfter22_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyCheckFarmerOutsideAfter22_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyCheckFarmerOutsideAfter22, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyCheckFarmerOutsideAfter22 Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyCheckFarmerOutsideAfter22 Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyCheckFarmerOutsideAfter22 7"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyCheckFarmerOutsideAfter22_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyCheckFarmerOutsideAfter22_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyCheckFarmerOutsideAfter22, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyCheckFarmerOutsideAfter22 Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyCheckFarmerOutsideAfter22",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyCheckFarmerOutsideAfter22 false",
+            "RemoveMail Current HarveyRepeat_eventHarveyCheckFarmerOutsideAfter22 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyMorningCheckup_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyMorningCheckup_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyMorningCheckup, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyMorningCheckup Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyMorningCheckup Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyMorningCheckup 7"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyMorningCheckup_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyMorningCheckup_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyMorningCheckup, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyMorningCheckup Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyMorningCheckup",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyMorningCheckup false",
+            "RemoveMail Current HarveyRepeat_eventHarveyMorningCheckup Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyCheckHealthFarmer_Arm": {
+          "Id": "{{ModId}}_Repeat_eventHarveyCheckHealthFarmer_Arm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyCheckHealthFarmer, !PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyCheckHealthFarmer Received",
+          "Actions": [
+            "AddMail Current HarveyRepeat_eventHarveyCheckHealthFarmer Received",
+            "AddConversationTopic HarveyRepeatCD_eventHarveyCheckHealthFarmer 7"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Repeat_eventHarveyCheckHealthFarmer_Return": {
+          "Id": "{{ModId}}_Repeat_eventHarveyCheckHealthFarmer_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyCheckHealthFarmer, PLAYER_HAS_MAIL Current HarveyRepeat_eventHarveyCheckHealthFarmer Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRepeatCD_eventHarveyCheckHealthFarmer",
+          "Actions": [
+            "MarkEventSeen Current eventHarveyCheckHealthFarmer false",
+            "RemoveMail Current HarveyRepeat_eventHarveyCheckHealthFarmer Received"
+          ],
+          "MarkActionApplied": false
+        }
+      }
+    }
+  ]
+}

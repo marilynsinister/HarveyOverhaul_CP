@@ -23,16 +23,19 @@ GAME = sys.argv[1] if len(sys.argv) > 1 else r'D:\Games\Steam\steamapps\common\S
 
 EVENT_FILES = ['eventsArc3.json', 'eventsMarriage.json', 'eventsAdult.json', 'eventsScars.json',
                'eventsHarveyLife.json', 'festivalsHarvey.json', 'eventsMarriageRotation.json', 'eventsExamConsent.json',
-               'clinicSeasonal.json']
+               'clinicSeasonal.json', 'fatherhood.json', 'arend.json', 'goodWeek.json', 'familyLife.json', 'introRecovery.json',
+               'outings.json']
 TRIGGER_FILES = ['triggersArc3Aftermath.json', 'triggersDate.json', 'eventsScars.json', 'eventsMarriageRotation.json',
-                 'clinicSeasonal.json']
+                 'clinicSeasonal.json', 'fatherhood.json', 'triggersRepeatScenes.json',
+                 'trustRewards.json', 'goodWeek.json', 'familyLife.json', 'introRecovery.json', 'outings.json']
 # Флаги-«письма» без текста: их читают условия и диалоги, в почтовый ящик они не попадают.
 ALLOWED_FLAGS = {'HarveyArc3_Confessed', 'HarveyArc3_ConfessionPending', 'HarveyArc3_Graduated',
                  'HarveyScars_LetterSent', 'HarveyScars_LetterBurned', 'HarveyScars_LetterKept',
-                 'HarveyScars_Enabled', 'HarveyBackstory_FireKnown', 'HarveyLife_SaidGo'}
+                 'HarveyScars_Enabled', 'HarveyBackstory_FireKnown', 'HarveyLife_SaidGo',
+                 'HarveyArend_Daughter', 'HarveyFamily_PhotoTaken', 'HarveyIntro_CheckupAgreed'}
 # Темы-служебки без реплик (кулдауны).
 SILENT_TOPICS = {'HarveyMod_CD_Global', 'HarveyRotation_CD'}
-SILENT_TOPIC_PREFIXES = ('HarveyRot_',)
+SILENT_TOPIC_PREFIXES = ('HarveyRot_', 'HarveyRepeatCD_')
 
 errors, warnings = [], []
 
@@ -117,6 +120,9 @@ def check_event(eid, script, actors_known_ids, is_fork=False):
     for c in cmds:
         for piece in re.split(r'\(break\)|\\', c):
             piece = piece.strip()
+            if piece.startswith('addTemporaryActor '):
+                temporary = piece.split()
+                actors.add(temporary[9] if len(temporary) > 9 else temporary[1])
             if piece.count('"') % 2:
                 errors.append(f'{eid}: незакрытая кавычка: {piece[:60]}')
             m = re.match(r'(warp|move|speak|emote|faceDirection|showFrame)\s+(\S+)', piece)
@@ -162,6 +168,9 @@ def main():
                 subs = re.findall(r'"([^"]+)"', body) if body.startswith('ANY') else [body]
                 for sub in subs:
                     q = sub.split()[0].lstrip('!')
+                    # {{HO_…Query}} — токен CP (подставит GSQ мода или TRUE); «мод.Имя» — GSQ другого мода.
+                    if q.startswith('{{') or '.' in q:
+                        continue
                     if queries is not None and q not in queries:
                         errors.append(f'{eid}: неизвестный GameStateQuery {q}')
                 seen_refs.update(re.findall(r'PLAYER_HAS_SEEN_EVENT Current (\S+?)"?(?:\s|$)', cond))
@@ -183,7 +192,7 @@ def main():
             errors.append(f'PLAYER_HAS_SEEN_EVENT ссылается на неизвестное событие {ref}')
 
     for m in sorted(mails_all):
-        if m not in mail and m not in ALLOWED_FLAGS:
+        if m not in mail and m not in ALLOWED_FLAGS and not m.startswith(('HarveyMemory_', 'HarveyOutingMemory_')):
             errors.append(f'AddMail {m}: нет текста в Data/Mail и не в списке флагов')
 
     for fn in TRIGGER_FILES:
@@ -195,7 +204,10 @@ def main():
                     m = re.match(r'AddConversationTopic (\S+)', a)
                     if m:
                         topics_all.add(m.group(1))
-                    m = re.match(r'AddMail Current (\S+)', a)
+                    m = re.match(r'AddMail Current (\S+)(?: (\S+))?', a)
+                    # «AddMail Current X Received» — флаг: в ящик не попадает, текст не нужен.
+                    if m and (m.group(2) or '').lower() == 'received':
+                        continue
                     if m and m.group(1) not in mail and m.group(1) not in ALLOWED_FLAGS:
                         errors.append(f'{tid}: письмо {m.group(1)} без текста')
 

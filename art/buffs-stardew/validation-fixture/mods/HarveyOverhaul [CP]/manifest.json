@@ -1,0 +1,35 @@
+{
+  "Name": "Harvey Overhaul",
+  "Author": "marilynsinister",
+  "Version": "1.0.0",
+  "Description": "Харви — заботливо-властный врач: сюжетные арки, реплики по стадиям отношений, травмы и стресс, брак (контент для Content Patcher). 18+: откровенные сцены брака включаются и выключаются в настройках (AdultEvents).",
+  "UniqueID": "marilynsinister.HarveyOverhaul",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "2.7.0"
+  },
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "Spiderbuttons.BETAS",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "spacechase0.SpaceCore",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "JunimoHutch.FunctionalHospitalBeds",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "Veronnica.HarveySprite",
+      "IsRequired": false
+    }
+  ]
+}

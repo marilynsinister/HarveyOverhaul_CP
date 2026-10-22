@@ -1,0 +1,98 @@
+{
+  "source": "generated/common-statuses.png",
+  "cellSize": [
+    16,
+    16
+  ],
+  "hudLayout": "vanilla, no Harmony patch",
+  "replacements": [
+    {
+      "id": "HarveyMod_WetBandage",
+      "index": 92,
+      "label": "Мокрая повязка"
+    },
+    {
+      "id": "HarveyMod_InfectedWound_Treatment",
+      "index": 38,
+      "label": "Лечение раны"
+    },
+    {
+      "id": "buffStressNoSleep",
+      "index": 124,
+      "label": "Недосып"
+    },
+    {
+      "id": "buffStressThunder",
+      "index": 121,
+      "label": "Пугающая гроза"
+    },
+    {
+      "id": "buffDarknessOvercome",
+      "index": 132,
+      "label": "Преодоление"
+    },
+    {
+      "id": "buffStressSocial",
+      "index": 133,
+      "label": "Социальная тревожность"
+    },
+    {
+      "id": "buffRestingAtHome",
+      "index": 71,
+      "label": "Отдых дома"
+    },
+    {
+      "id": "buffStressClearMind",
+      "index": 164,
+      "label": "Ясная голова"
+    },
+    {
+      "id": "buffStressTired",
+      "index": 119,
+      "label": "Усталость"
+    },
+    {
+      "id": "buffStressLonely",
+      "index": 120,
+      "label": "Одиночество"
+    },
+    {
+      "id": "buffStressHunger",
+      "index": 122,
+      "label": "Голод"
+    },
+    {
+      "id": "buffStressOverwork",
+      "index": 123,
+      "label": "Переутомление"
+    },
+    {
+      "id": "buffStressTooCold",
+      "index": 125,
+      "label": "Переохлаждение"
+    },
+    {
+      "id": "buffStressDarkness",
+      "index": 126,
+      "label": "Боязнь темноты"
+    },
+    {
+      "id": "buffStressLoadTier",
+      "index": 158,
+      "label": "Напряжение"
+    },
+    {
+      "id": "buffStressFireMemory",
+      "index": 165,
+      "label": "Запах дыма"
+    }
+  ],
+  "validated": [
+    "binary alpha",
+    "transparent cell borders",
+    "indices unchanged",
+    "other 150 icons unchanged",
+    "10 reserved cells empty",
+    "16 unique replacements"
+  ]
+}

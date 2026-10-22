@@ -7,6 +7,8 @@
 import json
 import os
 
+from skip_actions import complete_skip
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'assets', 'Code', 'eventsArc3.json')
 
@@ -39,8 +41,9 @@ def key(eid, *conds):
 
 
 def script(music, view, actors, skip, body, ending='end'):
-    cmds = [music, view, actors, 'skippable', 'setSkipActions ' + '#'.join(skip), *body,
-            f'addConversationTopic {CD} 3', 'globalFade', 'viewport -1000 -1000', ending]
+    tail = [f'addConversationTopic {CD} 3', 'globalFade', 'viewport -1000 -1000', ending]
+    cmds = [music, view, actors, 'skippable', 'setSkipActions ' + '#'.join(complete_skip(skip, [*body, *tail])),
+            *body, *tail]
     for c in cmds:
         assert '/' not in c, c
     return '/'.join(cmds)
@@ -109,7 +112,7 @@ n1 = script(
     ending='end warpOut')
 
 # ---------------------------------------------------------------- N2
-n2_key = key('N2_Spring', 'Weather Sunny', 'Time 1000 1700', 'Friendship Harvey 2000',
+n2_key = key('N2_Spring', 'Weather sunny', 'Time 1000 1700', 'Friendship Harvey 2000',
              f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.N1_NightShift',
              'GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Married')
 n2 = script(
@@ -191,7 +194,7 @@ n3 = script(
     ])
 
 # ---------------------------------------------------------------- N4
-n4_key = key('N4_BlueMoon', 'Weather Sunny', 'Season Spring Summer Fall', 'Time 1900 2300',
+n4_key = key('N4_BlueMoon', 'Weather sunny', 'Season Spring Summer Fall', 'Time 1900 2300',
              'Friendship Harvey 2250',
              'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating',
              f'GameStateQuery PLAYER_HAS_SEEN_EVENT Current {NS}.N3_ContactCard')
@@ -236,7 +239,7 @@ n4 = script(
     ])
 
 # ---------------------------------------------------------------- N5 (+ вариант с отложенным признанием)
-N5_COMMON = ['Weather Sunny Wind Snow', 'Time 1200 1800', 'Friendship Harvey 2500',
+N5_COMMON = ['Weather sunny Wind Snow', 'Time 1200 1800', 'Friendship Harvey 2500',
              'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married',
              'GameStateQuery PLAYER_VISITED_LOCATION Current Custom_Highlands',
              f'GameStateQuery ANY "PLAYER_HAS_SEEN_EVENT Current {NS}.N4_BlueMoon" "PLAYER_NPC_RELATIONSHIP Current Harvey Married"']
@@ -311,10 +314,17 @@ n5a = script('continue', '33 26', N5_ACTORS, N5_SKIP, n5_body(False))
 n5b = script('continue', '33 26', N5_ACTORS, N5_SKIP + [CONFESSED.replace('action ', '')], n5_body(True))
 
 # ---------------------------------------------------------------- N6
-n6_key = key('N6_StormCall', 'Weather Storm', 'Time 0900 1500', 'Friendship Harvey 3000',
-             'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married',
-             f'GameStateQuery ANY "PLAYER_HAS_SEEN_EVENT Current {NS}.N5_ReversedKit" "PLAYER_HAS_SEEN_EVENT Current {NS}.N5_ReversedKit_Confess"')
-n6 = script(
+# Два варианта с одним ID: «Держать за руку в грозу» разрешено (или не спрашивал) — он держит её ладонь;
+# «пока нет»/«нет» — сидит рядом, не касаясь. Токен HO_HoldHandQuery (content.json, StressMeter).
+def n6_key(hand):
+    return key('N6_StormCall', 'Weather Storm', 'Time 0900 1500', 'Friendship Harvey 3000',
+               'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married',
+               f'GameStateQuery ANY "PLAYER_HAS_SEEN_EVENT Current {NS}.N5_ReversedKit" "PLAYER_HAS_SEEN_EVENT Current {NS}.N5_ReversedKit_Confess"',
+               'GameStateQuery ' + ('' if hand else '!') + '{{HO_HoldHandQuery}}')
+
+
+def n6(hand):
+    return script(
     'rain', '10 15', 'Harvey 10 14 2 farmer -1000 -1000 0 Maru -1000 -1000 0',
     skip_cd('AddMail Current HarveyArc3_N6_Report tomorrow'),
     [
@@ -327,14 +337,16 @@ n6 = script(
         'playSound thunder', 'emote farmer 28',
         sp(H, 'Дыши со мной. Вдох на четыре, выдох на шесть. Я считаю.$0'),
         'pause 1000',
-        msg('Гром уходит за холмы. Харви не выпускает твою ладонь.'),
+        msg('Гром уходит за холмы. Харви не выпускает твою ладонь.' if hand else
+            'Гром уходит за холмы. Харви сидит рядом: так близко, как ты разрешила, и не ближе.'),
         'pause 600', 'playSound doorOpen', 'warp Maru 10 19', 'move Maru 0 -1 0', 'faceDirection farmer 2',
         sp('Maru', 'Доктор! Простите… Линус сорвался со склона у палатки. Рука, похоже, сломана, сам он не спустится.$s'),
         'faceDirection farmer 0', sp(H, '…$s'),
         msg('Он смотрит на тебя, на окно, на дверь. Видно, как тяжело ему выбирать.'),
         sp(H, 'Мару, возьми шину и… нет. Я не могу её оставить. Не в грозу.$a'),
         qq(['«Иди»', 'Попросить остаться', '«Иди — и возьми меня с собой»'], [
-            [msg('Ты отпускаешь его руку и сама вкладываешь ему в ладонь ремень от сумки.'),
+            [msg('Ты отпускаешь его руку и сама вкладываешь ему в ладонь ремень от сумки.' if hand else
+                 'Ты встаёшь и сама протягиваешь ему ремень от сумки.'),
              sp(H, 'Ты уверена?$u'), 'emote farmer 40',
              sp(H, 'Хорошо. Хорошо.$s'),
              msg('Он быстро, не глядя, пишет на бланке рецептов: «Чай. Плед. Лампа не гаснет. Дверь не запирать».'),
@@ -411,7 +423,7 @@ data = {'Changes': [
     patch('Arc3 N4 — «Голубая луна» (SVE Blue Moon Vineyard, Dating)', 'Data/Events/Custom_BlueMoonVineyard', {n4_key: n4}),
     patch('Arc3 N5 — «Перевёрнутая аптечка» (SVE Adventurer Summit, Dating/Married)',
           'Data/Events/Custom_AdventurerSummit', {n5a_key: n5a, n5b_key: n5b}),
-    patch('Arc3 N6/N7 — «Гроза и вызов», «Ключ» (Hospital, Married)', 'Data/Events/Hospital', {n6_key: n6, n7_key: n7}),
+    patch('Arc3 N6/N7 — «Гроза и вызов», «Ключ» (Hospital, Married)', 'Data/Events/Hospital', {n6_key(True): n6(True), n6_key(False): n6(False), n7_key: n7}),
 ]}
 
 with open(OUT, 'w', encoding='utf-8') as f:

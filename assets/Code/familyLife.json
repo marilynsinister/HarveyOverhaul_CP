@@ -1,0 +1,292 @@
+{
+  "Changes": [
+    {
+      "LogName": "Family G1 — «Пи» (Forest, ребёнок уже ходит)",
+      "Action": "EditData",
+      "Target": "Data/Events/Forest",
+      "Entries": {
+        "HarveyOverhaulFamily.G1_Birds/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArend.A1_Arrival/Weather sunny/Time 1000 1700/Friendship Arend 1000/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.G1_Birds/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/49 14/farmer 48 15 1 Harvey 51 15 3 Arend 50 13 2/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_Birds 5/addTemporaryActor HarveyFamilyChild 16 32 49 14 0 true Character FamilyChild/viewport 49 14 true/pause 500/message \"Аренд присел у тропы с раскрытым блокнотом. Малыш показывает пальцем на ветку, а Харви держит панамку наготове.\"/speak Arend \"Сорок седьмой вид. Правда, наш наблюдатель называет его «пи».$h\"/speak Harvey \"Панамку я взял. Воду тоже. И запасную панамку.$0\"/speak Arend \"Сын, для птицы панамка не нужна.$h\"/quickQuestion #Попросить Аренда показать птицу#Дать Харви блокнот, а самой взять панамку#Тихонько послушать(break)speak Arend \"Вон, на нижней ветке. Не торопимся. Пусть смотрит столько, сколько хочется.$0\"\\action AddMail Current HarveyMemory_Birds_Look Received\\friendship Arend 30(break)message \"Харви берёт карандаш. На полях появляется маленькая птичка в огромной шляпе.\"\\speak Harvey \"Это научная иллюстрация. Прошу не смеяться.$h\"\\action AddMail Current HarveyMemory_Birds_Hat Received\\friendship Harvey 30(break)message \"Некоторое время слышны только листья, птицы и очень серьёзное детское «пи».\"\\speak Arend \"Вот это я и хотел вам показать.$h\"\\action AddMail Current HarveyMemory_Birds_Quiet Received\\friendship Arend 30/message \"Аренд вписывает дату и рядом рисует три больших следа и один совсем маленький.\"/speak Harvey \"В следующий раз опять пойдём вместе. И да, панамки всё равно возьму.$l\"/addConversationTopic HarveyFamily_Birds 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "ArendEnabled": "true",
+        "Relationship:Harvey": "Married"
+      }
+    },
+    {
+      "LogName": "Family G2 — «Испытатель» (FarmHouse)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulFamily.G2_Toy/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArend.A1_Arrival/Time 1700 2200/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.G1_Birds/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.G2_Toy/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/12 7/farmer 11 7 1 Harvey 13 6 2 Arend 14 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_Toy 5#AddFriendshipPoints Harvey 30#AddFriendshipPoints Arend 25/addTemporaryActor HarveyFamilyChild 16 32 12 7 0 true Character FamilyChild/pause 400/message \"На полу лежат деревянные крылья. Харви сверяется с чертежом, Аренд держит готовую игрушку — простой самолётик с толстыми колёсами.\"/speak Harvey \"У моего двенадцать подвижных частей. Возрастная маркировка, конечно, подходящая.$0\"/speak Arend \"А у моего — колёса. Проверим, что выберет испытатель?$h\"/quickQuestion #Помочь Харви упростить конструкцию#Предложить устроить испытания#Сделать самолётик из бумаги(break)message \"Ты убираешь лишние детали. Харви смотрит, как игрушка помещается в маленьких руках.\"\\speak Harvey \"Да. Вот так лучше. Иногда крыло — просто крыло.$h\"\\action AddMail Current HarveyMemory_Toy_Simple Received(break)message \"Малыш с важным видом прокатывает самолёт Аренда через всю площадку, а затем выбирает пустую коробку.\"\\speak Arend \"Первое место у упаковки. Безоговорочно.$h\"\\action AddMail Current HarveyMemory_Toy_Box Received(break)message \"Бумажный самолётик пролетает совсем недалеко. Малыш хлопает в ладоши.\"\\speak Harvey \"Ни винтика. А восторга больше, чем от всего моего чертежа.$h\"\\action AddMail Current HarveyMemory_Toy_Paper Received/speak Arend \"Ты в этом возрасте тоже выбирал коробки. Только подписывал их «скорая помощь».$h\"/speak Harvey \"Пап. Это была очень хорошая скорая.$h\"/friendship Harvey 30/friendship Arend 25/addConversationTopic HarveyFamily_Toy 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "ArendEnabled": "true",
+        "Relationship:Harvey": "Married"
+      }
+    },
+    {
+      "LogName": "Family G3 — «Все поместились» (FarmHouse)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulFamily.G3_Drawing/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArend.A1_Arrival/Time 1600 2200/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.G2_Toy/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.G3_Drawing/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/12 7/farmer 11 7 1 Harvey 13 6 2 Arend 14 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_Drawing 7#AddFriendshipPoints Harvey 35#AddFriendshipPoints Arend 30/addTemporaryActor HarveyFamilyChild 16 32 12 7 0 true Character FamilyChild/pause 400/message \"На большом листе — несколько цветных кружков и длинная зелёная линия. Аренд наклоняет голову, рассматривая рисунок.\"/speak Arend \"Это мы. Сходство со мной особенно точное: очки крупнее головы.$h\"/speak Harvey \"А я с сумкой. Меня даже на семейном портрете отправляют на вызов.$h\"/quickQuestion #Предложить дорисовать птиц#Предложить дорисовать наш дом#Предложить дорисовать самолёт(break)message \"Над цветными кружками появляются три кривоватые птички. Аренд подписывает каждую: «пи».\"\\action AddMail Current HarveyMemory_Drawing_Birds Received(break)message \"Ты показываешь на окно. На листе появляется дом с удивительно большой дверью — чтобы все поместились.\"\\action AddMail Current HarveyMemory_Drawing_Home Received(break)message \"Харви помогает провести линию крыла. Получается самолёт, который везёт всю семью сразу.\"\\action AddMail Current HarveyMemory_Drawing_Plane Received/speak Harvey \"Я вставлю его в рамку. Да, даже этот зелёный хвост. Это, кажется, я.$l\"/speak Arend \"С обратной стороны поставим дату. Остальное и так запомним.$0\"/message \"На следующее утро Харви обещает прислать рисунок в рамке. Его можно будет повесить дома.\"/friendship Harvey 35/friendship Arend 30/addConversationTopic HarveyFamily_Drawing 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "ArendEnabled": "true",
+        "Relationship:Harvey": "Married"
+      }
+    },
+    {
+      "LogName": "Clinic FA1 — занятие по первой помощи",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "Entries": {
+        "HarveyOverhaulClinic.FA1_FirstAid/DayOfWeek Sat/Time 1000 1500/Friendship Harvey 750/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulClinic.FA1_FirstAid/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "Hospital_Ambient/11 17/farmer 10 18 0 Harvey 10 16 2 Maru 13 16 2 Sam 13 18 3 George 9 18 1/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyClinic_FirstAid 7#AddFriendshipPoints Harvey 35/viewport 11 17 true/pause 400/message \"В приёмной стоят коробка бинтов и учебный манекен. Сэм уже лежит на стуле с таким видом, будто умирает от скуки.\"/speak Harvey \"Сегодня короткое занятие по первой помощи. Всё отрабатываем на манекене. Сэм, тебя в программу не включали.$0\"/speak Sam \"Я могу достоверно стонать!$h\"/speak George \"Я пришёл посмотреть, сколько времени вы потратите на один бинт.$a\"/speak Maru \"Таймер работает. И манекен тоже. Хотя доктор проверил его три раза.$h\"/speak Harvey \"@, поможешь? Можно показать на манекене, прочитать условие задачи или следить за временем.$0\"/quickQuestion #Помочь с учебной повязкой#Прочитать задачу про вызов помощи#Взять таймер и остановить спектакль Сэма(break)message \"Мару придерживает манекен, пока вы с Харви разбираете учебную повязку. Сэм предлагает нарисовать на ней молнию.\"\\speak Harvey \"Молния не обязательна. Главное — аккуратно и по заданию.$h\"\\action AddMail Current HarveyMemory_Lesson_Bandage Received\\friendship Maru 25(break)message \"Ты читаешь карточку. Джордж первым замечает, что в учебном адресе забыли номер дома.\"\\speak George \"Как к вам приедут, если вы даже адрес сообщить не можете?$a\"\\speak Harvey \"Справедливо. Это и был наш вопрос с подвохом. Теперь будет — благодаря вам.$h\"\\action AddMail Current HarveyMemory_Lesson_Address Received\\friendship George 25(break)message \"Ты запускаешь таймер. Сэм тут же садится ровно.\"\\speak Sam \"Когда время настоящее, умирать скучно.$h\"\\speak Maru \"Впишу это в отчёт о занятии.$h\"\\action AddMail Current HarveyMemory_Lesson_Timer Received\\friendship Sam 25/speak George \"Бинт ровный. Адрес полный. Можно расходиться.$0\"/speak Harvey \"Занятие окончено. И спасибо за помощь — одному мне пришлось бы лечить актёрскую карьеру Сэма.$h\"/friendship Harvey 35/addConversationTopic HarveyClinic_FirstAid 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Anniversary A2 — второй год, ужин на кухне",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulAnniversary.A2_Kitchen/Time 1800 2400/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyMarriage_AnniversarySecond Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulAnniversary.A2_Kitchen": "harveys_theme_jazz/12 7/farmer 11 7 1 Harvey 13 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMarriage_SecondAnniversary 3#AddItem (O)221 1#AddFriendshipPoints Harvey 40/pause 500/message \"Харви встречает тебя с маленьким тортом. На фартуке мука, на щеке — тоже.\"/speak Harvey \"Два года. Я хотел приготовить ужин из трёх блюд.$l#$b#Одно получилось. Второе теперь сухарь. Третье я решил не называть.$h\"/quickQuestion #Попробовать торт#Стереть муку с его щеки#Предложить доесть вчерашний суп(break)message \"Торт немного кривой и очень вкусный. Харви явно ждал оценки.\"\\speak Harvey \"Правда? Тогда рецепт сохраняем. Температуру духовки — исправляем.$h\"\\action AddMail Current HarveyMemory_Anniversary_Cake Received(break)message \"Ты стираешь муку. Он на секунду закрывает глаза и улыбается.\"\\speak Harvey \"Вот. Ради этого я готов ещё что-нибудь сжечь.$l\"\\action AddMail Current HarveyMemory_Anniversary_Flour Received(break)speak Harvey \"Суп, торт и ты. Убедительная программа. Почему я составлял свою два вечера?$h\"\\action AddMail Current HarveyMemory_Anniversary_Soup Received/speak Harvey \"В прошлом году я готовил речь. В этом хотел ужин. В следующем, пожалуй, просто заранее освобожу вечер.$l\"/message \"Он ставит торт между вами и убирает часы в ящик. Сегодня можно никуда не торопиться.\"/addItem (O)221 1/friendship Harvey 40/addConversationTopic HarveyMarriage_SecondAnniversary 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Anniversary A3 — третий и следующие годы, вдвоём",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulAnniversary.A3_Together/Time 1800 2400/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryLater Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulAnniversary.A3_Together": "harveys_theme_jazz/12 7/farmer 11 7 1 Harvey 13 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMarriage_LaterAnniversary 3#AddFriendshipPoints Harvey 40/pause 500/message \"На столе две чашки. Харви освободил место рядом с собой и отложил книгу раскрытой вниз.\"/speak Harvey \"С годовщиной, солнышко. У меня готов ужин. Проверенный. Суп не подводит.$h\"/quickQuestion #Вспомнить первую годовщину#Спросить, что он читал#Предложить помечтать о следующем годе(break)speak Harvey \"Плед на пляже и моя ужасная речь? Я хранил её в кармане и боялся забыть каждое слово.$l\"\\message \"Ты напоминаешь ему одно из слов. Он смеётся: помнит все.\"\\action AddMail Current HarveyMemory_Later_Remember Received(break)speak Harvey \"Каталог моделей. На странице девятнадцать есть самолёт, для которого у нас совершенно нет места.$h\"\\message \"Вы меряете ладонями пустую полку. Места, конечно, достаточно.\"\\action AddMail Current HarveyMemory_Later_Plane Received(break)speak Harvey \"Хочу больше таких вечеров. И съездить с тобой к морю просто так, без сумки врача.$l\"\\action AddMail Current HarveyMemory_Later_Plans Received/speak Harvey \"Раньше я репетировал, что скажу тебе вечером. Теперь слышу ключ в двери — и всё нужное само находится.$l\"/friendship Harvey 40/addConversationTopic HarveyMarriage_LaterAnniversary 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HO_AnniversaryFamily": "false"
+      }
+    },
+    {
+      "LogName": "Anniversary A3 — третий и следующие годы, семья",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulAnniversary.A3_Together/Time 1800 2400/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryLater Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulAnniversary.A3_Together": "harveys_theme_jazz/12 7/farmer 11 7 1 Harvey 13 6 2 Arend 14 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMarriage_LaterAnniversary 3#AddMail Current HarveyFamily_PhotoTaken Received#AddFriendshipPoints Harvey 40#AddFriendshipPoints Arend 25/addTemporaryActor HarveyFamilyChild 16 32 12 7 0 true Character FamilyChild/pause 500/message \"На столе торт, под столом игрушка, в руках Аренда фотоаппарат. Харви безуспешно пытается добиться, чтобы все посмотрели в одну сторону.\"/speak Arend \"За всю мою практику никто не сопротивлялся фотографии так убедительно.$h\"/speak Harvey \"Пап, можно без вспышки. И без двадцати попыток. У нас годовщина, а не обследование.$h\"/quickQuestion #Сфотографироваться всем вместе#Поставить в центр малыша#Предложить смешное фото без позирования(break)message \"Аренд ставит таймер и едва успевает встать рядом. На снимке его очки снова на лбу.\"\\action If !PLAYER_HAS_MAIL Current HarveyFamily_PhotoTaken Received ## AddMail Current HarveyMemory_Photo_Together Received(break)message \"Малыш держит игрушку перед объективом. У самолёта получилось особенно торжественное лицо.\"\\action If !PLAYER_HAS_MAIL Current HarveyFamily_PhotoTaken Received ## AddMail Current HarveyMemory_Photo_Child Received(break)message \"Харви смеётся, Аренд машет рукой, а ты пытаешься поймать падающую игрушку. Щёлк!\"\\action If !PLAYER_HAS_MAIL Current HarveyFamily_PhotoTaken Received ## AddMail Current HarveyMemory_Photo_Laugh Received/speak Arend \"Напечатаю и пришлю. Такие фотографии должны висеть там, где их видят каждый день.$0\"/speak Harvey \"С годовщиной, любимая. Посмотри, сколько нас теперь.$l\"/action AddMail Current HarveyFamily_PhotoTaken Received/friendship Harvey 40/friendship Arend 25/addConversationTopic HarveyMarriage_LaterAnniversary 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HO_AnniversaryFamily": "true"
+      }
+    },
+    {
+      "LogName": "Family — реплики Харви после домашних сцен",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyFamily_Birds": "Папа завёл отдельную страницу для наших прогулок. В графе «наблюдатель» уже четыре имени.$h",
+        "HarveyFamily_Toy": "$query PLAYER_HAS_MAIL Current HarveyMemory_Toy_Box Received#Коробку пока не выбрасывай. У неё первое место в испытаниях.$h|Самолётик пережил испытания. А я научился не усложнять игрушки. Почти.$h",
+        "HarveyFamily_Drawing": "Если на рисунке я зелёный, значит, буду зелёным. Место на стене уже присмотрел.$l",
+        "HarveyMarriage_SecondAnniversary": "$query PLAYER_HAS_MAIL Current HarveyMemory_Anniversary_Soup Received#На следующую годовщину готовлю суп. Этот план ты уже одобрила.$h|Рецепт торта сохранил. Подгоревшую часть инструкции — исправил.$h",
+        "HarveyMarriage_LaterAnniversary": "Спасибо за вчерашний вечер. Сегодня я опять на смене, но домой уже хочется.$l"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "Relationship:Harvey": "Married"
+      }
+    },
+    {
+      "LogName": "First aid — Harvey вспоминает занятие",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyClinic_FirstAid": "$query PLAYER_HAS_MAIL Current HarveyMemory_Lesson_Timer Received#Сэм предложил проводить занятия с секундомером. По-моему, он боится твоего взгляда больше, чем моего.$h|Спасибо за помощь на занятии. В следующий раз Сэму дадим роль здорового прохожего.$h"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "LogName": "First aid — Sam вспоминает занятие",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Entries": {
+        "HarveyClinic_FirstAid": "$query PLAYER_HAS_MAIL Current HarveyMemory_Lesson_Timer Received#Я теперь умею выздоравливать по таймеру. Мару говорит, это бесполезный навык.$h|Доктор запретил стонать без задания. Мой талант опять пропадает.$h"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "LogName": "First aid — Maru вспоминает занятие",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Entries": {
+        "HarveyClinic_FirstAid": "$query PLAYER_HAS_MAIL Current HarveyMemory_Lesson_Bandage Received#Та учебная повязка ещё держится. Я оставила её на манекене до следующего занятия.$h|Занятие удалось. Манекен цел, Сэм жив, доктор даже успел пообедать.$h"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "LogName": "First aid — George вспоминает занятие",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Entries": {
+        "HarveyClinic_FirstAid": "$query PLAYER_HAS_MAIL Current HarveyMemory_Lesson_Address Received#Адрес на карточке исправили. Хоть какая-то польза от моего визита.$h|В следующий раз пусть учат молодых не оставлять доски поперёк дорожек.$a"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "LogName": "Family — Аренд после прогулок и рисунка",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Arend",
+      "Entries": {
+        "HarveyFamily_Birds": "Следующий вид ищем вместе. Блокнот у меня, панамки — у сына. Всё распределено.$h",
+        "HarveyFamily_Toy": "Сын всю ночь собирал игрушку. А малыш потом играл коробкой. Воспитание продолжается.$h",
+        "HarveyFamily_Drawing": "$query PLAYER_HAS_MAIL Current HarveyMemory_Drawing_Birds Received#Три птицы на нашем портрете. Всех зовут «пи». Теперь не перепутаю.$h|На рисунке мы все поместились. Даже очки нарисованы. Хорошая семья.$h"
+      },
+      "When": {
+        "ArendEnabled": "true",
+        "Relationship:Harvey": "Married"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/KeepsakeSprites",
+      "FromFile": "assets/Furniture/keepsakes.png"
+    },
+    {
+      "LogName": "Keepsakes — памятная мебель",
+      "Action": "EditData",
+      "Target": "Data/Furniture",
+      "Entries": {
+        "{{ModId}}_Keepsake_FamilyDrawing": "HarveyKeepsake_FamilyDrawing/painting/2 2/2 2/1/0/0/Семейный рисунок/0/Mods\\{{ModId}}\\KeepsakeSprites/true",
+        "{{ModId}}_Keepsake_ModelPlane": "HarveyKeepsake_ModelPlane/decor/2 1/2 1/1/0/0/Наш самолёт/2/Mods\\{{ModId}}\\KeepsakeSprites/true",
+        "{{ModId}}_Keepsake_PressedFlower": "HarveyKeepsake_PressedFlower/painting/2 2/2 2/1/0/0/Цветок с прогулки/4/Mods\\{{ModId}}\\KeepsakeSprites/true",
+        "{{ModId}}_Keepsake_AnniversaryNote": "HarveyKeepsake_AnniversaryNote/painting/2 2/2 2/1/0/0/Записка с годовщины/6/Mods\\{{ModId}}\\KeepsakeSprites/true",
+        "{{ModId}}_Keepsake_FamilyPhoto": "HarveyKeepsake_FamilyPhoto/painting/2 2/2 2/1/0/0/Семейная фотография/8/Mods\\{{ModId}}\\KeepsakeSprites/true"
+      }
+    },
+    {
+      "LogName": "Keepsakes — описания и память о выборе",
+      "Action": "EditData",
+      "Target": "Mods/{{ModId}}/Keepsakes",
+      "Entries": {
+        "{{ModId}}_Keepsake_FamilyDrawing": {
+          "Description": "Семейный рисунок в деревянной рамке. Несколько цветных кружков, очки Аренда и дата на обороте.",
+          "HarveyLine": "Вот этот зелёный — я. Утверждено автором. Спорить с художником я не собираюсь.",
+          "ArendLine": "Узнаю свои очки. В следующий раз попрошу нарисовать их на лбу — так будет ещё точнее.",
+          "Choices": [
+            {
+              "Flag": "HarveyMemory_Drawing_Birds",
+              "Description": "Над всей семьёй летают три птицы. Под каждой Аренд подписал: «пи». На обороте — дата вашего вечера."
+            },
+            {
+              "Flag": "HarveyMemory_Drawing_Home",
+              "Description": "Вся семья стоит перед домом с огромной дверью. «Чтобы все поместились», — написал Харви на обороте."
+            },
+            {
+              "Flag": "HarveyMemory_Drawing_Plane",
+              "Description": "Самолёт везёт всю семью. Крыло нарисовано особенно аккуратно: его помогал выводить Харви."
+            }
+          ]
+        },
+        "{{ModId}}_Keepsake_ModelPlane": {
+          "Description": "Небольшая модель самолёта. Одно крыло вы придерживали вместе, пока высыхал клей.",
+          "HarveyLine": "Это крыло до сих пор самое ровное. Вторая пара рук оказалась полезнее инструкции."
+        },
+        "{{ModId}}_Keepsake_PressedFlower": {
+          "Description": "Засушенный цветок под стеклом. На бумажной полоске почерком Харви: «С нашей прогулки».",
+          "HarveyLine": "В тот вечер я три раза проверил корзину и всё равно забыл салфетки. А ты даже не заметила."
+        },
+        "{{ModId}}_Keepsake_AnniversaryNote": {
+          "Description": "Записка с первой годовщины. «Состояние: любима. Рекомендации: продолжать». Внизу осталось место для ответа.",
+          "HarveyLine": "Почерк ужасный, согласен. Но это заключение я бы и сейчас подписал.",
+          "Choices": [
+            {
+              "Flag": "HarveyMemory_FirstAnniversary_Wrote",
+              "Description": "Под запиской Харви твой ответ: «Лечащий врач тоже любим». Две подписи стоят совсем рядом."
+            },
+            {
+              "Flag": "HarveyMemory_FirstAnniversary_Shoulder",
+              "Description": "Записка с первой годовщины. На краешке осталась песчинка с пляжа, где вы сидели плечом к плечу."
+            },
+            {
+              "Flag": "HarveyMemory_FirstAnniversary_HisCard",
+              "Description": "Записка с первой годовщины. На обороте твоё имя — экстренный контакт. Теперь у врача тоже есть к кому обратиться."
+            }
+          ]
+        },
+        "{{ModId}}_Keepsake_FamilyPhoto": {
+          "Description": "Фотография с семейной годовщины. Торт, игрушка и люди, которые едва поместились в кадр.",
+          "HarveyLine": "Я хотел, чтобы все посмотрели в камеру. Хорошо, что не получилось. Так гораздо больше похоже на нас.",
+          "ArendLine": "Хорошо, что я взял фотоаппарат. Словами этот вечер было бы труднее пересказать.",
+          "Choices": [
+            {
+              "Flag": "HarveyMemory_Photo_Together",
+              "Description": "Аренд едва успел к таймеру. Очки на лбу, плечи рядом — вся семья наконец в одном кадре."
+            },
+            {
+              "Flag": "HarveyMemory_Photo_Child",
+              "Description": "В центре снимка малыш с игрушечным самолётом. Взрослые видны чуть меньше, зато никто не спорит с композицией."
+            },
+            {
+              "Flag": "HarveyMemory_Photo_Laugh",
+              "Description": "Харви смеётся, Аренд машет, игрушка падает. Самый нерезкий и самый любимый семейный снимок."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Keepsakes — письма с предметами",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_mailKeepsake_FamilyDrawing": "@,^^Рамка готова. Зелёного человека поправлять не стал — художник лучше знает.^^— Харви%item id (F){{ModId}}_Keepsake_FamilyDrawing 1%%[#]Рисунок в рамке",
+        "{{ModId}}_mailKeepsake_ModelPlane": "@,^^Нашёл место для новой модели, а эту хочу отдать тебе. Крыло, которое ты придерживала, до сих пор самое ровное.^^— Харви%item id (F){{ModId}}_Keepsake_ModelPlane 1%%[#]Ровное крыло",
+        "{{ModId}}_mailKeepsake_PressedFlower": "@,^^Этот цветок всё это время лежал в моём блокноте. Попросил Робин сделать маленькую рамку. Пусть будет у тебя.^^— Харви%item id (F){{ModId}}_Keepsake_PressedFlower 1%%[#]С той прогулки",
+        "{{ModId}}_mailKeepsake_AnniversaryNote": "@,^^Переписал записку с нашей первой годовщины. Твой ответ тоже сохранил, если он был. На стене ей будет лучше, чем в кармане халата.^^— Харви%item id (F){{ModId}}_Keepsake_AnniversaryNote 1%%[#]Заключение в рамке",
+        "{{ModId}}_mailKeepsake_FamilyPhoto": "@,^^Снимок напечатал. Никто не смотрит туда, куда я просил, и это лучшая фотография в моей жизни.^^Обнимаю. Аренд%item id (F){{ModId}}_Keepsake_FamilyPhoto 1%%[#]Все в кадре"
+      }
+    },
+    {
+      "LogName": "Keepsakes — награды за сцены, один раз на сохранение",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_triggerKeepsake_FamilyDrawing": {
+          "Id": "{{ModId}}_triggerKeepsake_FamilyDrawing",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.G3_Drawing, !PLAYER_HAS_MAIL Current {{ModId}}_mailKeepsake_FamilyDrawing Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailKeepsake_FamilyDrawing now"
+          ]
+        },
+        "{{ModId}}_triggerKeepsake_ModelPlane": {
+          "Id": "{{ModId}}_triggerKeepsake_ModelPlane",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current {{ModId}}_eventHarveyEveningPlanes, !PLAYER_HAS_MAIL Current {{ModId}}_mailKeepsake_ModelPlane Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailKeepsake_ModelPlane now"
+          ]
+        },
+        "{{ModId}}_triggerKeepsake_PressedFlower": {
+          "Id": "{{ModId}}_triggerKeepsake_PressedFlower",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate, !PLAYER_HAS_MAIL Current {{ModId}}_mailKeepsake_PressedFlower Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailKeepsake_PressedFlower now"
+          ]
+        },
+        "{{ModId}}_triggerKeepsake_AnniversaryNote": {
+          "Id": "{{ModId}}_triggerKeepsake_AnniversaryNote",
+          "Trigger": "DayStarted",
+          "Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulMarriage.M3_Anniversary\" \"PLAYER_HAS_MAIL Current HarveyJournal_Seen_HarveyOverhaulMarriage.M3_Anniversary Received\", !PLAYER_HAS_MAIL Current {{ModId}}_mailKeepsake_AnniversaryNote Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailKeepsake_AnniversaryNote now"
+          ]
+        },
+        "{{ModId}}_triggerKeepsake_FamilyPhoto": {
+          "Id": "{{ModId}}_triggerKeepsake_FamilyPhoto",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyFamily_PhotoTaken Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailKeepsake_FamilyPhoto Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailKeepsake_FamilyPhoto now"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -11,6 +11,8 @@
 3. Реплики накануне и на следующий день после всех 12 праздников 1.6 (ключи «<сезон>_<день>»,
    тексты — festival_around_data.py), по пяти стадиям. Priority Late + 10: перекрывают старые строки на эти дни
    из harvey_locations/dating/married. Беременность (dialoguesHarveyPregnant.json) — Late + 15, она главнее.
+   У женатого Харви на 21 из этих дат есть и своя домашняя строка в harvey_married.json (Late, FarmHouse).
+   Чтобы она не пропадала, праздничная строка на такие даты звучит в нечётные годы, домашняя — в чётные.
 Запуск:  python scripts/build_festival_content.py
 """
 import json
@@ -19,6 +21,7 @@ import re
 
 from event_builder import CD, H, msg, patch, qq, sp
 from festival_around_data import AROUND, FESTIVAL_DAY_FRIEND
+from skip_actions import complete_skip
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'assets', 'Code', 'festivalsHarvey.json')
@@ -86,15 +89,32 @@ def check_stage(stage, text):
         assert not ROMANTIC.search(text), (stage, 'романтика до отношений', text)
 
 
+def married_home_dates():
+    """Ключи «<сезон>_<день>» из harvey_married.json — домашний слой женатого Харви."""
+    path = os.path.join(ROOT, 'assets', 'Code', 'dialogues', 'harvey_married.json')
+    with open(path, encoding='utf-8') as f:
+        text = re.sub(r'^\s*//.*$', '', f.read(), flags=re.M)
+    data = json.loads(re.sub(r',(\s*[}\]])', r'\1', text), strict=False)
+    return {k for ch in data['Changes'] if ch.get('Target') == 'Characters/Dialogue/Harvey'
+            for k in ch.get('Entries', {}) if re.fullmatch(r'(spring|summer|fall|winter)_\d+', k)}
+
+
 def around_patches():
     out = []
+    home = married_home_dates()
     for stage, when in STAGE_WHEN.items():
         entries = {}
         for day, lines in AROUND.items():
             check_stage(stage, lines[stage])
             entries[day] = lines[stage]
-        out.append({**patch(f'Festival around — накануне и после праздников ({stage})', 'Characters/Dialogue/Harvey',
-                            entries), 'Priority': 'Late + 10', 'When': when})
+        title = f'Festival around — накануне и после праздников ({stage})'
+        if stage == 'married':
+            shared = {k: v for k, v in entries.items() if k in home}
+            entries = {k: v for k, v in entries.items() if k not in home}
+            out.append({**patch(f'{title}, нечётные годы (чётные — harvey_married.json)', 'Characters/Dialogue/Harvey',
+                                shared), 'Priority': 'Late + 10',
+                        'When': {**when, 'Query: {{Year}} % 2 = 1': 'true'}})
+        out.append({**patch(title, 'Characters/Dialogue/Harvey', entries), 'Priority': 'Late + 10', 'When': when})
     for text in FESTIVAL_DAY_FRIEND.values():
         check_stage('friend', text)
     out.append({**patch('Festival around — утро праздника, 3–10 сердец без отношений', 'Characters/Dialogue/Harvey',
@@ -112,11 +132,11 @@ def fkey(eid, season, day):
 
 
 def fscript(actors, topic, body):
-    cmds = ['none', f'{FX} {FY0}', actors, 'skippable',
-            f'setSkipActions AddConversationTopic {topic} 2#AddConversationTopic {CD} 2',
-            'ambientLight 120 120 60', 'pause 600', *body,
-            f'addConversationTopic {topic} 2', f'addConversationTopic {CD} 2',
+    tail = [f'addConversationTopic {topic} 2', f'addConversationTopic {CD} 2',
             'globalFade', 'viewport -1000 -1000', 'end']
+    cmds = ['none', f'{FX} {FY0}', actors, 'skippable',
+            'setSkipActions ' + '#'.join(complete_skip([], [*body, *tail])),
+            'ambientLight 120 120 60', 'pause 600', *body, *tail]
     for c in cmds:
         assert '/' not in c, c
     return '/'.join(cmds)

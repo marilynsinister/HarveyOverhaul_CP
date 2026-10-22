@@ -1,0 +1,23 @@
+Use case: illustration-story.
+Asset: replacement status-icon sprite atlas for a real Stardew Valley mod.
+Generate exactly ONE sprite sheet, FOUR columns and FOUR rows, exactly SIXTEEN equally sized square cells, row-major order. Transparent alpha background, no grid, text, labels, shadows or per-cell background.
+Each individual icon MUST be native 16 by 16 pixel art, enlarged with nearest-neighbor into its cell. ONLY 16 logical pixels across the entire cell. Very large square pixel blocks. Shape occupies 12-14 logical pixels and has a continuous one-logical-pixel dark warm brown outline and 1 pixel transparent margin. At most 5-7 colors per icon. Flat solid color clusters, only 1 shadow tone. Do NOT make detailed high resolution illustrations and pixelate them. These must be readable at 16px! Keep the iconic central subject big. No secondary tiny decorative stars, scattered pixels, colored halos, fancy light effects, gauges or complex faces.
+Warm saturated ivory, orange and teal colors. Violet for sleep and fear. Strong luminous foreground, especially for dark effects. The user disliked tiny muddy detailed icons; simplify to the absolute core silhouette.
+EXACT SUBJECT ORDER left to right, top to bottom:
+1. WET BANDAGE: large diagonal ivory adhesive bandage with one chunky 3x4 blue water drop at lower right. Rectangular bandage with central tan square; no roll.
+2. WOUND TREATMENT: large green outlined shield with ONE bold ivory medical plus in center. Clear medical treatment.
+3. INSOMNIA: a big wide-open cream eye with dark violet iris beneath a tiny silver crescent at upper left. Eye occupies most of cell. Readable distinct eye shape.
+4. THUNDERSTORM: a chunky light blue-gray cloud with ONE large bright yellow zigzag lightning bolt extending underneath.
+5. OVERCOMING FEAR: a big bright gold sun rising over one simple green hill, with 3 short bold rays. Simple sunrise.
+6. SOCIAL ANXIETY: two big cream speech bubbles, the front bubble outlined violet containing a bold violet exclamation mark, rear bubble plain violet. No tiny dots.
+7. REST AT HOME: warm red roof and cream house, with ONE big green heart on the front. No many tiny windows.
+8. CLEAR MIND: a large cream head silhouette in profile facing right, and ONE small green leaf beside it. No brain creases or tiny sparkles.
+9. FATIGUE: heavy half-closed cream eye with thick violet drooping upper lid; no extra crescent, no face, no star.
+10. LONELINESS: one simple blue human bust, large head and shoulders with a single large pale blue tear on the right. No detailed anatomy or clothing.
+11. HUNGER: a large ivory plate with ONE short bold brown fork on its left. Empty plate, no face, no food.
+12. OVERWORK: a bold orange-brown hoe diagonally from lower left to upper right with ONE big teal sweat drop at lower right. Broad tool head, thick handle.
+13. FREEZING COLD: a bold light blue six-arm snowflake, dark blue outline. Strong symmetrical filled silhouette.
+14. FEAR OF DARKNESS: ONE large bright gold open eye inside a simple deep violet shadow hood. Bright lavender outline so shape is visible on dark game scenes. No black square background.
+15. HIGH STRESS: big red warning triangle with cream exclamation mark. Exactly one symbol, chunky silhouette.
+16. SMELL OF SMOKE: a small orange ember at bottom with TWO thick broad curls of silver-gray smoke rising above. Visible on dark background, no purple spots.
+Focus on true deliberately sparse pixel clusters and readable familiar silhouettes. Preserve exactly 4x4 layout and all 16 identities.

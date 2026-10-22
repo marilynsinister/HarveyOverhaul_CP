@@ -150,6 +150,8 @@ m2 = script(
 # ---------------------------------------------------------------- M3
 m3_key = key(NS, 'M3_Anniversary', 'Time 1800 2300', MARRIED,
              'GameStateQuery PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received',
+             'GameStateQuery !PLAYER_HAS_MAIL Current HarveyMarriage_AnniversarySecond Received',
+             'GameStateQuery !PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryLater Received',
              cooldown=False)
 m3 = script(
     'harveys_theme_jazz', '41 22', 'farmer 40 23 2 Harvey 41 23 2',
@@ -167,14 +169,17 @@ m3 = script(
             [msg('Ты берёшь ручку и пишешь внизу: «Лечащий врач тоже любим. Режим: не спорить с женой».'),
              sp(H, '«Не спорить с женой». Это посягательство на врачебную автономию.$u'),
              sp(H, '…Подписываю.$l'),
+             'action AddMail Current HarveyMemory_FirstAnniversary_Wrote Received',
              'friendship Harvey 40'],
             [msg('Ты кладёшь голову ему на плечо. Он замолкает и укрывает тебя краем пледа.'),
              sp(H, 'Год назад я бы сказал что-нибудь про осанку. Сейчас — просто не двигайся.$l'),
+             'action AddMail Current HarveyMemory_FirstAnniversary_Shoulder Received',
              'friendship Harvey 40'],
             [sp(H, 'Моя? У меня нет карты. Врачи не болеют.$a'), 'pause 400',
              sp(H, '…Ладно, болеют. Ты видела. Ты меня лечила.$s'),
              msg('Он достаёт из кармана вторую карту — новую. На обложке: «Харви». В графе «экстренный контакт» уже вписано твоё имя.'),
              sp(H, 'Заведём её. Вместе.$l'),
+             'action AddMail Current HarveyMemory_FirstAnniversary_HisCard Received',
              'friendship Harvey 45'],
         ]),
         'pause 400',
@@ -345,7 +350,7 @@ m8 = script(
     ])
 
 # ---------------------------------------------------------------- M9 (вместе: лесная аптека)
-m9_key = key(NS, 'M9_ForestPharmacy', 'Season Spring', 'Weather Sunny', 'Time 1000 1600',
+m9_key = key(NS, 'M9_ForestPharmacy', 'Season Spring', 'Weather sunny', 'Time 1000 1600',
              'Friendship Harvey 2700', MARRIED)
 m9 = script(
     'continue', '49 14', 'farmer 48 14 1 Harvey 49 14 3',
@@ -370,7 +375,7 @@ m9 = script(
     ])
 
 # ---------------------------------------------------------------- M10 (танец у фонтана)
-m10_key = key(NS, 'M10_FountainDance', 'DayOfWeek Sat', 'Weather Sunny', 'Time 2000 2400',
+m10_key = key(NS, 'M10_FountainDance', 'DayOfWeek Sat', 'Weather sunny', 'Time 2000 2400',
               'Friendship Harvey 2800', MARRIED)
 m10 = script(
     'none', '26 28', 'farmer 25 30 1 Harvey 26 30 3',

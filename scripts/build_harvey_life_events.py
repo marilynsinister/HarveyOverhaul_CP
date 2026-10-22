@@ -64,7 +64,7 @@ h1 = script(
     ])
 
 # ---------------------------------------------------------------- H2
-h2_key = key(NS, 'H2_Doubts', 'Weather Sunny', 'Time 1800 2100', 'Friendship Harvey 2000', seen('H1_Offer'))
+h2_key = key(NS, 'H2_Doubts', 'Weather sunny', 'Time 1800 2100', 'Friendship Harvey 2000', seen('H1_Offer'))
 h2 = script(
     'none', '40 20', 'farmer 38 21 1 Harvey 41 21 2',
     skip_cd('AddConversationTopic HarveyLife_Doubts 3'),
@@ -102,7 +102,7 @@ def h3(went_go):
     other = 'H3_Answer' if went_go else 'H3_Answer_Go'
     flag = ('GameStateQuery PLAYER_HAS_MAIL Current HarveyLife_SaidGo Received' if went_go
             else 'GameStateQuery !PLAYER_HAS_MAIL Current HarveyLife_SaidGo Received')
-    k = key(NS, eid, 'Weather Sunny', 'Time 0800 1100', 'Friendship Harvey 2000', seen('H2_Doubts'),
+    k = key(NS, eid, 'Weather sunny', 'Time 0800 1100', 'Friendship Harvey 2000', seen('H2_Doubts'),
             flag, f'GameStateQuery !PLAYER_HAS_SEEN_EVENT Current {NS}.{other}')
     opening = (sp(H, 'Ты сказала «езжай». И знаешь, что случилось? Я впервые за двадцать лет выбирал, а не бежал.$s#$b#И выбрал остаться.$0')
                if went_go else
@@ -134,7 +134,7 @@ h3_key, h3_script = h3(False)
 h3g_key, h3g_script = h3(True)
 
 # ---------------------------------------------------------------- K1
-k1_key = key(NS, 'K1_TwoWars', 'Weather Sunny', 'Time 1700 2000', 'Friendship Harvey 1500', YEAR2)
+k1_key = key(NS, 'K1_TwoWars', 'Weather sunny', 'Time 1700 2000', 'Friendship Harvey 1500', YEAR2)
 k1 = script(
     'none', '12 90', 'farmer 12 92 0 Harvey 11 90 2 Kent 13 90 2',
     skip_cd('AddConversationTopic HarveyLife_Kent 5'),
@@ -168,7 +168,7 @@ k1 = script(
     ])
 
 # ---------------------------------------------------------------- L1
-l1_key = key(NS, 'L1_LinusTea', 'Weather Sunny', 'Time 1600 1900', 'Friendship Harvey 1000')
+l1_key = key(NS, 'L1_LinusTea', 'Weather sunny', 'Time 1600 1900', 'Friendship Harvey 1000')
 l1 = script(
     'continue', '32 9', 'farmer 32 11 0 Harvey 33 9 3 Linus 31 9 1',
     skip_cd('AddConversationTopic HarveyLife_Linus 5'),
@@ -200,7 +200,7 @@ l1 = script(
 # ---------------------------------------------------------------- LW1
 # Через 2 дня после eventRescueOperation (тема HarveyLewis_Wait ставится в конце сцены спасения).
 # Реплики Харви к фермерше — без «ты/Вы»: сцена доступна на любой стадии отношений.
-lw1_key = key(NS, 'LW1_LewisSorry', 'Weather Sunny', 'Time 0900 1600',
+lw1_key = key(NS, 'LW1_LewisSorry', 'Weather sunny', 'Time 0900 1600',
               'GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventRescueOperation',
               'GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyLewis_Wait')
 GIFT = ['addItem 340 1', 'addItem 216 1']  # мёд и хлеб

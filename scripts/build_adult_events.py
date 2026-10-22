@@ -72,7 +72,7 @@ a1 = script(
     ])
 
 # ---------------------------------------------------------------- A2
-a2_key = key(NS, 'A2_NightSwim', 'Season Summer', 'Weather Sunny', 'Time 2000 2400',
+a2_key = key(NS, 'A2_NightSwim', 'Season Summer', 'Weather sunny', 'Time 2000 2400',
              'Friendship Harvey 3000', MARRIED)
 a2 = script(
     'none', '41 22', 'farmer 40 23 2 Harvey 41 23 2',
@@ -210,7 +210,7 @@ a5 = script(
     ])
 
 # ---------------------------------------------------------------- A6 (виноградник)
-a6_key = key(NS, 'A6_Vineyard', 'Season Summer Fall', 'Weather Sunny', 'Time 1900 2300',
+a6_key = key(NS, 'A6_Vineyard', 'Season Summer Fall', 'Weather sunny', 'Time 1900 2300',
              'Friendship Harvey 3200', MARRIED)
 a6 = script(
     'harveys_theme_jazz', '29 48', 'farmer 28 49 1 Harvey 30 49 3',

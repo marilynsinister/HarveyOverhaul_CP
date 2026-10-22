@@ -83,6 +83,11 @@ Example: "%Abigail is lost in her music."
       "AllowValues": "true, false",
       "Default": "true",
       "Description": "Прошлое фермерши: побег из готоранского плена, шрамы и ожоги на спине и руках, флешбеки в грозу. Выключи, если не хочешь таких сцен: события останутся, но без плена и шрамов."
+    },
+    "ArendEnabled": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Аренд — отец Харви, профессор психиатрии: персонаж, сцены, записи в журнале. Живёт наверху у Харви. Выключи, если не нужен."
     }
   },
   "DynamicTokens": [
@@ -121,7 +126,32 @@ Example: "%Abigail is lost in her music."
     { "Name": "HO_FarmY1", "Value": "27", "When": { "FarmType": "FrontierFarm" } },
     { "Name": "HO_FarmY2", "Value": "28", "When": { "FarmType": "FrontierFarm" } },
     { "Name": "HO_FarmY3", "Value": "29", "When": { "FarmType": "FrontierFarm" } },
-    { "Name": "HO_FarmY5", "Value": "31", "When": { "FarmType": "FrontierFarm" } }
+    { "Name": "HO_FarmY5", "Value": "31", "When": { "FarmType": "FrontierFarm" } },
+    // Сцены E11/E15 в доме (Data/Events/FarmHouse): координаты дома ур. 1; в доме без улучшения
+    // (ур. 0, 12×12, дверь 3 11) — сдвинуты влево. С ур. 2 игра сама сдвигает координаты событий.
+    { "Name": "HO_HomeFX", "Value": "11" },
+    { "Name": "HO_HomeHX", "Value": "12" },
+    { "Name": "HO_HomeVX", "Value": "10" },
+    { "Name": "HO_HomeFX", "Value": "2", "When": { "FarmhouseUpgrade": "0" } },
+    { "Name": "HO_HomeHX", "Value": "3", "When": { "FarmhouseUpgrade": "0" } },
+    { "Name": "HO_HomeVX", "Value": "5", "When": { "FarmhouseUpgrade": "0" } },
+    // «Вечерние проверки» (StressMeter, вкладка «Доверие»): на «пока нет»/«нет» Харви вечером без повода не приходит.
+    // Без StressMeter условие всегда истинно (GSQ TRUE).
+    { "Name": "HO_EveningChecksQuery", "Value": "TRUE" },
+    { "Name": "HO_EveningChecksQuery", "Value": "marilynsinister.HarveyStressMeter_CONSENT EveningChecks Allowed", "When": { "HasMod": "marilynsinister.HarveyStressMeter" } },
+    // «Держать за руку в грозу»: C8 (карта шрамов) ждёт, пока она не против прикосновений.
+    { "Name": "HO_HoldHandQuery", "Value": "TRUE" },
+    { "Name": "HO_HoldHandQuery", "Value": "marilynsinister.HarveyStressMeter_CONSENT HoldHand Allowed", "When": { "HasMod": "marilynsinister.HarveyStressMeter" } },
+    // В семейной версии поздней годовщины участвуют Аренд и уже ходящий ребёнок.
+    { "Name": "HO_AnniversaryFamily", "Value": "false" },
+    { "Name": "HO_AnniversaryFamily", "Value": "true", "When": {
+      "ArendEnabled": "true", "HasFlag": "HarveyFamily_ToddlerReady",
+      "HasSeenEvent": "HarveyOverhaulArend.A1_Arrival"
+    } },
+    { "Name": "HO_OutingArend", "Value": "false" },
+    { "Name": "HO_OutingArend", "Value": "true", "When": {
+      "ArendEnabled": "true", "HasSeenEvent": "HarveyOverhaulArend.A1_Arrival"
+    } }
   ],
   "Changes": [
     //NPCDispositions
@@ -261,7 +291,7 @@ Example: "%Abigail is lost in her music."
       "FromFile": "assets/Code/dialogues/harvey_proximity_injury.json"
     },
     {
-      "LogName": "Load Harvey proximity pregnancy dialogue (C# bubbles — needs Injury hook)",
+      "LogName": "Load Harvey proximity pregnancy dialogue (C# bubbles, Injury DomesticSpouseCareManager)",
       "Action": "Load",
       "Target": "Data/HarveyOverhaul/HarveyProximityPregnancyDialogue",
       "FromFile": "assets/Code/dialogues/harvey_proximity_pregnancy.json"
@@ -431,14 +461,55 @@ Example: "%Abigail is lost in her music."
       "Action": "Include",
       "FromFile": "assets/Code/medicalItems.json"
     },
+    // Награды за доверие: бульон, скидка в клинике, меньше проверок, сумка Харви (флаги HarveyCareTrust_L1–L4 от StressMeter)
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/trustRewards.json"
+    },
+    // Аптекарский сад: четыре травы, семена, рецепты и цепочка поручений Харви.
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/herbalGarden.json"
+    },
+    // Серии «Хороших недель»: письма за 2 недели и за месяц, пикник у крыльца — scripts/build_good_week.py (C#: GoodWeekService)
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/goodWeek.json"
+    },
     {
       "Action": "Include",
       "FromFile": "assets/Code/clinicErrands.json"
     },
     {
-      // Сезонные сцены клиники: день прививок (весна), тент на луау и тепловой удар (лето). Генератор: scripts/build_clinic_seasonal.py
+      // Сезонные сцены клиники: весна — прививки, лето — луау и тепловой удар, осень — грибы и варенье, зима — гололёд и бульон. Генератор: scripts/build_clinic_seasonal.py
       "Action": "Include",
       "FromFile": "assets/Code/clinicSeasonal.json"
+    },
+    {
+      // Харви-отец: записка и поздравления после появления ребёнка, «Первая ночь», «Радионяня», домашние реплики.
+      // Генератор: scripts/build_fatherhood.py (внутри When: брак и непустой ChildNames)
+      "Action": "Include",
+      "FromFile": "assets/Code/fatherhood.json"
+    },
+    {
+      // Семья с Арендом, урок первой помощи, памятные вещи, годовщины по годам брака.
+      "Action": "Include",
+      "FromFile": "assets/Code/familyLife.json",
+      "When": { "HasMod": "marilynsinister.HarveyOverhaul.Core" }
+    },
+    {
+      // День рождения (дата из Happy Birthday) и собственный район Зузу. Без постановки на Farm/FarmHouse.
+      "Action": "Include",
+      "FromFile": "assets/Code/outings.json",
+      "When": { "HasMod": "marilynsinister.HarveyOverhaul.Core" }
+    },
+    {
+      // Аренд — отец Харви, профессор психиатрии: персонаж, расписание, подарки, 12 сцен (приезд, разговоры, семья).
+      // Генератор: scripts/build_arend.py (портрет и спрайт — scripts/build_arend_sprites.py)
+      // Можно выключить настройкой ArendEnabled (по умолчанию true).
+      "Action": "Include",
+      "FromFile": "assets/Code/arend.json",
+      "When": { "ArendEnabled": "true" }
     },
     {
       "Action": "Include",
@@ -463,11 +534,20 @@ Example: "%Abigail is lost in her music."
     },
     {
       "Action": "Include",
+      "FromFile": "assets/Code/introRecovery.json"
+    },
+    {
+      "Action": "Include",
       "FromFile": "assets/Code/eventsMineRescue.json"
     },
     {
       "Action": "Include",
       "FromFile": "assets/Code/eventsExternalRescue.json"
+    },
+    // Потеря сознания: сцена гибели в клинике (Dating/Engaged), письма, реплики при повторах (C#: PassOutHandler)
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/collapse.json"
     },
     {
       "Action": "Include",
@@ -532,6 +612,11 @@ Example: "%Abigail is lost in her music."
       "Action": "Include",
       "FromFile": "assets/Code/eventsMarriageRotation.json"
     },
+    // Повторяемые сцены заботы (гроза, осмотры, ночь на площади…) возвращаются после кулдауна — scripts/build_repeat_scenes.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/triggersRepeatScenes.json"
+    },
     // Праздники: реплики Харви по стадиям и вечер после праздника — scripts/build_festival_content.py
     {
       "Action": "Include",
@@ -557,6 +642,11 @@ Example: "%Abigail is lost in her music."
     {
       "Action": "Include",
       "FromFile": "assets/Code/dialogues/harvey_wellbeing.json"
+    },
+    // Жена на больничном — Харви поливает, кормит животных и питомца (C#: SpouseChoresManager)
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/dialogues/harvey_chores.json"
     },
     // Вкладка «История» в окне Харви — scripts/build_story_journal.py
     {

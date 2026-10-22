@@ -1,0 +1,26 @@
+{
+  "Name": "Harvey Overhaul - Stress",
+  "Author": "marilynsinister",
+  "Version": "1.0.0",
+  "Description": "Реакции на стресс через дебаффы и лечение у Харви + внутриигровой справочник (StardewUI).",
+  "UniqueID": "marilynsinister.HarveyStressMeter",
+  "EntryDll": "HarveyStressMeter.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "marilynsinister.HarveyOverhaul.Core",
+      "IsRequired": true,
+      "MinimumVersion": "1.0.0"
+    },
+    {
+      "UniqueID": "focustense.StardewUI",
+      "IsRequired": false,
+      "MinimumVersion": "0.6.1"
+    }
+  ]
+}

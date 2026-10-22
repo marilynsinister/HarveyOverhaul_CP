@@ -7,6 +7,11 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from validate_event_coords import strip_jsonc  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets" / "Code"
 OUT = ROOT / "docs" / "harvey-tone-final-validation.md"
@@ -49,9 +54,10 @@ def strip_cp_json(text: str) -> str:
 
 
 def load_json(path: Path) -> tuple[object | None, str | None]:
-    raw = path.read_text(encoding="utf-8")
+    """Как Content Patcher: комментарии, висячие запятые и переносы строк внутри строк допустимы."""
+    raw = path.read_text(encoding="utf-8-sig")
     try:
-        return json.loads(strip_cp_json(raw)), None
+        return json.loads(strip_jsonc(raw), strict=False), None
     except json.JSONDecodeError as e:
         return None, f"{path.name}:{e.lineno}:{e.colno} {e.msg}"
 
@@ -129,6 +135,16 @@ def gate_info(when: dict | None) -> dict:
         g["hearts_min"] = min(nums) if nums else None
         g["hearts_max"] = max(nums) if nums else None
     return g
+
+
+# Ключи, которые C# (HarveyOverhaulInjury) выбирает сам по стадии отношений, — гейт в имени, а не в When:
+#   HarveyCareTrust_*_{Formal|Friendly|Dating|Married}_XX и HiddenInjury *_Married/_Dating — DialogueManager /
+#   HiddenInjuryDialogueFlow; HarveyMod_Spouse_* — DomesticSpouseCareManager (только брак или помолвка).
+CSHARP_STAGE_KEY = re.compile(r"(_(Dating|Married|Engaged)(_|$))|^HarveyMod_Spouse_")
+
+
+def is_csharp_stage_key(key: str) -> bool:
+    return bool(CSHARP_STAGE_KEY.search(key))
 
 
 def is_dating_married_gate(when: dict | None) -> bool:
@@ -271,7 +287,8 @@ def main():
 
             for k, v, when, target in collect_dialogue_keys(data_parsed):
                 dialogue_by_key[k].append((path.name, when, target, v))
-                if PET.search(v) and not is_dating_married_gate(when) and "MarriageDialogue" not in target:
+                if (PET.search(v) and not is_dating_married_gate(when) and "MarriageDialogue" not in target
+                        and not is_csharp_stage_key(k) and "Harvey" in target):
                     if not (when and any(x.startswith("Pregnant") for x in when)):
                         hm = gate_info(when).get("hearts_max")
                         if hm is None or hm >= 3 or gate_info(when)["type"] == "ungated":

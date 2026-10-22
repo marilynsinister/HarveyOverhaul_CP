@@ -6,11 +6,13 @@
   C1 «Длинные рукава»        Town SVE, фонтан, лето, полдень       4♥, после TraumaExam или RescueOperation
   C2 «Хлопок»                Town SVE, крыльцо салуна, вечер       5♥, 2-й год (Кент), после C1
   C3 «Мазь для рубцов»       Hospital, палата A, осень/зима        доверие ≥ TrustedDoctor (флаг StressMeter), после C1
-  C4 «Письмо из Зузу»        Hospital, после письма министерства   7♥, после C3 → выбор: отправить / сжечь / оставить
+  C4 «Письмо из Зузу»        Hospital, после письма министерства   7♥, после C3 → выбор: отправить / сжечь / оставить;
+                             на 2-й год Кент узнаёт печать Ферна и отвечает по выбору, потом благодарит Джоди
   C6 «Чужой в Долине»        BusStop SVE                           8♥, 2-й год, после C4
   C7 «Рукава закатаны»       Beach SVE, лето                       Dating, после C6
-  C8 «Карта, которую не пишут» Farm, крыльцо, вечер                Married, после C7; ответ на письмо — по выбору в C4
-  (C5 «Что я помню» сделана раньше как T1/T2 — eventsTraumaBackstory.json.)
+  C8 «Карта, которую не пишут» Farm, крыльцо, вечер                Married, после C7, «Держать за руку» не запрещено;
+                                                                   ответ на письмо — по выбору в C4
+  (C5 «Что я помню» сделана раньше как T1/T2 — eventsTraumaBackstory.json; T1 ждёт доверия ≥ SafePerson, флаг L3.)
 
 Механика (C#): рубцы на холоде + мазь — HarveyOverhaulInjury/Managers/ScarCareManager.cs;
 огонь как триггер — HarveyStressMeter/Services/FireMemoryService.cs (флаг HarveyBackstory_FireKnown ставит T1).
@@ -43,7 +45,7 @@ def seen(eid):
 
 
 # ---------------------------------------------------------------- C1
-c1_key = key(NS, 'C1_LongSleeves', 'Season Summer', 'Weather Sunny', 'Time 1200 1600',
+c1_key = key(NS, 'C1_LongSleeves', 'Season Summer', 'Weather sunny', 'Time 1200 1600',
              'Friendship Harvey 1000', TRAUMA_SEEN)
 c1 = script(
     'continue', '26 29', 'farmer 25 29 2 Harvey 26 34 0 Gus 29 30 3',
@@ -78,7 +80,7 @@ c1 = script(
     ])
 
 # ---------------------------------------------------------------- C2
-c2_key = key(NS, 'C2_Pop', 'Weather Sunny', 'Time 1900 2300', 'Friendship Harvey 1250', YEAR2, seen('C1_LongSleeves'))
+c2_key = key(NS, 'C2_Pop', 'Weather sunny', 'Time 1900 2300', 'Friendship Harvey 1250', YEAR2, seen('C1_LongSleeves'))
 c2 = script(
     'none', '44 73', 'farmer 44 74 0 Gus 45 72 2 Kent 47 74 3 Harvey 41 74 1',
     skip_cd('AddConversationTopic HarveyScars_Pop 3'),
@@ -175,23 +177,23 @@ c4 = script(
             [sp(H, 'Хорошо. Напишу сегодня. Сухо, по-врачебному — ни одного лишнего слова о тебе.$0'),
              sp(H, 'И покажу тебе перед тем, как запечатать. Каждую строчку.$s'),
              'action AddMail Current HarveyScars_LetterSent Received',
-             'friendship Harvey 30'],
+             'addConversationTopic HarveyScars_AfterSent 4', 'friendship Harvey 30'],
             [sp(H, 'Сожгу. Сам, вечером, во дворе — без тебя. Тебе не нужно на это смотреть.$s'),
              msg('Он убирает конверт во внутренний карман — подальше от твоих глаз.'),
              sp(H, 'Не все долги надо платить бумагой. Этот — точно нет.$0'),
              'action AddMail Current HarveyScars_LetterBurned Received',
-             'friendship Harvey 30'],
+             'addConversationTopic HarveyScars_AfterBurned 4', 'friendship Harvey 30'],
             [msg('Ты убираешь конверт обратно в сумку.'),
              sp(H, 'Правильно. У решений нет срока годности. Надумаешь — заключение будет готово за вечер.$0'),
              'action AddMail Current HarveyScars_LetterKept Received',
-             'friendship Harvey 25'],
+             'addConversationTopic HarveyScars_AfterKept 4', 'friendship Harvey 25'],
         ]),
         sp(H, 'Спасибо, что принесла это мне. Ты ведь могла никому не показывать.$s'),
         'addConversationTopic HarveyScars_Letter 3',
     ])
 
 # ---------------------------------------------------------------- C6
-c6_key = key(NS, 'C6_Stranger', 'Weather Sunny', 'Time 1000 1600', 'Friendship Harvey 2000', YEAR2,
+c6_key = key(NS, 'C6_Stranger', 'Weather sunny', 'Time 1000 1600', 'Friendship Harvey 2000', YEAR2,
              seen('C4_ZuzuLetter'))
 c6 = script(
     'continue', '22 22', 'farmer 20 23 1 Harvey 21 22 2 Kent 26 23 3',
@@ -231,7 +233,7 @@ c6 = script(
     ])
 
 # ---------------------------------------------------------------- C7
-c7_key = key(NS, 'C7_SleevesUp', 'Season Summer', 'Weather Sunny', 'Time 1100 1700', 'Friendship Harvey 2500',
+c7_key = key(NS, 'C7_SleevesUp', 'Season Summer', 'Weather sunny', 'Time 1100 1700', 'Friendship Harvey 2500',
              'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married', seen('C6_Stranger'))
 c7 = script(
     'continue', '40 20', 'farmer 40 21 2 Harvey 41 21 2 Sam 44 19 2 Haley 37 20 1',
@@ -265,8 +267,10 @@ c7 = script(
     ])
 
 # ---------------------------------------------------------------- C8
+# C8 — он касается шрамов: только если «Держать за руку» не запрещено (токен HO_HoldHandQuery, StressMeter).
 c8_key = key(NS, 'C8_Map', 'Time 2000 2400', 'Friendship Harvey 3000',
-             'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married', seen('C7_SleevesUp'))
+             'GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married', 'GameStateQuery {{HO_HoldHandQuery}}',
+             seen('C7_SleevesUp'))
 c8 = script(
     'none', f'{FX} {FY0}', f'farmer {FX} {FY1} 2 Harvey {FX} {FY2} 0',
     skip_cd('AddConversationTopic HarveyScars_Map 3'),
@@ -317,6 +321,9 @@ TOPICS_ANY = {
     'HarveyScars_SalveUsed': 'Пахнет календулой — ты не забыла про мазь.$h#$b#Врачу приятно, когда назначения выполняют без напоминаний. Редкое удовольствие.$h',
     'HarveyScars_FireReaction': 'Ты сегодня стояла у огня, да? У тебя такой взгляд… я видел его в Зузу, после пожаров.$s#$b#Дыши. Дым — это память тела, не сегодняшний день.$0#$b#Хочешь, переставим печку подальше от двери? Я помогу.$s',
     'HarveyScars_Letter': 'Я думаю о письме. Не о бумаге — о тебе. Как ты?$s',
+    'HarveyScars_AfterSent': 'Заключение готово. Две страницы, сухо, без единого лишнего слова.$0#$b#Прочитаешь, прежде чем я запечатаю? Если хоть одна строчка покажется лишней — вычеркну.$s',
+    'HarveyScars_AfterBurned': 'Я сжёг его вчера вечером. Во дворе, как обещал.$0#$b#Пепел ушёл в компост Эвелин. Ей не говори — она решит, что это удобрение из столицы.$h',
+    'HarveyScars_AfterKept': 'Письмо в ящике? Хорошо. «Потом» — тоже решение.$0#$b#Я ничего не пишу и ни о чём не спрашиваю. Просто знай: если надумаешь — один вечер, и всё готово.$0',
     'HarveyScars_Stranger': 'Рик заходил с коленом. Хороший человек. Я извинился — он так и не понял за что.$u#$b#Ничего. Я понял.$0',
     'HarveyScars_NoPaperNeeded': 'Я сжёг письмо в тот же вечер. Во дворе, как обещал.$0#$b#Тебе не нужна их бумага, чтобы это было правдой. Я знаю. Ты знаешь. Этого хватит.$s',
     'HarveyScars_DrawerLetter': 'Письмо всё ещё в ящике? Пусть лежит. У решений нет срока годности.$0#$b#Заключение я всё-таки написал — на всякий случай. Оно в столе. Просто чтобы ты знала.$s',
@@ -346,6 +353,12 @@ TRIGGERS = {
                      '!PLAYER_HAS_MAIL Current HarveyScars_VeteransLetter Any',
         'Actions': ['AddMail Current HarveyScars_VeteransLetter']},
     # Развилка C4 → после C8: ответ министерства / разговор о сожжённом / о письме в ящике.
+    # Развилка C4 → Кент (2-й год): узнал печать Ферна — ему приходило такое же письмо. Харви никому не рассказывает.
+    '{{ModId}}_ScarsKentLetter': {
+        'Trigger': 'DayStarted',
+        'Condition': f'PLAYER_HAS_SEEN_EVENT Current {NS}.C4_ZuzuLetter, YEAR 2, RANDOM 0.35, '
+                     '!PLAYER_HAS_MAIL Current HarveyScars_KentKnows Any',
+        'Actions': ['AddMail Current HarveyScars_KentKnows Received', 'AddConversationTopic HarveyScars_KentLetter 7']},
     '{{ModId}}_ScarsReplySent': {
         'Trigger': 'DayStarted',
         'Condition': f'PLAYER_HAS_SEEN_EVENT Current {NS}.C8_Map, PLAYER_HAS_MAIL Current HarveyScars_LetterSent Received',
@@ -402,6 +415,21 @@ SALVE_SHOP = {
 
 TRAUMA_ON = {'TraumaBackstory': 'true'}
 
+# Реплики Кента и Джоди на тему HarveyScars_KentLetter — по выбору в C4 (флаги писем).
+KENT_LETTER = {
+    'HarveyScars_LetterSent': (
+        'Видел у тебя конверт с печатью Ферна. Мне приходил такой же.$s#$b#*ты киваешь*$0#$b#'
+        'Отправила? Хорошо. Я свои бумаги отправил через три года. Когда ответили, стало тише. Не легче — тише.$0'),
+    'HarveyScars_LetterBurned': (
+        'Видел у тебя конверт с печатью Ферна. Мне приходил такой же.$s#$b#*ты качаешь головой*$0#$b#'
+        'Не стала? Не мне судить. Моя медаль лежит в коробке с гвоздями. Не всему, что было, нужна печать.$0'),
+    'HarveyScars_LetterKept': (
+        'Видел у тебя конверт с печатью Ферна. Мне приходил такой же.$s#$b#*ты пожимаешь плечами*$0#$b#'
+        'Пусть полежит. Моё лежало два года. Срока у таких писем нет — я проверял.$0'),
+}
+JODI_LETTER = ('Кент сказал, вы с ним говорили. Про Зузу.$s#$b#Он почти никогда об этом не говорит. Спасибо тебе.$0#$b#'
+               'Заходи к нам на ужин, когда захочешь. Просто так.$h')
+
 
 def when(p, cond):
     p['When'] = cond
@@ -419,6 +447,11 @@ data = {'Changes': [
     when({**patch('Scars — реплики Харви на темы', 'Characters/Dialogue/Harvey', TOPICS_ANY), 'Priority': 'Late'}, TRAUMA_ON),
     when({**patch('Scars — реплики Харви на темы (Dating / Married)', 'Characters/Dialogue/Harvey', TOPICS_ROMANCE),
           'Priority': 'Late'}, {**TRAUMA_ON, 'Relationship:Harvey': 'Dating, Married'}),
+    *[when({**patch(f'Scars — Кент про письмо из Зузу ({flag})', 'Characters/Dialogue/Kent',
+                    {'HarveyScars_KentLetter': text}), 'Priority': 'Late'}, {**TRAUMA_ON, 'HasFlag': flag})
+      for flag, text in KENT_LETTER.items()],
+    when({**patch('Scars — Джоди после разговора с Кентом', 'Characters/Dialogue/Jodi',
+                  {'HarveyScars_KentLetter': JODI_LETTER}), 'Priority': 'Late'}, TRAUMA_ON),
     when(patch('Scars — баффы: рубцы, мазь, запах дыма', 'Data/Buffs', BUFFS), TRAUMA_ON),
     when(patch('Scars — мазь для рубцов', 'Data/Objects', SALVE_ITEM), TRAUMA_ON),
     when({**patch('Scars — мазь в магазине клиники', 'Data/Shops', SALVE_SHOP), 'TargetField': ['Hospital', 'Items']}, TRAUMA_ON),

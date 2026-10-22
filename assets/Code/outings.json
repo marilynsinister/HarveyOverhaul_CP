@@ -1,0 +1,376 @@
+{
+  "Changes": [
+    {
+      "LogName": "Birthday — Quiet, Arend=False",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyCelebrationRoom",
+      "Entries": {
+        "HarveyOverhaulBirthday.B1_Celebration/Time 1700 2500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Pending Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Quiet Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulBirthday.B1_Celebration": "harveys_theme_jazz/12 10/farmer 11 10 1 Harvey 13 10 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyBirthday_Celebrated 7#AddItem (O)221 1#AddFriendshipPoints Harvey 40#marilynsinister.HarveyOverhaul.Core_BirthdayComplete/viewport 12 10 true/pause 400/message \"В небольшой гостиной горит тёплый свет. Харви поставил на стол торт, две чашки и маленький свёрток.\"/speak Harvey \"С днём рождения, солнышко.$l#$b#Я помню: сегодня ты хотела тихий вечер. Так и будет.$0\"/speak Harvey \"Свечку купил одну. Не для подсчётов — для желания.$h\"/quickQuestion #Загадать желание#Попросить его загадать вместе#Сначала попробовать торт(break)message \"Ты задуваешь свечу. Харви старается не спрашивать о желании — и видно, каких усилий ему это стоит.\"\\speak Harvey \"Не рассказывай. Я подожду, пока сбудется.$l\"\\action AddMail Current HarveyOutingMemory_Birthday_Wish Received(break)speak Harvey \"У меня уже есть. Но ещё одно можно.$l\"\\message \"Он закрывает глаза рядом с тобой. Впервые за вечер не проверяет ничего вокруг.\"\\action AddMail Current HarveyOutingMemory_Birthday_Together Received(break)speak Harvey \"Это разумный порядок. Желания лучше загадываются после ужина.$h\"\\action AddMail Current HarveyOutingMemory_Birthday_Cake Received/speak Harvey \"В этот день у меня всего одно пожелание: пусть у тебя будет больше того, что радует именно тебя.$l\"/message \"Вечер продолжается за чаем. Харви заворачивает кусочек торта с собой.\"/addItem (O)221 1/friendship Harvey 40/addConversationTopic HarveyBirthday_Celebrated 7/action marilynsinister.HarveyOverhaul.Core_BirthdayComplete/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Birthday — Family, Arend=False",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyCelebrationRoom",
+      "Entries": {
+        "HarveyOverhaulBirthday.B1_Celebration/Time 1700 2500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Pending Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Family Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulBirthday.B1_Celebration": "harveys_theme_jazz/12 10/farmer 11 10 1 Harvey 13 10 3 Maru 8 10 1 Evelyn 16 10 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyBirthday_Celebrated 7#AddItem (O)221 1#AddFriendshipPoints Harvey 40#marilynsinister.HarveyOverhaul.Core_BirthdayComplete/viewport 12 10 true/pause 400/message \"У стола ждут несколько близких людей. Эвелин поправляет салфетки, Мару придерживает подарочный пакет.\"/speak Evelyn \"С днём рождения, милая! Я принесла пирог. Доктор сказал, что торт уже есть, но это совершенно разные вещи.$h\"/speak Maru \"Мы обещали маленький праздник. Честно. Просто у Эвелин очень вместительная корзина.$h\"/speak Harvey \"Ты сегодня садишься первой. Остальное мы уже взяли на себя.$l\"/quickQuestion #Поблагодарить всех#Предложить рассказать смешную историю#Попросить первое слово у Харви(break)speak Evelyn \"Хорошо, когда есть повод собраться именно ради тебя.$h\"\\action AddMail Current HarveyOutingMemory_Birthday_Thanks Received(break)speak Maru \"Доктор трижды спросил, достаточно ли одной свечки. В последний раз я предложила провести консилиум.$h\"\\speak Harvey \"Я уточнял организационные детали.$h\"\\action AddMail Current HarveyOutingMemory_Birthday_Story Received(break)speak Harvey \"Я много чего хотел сказать. Сейчас смотрю на тебя и помню только главное: как хорошо, что ты у нас есть.$l\"\\action AddMail Current HarveyOutingMemory_Birthday_Words Received/speak Harvey \"В этот день у меня всего одно пожелание: пусть у тебя будет больше того, что радует именно тебя.$l\"/message \"Вечер продолжается за чаем. Харви заворачивает кусочек торта с собой.\"/addItem (O)221 1/friendship Harvey 40/addConversationTopic HarveyBirthday_Celebrated 7/action marilynsinister.HarveyOverhaul.Core_BirthdayComplete/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HO_OutingArend": "false"
+      }
+    },
+    {
+      "LogName": "Birthday — Family, Arend=True",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyCelebrationRoom",
+      "Entries": {
+        "HarveyOverhaulBirthday.B1_Celebration/Time 1700 2500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Pending Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Family Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulBirthday.B1_Celebration": "harveys_theme_jazz/12 10/farmer 11 10 1 Harvey 13 10 3 Maru 8 10 1 Evelyn 16 10 3 Arend 14 12 0/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyBirthday_Celebrated 7#AddItem (O)221 1#AddFriendshipPoints Harvey 40#marilynsinister.HarveyOverhaul.Core_BirthdayComplete/viewport 12 10 true/pause 400/message \"У стола ждут несколько близких людей. Эвелин поправляет салфетки, Мару придерживает подарочный пакет.\"/speak Evelyn \"С днём рождения, милая! Я принесла пирог. Доктор сказал, что торт уже есть, но это совершенно разные вещи.$h\"/speak Maru \"Мы обещали маленький праздник. Честно. Просто у Эвелин очень вместительная корзина.$h\"/speak Harvey \"Ты сегодня садишься первой. Остальное мы уже взяли на себя.$l\"/speak Arend \"Я ничего не прятал. Совсем. Особенно вон за той книгой.$h\"/speak Harvey \"Пап, теперь уже можно не делать вид.$h\"/quickQuestion #Поблагодарить всех#Предложить рассказать смешную историю#Попросить первое слово у Харви(break)speak Evelyn \"Хорошо, когда есть повод собраться именно ради тебя.$h\"\\action AddMail Current HarveyOutingMemory_Birthday_Thanks Received(break)speak Maru \"Доктор трижды спросил, достаточно ли одной свечки. В последний раз я предложила провести консилиум.$h\"\\speak Harvey \"Я уточнял организационные детали.$h\"\\action AddMail Current HarveyOutingMemory_Birthday_Story Received(break)speak Harvey \"Я много чего хотел сказать. Сейчас смотрю на тебя и помню только главное: как хорошо, что ты у нас есть.$l\"\\action AddMail Current HarveyOutingMemory_Birthday_Words Received/speak Harvey \"В этот день у меня всего одно пожелание: пусть у тебя будет больше того, что радует именно тебя.$l\"/message \"Вечер продолжается за чаем. Харви заворачивает кусочек торта с собой.\"/addItem (O)221 1/friendship Harvey 40/addConversationTopic HarveyBirthday_Celebrated 7/action marilynsinister.HarveyOverhaul.Core_BirthdayComplete/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HO_OutingArend": "true"
+      }
+    },
+    {
+      "LogName": "Birthday — Surprise, Arend=False",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyCelebrationRoom",
+      "Entries": {
+        "HarveyOverhaulBirthday.B1_Celebration/Time 1700 2500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Pending Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Surprise Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulBirthday.B1_Celebration": "harveys_theme_jazz/12 10/farmer 11 10 1 Harvey 13 10 3 Maru 8 10 1 Evelyn 16 10 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyBirthday_Celebrated 7#AddItem (O)221 1#AddFriendshipPoints Harvey 40#marilynsinister.HarveyOverhaul.Core_BirthdayComplete/viewport 12 10 true/pause 400/message \"Харви открывает дверь и подозрительно долго объясняет, куда повесить пальто. За его спиной кто-то сдерживает смех.\"/speak Maru \"С днём рождения! Мы больше не можем ждать — Эвелин уже дважды предложила всем поесть.$h\"/speak Evelyn \"Праздник должен начинаться вовремя. Особенно если на нём есть пирог.$h\"/speak Harvey \"Ты разрешила сюрприз. Я очень старался ничего не выдать.$h\"/quickQuestion #Признаться, что немного подозревала#Посмотреть, что в подарочном пакете#Обнять Харви(break)speak Harvey \"Значит, не всё удалось скрыть. Надеюсь, торт ты всё-таки не заметила заранее.$h\"\\action AddMail Current HarveyOutingMemory_Birthday_Guessed Received(break)message \"В пакете — открытки с короткими пожеланиями. У Харви исписаны обе стороны.\"\\speak Maru \"Мы ограничили его двумя страницами. Иначе праздничная речь заняла бы весь вечер.$h\"\\action AddMail Current HarveyOutingMemory_Birthday_Cards Received(break)message \"Он обнимает тебя и наконец перестаёт следить, всё ли стоит на своих местах.\"\\speak Harvey \"С днём рождения, любимая. Теперь всё получилось.$l\"\\action AddMail Current HarveyOutingMemory_Birthday_Hug Received/speak Harvey \"В этот день у меня всего одно пожелание: пусть у тебя будет больше того, что радует именно тебя.$l\"/message \"Вечер продолжается за чаем. Харви заворачивает кусочек торта с собой.\"/addItem (O)221 1/friendship Harvey 40/addConversationTopic HarveyBirthday_Celebrated 7/action marilynsinister.HarveyOverhaul.Core_BirthdayComplete/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HO_OutingArend": "false"
+      }
+    },
+    {
+      "LogName": "Birthday — Surprise, Arend=True",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyCelebrationRoom",
+      "Entries": {
+        "HarveyOverhaulBirthday.B1_Celebration/Time 1700 2500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Pending Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyBirthday_Surprise Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulBirthday.B1_Celebration": "harveys_theme_jazz/12 10/farmer 11 10 1 Harvey 13 10 3 Maru 8 10 1 Evelyn 16 10 3 Arend 14 12 0/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyBirthday_Celebrated 7#AddItem (O)221 1#AddFriendshipPoints Harvey 40#marilynsinister.HarveyOverhaul.Core_BirthdayComplete/viewport 12 10 true/pause 400/message \"Харви открывает дверь и подозрительно долго объясняет, куда повесить пальто. За его спиной кто-то сдерживает смех.\"/speak Maru \"С днём рождения! Мы больше не можем ждать — Эвелин уже дважды предложила всем поесть.$h\"/speak Evelyn \"Праздник должен начинаться вовремя. Особенно если на нём есть пирог.$h\"/speak Harvey \"Ты разрешила сюрприз. Я очень старался ничего не выдать.$h\"/speak Arend \"Вчера сын оставил список гостей в подарочном пакете. Мы решили, что это приглашение.$h\"/quickQuestion #Признаться, что немного подозревала#Посмотреть, что в подарочном пакете#Обнять Харви(break)speak Harvey \"Значит, не всё удалось скрыть. Надеюсь, торт ты всё-таки не заметила заранее.$h\"\\action AddMail Current HarveyOutingMemory_Birthday_Guessed Received(break)message \"В пакете — открытки с короткими пожеланиями. У Харви исписаны обе стороны.\"\\speak Maru \"Мы ограничили его двумя страницами. Иначе праздничная речь заняла бы весь вечер.$h\"\\action AddMail Current HarveyOutingMemory_Birthday_Cards Received(break)message \"Он обнимает тебя и наконец перестаёт следить, всё ли стоит на своих местах.\"\\speak Harvey \"С днём рождения, любимая. Теперь всё получилось.$l\"\\action AddMail Current HarveyOutingMemory_Birthday_Hug Received/speak Harvey \"В этот день у меня всего одно пожелание: пусть у тебя будет больше того, что радует именно тебя.$l\"/message \"Вечер продолжается за чаем. Харви заворачивает кусочек торта с собой.\"/addItem (O)221 1/friendship Harvey 40/addConversationTopic HarveyBirthday_Celebrated 7/action marilynsinister.HarveyOverhaul.Core_BirthdayComplete/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HO_OutingArend": "true"
+      }
+    },
+    {
+      "LogName": "Zuzu — HarveyOverhaulZuzu.Z1_Arrival",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyZuzuSquare",
+      "Entries": {
+        "HarveyOverhaulZuzu.Z1_Arrival/GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Active Received/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/Time 0800 2500/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z1_Arrival": "continue/18 14/farmer 17 14 1 Harvey 19 14 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyZuzu_Arrived 3/viewport 18 14 true/pause 500/message \"Автобус высаживает вас у небольшой площади. Над крышами гудит город, в фонтане плещется вода.\"/speak Harvey \"Добро пожаловать в Зузу. У меня есть маршрут.$h#$b#Кофейня, книжный и университет. Но его можно нарушать. Это я себе сейчас напоминаю.$0\"/quickQuestion #Начать с кофе#Посмотреть книжный#Сначала просто оглядеться(break)speak Harvey \"Там меня знают с тех времён, когда я путал завтрак с четвёртой чашкой кофе.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_FirstCoffee Received(break)speak Harvey \"Справедливое предложение. Если я зависну у полки с авиацией, можешь оставить закладку и идти дальше.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_FirstBooks Received(break)speak Harvey \"Давай. Я всё время ходил здесь куда-то. А сейчас можно просто побыть.$l\"\\action AddMail Current HarveyOutingMemory_Zuzu_FirstWalk Received/speak Harvey \"Номер уже забронирован. У гостиницы маленькая вывеска справа от площади. Если захочешь домой раньше — скажи.$0\"/addConversationTopic HarveyZuzu_Arrived 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Zuzu — HarveyOverhaulZuzu.Z2_Coffee",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyZuzuCafe",
+      "Entries": {
+        "HarveyOverhaulZuzu.Z2_Coffee/GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Active Received/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/Time 0800 2300/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z1_Arrival/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z2_Coffee": "continue/12 10/farmer 11 10 1 Harvey 13 10 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyZuzu_Coffee 5#AddFriendshipPoints Harvey 25/pause 400/message \"Харви останавливается у знакомого столика. На деревянной кромке сохранилась маленькая царапина.\"/speak Harvey \"Я сидел здесь после экзаменов. Иногда заказывал один кофе и занимал стол на три часа.$h\"/speak Harvey \"Здесь же однажды решил, что буду работать в маленьком городе. Хотел знать людей, которые приходят на приём.$0\"/quickQuestion #Спросить, скучает ли он по городу#Показать на царапину#Рассказать о своём первом дне в долине(break)speak Harvey \"Иногда. По этому столику, библиотеке, запаху дождя у остановки.$0#$b#А потом приезжаю — и понимаю, что уже хочу показать всё тебе.$l\"\\action AddMail Current HarveyOutingMemory_Zuzu_City Received(break)speak Harvey \"Это не я!$u#$b#…Может быть, я. Циркуль для схем был в сумке без колпачка.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_Scratch Received(break)message \"Ты рассказываешь, как всё казалось незнакомым. Харви слушает, обхватив чашку ладонями.\"\\speak Harvey \"Я рад, что однажды наши дороги привели в одно место.$l\"\\action AddMail Current HarveyOutingMemory_Zuzu_FirstDay Received/speak Harvey \"Посидим ещё? Сегодня никто не ждёт от меня заключения через десять минут.$l\"/friendship Harvey 25/addConversationTopic HarveyZuzu_Coffee 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Zuzu — HarveyOverhaulZuzu.Z3_Bookshop",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyZuzuBooks",
+      "Entries": {
+        "HarveyOverhaulZuzu.Z3_Bookshop/GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Active Received/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/Time 0800 2300/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z1_Arrival/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z3_Bookshop": "continue/12 10/farmer 11 10 1 Harvey 13 10 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyZuzu_Books 5#AddFriendshipPoints Harvey 25/pause 400/message \"Харви уверенно идёт к дальней полке, потом спохватывается и возвращается к тебе.\"/speak Harvey \"Авиация там. Я только посмотрю. Это не обещание, это намерение.$h\"/quickQuestion #Выбрать книгу о полётах#Показать ему книгу о саде#Найти тонкий сборник рассказов(break)message \"Ты снимаешь с полки книгу с потрёпанным самолётом на обложке. Внутри — схемы и карандашные пометки прежнего владельца.\"\\speak Harvey \"Вот эту я искал студентом. Она стоила как месяц моих обедов.$s#$b#Сегодня просто возьму. И обед тоже возьмём.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_BookPlanes Received(break)speak Harvey \"Практическое руководство. Глава первая: не переливать папоротник.$h#$b#Учитывая мои прошлые результаты, очень своевременная книга.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_BookGarden Received(break)speak Harvey \"Чтобы читать вслух? Хорошая мысль.$l#$b#И никаких медицинских терминов. Даже в предисловии.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_BookStories Received/message \"Харви просит положить в пакет две закладки. Одна для тебя, вторая для него.\"/friendship Harvey 25/addConversationTopic HarveyZuzu_Books 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Zuzu — HarveyOverhaulZuzu.Z5_HotelEvening",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyZuzuInn",
+      "Entries": {
+        "HarveyOverhaulZuzu.Z5_HotelEvening/GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Active Received/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/Time 1900 2500/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z1_Arrival/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z5_HotelEvening": "harveys_theme_jazz/12 10/farmer 11 10 1 Harvey 13 10 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyZuzu_Hotel 5/pause 500/message \"За окном светятся чужие окна. Харви раскладывает покупки и никак не найдёт место для огромного бумажного пакета.\"/speak Harvey \"Вещей стало больше. Свободного места меньше. Хороший день.$h\"/speak Harvey \"$query PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.G3_Drawing#Хочется потом показать малышу, где мы были. Можно принести открытку.$l|Я раньше думал, что поездка обязательно должна быть ради чего-то важного. Сейчас хорошо и просто так.$l\"/quickQuestion #Посмотреть в окно вместе#Разобрать покупки#Спросить, что ему больше понравилось(break)message \"Вы стоите у окна и придумываете истории про освещённые окна напротив.\"\\action AddMail Current HarveyOutingMemory_Zuzu_Window Received(break)speak Harvey \"$query PLAYER_HAS_MAIL Current HarveyOutingMemory_Zuzu_BookPlanes Received#Книгу про самолёты кладу наверх. Иначе до утра буду искать её под пирожками.$h|Две закладки, кофе, пакет и почему-то три чека из одного магазина.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_Shopping Received(break)speak Harvey \"Как ты выбирала, куда свернуть. Я столько лет ходил по одному маршруту, что перестал замечать соседние улицы.$l\"\\action AddMail Current HarveyOutingMemory_Zuzu_Favourite Received/speak Harvey \"Завтра ещё целый день. А сейчас можно отдохнуть. Кровать тут убедительнее моего расписания.$h\"/addConversationTopic HarveyZuzu_Hotel 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Zuzu — HarveyOverhaulZuzu.Z6_SundayMorning",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyZuzuInn",
+      "Entries": {
+        "HarveyOverhaulZuzu.Z6_SundayMorning/GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Active Received/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/Time 0600 1200/GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Sunday Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z6_SundayMorning": "continue/12 10/farmer 11 10 1 Harvey 13 10 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyZuzu_Morning 3/pause 400/message \"Харви принёс чай и завтрак. Снаружи уже шумят машины, но здесь утро начинается медленно.\"/speak Harvey \"Доброе утро. До обратного автобуса у нас целый день.$l\"/quickQuestion #Вернуться в любимую кофейню#Погулять без маршрута#Признаться, что скучаешь по дому(break)speak Harvey \"Любимую? Вчера она была моей, теперь нашей. Мне нравится эта поправка.$l\"\\action AddMail Current HarveyOutingMemory_Zuzu_SundayCafe Received(break)speak Harvey \"Убираю карту. Но обратный билет оставлю. На всякий случай.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_SundayWalk Received(break)speak Harvey \"Тогда можем вернуться раньше. Выходные от этого не станут хуже.$0#$b#А если захочешь ещё погулять — тоже успеем.$l\"\\action AddMail Current HarveyOutingMemory_Zuzu_SundayHome Received/addConversationTopic HarveyZuzu_Morning 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Zuzu — HarveyOverhaulZuzu.Z7_EveningSquare",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyZuzuSquare",
+      "Entries": {
+        "HarveyOverhaulZuzu.Z7_EveningSquare/GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Active Received/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/Time 1700 2100/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z2_Coffee/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z3_Bookshop/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z7_EveningSquare": "harveys_theme_jazz/18 14/farmer 17 14 1 Harvey 19 14 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyZuzu_Evening 5#AddFriendshipPoints Harvey 30/viewport 18 14 true/pause 500/message \"Над площадью загораются огни. Вода в фонтане теперь кажется тёмной.\"/speak Harvey \"Я рад, что приехал сюда с тобой. Теперь у города появились новые воспоминания.$l\"/quickQuestion #Выбрать место для следующей поездки#Предложить вернуться сюда ещё раз#Взять его за руку(break)speak Harvey \"Выбирай. В этот раз очередь твоих любимых мест.$l\"\\action AddMail Current HarveyOutingMemory_Zuzu_NextPlace Received(break)speak Harvey \"Да. И в следующий раз я сразу пойму, что одного пакета для книжного мало.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_ReturnAgain Received(break)message \"Он переплетает пальцы с твоими и некоторое время молчит.\"\\speak Harvey \"Вот так и запомню.$l\"\\action AddMail Current HarveyOutingMemory_Zuzu_Hand Received/friendship Harvey 30/addConversationTopic HarveyZuzu_Evening 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Zuzu — университет, Arend=False",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyZuzuCampus",
+      "Entries": {
+        "HarveyOverhaulZuzu.Z4_University/GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Active Received/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/Time 0900 2000/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z1_Arrival/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z4_University": "continue/12 10/farmer 11 10 1 Harvey 13 10 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyZuzu_University 5#AddFriendshipPoints Harvey 25/pause 400/message \"В университетском читальном зале пахнет бумагой и старым деревом. Харви невольно выпрямляется у доски объявлений.\"/speak Harvey \"В этом зале я готовился к экзаменам. Казалось, если прочитаю ещё одну главу, перестану волноваться.$0\"/quickQuestion #Спросить, помогало ли#Найти место у окна#Попросить показать старый учебник(break)speak Harvey \"Ровно до следующей главы.$h#$b#Потом научился хотя бы выходить на обед. Не сразу.$0\"\\action AddMail Current HarveyOutingMemory_Zuzu_CampusStudy Received(break)message \"Вы на минуту садитесь у окна. Внизу спешат студенты с папками.\"\\speak Harvey \"Я тогда всё откладывал жизнь на после экзаменов. Сейчас стараюсь так не делать.$l\"\\action AddMail Current HarveyOutingMemory_Zuzu_CampusWindow Received(break)speak Harvey \"Если найду издание с пятном от кофе, возможно, это мой экземпляр.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_CampusBook Received/friendship Harvey 25/addConversationTopic HarveyZuzu_University 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HO_OutingArend": "false"
+      }
+    },
+    {
+      "LogName": "Zuzu — университет, Arend=True",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyZuzuCampus",
+      "Entries": {
+        "HarveyOverhaulZuzu.Z4_University/GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Active Received/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/Time 0900 2000/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z1_Arrival/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z4_University": "continue/12 10/farmer 11 10 1 Harvey 13 10 3 Arend 15 11 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyZuzu_University 5#AddFriendshipPoints Arend 25#AddFriendshipPoints Harvey 25/pause 400/message \"В университетском читальном зале пахнет бумагой и старым деревом. Харви невольно выпрямляется у доски объявлений.\"/speak Arend \"Сын. Ты приехал на выходные и всё равно нашёл читальный зал.$h\"/speak Harvey \"Я показываю город. Мы ненадолго.$0\"/speak Arend \"Так ты говорил и в семь лет, когда приходил ко мне после школы. Потом мы час искали твои варежки.$h\"/quickQuestion #Попросить рассказать ещё#Предложить всем выпить чаю#Спросить, где Харви сидел после школы(break)speak Arend \"Однажды он принёс дипломную работу. Четыре страницы про то, как лечить игрушечного медведя.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_CampusChildhood Received(break)speak Arend \"Вот ради такого предложения я готов отложить красный карандаш.$h\"\\action AddMail Current HarveyOutingMemory_Zuzu_CampusTea Received(break)speak Arend \"У окна. Ноги не доставали до пола. А вопросы уже были длиннее моих ответов.$0\"\\action AddMail Current HarveyOutingMemory_Zuzu_CampusWindow Received/speak Arend \"Погуляйте за меня тоже. Мне ещё две работы читать. До встречи в долине.$0\"/friendship Arend 25/friendship Harvey 25/addConversationTopic HarveyZuzu_University 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HO_OutingArend": "true"
+      }
+    },
+    {
+      "LogName": "Outings — диалоги спутника и интерактивных мест",
+      "Action": "EditData",
+      "Target": "Mods/{{ModId}}/Outings",
+      "Entries": {
+        "HappyBirthdayToday": "false",
+        "Talk_HarveyZuzuSquare": "Площадь изменилась меньше, чем я ожидал.$0#$b#Но я впервые стою здесь с тобой. Это многое меняет.$l",
+        "Talk_HarveyZuzuCafe": "$query PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulZuzu.Z2_Coffee#Наш столик пока свободен. Закажем ещё по чашке?$h|Пойдём к тому столику. Я хочу кое-что показать.$0",
+        "Talk_HarveyZuzuBooks": "$query PLAYER_HAS_MAIL Current HarveyOutingMemory_Zuzu_BookPlanes Received#Они могли привезти продолжение той книги. Я только посмотрю.$h|Две закладки у меня уже есть. Теперь осталось выбрать, в какие книги их положить.$h",
+        "Talk_HarveyZuzuCampus": "У читального зала всё тот же запах бумаги. Сразу хочется говорить тише.$0",
+        "Talk_HarveyZuzuInn": "Кровать, горячая вода и завтра не надо на приём. Я начинаю понимать, зачем люди берут выходные.$h",
+        "Place_CafeMenu": "Кофейня «Вторая чашка». Свежий кофе, выпечка и тот самый столик у дальней стены. Заказать можно у стойки.",
+        "Place_PilotBooks": "Истории первых полётов, модели самолётов и справочники по навигации. Между томами лежит забытая закладка.",
+        "Place_GardenBooks": "Книги о садах и комнатных растениях. На обложке одной обещают помочь даже с самым упрямым папоротником.",
+        "Place_UniversityBoard": "Университет Зузу. Объявления о лекциях, встречах выпускников и студенческом книжном обмене.",
+        "Place_UniversityLetter": "Под стеклом — благодарственные письма преподавателям. У одного листа уголки заклеены уже дважды.",
+        "Place_HotelWindow": "С верхнего этажа видно крыши и огни площади. Субботний номер оплачен. Лечь спать можно у кровати.",
+        "Place_CafeSign": "Кофейня «Вторая чашка». Вход — под синей крышей.",
+        "Place_BookSign": "Книжный «Между строк». Книги и разговоры о книгах.",
+        "Place_CampusSign": "Университет Зузу. Читальный зал открыт для гостей.",
+        "Place_InnSign": "Гостиница «У площади». Ваш номер уже забронирован.",
+        "Place_BirthdayCard": "На открытке почерком Харви: «Сегодня — твой день. Я очень рад быть рядом»."
+      }
+    },
+    {
+      "LogName": "Happy Birthday — официальный токен дня рождения",
+      "Action": "EditData",
+      "Target": "Mods/{{ModId}}/Outings",
+      "Entries": {
+        "HappyBirthdayToday": "{{Omegasis.HappyBirthday/IsPlayersBirthday}}"
+      },
+      "When": {
+        "HasMod": "Omegasis.HappyBirthday",
+        "HasValue:{{Omegasis.HappyBirthday/IsPlayersBirthday}}": "true"
+      }
+    },
+    {
+      "LogName": "Outings — письма",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_mailBirthdayInvitation": "@,^^С днём рождения! Сегодня я приготовил для тебя маленький праздник. Буду ждать после пяти вечера в гостиной у клиники.^^Если сегодня не получится, перенесём: приглашение действует ещё неделю.^^Открой меню встреч с Харви (по умолчанию J), чтобы выбрать формат и пойти на праздник.^^— Харви[#]Твой день",
+        "{{ModId}}_mailZuzuInvitation": "@,^^Хочу показать тебе Зузу: кофейню, книжный и университет. Можем выбрать свободные выходные и остаться на одну ночь.^^Выезд в субботу с 8 до 13 часов с автобусной остановки, если на выходных нет праздников. Меню встреч — по умолчанию J. Вернуться раньше всегда можно.^^— Харви[#]Выходные вдвоём"
+      }
+    },
+    {
+      "LogName": "Outings — приглашение в Зузу",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_triggerZuzuInvitation": {
+          "Id": "{{ModId}}_triggerZuzuInvitation",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailZuzuInvitation now"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Outings — Харви после праздника и поездки",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyBirthday_Celebrated": "Мне очень хотелось, чтобы этот вечер тебе понравился. Спасибо, что провела его со мной.$l",
+        "HarveyZuzu_Arrived": "Я принёс карту, а ты нашла дорогу без неё. Признаю: так было интереснее.$h",
+        "HarveyZuzu_Coffee": "Теперь у того столика есть ещё одна история. Наша.$l",
+        "HarveyZuzu_Books": "$query PLAYER_HAS_MAIL Current HarveyOutingMemory_Zuzu_BookPlanes Received#Книгу про самолёты уже начал. На первой странице мне снова девятнадцать.$h|Закладку положил в новую книгу. Вторую оставил для тебя.$l",
+        "HarveyZuzu_University": "После университета я всё-таки перестал выпрямляться у каждой доски объявлений. Почти.$h",
+        "HarveyZuzu_Hotel": "Тот вечер у окна я буду помнить дольше всех чеков и билетов.$l",
+        "HarveyZuzu_Morning": "Мне понравилось никуда не торопиться утром. Кажется, стоит повторять это и дома.$l",
+        "HarveyZuzu_Evening": "Город тот же, а воспоминания теперь другие. Спасибо тебе.$l",
+        "HarveyZuzu_Returned": "Покупки разобрал. Билеты оставил на память. Следующие выходные пока не планирую — но очень хочется.$h"
+      },
+      "Priority": "Late + 2",
+      "When": {
+        "Relationship:Harvey": "Dating, Engaged, Married"
+      }
+    },
+    {
+      "LogName": "Outings — Аренд после университетской встречи",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Arend",
+      "Entries": {
+        "HarveyZuzu_University": "Сын привёл тебя в читальный зал. Хорошо, что нашёл время и для прогулки.$h"
+      },
+      "Priority": "Late + 2",
+      "When": {
+        "ArendEnabled": "true"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/HarveyCelebrationRoom",
+      "FromFile": "assets/Maps/HarveyCelebrationRoom.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/HarveyZuzuSquare",
+      "FromFile": "assets/Maps/HarveyZuzuSquare.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/HarveyZuzuCafe",
+      "FromFile": "assets/Maps/HarveyZuzuCafe.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/HarveyZuzuBooks",
+      "FromFile": "assets/Maps/HarveyZuzuBooks.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/HarveyZuzuCampus",
+      "FromFile": "assets/Maps/HarveyZuzuCampus.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/HarveyZuzuInn",
+      "FromFile": "assets/Maps/HarveyZuzuInn.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/outingSigns",
+      "FromFile": "assets/Maps/outingSigns.png"
+    },
+    {
+      "LogName": "Outings — отдельные локации, сохраняются и при выключении поездок",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "HarveyCelebrationRoom": {
+          "DisplayName": "Праздничная гостиная",
+          "DefaultArrivalTile": {
+            "X": 12,
+            "Y": 15
+          },
+          "CreateOnLoad": {
+            "MapPath": "Maps/HarveyCelebrationRoom"
+          },
+          "CanPlantHere": false,
+          "CanHaveGreenRainSpawns": false,
+          "ExcludeFromNpcPathfinding": true,
+          "MinDailyWeeds": 0,
+          "MaxDailyWeeds": 0
+        },
+        "HarveyZuzuSquare": {
+          "DisplayName": "Зузу — университетская площадь",
+          "DefaultArrivalTile": {
+            "X": 18,
+            "Y": 23
+          },
+          "CreateOnLoad": {
+            "MapPath": "Maps/HarveyZuzuSquare"
+          },
+          "CanPlantHere": false,
+          "CanHaveGreenRainSpawns": false,
+          "ExcludeFromNpcPathfinding": true,
+          "MinDailyWeeds": 0,
+          "MaxDailyWeeds": 0
+        },
+        "HarveyZuzuCafe": {
+          "DisplayName": "Кофейня «Вторая чашка»",
+          "DefaultArrivalTile": {
+            "X": 12,
+            "Y": 15
+          },
+          "CreateOnLoad": {
+            "MapPath": "Maps/HarveyZuzuCafe"
+          },
+          "CanPlantHere": false,
+          "CanHaveGreenRainSpawns": false,
+          "ExcludeFromNpcPathfinding": true,
+          "MinDailyWeeds": 0,
+          "MaxDailyWeeds": 0
+        },
+        "HarveyZuzuBooks": {
+          "DisplayName": "Книжный «Между строк»",
+          "DefaultArrivalTile": {
+            "X": 12,
+            "Y": 15
+          },
+          "CreateOnLoad": {
+            "MapPath": "Maps/HarveyZuzuBooks"
+          },
+          "CanPlantHere": false,
+          "CanHaveGreenRainSpawns": false,
+          "ExcludeFromNpcPathfinding": true,
+          "MinDailyWeeds": 0,
+          "MaxDailyWeeds": 0
+        },
+        "HarveyZuzuCampus": {
+          "DisplayName": "Университет Зузу",
+          "DefaultArrivalTile": {
+            "X": 12,
+            "Y": 15
+          },
+          "CreateOnLoad": {
+            "MapPath": "Maps/HarveyZuzuCampus"
+          },
+          "CanPlantHere": false,
+          "CanHaveGreenRainSpawns": false,
+          "ExcludeFromNpcPathfinding": true,
+          "MinDailyWeeds": 0,
+          "MaxDailyWeeds": 0
+        },
+        "HarveyZuzuInn": {
+          "DisplayName": "Гостиница «У площади»",
+          "DefaultArrivalTile": {
+            "X": 12,
+            "Y": 15
+          },
+          "CreateOnLoad": {
+            "MapPath": "Maps/HarveyZuzuInn"
+          },
+          "CanPlantHere": false,
+          "CanHaveGreenRainSpawns": false,
+          "ExcludeFromNpcPathfinding": true,
+          "MinDailyWeeds": 0,
+          "MaxDailyWeeds": 0
+        }
+      }
+    },
+    {
+      "LogName": "Outings — магазин кофейни",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Entries": {
+        "{{ModId}}_ZuzuCafe": {
+          "Items": [
+            {
+              "Id": "Coffee",
+              "ItemId": "(O)395",
+              "Price": 300
+            },
+            {
+              "Id": "Bread",
+              "ItemId": "(O)216",
+              "Price": 120
+            },
+            {
+              "Id": "Cake",
+              "ItemId": "(O)220",
+              "Price": 500
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

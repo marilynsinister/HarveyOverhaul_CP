@@ -4,6 +4,7 @@
     python scripts/generate_medical_item_sprites.py --preview  # + увеличенные превью в scripts/_preview_*.png
 """
 import sys
+from pathlib import Path
 
 from PIL import Image
 
@@ -198,6 +199,44 @@ ITEMS = [
         "................",
         "................",
     ],
+    # 7 — сумка Харви (докторский саквояж, латунный замок, красный крестик; награда доверия «Опора»)
+    [
+        "................",
+        "................",
+        ".....oooooo.....",
+        "....oboooobo....",
+        "....ob....bo....",
+        "..oooooooooooo..",
+        ".obnnnnnnnnnnbo.",
+        ".onnnnnYYnnnnno.",
+        ".obbbbbYzbbbbbo.",
+        ".onnnnnnnnnnnno.",
+        ".onnnnnrrnnnnno.",
+        ".onnnnrrrrnnnno.",
+        ".onnnnnrrnnnnno.",
+        ".obnnnnnnnnnnbo.",
+        "..oooooooooooo..",
+        "................",
+    ],
+    # 8 — бульон Харви (миска с золотым бульоном и зеленью, пар; рецепт за доверие)
+    [
+        "....v....v......",
+        ".....v....v.....",
+        "....v....v......",
+        ".....v....v.....",
+        "................",
+        ".oooooooooooooo.",
+        "oMyyYyyyyYyyyMMo",
+        "oMyYgyyyGyyYyMmo",
+        ".oMyyyGyyyyyMmo.",
+        ".oMMMMMMMMMMMmo.",
+        "..oMMMMMMMMMmo..",
+        "...ommmmmmmmo...",
+        "....oooooooo....",
+        ".....oMMMMo.....",
+        ".....oooooo.....",
+        "................",
+    ],
 ]
 
 BUFF_ICONS = [
@@ -336,8 +375,22 @@ def preview(sheet, path):
 
 
 def main():
-    items = render(ITEMS)
-    buffs = render(BUFF_ICONS)
+    curated = Path(__file__).resolve().parent.parent / "art/items-stardew/exports/medicalItems.png"
+    if curated.is_file():
+        with Image.open(curated) as source:
+            items = source.convert("RGBA")
+        if items.size != (16 * len(ITEMS), 16):
+            raise ValueError(f"Unexpected curated item sheet size: {items.size}")
+    else:
+        items = render(ITEMS)
+    curated_buffs = Path(__file__).resolve().parent.parent / "art/buffs-stardew/exports/mishapBuffIcons.png"
+    if curated_buffs.is_file():
+        with Image.open(curated_buffs) as source:
+            buffs = source.convert("RGBA")
+        if buffs.size != (16 * len(BUFF_ICONS), 16):
+            raise ValueError(f"Unexpected curated mishap sheet size: {buffs.size}")
+    else:
+        buffs = render(BUFF_ICONS)
     items.save("assets/Items/medicalItems.png")
     buffs.save("assets/Items/mishapBuffIcons.png")
     if "--preview" in sys.argv:

@@ -162,5 +162,7 @@
   "HarveyMod_Splinter": 160,
   "HarveyMod_BeeSting": 161,
   "HarveyMod_Sunstroke": 162,
-  "HarveyMod_Frostbite": 163
+  "HarveyMod_Frostbite": 163,
+  "buffStressClearMind": 164,
+  "buffStressFireMemory": 165
 }

@@ -11,6 +11,7 @@ import glob
 import json
 import re
 import sys
+from pathlib import Path
 
 from PIL import Image, ImageDraw
 
@@ -1000,7 +1001,7 @@ def build_recipes():
 STRING = re.compile(r'"(?:[^"\\]|\\.)*"', re.S)
 
 
-def all_buff_ids():
+def all_buff_ids(owned_only=False):
     ids = []
     for path in sorted(glob.glob("assets/Code/*.json")):
         s = open(path, encoding="utf-8-sig").read()
@@ -1010,30 +1011,41 @@ def all_buff_ids():
         data = json.loads(s)
         for ch in data.get("Changes", []):
             if ch.get("Target") == "Data/Buffs":
-                ids.extend((path, k) for k, v in ch["Entries"].items() if isinstance(v, dict))
+                ids.extend((path, k) for k, v in ch["Entries"].items()
+                           if isinstance(v, dict) and (not owned_only or v.get("IconTexture") == TEXTURE))
     return ids
 
 
 def main():
-    recipes = build_recipes()
-    buffs = all_buff_ids()
-    missing = [b for _, b in buffs if b not in recipes]
-    if missing:
-        raise SystemExit(f"Нет иконки для: {missing}")
-
+    curated = Path(__file__).resolve().parent.parent / "art/buffs-stardew/exports/harveyBuffIcons.png"
+    buffs = all_buff_ids(owned_only=curated.is_file())
     order = [b for _, b in buffs]
     rows = (len(order) + COLUMNS - 1) // COLUMNS
-    sheet = Image.new("RGBA", (COLUMNS * S, rows * S), (0, 0, 0, 0))
-    index = {}
-    seen = {}
-    for i, buff_id in enumerate(order):
-        icon = recipes[buff_id]()
-        key = icon.tobytes()
-        if key in seen:
-            raise SystemExit(f"Иконки совпадают: {buff_id} и {seen[key]}")
-        seen[key] = buff_id
-        sheet.paste(icon, ((i % COLUMNS) * S, (i // COLUMNS) * S))
-        index[buff_id] = i
+    if curated.is_file():
+        with open(curated.with_suffix(".json"), encoding="utf-8-sig") as source:
+            index = json.load(source)
+        if len(order) != len(index) or set(order) != set(index):
+            raise SystemExit("Состав баффов изменился: обновите art/buffs-stardew/exports перед сборкой.")
+        with Image.open(curated) as source:
+            sheet = source.convert("RGBA")
+        if sheet.size != (COLUMNS * S, rows * S):
+            raise SystemExit(f"Неверный размер перерисованного листа: {sheet.size}")
+    else:
+        recipes = build_recipes()
+        missing = [b for _, b in buffs if b not in recipes]
+        if missing:
+            raise SystemExit(f"Нет иконки для: {missing}")
+        sheet = Image.new("RGBA", (COLUMNS * S, rows * S), (0, 0, 0, 0))
+        index = {}
+        seen = {}
+        for i, buff_id in enumerate(order):
+            icon = recipes[buff_id]()
+            key = icon.tobytes()
+            if key in seen:
+                raise SystemExit(f"Иконки совпадают: {buff_id} и {seen[key]}")
+            seen[key] = buff_id
+            sheet.paste(icon, ((i % COLUMNS) * S, (i // COLUMNS) * S))
+            index[buff_id] = i
 
     sheet.save("assets/Tilesheets/harveyBuffIcons.png")
     with open("assets/Tilesheets/harveyBuffIcons.json", "w", encoding="utf-8") as fh:
@@ -1047,7 +1059,9 @@ def main():
         draw = ImageDraw.Draw(prev)
         for i, buff_id in enumerate(order):
             x, y = (i % 6) * cell_w, (i // 6) * cell_h
-            icon = sheet.crop(((i % COLUMNS) * S, (i // COLUMNS) * S, (i % COLUMNS) * S + S, (i // COLUMNS) * S + S))
+            sprite_index = index[buff_id]
+            icon = sheet.crop(((sprite_index % COLUMNS) * S, (sprite_index // COLUMNS) * S,
+                               (sprite_index % COLUMNS) * S + S, (sprite_index // COLUMNS) * S + S))
             prev.alpha_composite(icon.resize((S * scale, S * scale), Image.NEAREST), (x + 2, y + 2))
             draw.text((x + S * scale + 6, y + 24), buff_id.replace("HarveyMod_", "HM_"), fill=(255, 255, 255, 255))
         prev.save("scripts/_preview_buff_icons.png")

@@ -4,6 +4,8 @@
 делал json.dump, а не руками. Формат совпадает с build_arc3_events.py.
 """
 
+from skip_actions import complete_skip
+
 CD = 'HarveyMod_CD_Global'
 H = 'Harvey'
 
@@ -37,8 +39,9 @@ def key(ns, eid, *conds, cooldown=True):
 
 
 def script(music, view, actors, skip, body, ending='end'):
-    cmds = [music, view, actors, 'skippable', 'setSkipActions ' + '#'.join(skip), *body,
-            f'addConversationTopic {CD} 3', 'globalFade', 'viewport -1000 -1000', ending]
+    tail = [f'addConversationTopic {CD} 3', 'globalFade', 'viewport -1000 -1000', ending]
+    cmds = [music, view, actors, 'skippable', 'setSkipActions ' + '#'.join(complete_skip(skip, [*body, *tail])),
+            *body, *tail]
     for c in cmds:
         assert '/' not in c, c
     return '/'.join(cmds)

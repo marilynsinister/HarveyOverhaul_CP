@@ -5,7 +5,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Forest",
       "Entries": {
-        "MyMod_HarveyStormComfortForest/GameStateQuery PLAYER_HAS_BUFF Current buffStressThunder/Weather storm/Friendship Harvey 750/Random 0.55": [
+        "MyMod_HarveyStormComfortForest/GameStateQuery PLAYER_HAS_BUFF Current buffStressThunder/Weather Storm/Friendship Harvey 750/Random 0.55": [
           "rain/58 25/farmer 58 25 0 Harvey 1000 1000 0/skippable/viewport 58 25/",
           "playSound thunder/emote farmer 8/animate farmer false true 2000 5 4/pause 1000/",
           "playSound doorClose/warp Harvey 56 25 1/faceDirection Harvey 1/",

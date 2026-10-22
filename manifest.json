@@ -30,6 +30,10 @@
     {
       "UniqueID": "Veronnica.HarveySprite",
       "IsRequired": false
+    },
+    {
+      "UniqueID": "Omegasis.HappyBirthday",
+      "IsRequired": false
     }
   ]
 }

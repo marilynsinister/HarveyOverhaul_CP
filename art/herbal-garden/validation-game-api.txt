@@ -1,0 +1,11 @@
+Installed game API validation:
+Queries:
+OK PLAYER_HAS_COOKING_RECIPE
+OK PLAYER_HAS_MAIL
+OK PLAYER_HAS_SEEN_EVENT
+OK PLAYER_HEARTS
+OK AddMail action
+OK dialogue $action command
+Crop.getSourceRect verified: two crops per row, seed slots 0/1, mature 5, ripe regrowth 6, picked regrowth 7.
+Crop.DrawnCropTexture verified: dead plants use the vanilla texture.
+No running-game or save test performed.

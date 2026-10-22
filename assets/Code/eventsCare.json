@@ -10,6 +10,7 @@
     {{HO_FarmX}} {{HO_FarmY0}}/
     farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
     skippable/
+    setSkipActions AddConversationTopic topicHarveyFirstVisit 2/
     pause 600/
     speak Harvey \"Здравствуйте. Как самочувствие? Хотел убедиться, что после переезда всё в порядке.$h\"/
     message \"Я... в порядке, спасибо.\"/
@@ -28,6 +29,7 @@
     {{HO_FarmX}} {{HO_FarmY0}}/
     farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
     skippable/
+    setSkipActions AddItem 614 1#AddConversationTopic topicHarveySecondVisit 10/
     pause 600/
     speak Harvey \"Здравствуйте. Принёс витаминный чай — для восстановления после переезда.$h\"/
     addItem 614 1/
@@ -129,12 +131,13 @@
     globalFade/
     viewport -1000 -1000/
     end",
-                "eventHarveyCheckup/Time 1400 1600/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicAgreedCheckup/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting/GameStateQuery DAYS_PLAYED 2": "
+                "eventHarveyCheckup/Time 1400 1600/GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current topicAgreedCheckup\" \"PLAYER_HAS_MAIL Current HarveyIntro_CheckupAgreed Received\"/GameStateQuery PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting/GameStateQuery DAYS_PLAYED 2": "
                     none/
                     4 6/
                     farmer 4 6 1 Harvey 4 5 3/
                     ignoreCollisions farmer/
                     skippable/
+                    setSkipActions AddConversationTopic topicAfterCheckup 5#RemoveConversationTopic topicAgreedCheckup/
                     speak Harvey \"*поднимает голову от бумаг* А, вы пришли! *улыбается* Проходите, располагайтесь.$h#$b#*указывает на кушетку* Садитесь, пожалуйста. Это займет совсем немного времени.$l\"/
                     pause 1000/
                     move farmer 1 0 0/
@@ -213,6 +216,7 @@
                     20 23/ 
                     farmer 20 23 1 Harvey 27 23 3/
                     skippable/
+                    setSkipActions AddConversationTopic topicFirstMeeting 7#AddConversationTopic topicConcernForHealth 4/
                     move farmer 3 0 1 true/
                     move Harvey -3 0 3 true/
                     emote Harvey 32/
@@ -269,10 +273,11 @@
                     speak Harvey \"Знаете что... *колеблется* может, это слишком настойчиво, но...$s#$b#Не хотите зайти в клинику завтра? Просто проверить давление, пульс...$u\"/
                     message \"Я не болею...\"/
                     speak Harvey \"*мягко* Знаю. Но переезд - это стресс для организма.$s#$b#Пусть это будет... знакомство с местным врачом?$h\"/
-                    question fork2 \"#Согласиться на осмотр#Отказаться\"/
+                    question fork1 \"#Согласиться на осмотр#Отказаться\"/
                     fork refuseCheckup/
                     speak Harvey \"*улыбается* Замечательно. Завтра после обеда удобно?$h#$b#Ничего серьезного, просто базовые показатели.$l\"/
                     addConversationTopic topicAgreedCheckup 5/
+                    action AddMail Current HarveyIntro_CheckupAgreed Received/
                     speak Harvey \"*заботливо* А пока - отдыхайте. И ешьте регулярно, пожалуйста.$l#$b#*смущенно* Прости, если показался навязчивым. Профессиональная деформация.$s\"/
                     message \"Нет, вы... очень внимательный. Спасибо.\"/
                     emote Harvey 32/
@@ -300,7 +305,6 @@
     5 5/
     farmer 5 5 0 Harvey 7 7 0/
     skippable/
-    setSkipActions warpOut/
     viewport 6 5 true/
     pause 1500/
     move Harvey 0 -2 3/
@@ -348,7 +352,7 @@
     farmer 17 7 0 Harvey 17 10 0/
     skippable/
     addConversationTopic HarveyMineIntercept 3/
-    setSkipActions friendship Harvey 100#addConversationTopic HarveyMineIntercept 3#changeLocation Mountain#warp farmer 53 8#warp Harvey 54 8#faceDirection farmer 2#faceDirection Harvey 2#fade false#viewport 53 8 true/
+    setSkipActions AddFriendshipPoints Harvey 100#AddConversationTopic HarveyMineIntercept 3#AddConversationTopic HarveyMod_CD_Global 3#AddItem 614 1/
     pause 800/
     speak Harvey \"Стой.$8#$b#Не делай и шага вниз — мне слишком тревожно.$s\"/
     pause 600/
@@ -404,20 +408,12 @@
     pause 1200/
     speak Harvey \"Я знаю, это неприятно слышать.$s#$b#Но я не могу делать вид, что всё в порядке, когда это не так.$s#$b#Позволь мне уберечь тебя — пока ещё можно сделать это просто.$l\"/
     pause 1000/
-    globalFade/
-    viewport -1000 -1000/
-    pause 700/
-    changeLocation Mountain/
-    warp farmer 53 8/
-    warp Harvey 54 8/
-    faceDirection farmer 2/
-    faceDirection Harvey 2/
-    fade false/
-    viewport 53 8 true/
-    pause 300/
     friendship Harvey 100/
     addConversationTopic HarveyMineIntercept 3/
-    end position 53 8
+    addConversationTopic HarveyMod_CD_Global 3/
+    globalFade/
+    viewport -1000 -1000/
+    end
 ",
             }
         }
