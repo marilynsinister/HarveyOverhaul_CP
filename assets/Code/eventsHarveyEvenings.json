@@ -7,15 +7,16 @@
             "Action": "EditData",
             "Target": "Data/Events/HarveyRoom",
             "Entries": {
-                "{{ModId}}_eventHarveyEveningRadio/Time 1900 2300/Friendship Harvey 1000/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom": "continue/
+                "{{ModId}}_eventHarveyEveningRadio/Time 1900 2300/Friendship Harvey 1000/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom": "
+        continue/
         8 9/
         farmer 1000 1000 0 Harvey 9 9 3/
         skippable/
         setSkipActions AddFriendshipPoints Harvey 40#marilynsinister.HarveyStressMeter_ComfortRelief 15/
         warp farmer 6 12/
-        move farmer 0 -3 1 true/
-        move Harvey -1 0 3 true/
-        move farmer 1 0 1 true/
+        move farmer 0 -3 1/
+        move Harvey -1 0 3/
+        move farmer 1 0 1/
         pause 300/
         speak Harvey \"О, @! Заходи. Только тише... слышишь?$h\"/
         message \"Из старого приёмника доносится треск и далёкие голоса.\"/
@@ -29,15 +30,16 @@
         friendship Harvey 40/
         action marilynsinister.HarveyStressMeter_ComfortRelief 15/
         end",
-                "{{ModId}}_eventHarveyEveningPlanes/Time 1900 2300/Friendship Harvey 1500/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom": "continue/
+                "{{ModId}}_eventHarveyEveningPlanes/Time 1900 2300/Friendship Harvey 1500/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom": "
+        continue/
         8 9/
         farmer 1000 1000 0 Harvey 9 9 3/
         skippable/
         setSkipActions AddFriendshipPoints Harvey 50#marilynsinister.HarveyStressMeter_ComfortRelief 15/
         warp farmer 6 12/
-        move farmer 0 -3 1 true/
-        move Harvey -1 0 3 true/
-        move farmer 1 0 1 true/
+        move farmer 0 -3 1/
+        move Harvey -1 0 3/
+        move farmer 1 0 1/
         pause 300/
         speak Harvey \"@! Ты как раз вовремя. Подержишь крыло? Клей схватывается тридцать секунд.$h\"/
         message \"На столе — почти собранная модель самолёта. Ты осторожно придерживаешь крыло.\"/
@@ -50,15 +52,16 @@
         friendship Harvey 50/
         action marilynsinister.HarveyStressMeter_ComfortRelief 15/
         end",
-                "{{ModId}}_eventHarveyEveningJournal/Time 1900 2300/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom": "continue/
+                "{{ModId}}_eventHarveyEveningJournal/Time 1900 2300/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom": "
+        continue/
         8 9/
         farmer 1000 1000 0 Harvey 9 9 3/
         skippable/
         setSkipActions AddFriendshipPoints Harvey 60#marilynsinister.HarveyStressMeter_ComfortRelief 25/
         warp farmer 6 12/
-        move farmer 0 -3 1 true/
-        move Harvey -1 0 3 true/
-        move farmer 1 0 1 true/
+        move farmer 0 -3 1/
+        move Harvey -1 0 3/
+        move farmer 1 0 1/
         pause 300/
         speak Harvey \"Солнышко, ты пришла. Я как раз дочитывал статью... садись рядом.$l\"/
         message \"Харви читает вслух медицинский журнал. Слова сливаются в тихий ровный голос.\"/

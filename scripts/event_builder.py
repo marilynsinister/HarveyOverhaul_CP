@@ -5,6 +5,7 @@
 """
 
 from skip_actions import complete_skip
+from event_staging import stage_script
 
 CD = 'HarveyMod_CD_Global'
 H = 'Harvey'
@@ -44,7 +45,7 @@ def script(music, view, actors, skip, body, ending='end'):
             *body, *tail]
     for c in cmds:
         assert '/' not in c, c
-    return '/'.join(cmds)
+    return stage_script('/'.join(cmds))
 
 
 def skip_cd(*extra):

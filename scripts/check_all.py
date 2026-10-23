@@ -18,6 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ENV = {**os.environ, "PYTHONIOENCODING": "utf-8"}
 
 CHECKS = [
+    ("регрессии постановки", ["test_event_staging.py"], lambda out: out.strip().endswith('OK')),
     ("день рождения, Зузу и переходы между картами", ["validate_outings.py"], lambda out: "Outings: all checks passed." in out),
     ("спрайты и поведение Аренда", ["validate_arend_behaviour.py"], lambda out: "Arend behaviour: all checks passed." in out),
     ("погода и доступность первого осмотра", ["validate_intro_recovery.py"], lambda out: "Intro recovery: all checks passed." in out),
@@ -25,6 +26,7 @@ CHECKS = [
     ("аптекарский сад", ["validate_herbal_garden.py"], lambda out: "Herbal garden: all static checks passed." in out),
     ("сюжет", ["validate_story_events.py"], lambda out: out.strip().splitlines()[-1:] == ["OK"]),
     ("координаты", ["-I", "validate_event_coords.py"], lambda out: re.search(r"замечаний: 0\b", out)),
+    ("ветки, маршруты, анимации и варианты комнаты", ["validate_event_staging.py"], lambda out: "issues: 0" in out),
     ("пропуск и выход из сцен", ["-I", "audit_event_exits.py"], lambda out: re.search(r"HIGH 0, MEDIUM 0\b", out)),
     ("JSON и тон", ["final_technical_validation.py"],
      lambda out: re.search(r"JSON errors: 0, dup keys: 0, pet: 0\b", out)),

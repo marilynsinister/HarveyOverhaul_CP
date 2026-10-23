@@ -8,6 +8,7 @@ import json
 import os
 
 from skip_actions import complete_skip
+from event_staging import stage_script
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'assets', 'Code', 'eventsArc3.json')
@@ -46,7 +47,7 @@ def script(music, view, actors, skip, body, ending='end'):
             *body, *tail]
     for c in cmds:
         assert '/' not in c, c
-    return '/'.join(cmds)
+    return stage_script('/'.join(cmds))
 
 
 def skip_cd(*extra):

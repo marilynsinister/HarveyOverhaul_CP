@@ -363,10 +363,11 @@ def iter_event_entries():
             target = change.get("Target", "")
             if not target.startswith("Data/Events/"):
                 continue
-            location = target.split("/")[-1]
-            for key, script in (change.get("Entries") or {}).items():
-                if isinstance(script, str):
-                    yield fname, location, key, script
+            for part in target.split(','):
+                location = part.strip().split("/")[-1]
+                for key, script in (change.get("Entries") or {}).items():
+                    if isinstance(script, str):
+                        yield fname, location, key, script
 
 
 def iter_events():

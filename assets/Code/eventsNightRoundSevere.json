@@ -6,46 +6,51 @@
             "Target": "Data/Events/FarmHouse",
             "Entries": {
                 "eventHarveyNightRoundSevereFirst/Time 2200 2600/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_NightRoundSevereFirst/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married": "
-    continue/
-    skippable/
-    pause 400/
-    ambientLight 65 70 105/
-    playSound doorClose/
-    message \"Дверь спальни едва слышно открывается — кто-то входит на цыпочках.\"/
-    pause 300/
-    faceDirection farmer 2/
-    emote Harvey 16/
-    speak Harvey \"Солнышко, тише. Это я.$s\"/
-    pause 400/
-    speak Harvey \"Не вставай. Я только проверю, как ты держишься.$u\"/
-    pause 300/
-    addItem 614 1/
-    message \"Харви ставит стакан воды на тумбочку и осторожно садится рядом.\"/
-    pause 400/
-    animate Harvey false true 800 22 20 21/
-    playSound dwop/
-    speak Harvey \"Температуры нет... хорошо.$s\"/
-    pause 300/
-    speak Harvey \"Но пульс говорит мне, что день был тяжелее, чем ты, кажется, думаешь.$s\"/
-    pause 400/
-    speak Harvey \"Я не буду читать лекцию ночью. Не сегодня.$s\"/
-    pause 300/
-    speak Harvey \"Сегодня — вода, удобнее уложиться и дать мне убедиться, что боль не растёт.$u\"/
-    pause 400/
-    message \"Он поправляет одеяло и на секунду задерживает руку у твоего запястья.\"/
-    pause 300/
-    emote farmer 20/
-    speak Harvey \"Вот так. Дыши медленнее.$u\"/
-    pause 300/
-    speak Harvey \"Я рядом. Если станет хуже — разбудишь меня сразу.$l\"/
-    pause 400/
-    speak Harvey \"Это предписание — не упрямство с моей стороны, а то, что сейчас нужно.$s\"/
-    pause 500/
-    action removeConversationTopic topicHarvey_NightRoundSevereFirst/
-    action addConversationTopic topicHarvey_NightRoundFollowup 2/
-    globalFade/
-    viewport -1000 -1000/
-    end dialogue Harvey \"Спи. Я загляну ещё раз перед рассветом.$u\""
+        continue/
+        {{HO_HomeVX}} 7/
+        farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/
+        skippable/
+        setSkipActions AddItem 614 1#RemoveConversationTopic topicHarvey_NightRoundSevereFirst#AddConversationTopic topicHarvey_NightRoundFollowup 2/
+        viewport {{HO_HomeVX}} 7 true/
+        pause 400/
+        ambientLight 65 70 105/
+        playSound doorClose/
+        message \"Дверь спальни едва слышно открывается — кто-то входит на цыпочках.\"/
+        pause 300/
+        faceDirection farmer 2/
+        emote Harvey 16/
+        speak Harvey \"Солнышко, тише. Это я.$s\"/
+        pause 400/
+        speak Harvey \"Не вставай. Я только проверю, как ты держишься.$u\"/
+        pause 300/
+        addItem 614 1/
+        message \"Харви ставит стакан воды на тумбочку и осторожно садится рядом.\"/
+        pause 400/
+        animate Harvey false true 800 22 20 21/
+        playSound dwop/
+        speak Harvey \"Температуры нет... хорошо.$s\"/
+        pause 300/
+        speak Harvey \"Но пульс говорит мне, что день был тяжелее, чем ты, кажется, думаешь.$s\"/
+        pause 400/
+        speak Harvey \"Я не буду читать лекцию ночью. Не сегодня.$s\"/
+        pause 300/
+        speak Harvey \"Сегодня — вода, удобнее уложиться и дать мне убедиться, что боль не растёт.$u\"/
+        pause 400/
+        message \"Он поправляет одеяло и на секунду задерживает руку у твоего запястья.\"/
+        pause 300/
+        emote farmer 20/
+        speak Harvey \"Вот так. Дыши медленнее.$u\"/
+        pause 300/
+        speak Harvey \"Я рядом. Если станет хуже — разбудишь меня сразу.$l\"/
+        pause 400/
+        speak Harvey \"Это предписание — не упрямство с моей стороны, а то, что сейчас нужно.$s\"/
+        pause 500/
+        action removeConversationTopic topicHarvey_NightRoundSevereFirst/
+        action addConversationTopic topicHarvey_NightRoundFollowup 2/
+        globalFade/
+        viewport -1000 -1000/
+        stopAnimation Harvey/
+        end dialogue Harvey \"Спи. Я загляну ещё раз перед рассветом.$u\""
             }
         }
     ]

@@ -6,138 +6,153 @@
             "Target": "Data/Events/FarmHouse",
             "Entries": {
                 "eventHarveyAfterExternalRescueHome/Time 2200 2600/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_ExternalRescueConcern/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_AfterExternalRescueCooldown": "
-    continue/
-    skippable/
-    pause 300/
-    message \"Ты только успела снять обувь — за спиной тихо скрипнули шаги.\"/
-    pause 300/
-    emote Harvey 16/
-    speak Harvey \"Солнышко, ты дома... наконец-то.$s\"/
-    pause 400/
-    speak Harvey \"Сядь. Пожалуйста. Я не начну дышать нормально, пока сам тебя не осмотрю.$u\"/
-    pause 300/
-    message \"Харви подходит ближе — не хватает, только протягивает руку, ожидая, пока ты позволишь.\"/
-    pause 400/
-    speak Harvey \"Я знаю. Тебя уже осмотрели.$s#$b#И я благодарен тому, кто это сделал. Правда.$s\"/
-    pause 300/
-    speak Harvey \"Но я не был рядом. Я не видел, как ты открыла глаза. Я не держал твою руку.$s\"/
-    pause 400/
-    speak Harvey \"Поэтому сейчас — сядь, дай мне запястье. Пять минут — и я хоть немного успокоюсь.$s\"/
-    pause 300/
-    animate Harvey false true 800 22 20 21/
-    playSound dwop/
-    pause 400/
-    speak Harvey \"Пульс всё ещё высокий... дыхание поверхностное.$u\"/
-    pause 300/
-    speak Harvey \"Ты пережила слишком много для одного дня.$s\"/
-    pause 300/
-    addItem 614 1/
-    speak Harvey \"Вода. Потом постель. Потом я посижу рядом, пока ты не уснёшь.$l\"/
-    pause 400/
-    emote farmer 20/
-    message \"Ты тихо смотришь на него. Не отстраняешься.\"/
-    pause 400/
-    speak Harvey \"Да. Я останусь.$l\"/
-    speak Harvey \"Могу посидеть рядом, пока ты не уснёшь — если ты не против.$l\"/
-    quickQuestion Можно я останусь?#Да, останься#Я справлюсь(break)speak Harvey \"Тогда я на стуле у кровати. Спи спокойно — я рядом.$l\"(break)speak Harvey \"Тогда хотя бы ляг. Я загляну перед сном — дверь не запирай.$u\"/
-    pause 400/
-    speak Harvey \"Можешь сердиться на мою настойчивость утром. Сейчас я просто слишком переживаю, чтобы отступить.$l\"/
-    pause 500/
-    action removeConversationTopic topicHarvey_ExternalRescueConcern/
-    action addConversationTopic topicHarvey_AfterExternalRescueCooldown 3/
-    friendship Harvey 45/
-    globalFade/
-    viewport -1000 -1000/
-    end dialogue Harvey \"Если проснёшься среди ночи — позови. Я недалеко.$u\"",
+        continue/
+        {{HO_HomeVX}} 7/
+        farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/
+        skippable/
+        setSkipActions AddItem 614 1#RemoveConversationTopic topicHarvey_ExternalRescueConcern#AddConversationTopic topicHarvey_AfterExternalRescueCooldown 3#AddFriendshipPoints Harvey 45/
+        viewport {{HO_HomeVX}} 7 true/
+        pause 300/
+        message \"Ты только успела снять обувь — за спиной тихо скрипнули шаги.\"/
+        pause 300/
+        emote Harvey 16/
+        speak Harvey \"Солнышко, ты дома... наконец-то.$s\"/
+        pause 400/
+        speak Harvey \"Сядь. Пожалуйста. Я не начну дышать нормально, пока сам тебя не осмотрю.$u\"/
+        pause 300/
+        message \"Харви подходит ближе — не хватает, только протягивает руку, ожидая, пока ты позволишь.\"/
+        pause 400/
+        speak Harvey \"Я знаю. Тебя уже осмотрели.$s#$b#И я благодарен тому, кто это сделал. Правда.$s\"/
+        pause 300/
+        speak Harvey \"Но я не был рядом. Я не видел, как ты открыла глаза. Я не держал твою руку.$s\"/
+        pause 400/
+        speak Harvey \"Поэтому сейчас — сядь, дай мне запястье. Пять минут — и я хоть немного успокоюсь.$s\"/
+        pause 300/
+        animate Harvey false true 800 22 20 21/
+        playSound dwop/
+        pause 400/
+        speak Harvey \"Пульс всё ещё высокий... дыхание поверхностное.$u\"/
+        pause 300/
+        speak Harvey \"Ты пережила слишком много для одного дня.$s\"/
+        pause 300/
+        addItem 614 1/
+        speak Harvey \"Вода. Потом постель. Потом я посижу рядом, пока ты не уснёшь.$l\"/
+        pause 400/
+        emote farmer 20/
+        message \"Ты тихо смотришь на него. Не отстраняешься.\"/
+        pause 400/
+        speak Harvey \"Да. Я останусь.$l\"/
+        speak Harvey \"Могу посидеть рядом, пока ты не уснёшь — если ты не против.$l\"/
+        quickQuestion Можно я останусь?#Да, останься#Я справлюсь(break)speak Harvey \"Тогда я на стуле у кровати. Спи спокойно — я рядом.$l\"(break)speak Harvey \"Тогда хотя бы ляг. Я загляну перед сном — дверь не запирай.$u\"/
+        pause 400/
+        speak Harvey \"Можешь сердиться на мою настойчивость утром. Сейчас я просто слишком переживаю, чтобы отступить.$l\"/
+        pause 500/
+        action removeConversationTopic topicHarvey_ExternalRescueConcern/
+        action addConversationTopic topicHarvey_AfterExternalRescueCooldown 3/
+        friendship Harvey 45/
+        globalFade/
+        viewport -1000 -1000/
+        stopAnimation Harvey/
+        end dialogue Harvey \"Если проснёшься среди ночи — позови. Я недалеко.$u\"",
 
                 "eventHarveyAfterExternalRescueHomeEngaged/Time 2200 2600/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_ExternalRescueConcern/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Engaged/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_AfterExternalRescueCooldown": "
-    continue/
-    skippable/
-    pause 300/
-    message \"Ты только успела снять обувь — за спиной тихо скрипнули шаги.\"/
-    pause 300/
-    emote Harvey 16/
-    speak Harvey \"Солнышко, ты дома... наконец-то.$s\"/
-    pause 400/
-    speak Harvey \"Сядь. Пожалуйста. Я не начну дышать нормально, пока сам тебя не осмотрю.$u\"/
-    pause 300/
-    message \"Харви подходит ближе — не хватает, только протягивает руку, ожидая, пока ты позволишь.\"/
-    pause 400/
-    speak Harvey \"Я знаю. Тебя уже осмотрели.$s#$b#И я благодарен тому, кто это сделал. Правда.$s\"/
-    pause 300/
-    speak Harvey \"Но я не был рядом. Я не видел, как ты открыла глаза. Я не держал твою руку.$s\"/
-    pause 400/
-    speak Harvey \"Поэтому сейчас — сядь, дай мне запястье. Пять минут — и я хоть немного успокоюсь.$s\"/
-    pause 300/
-    animate Harvey false true 800 22 20 21/
-    playSound dwop/
-    pause 400/
-    speak Harvey \"Пульс всё ещё высокий... дыхание поверхностное.$u\"/
-    pause 300/
-    speak Harvey \"Ты пережила слишком много для одного дня.$s\"/
-    pause 300/
-    addItem 614 1/
-    speak Harvey \"Вода. Потом постель. Потом я посижу рядом, пока ты не уснёшь.$l\"/
-    pause 400/
-    emote farmer 20/
-    message \"Ты тихо смотришь на него. Не отстраняешься.\"/
-    pause 400/
-    speak Harvey \"Да. Я останусь.$l\"/
-    speak Harvey \"Сегодня я не уйду спокойно — не после того, как узнал, что ты могла не вернуться.$s\"/
-    pause 400/
-    speak Harvey \"Можешь сердиться на мою настойчивость утром. Сейчас я просто слишком переживаю, чтобы отступить.$l\"/
-    pause 500/
-    action removeConversationTopic topicHarvey_ExternalRescueConcern/
-    action addConversationTopic topicHarvey_AfterExternalRescueCooldown 3/
-    friendship Harvey 50/
-    globalFade/
-    viewport -1000 -1000/
-    end dialogue Harvey \"Я усну только когда твой пульс станет спокойным.$u\"",
+        continue/
+        {{HO_HomeVX}} 7/
+        farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/
+        skippable/
+        setSkipActions AddItem 614 1#RemoveConversationTopic topicHarvey_ExternalRescueConcern#AddConversationTopic topicHarvey_AfterExternalRescueCooldown 3#AddFriendshipPoints Harvey 50/
+        viewport {{HO_HomeVX}} 7 true/
+        pause 300/
+        message \"Ты только успела снять обувь — за спиной тихо скрипнули шаги.\"/
+        pause 300/
+        emote Harvey 16/
+        speak Harvey \"Солнышко, ты дома... наконец-то.$s\"/
+        pause 400/
+        speak Harvey \"Сядь. Пожалуйста. Я не начну дышать нормально, пока сам тебя не осмотрю.$u\"/
+        pause 300/
+        message \"Харви подходит ближе — не хватает, только протягивает руку, ожидая, пока ты позволишь.\"/
+        pause 400/
+        speak Harvey \"Я знаю. Тебя уже осмотрели.$s#$b#И я благодарен тому, кто это сделал. Правда.$s\"/
+        pause 300/
+        speak Harvey \"Но я не был рядом. Я не видел, как ты открыла глаза. Я не держал твою руку.$s\"/
+        pause 400/
+        speak Harvey \"Поэтому сейчас — сядь, дай мне запястье. Пять минут — и я хоть немного успокоюсь.$s\"/
+        pause 300/
+        animate Harvey false true 800 22 20 21/
+        playSound dwop/
+        pause 400/
+        speak Harvey \"Пульс всё ещё высокий... дыхание поверхностное.$u\"/
+        pause 300/
+        speak Harvey \"Ты пережила слишком много для одного дня.$s\"/
+        pause 300/
+        addItem 614 1/
+        speak Harvey \"Вода. Потом постель. Потом я посижу рядом, пока ты не уснёшь.$l\"/
+        pause 400/
+        emote farmer 20/
+        message \"Ты тихо смотришь на него. Не отстраняешься.\"/
+        pause 400/
+        speak Harvey \"Да. Я останусь.$l\"/
+        speak Harvey \"Сегодня я не уйду спокойно — не после того, как узнал, что ты могла не вернуться.$s\"/
+        pause 400/
+        speak Harvey \"Можешь сердиться на мою настойчивость утром. Сейчас я просто слишком переживаю, чтобы отступить.$l\"/
+        pause 500/
+        action removeConversationTopic topicHarvey_ExternalRescueConcern/
+        action addConversationTopic topicHarvey_AfterExternalRescueCooldown 3/
+        friendship Harvey 50/
+        globalFade/
+        viewport -1000 -1000/
+        stopAnimation Harvey/
+        end dialogue Harvey \"Я усну только когда твой пульс станет спокойным.$u\"",
 
                 "eventHarveyAfterExternalRescueHomeMarried/Time 2200 2600/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_ExternalRescueConcern/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_AfterExternalRescueCooldown": "
-    continue/
-    skippable/
-    pause 300/
-    message \"Ты только успела снять обувь — за спиной тихо скрипнули шаги.\"/
-    pause 300/
-    emote Harvey 16/
-    speak Harvey \"Любимая, ты дома... наконец-то.$s\"/
-    pause 400/
-    speak Harvey \"Сядь. Пожалуйста. Я не начну дышать нормально, пока сам тебя не осмотрю.$u\"/
-    pause 300/
-    message \"Харви подходит ближе — не хватает, только протягивает руку, ожидая, пока ты позволишь.\"/
-    pause 400/
-    speak Harvey \"Я знаю. Тебя уже осмотрели.$s#$b#И я благодарен тому, кто это сделал. Правда.$s\"/
-    pause 300/
-    speak Harvey \"Но я не был рядом. Я не видел, как ты открыла глаза. Я не держал твою руку.$s\"/
-    pause 400/
-    speak Harvey \"Поэтому сейчас — сядь, дай мне запястье. Пять минут — и я хоть немного успокоюсь.$s\"/
-    pause 300/
-    animate Harvey false true 800 22 20 21/
-    playSound dwop/
-    pause 400/
-    speak Harvey \"Пульс всё ещё высокий... дыхание поверхностное.$u\"/
-    pause 300/
-    speak Harvey \"Ты пережила слишком много для одного дня.$s\"/
-    pause 300/
-    addItem 614 1/
-    speak Harvey \"Вода. Потом постель. Потом я посижу рядом, пока ты не уснёшь.$l\"/
-    pause 400/
-    emote farmer 20/
-    message \"Ты тихо смотришь на него. Не отстраняешься.\"/
-    pause 400/
-    speak Harvey \"Да. Я останусь.$l\"/
-    speak Harvey \"Сегодня я не ухожу из спальни.$s#$b#Буду следить за твоим дыханием всю ночь — мне так спокойнее.$l\"/
-    pause 400/
-    speak Harvey \"Любимая, я остаюсь.$l\"/
-    speak Harvey \"Можешь сердиться на мою настойчивость утром. Сейчас я просто слишком переживаю, чтобы отступить.$l\"/
-    pause 500/
-    action removeConversationTopic topicHarvey_ExternalRescueConcern/
-    action addConversationTopic topicHarvey_AfterExternalRescueCooldown 3/
-    friendship Harvey 55/
-    globalFade/
-    viewport -1000 -1000/
-    end dialogue Harvey \"Спи. Я прослежу за каждым вдохом.$l\""
+        continue/
+        {{HO_HomeVX}} 7/
+        farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/
+        skippable/
+        setSkipActions AddItem 614 1#RemoveConversationTopic topicHarvey_ExternalRescueConcern#AddConversationTopic topicHarvey_AfterExternalRescueCooldown 3#AddFriendshipPoints Harvey 55/
+        viewport {{HO_HomeVX}} 7 true/
+        pause 300/
+        message \"Ты только успела снять обувь — за спиной тихо скрипнули шаги.\"/
+        pause 300/
+        emote Harvey 16/
+        speak Harvey \"Любимая, ты дома... наконец-то.$s\"/
+        pause 400/
+        speak Harvey \"Сядь. Пожалуйста. Я не начну дышать нормально, пока сам тебя не осмотрю.$u\"/
+        pause 300/
+        message \"Харви подходит ближе — не хватает, только протягивает руку, ожидая, пока ты позволишь.\"/
+        pause 400/
+        speak Harvey \"Я знаю. Тебя уже осмотрели.$s#$b#И я благодарен тому, кто это сделал. Правда.$s\"/
+        pause 300/
+        speak Harvey \"Но я не был рядом. Я не видел, как ты открыла глаза. Я не держал твою руку.$s\"/
+        pause 400/
+        speak Harvey \"Поэтому сейчас — сядь, дай мне запястье. Пять минут — и я хоть немного успокоюсь.$s\"/
+        pause 300/
+        animate Harvey false true 800 22 20 21/
+        playSound dwop/
+        pause 400/
+        speak Harvey \"Пульс всё ещё высокий... дыхание поверхностное.$u\"/
+        pause 300/
+        speak Harvey \"Ты пережила слишком много для одного дня.$s\"/
+        pause 300/
+        addItem 614 1/
+        speak Harvey \"Вода. Потом постель. Потом я посижу рядом, пока ты не уснёшь.$l\"/
+        pause 400/
+        emote farmer 20/
+        message \"Ты тихо смотришь на него. Не отстраняешься.\"/
+        pause 400/
+        speak Harvey \"Да. Я останусь.$l\"/
+        speak Harvey \"Сегодня я не ухожу из спальни.$s#$b#Буду следить за твоим дыханием всю ночь — мне так спокойнее.$l\"/
+        pause 400/
+        speak Harvey \"Любимая, я остаюсь.$l\"/
+        speak Harvey \"Можешь сердиться на мою настойчивость утром. Сейчас я просто слишком переживаю, чтобы отступить.$l\"/
+        pause 500/
+        action removeConversationTopic topicHarvey_ExternalRescueConcern/
+        action addConversationTopic topicHarvey_AfterExternalRescueCooldown 3/
+        friendship Harvey 55/
+        globalFade/
+        viewport -1000 -1000/
+        stopAnimation Harvey/
+        end dialogue Harvey \"Спи. Я прослежу за каждым вдохом.$l\""
             }
         }
     ]

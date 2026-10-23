@@ -9,6 +9,7 @@
         continue/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
         skippable/
         setSkipActions AddConversationTopic topicHarveyDeclineFirstWalk 7/
         pause 600/
@@ -27,8 +28,8 @@
         viewport -1000 -1000/
         addConversationTopic topicHarveyDeclineFirstWalk 7/
         end","acceptWalk": "
-    skippable/
-    setSkipActions addConversationTopic topicHarveyAcceptFirstWalk 7#changeLocation Forest#warp farmer 51 13#warp Harvey 50 13#faceDirection farmer 3#faceDirection Harvey 3/
+        skippable/
+        setSkipActions addConversationTopic topicHarveyAcceptFirstWalk 7#changeLocation Forest#warp farmer 51 13#warp Harvey 50 13#faceDirection farmer 3#faceDirection Harvey 3/
         speak Harvey \"Отлично! Надень что-потеплее — в лесу прохладно.$h\"/
         pause 1000/
         globalFade/
@@ -56,9 +57,13 @@
         globalFade/
         viewport -1000 -1000/
         addConversationTopic topicHarveyAcceptFirstWalk 7/
-        end position 51 13","eventHarveyCheckHealthFarmer/Time 600 1200/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_CheckHealthAfterCollapse/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married": "continue/
+        proceedPosition Harvey/
+        proceedPosition farmer/
+        end position 51 13","eventHarveyCheckHealthFarmer/Time 600 1200/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_CheckHealthAfterCollapse/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married": "
+        continue/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
         skippable/
         pause 600/
         speak Harvey \"Ты выглядишь ужасно!$8#$b#*быстро подходит* Давай проверим...$u\"/
@@ -91,6 +96,8 @@
         pause 1000/
         globalFade/
         viewport -1000 -1000/
+        proceedPosition Harvey/
+        proceedPosition farmer/
         changeLocation Hospital/
         playMusic Hospital_Ambient/
         pause 500/
@@ -125,6 +132,7 @@
         continue/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
         pause 600/
         skippable/
         setSkipActions AddConversationTopic topicHarveyMandatoryCheckup 1/
@@ -154,6 +162,7 @@
         continue/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY2}} 0/
+        ignoreEventTileOffset/
         pause 1000/
         skippable/
         setSkipActions AddItem 201 1#AddItem 614 1/
@@ -178,6 +187,7 @@
         none/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
         skippable/
         setSkipActions addBuff buffStressImmunity -2#RemoveConversationTopic topicStressThunder#RemoveConversationTopic topicHarveyStormStress#AddConversationTopic HarveyMod_CD_StormComfort 3#AddFriendshipPoints Harvey 35/
         playSound thunder/
@@ -186,33 +196,27 @@
         pause 1000/
         playSound doorClose/
         speak Harvey \"Я почувствовал, что тебе страшно.$s#$b#Никто не должен переживать грозу в одиночестве.$s\"/
-        --advancedMove Harvey false 0 -1 1 0 0 -1/
         move Harvey 0 -1 0/
         pause 400/
         playSound thunder_small/
         emote farmer 8/
         speak Harvey \"Сядь рядом, если тебе так спокойнее. Я здесь.$0#$b#Гроза страшная, но ты не одна.$0\"/
-        --animate Harvey false true 6000 54/
-        --animate farmer false true 6000 101/
-        --pause 6000/
-        --showFrame farmer 6/
-        --showFrame Harvey 12/
         speak Harvey \"Чувствуешь? Гром громкий, но здесь ты под крышей.$0\"/
-        --stopAnimation Harvey/
-        --stopAnimation farmer/
         playSound thunder/
         emote farmer 8/
         speak Harvey \"Тише, тише... Это просто небо разговаривает.$0#$b#А я рядом, когда нужно удержать тебя в безопасности.$0\"/
         pause 1000/
         speak Harvey \"Знаешь что? Приходи в клинику переждать грозу.$0#$b#Там есть генератор и тёплый чай.$0\"/
-        quickQuestion #Согласиться переждать в клинике#Сказать что справишься дома#Попросить остаться с тобой на ферме(break)speak Harvey \"Хорошо. Я уже подготовил кушетку для наблюдения.$0\"\\speak Harvey \"И термометр, чтобы следить, не простудилась ли.$u\"\\globalFade\\viewport -1000 -1000\\changeLocation Hospital\\warp farmer 19 5\\faceDirection farmer 2\\warp Harvey 18 5\\faceDirection Harvey 1\\viewport 19 5\\speak Harvey \"Теперь ты в безопасности. Гроза не достанет тебя здесь.$0\"\\action addBuff buffStressImmunity -2\\action removeConversationTopic topicStressThunder\\action removeConversationTopic topicHarveyStormStress\\action addConversationTopic HarveyMod_CD_StormComfort 3\\friendship Harvey 50\\end position 19 5(break)speak Harvey \"Справишься? Одна? Во время грозы?$a#$b#Нет. Я не могу позволить тебе рисковать.$a#$b#Я останусь на ферме, пока гроза не стихнет.$a\"\\addItem 614 1\\action addBuff buffStressImmunity -2\\action removeConversationTopic topicStressThunder\\action removeConversationTopic topicHarveyStormStress\\action addConversationTopic HarveyMod_CD_StormComfort 3\\friendship Harvey 35(break)speak Harvey \"Конечно! Я проверю все окна, двери и громоотводы на ферме.$0#$b#Безопасность прежде всего.$0\"\\addItem 614 1\\action addBuff buffStressImmunity -2\\action removeConversationTopic topicStressThunder\\action removeConversationTopic topicHarveyStormStress\\action addConversationTopic HarveyMod_CD_StormComfort 3\\friendship Harvey 45/
+        quickQuestion #Согласиться переждать в клинике#Сказать что справишься дома#Попросить остаться с тобой на ферме(break)speak Harvey \"Хорошо. Я уже подготовил кушетку для наблюдения.$0\"\\speak Harvey \"И термометр, чтобы следить, не простудилась ли.$u\"\\globalFade\\viewport -1000 -1000\\changeLocation Hospital\\warp farmer 19 5\\faceDirection farmer 2\\warp Harvey 18 5\\faceDirection Harvey 1\\viewport 19 5\\speak Harvey \"Теперь ты в безопасности. Гроза не достанет тебя здесь.$0\"\\action addBuff buffStressImmunity -2\\action removeConversationTopic topicStressThunder\\action removeConversationTopic topicHarveyStormStress\\action addConversationTopic HarveyMod_CD_StormComfort 3\\friendship Harvey 50\\stopAnimation farmer\\end position 19 5(break)speak Harvey \"Справишься? Одна? Во время грозы?$a#$b#Нет. Я не могу позволить тебе рисковать.$a#$b#Я останусь на ферме, пока гроза не стихнет.$a\"\\addItem 614 1\\action addBuff buffStressImmunity -2\\action removeConversationTopic topicStressThunder\\action removeConversationTopic topicHarveyStormStress\\action addConversationTopic HarveyMod_CD_StormComfort 3\\friendship Harvey 35(break)speak Harvey \"Конечно! Я проверю все окна, двери и громоотводы на ферме.$0#$b#Безопасность прежде всего.$0\"\\addItem 614 1\\action addBuff buffStressImmunity -2\\action removeConversationTopic topicStressThunder\\action removeConversationTopic topicHarveyStormStress\\action addConversationTopic HarveyMod_CD_StormComfort 3\\friendship Harvey 45/
         pause 1000/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end","HarveyOverhaulStory.E7_DoorSignal/Time 1800 2330/!FestivalDay/Friendship Harvey 2000/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E6_SayItOutLoud, !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_DoorSignal, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E6": "
         none/
         {{HO_FarmX}} {{HO_FarmY0}}/
         farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey -1000 -1000 0/
+        ignoreEventTileOffset/
         skippable/
         setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E7 7#AddFriendshipPoints Harvey 40/
         ambientLight 80 70 55/
@@ -243,6 +247,7 @@
         addConversationTopic HarveyMod_CD_E7 7/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end"
       }
     },
@@ -396,7 +401,7 @@
         speak Harvey \"Я забочусь. И иногда забочусь слишком сильно.$0\"/
         speak Harvey \"Но я хочу, чтобы рядом со мной тебе было спокойно, а не тесно.$l\"/
         pause 500/
-        quickQuestion \"Как ответить?\"#Кивнуть#Сделать шаг ближе#Сделать шаг назад#Посмотреть на дверь(break)emote farmer 40\\speak Harvey \"Спасибо.$0\"\\speak Harvey \"Тогда я скажу правило: я рядом. Не впереди тебя. Не вместо тебя. Рядом.$l\"\\speak Harvey \"За исключением случаев, когда ты падаешь, истекаешь кровью или идёшь в шахту с температурой. Там я снова становлюсь невыносимым.$a\"\\friendship Harvey 50(break)message \"Ты делаешь шаг ближе.\"\\move farmer -1 0 3\\speak Harvey \"Вот так?$0\"\\speak Harvey \"Хорошо. Я не буду двигаться. Ты сама выбрала расстояние.$l\"\\speak Harvey \"Запомню. Это важно.$0\"\\friendship Harvey 55(break)message \"Ты делаешь шаг назад.\"\\move farmer 1 0 1\\faceDirection farmer 3\\speak Harvey \"Понял. Больше воздуха.$0\"\\speak Harvey \"Я могу быть настойчивым и отсюда. Проверено медицинской практикой.$a\"\\speak Harvey \"Но спасибо, что показала.$0\"\\friendship Harvey 45(break)faceDirection farmer 0\\message \"Ты смотришь на дверь.\"\\speak Harvey \"Хочешь уйти?$0\"\\speak Harvey \"Хорошо. Разговор подождёт — он никуда не убежит.$0\"\\addItem 613 1\\speak Harvey \"Только яблоко возьми. Ты опять без обеда, я же вижу.$h\"\\speak Harvey \"Я провожу до двери. Дальше — как выберешь.$0\"\\friendship Harvey 40/
+        quickQuestion \"Как ответить?\"#Кивнуть#Сделать шаг ближе#Сделать шаг назад#Посмотреть на дверь(break)emote farmer 40\\speak Harvey \"Спасибо.$0\"\\speak Harvey \"Тогда я скажу правило: я рядом. Не впереди тебя. Не вместо тебя. Рядом.$l\"\\speak Harvey \"За исключением случаев, когда ты падаешь, истекаешь кровью или идёшь в шахту с температурой. Там я снова становлюсь невыносимым.$a\"\\friendship Harvey 50(break)message \"Ты делаешь шаг ближе.\"\\move farmer 0 -1 3\\speak Harvey \"Вот так?$0\"\\speak Harvey \"Хорошо. Я не буду двигаться. Ты сама выбрала расстояние.$l\"\\speak Harvey \"Запомню. Это важно.$0\"\\friendship Harvey 55(break)message \"Ты делаешь шаг назад.\"\\move farmer 0 1 2\\faceDirection farmer 3\\speak Harvey \"Понял. Больше воздуха.$0\"\\speak Harvey \"Я могу быть настойчивым и отсюда. Проверено медицинской практикой.$a\"\\speak Harvey \"Но спасибо, что показала.$0\"\\friendship Harvey 45(break)faceDirection farmer 0\\message \"Ты смотришь на дверь.\"\\speak Harvey \"Хочешь уйти?$0\"\\speak Harvey \"Хорошо. Разговор подождёт — он никуда не убежит.$0\"\\addItem 613 1\\speak Harvey \"Только яблоко возьми. Ты опять без обеда, я же вижу.$h\"\\speak Harvey \"Я провожу до двери. Дальше — как выберешь.$0\"\\friendship Harvey 40/
         pause 400/
         speak Harvey \"Я всё равно буду напоминать про еду, воду и отдых.$a\"/
         speak Harvey \"Ты всё равно будешь делать вид, что не слышишь.$0\"/
@@ -441,10 +446,14 @@
         speak Harvey \"Я очень хочу сейчас сказать «наконец-то». Не скажу. Ты не обязана была созреть по моему расписанию.$0\"/
         globalFade/
         viewport 4 6 true/
-        warp farmer 4 6 2/
-        warp Harvey 4 5 0/
+        warp farmer 5 4/
         stopAnimation farmer/
-        showFrame farmer true 117/
+        faceDirection farmer 2/
+        showFrame farmer 107/
+        warp Harvey 5 5/
+        faceDirection Harvey 0/
+        stopAnimation farmer/
+        showFrame farmer 107/
         pause 500/
         speak Harvey \"Сядь. Медленно. Сегодня мы делаем всё так, чтобы ты могла остановить меня в любой момент.$u\"/
         addItem 614 1/
@@ -455,11 +464,12 @@
         addConversationTopic HarveyMod_CD_E9 7/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end",
         "eventHarveyMedicalCheck_Dating/Friendship Harvey 1500/Time 1400 1800/Weather sunny/GameStateQuery PLAYER_HAS_MAIL Current mailHarveyMedicalCheckReminder Received/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
         Hospital_Ambient/
         10 15/
-        Harvey 10 14 2/
+        Harvey 10 14 2 farmer 10 19 0/
         playSound doorOpen/
         warp farmer 10 19 true/
         faceDirection farmer 0/
@@ -468,31 +478,22 @@
         emote farmer 12/
         speak Harvey \"Привет, @. Рад тебя видеть.$l\"/
         pause 300/
-        move Harvey 0 2 2 true/
-        move farmer 0 -2 0 true/
-        pause 200/
-        speak Harvey \"Ты дрожишь. Давай сядем.\"/
-        pause 200/
-        faceDirection Harvey 0/
-        pause 200/
-        move Harvey 0 -2 0/
         move farmer 0 -2 0/
-        playSound doorOpen/
-        pause 500/
+        faceDirection Harvey 2/
+        speak Harvey \"Ты дрожишь. Пройдём в кабинет — там спокойнее.$u\"/
         globalFade/
         viewport -1000 -1000/
-        pause 500/
+        stopAnimation farmer/
         ignoreCollisions farmer/
-        warp farmer 20 5 true/
+        warp farmer 20 5/
         faceDirection farmer 2/
         positionOffset farmer 32 -52/
         animate farmer true true 10000 4 5/
         warp Harvey 19 5/
         faceDirection Harvey 1/
-        viewport 20 5/
+        viewport 20 6 true/
+        globalFadeToClear/
         pause 500/
-        faceDirection Harvey 1/
-        pause 200/
         speak Harvey \"Послушаю дыхание и проверю давление. Можно? Скажешь «стоп» — остановлюсь.$0\"/
         question fork2 \"#Кивнуть#Сначала скажи, что будешь делать#Стоп. Не сегодня\"/
         fork HarveyExam_MedCheckStoppedDating/
@@ -505,12 +506,14 @@
         pause 800/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation Harvey/
+        stopAnimation farmer/
         end dialogue Harvey \"Ты становишься сильнее с каждым днём... Я рядом, если понадоблюсь.$l\"",
 
         "eventHarveyMedicalCheck/Friendship Harvey 1500/Time 1400 1800/Weather sunny/GameStateQuery PLAYER_HAS_MAIL Current mailHarveyMedicalCheckReminder Received/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
         Hospital_Ambient/
         10 15/
-        Harvey 10 14 2/
+        Harvey 10 14 2 farmer 10 19 0/
         playSound doorOpen/
         warp farmer 10 19 true/
         faceDirection farmer 0/
@@ -519,39 +522,22 @@
         emote farmer 12/
         speak Harvey \"Привет. Рад, что ты пришла.$h\"/
         pause 300/
-        move Harvey 0 2 2 true/
-        move farmer 0 -2 0 true/
-        pause 200/
-        speak Harvey \"Ты дрожишь. Давай сядем.\"/
-        pause 200/
-        faceDirection Harvey 0/
-        pause 200/
-        move Harvey 0 -2 0/
         move farmer 0 -2 0/
-        doAction 10 13/
-        viewport move 1 -2 4000/
-        pause 200/
-        advancedMove Harvey false 0 -7 6 0 0 1 5 0/
-        advancedMove farmer false 0 -8 6 0 0 1 4 0 0 -2 -1 0 0 -1/
-        ProceedPosition Harvey/
-        faceDirection Harvey 3/
-        proceedPosition farmer/
-        beginSimultaneousCommand/
-        warp farmer 20 5 true/
+        faceDirection Harvey 2/
+        speak Harvey \"Ты дрожишь. Пройдём в кабинет — там спокойнее.$u\"/
+        globalFade/
+        viewport -1000 -1000/
+        stopAnimation farmer/
+        ignoreCollisions farmer/
+        warp farmer 20 5/
         faceDirection farmer 2/
-        positionOffset farmer 32 -32/
-        endSimultaneousCommand/
-        stopAdvancedMoves/
-        advancedMove Harvey false -1 0 0 -2 -1 0/
-        pause 2000/
-        proceedPosition Harvey/
-        faceDirection Harvey 0/
-        stopAdvancedMoves/
-        advancedMove Harvey false 0 -1/
-        pause 500/
-        stopAdvancedMoves/
+        positionOffset farmer 32 -52/
+        animate farmer true true 10000 4 5/
+        warp Harvey 19 5/
         faceDirection Harvey 1/
-        pause 200/
+        viewport 20 6 true/
+        globalFadeToClear/
+        pause 500/
         speak Harvey \"Послушаю дыхание и проверю давление. Можно? Скажешь «стоп» — остановлюсь.$0\"/
         question fork2 \"#Кивнуть#Сначала скажи, что будешь делать#Стоп. Не сегодня\"/
         fork HarveyExam_MedCheckStopped/
@@ -564,8 +550,11 @@
         pause 800/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation Harvey/
+        stopAnimation farmer/
         end dialogue Harvey \"Ты становишься сильнее с каждым днём... Пока постарайся не доводить себя до такого состояния. Если что-то беспокоит — приходи сразу. Я помогу.$0\"",
-        "eventHarveyTreatmentCollapse": "none/
+        "eventHarveyTreatmentCollapse": "
+        none/
         -1000 -1000/
         farmer 1000 1000 0 Harvey 1000 1000 0/
         skippable/
@@ -589,6 +578,7 @@
         speak Harvey \"Именно поэтому ты будешь отдыхать. Я буду проверять твоё состояние. Не вставай сначала покажись мне\"/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end position 14 6",
         "eventStayInHospital": "none/
         9 16/
@@ -608,7 +598,9 @@
         skippable/
         pause 800/
         speak Harvey \"Наконец-то у меня есть полная картина твоего состояния.$u#$b#Садись, обсудим план лечения.$0\"/
-        move farmer 0 -1 2/
+        warp farmer 5 4/
+        stopAnimation farmer/
+        faceDirection farmer 2/
         stopAnimation farmer/
         showFrame farmer 107/
         move Harvey 1 0 0/
@@ -620,90 +612,95 @@
         pause 2000/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end",
 
 
          "HarveyOverhaulStory.E2_InsistentExam/Time 0900 1700/!FestivalDay/Friendship Harvey 750/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E1_SlipperyPath/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E2_InsistentExam/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E1": "
-         Hospital_Ambient/
-         6 10/
-         Harvey 2 5 2 farmer 5 10 0/
-         ignoreCollisions farmer/
-         setSkipActions AddMail Current HarveyOverhaul_E2_PierInvite tomorrow#AddItem 614 1#AddFriendshipPoints Harvey 35/
-         skippable/
-         playSound doorOpen/
-         doAction 5 9/
-         pause 400/
-         emote farmer 12/
-         pause 100/
-         move farmer 0 -6 0/
-         pause 100/
-         faceDirection Harvey 1/
-         pause 100/
-         speak Harvey \"Сядь. Пульс, дыхание, осмотр — по порядку.$a\"/
-         pause 100/
-         proceedPosition farmer/
-         pause 100/
-         stopAnimation farmer/
-         faceDirection farmer 2/
-         showFrame farmer 107/
-         pause 100/
-         move Harvey 3 0 0/
-         faceDirection Harvey 0/
-         animate Harvey false false 1000 8 19 8/
-         pause 100/
-         message \"Ты крепче сжимаешь край кушетки.\"/
-         speak Harvey \"Дыши ровно… ещё раз…$u\"/
-         pause 200/
-         faceDirection Harvey 0/
-         animate Harvey false true 1000 22 20 21 20/
-         pause 800/
-         stopAnimation Harvey/
-         speak Harvey \"Пульс учащён. Кожа холодная. Ты слишком долго тащишь всё на себе.$a\"/
-         pause 300/
-         message \"Ты отводишь взгляд к двери.\"/
-         emote farmer 28/
-         speak Harvey \"Дверь.$u\"/
-         speak Harvey \"Хочешь уйти? Или просто тяжело, когда смотрят в упор?$0\"/
-         quickQuestion #Кивнуть#Покачать головой#Показать на окно(break)emote farmer 40\\action marilynsinister.HarveyStressMeter_ExamStopRespected\\speak Harvey \"Понял. Не удерживаю.$0\"\\speak Harvey \"Но осмотр не отменяем. Сокращаем.$a\"(break)emote farmer 12\\speak Harvey \"Хорошо. Кивка достаточно, чтобы продолжить.$0\"\\speak Harvey \"Если я ошибся — покажи.$0\"(break)message \"Ты указываешь на окно — туда, где меньше суеты.\"\\speak Harvey \"Свет. Воздух. Разумно.$0\"\\speak Harvey \"Останемся у окна. Ближе к выходу — психологически, не медицински.$0\"/
-         speak Harvey \"Я вижу, что давлю. Но я не отступлю от главного: твоё состояние требует внимания.$a\"/
-         pause 400/
-         speak Harvey \"Сейчас я скажу неприятную вещь.$a\"/
-         speak Harvey \"Ты не обязана становиться идеальной пациенткой за один день. Но хотя бы один пункт режима ты сегодня выберешь.$0\"/
-         speak Harvey \"Один. Не спорь, это уже моя уступка.$a\"/
-         pause 300/
-         message \"Ты киваешь не сразу.\"/
-         quickQuestion \"С чего начать режим?\"#Вода с собой#Тёплый завтрак#Вечерний отдых#Попросить Харви решить самому(break)speak Harvey \"Хорошо. Бутылка у двери. Не в сундуке, не где-то на ферме — у двери.$a#$b#Я зануден, знаю. Зато обезвоживание тоже занудное и куда менее обаятельное.$0\"\\addConversationTopic topicHarveyTrust_Water 7(break)speak Harvey \"Тёплый завтрак. Даже маленький.$a#$b#Не пир на весь город. Каша, суп, кусок хлеба с сыром — что угодно, что не выглядит как забытое тело.$0\"\\addConversationTopic topicHarveyTrust_Breakfast 7(break)speak Harvey \"Вечерний отдых. Хороший выбор.$0#$b#Ферма переживёт несобранный сорняк. Твой организм — не всегда.$a\"\\addConversationTopic topicHarveyTrust_Rest 7(break)speak Harvey \"Тогда решаю как врач: вода.$a#$b#Самое простое. Самое скучное. Самое недооценённое.$0#$b#И да, я буду проверять. Не потому что не доверяю тебе. Потому что тревожусь.$u\"\\addConversationTopic topicHarveyTrust_DoctorDecides 7/
-         pause 400/
-         speak Harvey \"Вот теперь можно спорить со мной сколько угодно. Но выбранный пункт — выполняешь.$a\"/
-         speak Harvey \"Я рядом. И если придётся быть настойчивым — я буду.$0\"/
-         pause 300/
-         move Harvey -2 0 3/
-         proceedPosition Harvey/
-         playSound openBox/
-         move Harvey 2 0 0/
-         proceedPosition Harvey/
-         faceDirection Harvey 0/
-         addItem 614 1/
-         speak Harvey \"Выпей, пока горячий. Я посмотрю на цвет лица — и отпущу.$u\"/
-         message \"Ты берёшь чашку обеими руками.\"/
-         pause 600/
-         emote farmer 56/
-         speak Harvey \"Кивок засчитан. И, кажется, чай тоже.$h\"/
-         showFrame farmer 0/
-         stopAnimation farmer/
-         move Harvey -1 0 2/
-         move farmer 0 6 2/
-         move farmer 1 0 1/
-         move Harvey 0 2 2/
-         move Harvey 1 0 1/
-         move Harvey 0 3 2/
-         faceDirection Harvey 1/
-         faceDirection farmer 3/
-         speak Harvey \"До двери — медленно. Завтра пришлю время встречи на пирсе.$0\"/
-         emote farmer 56/
-         friendship Harvey 35/
-         action AddMail Current HarveyOverhaul_E2_PierInvite tomorrow/
-         end dialogue Harvey \"Завтра — пирс, после шести. Я буду ждать.$0\"",
+        Hospital_Ambient/
+        6 10/
+        Harvey 2 5 2 farmer 5 10 0/
+        ignoreCollisions farmer/
+        setSkipActions AddMail Current HarveyOverhaul_E2_PierInvite tomorrow#AddItem 614 1#AddFriendshipPoints Harvey 35/
+        skippable/
+        playSound doorOpen/
+        doAction 5 9/
+        pause 400/
+        emote farmer 12/
+        pause 100/
+        move farmer 0 -5 0/
+        warp farmer 5 4/
+        stopAnimation farmer/
+        faceDirection farmer 2/
+        pause 100/
+        faceDirection Harvey 1/
+        pause 100/
+        speak Harvey \"Сядь. Пульс, дыхание, осмотр — по порядку.$a\"/
+        pause 100/
+        proceedPosition farmer/
+        pause 100/
+        stopAnimation farmer/
+        faceDirection farmer 2/
+        showFrame farmer 107/
+        pause 100/
+        move Harvey 3 0 0/
+        faceDirection Harvey 0/
+        animate Harvey false false 1000 8 19 8/
+        pause 100/
+        message \"Ты крепче сжимаешь край кушетки.\"/
+        speak Harvey \"Дыши ровно… ещё раз…$u\"/
+        pause 200/
+        faceDirection Harvey 0/
+        animate Harvey false true 1000 22 20 21 20/
+        pause 800/
+        stopAnimation Harvey/
+        speak Harvey \"Пульс учащён. Кожа холодная. Ты слишком долго тащишь всё на себе.$a\"/
+        pause 300/
+        message \"Ты отводишь взгляд к двери.\"/
+        emote farmer 28/
+        speak Harvey \"Дверь.$u\"/
+        speak Harvey \"Хочешь уйти? Или просто тяжело, когда смотрят в упор?$0\"/
+        quickQuestion #Кивнуть#Покачать головой#Показать на окно(break)emote farmer 40\\action marilynsinister.HarveyStressMeter_ExamStopRespected\\speak Harvey \"Понял. Не удерживаю.$0\"\\speak Harvey \"Но осмотр не отменяем. Сокращаем.$a\"(break)emote farmer 12\\speak Harvey \"Хорошо. Кивка достаточно, чтобы продолжить.$0\"\\speak Harvey \"Если я ошибся — покажи.$0\"(break)message \"Ты указываешь на окно — туда, где меньше суеты.\"\\speak Harvey \"Свет. Воздух. Разумно.$0\"\\speak Harvey \"Останемся у окна. Ближе к выходу — психологически, не медицински.$0\"/
+        speak Harvey \"Я вижу, что давлю. Но я не отступлю от главного: твоё состояние требует внимания.$a\"/
+        pause 400/
+        speak Harvey \"Сейчас я скажу неприятную вещь.$a\"/
+        speak Harvey \"Ты не обязана становиться идеальной пациенткой за один день. Но хотя бы один пункт режима ты сегодня выберешь.$0\"/
+        speak Harvey \"Один. Не спорь, это уже моя уступка.$a\"/
+        pause 300/
+        message \"Ты киваешь не сразу.\"/
+        quickQuestion \"С чего начать режим?\"#Вода с собой#Тёплый завтрак#Вечерний отдых#Попросить Харви решить самому(break)speak Harvey \"Хорошо. Бутылка у двери. Не в сундуке, не где-то на ферме — у двери.$a#$b#Я зануден, знаю. Зато обезвоживание тоже занудное и куда менее обаятельное.$0\"\\addConversationTopic topicHarveyTrust_Water 7(break)speak Harvey \"Тёплый завтрак. Даже маленький.$a#$b#Не пир на весь город. Каша, суп, кусок хлеба с сыром — что угодно, что не выглядит как забытое тело.$0\"\\addConversationTopic topicHarveyTrust_Breakfast 7(break)speak Harvey \"Вечерний отдых. Хороший выбор.$0#$b#Ферма переживёт несобранный сорняк. Твой организм — не всегда.$a\"\\addConversationTopic topicHarveyTrust_Rest 7(break)speak Harvey \"Тогда решаю как врач: вода.$a#$b#Самое простое. Самое скучное. Самое недооценённое.$0#$b#И да, я буду проверять. Не потому что не доверяю тебе. Потому что тревожусь.$u\"\\addConversationTopic topicHarveyTrust_DoctorDecides 7/
+        pause 400/
+        speak Harvey \"Вот теперь можно спорить со мной сколько угодно. Но выбранный пункт — выполняешь.$a\"/
+        speak Harvey \"Я рядом. И если придётся быть настойчивым — я буду.$0\"/
+        pause 300/
+        move Harvey -2 0 3/
+        proceedPosition Harvey/
+        playSound openBox/
+        move Harvey 2 0 0/
+        proceedPosition Harvey/
+        faceDirection Harvey 0/
+        addItem 614 1/
+        speak Harvey \"Выпей, пока горячий. Я посмотрю на цвет лица — и отпущу.$u\"/
+        message \"Ты берёшь чашку обеими руками.\"/
+        pause 600/
+        emote farmer 56/
+        speak Harvey \"Кивок засчитан. И, кажется, чай тоже.$h\"/
+        stopAnimation farmer/
+        showFrame farmer 0/
+        stopAnimation farmer/
+        move Harvey -1 0 2/
+        move farmer 0 6 2/
+        move farmer 1 0 1/
+        move Harvey 0 2 2/
+        move Harvey 1 0 1/
+        move Harvey 0 3 2/
+        faceDirection Harvey 1/
+        faceDirection farmer 3/
+        speak Harvey \"До двери — медленно. Завтра пришлю время встречи на пирсе.$0\"/
+        emote farmer 56/
+        friendship Harvey 35/
+        action AddMail Current HarveyOverhaul_E2_PierInvite tomorrow/
+        end dialogue Harvey \"Завтра — пирс, после шести. Я буду ждать.$0\"",
         // "HarveyMod_TreatmentReview/Time 1400 1700/GameStateQuery PLAYER_HAS_COMPLETED_QUEST Current HarveyMod_FatigueTreatment HarveyMod_SleepTherapy/Friendship Harvey 1000": "Hospital_Ambient/13 6/
         // farmer 15 8 1 Harvey 16 8 3/
         // skippable/
@@ -818,12 +815,14 @@
         addConversationTopic topicFirstTreatmentComplete 7/
         action removeConversationTopic topicHarveyNeedsFirstTreatment/
         friendship Harvey 50/
+        stopAnimation farmer/
         end",
 
         // NightCrisis_* → Data/Events/Town (клиника закрыта после 15:00; см. Town block)
 
         // ================== СОБЫТИЕ: ДЕНЬ РОЖДЕНИЯ В БОЛЬНИЦЕ (DATING / MARRIED) ==================
-        "HarveyMod_BirthdayHospital_Dating/Friendship Harvey 2000/Season summer/Day 9/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Dating/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Friend/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicBirthdayHospitalComplete": "spring_day_ambient/
+        "HarveyMod_BirthdayHospital_Dating/Friendship Harvey 2000/Season summer/Day 9/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Dating/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Friend/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicBirthdayHospitalComplete": "
+        spring_day_ambient/
         10 15/
         Harvey 9 14 1 farmer 10 19 0/
         skippable/
@@ -850,10 +849,12 @@
         pause 700/
         addConversationTopic topicBirthdayHospitalComplete 14/
         friendship Harvey 100/
+        proceedPosition farmer/
         end",
 
         // ================== СОБЫТИЕ: ДЕНЬ РОЖДЕНИЯ В БОЛЬНИЦЕ (PRE-DATING) ==================
-        "HarveyMod_BirthdayHospital_Friend/Friendship Harvey 2000/Season summer/Day 9/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Friend/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Dating/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicBirthdayHospitalComplete": "spring_day_ambient/
+        "HarveyMod_BirthdayHospital_Friend/Friendship Harvey 2000/Season summer/Day 9/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Friend/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital_Dating/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyMod_BirthdayHospital/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicBirthdayHospitalComplete": "
+        spring_day_ambient/
         10 15/
         Harvey 9 14 1 farmer 10 19 0/
         skippable/
@@ -880,6 +881,7 @@
         pause 700/
         addConversationTopic topicBirthdayHospitalComplete 14/
         friendship Harvey 100/
+        proceedPosition farmer/
         end"
     
       }
@@ -1077,6 +1079,7 @@
         pause 500/
         emote Harvey 60/
         pause 500/
+        proceedPosition Pam/
         end dialogue Harvey \"Заходи в любое время, если захочешь позаниматься. И... пожалуйста, не забывай есть.\""
       }
     },
@@ -1257,6 +1260,8 @@
         addConversationTopic topicRescueComplete 21/
         addConversationTopic HarveyLewis_Wait 2/
         action removeConversationTopic topicRescueOperation/
+        stopAnimation Harvey/
+        stopAnimation farmer/
         end position 20 5"
       }
     },
@@ -1482,96 +1487,106 @@
          friendship Harvey 75/
          end newDay",
          "HarveyOverhaulStory.E2B_QuietAgreement/Time 1000 1600/!FestivalDay/Friendship Harvey 750/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E2_InsistentExam/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E2B_QuietAgreement/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E2": "
-         none/
-         37 58/
-         farmer 37 58 2 Harvey 41 58 1/
-         ignoreCollisions farmer/
-         setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E2B 3#AddConversationTopic topicHarveyTrust_PublicCare 5#AddFriendshipPoints Harvey 25/
-         skippable/
-         pause 400/
-         emote farmer 56/
-         positionOffset farmer 0 -16/
-         faceDirection farmer 2/
-         animate farmer false true 2000 5 4/
-         message \"Ты не доходишь до клиники и опускаешься на землю в тени дерева у дорожки.\"/
-         emote Harvey 16/
-         speed Harvey 4/
-         move Harvey -2 0 3 true/
-         pause 400/
-         proceedPosition Harvey/
-         speed Harvey 2/
-         message \"Харви уже идёт быстрым шагом — и замирает в двух шагах от вас.\"/
-         faceDirection Harvey 3/
-         faceDirection farmer 1/
-         speak Harvey \"Я вижу, что ты устала. И очень хочу прямо сейчас начать врачебную лекцию.$a\"/
-         pause 300/
-         speak Harvey \"Но при всех на виду это будет не помощь, а спектакль. Поэтому коротко: вода, тень или клиника?$0\"/
-         pause 300/
-         quickQuestion #Взять воду#Отойти в тень#Пойти в клинику#Покачать головой(break)speak Harvey \"Хорошо. Без лекции. Только вода.$0\"\\message \"Он протягивает бутылку так, будто это самый обычный жест в мире.\"\\speak Harvey \"Медленно. Я всё равно считаю глотки, но делаю вид, что нет.$0\"(break)speak Harvey \"Тень — разумно.$0\"\\stopAnimation farmer\\positionOffset farmer 0 16\\move farmer -1 0 3\\move Harvey -2 0 3\\faceDirection farmer 1\\faceDirection Harvey 3\\speak Harvey \"Видишь? Я могу быть доволен пациентом почти молча.$l\"(break)speak Harvey \"Хороший выбор.$0\"\\speak Harvey \"И нет, это не поражение. Это технически грамотное отступление.$0\"\\stopAnimation farmer\\positionOffset farmer 0 16\\move farmer -1 0 3\\move farmer 0 -1 0\\move Harvey -2 0 3\\move Harvey 0 -1 0\\faceDirection farmer 1\\faceDirection Harvey 3\\message \"Он идёт рядом — без спешки, направление одно: к клинике.\"(break)speak Harvey \"Понял. Не давлю.$0\"\\speak Harvey \"Но я оставлю бутылку на ступеньках. Совершенно случайно. Как городской пейзаж.$0\"\\pause 300\\message \"Бутылка остаётся на краю ступенек у клиники.\"/
-         pause 400/
-         speak Harvey \"Договоримся так: я не устраиваю осмотр на людях, а ты не делаешь вид, что тело — необязательная часть фермерства.$a\"/
-         speak Harvey \"Кивок подойдёт.$0\"/
-         pause 300/
-         quickQuestion #Кивнуть#Покачать головой#Отвернуть взгляд(break)emote farmer 40\\speak Harvey \"Хорошо. Договор зафиксирован.$0\"\\speak Harvey \"Кивка достаточно.$l\"(break)emote farmer 12\\speak Harvey \"Понял. Настаивать не буду.$0\"\\speak Harvey \"Но я всё равно здесь.$a\"(break)message \"Ты отводишь взгляд к стене клиники.\"\\speak Harvey \"Не хочешь смотреть в глаза — уважаю.$0\"\\speak Harvey \"Если я ошибся — покажи.$0\"/
-         friendship Harvey 25/
-         addConversationTopic HarveyMod_CD_Global 2/
-         addConversationTopic HarveyMod_CD_E2B 3/
-         addConversationTopic topicHarveyTrust_PublicCare 5/
-         globalFade/
-         viewport -1000 -1000/
-         end",
+        none/
+        37 58/
+        farmer 37 58 2 Harvey 41 58 1/
+        ignoreCollisions farmer/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E2B 3#AddConversationTopic topicHarveyTrust_PublicCare 5#AddFriendshipPoints Harvey 25/
+        skippable/
+        pause 400/
+        emote farmer 56/
+        positionOffset farmer 0 -16/
+        faceDirection farmer 2/
+        animate farmer false true 2000 5 4/
+        message \"Ты не доходишь до клиники и опускаешься на землю в тени дерева у дорожки.\"/
+        emote Harvey 16/
+        speed Harvey 4/
+        move Harvey -2 0 3 true/
+        pause 400/
+        proceedPosition Harvey/
+        speed Harvey 2/
+        message \"Харви уже идёт быстрым шагом — и замирает в двух шагах от вас.\"/
+        faceDirection Harvey 3/
+        faceDirection farmer 1/
+        speak Harvey \"Я вижу, что ты устала. И очень хочу прямо сейчас начать врачебную лекцию.$a\"/
+        pause 300/
+        speak Harvey \"Но при всех на виду это будет не помощь, а спектакль. Поэтому коротко: вода, тень или клиника?$0\"/
+        pause 300/
+        quickQuestion #Взять воду#Отойти в тень#Пойти в клинику#Покачать головой(break)speak Harvey \"Хорошо. Без лекции. Только вода.$0\"\\message \"Он протягивает бутылку так, будто это самый обычный жест в мире.\"\\speak Harvey \"Медленно. Я всё равно считаю глотки, но делаю вид, что нет.$0\"(break)speak Harvey \"Тень — разумно.$0\"\\stopAnimation farmer\\positionOffset farmer 0 16\\move farmer -1 0 3\\move Harvey -2 0 3\\faceDirection farmer 1\\faceDirection Harvey 3\\speak Harvey \"Видишь? Я могу быть доволен пациентом почти молча.$l\"(break)speak Harvey \"Хороший выбор.$0\"\\speak Harvey \"И нет, это не поражение. Это технически грамотное отступление.$0\"\\stopAnimation farmer\\positionOffset farmer 0 16\\move farmer -1 0 3\\move farmer 0 -1 0\\move Harvey -2 0 3\\move Harvey 0 -1 0\\faceDirection farmer 1\\faceDirection Harvey 3\\message \"Он идёт рядом — без спешки, направление одно: к клинике.\"(break)speak Harvey \"Понял. Не давлю.$0\"\\speak Harvey \"Но я оставлю бутылку на ступеньках. Совершенно случайно. Как городской пейзаж.$0\"\\pause 300\\message \"Бутылка остаётся на краю ступенек у клиники.\"/
+        pause 400/
+        speak Harvey \"Договоримся так: я не устраиваю осмотр на людях, а ты не делаешь вид, что тело — необязательная часть фермерства.$a\"/
+        speak Harvey \"Кивок подойдёт.$0\"/
+        pause 300/
+        quickQuestion #Кивнуть#Покачать головой#Отвернуть взгляд(break)emote farmer 40\\speak Harvey \"Хорошо. Договор зафиксирован.$0\"\\speak Harvey \"Кивка достаточно.$l\"(break)emote farmer 12\\speak Harvey \"Понял. Настаивать не буду.$0\"\\speak Harvey \"Но я всё равно здесь.$a\"(break)message \"Ты отводишь взгляд к стене клиники.\"\\speak Harvey \"Не хочешь смотреть в глаза — уважаю.$0\"\\speak Harvey \"Если я ошибся — покажи.$0\"/
+        friendship Harvey 25/
+        addConversationTopic HarveyMod_CD_Global 2/
+        addConversationTopic HarveyMod_CD_E2B 3/
+        addConversationTopic topicHarveyTrust_PublicCare 5/
+        globalFade/
+        viewport -1000 -1000/
+        stopAnimation farmer/
+        end",
          "HarveyOverhaulStory.E7_TownSip_Sunny/Weather sunny/Time 1200 1500/!FestivalDay/Friendship Harvey 2000/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_DoorSignal/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_TownSip_Sunny/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E7": "
-         none/
-         26 22/
-         farmer 26 22 1 Harvey 29 22 3/
-         ignoreCollisions farmer/
-         skippable/
-         setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E7 2#AddFriendshipPoints Harvey 30/
-         pause 300/
-         emote farmer 56/
-         message \"Солнце греет камни на площади. На секунду шум города становится слишком густым.\"/
-         emote Harvey 16/
-         move Harvey 0 1 2/
-         move Harvey -3 0 3/
-         faceDirection Harvey 0/
-         faceDirection farmer 2/
-         speak Harvey \"Ты остановилась.$u\"/
-         speak Harvey \"Нет, не отвечай. Я вижу.$a\"/
-         pause 300/
-         emote Harvey 40/
-         speak Harvey \"Я очень хочу сейчас прочитать лекцию о воде и завтраке.$a\"/
-         speak Harvey \"Но мы договаривались: помощь не должна становиться спектаклем.$0\"/
-         pause 400/
-         message \"Харви ставит бутылку на край лавки — не протягивая её.\"/
-         pause 300/
-         quickQuestion #Взять бутылку#Сесть на лавку#Отойти к дереву#Сделать вид, что всё нормально(break)message \"Ты берёшь бутылку с края лавки.\"\\speak Harvey \"Спасибо.$0\"\\speak Harvey \"Я буду считать это зрелым медицинским сотрудничеством, а не моей победой.$0\"\\speak Harvey \"Хотя… немного моей победой.$h\"(break)message \"Ты садишься на лавку, опустив плечи.\"\\stopAnimation farmer\\faceDirection farmer 2\\showFrame farmer 107\\speak Harvey \"Хорошо. Сидим.$0\"\\speak Harvey \"Я рядом. Не нависаю, не проверяю пульс посреди площади, горжусь собой.$h\"(break)message \"Ты отходишь к дереву у края площади.\"\\move farmer 0 -2 0\\move Harvey 0 -2 0\\faceDirection farmer 2\\faceDirection Harvey 0\\speak Harvey \"Тень. Верно.$0\"\\speak Harvey \"Идём. Медленно. Я буду рядом, но не буду держать, пока не понадобится.$0\"(break)emote farmer 28\\speak Harvey \"Удивительно убедительно.$0\"\\speak Harvey \"Почти поверил бы, если бы не был врачом и занудой.$h\"\\speak Harvey \"Бутылка останется здесь. Совершенно случайная бутылка. Городская архитектура.$0\"/
-         pause 400/
-         addTemporaryActor Penny 16 32 20 24 1 true/
-         pause 400/
-         move Penny 5 0 1 true/
-         proceedPosition Penny/
-         speak Penny \"Добрый день, доктор.$0\"/
-         faceDirection Harvey 2/
-         speak Harvey \"Добрый, Пенни.$0\"/
-         pause 300/
-         move Penny 8 0 1 true/
-         proceedPosition Penny/
-         removeTemporarySprites/
-         pause 300/
-         faceDirection Harvey 0/
-         speak Harvey \"Видишь? Никто не обязан знать, что тебе стало нехорошо.$0\"/
-         pause 400/
-         speak Harvey \"Я всё ещё хочу проводить тебя домой.$a\"/
-         speak Harvey \"Но сначала спрошу: домой, в тень или в клинику?$0\"/
-         quickQuestion #Домой#В тень#В клинику(break)speak Harvey \"Хорошо. Светлыми улицами.$0\"\\stopAnimation farmer\\move Harvey 1 0 1\\move farmer 0 2 2 true\\move Harvey 0 1 2 true\\proceedPosition farmer\\proceedPosition Harvey(break)speak Harvey \"Пять минут. Потом решим снова.$0\"\\message \"Ты садишься в тень у стены — Харви стоит чуть в стороне.\"\\stopAnimation farmer\\faceDirection farmer 2\\showFrame farmer 107(break)speak Harvey \"Разумно. Очень разумно.$0\"\\speak Harvey \"Идём. Без спешки.$a\"\\stopAnimation farmer\\move Harvey 1 0 1\\move farmer 0 2 2 true\\move Harvey 0 1 2 true\\proceedPosition farmer\\proceedPosition Harvey/
-         pause 400/
-         friendship Harvey 30/
-         addConversationTopic HarveyMod_CD_Global 2/
-         addConversationTopic HarveyMod_CD_E7 2/
-         globalFade/
-         viewport -1000 -1000/
-         end",
-        "eventHarveyLateNightCollapse/Time 2400 2600": "continue/
+        none/
+        26 23/
+        farmer 26 23 0 Harvey 29 23 3/
+        ignoreCollisions farmer/
+        skippable/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E7 2#AddFriendshipPoints Harvey 30/
+        pause 300/
+        emote farmer 56/
+        message \"Солнце греет камни на площади. На секунду шум города становится слишком густым.\"/
+        emote Harvey 16/
+        move Harvey -2 0 3/
+        faceDirection Harvey 0/
+        faceDirection farmer 2/
+        speak Harvey \"Ты остановилась.$u\"/
+        speak Harvey \"Нет, не отвечай. Я вижу.$a\"/
+        pause 300/
+        emote Harvey 40/
+        speak Harvey \"Я очень хочу сейчас прочитать лекцию о воде и завтраке.$a\"/
+        speak Harvey \"Но мы договаривались: помощь не должна становиться спектаклем.$0\"/
+        pause 400/
+        message \"Харви ставит бутылку на край лавки — не протягивая её.\"/
+        pause 300/
+        quickQuestion #Взять бутылку#Сесть на лавку#Отойти к дереву#Сделать вид, что всё нормально(break)message \"Ты берёшь бутылку с края лавки.\"\\speak Harvey \"Спасибо.$0\"\\speak Harvey \"Я буду считать это зрелым медицинским сотрудничеством, а не моей победой.$0\"\\speak Harvey \"Хотя… немного моей победой.$h\"(break)message \"Ты садишься на лавку, опустив плечи.\"\\move farmer -2 0 3\\warp farmer 24 22\\stopAnimation farmer\\faceDirection farmer 2\\showFrame farmer 107\\speak Harvey \"Хорошо. Сидим.$0\"\\speak Harvey \"Я рядом. Не нависаю, не проверяю пульс посреди площади, горжусь собой.$h\"(break)message \"Ты отходишь к дереву у края площади.\"\\move farmer -3 0 3\\move Harvey -3 0 3\\faceDirection farmer 2\\faceDirection Harvey 0\\speak Harvey \"Тень. Верно.$0\"\\speak Harvey \"Идём. Медленно. Я буду рядом, но не буду держать, пока не понадобится.$0\"(break)emote farmer 28\\speak Harvey \"Удивительно убедительно.$0\"\\speak Harvey \"Почти поверил бы, если бы не был врачом и занудой.$h\"\\speak Harvey \"Бутылка останется здесь. Совершенно случайная бутылка. Городская архитектура.$0\"/
+        globalFade/
+        stopAnimation farmer/
+        warp farmer 26 23/
+        warp Harvey 27 23/
+        faceDirection farmer 1/
+        faceDirection Harvey 3/
+        viewport 26 23 true/
+        globalFadeToClear/
+        pause 400/
+        addTemporaryActor Penny 16 32 20 24 1 true/
+        pause 400/
+        move Penny 5 0 1 true/
+        proceedPosition Penny/
+        speak Penny \"Добрый день, доктор.$0\"/
+        faceDirection Harvey 2/
+        speak Harvey \"Добрый, Пенни.$0\"/
+        pause 300/
+        move Penny 8 0 1 true/
+        proceedPosition Penny/
+        removeTemporarySprites/
+        pause 300/
+        faceDirection Harvey 0/
+        speak Harvey \"Видишь? Никто не обязан знать, что тебе стало нехорошо.$0\"/
+        pause 400/
+        speak Harvey \"Я всё ещё хочу проводить тебя домой.$a\"/
+        speak Harvey \"Но сначала спрошу: домой, в тень или в клинику?$0\"/
+        quickQuestion #Домой#В тень#В клинику(break)speak Harvey \"Хорошо. Светлыми улицами.$0\"\\stopAnimation farmer\\move Harvey 1 0 1\\move farmer -2 0 3 true\\move Harvey -2 0 3 true\\proceedPosition farmer\\proceedPosition Harvey(break)speak Harvey \"Пять минут. Потом решим снова.$0\"\\message \"Ты садишься в тень у стены — Харви стоит чуть в стороне.\"\\move farmer -2 0 3\\warp farmer 24 22\\stopAnimation farmer\\faceDirection farmer 2\\showFrame farmer 107\\move Harvey -2 0 3(break)speak Harvey \"Разумно. Очень разумно.$0\"\\speak Harvey \"Идём. Без спешки.$a\"\\stopAnimation farmer\\move Harvey 1 0 1\\move farmer -2 0 3 true\\move Harvey -2 0 3 true\\proceedPosition farmer\\proceedPosition Harvey/
+        pause 400/
+        friendship Harvey 30/
+        addConversationTopic HarveyMod_CD_Global 2/
+        addConversationTopic HarveyMod_CD_E7 2/
+        globalFade/
+        viewport -1000 -1000/
+        stopAnimation farmer/
+        end",
+        "eventHarveyLateNightCollapse/Time 2400 2600": "
+        continue/
         37 59/
         farmer 37 59 3 Harvey 1000 1000 0/
         positionOffset farmer 0 -16/
@@ -1637,8 +1652,10 @@
         pause 400/
         emote Harvey 12/
         pause 1000/
+        stopAnimation Harvey/
         end position 20 5 dialogue Harvey \"Спокойной ночи... хотя сейчас уже утро.$s\"",
-        "528013/f Harvey 2500/t 600 1700/n harveyBalloon": "continue/
+        "528013/f Harvey 2500/t 600 1700/n harveyBalloon": "
+        continue/
         -300 -300/
         Harvey -100 -100 0 farmer 90 72 1/
         skippable/
@@ -1648,15 +1665,18 @@
         pause 3500/
         globalFade/
         viewport -1000 -1000/
+        proceedPosition farmer/
         changeLocation Custom_ShearwaterBridge/
         warp farmer 20 21/
         viewport 20 21 true/
         viewport move 2 0 6000 true/
+        proceedPosition farmer/
         move farmer 12 0 1 true/
         pause 3500/
         globalFade/
         viewport -1000 -1000/
         halt/
+        proceedPosition farmer/
         changeLocation Custom_GrampletonFields_Small/
         playMusic playful/
         warp farmer 16 42/
@@ -1664,6 +1684,7 @@
         warp Harvey 24 41/
         faceDirection Harvey 0/
         viewport 24 40 true/
+        proceedPosition farmer/
         move farmer 8 0 0/
         pause 500/
         faceDirection Harvey 3 true/
@@ -1708,6 +1729,8 @@
         positionOffset Marcello -4 0/
         pause 20/
         jump Marcello 12/
+        positionOffset Marcello 0 -558/
+        warp Marcello 25 28/
         move Marcello 0 3 3/
         move Marcello -2 0 0/
         faceDirection Harvey 2/
@@ -1838,6 +1861,7 @@
         pause 1000/
         showFrame Harvey 31/
         pause 500/
+        stopAnimation farmer/
         showFrame 101/
         positionOffset Harvey -1 0/
         pause 30/
@@ -1852,6 +1876,7 @@
         pause 2000/
         speak Harvey \"Это был самый прекрасный полет в моей жизни, @. Но теперь нам нужно спуститься - ты выглядишь уставшей, а твой пульс учащен.$l#$b#Завтра я принесу тебе витамины и проверю, не поднялось ли давление. И не спорь - это приказ твоего врача!$a\"/
         pause 2000/
+        stopAnimation farmer/
         end position 16 42",
         "eventHarveyStormComfortTown/Weather Storm/Friendship Harvey 750/Random 0.3/!FestivalDay/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_StormComfort/GameStateQuery ANY \"PLAYER_HAS_BUFF Current buffStressThunder\" \"PLAYER_HAS_CONVERSATION_TOPIC Current topicHarveyStormStress\"": "
         none/
@@ -1870,7 +1895,7 @@
         pause 500/
         warp Harvey 33 73/
         speed Harvey 6/
-        move Harvey 6 0 1/
+        move Harvey 5 0 1/
         pause 500/
         faceDirection Harvey 1/
         emote Harvey 16/
@@ -1901,9 +1926,12 @@
         viewport 14 23/
         speak Harvey \"Извините за вторжение! Экстренная ситуация!$a\"/
         pause 500/
-        advancedMove farmer false 0 -2 4 0/
+        stopAnimation farmer/
+        move farmer 0 -2 0/
+        move farmer 4 0 1/
         pause 500/
-        advancedMove Harvey false 0 -2 3 0/
+        move Harvey 0 -2 0/
+        move Harvey 4 0 1/
         pause 500/
         stopAdvancedMoves/
         faceDirection farmer 3/
@@ -1927,53 +1955,55 @@
       "Entries": {
 
          "HarveyOverhaulStory.E1_SlipperyPath/Time 700 1400/Weather Wind/!FestivalDay/Friendship Harvey 500/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E1_SlipperyPath/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "
-         none/
-         22 23/
-         farmer 18 23 1 Harvey 28 23 3/
-         setSkipActions AddMail Current HarveyOverhaul_E1_Note tomorrow#AddFriendshipPoints Harvey 20#AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E1 3/
-         skippable/
-         viewport 22 23 true/
-         pause 400/
-         playSound sandyStep/
-         move farmer 3 0 1 true/
-         move Harvey -3 0 3 true/
-         proceedPosition farmer/
-         proceedPosition Harvey/
-         message \"Порыв ветра бросает мокрые листья под ноги.\"/
-         faceDirection farmer 2/
-         animate farmer false true 2500 5 4/
-         pause 600/
-         playSound thudStep/
-         stopAnimation farmer/
-         emote farmer 28/
-         speak Harvey \"Осторожно. Не двигайтесь.$8\"/
-         pause 300/
-         move Harvey -2 0 3 true/
-         proceedPosition Harvey/
-         faceDirection farmer 1/
-         pause 400/
-         message \"Он подходит — и останавливается, оставляя между вами полшага.\"/
-         emote Harvey 16/
-         quickQuestion #Принять руку#Отступить самой#Сделать вид, что всё в порядке(break)emote farmer 40\\move Harvey -1 0 3\\pause 200\\message \"Он берёт вашу ладонь — твёрдо, без лишних слов.\"\\speak Harvey \"Вот так. Крепче. Я держу, пока вы не встанете устойчиво.$8\"\\emote farmer 56\\speak Harvey \"Не из вежливости — из безопасности. На мокрых камнях героизм обычно заканчивается синяками.$a\"(break)emote farmer 12\\speak Harvey \"Хорошо. Не подхожу.$0\"\\pause 300\\textAboveHead Harvey \"Шаг назад\"\\speak Harvey \"Тогда просто слушайте мой голос: шаг назад, ближе к ограде. Медленно.$a\"\\pause 400\\move farmer -1 0 3\\faceDirection farmer 1\\emote farmer 40\\speak Harvey \"Да. Вот так. Упрямая, но координация хорошая.$0\"(break)emote farmer 28\\speak Harvey \"Убедительно. Почти.$a\"\\pause 300\\speak Harvey \"Но я врач, а не прохожий. Я вижу, когда человек бледнеет и задерживает дыхание.$a\"\\pause 400\\move Harvey -1 0 3\\speak Harvey \"Позвольте хотя бы пройти рядом. Я не буду держать вас, если не понадобится.$0\"/
-         pause 400/
-         emote Harvey 16/
-         speak Harvey \"Вы завтракали? Можете не отвечать. По лицу я уже почти понял.$u\"/
-         pause 300/
-         quickQuestion #Кивнуть#Покачать головой#Отвернуть взгляд(break)emote farmer 40\\speak Harvey \"Понял. Завтрак — потом. Сегодня хотя бы долом.$a\"\\speak Harvey \"Не спорю с фактами. Слежу за пульсом — такова жизнь.$u\"(break)emote farmer 12\\speak Harvey \"Хорошо. Кивка достаточно.$0\"\\speak Harvey \"Если я ошибся — покажите.$0\"(break)message \"Ты отводишь взгляд к обочине.\"\\speak Harvey \"Не хотите говорить. Вижу.$0\"\\speak Harvey \"Достаточно того, что вы ещё на ногах.$0\"/
-         speak Harvey \"Сначала устойчивый шаг, потом гордость.$a#$b#Если закружится голова — клиника рядом. И я рядом.$0\"/
-         pause 300/
-         move farmer -3 0 3 true/
-         move Harvey -3 0 3 true/
-         message \"Он идёт у сухого края дорожки — между вами и обочиной.\"/
-         friendship Harvey 20/
-         addConversationTopic HarveyMod_CD_Global 2/
-         addConversationTopic HarveyMod_CD_E1 3/
-         pause 200/
-         globalFade/
-         viewport -1000 -1000/
-         pause 700/
-         action AddMail Current HarveyOverhaul_E1_Note tomorrow/
-         end",
+        none/
+        22 23/
+        farmer 18 23 1 Harvey 28 23 3/
+        setSkipActions AddMail Current HarveyOverhaul_E1_Note tomorrow#AddFriendshipPoints Harvey 20#AddConversationTopic HarveyMod_CD_Global 2#AddConversationTopic HarveyMod_CD_E1 3/
+        skippable/
+        viewport 22 23 true/
+        pause 400/
+        playSound sandyStep/
+        move farmer 3 0 1 true/
+        move Harvey -3 0 3 true/
+        proceedPosition farmer/
+        proceedPosition Harvey/
+        message \"Порыв ветра бросает мокрые листья под ноги.\"/
+        faceDirection farmer 2/
+        animate farmer false true 2500 5 4/
+        pause 600/
+        playSound thudStep/
+        stopAnimation farmer/
+        emote farmer 28/
+        speak Harvey \"Осторожно. Не двигайтесь.$8\"/
+        pause 300/
+        move Harvey -2 0 3 true/
+        proceedPosition Harvey/
+        faceDirection farmer 1/
+        pause 400/
+        message \"Он подходит — и останавливается, оставляя между вами полшага.\"/
+        emote Harvey 16/
+        quickQuestion #Принять руку#Отступить самой#Сделать вид, что всё в порядке(break)emote farmer 40\\move Harvey -1 0 3\\pause 200\\message \"Он берёт вашу ладонь — твёрдо, без лишних слов.\"\\speak Harvey \"Вот так. Крепче. Я держу, пока вы не встанете устойчиво.$8\"\\emote farmer 56\\speak Harvey \"Не из вежливости — из безопасности. На мокрых камнях героизм обычно заканчивается синяками.$a\"(break)emote farmer 12\\speak Harvey \"Хорошо. Не подхожу.$0\"\\pause 300\\textAboveHead Harvey \"Шаг назад\"\\speak Harvey \"Тогда просто слушайте мой голос: шаг назад, ближе к ограде. Медленно.$a\"\\pause 400\\move farmer -1 0 3\\faceDirection farmer 1\\emote farmer 40\\speak Harvey \"Да. Вот так. Упрямая, но координация хорошая.$0\"(break)emote farmer 28\\speak Harvey \"Убедительно. Почти.$a\"\\pause 300\\speak Harvey \"Но я врач, а не прохожий. Я вижу, когда человек бледнеет и задерживает дыхание.$a\"\\pause 400\\move Harvey -1 0 3\\speak Harvey \"Позвольте хотя бы пройти рядом. Я не буду держать вас, если не понадобится.$0\"/
+        pause 400/
+        emote Harvey 16/
+        speak Harvey \"Вы завтракали? Можете не отвечать. По лицу я уже почти понял.$u\"/
+        pause 300/
+        quickQuestion #Кивнуть#Покачать головой#Отвернуть взгляд(break)emote farmer 40\\speak Harvey \"Понял. Завтрак — потом. Сегодня хотя бы долом.$a\"\\speak Harvey \"Не спорю с фактами. Слежу за пульсом — такова жизнь.$u\"(break)emote farmer 12\\speak Harvey \"Хорошо. Кивка достаточно.$0\"\\speak Harvey \"Если я ошибся — покажите.$0\"(break)message \"Ты отводишь взгляд к обочине.\"\\speak Harvey \"Не хотите говорить. Вижу.$0\"\\speak Harvey \"Достаточно того, что вы ещё на ногах.$0\"/
+        speak Harvey \"Сначала устойчивый шаг, потом гордость.$a#$b#Если закружится голова — клиника рядом. И я рядом.$0\"/
+        pause 300/
+        move farmer -3 0 3 true/
+        move Harvey -3 0 3 true/
+        message \"Он идёт у сухого края дорожки — между вами и обочиной.\"/
+        friendship Harvey 20/
+        addConversationTopic HarveyMod_CD_Global 2/
+        addConversationTopic HarveyMod_CD_E1 3/
+        pause 200/
+        globalFade/
+        viewport -1000 -1000/
+        pause 700/
+        action AddMail Current HarveyOverhaul_E1_Note tomorrow/
+        proceedPosition Harvey/
+        proceedPosition farmer/
+        end",
         // "eventHarveyFirstMeeting/Time 0600 2600/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current topicFirstMeeting": "none/19 23/
         // farmer 19 23 1 Harvey 27 23 3/
         // skippable/
@@ -2047,120 +2077,50 @@
       "Action": "EditData",
       "Target": "Data/Events/HarveyRoom",
       "Entries": {
-        "eventHarveyRoomCheckup/Friendship Harvey 1500": "continue/
+        "eventHarveyRoomCheckup/Friendship Harvey 1500": "
+        continue/
         8 9/
         farmer 1000 1000 0 Harvey 9 9 3/
         playSound doorClose/
         skippable/
         warp farmer 6 12/
-        move farmer 0 -3 1 true/
-        move Harvey -1 0 3 true/
-        move farmer 1 0 1 true/
+        move farmer 0 -3 1/
+        move Harvey -1 0 3/
+        move farmer 1 0 1/
         pause 200/
         speak Harvey \"Плановый медицинский осмотр!$u#$b#@, я заметил, что ты чихала. Это плановый осмотр.$0\"/
         pause 200/
         message \"Ты пытаешься сбежать, но Харви останавливает тебя за локоть — мягко, но настойчиво.\"/
         speed Harvey 5/
-        move Harvey -1 0 3 true/
+        faceDirection Harvey 3/
         pause 200/
         speak Harvey \"Так... Глубокий вдох.$a\"/
-        message \"Я здорова!\" /
+        message \"Я здорова!\"/
         speak Harvey \"Ты всегда так говоришь. Вот термометр.$u\"/
         pause 200/
         end",
-        "eventHarveyRoomCheckup2/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom/GameStateQuery RANDOM 0.2": "continue/
+        "eventHarveyRoomCheckup2/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating/GameStateQuery Spiderbuttons.BETAS_NPC_LOCATION Harvey HarveyRoom/GameStateQuery RANDOM 0.2": "
+        continue/
         8 9/
         farmer 1000 1000 0 Harvey 9 9 3/
         playSound doorClose/
         skippable/
         warp farmer 6 12/
-        move farmer 0 -3 1 true/
-        move Harvey -1 0 3 true/
-        move farmer 1 0 1 true/
-        pause 200/
-        speak Harvey \"Плановый осмотр, @! *достаёт стетоскоп* Я заметил ты чихала утром - это тревожно.$a\"/
-        pause 200/
-        emote Harvey 12/
-        pause 200/
-        message \"Ты пятишься к двери...\"/
-        faceDirection farmer 1/
-        animate farmer false true 200 6 7 6 8/
-        positionOffset farmer -2 0/
-        pause 200/
-        positionOffset farmer -2 0/
-        pause 200/
-        positionOffset farmer -2 0/
-        pause 200/
-        positionOffset farmer -2 0/
-        stopAnimation farmer/
-        pause 2000/
-        positionOffset farmer 8 0/
-        faceDirection farmer 2/
-        speed farmer 5/
-        move farmer 0 1 2 true/
-        speed Harvey 6/
-        advancedMove Harvey false 0 1 -1 0 0 1 -1 0/
-        pause 1000/
-        faceDirection Harvey 0/
-        speak Harvey \"О нет, ты не... *быстро блокирует дверь*$a\"/
-        pause 200/
-        emote Harvey 16/
-        pause 200/
-        animate farmer false true 200 1 2 1 2/
-        positionOffset farmer 0 -4/
-        pause 200/
-        positionOffset farmer 0 -4/
-        pause 200/
-        positionOffset farmer 0 -4/
-        pause 200/
-        positionOffset farmer 0 -4/
-        stopAnimation farmer/
+        move farmer 0 -3 1/
+        move Harvey -1 0 3/
+        move farmer 1 0 1/
         pause 300/
-        message \"Ты бросаешься к окну!\"/
-        positionOffset farmer 0 16/
-        speed farmer 5/
-        advancedMove farmer false 0 -4 -3 0/
-        pause 200/
-        speed Harvey 5/
-        advancedMove Harvey false 0 -5 -2 0/
-        pause 1500/
-        faceDirection farmer 1/
-        pause 100/
-        jump farmer/
+        speak Harvey \"Ты утром чихала. Я взял стетоскоп, но сначала спрошу: можно проверить пульс?$u\"/
+        message \"Ты невольно отступаешь к двери.\"/
+        move farmer 0 1 0/
+        faceDirection Harvey 2/
         pause 300/
-        speak Harvey \"Стой! *перехватывает за талию* Это опасно!$8\"/
+        speak Harvey \"Я вижу. Дверь свободна, @. Никаких погонь.$s#$b#Можем просто выпить чаю.$l\"/
+        quickQuestion #Только пульс. И говори, что делаешь#Сегодня только чай(break)move farmer 0 -1 1\\faceDirection Harvey 3\\speak Harvey \"Хорошо. Коснусь запястья, посчитаю — и всё.$0\"\\animate Harvey false true 400 22 20 21\\pause 1200\\stopAnimation Harvey\\faceDirection Harvey 3\\speak Harvey \"Учащён от волнения. Давай сначала посидим спокойно.$l\"\\friendship Harvey 20(break)emote farmer 40\\speak Harvey \"Только чай. Стетоскоп убираю.$h\"\\action marilynsinister.HarveyStressMeter_ExamStopRespected\\friendship Harvey 20/
         pause 300/
-        message \"Я ненавижу осмотры! *голос дрожит*\"/
-        pause 300/
-        emote farmer 28/
-        pause 300/
-        animate Harvey true true 1000 40 41/
-        pause 300/
-        speak Harvey \"*мягко* Я знаю... *приседает на уровень глаз* Но я не причиню тебе боли.$l\"/
-        pause 300/
-        emote Harvey 20/
-        pause 300/
-        speak Harvey \"Давай договоримся - только пульс и давление. *достаёт тонометр* И чай с мёдом после.$l\"/
-        pause 300/
-        emote farmer 12/
-        stopAnimation Harvey 12/
-        pause 300/
-        animate Harvey false true 500 12 34 35 34/
-        pause 300/
-        speak Harvey \"Вот видишь, не так страшно?$l#$b#Пульс 90... от страха, не от болезни.$l\"/
-        pause 300/
-        stopAnimation Harvey 12/
-        pause 300/
-        emote Harvey 32/
-        pause 300/
-        animate Harvey true false 2000 36/
-        stopAnimation Harvey/
-        pause 2000/
-        speak Harvey \"Теперь о наказании за побег... *достаёт витамины* Двойная доза сегодня.$a\"/
-        pause 300/
+        speak Harvey \"И никакого наказания за побег. Чай с мёдом полагается в любом случае.$h\"/
         globalFade/
         viewport -1000 -1000/
-        pause 700/
         end"
       }
     },
@@ -2242,55 +2202,57 @@
           globalFade/
           viewport -1000 -1000/
           end",
-          "HarveyOverhaulStory.E8_BadDayNoReason/Time 1000 1700/!FestivalDay/Friendship Harvey 2100/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_DoorSignal/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E8_BadDayNoReason/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E8": "none/
-          48 14/
-          farmer 48 14 2 Harvey -1000 -1000 0/
-          skippable/
-          setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E8 5#AddFriendshipPoints Harvey 35/
-          pause 400/
-          viewport 48 14/
-          emote farmer 40/
-          message \"Ты остановилась посреди тропы — не от усталости, просто так.\"/
-          pause 400/
-          message \"Сегодня просто тяжело.\"/
-          pause 500/
-          message \"Причины будто нет.\"/
-          pause 500/
-          message \"Слова не находятся.\"/
-          pause 600/
-          playSound grassyStep/
-          warp Harvey 51 14/
-          faceDirection Harvey 3/
-          pause 400/
-          emote Harvey 16/
-          pause 300/
-          move Harvey -1 0 3/
-          faceDirection Harvey 3/
-          faceDirection farmer 1/
-          pause 400/
-          speak Harvey \"@?$u\"/
-          emote Harvey 40/
-          pause 300/
-          speak Harvey \"Я сейчас хочу спросить про сон, еду, боль, температуру…$u\"/
-          pause 400/
-          speak Harvey \"Стоп.$a\"/
-          pause 300/
-          speak Harvey \"Но иногда человеку плохо не потому, что он неправильно ответил на анкету.$0\"/
-          pause 400/
-          speak Harvey \"Можно не объяснять. Я всё равно останусь рядом.$l\"/
-          speak Harvey \"Не как надзор. Как скамейка. Как тёплый чай. Как человек, который не уйдёт первым.$0\"/
-          pause 400/
-          quickQuestion #Сесть рядом#Попросить воды#Покачать головой#Не спрашивай(break)message \"Ты опускаешься на траву рядом — не вплотную, но и не уходя.\"\\showFrame farmer 107\\move Harvey -1 0 3\\faceDirection Harvey 3\\faceDirection farmer 1\\speak Harvey \"Хорошо.$0\"\\speak Harvey \"Молчание тоже лечится. Медленно, но лечится.$l\"\\addConversationTopic topicHarveyBadDay_Silent 7(break)message \"Ты протягиваешь пустую ладонь — жест без слов.\"\\addItem 614 1\\speak Harvey \"Вода.$0\"\\speak Harvey \"Без лекции. Без графика. Просто пей, когда захочешь.$u\"\\addConversationTopic topicHarveyBadDay_Water 7(break)emote farmer 12\\speak Harvey \"Понял.$0\"\\speak Harvey \"Я останусь здесь, на этом расстоянии. Если захочешь идти домой — скажешь. Или кивнёшь. Или просто пойдёшь, а я провожу.$l\"\\addConversationTopic topicHarveyBadDay_Silent 7(break)message \"Ты смотришь на него коротко — без злости, но твёрдо.\"\\speak Harvey \"Хорошо. Сегодня я врач, который молчит.$0\"\\speak Harvey \"Не навсегда. Но сегодня — да.$u\"\\addConversationTopic topicHarveyBadDay_NoQuestions 7/
-          pause 400/
-          speak Harvey \"И всё же — поешь сегодня. Не героически, просто поешь.$a\"/
-          speak Harvey \"И ложись раньше. Не как приказ. Как рецепт, который я всё равно выпишу.$u\"/
-          pause 400/
-          friendship Harvey 35/
-          addConversationTopic HarveyMod_CD_Global 3/
-          addConversationTopic HarveyMod_CD_E8 5/
-          globalFade/
-          viewport -1000 -1000/
-          end",
+          "HarveyOverhaulStory.E8_BadDayNoReason/Time 1000 1700/!FestivalDay/Friendship Harvey 2100/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E7_DoorSignal/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E8_BadDayNoReason/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E8": "
+        none/
+        48 14/
+        farmer 48 14 2 Harvey -1000 -1000 0/
+        skippable/
+        setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyMod_CD_E8 5#AddFriendshipPoints Harvey 35/
+        pause 400/
+        viewport 48 14/
+        emote farmer 40/
+        message \"Ты остановилась посреди тропы — не от усталости, просто так.\"/
+        pause 400/
+        message \"Сегодня просто тяжело.\"/
+        pause 500/
+        message \"Причины будто нет.\"/
+        pause 500/
+        message \"Слова не находятся.\"/
+        pause 600/
+        playSound grassyStep/
+        warp Harvey 51 14/
+        faceDirection Harvey 3/
+        pause 400/
+        emote Harvey 16/
+        pause 300/
+        move Harvey -1 0 3/
+        faceDirection Harvey 3/
+        faceDirection farmer 1/
+        pause 400/
+        speak Harvey \"@?$u\"/
+        emote Harvey 40/
+        pause 300/
+        speak Harvey \"Я сейчас хочу спросить про сон, еду, боль, температуру…$u\"/
+        pause 400/
+        speak Harvey \"Стоп.$a\"/
+        pause 300/
+        speak Harvey \"Но иногда человеку плохо не потому, что он неправильно ответил на анкету.$0\"/
+        pause 400/
+        speak Harvey \"Можно не объяснять. Я всё равно останусь рядом.$l\"/
+        speak Harvey \"Не как надзор. Как скамейка. Как тёплый чай. Как человек, который не уйдёт первым.$0\"/
+        pause 400/
+        quickQuestion #Сесть рядом#Попросить воды#Покачать головой#Не спрашивай(break)message \"Ты опускаешься на траву рядом — не вплотную, но и не уходя.\"\\showFrame farmer 107\\move Harvey -1 0 3\\faceDirection Harvey 3\\faceDirection farmer 1\\speak Harvey \"Хорошо.$0\"\\speak Harvey \"Молчание тоже лечится. Медленно, но лечится.$l\"\\addConversationTopic topicHarveyBadDay_Silent 7(break)message \"Ты протягиваешь пустую ладонь — жест без слов.\"\\addItem 614 1\\speak Harvey \"Вода.$0\"\\speak Harvey \"Без лекции. Без графика. Просто пей, когда захочешь.$u\"\\addConversationTopic topicHarveyBadDay_Water 7(break)emote farmer 12\\speak Harvey \"Понял.$0\"\\speak Harvey \"Я останусь здесь, на этом расстоянии. Если захочешь идти домой — скажешь. Или кивнёшь. Или просто пойдёшь, а я провожу.$l\"\\addConversationTopic topicHarveyBadDay_Silent 7(break)message \"Ты смотришь на него коротко — без злости, но твёрдо.\"\\speak Harvey \"Хорошо. Сегодня я врач, который молчит.$0\"\\speak Harvey \"Не навсегда. Но сегодня — да.$u\"\\addConversationTopic topicHarveyBadDay_NoQuestions 7/
+        pause 400/
+        speak Harvey \"И всё же — поешь сегодня. Не героически, просто поешь.$a\"/
+        speak Harvey \"И ложись раньше. Не как приказ. Как рецепт, который я всё равно выпишу.$u\"/
+        pause 400/
+        friendship Harvey 35/
+        addConversationTopic HarveyMod_CD_Global 3/
+        addConversationTopic HarveyMod_CD_E8 5/
+        globalFade/
+        viewport -1000 -1000/
+        stopAnimation farmer/
+        end",
        
         "eventHarveyFirstDate/Weather sunny/Friendship Harvey 2000/Time 1800 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery SEASON Spring Summer Fall": "kindadumbautumn/
         65 45/
@@ -2395,6 +2357,7 @@
         pause 2000/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end"
       }
     },
@@ -2447,7 +2410,8 @@
         viewport -1000 -1000/
         end",
 
-        "eventHarveyPropose/Weather sunny/Friendship Harvey 2500/Time 1800 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery SEASON Spring Summer Fall": "night_market/
+        "eventHarveyPropose/Weather sunny/Friendship Harvey 2500/Time 1800 2600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery SEASON Spring Summer Fall": "
+        night_market/
         40 16/
         farmer 40 7 2 Harvey 39 23 2/
         temporaryAnimatedSprite LooseSprites\\Cursors 0 1810 87 58 999999 1 999999 41 16 false false 28 0 1 0 0 0 hold_last_frame/
@@ -2464,32 +2428,32 @@
         emote Harvey 20/
         emote farmer 20/
         speak Harvey \"Выбрал самое безопасное место. Песок мягкий, ветер слабый, течение спокойное.$l\"/
-        message \"Ты даже море проверил?\"/
-        speak Harvey \"Конечно. *уверенно* Ты же будешь здесь купаться.$0\"/
+        message \"Ты даже берег проверил?\"/
+        speak Harvey \"Конечно. *уверенно* Ты ведь хотела пройтись у воды.$0\"/
         pause 2000/
         speak Harvey \"Подожди. *накидывает на тебя лёгкое одеяло* Вечерний бриз может быть коварным.$l\"/
         message \"Но ведь жарко...\"/
         speak Harvey \"Именно поэтому. *поправляет шаль* Ты простудишься, если вспотевшая выйдешь на ветер.$l\"/
-        speak Harvey \"Вода идеальная. *берёт тебя за руку* Не бойся, я буду рядом каждую секунду.$l\"/
+        speak Harvey \"Давай пройдём вдоль воды. *протягивает ладонь* Здесь тихо, и никуда не нужно спешить.$l\"/
         playSound ocean/
-        advancedMove Harvey false 9 0 0 2/
-        advancedMove farmer false 9 0 0 2/
+        move Harvey -2 0 3 true/
+        proceedPosition farmer/
+        move farmer -2 0 3 true/
         viewport move 1 0 3000/
         pause 3000/
         proceedPosition Harvey/
         proceedPosition farmer/
         pause 4000/
-        swimming Harvey/
-        swimming farmer/
-        speak Harvey \"Держись за меня... Вот так. *крепко обнимает* Я не дам ни одной волне коснуться тебя.$l\"/
-        stopAdvancedMoves/
-        advancedMove farmer false 0 4/
-        advancedMove Harvey false 0 4/
+        speak Harvey \"Останемся на песке? Можно снять обувь и послушать море. *улыбается* Сегодня у нас нет расписания.$l\"/
+        move farmer 0 1 3 true/
+        move Harvey 0 1 1 true/
+        proceedPosition farmer/
+        proceedPosition Harvey/
+        viewport 38 24 true/
         pause 1000/
-        stopAdvancedMoves/
         faceDirection Harvey 1/
         faceDirection farmer 3/
-        speak Harvey \"Знаешь, раньше я измерял счастье в показателях анализов... *гладит по мокрым волосам* Но ты научила меня другому.$l\"/
+        speak Harvey \"Знаешь, раньше я измерял счастье в показателях анализов... *бережно убирает прядь с твоего лица* Но ты научила меня другому.$l\"/
         emote Harvey 20/
         speak Harvey \"Я не спросил тогда, в горах... *достаёт кольцо из ракушки* Потому что хотел сделать это здесь. \"/
         pause 3000/
@@ -2509,8 +2473,6 @@
         pause 3000/
         globalFade/
         viewport -1000 -1000/
-        stopSwimming farmer/
-        stopSwimming Harvey/
         pause 700/
         end"
       }
@@ -2587,17 +2549,17 @@
       "Entries": {
         "HarveyOverhaulStory.E9_LightInWindow/Time 2000 2330/!FestivalDay/Friendship Harvey 2150/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E8_QuietShelf/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E9_LightInWindow/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E8": "
         none/
-        35 88/
-        farmer 35 88 0 Harvey -1000 -1000 0/
+        36 57/
+        farmer 35 58 0 Harvey -1000 -1000 0/
         skippable/
         setSkipActions AddConversationTopic HarveyMod_CD_Global 4#AddConversationTopic HarveyMod_CD_E9 7#AddConversationTopic topicHarveyTrustFinal 10#AddMail Current HarveyOverhaul_E9_LightNote tomorrow#AddFriendshipPoints Harvey 45/
         ambientLight 80 70 55/
-        viewport 35 88 true/
+        viewport 35 58 true/
         pause 400/
         message \"В окне клиники всё ещё горит свет.\"/
         message \"На подоконнике стоит кружка, рядом — раскрытый журнал приёма.\"/
         pause 400/
-        quickQuestion #Остановиться у окна#Постучать#Пройти мимо#Оставить травяной пучок у двери(break)message \"Ты останавливаешься у окна.\"\\emote farmer 56\\pause 800\\playSound doorClose\\warp Harvey 37 88\\faceDirection Harvey 0\\pause 300\\faceDirection Harvey 3\\speak Harvey \"Я видел тебя из окна.$0\"\\speak Harvey \"Да, я всё ещё работаю. Нет, это не пример для подражания.$a\"\\speak Harvey \"Но если ты стоишь здесь, значит, либо тебе плохо, либо ты тоже не умеешь вовремя уходить домой.$0\"(break)message \"Ты стучишь в дверь клиники.\"\\playSound woodyStep\\pause 400\\playSound doorClose\\warp Harvey 37 88\\faceDirection Harvey 0\\speak Harvey \"Входи.$0\"\\speak Harvey \"Я сказал это слишком быстро, да?$u\"\\speak Harvey \"Профессиональная привычка. Когда кто-то стучит в клинику вечером, я уже мысленно ищу бинты.$0\"(break)message \"Ты делаешь шаг вперёд — будто собираешься пройти мимо.\"\\move farmer 1 0 1\\pause 600\\playSound doorClose\\warp Harvey 34 88\\faceDirection Harvey 1\\move farmer -1 0 3\\faceDirection farmer 3\\speak Harvey \"Я не буду задерживать.$0\"\\speak Harvey \"Только скажу: дорога к ферме темнее обычного. Фонарь возьми.$a\"\\speak Harvey \"Да, это была забота. Очень сдержанная, почти незаметная. Я расту.$h\"(break)message \"Ты оставляешь связку трав у порога.\"\\pause 500\\playSound doorClose\\warp Harvey 37 88\\faceDirection Harvey 0\\emote Harvey 8\\speak Harvey \"Это мне?$0\"\\speak Harvey \"Для чая?$0\"\\speak Harvey \"Ты молчишь так выразительно, что мне начинает казаться, будто я понимаю лесной этикет.$h\"/
+        quickQuestion #Остановиться у окна#Постучать#Пройти мимо#Оставить травяной пучок у двери(break)message \"Ты останавливаешься у окна.\"\\emote farmer 56\\pause 800\\playSound doorClose\\warp Harvey 37 58\\faceDirection Harvey 0\\pause 300\\faceDirection Harvey 3\\speak Harvey \"Я видел тебя из окна.$0\"\\speak Harvey \"Да, я всё ещё работаю. Нет, это не пример для подражания.$a\"\\speak Harvey \"Но если ты стоишь здесь, значит, либо тебе плохо, либо ты тоже не умеешь вовремя уходить домой.$0\"(break)message \"Ты стучишь в дверь клиники.\"\\playSound woodyStep\\pause 400\\playSound doorClose\\warp Harvey 37 58\\faceDirection Harvey 0\\speak Harvey \"Входи.$0\"\\speak Harvey \"Я сказал это слишком быстро, да?$u\"\\speak Harvey \"Профессиональная привычка. Когда кто-то стучит в клинику вечером, я уже мысленно ищу бинты.$0\"(break)message \"Ты делаешь шаг вперёд — будто собираешься пройти мимо.\"\\move farmer 1 0 1\\pause 600\\playSound doorClose\\warp Harvey 36 57\\faceDirection Harvey 1\\move farmer -1 0 3\\faceDirection farmer 3\\speak Harvey \"Я не буду задерживать.$0\"\\speak Harvey \"Только скажу: дорога к ферме темнее обычного. Фонарь возьми.$a\"\\speak Harvey \"Да, это была забота. Очень сдержанная, почти незаметная. Я расту.$h\"(break)message \"Ты оставляешь связку трав у порога.\"\\pause 500\\playSound doorClose\\warp Harvey 37 58\\faceDirection Harvey 0\\emote Harvey 8\\speak Harvey \"Это мне?$0\"\\speak Harvey \"Для чая?$0\"\\speak Harvey \"Ты молчишь так выразительно, что мне начинает казаться, будто я понимаю лесной этикет.$h\"/
         pause 400/
         faceDirection Harvey 3/
         faceDirection farmer 1/
@@ -2823,6 +2785,7 @@
         addConversationTopic HarveyMod_CD_E12 7/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end",
         "HarveyOverhaulStory.E12_HarveyIsTired_Dating/Time 1300 1500/!FestivalDay/Friendship Harvey 2300/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E11_HomeSafetyProtocol/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulStory.E12_HarveyIsTired_Dating/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_E12/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married": "
         Hospital_Ambient/
@@ -2865,6 +2828,7 @@
         addConversationTopic HarveyMod_CD_E12 7/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end"
       }
     },
@@ -2910,6 +2874,7 @@
         addConversationTopic HarveyMod_CD_RomE1 7/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end"
       }
     },
@@ -3080,6 +3045,7 @@
         pause 400/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end"
       }
     },
@@ -3227,6 +3193,7 @@
         pause 2000/
         globalFade/
         viewport -1000 -1000/
+        stopAnimation farmer/
         end"
       }
     },
