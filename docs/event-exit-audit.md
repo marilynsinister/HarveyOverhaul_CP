@@ -1,6 +1,6 @@
 # Аудит выхода из событий и пропуска сцен
 
-Сгенерировано `scripts/audit_event_exits.py` 2026-10-23. Событий: 204 (все файлы, подключённые в content.json).
+Сгенерировано `scripts/audit_event_exits.py` 2026-10-25. Событий: 204 (все файлы, подключённые в content.json).
 
 HIGH: 0, MEDIUM: 0, INFO: 0.
 
