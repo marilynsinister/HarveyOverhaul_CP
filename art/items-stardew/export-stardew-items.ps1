@@ -1,6 +1,12 @@
 param([switch]$Install)
 
 $ErrorActionPreference = 'Stop'
+$native = Join-Path $PSScriptRoot '../../scripts/draw_native_icons.py'
+if (Test-Path -LiteralPath $native) {
+    if ($Install) { & python $native --install } else { & python $native }
+    if ($LASTEXITCODE -ne 0) { throw 'Native 16px export failed.' }
+    return
+}
 Add-Type -AssemblyName System.Drawing
 
 # Mechanical export only: the artwork is in generated/*.png (built-in image_gen).

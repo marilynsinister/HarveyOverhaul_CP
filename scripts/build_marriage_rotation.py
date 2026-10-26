@@ -20,6 +20,7 @@ import json
 import os
 
 from event_builder import CD, H, msg, patch, qq, sp
+from event_staging import stage_script
 from skip_actions import complete_skip
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -53,7 +54,7 @@ def rscript(eid, music, view, actors, body, extra=()):
             *extra, *body, *tail]
     for c in cmds:
         assert '/' not in c, c
-    return '/'.join(cmds)
+    return stage_script('/'.join(cmds))
 
 
 SCENES = {}

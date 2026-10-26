@@ -601,6 +601,12 @@ Example: "%Abigail is lost in her music."
       "Action": "Include",
       "FromFile": "assets/Code/eventsMarriage.json"
     },
+    // Помолвка и свадьба (P1–P4, docs/romance-proposal.md) — генерируется scripts/build_courtship_events.py.
+    // Флаги HarveyRomance_Engaged / _WeddingEve / _FirstMorning ставит HarveyOverhaulCore.
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsCourtship.json"
+    },
     // 18+ — только при AdultEvents = true. Генерируется scripts/build_adult_events.py
     {
       "Action": "Include",

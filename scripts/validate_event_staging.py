@@ -21,6 +21,10 @@ ROOT = Path(c.CP_ROOT)
 MODS = Path(c.MODS)
 SVE = Path(c.SVE)
 GAME = MODS.parent
+# DefaultCommands reflected from the installed Stardew Valley assembly. Custom
+# event commands must be registered here; CP/i18n command fragments expand later.
+KNOWN_COMMANDS = {name.lower() for name in (Path(__file__).with_name('event_commands.txt'))
+                  .read_text(encoding='utf-8-sig').splitlines() if name.strip()}
 c.MAP_FILES.update({
     'Custom_SpriteSpring2': str(SVE / 'NewLocations/SpriteSpring2.tmx'),
     'Custom_ShearwaterBridge': str(SVE / 'NewLocations/ShearwaterBridge.tbin'),
@@ -86,6 +90,8 @@ class Audit:
             if who == 'Harvey':
                 paths += [GAME / 'Content (unpacked)/Characters/Harvey_Winter.png',
                           ROOT.parent / 'HarveyWhiteCoat [CP]/assets/Harvey_WhiteCoat.png']
+            elif who == 'Arend':
+                paths += [ROOT / 'assets/Character/Arend/Sprite.png']
             self.sprite_cache[who] = [(p, Image.open(p).convert('RGBA')) for p in paths if p.is_file()]
         for path, img in self.sprite_cache[who]:
             cols = img.width // 16
@@ -157,13 +163,28 @@ class Audit:
                     continue
                 cmd = t[0].lower()
                 self.coverage[cmd] += 1
+                # Animate advances immediately in the game, even when loop=false.
+                # Catch replacements before a pause or player-controlled dialogue can show it.
+                if cmd in ('animate', 'showframe', 'stopanimation'):
+                    who = 'farmer' if cmd == 'showframe' and len(t) == 2 else t[1]
+                    if who in st['animation']:
+                        remaining, source = st['animation'][who]
+                        self.issue('TIMING', raw, f'{who}: {source} still needs {remaining} ms')
+                    st['animation'].pop(who, None)
+                if cmd in ('speak', 'message', 'quickquestion', 'question'):
+                    # Reading/answer time is unknown; don't guess a dialogue duration.
+                    st['animation'].clear()
+                elif cmd in ('pause', 'precisepause') and len(t) > 1 and t[1].isdigit():
+                    elapsed = int(t[1])
+                    st['animation'] = {who: (left - elapsed, source)
+                                       for who, (left, source) in st['animation'].items() if left > elapsed}
                 if cmd in ('speak', 'message', 'quickquestion'):
                     self.check_overlap(st, raw)
                 if cmd in ('speak', 'emote', 'animate', 'facedirection', 'stopanimation', 'positionoffset', 'speed') and len(t) > 1:
                     if t[1] not in st['actors'] and not t[1].startswith('farmer'):
                         self.issue('ACTOR', raw, f'{t[1]} not declared')
-                if cmd.startswith('--'):
-                    self.issue('COMMAND', raw, 'Lua-style comment is an unknown event command')
+                if cmd not in KNOWN_COMMANDS and not cmd.startswith('{{'):
+                    self.issue('COMMAND', raw, f'Unknown event command: {t[0]}')
                 if cmd == 'quickquestion' and '(break)' in raw:
                     head, *branches = raw.split('(break)')
                     if len(head.split('#')) - 1 != len(branches):
@@ -230,10 +251,15 @@ class Audit:
                             self.issue('SYNTAX', raw, 'animate actor flip loop duration frames')
                         elif t[3].lower() == 'true':
                             st['loop'].add(t[1])
+                        else:
+                            st['loop'].discard(t[1])
+                            st['animation'][t[1]] = (int(t[4]) * len(t[5:]), raw)
                         for frame in t[5:]:
                             self.check_frame(t[1], int(frame), raw)
                     elif cmd == 'showframe':
                         who, frame = ('farmer', t[1]) if len(t) == 2 else (t[1], t[2])
+                        if who in st['loop']:
+                            self.issue('POSE', raw, f'{who}: showFrame does not stop the previous looping animation')
                         if not re.fullmatch(r'\d+', frame):
                             self.issue('SYNTAX', raw, 'Expected numeric frame before optional flip')
                         elif who == 'farmer':
@@ -242,7 +268,13 @@ class Audit:
                             self.check_frame(who, int(frame), raw)
                     elif cmd == 'stopanimation':
                         st['loop'].discard(t[1])
+                        if len(t) > 2:
+                            self.check_frame(t[1], int(t[2]), raw)
                     elif cmd == 'end':
+                        if st['pending']:
+                            self.issue('RACE', raw, f'Exit before movement completes: {sorted(st["pending"])}')
+                        if any(who.startswith('farmer') for who in st['loop']):
+                            self.issue('POSE', raw, 'Player still has a held animation at the exit')
                         if len(t) >= 4 and t[1].lower() == 'position':
                             self.check_tile(st, 'farmer', (int(t[2]), int(t[3])), raw,
                                             # Existing hospital bed exits are intentional poses.
@@ -252,7 +284,7 @@ class Audit:
                     self.issue('SYNTAX', raw, str(exc))
                 out.append(st)
             # Dialogue-only choices need not multiply every later check.
-            states = list({repr((s['loc'], s['actors'], s['ignore'], s['offset'], s['loop'], s['pending'])): s
+            states = list({repr((s['loc'], s['actors'], s['ignore'], s['offset'], s['loop'], s['pending'], s['animation'])): s
                            for s in out}.values())
             if not states:
                 break
@@ -270,9 +302,11 @@ class Audit:
                 if not header(cmds):
                     self.issue('HEADER', '/'.join(cmds[:3]), 'Expected music/view/actor setup')
                     continue
+                if '{{HO_Farm' in script and 'ignoreEventTileOffset' not in cmds[3:]:
+                    self.issue('OFFSET', 'setup', 'Absolute farm tokens require ignoreEventTileOffset')
                 if tmap is None:
                     self.issue('MAP', '', f'No map for {loc}')
-                st = dict(loc=loc, origin=loc, map=tmap, actors={}, ignore=set(), offset={}, loop=set(), pending=set())
+                st = dict(loc=loc, origin=loc, map=tmap, actors={}, ignore=set(), offset={}, loop=set(), pending=set(), animation={})
                 setup = cmds[2].split()
                 for i in range(0, len(setup), 4):
                     who, x, y = setup[i], int(setup[i+1]), int(setup[i+2])

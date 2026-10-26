@@ -155,7 +155,8 @@
         "{{ModId}}_Keepsake_ModelPlane": "HarveyKeepsake_ModelPlane/decor/2 1/2 1/1/0/0/Наш самолёт/2/Mods\\{{ModId}}\\KeepsakeSprites/true",
         "{{ModId}}_Keepsake_PressedFlower": "HarveyKeepsake_PressedFlower/painting/2 2/2 2/1/0/0/Цветок с прогулки/4/Mods\\{{ModId}}\\KeepsakeSprites/true",
         "{{ModId}}_Keepsake_AnniversaryNote": "HarveyKeepsake_AnniversaryNote/painting/2 2/2 2/1/0/0/Записка с годовщины/6/Mods\\{{ModId}}\\KeepsakeSprites/true",
-        "{{ModId}}_Keepsake_FamilyPhoto": "HarveyKeepsake_FamilyPhoto/painting/2 2/2 2/1/0/0/Семейная фотография/8/Mods\\{{ModId}}\\KeepsakeSprites/true"
+        "{{ModId}}_Keepsake_FamilyPhoto": "HarveyKeepsake_FamilyPhoto/painting/2 2/2 2/1/0/0/Семейная фотография/8/Mods\\{{ModId}}\\KeepsakeSprites/true",
+        "{{ModId}}_Keepsake_RingBox": "HarveyKeepsake_RingBox/decor/1 1/1 1/1/0/0/Коробочка от кольца/20/Mods\\{{ModId}}\\KeepsakeSprites/true"
       }
     },
     {
@@ -226,6 +227,25 @@
               "Description": "Харви смеётся, Аренд машет, игрушка падает. Самый нерезкий и самый любимый семейный снимок."
             }
           ]
+        },
+        "{{ModId}}_Keepsake_RingBox": {
+          "Description": "Бархатная коробочка с потёртыми уголками. Харви носил в ней кольцо с весны — ждал правильного дня.",
+          "HarveyLine": "Она полгода жила у меня в кармане халата. Мару думала, там успокоительное. В каком-то смысле так и было.",
+          "ArendLine": "Он звонил мне из Зузу из ювелирного. Сорок минут выбирал между двумя одинаковыми кольцами.",
+          "Choices": [
+            {
+              "Flag": "HarveyMemory_Ring_Yes",
+              "Description": "Бархатная коробочка от кольца. Внутри на крышке Харви вывел: «Да. Снова да». Твоими словами."
+            },
+            {
+              "Flag": "HarveyMemory_Ring_Stand",
+              "Description": "Бархатная коробочка от кольца. На подушечке — пылинка с мостовой у клиники, где он стоял на одном колене при всём городе."
+            },
+            {
+              "Flag": "HarveyMemory_Ring_HePutOn",
+              "Description": "Бархатная коробочка от кольца. Под подушечкой — бумажная мерка, снятая с твоей перчатки. Врачебная привычка."
+            }
+          ]
         }
       }
     },
@@ -238,7 +258,8 @@
         "{{ModId}}_mailKeepsake_ModelPlane": "@,^^Нашёл место для новой модели, а эту хочу отдать тебе. Крыло, которое ты придерживала, до сих пор самое ровное.^^— Харви%item id (F){{ModId}}_Keepsake_ModelPlane 1%%[#]Ровное крыло",
         "{{ModId}}_mailKeepsake_PressedFlower": "@,^^Этот цветок всё это время лежал в моём блокноте. Попросил Робин сделать маленькую рамку. Пусть будет у тебя.^^— Харви%item id (F){{ModId}}_Keepsake_PressedFlower 1%%[#]С той прогулки",
         "{{ModId}}_mailKeepsake_AnniversaryNote": "@,^^Переписал записку с нашей первой годовщины. Твой ответ тоже сохранил, если он был. На стене ей будет лучше, чем в кармане халата.^^— Харви%item id (F){{ModId}}_Keepsake_AnniversaryNote 1%%[#]Заключение в рамке",
-        "{{ModId}}_mailKeepsake_FamilyPhoto": "@,^^Снимок напечатал. Никто не смотрит туда, куда я просил, и это лучшая фотография в моей жизни.^^Обнимаю. Аренд%item id (F){{ModId}}_Keepsake_FamilyPhoto 1%%[#]Все в кадре"
+        "{{ModId}}_mailKeepsake_FamilyPhoto": "@,^^Снимок напечатал. Никто не смотрит туда, куда я просил, и это лучшая фотография в моей жизни.^^Обнимаю. Аренд%item id (F){{ModId}}_Keepsake_FamilyPhoto 1%%[#]Все в кадре",
+        "{{ModId}}_mailKeepsake_RingBox": "@,^^Кольцо теперь у тебя на пальце, а коробочка осталась у меня в кармане. Карман без неё непривычно лёгкий.^Пусть стоит у тебя на полке. Полгода она ждала правильного дня — пусть теперь его помнит.^^— Твой Харви%item id (F){{ModId}}_Keepsake_RingBox 1%%[#]Пустая коробочка"
       }
     },
     {
@@ -284,6 +305,14 @@
           "Condition": "PLAYER_HAS_MAIL Current HarveyFamily_PhotoTaken Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailKeepsake_FamilyPhoto Any",
           "Actions": [
             "AddMail Current {{ModId}}_mailKeepsake_FamilyPhoto now"
+          ]
+        },
+        "{{ModId}}_triggerKeepsake_RingBox": {
+          "Id": "{{ModId}}_triggerKeepsake_RingBox",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P1_SecondAsk, !PLAYER_HAS_MAIL Current {{ModId}}_mailKeepsake_RingBox Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailKeepsake_RingBox now"
           ]
         }
       }

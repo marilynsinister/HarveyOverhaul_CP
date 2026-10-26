@@ -231,6 +231,9 @@ PALETTE = {
 def build_icons():
     path = os.path.join(ROOT, 'assets', 'Items', 'arendItems.png')
     curated = os.path.join(ROOT, 'art', 'items-stardew', 'exports', 'arendItems.png')
+    native = os.path.join(ROOT, 'art', 'native-16', 'exports', 'arendItems.png')
+    if os.path.isfile(native):
+        curated = native
     if os.path.isfile(curated):
         shutil.copy2(curated, path)
         print('ok', path, '(curated Stardew sprites)')

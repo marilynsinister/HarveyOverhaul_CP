@@ -6,13 +6,13 @@
 
 | Проверка | Статус | Найдено | Исправлено | Нужно вручную |
 |----------|--------|---------|------------|---------------|
-| 1. JSON валидность | OK | 95 файлов | — | — |
+| 1. JSON валидность | OK | 96 файлов | — | — |
 | 2. When/Condition CP-формат | OK | скалярные When/Condition | — | — |
 | 3. Дубли ключей в Entries | OK | 0 | — | — |
 | 4. Dating/Married vs Hearts приоритет | WARN | 69 ключей (ungated+Dating) | — | CP Late + When OK если Dating специфичнее |
 | 5. Base/fallback 0–2 ❤ | OK | ungated без pet names | — | topic-gated ty — см. manual |
-| 6. Mail IDs используются | OK | определено 275, сирот 0 | — | — |
-| 7. Event IDs уникальны | OK | 256 entries, 188 unique IDs, 51 с time/cond вариантами | — | дубли ID с разными условиями — штатно (E13 утро/вечер) |
+| 6. Mail IDs используются | OK | определено 276, сирот 0 | — | — |
+| 7. Event IDs уникальны | OK | 270 entries, 202 unique IDs, 51 с time/cond вариантами | — | дубли ID с разными условиями — штатно (E13 утро/вечер) |
 | 8. Friendship gates (500/750/1500/2000/2500) | WARN | 15 non-canonical FP | — | events.json:HarveyOverhaulStory.E6_SayItOutLoud Friendship 1750 (non-canonical); events.json:HarveyOverhaulStory.E9_CameByHerself Friendship 2200 (non-canonical); events.json:HarveyMod_TreatmentReview |
 | 9. Dating/Married events — rel gate | OK | 0 | — | — |
 | 10. Pet names вне Dating/Married | OK | 0 | — | — |

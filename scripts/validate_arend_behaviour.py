@@ -51,7 +51,7 @@ def main():
             assert boxes[used[-1]][3] - boxes[used[-1]][1] >= 29, 'Stand up before leaving the armchair'
     assert set(animations) == STANDING | {'arend_armchair'}
 
-    maps = {name: [(name, load_path(MAP_FILES[name]))] for name in ('Hospital', 'Town', 'Forest')}
+    maps = {name: [(name, load_path(MAP_FILES[name]))] for name in ('Hospital', 'Town', 'Forest', 'Beach')}
     maps['HarveyRoom'] = [
         ('vanilla', load_path(str(Path(UNPACKED) / 'HarveyRoom.tmx'))),
         ('SVE', load_path(str(Path(SVE) / 'Locations/HarveyRoom.tbin'))),

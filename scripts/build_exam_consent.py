@@ -23,7 +23,9 @@ CODE = os.path.join(ROOT, 'assets', 'Code')
 OUT = os.path.join(CODE, 'eventsExamConsent.json')
 
 STOP = 'action marilynsinister.HarveyStressMeter_ExamStopRespected'
-END_FADE = ['globalFade', 'viewport -1000 -1000']
+# Forks inherit the seated/lying player pose from the examination.
+# Release it under the fade, before control is returned to the player.
+END_FADE = ['globalFade', 'viewport -1000 -1000', 'stopAnimation farmer']
 
 
 def fork(cmds):
@@ -41,7 +43,7 @@ checkup_stopped = fork([
     sp(H, '*кивает* «Стараюсь» — уже хорошо. Пейте больше воды и не работайте до изнеможения.$l'),
     sp(H, 'И спасибо, что сказали «стоп». Мне проще помогать, когда я знаю, где ваша граница.$h#$b#Приходите через месяц. Или раньше — не обязательно на осмотр.$l'),
     'addConversationTopic topicAfterCheckup 5',
-    'removeConversationTopic topicAgreedCheckup',
+    'action RemoveConversationTopic topicAgreedCheckup',
     *END_FADE, 'pause 500', 'end position 10 17',
 ])
 

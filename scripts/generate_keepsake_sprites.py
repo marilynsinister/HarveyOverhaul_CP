@@ -1,4 +1,7 @@
-"""Пять памятных вещей в пиксельной палитре существующих предметов (16 px на тайл)."""
+"""Шесть памятных вещей в пиксельной палитре существующих предметов (16 px на тайл).
+
+Ряды 0–1 — пять вещей по 2 тайла шириной, ряд 2 — маленькие (1x1): коробочка от кольца (индекс 20).
+"""
 from pathlib import Path
 
 from PIL import Image, ImageDraw
@@ -12,6 +15,8 @@ SHADE = '#d9c49a'
 BLUE = '#668aa6'
 RED = '#bd665a'
 GREEN = '#77905b'
+VELVET = '#7a3346'
+GOLD = '#e8b84a'
 
 
 def frame(draw, x):
@@ -32,7 +37,7 @@ def person(draw, x, y, color, small=False):
 
 
 def build():
-    sheet = Image.new('RGBA', (160, 32))
+    sheet = Image.new('RGBA', (160, 48))
     draw = ImageDraw.Draw(sheet)
     # 0. Детский рисунок: люди, большой дом и кривая птица.
     frame(draw, 0)
@@ -84,12 +89,25 @@ def build():
     person(draw, x + 13, 10, BLUE)
     person(draw, x + 20, 12, RED)
     person(draw, x + 15, 17, PAPER, True)
-    path = ROOT / 'assets/Furniture/keepsakes.png'
+    # 20. Бархатная коробочка от кольца (1x1, третий ряд): открытая крышка, кольцо на подушечке.
+    y = 32
+    draw.rectangle((2, y + 3, 13, y + 7), fill=INK)
+    draw.rectangle((3, y + 4, 12, y + 6), fill=VELVET)
+    draw.line((3, y + 4, 12, y + 4), fill=RED)
+    draw.rectangle((1, y + 8, 14, y + 14), fill=INK)
+    draw.rectangle((2, y + 9, 13, y + 13), fill=VELVET)
+    draw.line((2, y + 9, 13, y + 9), fill=RED)
+    draw.rectangle((4, y + 8, 11, y + 10), fill=PAPER)
+    draw.ellipse((5, y + 5, 10, y + 10), outline=GOLD)
+    draw.point((7, y + 5), fill=PAPER)
+    draw.point((8, y + 5), fill=PAPER)
+    draw.line((2, y + 15, 13, y + 15), fill=SHADE)
+    path =ROOT / 'assets/Furniture/keepsakes.png'
     path.parent.mkdir(exist_ok=True)
     sheet.save(path)
     preview = ROOT / 'art/keepsakes-preview.png'
     preview.parent.mkdir(exist_ok=True)
-    sheet.resize((960, 192), Image.Resampling.NEAREST).save(preview)
+    sheet.resize((960, 288), Image.Resampling.NEAREST).save(preview)
     print('written', path)
 
 

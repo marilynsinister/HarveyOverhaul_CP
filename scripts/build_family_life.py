@@ -19,7 +19,9 @@ AR = 'HarveyOverhaulArend.A1_Arrival'
 FAMILY_WHEN = {'ArendEnabled': 'true', 'Relationship:Harvey': 'Married'}
 CHILD = 'HarveyFamilyChild'
 MEMORY = 'HarveyMemory_'
-KEEPSAKE_IDS = ['FamilyDrawing', 'ModelPlane', 'PressedFlower', 'AnniversaryNote', 'FamilyPhoto']
+KEEPSAKE_IDS = ['FamilyDrawing', 'ModelPlane', 'PressedFlower', 'AnniversaryNote', 'FamilyPhoto', 'RingBox']
+# Маленькие вещи 1x1 лежат в третьем ряду атласа (generate_keepsake_sprites.py).
+SMALL_KEEPSAKES = {'RingBox': 20}
 
 
 def flag(name):
@@ -224,8 +226,19 @@ KEEPSAKES = {
             choice('Photo_Laugh', 'Харви смеётся, Аренд машет, игрушка падает. Самый нерезкий и самый любимый семейный снимок.'),
         ],
     },
+    'RingBox': {
+        'Description': 'Бархатная коробочка с потёртыми уголками. Харви носил в ней кольцо с весны — ждал правильного дня.',
+        'HarveyLine': 'Она полгода жила у меня в кармане халата. Мару думала, там успокоительное. В каком-то смысле так и было.',
+        'ArendLine': 'Он звонил мне из Зузу из ювелирного. Сорок минут выбирал между двумя одинаковыми кольцами.',
+        'Choices': [
+            choice('Ring_Yes', 'Бархатная коробочка от кольца. Внутри на крышке Харви вывел: «Да. Снова да». Твоими словами.'),
+            choice('Ring_Stand', 'Бархатная коробочка от кольца. На подушечке — пылинка с мостовой у клиники, где он стоял на одном колене при всём городе.'),
+            choice('Ring_HePutOn', 'Бархатная коробочка от кольца. Под подушечкой — бумажная мерка, снятая с твоей перчатки. Врачебная привычка.'),
+        ],
+    },
 }
-NAMES = ['Семейный рисунок', 'Наш самолёт', 'Цветок с прогулки', 'Записка с годовщины', 'Семейная фотография']
+NAMES = ['Семейный рисунок', 'Наш самолёт', 'Цветок с прогулки', 'Записка с годовщины', 'Семейная фотография',
+         'Коробочка от кольца']
 
 
 def build():
@@ -267,8 +280,11 @@ def build():
     furniture = {}
     for index, (suffix, name) in enumerate(zip(KEEPSAKE_IDS, NAMES)):
         kind, size = ('decor', '2 1') if suffix == 'ModelPlane' else ('painting', '2 2')
+        sprite = index * 2
+        if suffix in SMALL_KEEPSAKES:
+            kind, size, sprite = 'decor', '1 1', SMALL_KEEPSAKES[suffix]
         furniture[f'{M}_Keepsake_{suffix}'] = (
-            f'HarveyKeepsake_{suffix}/{kind}/{size}/{size}/1/0/0/{name}/{index * 2}/Mods\\{M}\\KeepsakeSprites/true')
+            f'HarveyKeepsake_{suffix}/{kind}/{size}/{size}/1/0/0/{name}/{sprite}/Mods\\{M}\\KeepsakeSprites/true')
     sources = {
         'FamilyDrawing': (f'PLAYER_HAS_SEEN_EVENT Current {NS}.G3_Drawing', 'Рисунок в рамке',
                           'Рамка готова. Зелёного человека поправлять не стал — художник лучше знает.^^— Харви'),
@@ -280,6 +296,9 @@ def build():
                            'Переписал записку с нашей первой годовщины. Твой ответ тоже сохранил, если он был. На стене ей будет лучше, чем в кармане халата.^^— Харви'),
         'FamilyPhoto': ('PLAYER_HAS_MAIL Current HarveyFamily_PhotoTaken Received', 'Все в кадре',
                        'Снимок напечатал. Никто не смотрит туда, куда я просил, и это лучшая фотография в моей жизни.^^Обнимаю. Аренд'),
+        'RingBox': ('PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P1_SecondAsk', 'Пустая коробочка',
+                    'Кольцо теперь у тебя на пальце, а коробочка осталась у меня в кармане. Карман без неё непривычно лёгкий.^'
+                    'Пусть стоит у тебя на полке. Полгода она ждала правильного дня — пусть теперь его помнит.^^— Твой Харви'),
     }
     mail, triggers = {}, {}
     for suffix, (condition, title, text) in sources.items():

@@ -18,6 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ENV = {**os.environ, "PYTHONIOENCODING": "utf-8"}
 
 CHECKS = [
+    ("нативные иконки 16×16", ["validate_native_icons.py"], lambda out: "buff indices OK." in out),
     ("регрессии постановки", ["test_event_staging.py"], lambda out: out.strip().endswith('OK')),
     ("день рождения, Зузу и переходы между картами", ["validate_outings.py"], lambda out: "Outings: all checks passed." in out),
     ("спрайты и поведение Аренда", ["validate_arend_behaviour.py"], lambda out: "Arend behaviour: all checks passed." in out),

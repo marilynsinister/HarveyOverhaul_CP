@@ -212,6 +212,7 @@
         globalFade/
         viewport -1000 -1000/
         pause 500/
+        stopAnimation farmer/
         end position 10 17",
             }
         },
@@ -227,6 +228,8 @@
         setSkipActions AddConversationTopic topicFirstMeeting 7#AddConversationTopic topicConcernForHealth 4/
         move farmer 3 0 1 true/
         move Harvey -3 0 3 true/
+        proceedPosition farmer/
+        proceedPosition Harvey/
         emote Harvey 32/
         emote farmer 32/
         pause 500/

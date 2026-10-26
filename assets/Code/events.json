@@ -345,7 +345,7 @@
         proceedPosition Harvey/
         proceedPosition farmer/
         emote farmer 28/
-        showFrame Harvey 55/
+        faceDirection Harvey 1/
         speak Harvey \"Да, я строгий. Гроза — не время доказывать самостоятельность.$a\"/
         pause 300/
         speak Harvey \"Рукам — работу. Панике не оставляем свободного места.$a\"/
@@ -1171,8 +1171,10 @@
         pause 1000/
         {{i18n:trauma.rescue.flashback.{{HO_Trauma}}}}/
         pause 1200/
-        animate Harvey true false 1000 19/
-        stopAnimation Harvey 10/
+        animate Harvey false false 300 8 19 8/
+        pause 900/
+        stopAnimation Harvey/
+        faceDirection Harvey 0/
         speak Harvey \"*осторожно поднимает — только если ты не отстраняешься* Опирайся на меня.$0\"/
         pause 1000/
         stopAnimation Harvey 10/
@@ -1328,8 +1330,8 @@
         pause 1000/
         speak Harvey \"$4 Спасибо, что ты есть. Я бы не хотел проводить эти моменты ни с кем другим.\"/
         pause 500/
-        animate Harvey false false 4500 31/
-        animate farmer false false 4500 101/
+        animate Harvey false false 3000 31/
+        animate farmer false false 3000 101/
         positionOffset farmer 12 0/
         positionOffset Harvey -12 0/
         textAboveHead Harvey \"Ты - моя...навсегда...\"/
@@ -1613,7 +1615,7 @@
         pause 600/
         speak Harvey \"Это уже третий случай на этой неделе!$a#$b#Я везу тебя в клинику.$a\"/
         pause 500/
-        animate farmer false false 2000 5 4 0/
+        animate farmer false false 120 5 4 0/
         pause 400/
         stopAnimation Harvey 4/
         faceDirection Harvey 1/
@@ -1626,6 +1628,7 @@
         positionOffset farmer 4 0/
         pause 200/
         positionOffset farmer 4 0/
+        pause 200/
         stopAnimation farmer/
         pause 300/
         speak Harvey \"Нет, я очень прошу отнестись к этому серьёзно. Ты идешь на капельницу.$a\"/
@@ -2279,14 +2282,15 @@
         pause 1000/
         ambientLight 110 110 110/
         stopAnimation Harvey 4/
-        animate Harvey false false 2000 22 20 22/
+        animate Harvey false false 350 22 20 22/
         addLantern 470 65 47 1/
+        pause 1050/
         stopAnimation Harvey 12/
         pause 1000/
         ambientLight 120 120 120/
         speak Harvey \"Только не замёрзни. Вот термос... и моя рука для тепла. *осторожно берёт твою ладонь*$l\"/
         pause 2000/
-        showFrame Harvey 34/
+        faceDirection Harvey 3/
         ambientLight 130 130 130/
         speak Harvey \"Знаешь... когда ты упала в тот день... *голос дрожит* Я впервые за 10 лет практики испугался по-настоящему.$s\"/
         pause 200/

@@ -63,14 +63,17 @@ def main():
     memories = entries(changes, 'Mods/{{ModId}}/Keepsakes')
     mail = entries(changes, 'Data/Mail')
     triggers = entries(changes, 'Data/TriggerActions')
-    assert len(furniture) == len(memories) == len(mail) == len(triggers) == 5
+    assert len(furniture) == len(memories) == len(mail) == len(triggers) == 6
     assert set(furniture) == set(memories)
     atlas = Image.open(ROOT / 'assets/Furniture/keepsakes.png').convert('RGBA')
-    assert atlas.size == (160, 32)
+    assert atlas.size == (160, 48)
     assert set(atlas.getchannel('A').get_flattened_data()) == {0, 255}
     attachment_ids = []
     all_bodies = '\n'.join(body for _, _, body in events)
     all_bodies += '\n'.join(v for ch in marriage for v in ch.get('Entries', {}).values())
+    courtship = read(ROOT / 'assets/Code/eventsCourtship.json')['Changes']
+    all_bodies += '\n'.join(v for ch in courtship if ch['Target'].startswith('Data/Events/')
+                            for v in ch['Entries'].values())
     for item, value in furniture.items():
         fields = value.split('/')
         assert len(fields) == 11 and fields[1] in ('decor', 'painting') and fields[10] == 'true'

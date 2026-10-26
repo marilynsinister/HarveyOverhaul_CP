@@ -1452,10 +1452,58 @@
           "Condition": "",
           "Repeatable": false
         },
-        "{{ModId}}_HarveyOverhaulArend.H4_Album": {
+        "{{ModId}}_HarveyOverhaulArend.H3_Gulls": {
           "Arc": "Аренд",
           "ArcOrder": 15,
           "Order": 10,
+          "EventIds": "HarveyOverhaulArend.H3_Gulls",
+          "Title": "Чайки Корнелиса",
+          "Summary": "Пять птиц придумал не он. Их считал его отец — на причале, после войны.",
+          "Hint": "Ясным утром на пляже (3 сердца с Арендом).",
+          "Requires": "HarveyOverhaulArend.A2_RoomWithoutWalls",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulArend.H5_Napkin": {
+          "Arc": "Аренд",
+          "ArcOrder": 15,
+          "Order": 11,
+          "EventIds": "HarveyOverhaulArend.H5_Napkin",
+          "Title": "Салфетка",
+          "Summary": "Шейн, фонтан и номер на салфетке. Не лечение — просто дверь.",
+          "Hint": "Ясным вечером на площади (5 сердец с Арендом).",
+          "Requires": "HarveyOverhaulArend.A2_RoomWithoutWalls",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulArend.S4_ElinsBirthday": {
+          "Arc": "Аренд",
+          "ArcOrder": 15,
+          "Order": 12,
+          "EventIds": "HarveyOverhaulArend.S4_ElinsBirthday",
+          "Title": "Третья тарелка",
+          "Summary": "Пирог Элин опять не удался. Харви поставил четвёртую тарелку.",
+          "Hint": "Вечером 14 лета в комнате Харви.",
+          "Requires": "HarveyOverhaulArend.A2_RoomWithoutWalls",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulArend.B1_Logbook": {
+          "Arc": "Аренд",
+          "ArcOrder": 15,
+          "Order": 13,
+          "EventIds": "HarveyOverhaulArend.B1_Logbook",
+          "Title": "Вахтенный журнал",
+          "Summary": "«Чаек — 15. Считали вдвоём». Подарок от Харви на день рождения отца.",
+          "Hint": "Днём 19 осени в клинике — после разговора у моря.",
+          "Requires": "HarveyOverhaulArend.H3_Gulls",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulArend.H4_Album": {
+          "Arc": "Аренд",
+          "ArcOrder": 15,
+          "Order": 14,
           "EventIds": "HarveyOverhaulArend.H4_Album",
           "Title": "Альбом",
           "Summary": "Харви, семь лет, и перебинтованный кот Пончик.",
@@ -1467,7 +1515,7 @@
         "{{ModId}}_HarveyOverhaulArend.H6_Lecture": {
           "Arc": "Аренд",
           "ArcOrder": 15,
-          "Order": 11,
+          "Order": 15,
           "EventIds": "HarveyOverhaulArend.H6_Lecture",
           "Title": "Лекция для одной",
           "Summary": "Страх и предвкушение — одна химия. Мару запускает робота.",
@@ -1479,7 +1527,7 @@
         "{{ModId}}_HarveyOverhaulArend.S3_PaperBoats": {
           "Arc": "Аренд",
           "ArcOrder": 15,
-          "Order": 12,
+          "Order": 16,
           "EventIds": "HarveyOverhaulArend.S3_PaperBoats",
           "Title": "Бумажные кораблики",
           "Summary": "У того, что ты потеряла, теперь есть адрес.",
@@ -1488,10 +1536,22 @@
           "Condition": "",
           "Repeatable": false
         },
+        "{{ModId}}_HarveyOverhaulArend.H7_NightShift": {
+          "Arc": "Аренд",
+          "ArcOrder": 15,
+          "Order": 17,
+          "EventIds": "HarveyOverhaulArend.H7_NightShift",
+          "Title": "Ночная смена",
+          "Summary": "Год ночных смен и кухня с маминой чашкой. «Прости» — без «но».",
+          "Hint": "Вечером в комнате Харви (7 сердец с Арендом).",
+          "Requires": "HarveyOverhaulArend.H4_Album HarveyOverhaulArend.S3_PaperBoats",
+          "Condition": "",
+          "Repeatable": false
+        },
         "{{ModId}}_HarveyOverhaulArend.H8_ImFine": {
           "Arc": "Аренд",
           "ArcOrder": 15,
-          "Order": 13,
+          "Order": 18,
           "EventIds": "HarveyOverhaulArend.H8_ImFine",
           "Title": "Я в порядке",
           "Summary": "Теперь «в порядке» сказал он. Очередь была его.",
@@ -1503,7 +1563,7 @@
         "{{ModId}}_HarveyOverhaulArend.F1_Suitcase": {
           "Arc": "Аренд",
           "ArcOrder": 15,
-          "Order": 14,
+          "Order": 19,
           "EventIds": "HarveyOverhaulArend.F1_Suitcase",
           "Title": "Чемодан",
           "Summary": "Он уехал на неделю — продавать квартиру. Чтобы остаться.",
@@ -1512,10 +1572,22 @@
           "Condition": "",
           "Repeatable": false
         },
+        "{{ModId}}_HarveyOverhaulArend.H10_RedPencil": {
+          "Arc": "Аренд",
+          "ArcOrder": 15,
+          "Order": 20,
+          "EventIds": "HarveyOverhaulArend.H10_RedPencil",
+          "Title": "Красный карандаш",
+          "Summary": "Пустой блокнот и карандаш, который сорок лет только исправлял. Теперь считаешь ты.",
+          "Hint": "Ясным ранним утром у лесной тропы (10 сердец с Арендом).",
+          "Requires": "HarveyOverhaulArend.F1_Suitcase",
+          "Condition": "",
+          "Repeatable": false
+        },
         "{{ModId}}_HarveyOverhaulArend.W1_ElinsCup": {
           "Arc": "Аренд",
           "ArcOrder": 15,
-          "Order": 15,
+          "Order": 21,
           "EventIds": "HarveyOverhaulArend.W1_ElinsCup",
           "Title": "Чашка Элин",
           "Summary": "«Можно я буду иногда говорить тебе „дочка“?»",
@@ -1527,7 +1599,7 @@
         "{{ModId}}_HarveyOverhaulArend.P1_TwoStethoscopes": {
           "Arc": "Аренд",
           "ArcOrder": 15,
-          "Order": 16,
+          "Order": 22,
           "EventIds": "HarveyOverhaulArend.P1_TwoStethoscopes",
           "Title": "Два стетоскопа",
           "Summary": "У заботы Харви есть второе имя — страх. Решать, как тебе, — тебе.",
@@ -1539,7 +1611,7 @@
         "{{ModId}}_HarveyOverhaulArend.P2_Window": {
           "Arc": "Аренд",
           "ArcOrder": 15,
-          "Order": 17,
+          "Order": 23,
           "EventIds": "HarveyOverhaulArend.P2_Window",
           "Title": "Окно",
           "Summary": "Две линии в блокноте: сон, люди рядом и «стоп» делают окно шире.",
@@ -1551,7 +1623,7 @@
         "{{ModId}}_HarveyOverhaulArend.P3_ElinsGarden": {
           "Arc": "Аренд",
           "ArcOrder": 15,
-          "Order": 18,
+          "Order": 24,
           "EventIds": "HarveyOverhaulArend.P3_ElinsGarden",
           "Title": "Сад Элин",
           "Summary": "Тюльпаны вместо колокольчиков. У того, что любили, должно быть место.",

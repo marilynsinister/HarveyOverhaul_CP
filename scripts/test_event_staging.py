@@ -69,6 +69,36 @@ class EventStagingChecks(unittest.TestCase):
         self.assertEqual(stage_script('none/2 2/farmer 1 1 1/speak farmer "A/B"/end'),
                          'none/2 2/farmer 1 1 1/speak farmer "A/B"/end')
 
+    def test_non_looping_animation_needs_time_before_replacement(self):
+        self.assertIn('TIMING', self.audit('animate Harvey false false 350 22 20 22/stopAnimation Harvey/end'))
+        self.assertIn('TIMING', self.audit('animate Harvey false false 350 22 20 22/pause 700/stopAnimation Harvey/end'))
+        self.assertNotIn('TIMING', self.audit('animate Harvey false false 350 22 20 22/pause 1050/stopAnimation Harvey/end'))
+
+    def test_npc_show_frame_does_not_cancel_a_loop(self):
+        self.assertIn('POSE', self.audit('animate Harvey false true 100 22 20/showFrame Harvey 12/end'))
+
+    def test_exit_checks_inherited_player_pose(self):
+        fork = ('fixture.json', 'Lane', 'Other', 'end')
+        self.assertIn('POSE', self.audit('showFrame farmer 107/fork Other/stopAnimation farmer/end', [fork]))
+
+    def test_exit_waits_for_asynchronous_walk(self):
+        self.assertIn('RACE', self.audit('move Harvey 1 0 1 true/end'))
+
+    def test_stop_animation_end_frame_is_validated(self):
+        with patch.object(Audit, 'check_frame') as check:
+            self.audit('stopAnimation Harvey 999/end')
+            check.assert_called_with('Harvey', 999, 'stopAnimation Harvey 999')
+
+    def test_absolute_farm_tokens_require_offset_opt_out(self):
+        entries = [('fixture.json', 'Farm', 'Main',
+                    'none/2 2/farmer {{HO_FarmX}} 1 1/end')]
+        with patch('validate_event_staging.variants', return_value=[('', Lane(), {'HO_FarmX': '2'})]):
+            self.assertIn('OFFSET', {row[3] for row in Audit(entries).run()})
+
+    def test_trigger_actions_need_the_event_action_wrapper(self):
+        self.assertIn('COMMAND', self.audit('removeConversationTopic topicAgreedCheckup/end'))
+        self.assertNotIn('COMMAND', self.audit('action RemoveConversationTopic topicAgreedCheckup/end'))
+
 
 if __name__ == '__main__':
     unittest.main()

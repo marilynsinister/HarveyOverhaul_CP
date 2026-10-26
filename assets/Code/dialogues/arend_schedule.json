@@ -3,8 +3,10 @@
   "default": "830 Town 25 30 2/1130 Forest 48 14 1 arend_birds/1500 Town 38 58 2/1800 Town 23 29 2 arend_think/2030 HarveyRoom 6 10 2 arend_armchair",
   "Tue": "1300 Hospital 13 16 2 arend_read/1700 Town 25 30 2/2000 HarveyRoom 6 10 2 arend_armchair",
   "Wed": "1300 Hospital 13 16 2 arend_read/1700 Town 25 30 2/2000 HarveyRoom 6 10 2 arend_armchair",
+  "Fri": "830 Beach 41 20 2 arend_birds/1300 Town 38 58 2/1800 Town 23 29 2 arend_think/2030 HarveyRoom 6 10 2 arend_armchair",
   "Sun": "1000 Forest 50 13 2 arend_tea/1600 Town 23 29 2 arend_think/1930 HarveyRoom 6 10 2 arend_armchair",
   "rain": "1000 Hospital 13 16 2 arend_tea/1800 HarveyRoom 6 10 2 arend_armchair",
   "winter": "1000 Town 25 30 2/1300 Hospital 13 16 2 arend_tea/1700 Town 38 58 2/1930 HarveyRoom 6 10 2 arend_armchair",
-  "winter_Sun": "1100 Forest 50 13 2 arend_tea/1500 Hospital 13 16 2 arend_read/1900 HarveyRoom 6 10 2 arend_armchair"
+  "winter_Sun": "1100 Forest 50 13 2 arend_tea/1500 Hospital 13 16 2 arend_read/1900 HarveyRoom 6 10 2 arend_armchair",
+  "winter_Fri": "1000 Town 25 30 2/1300 Hospital 13 16 2 arend_tea/1700 Town 38 58 2/1930 HarveyRoom 6 10 2 arend_armchair"
 }

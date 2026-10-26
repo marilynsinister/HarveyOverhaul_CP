@@ -53,6 +53,12 @@ def extract(source, index):
 
 
 def main():
+    native_builder = CP / 'scripts/draw_native_icons.py'
+    if native_builder.is_file():
+        import subprocess
+        import sys
+        subprocess.run([sys.executable, str(native_builder), '--install'], check=True)
+        return
     source = Image.open(ART / 'generated/common-statuses.png').convert('RGBA')
     assert source.width == source.height, 'Expected a regular four by four generated sheet'
     atlas = Image.open(EXPORTS / 'harveyBuffIcons.png').convert('RGBA')

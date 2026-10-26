@@ -1018,6 +1018,9 @@ def all_buff_ids(owned_only=False):
 
 def main():
     curated = Path(__file__).resolve().parent.parent / "art/buffs-stardew/exports/harveyBuffIcons.png"
+    native = Path(__file__).resolve().parent.parent / "art/native-16/exports/harveyBuffIcons.png"
+    if native.is_file():
+        curated = native
     buffs = all_buff_ids(owned_only=curated.is_file())
     order = [b for _, b in buffs]
     rows = (len(order) + COLUMNS - 1) // COLUMNS

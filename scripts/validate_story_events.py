@@ -24,7 +24,7 @@ GAME = sys.argv[1] if len(sys.argv) > 1 else r'D:\Games\Steam\steamapps\common\S
 EVENT_FILES = ['eventsArc3.json', 'eventsMarriage.json', 'eventsAdult.json', 'eventsScars.json',
                'eventsHarveyLife.json', 'festivalsHarvey.json', 'eventsMarriageRotation.json', 'eventsExamConsent.json',
                'clinicSeasonal.json', 'fatherhood.json', 'arend.json', 'goodWeek.json', 'familyLife.json', 'introRecovery.json',
-               'outings.json']
+               'outings.json', 'eventsCourtship.json']
 TRIGGER_FILES = ['triggersArc3Aftermath.json', 'triggersDate.json', 'eventsScars.json', 'eventsMarriageRotation.json',
                  'clinicSeasonal.json', 'fatherhood.json', 'triggersRepeatScenes.json',
                  'trustRewards.json', 'goodWeek.json', 'familyLife.json', 'introRecovery.json', 'outings.json']
@@ -32,7 +32,11 @@ TRIGGER_FILES = ['triggersArc3Aftermath.json', 'triggersDate.json', 'eventsScars
 ALLOWED_FLAGS = {'HarveyArc3_Confessed', 'HarveyArc3_ConfessionPending', 'HarveyArc3_Graduated',
                  'HarveyScars_LetterSent', 'HarveyScars_LetterBurned', 'HarveyScars_LetterKept',
                  'HarveyScars_Enabled', 'HarveyBackstory_FireKnown', 'HarveyLife_SaidGo',
-                 'HarveyArend_Daughter', 'HarveyFamily_PhotoTaken', 'HarveyIntro_CheckupAgreed'}
+                 'HarveyArend_Daughter', 'HarveyFamily_PhotoTaken', 'HarveyIntro_CheckupAgreed',
+                 'HarveyRomance_Ring',
+                 *(f'HarveyRomance_{kind}_{v}' for kind, values in (
+                     ('Flower', ('Tulip', 'Sunflower', 'SweetPea')), ('Fear', ('Height', 'Dark', 'Alone')),
+                     ('Wish', ('Dance', 'Stars', 'Quiet'))) for v in values)}
 # Темы-служебки без реплик (кулдауны).
 SILENT_TOPICS = {'HarveyMod_CD_Global', 'HarveyRotation_CD'}
 SILENT_TOPIC_PREFIXES = ('HarveyRot_', 'HarveyRepeatCD_')

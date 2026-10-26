@@ -1,0 +1,105 @@
+{
+  "cellSize": [
+    16,
+    16
+  ],
+  "method": "native integer pixel drawing; no resampling",
+  "outline": "#301e25, opaque 1px",
+  "buffCount": 166,
+  "sheets": {
+    "medicalItems.png": {
+      "size": [
+        144,
+        16
+      ],
+      "sha256": "7b06b8587e9b589556ff811fa2cd96dfcdb8da1957c55d069ec0accfabcaec52",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Items/medicalItems.png",
+        "HarveyOverhaulCore/assets/sprites/planItems.png"
+      ]
+    },
+    "arendItems.png": {
+      "size": [
+        48,
+        16
+      ],
+      "sha256": "4cecd53c854f3d96eb8088c736e7f5732b79e789ced842ec3a1fa50d0a440eb9",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Items/arendItems.png"
+      ]
+    },
+    "herbalItems.png": {
+      "size": [
+        128,
+        16
+      ],
+      "sha256": "a4e2f807c4acfa243b140b815db7b20d833c26ea32abf71f08ba5b4c4282d313",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Items/herbalItems.png"
+      ]
+    },
+    "injury-book.png": {
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "4ab7193dd21881c4da3ec221ecb7a53cac9e90cbfcc822a81ece6c7fd21d5ec1",
+      "targets": [
+        "HarveyOverhaulInjury/assets/sprites/book.png",
+        "HarveyOverhaulCore/assets/sprites/planBook.png"
+      ]
+    },
+    "stress-handbook.png": {
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "1726b5b1bdb44e477d811477179285dd1066da73e741235fc718b1d90adfed7f",
+      "targets": [
+        "HarveyStressMeter/assets/sprites/handbook.png",
+        "HarveyStressMeter/assets/sprites/ui.png"
+      ]
+    },
+    "harveyBuffIcons.png": {
+      "size": [
+        256,
+        176
+      ],
+      "sha256": "59a84356c77dffa464de24031d566da2c85782247f0b1b7b28a81da7b25aaf8e",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Tilesheets/harveyBuffIcons.png"
+      ]
+    },
+    "mishapBuffIcons.png": {
+      "size": [
+        96,
+        16
+      ],
+      "sha256": "2c856702a9399252d86a5b725dfa73c66f3edfbebfb891c504c18c0cd721e4a1",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Items/mishapBuffIcons.png"
+      ]
+    },
+    "stressIcons.png": {
+      "size": [
+        112,
+        48
+      ],
+      "sha256": "d7c7665cec96f2419e869c2591f0df0e6cdfc9f20b057ae6164b72553e21043a",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Tilesheets/stressIcon.png",
+        "HarveyStressMeter/assets/sprites/stressIcons.png"
+      ]
+    },
+    "injuryIcon.png": {
+      "size": [
+        64,
+        48
+      ],
+      "sha256": "5144050052838325e7e27698fbc310f7f5e7ce6d9cec3c269c3dc7e40dec5813",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Tilesheets/injuryIcon.png"
+      ]
+    }
+  }
+}

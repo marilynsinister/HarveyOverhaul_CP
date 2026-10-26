@@ -94,15 +94,20 @@ def export(install=False):
     palette = swatch.quantize(colors=64, method=Image.Quantize.MEDIANCUT)
     inventory_regions = regions(inventory, 4, 2)
     crop_regions = regions(crops, 8, 4)
+    native_path = PACK / 'art/native-16/exports/herbalItems.png'
+    native_inventory = Image.open(native_path).convert('RGBA') if native_path.is_file() else None
     sheet = Image.new("RGBA", (128, 16))
     for i in range(8):
-        source = inventory_regions[i // 4][i % 4]
-        box = bounds(source)
-        scale = min(14 / (box[2] - box[0]), 14 / (box[3] - box[1]))
-        width = max(1, round((box[2] - box[0]) * scale))
-        height = max(1, round((box[3] - box[1]) * scale))
-        sprite = Image.new("RGBA", (16, 16))
-        sprite.paste(sampled(source, box, width, height, palette), ((16 - width) // 2, (16 - height) // 2))
+        if native_inventory is not None:
+            sprite = native_inventory.crop((i * 16, 0, i * 16 + 16, 16))
+        else:
+            source = inventory_regions[i // 4][i % 4]
+            box = bounds(source)
+            scale = min(14 / (box[2] - box[0]), 14 / (box[3] - box[1]))
+            width = max(1, round((box[2] - box[0]) * scale))
+            height = max(1, round((box[3] - box[1]) * scale))
+            sprite = Image.new("RGBA", (16, 16))
+            sprite.paste(sampled(source, box, width, height, palette), ((16 - width) // 2, (16 - height) // 2))
         sheet.paste(sprite, (i * 16, 0))
         suffix = "-seeds" if i >= 4 else ""
         sprite.save(out / f"{NAMES[i % 4]}{suffix}.png")

@@ -376,6 +376,9 @@ def preview(sheet, path):
 
 def main():
     curated = Path(__file__).resolve().parent.parent / "art/items-stardew/exports/medicalItems.png"
+    native = Path(__file__).resolve().parent.parent / "art/native-16/exports/medicalItems.png"
+    if native.is_file():
+        curated = native
     if curated.is_file():
         with Image.open(curated) as source:
             items = source.convert("RGBA")
@@ -384,6 +387,9 @@ def main():
     else:
         items = render(ITEMS)
     curated_buffs = Path(__file__).resolve().parent.parent / "art/buffs-stardew/exports/mishapBuffIcons.png"
+    native_buffs = Path(__file__).resolve().parent.parent / "art/native-16/exports/mishapBuffIcons.png"
+    if native_buffs.is_file():
+        curated_buffs = native_buffs
     if curated_buffs.is_file():
         with Image.open(curated_buffs) as source:
             buffs = source.convert("RGBA")
