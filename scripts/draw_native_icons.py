@@ -592,6 +592,9 @@ def preview(sheets):
 
 def anatomy_preview(sheets):
     before_path = ART / 'anatomy-before/harveyBuffIcons.png'
+    latest_before = ART / 'anatomy-v3/before/harveyBuffIcons.png'
+    if latest_before.is_file():
+        before_path = latest_before
     if not before_path.is_file():
         return
     with Image.open(before_path) as source:
@@ -603,7 +606,7 @@ def anatomy_preview(sheets):
         ('Ушиб рёбер', 'buffBruisedRibs'), ('Растяжение спины', 'buffBackStrain'),
         ('Сотрясение', 'buffConcussion'), ('Перевязка', 'HarveyMod_DeepCuts_Healing'),
         ('После операции', 'buffSurgicalWound'), ('Намокшие швы', 'HarveyMod_WetStitches'),
-        ('Перелом', 'buffFracturedBone'), ('Онемение', 'buffStressNumbness'),
+        ('Слабость мышцы', 'HarveyMod_MuscleAtrophy'), ('Онемение', 'buffStressNumbness'),
         ('Дыхание', 'HarveyMod_BreathingDifficulty'), ('Заноза', 'HarveyMod_Splinter'),
     ]
     path = 'C:/Windows/Fonts/arial.ttf'
@@ -660,6 +663,11 @@ def main(install=False):
     preview(sheets)
     report = {"cellSize": [16, 16], "method": "native integer pixel drawing; no resampling",
               "outline": "#301e25, opaque 1px", "buffCount": len(index),
+              "anatomy": {"source": "../../scripts/native_anatomy.py",
+                          "concept": "anatomy-v3/concept.png",
+                          "prompt": "anatomy-v3/concept-prompt.txt",
+                          "conceptMethod": "built-in image_gen, art direction only",
+                          "runtimeMethod": "integer pixel sources on 16x16 canvas; no bitmap sampling"},
               "sheets": {name: {"size": list(sheet.size), "sha256": hashlib.sha256(sheet.tobytes()).hexdigest(),
                                  "targets": TARGETS[name]} for name, sheet in sheets.items()}}
     (ART / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")

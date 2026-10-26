@@ -6,6 +6,13 @@
   "method": "native integer pixel drawing; no resampling",
   "outline": "#301e25, opaque 1px",
   "buffCount": 166,
+  "anatomy": {
+    "source": "../../scripts/native_anatomy.py",
+    "concept": "anatomy-v3/concept.png",
+    "prompt": "anatomy-v3/concept-prompt.txt",
+    "conceptMethod": "built-in image_gen, art direction only",
+    "runtimeMethod": "integer pixel sources on 16x16 canvas; no bitmap sampling"
+  },
   "sheets": {
     "medicalItems.png": {
       "size": [
@@ -65,7 +72,7 @@
         256,
         176
       ],
-      "sha256": "7ed2e2dbf72130085e25966085347ba69382d8802881e7d886411f84c4b776a5",
+      "sha256": "af98bf8233c6d13399ba7d4464cea586a495a2b91eee6b5ae14619a8ab5edbc0",
       "targets": [
         "HarveyOverhaul [CP]/assets/Tilesheets/harveyBuffIcons.png"
       ]
@@ -75,7 +82,7 @@
         96,
         16
       ],
-      "sha256": "be580d0eb88656a9563d5b552f3274dd34184a9ccdab54821a37602585a498c4",
+      "sha256": "2c44759ca282e6cdaa24636f4bfaedf97454378e721cd7f0c58f14a5d59f2af0",
       "targets": [
         "HarveyOverhaul [CP]/assets/Items/mishapBuffIcons.png"
       ]
@@ -85,7 +92,7 @@
         112,
         48
       ],
-      "sha256": "40aff72bada2458e6b8d0a611e3ffacd57cffc3c1440e39683a16bcdfd83b256",
+      "sha256": "ec98b35f2ca16e6ae59eb2d8ad0e2b3905e0060d786c95a98afc3bffc42f0fef",
       "targets": [
         "HarveyOverhaul [CP]/assets/Tilesheets/stressIcon.png",
         "HarveyStressMeter/assets/sprites/stressIcons.png"
@@ -96,7 +103,7 @@
         64,
         48
       ],
-      "sha256": "1e3626f14d70fa58b5520a7676e22b6dc63fb77083fa54e703c3674a0fd410db",
+      "sha256": "374cf1bbeed60399d9416a2121e152518469b00287eaea41b265550f21c8f5b3",
       "targets": [
         "HarveyOverhaul [CP]/assets/Tilesheets/injuryIcon.png"
       ]

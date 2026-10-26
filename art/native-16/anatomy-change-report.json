@@ -1,4 +1,5 @@
 {
+  "revision": "Art V3",
   "nativePixels": [
     16,
     16
@@ -70,5 +71,8 @@
     ]
   },
   "totalChangedCells": 56,
-  "allHudIdsUnique": true
+  "allHudIdsUnique": true,
+  "referenceOnly": "anatomy-v3/concept.png",
+  "referencePrompt": "anatomy-v3/concept-prompt.txt",
+  "runtimeRendering": "native pixel matrices, no resampling"
 }
