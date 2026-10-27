@@ -94,6 +94,24 @@
         "Treat_Hurt_After": "Лёгкое покраснение вокруг царапины — это норма первых дней.$0#$b#Повязку не мочить, пожалуйста. Гной, усиление боли или жар — сразу ко мне, не ждите.$a"
       }
     },
+    // «ты» с 3 сердец для ключей выше, у которых нет версий по стадиям (иначе «Вы» доходило до Dating).
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Priority": "Late",
+      "When": {
+        "Hearts:Harvey": "3,4,5,6,7,8,9,10,11,12,13,14"
+      },
+      "Entries": {
+        "topicHarvey_NightRound_memory_oneday": "Отдыхай — дежурство по графику, но мысли о тебе тоже.$l",
+        "topicHarveyBadDay_Water": "Вода — не рецепт, просто моя просьба.$0#$b#Допей, пожалуйста. Я не буду ничего спрашивать — просто рад, что ты рядом.$l",
+        "topicHarveyBadDay_NoQuestions": "«Не спрашивай» — услышал.$0#$b#Сегодня молчу. Завтра спрошу один раз: как ты. Только один.$a",
+        "topicHarveySafetyKit_Door": "Аптечка у двери — твой выбор.$0",
+        "topicHarveySafetyKit_NoKit": "Коробку забрал, список оставил — соберёшь сама, если захочешь.$0#$b#Передумаешь — скажи. Соберу без претензий.$l",
+        "Treat_Hurt_Before": "*внимательно смотрит* Где болит — покажи.$u#$b#Обработаю аккуратно. До осмотра — щадящий режим, не нагружай.$u",
+        "Treat_Hurt_After": "Лёгкое покраснение вокруг царапины — это норма первых дней.$0#$b#Повязку не мочи, пожалуйста. Гной, усиление боли или жар — сразу ко мне, не жди.$a"
+      }
+    },
     {
       "Action": "EditData",
       "Target": "Characters/Dialogue/Harvey",
@@ -129,7 +147,7 @@
         "topicHarveyFuturePlan_TeaSignal": "Чай посередине стола — стоп.$0#$b#Без «но я врач».$l"
       },
       "When": {
-        "Relationship:Harvey": "Dating"
+        "Relationship:Harvey": "Dating, Engaged"
       }
     },
     {
@@ -161,7 +179,7 @@
       "When": {
         "HasConversationTopic": "topicHarveyTraumaReveal",
         "TraumaBackstory": "true",
-        "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+        "Hearts:Harvey": "3,4,5,6,7,8,9,10,11,12,13,14"
       }
     },
     {
@@ -177,7 +195,7 @@
       "When": {
         "HasConversationTopic": "topicHarveyTraumaReveal",
         "TraumaBackstory": "true",
-        "Relationship:Harvey": "Dating"
+        "Relationship:Harvey": "Dating, Engaged"
       }
     },
     {
@@ -231,7 +249,7 @@
       },
       "When": {
         "HasConversationTopic": "topicFirstMeeting",
-        "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+        "Hearts:Harvey": "3,4,5,6,7,8,9,10,11,12,13,14"
       }
     },
     {
@@ -250,7 +268,7 @@
       },
       "When": {
         "HasConversationTopic": "topicFirstMeeting",
-        "Relationship:Harvey": "Dating"
+        "Relationship:Harvey": "Dating, Engaged"
       }
     },
     {
@@ -299,7 +317,7 @@
       },
       "When": {
         "HasConversationTopic": "topicHarveyWalkGood",
-        "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+        "Hearts:Harvey": "3,4,5,6,7,8,9,10,11,12,13,14"
       }
     },
     {
@@ -314,7 +332,7 @@
       },
       "When": {
         "HasConversationTopic": "topicHarveyWalkGood",
-        "Relationship:Harvey": "Dating"
+        "Relationship:Harvey": "Dating, Engaged"
       }
     },
     {
@@ -367,7 +385,7 @@
       },
       "When": {
         "HasConversationTopic": "topicHarveyExhaustion",
-        "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+        "Hearts:Harvey": "3,4,5,6,7,8,9,10,11,12,13,14"
       }
     },
     {
@@ -386,7 +404,7 @@
       },
       "When": {
         "HasConversationTopic": "topicHarveyExhaustion",
-        "Relationship:Harvey": "Dating"
+        "Relationship:Harvey": "Dating, Engaged"
       }
     },
     {
@@ -523,8 +541,10 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Harvey",
       "Priority": "Late",
+      // 6–10 сердец до Dating (на 8–10 без этого возвращалась базовая «Вы»-версия).
       "When": {
-        "Hearts:Harvey": "6,7"
+        "Hearts:Harvey": "6,7,8,9,10",
+        "Relationship:Harvey": "Friendly"
       },
       "Entries": {
         "topicHarveyAcceptFirstWalk": "Спасибо, что пошла.$l#$b#Следующий маршрут — длиннее, только если сама захочешь.$h",

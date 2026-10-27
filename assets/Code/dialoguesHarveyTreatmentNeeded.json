@@ -26,6 +26,28 @@
                 "HarveyMod_TreatmentNeeded_PainFlare": "Боль усилилась — это не норма для текущей стадии.$a#$b#Проверю рану и скорректирую обезболивание. Садитесь, пожалуйста — я рядом.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_PainFlare",
                 "HarveyMod_TreatmentNeeded_Neglect": "Уход за раной, кажется, срывался — я вижу последствия.$s#$b#Сейчас полная обработка. Мне важно, чтобы мы успели до осложнений.$a#$action HarveyOverhaulInjury_TreatComplication HarveyMod_Neglect"
             }
+        },
+        {
+            // «ты» с 3 сердец; 8–10 — Close, Dating/Married — Romantic (Late + 2).
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late + 1",
+            "When": {
+                "Hearts:Harvey": "3,4,5,6,7,8,9,10,11,12,13,14"
+            },
+            "Entries": {
+                "HarveyMod_TreatmentNeeded_Hurt": "Покажи, пожалуйста, где болит — осмотрю сейчас, быстро и аккуратно.$u#$b#Понимаю, что хочется вернуться к делам, но лечение лучше не откладывать.$u#$action HarveyOverhaulInjury_StartTreatment buffHurt",
+                "HarveyMod_TreatmentNeeded_BadlyHurt": "Травма серьёзная — я это вижу.$a#$b#Пожалуйста, сядь и не двигайся. Начнём лечение прямо сейчас — я рядом.$u#$action HarveyOverhaulInjury_StartTreatment buffBadlyHurt",
+                "HarveyMod_TreatmentNeeded_SprainedAnkle": "Похоже на растяжение связок.$a#$b#Не наступай на эту ногу. Сейчас зафиксирую и наложу повязку — так будет безопаснее.$a#$action HarveyOverhaulInjury_StartTreatment buffSprainedAnkle",
+                "HarveyMod_TreatmentNeeded_BruisedRibs": "Ушиб рёбер.$s#$b#Дыши медленно — я осмотрю. Похоже, перелома нет, но покой и фиксирующая повязка сейчас обязательны.$u#$action HarveyOverhaulInjury_StartTreatment buffBruisedRibs",
+                "HarveyMod_TreatmentNeeded_DeepCuts": "Подожди. Я вижу глубокий порез.$s#$b#Садись, пожалуйста — обработаю рану сейчас. Не терпи боль.$u#$action HarveyOverhaulInjury_StartTreatment buffDeepCuts",
+                "HarveyMod_TreatmentNeeded_BurnWounds": "Ожог. Уже охладила водой?$a#$b#Сейчас стерильная повязка и мазь. Пожалуйста, не мочи рану.$u#$action HarveyOverhaulInjury_StartTreatment buffBurnWounds",
+                "HarveyMod_TreatmentNeeded_FracturedBone": "Признаки перелома.$a#$b#Пожалуйста, не двигайся — сейчас зафиксирую конечность. Всё под контролем.$a#$action HarveyOverhaulInjury_StartTreatment buffFracturedBone",
+                "HarveyMod_TreatmentNeeded_WetBandage": "Повязка промокла — это риск инфекции.$a#$b#Сменю на сухую прямо сейчас. Пожалуйста, не откладывай.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_WetBandage",
+                "HarveyMod_TreatmentNeeded_DirtyWound": "Рана загрязнена — это опасно.$a#$b#Нужна срочная обработка и чистая повязка. Оставайся на месте, я всё подготовил.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_DirtyWound",
+                "HarveyMod_TreatmentNeeded_AllergicRash": "Признаки аллергической реакции на перевязочный материал.$a#$b#Сниму повязку и подберу другой состав. Покажи, где чешется — не терпи.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_AllergicRash",
+                "HarveyMod_TreatmentNeeded_PainFlare": "Боль усилилась — это не норма для текущей стадии.$a#$b#Проверю рану и скорректирую обезболивание. Садись, пожалуйста — я рядом.$u#$action HarveyOverhaulInjury_TreatComplication HarveyMod_PainFlare"
+            }
         }
     ]
 }

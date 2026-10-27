@@ -45,7 +45,7 @@
             "Target": "Characters/Dialogue/Harvey",
             "Priority": "Late",
             "When": {
-                "Relationship:Harvey": "Dating"
+                "Relationship:Harvey": "Dating, Engaged"
             },
             "Entries": {
                 "topicHarvey_UsedAntiseptic": "Ты обработала рану сама, сразу после шахты.$h#$b#Знаешь, как это меня успокаивает? Очень. Но вечером я всё равно посмотрю.$l",

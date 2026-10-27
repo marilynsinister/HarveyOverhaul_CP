@@ -6,7 +6,7 @@
       "Target": "Characters/Dialogue/Harvey",
       "Priority": "Late",
       "When": {
-        "Relationship:Harvey": "Dating"
+        "Relationship:Harvey": "Dating, Engaged"
       },
       "Entries": {
         "Mon": "Доброе утро.$h#$b#Неделя снова с нуля — как ты спала?$l#$b#Витамины на стойке, если захочешь. Без нотаций.$0",
@@ -31,7 +31,7 @@
       "Target": "Characters/Dialogue/Harvey",
       "Priority": "Late",
       "When": {
-        "Relationship:Harvey": "Dating"
+        "Relationship:Harvey": "Dating, Engaged"
       },
       "Entries": {
         "Desert": "Пустыня сегодня?$a#$b#Вода, SPF, аптечка — уже в твоей сумке. Да, я положил сам.$0#$b#Скажи, когда уходишь вглубь — одной туда нельзя, @. Потому что ты мне дорога.$l",

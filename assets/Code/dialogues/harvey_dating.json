@@ -7,7 +7,7 @@
       "Target": "Characters/Dialogue/Harvey",
       "Priority": "Late",
       "When": {
-        "Relationship:Harvey": "Dating"
+        "Relationship:Harvey": "Dating, Engaged"
       },
       "Entries": {
         "timeReaction_Late": "Поздно, солнышко.$s#$b#*ставит чай, не отходит* Ты устала — вижу по глазам, даже если скажешь «ещё чуть-чуть».$u#$b#Сегодня — домой, плед и сон. Я провожу и останусь рядом, пока не выдохнешь.$a#$b#Я люблю тебя слишком сильно, чтобы отпустить тебя тащить ночь одной.$l",

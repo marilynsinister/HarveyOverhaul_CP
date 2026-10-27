@@ -6,7 +6,7 @@
 
 Результат:
   assets/Character/Arend/Portrait.png  128×384 — 12 портретов по 64×64 (ванильный размер);
-  assets/Character/Arend/Sprite.png    64×448  — 14 рядов по 4 кадра 16×32;
+  assets/Character/Arend/Sprite.png    64×704  — 22 ряда по 4 кадра 16×32;
   *_Winter.png — те же картинки (зимнего наряда пока нет);
   art/arend/Arend_HD.png 512×1536 — HD-портрет 256×256 для Portraiture (deploy.sh кладёт в активный пак);
   assets/Items/arendItems.png — иконки: шкатулка, чай «номер семь», чашка Элин.
@@ -16,20 +16,29 @@
 
 Кадры спрайта (номер = ряд × 4 + столбец), анимации — Data/animationDescriptions в build_arend.py:
   0–3 вниз, 4–7 вправо, 8–11 вверх, 12–15 влево (зеркало ряда «вправо»);
-  16–19 стоит / портфель, 20–23 рука у груди, рука у подбородка, портфель;
-  24 книга, 25 стоит, 26 спиной, 27 стоит; 28–29 читает книгу, 30 объясняет (рука вверх), 31 думает сбоку;
-  32 стоит, 33 смотрит в сторону, 34 рука у подбородка, 35 чашка сбоку;
-  36–38 спиной (в кресле), 39 чашка; 40–43 в кресле (спокоен, руки, думает, вполоборота);
-  44–45 стоит, 46 руки скрещены, 47 пьёт чай; 48 чашка в руках, 49 ладони вместе, 50 жест сбоку;
-  52–55 разговор вполоборота (жестикулирует, лицом влево).
+  16–19 жест перед собой (покой, приподнимает руку, держит жест, покой);
+  20–23 поправляет очки (покой, рука у очков, держит руку, покой);
+  24–27 чтение с кивком; 28–31 перелистывает страницу над непрозрачной обложкой;
+  32–35 задумался: поднимает руку к подбородку;
+  36–39 спокойная стойка спиной с дыханием, без приседания и разворотов;
+  40–43 сидит в одном неподвижном кресле, двигает руками на коленях;
+  44–47 держит чашку перед собой, подносит ко рту и опускает;
+  48–51 двумя руками слегка приподнимает чашку у груди;
+  52–55 небольшой жест согнутой рукой в профиль вправо.
 
-В исходнике 24–27, 36–39, 48–50 и 52–55 укорочены (24–27 px вместо 29–31).
-51 пуст. Эти кадры сохраняют индексы, но не используются в стоячих анимациях:
-растягивание бюста до полного роста исказило бы пропорции. Безопасные чтение —
-28/29, чай — 47, отдых стоя — 44, птицы — 33. Кадры кресла 40–43 — только дома.
+В sprites.webp кадры 24–27, 36–39, 48–50 и 52–55 укорочены.
+Нативный art/arend/sprite_fixes.png (4×20 кадров 16×32) исправляет ряды
+0, 2, 4–21: ходьбу вниз/вверх, жесты, позы и промежуточные фазы.
+Применяется после общей палитры, чтобы не менять остальные кадры.
+Кадры 28–55 составляются из art/arend/pose_bases.png с отдельными слоями
+страницы, рук, дыхания и чашки (art/arend/compose_pose_cycles.py).
+56–75 — дополнительные фазы страницы, чашки, кресла, птиц и размышления.
+76–87 — дополнительные фазы жеста, поправления очков и согнутой руки.
+Все 88 ячеек заполнены. Порядок циклов — в build_arend.py, ANIMATIONS.
 
-Запуск:  python -I scripts/build_arend_sprites.py
+Запуск:  python -I scripts/build_arend_sprites.py [--sprites-only]
 """
+import argparse
 import os
 import shutil
 
@@ -50,6 +59,7 @@ P_ROWS = [(0, 340), (340, 673), (673, 1006), (1006, 1339), (1339, 1671), (1671, 
 
 FIGURE_PX = 29      # рост стоящей фигуры в кадре 16×32 (как у ванильных NPC)
 PALETTE_SIZE = 40   # общий палитровый набор — чтобы после уменьшения пиксели были чёткими
+FIX_ROWS = (0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
 
 
 def alpha_bbox(cell, threshold=128):
@@ -137,6 +147,17 @@ def build_sprite():
         fig = cells[key].transpose(Image.Transpose.FLIP_LEFT_RIGHT) if mirror else cells[key]
         frames.append(to_frame(fig, scale))
     frames = unify_palette(frames)
+    rows = max(rows, max(FIX_ROWS) + 1)
+    frames.extend(blank.copy() for _ in range(rows * 4 - len(frames)))
+    # Нативные правки не проходят повторное масштабирование/квантизацию.
+    # Фиксированная голова и чередование ног важнее микродвижений исходника.
+    with Image.open(os.path.join(ART, 'sprite_fixes.png')) as fixed:
+        fixed = fixed.convert('RGBA')
+        if fixed.size != (64, 32 * len(FIX_ROWS)):
+            raise ValueError(f'sprite_fixes.png must contain {len(FIX_ROWS)} rows of four 16x32 frames')
+        for source_row, target_row in enumerate(FIX_ROWS):
+            for c in range(4):
+                frames[target_row * 4 + c] = fixed.crop((c * 16, source_row * 32, c * 16 + 16, source_row * 32 + 32))
     sheet = Image.new('RGBA', (64, 32 * rows), (0, 0, 0, 0))
     for i, f in enumerate(frames):
         sheet.paste(f, ((i % 4) * 16, (i // 4) * 32))
@@ -250,8 +271,12 @@ def build_icons():
 
 
 def main():
-    build_icons()
-    build_portraits()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--sprites-only', action='store_true', help='Rebuild only the character sprite sheets')
+    args = parser.parse_args()
+    if not args.sprites_only:
+        build_icons()
+        build_portraits()
     build_sprite()
 
 

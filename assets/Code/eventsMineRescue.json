@@ -4,7 +4,7 @@
             "Action": "EditData",
             "Target": "Data/Events/Mine",
             "Entries": {
-                "eventHarveyMineRescue/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
+                "eventHarveyMineRescue/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
         none/
         -1000 -1000/
         farmer 17 7 2 Harvey 1000 1000 0 Maru -1000 -1000 0/
@@ -216,7 +216,7 @@
             "Action": "EditData",
             "Target": "Data/Events/FarmHouse",
             "Entries": {
-                "eventHarveyMineRescueMorning/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorning, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorningDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
+                "eventHarveyMineRescueMorning/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorning, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorningDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
         continue/
         {{HO_HomeVX}} 7/
         farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/

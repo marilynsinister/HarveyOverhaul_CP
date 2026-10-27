@@ -54,7 +54,7 @@
             "Target": "Characters/Dialogue/Harvey",
             "Priority": "Late + 5",
             "When": {
-                "Relationship:Harvey": "Dating"
+                "Relationship:Harvey": "Dating, Engaged"
             },
             "Entries": {
                 "HarveyMod_HiddenInjury_Suspected_Generic": "Подожди, пожалуйста.$u#$b#Ты стараешься выглядеть так, будто всё в порядке, но я вижу, что тебе больно.$s",

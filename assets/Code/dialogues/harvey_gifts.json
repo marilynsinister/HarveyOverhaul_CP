@@ -166,7 +166,7 @@
       "Target": "Characters/Dialogue/Harvey",
       "Priority": "Late",
       "When": {
-        "Relationship:Harvey": "Dating"
+        "Relationship:Harvey": "Dating, Engaged"
       },
       "Entries": {
         "AcceptBirthdayGift_Positive": "Спасибо, солнышко.$l#$b#В день рождения даже простое кажется особенным — ты умеешь вовремя.$h",

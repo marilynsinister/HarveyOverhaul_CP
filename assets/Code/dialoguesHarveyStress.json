@@ -118,7 +118,7 @@
         "topicStressCritical": "Солнышко, тебе сейчас очень плохо.$8#$b#*крепко берёт за руки* Я рядом. Лечение начинается сейчас.$a#$b#Сначала безопасность и отдых. Я не отступлю.$l"
       },
             "When": {
-                "Relationship:Harvey": "Dating"
+                "Relationship:Harvey": "Dating, Engaged"
             }
         },
         {

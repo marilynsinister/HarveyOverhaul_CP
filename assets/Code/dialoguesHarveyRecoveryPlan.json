@@ -101,7 +101,7 @@
             "Target": "Characters/Dialogue/Harvey",
             "Priority": "Late",
             "When": {
-                "Relationship:Harvey": "Dating"
+                "Relationship:Harvey": "Dating, Engaged"
             },
             "Entries": {
                 "HarveyMod_RecoveryPlanStarted": "Три дня щадящего режима, солнышко. Без шахты, без ночных подвигов и без «я только быстро».$u#$b#Я всё записал — и буду следить, потому что мне важно, чтобы ты восстановилась.$a",

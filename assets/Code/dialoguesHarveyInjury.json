@@ -199,7 +199,7 @@
             "Target": "Characters/Dialogue/Harvey",
             "Priority": "Late",
             "When": {
-                "Relationship:Harvey": "Dating",
+                "Relationship:Harvey": "Dating, Engaged",
             },
             "Entries": {
                 // ================== ОСНОВНЫЕ ТОПИКИ ТРАВМ ==================
@@ -349,17 +349,35 @@
             "Target": "Characters/Dialogue/Harvey",
             "Priority": "Late",
             "When": {
-                "Hearts:Harvey": "2,3,4,5",
+                "Hearts:Harvey": "2",
                 "HasConversationTopic": "topicHurt"
             },
             "Entries": {
-        "Hospital_Mon": "Перевязка. Покажите рану — обработаю.$0#$b#Старайся быть осторожнее.$0",
-        "Hospital_Tue": "Я нанёс мазь, чтобы рана быстрее зажила. Не перенапрягайся, пожалуйста. Ваше здоровье для меня на первом месте.$u",
+        "Hospital_Mon": "Перевязка. Покажите рану — обработаю.$0#$b#Постарайтесь быть осторожнее.$0",
+        "Hospital_Tue": "Я нанёс мазь, чтобы рана быстрее зажила. Не перенапрягайтесь, пожалуйста. Ваше здоровье для меня на первом месте.$u",
         "Hospital_Wed": "Если усилится боль — сразу скажите.$0",
         "Hospital_Thu": "Проверю заживление сегодня.$0",
-        "Hospital_Fri": "Если будет больно — не стесняйтесь сказать. Я могу дать обезболивающее, чтобы Вам было легче. Не терпишь же Вы боль ради меня?$s",
-        "Hospital_Sat": "Я оставил для Вас свежие перевязочные материалы. Если что-то понадобится — просто позови меня, я всегда помогу.$a",
+        "Hospital_Fri": "Если будет больно — не стесняйтесь сказать. Я могу дать обезболивающее, чтобы Вам было легче. Терпеть боль не нужно.$s",
+        "Hospital_Sat": "Я оставил для Вас свежие перевязочные материалы. Если что-то понадобится — просто позовите меня, я помогу.$a",
         "Hospital_Sun": "Сегодня лучше отдохнуть. Я могу принести Вам травяной чай или почитать что-нибудь. Главное — восстановиться и не спешить.$a"
+      },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Hearts:Harvey": "3,4,5",
+                "HasConversationTopic": "topicHurt"
+            },
+            "Entries": {
+        "Hospital_Mon": "Перевязка. Покажи рану — обработаю.$0#$b#Старайся быть осторожнее.$0",
+        "Hospital_Tue": "Я нанёс мазь, чтобы рана быстрее зажила. Не перенапрягайся, пожалуйста. Твоё здоровье для меня на первом месте.$u",
+        "Hospital_Wed": "Если усилится боль — сразу скажи.$0",
+        "Hospital_Thu": "Проверю заживление сегодня.$0",
+        "Hospital_Fri": "Если будет больно — не стесняйся сказать. Я дам обезболивающее, чтобы тебе было легче. Ты же не терпишь боль ради меня?$s",
+        "Hospital_Sat": "Я оставил для тебя свежие перевязочные материалы. Если что-то понадобится — просто позови меня, я всегда помогу.$a",
+        "Hospital_Sun": "Сегодня лучше отдохнуть. Могу принести тебе травяной чай или почитать что-нибудь. Главное — восстановиться и не спешить.$a"
       },
         },
         {
@@ -385,7 +403,7 @@
             "Target": "Characters/Dialogue/Harvey",
             "Priority": "Late",
             "When": {
-                "Relationship:Harvey": "Dating",
+                "Relationship:Harvey": "Dating, Engaged",
                 "HasConversationTopic": "topicHurt"
             },
             "Entries": {
@@ -476,7 +494,7 @@
             "Target": "Characters/Dialogue/Harvey",
             "Priority": "Late",
             "When": {
-                "Relationship:Harvey": "Dating",
+                "Relationship:Harvey": "Dating, Engaged",
                 "HasConversationTopic": "topicBadlyHurt"
             },
             "Entries": {
@@ -566,7 +584,7 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Harvey",
             "When": {
-                "Relationship:Harvey": "Dating",
+                "Relationship:Harvey": "Dating, Engaged",
                 "HasConversationTopic": "topicPostOperativeCare"
             },
             "Entries": {
@@ -665,7 +683,7 @@
             "Target": "Characters/Dialogue/Harvey",
             "Priority": "Late",
             "When": {
-                "Relationship:Harvey": "Dating",
+                "Relationship:Harvey": "Dating, Engaged",
                 "HasConversationTopic": "topicFarmerExhausted"
             },
             "Entries": {

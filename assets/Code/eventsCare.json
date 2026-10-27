@@ -67,11 +67,11 @@
         warp Harvey 15 6/
         faceDirection Harvey 3/
         viewport 14 6/
-        speak Harvey \"Вы получили травму — нужен осмотр.$a\"/
+        speak Harvey \"@, ты меня слышишь? Ты сильно поранилась — нужен осмотр.$a\"/
         pause 500/
-        speak Harvey \"Извините за резкий тон. Состояние серьёзное.$s\"/
+        speak Harvey \"Прости, что так резко. Состояние серьёзное.$s\"/
         animate Harvey true true 1000 40 41/
-        speak Harvey \"Разрешите осмотреть раны...$s\"/
+        speak Harvey \"Дай я осмотрю раны... Я рядом.$s\"/
         pause 200/
         emote farmer 28/
         mail mailHarveyPostTrauma/

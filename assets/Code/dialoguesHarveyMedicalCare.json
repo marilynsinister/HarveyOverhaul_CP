@@ -101,7 +101,7 @@
             "Target": "Characters/Dialogue/Harvey",
             "Priority": "Late",
             "When": {
-                "Relationship:Harvey": "Dating"
+                "Relationship:Harvey": "Dating, Engaged"
             },
             "Entries": {
                 "topicHarvey_Prescription_Rest": "Солнышко, сегодня тебе нужен покой.$8#$b#Пожалуйста, ложись пораньше. Мне спокойнее, когда я вижу, что ты правда отдыхаешь.$a",

@@ -187,7 +187,7 @@
                 "topicStressTreatmentDespairCured": "Солнышко, надежда сильнее голоса отчаяния.#$b#Это уже не «ничего не изменить». Горизонт смотрит шире.$h"
             },
             "When": {
-                "Relationship:Harvey": "Dating"
+                "Relationship:Harvey": "Dating, Engaged"
             }
         },
         {
@@ -296,7 +296,7 @@
             "Priority": "Late",
             "Target": "Characters/Dialogue/Harvey",
             "When": {
-                "Relationship:Harvey": "Dating"
+                "Relationship:Harvey": "Dating, Engaged"
             },
             "Entries": {
                 "topicStressDarknessLevel2": "Солнышко, страх темноты усиливается — я это вижу.$s#$b#Ты стараешься не показывать, но ночью тебе тяжелее.$s#$b#Предлагаю экспозиционную терапию: маленькие шаги, в твоём темпе, я рядом.$l#$b#Решение за тобой. Если согласна — расскажу первый этап.$0#$t topicDarknessTherapyStart 0",
