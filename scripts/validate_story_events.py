@@ -24,10 +24,11 @@ GAME = sys.argv[1] if len(sys.argv) > 1 else r'D:\Games\Steam\steamapps\common\S
 EVENT_FILES = ['eventsArc3.json', 'eventsMarriage.json', 'eventsAdult.json', 'eventsScars.json',
                'eventsHarveyLife.json', 'festivalsHarvey.json', 'eventsMarriageRotation.json', 'eventsExamConsent.json',
                'clinicSeasonal.json', 'fatherhood.json', 'arend.json', 'goodWeek.json', 'familyLife.json', 'introRecovery.json',
-               'outings.json', 'eventsCourtship.json']
+               'outings.json', 'eventsCourtship.json', 'courtshipLine.json', 'familyGrowth.json']
 TRIGGER_FILES = ['triggersArc3Aftermath.json', 'triggersDate.json', 'eventsScars.json', 'eventsMarriageRotation.json',
                  'clinicSeasonal.json', 'fatherhood.json', 'triggersRepeatScenes.json',
-                 'trustRewards.json', 'goodWeek.json', 'familyLife.json', 'introRecovery.json', 'outings.json']
+                 'trustRewards.json', 'goodWeek.json', 'familyLife.json', 'introRecovery.json', 'outings.json',
+                 'courtshipLine.json', 'herbalWorkshop.json']
 # Флаги-«письма» без текста: их читают условия и диалоги, в почтовый ящик они не попадают.
 ALLOWED_FLAGS = {'HarveyArc3_Confessed', 'HarveyArc3_ConfessionPending', 'HarveyArc3_Graduated',
                  'HarveyScars_LetterSent', 'HarveyScars_LetterBurned', 'HarveyScars_LetterKept',
@@ -36,9 +37,19 @@ ALLOWED_FLAGS = {'HarveyArc3_Confessed', 'HarveyArc3_ConfessionPending', 'Harvey
                  'HarveyRomance_Ring',
                  *(f'HarveyRomance_{kind}_{v}' for kind, values in (
                      ('Flower', ('Tulip', 'Sunflower', 'SweetPea')), ('Fear', ('Height', 'Dark', 'Alone')),
-                     ('Wish', ('Dance', 'Stars', 'Quiet'))) for v in values)}
+                     ('Wish', ('Dance', 'Stars', 'Quiet'))) for v in values),
+                 # Линия «Позывной» (build_courtship_line.py).
+                 'HarveyRomance_Radio', 'HarveyRomance_RadioDeclined', 'HarveyRomance_ModelParts', 'HarveyRomance_ModelBuilt',
+                 'HarveyRomance_ModelCrashed', 'HarveyRomance_BalloonCloth', 'HarveyRomance_BalloonReady', 'HarveyRomance_Flew',
+                 'HarveyRomance_Public', 'HarveyRomance_NoteDinner', 'HarveyRomance_CoffeeWeek', 'HarveyRomance_Signals',
+                 *(f'HarveyRomance_{kind}_{v}' for kind, values in (
+                     ('Callsign', ('Field', 'Daisy', 'Sun')), ('ModelName', ('Together', 'Callsign', 'Clinic')),
+                     ('Signal', ('Shoulder', 'Collar', 'Wink')),
+                     ('Rx', ('Beach', 'Forest', 'Fountain', 'Mountain'))) for v in values),
+                 *(f'HarveyRomance_BoxRead_{i}' for i in range(10))}
 # Темы-служебки без реплик (кулдауны).
-SILENT_TOPICS = {'HarveyMod_CD_Global', 'HarveyRotation_CD'}
+SILENT_TOPICS = {'HarveyMod_CD_Global', 'HarveyRotation_CD', 'HarveyRomance_RxCD', 'HarveyRomance_RxToday',
+                 'HarveyRomance_BoxToday'}
 SILENT_TOPIC_PREFIXES = ('HarveyRot_', 'HarveyRepeatCD_')
 
 errors, warnings = [], []

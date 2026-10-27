@@ -35,6 +35,9 @@ MAP_FILES = {
     "Custom_AdventurerSummit": os.path.join(SVE, "NewLocations", "AdventurerSummit.tmx"),
     "Custom_BlueMoonVineyard": os.path.join(SVE, "NewLocations", "BlueMoonVineyard.tmx"),
     "Custom_SpriteSpring": os.path.join(SVE, "NewLocations", "SpriteSpring2.tmx"),
+    "Custom_ShearwaterBridge": os.path.join(SVE, "NewLocations", "ShearwaterBridge.tbin"),
+    "Custom_GrampletonFields_Small": os.path.join(SVE, "NewLocations", "GrampletonFields_Small.tbin"),
+    "HarveyBalloon": os.path.join(os.path.dirname(MODS), "Content (unpacked)", "Maps", "HarveyBalloon.tmx"),
     "Desert": os.path.join(VANILLA, "Desert.tmx"),
     "Mine": os.path.join(VANILLA, "Mine.tmx"),
     "SkullCave": os.path.join(VANILLA, "SkullCave.tmx"),
@@ -327,7 +330,8 @@ def split_commands(script):
 
 
 def read_jsonc(path):
-    return json.loads(strip_jsonc(open(path, encoding="utf-8-sig").read()), strict=False)
+    with open(path, encoding="utf-8-sig") as source:
+        return json.loads(strip_jsonc(source.read()), strict=False)
 
 
 def included_files():
@@ -426,7 +430,7 @@ def validate(fname, location, event_id, script, start_map=None):
             continue
         cmd = tokens[0]
         try:
-            if cmd == "changeLocation" and len(tokens) > 1:
+            if cmd in ("changeLocation", "changeToTemporaryMap") and len(tokens) > 1:
                 loc = tokens[1]
             elif cmd == "ignoreCollisions" and len(tokens) > 1:
                 ignore.add(tokens[1])

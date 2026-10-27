@@ -203,7 +203,9 @@ class Audit:
                     if cmd == 'switchevent':
                         continue
                 try:
-                    if cmd == 'changelocation':
+                    if cmd in ('changelocation', 'changetotemporarymap'):
+                        if st['pending']:
+                            self.issue('RACE', raw, 'Changing maps with unfinished movement')
                         st['loc'] = t[1]
                     elif cmd == 'ignorecollisions':
                         st['ignore'].add(t[1])
@@ -213,6 +215,8 @@ class Audit:
                         self.check_tile(st, who, st['actors'][who], raw)
                     elif cmd == 'warp':
                         who = t[1]
+                        if who in st['pending']:
+                            self.issue('RACE', raw, f'{who}: warp does not clear the ordinary move target')
                         if who not in st['actors']:
                             self.issue('ACTOR', raw, f'{who} not declared')
                         st['actors'][who] = (int(t[2]), int(t[3]))
@@ -222,7 +226,16 @@ class Audit:
                                         c.is_posed_after(commands, ix, who))
                     elif cmd == 'move':
                         body = t[1:]
+                        if len(body) == 1 and body[0].lower() in ('true', 'false'):
+                            st['continue_move'] = body[0].lower() == 'true'
+                            if not st['continue_move']:
+                                st['pending'].clear()
+                            out.append(st)
+                            continue
                         async_move = body[-1].lower() == 'true'
+                        explicit_mode = body[-1].lower() in ('true', 'false')
+                        if not explicit_mode and st['continue_move']:
+                            self.issue('MOTION', raw, 'Implicit move inherits continueAfterMove=true and can repeat or advance early')
                         if body[-1].lower() in ('true', 'false'):
                             body = body[:-1]
                         if len(body) % 4:
@@ -231,6 +244,11 @@ class Audit:
                             self.move(st, body[i], int(body[i+1]), int(body[i+2]), raw)
                             if async_move:
                                 st['pending'].add(body[i])
+                        if explicit_mode:
+                            st['continue_move'] = async_move
+                        if not async_move:
+                            st['pending'].clear()
+                            st['continue_move'] = False
                     elif cmd == 'advancedmove':
                         who = t[1]
                         for i in range(3, len(t) - 1, 2):
@@ -240,9 +258,13 @@ class Audit:
                             self.move(st, who, dx, dy, raw)
                         st['pending'].add(who)
                     elif cmd == 'proceedposition':
-                        st['pending'].discard(t[1])
+                        self.issue('MOTION', raw, 'ProceedPosition sets continueAfterMove=true; use move false for ordinary movement')
+                        st['continue_move'] = True
                     elif cmd in ('waitforallstationary', 'stopadvancedmoves'):
                         st['pending'].clear()
+                    elif cmd == 'halt':
+                        st['pending'].clear()
+                        st['continue_move'] = False
                     elif cmd == 'positionoffset':
                         old = st['offset'].get(t[1], (0, 0))
                         st['offset'][t[1]] = (old[0] + int(t[2]), old[1] + int(t[3]))
@@ -276,15 +298,18 @@ class Audit:
                         if any(who.startswith('farmer') for who in st['loop']):
                             self.issue('POSE', raw, 'Player still has a held animation at the exit')
                         if len(t) >= 4 and t[1].lower() == 'position':
-                            self.check_tile(st, 'farmer', (int(t[2]), int(t[3])), raw,
+                            # end position changes positionBeforeEvent, on the
+                            # original return map, not the last cutscene map.
+                            exit_state = {**st, 'loc': st['origin']}
+                            self.check_tile(exit_state, 'farmer', (int(t[2]), int(t[3])), raw,
                                             # Existing hospital bed exits are intentional poses.
-                                            st['loc'] == 'Hospital' and t[2:4] == ['20', '5'])
+                                            st['origin'] == 'Hospital' and t[2:4] == ['20', '5'])
                         continue
                 except (ValueError, IndexError) as exc:
                     self.issue('SYNTAX', raw, str(exc))
                 out.append(st)
             # Dialogue-only choices need not multiply every later check.
-            states = list({repr((s['loc'], s['actors'], s['ignore'], s['offset'], s['loop'], s['pending'], s['animation'])): s
+            states = list({repr((s['loc'], s['actors'], s['ignore'], s['offset'], s['loop'], s['pending'], s['animation'], s['continue_move'])): s
                            for s in out}.values())
             if not states:
                 break
@@ -306,7 +331,7 @@ class Audit:
                     self.issue('OFFSET', 'setup', 'Absolute farm tokens require ignoreEventTileOffset')
                 if tmap is None:
                     self.issue('MAP', '', f'No map for {loc}')
-                st = dict(loc=loc, origin=loc, map=tmap, actors={}, ignore=set(), offset={}, loop=set(), pending=set(), animation={})
+                st = dict(loc=loc, origin=loc, map=tmap, actors={}, ignore=set(), offset={}, loop=set(), pending=set(), animation={}, continue_move=False)
                 setup = cmds[2].split()
                 for i in range(0, len(setup), 4):
                     who, x, y = setup[i], int(setup[i+1]), int(setup[i+2])

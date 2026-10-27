@@ -749,9 +749,225 @@
           "Condition": "",
           "Repeatable": false
         },
+        "{{ModId}}_HarveyOverhaulCourtship.P1_SecondAsk": {
+          "Arc": "Помолвка и свадьба",
+          "ArcOrder": 7,
+          "Order": 1,
+          "EventIds": "HarveyOverhaulCourtship.P1_SecondAsk",
+          "Title": "Ты опять меня опередила",
+          "Summary": "Коробочка полгода жила у него в кармане. Он всё равно встал на одно колено.",
+          "Hint": "На следующий день после кулона — у двери клиники.",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Engaged Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.P2_BrideChart": {
+          "Arc": "Помолвка и свадьба",
+          "ArcOrder": 7,
+          "Order": 2,
+          "EventIds": "HarveyOverhaulCourtship.P2_BrideChart",
+          "Title": "Анкета невесты",
+          "Summary": "Цветы, страх и тайное желание — в медкарте, во внутреннем кармане.",
+          "Hint": "Во время помолвки — в клинике днём.",
+          "Requires": "HarveyOverhaulCourtship.P1_SecondAsk",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.P3_Jitters": {
+          "Arc": "Помолвка и свадьба",
+          "ArcOrder": 7,
+          "Order": 3,
+          "EventIds": "HarveyOverhaulCourtship.P3_Jitters",
+          "Title": "Мандраж",
+          "Summary": "Седьмой вариант речи он сказал тебе одной.",
+          "Hint": "Ночью накануне свадьбы — на крыльце.",
+          "Requires": "HarveyOverhaulCourtship.P2_BrideChart",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.P4_FirstMarriedMorning": {
+          "Arc": "Помолвка и свадьба",
+          "ArcOrder": 7,
+          "Order": 4,
+          "EventIds": "HarveyOverhaulCourtship.P4_FirstMarriedMorning HarveyOverhaulCourtship.P4_FirstMarriedMorning_Tulip HarveyOverhaulCourtship.P4_FirstMarriedMorning_Sunflower HarveyOverhaulCourtship.P4_FirstMarriedMorning_SweetPea",
+          "Title": "Первое утро",
+          "Summary": "Петух, цветы из анкеты и ложки во втором ящике.",
+          "Hint": "Утром после свадьбы — дома.",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.C1_Frequency": {
+          "Arc": "Позывной",
+          "ArcOrder": 8,
+          "Order": 1,
+          "EventIds": "HarveyOverhaulCourtship.C1_Frequency",
+          "Title": "Частота",
+          "Summary": "Канал семь. Если что-то случится — и если ничего не случится тоже.",
+          "Hint": "В обед в комнате Харви, когда вы вместе и уже назначены «экстренным контактом».",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.C2_Callsigns": {
+          "Arc": "Позывной",
+          "ArcOrder": 8,
+          "Order": 2,
+          "EventIds": "HarveyOverhaulCourtship.C2_Callsigns",
+          "Title": "Позывные",
+          "Summary": "Рация затрещала на крыльце — а он звонил с тропинки.",
+          "Hint": "Ясным вечером на крыльце, через несколько дней после рации.",
+          "Requires": "HarveyOverhaulCourtship.C1_Frequency",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.C3_Model": {
+          "Arc": "Позывной",
+          "ArcOrder": 8,
+          "Order": 3,
+          "EventIds": "HarveyOverhaulCourtship.C3_Model",
+          "Title": "Модель",
+          "Summary": "«Не дыши. Нет, дыши. Но ровно». И имя на борту.",
+          "Hint": "В выходные днём в комнате Харви, когда соберёшь детали для модели.",
+          "Requires": "HarveyOverhaulCourtship.C2_Callsigns",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.C4_Launch": {
+          "Arc": "Позывной",
+          "ArcOrder": 8,
+          "Order": 4,
+          "EventIds": "HarveyOverhaulCourtship.C4_Launch",
+          "Title": "Запуск",
+          "Summary": "Модель утонула в озере. Вы оба смеялись.",
+          "Hint": "Ясным воскресеньем у горного озера (весна–осень).",
+          "Requires": "HarveyOverhaulCourtship.C3_Model",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.C5_Flight": {
+          "Arc": "Позывной",
+          "ArcOrder": 8,
+          "Order": 5,
+          "EventIds": "HarveyOverhaulCourtship.C5_Flight",
+          "Title": "Взлёт",
+          "Summary": "«Мне нужен был кто-то, ради кого не страшно».",
+          "Hint": "Летним или осенним закатом на плато — когда сюрприз Льюиса будет готов. Только в браке.",
+          "Requires": "HarveyOverhaulCourtship.C4_Launch",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.S1_Beach": {
+          "Arc": "Ухаживание",
+          "ArcOrder": 9,
+          "Order": 1,
+          "EventIds": "HarveyOverhaulCourtship.S1_Beach HarveyOverhaulCourtship.S1_Forest HarveyOverhaulCourtship.S1_Fountain HarveyOverhaulCourtship.S1_Mountain",
+          "Title": "Рецепт",
+          "Summary": "Назначение: прогулка. Побочные эффекты: он.",
+          "Hint": "Когда вы встречаетесь, Харви иногда присылает рецепт. Приходи в указанное место в тот же день.",
+          "Requires": "HarveyOverhaulDate.D1_Fountain",
+          "Condition": "",
+          "Repeatable": true
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.S2_Gossip": {
+          "Arc": "Ухаживание",
+          "ArcOrder": 9,
+          "Order": 2,
+          "EventIds": "HarveyOverhaulCourtship.S2_Gossip",
+          "Title": "Сплетни",
+          "Summary": "«Да. Это она. Есть вопросы — запись в регистратуре».",
+          "Hint": "Днём у клиники, через неделю после первого дня вместе.",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.S3_Dinner": {
+          "Arc": "Ухаживание",
+          "ArcOrder": 9,
+          "Order": 3,
+          "EventIds": "HarveyOverhaulCourtship.S3_Dinner",
+          "Title": "Сорванный ужин",
+          "Summary": "Вызов, шарф в залог и десерт за счёт доктора.",
+          "Hint": "В пятницу вечером в салуне, после его приглашения.",
+          "Requires": "HarveyOverhaulCourtship.S2_Gossip",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.S3b_Coffee": {
+          "Arc": "Ухаживание",
+          "ArcOrder": 9,
+          "Order": 4,
+          "EventIds": "HarveyOverhaulCourtship.S3b_Coffee",
+          "Title": "Утро вместо вечера",
+          "Summary": "Кофе, саженец и лейка, которую он у тебя забрал.",
+          "Hint": "Утром на ферме после сорванного ужина.",
+          "Requires": "HarveyOverhaulCourtship.S3_Dinner",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.I1_Dinner": {
+          "Arc": "Ухаживание",
+          "ArcOrder": 9,
+          "Order": 5,
+          "EventIds": "HarveyOverhaulCourtship.I1_Dinner",
+          "Title": "Ужин по записке",
+          "Summary": "Суп на ступеньках и одна ложка на двоих.",
+          "Hint": "Подари Харви записку «Приходи на ужин» — вечером он придёт к крыльцу.",
+          "Requires": "HarveyOverhaulCourtship.S2_Gossip",
+          "Condition": "",
+          "Repeatable": true
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.I2_Kidnap": {
+          "Arc": "Ухаживание",
+          "ArcOrder": 9,
+          "Order": 6,
+          "EventIds": "HarveyOverhaulCourtship.I2_Kidnap",
+          "Title": "Похищение с дежурства",
+          "Summary": "Пять минут. Ладно, двадцать. Это ты его увела.",
+          "Hint": "В ясный день после обеда — приходи в клинику с корзиной для пикника от Гаса.",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.W2_QuietLanguage": {
+          "Arc": "Глубина брака",
+          "ArcOrder": 10,
+          "Order": 1,
+          "EventIds": "HarveyOverhaulCourtship.W2_QuietLanguage",
+          "Title": "Тихий язык",
+          "Summary": "Сжать руку дважды — «я в порядке». Третий сигнал придумала ты.",
+          "Hint": "Вечером на крыльце, когда у вас уже есть общий ключ от клиники.",
+          "Requires": "HarveyOverhaulArc3.N7_Key",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.W3_MarriedBadWeek": {
+          "Arc": "Глубина брака",
+          "ArcOrder": 10,
+          "Order": 2,
+          "EventIds": "HarveyOverhaulCourtship.W3_MarriedBadWeek",
+          "Title": "Его плохая неделя",
+          "Summary": "«Сегодня я главная». Он сам придумал это правило.",
+          "Hint": "Вечером дома, когда у Харви был тяжёлый день, а у тебя — хорошие недели.",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulCourtship.W4_ThirtyYears": {
+          "Arc": "Глубина брака",
+          "ArcOrder": 10,
+          "Order": 3,
+          "EventIds": "HarveyOverhaulCourtship.W4_ThirtyYears",
+          "Title": "Через тридцать лет",
+          "Summary": "Давление каждое утро. Закатывать глаза. Быть счастливыми.",
+          "Hint": "Ясным осенним вечером на крыльце, после двух лет брака.",
+          "Requires": "HarveyOverhaulCourtship.W2_QuietLanguage",
+          "Condition": "",
+          "Repeatable": false
+        },
         "{{ModId}}_HarveyOverhaulFestival.F1_AfterFlowerDance": {
           "Arc": "Праздники",
-          "ArcOrder": 7,
+          "ArcOrder": 11,
           "Order": 1,
           "EventIds": "HarveyOverhaulFestival.F1_AfterFlowerDance",
           "Title": "После Танца цветов",
@@ -763,7 +979,7 @@
         },
         "{{ModId}}_HarveyOverhaulFestival.F2_AfterLuau": {
           "Arc": "Праздники",
-          "ArcOrder": 7,
+          "ArcOrder": 11,
           "Order": 2,
           "EventIds": "HarveyOverhaulFestival.F2_AfterLuau",
           "Title": "После луау",
@@ -775,7 +991,7 @@
         },
         "{{ModId}}_HarveyOverhaulFestival.F3_AfterSpiritsEve": {
           "Arc": "Праздники",
-          "ArcOrder": 7,
+          "ArcOrder": 11,
           "Order": 3,
           "EventIds": "HarveyOverhaulFestival.F3_AfterSpiritsEve",
           "Title": "После Ночи духов",
@@ -787,7 +1003,7 @@
         },
         "{{ModId}}_HarveyOverhaulFestival.F4_WinterStarNight": {
           "Arc": "Праздники",
-          "ArcOrder": 7,
+          "ArcOrder": 11,
           "Order": 4,
           "EventIds": "HarveyOverhaulFestival.F4_WinterStarNight",
           "Title": "Под Зимней звездой",
@@ -799,7 +1015,7 @@
         },
         "{{ModId}}_HarveyOverhaulRotation.R1_Umbrella": {
           "Arc": "Будни брака",
-          "ArcOrder": 8,
+          "ArcOrder": 12,
           "Order": 1,
           "EventIds": "HarveyOverhaulRotation.R1_Umbrella",
           "Title": "Зонт",
@@ -811,7 +1027,7 @@
         },
         "{{ModId}}_HarveyOverhaulRotation.R2_Stars": {
           "Arc": "Будни брака",
-          "ArcOrder": 8,
+          "ArcOrder": 12,
           "Order": 2,
           "EventIds": "HarveyOverhaulRotation.R2_Stars",
           "Title": "Звёзды с крыльца",
@@ -823,7 +1039,7 @@
         },
         "{{ModId}}_HarveyOverhaulRotation.R3_FallLeaves": {
           "Arc": "Будни брака",
-          "ArcOrder": 8,
+          "ArcOrder": 12,
           "Order": 3,
           "EventIds": "HarveyOverhaulRotation.R3_FallLeaves",
           "Title": "Листопад",
@@ -835,7 +1051,7 @@
         },
         "{{ModId}}_HarveyOverhaulRotation.R4_Snowballs": {
           "Arc": "Будни брака",
-          "ArcOrder": 8,
+          "ArcOrder": 12,
           "Order": 4,
           "EventIds": "HarveyOverhaulRotation.R4_Snowballs",
           "Title": "Снежки",
@@ -847,7 +1063,7 @@
         },
         "{{ModId}}_HarveyOverhaulRotation.R5_ClinicLunch": {
           "Arc": "Будни брака",
-          "ArcOrder": 8,
+          "ArcOrder": 12,
           "Order": 5,
           "EventIds": "HarveyOverhaulRotation.R5_ClinicLunch",
           "Title": "Обед в клинике",
@@ -859,7 +1075,7 @@
         },
         "{{ModId}}_HarveyOverhaulRotation.R6_ReadingAloud": {
           "Arc": "Будни брака",
-          "ArcOrder": 8,
+          "ArcOrder": 12,
           "Order": 6,
           "EventIds": "HarveyOverhaulRotation.R6_ReadingAloud",
           "Title": "Чтение вслух",
@@ -871,7 +1087,7 @@
         },
         "{{ModId}}_HarveyOverhaulRotation.R7_Heartbeat": {
           "Arc": "Будни брака",
-          "ArcOrder": 8,
+          "ArcOrder": 12,
           "Order": 7,
           "EventIds": "HarveyOverhaulRotation.R7_Heartbeat",
           "Title": "Ритм",
@@ -883,7 +1099,7 @@
         },
         "{{ModId}}_HarveyOverhaulRotation.R8_FountainWalk": {
           "Arc": "Будни брака",
-          "ArcOrder": 8,
+          "ArcOrder": 12,
           "Order": 8,
           "EventIds": "HarveyOverhaulRotation.R8_FountainWalk",
           "Title": "Вечер у фонтана",
@@ -895,7 +1111,7 @@
         },
         "{{ModId}}_HarveyOverhaulBirthday.B1_Celebration": {
           "Arc": "Твой день рождения",
-          "ArcOrder": 9,
+          "ArcOrder": 13,
           "Order": 1,
           "EventIds": "HarveyOverhaulBirthday.B1_Celebration",
           "Title": "Твой день",
@@ -907,7 +1123,7 @@
         },
         "{{ModId}}_HarveyOverhaulZuzu.Z1_Arrival": {
           "Arc": "Выходные в Зузу",
-          "ArcOrder": 10,
+          "ArcOrder": 14,
           "Order": 1,
           "EventIds": "HarveyOverhaulZuzu.Z1_Arrival",
           "Title": "Другая остановка",
@@ -919,7 +1135,7 @@
         },
         "{{ModId}}_HarveyOverhaulZuzu.Z2_Coffee": {
           "Arc": "Выходные в Зузу",
-          "ArcOrder": 10,
+          "ArcOrder": 14,
           "Order": 2,
           "EventIds": "HarveyOverhaulZuzu.Z2_Coffee",
           "Title": "Тот самый столик",
@@ -931,7 +1147,7 @@
         },
         "{{ModId}}_HarveyOverhaulZuzu.Z3_Bookshop": {
           "Arc": "Выходные в Зузу",
-          "ArcOrder": 10,
+          "ArcOrder": 14,
           "Order": 3,
           "EventIds": "HarveyOverhaulZuzu.Z3_Bookshop",
           "Title": "Две закладки",
@@ -943,7 +1159,7 @@
         },
         "{{ModId}}_HarveyOverhaulZuzu.Z4_University": {
           "Arc": "Выходные в Зузу",
-          "ArcOrder": 10,
+          "ArcOrder": 14,
           "Order": 4,
           "EventIds": "HarveyOverhaulZuzu.Z4_University",
           "Title": "Читальный зал",
@@ -955,7 +1171,7 @@
         },
         "{{ModId}}_HarveyOverhaulZuzu.Z5_HotelEvening": {
           "Arc": "Выходные в Зузу",
-          "ArcOrder": 10,
+          "ArcOrder": 14,
           "Order": 5,
           "EventIds": "HarveyOverhaulZuzu.Z5_HotelEvening",
           "Title": "Чужие окна",
@@ -967,7 +1183,7 @@
         },
         "{{ModId}}_HarveyOverhaulZuzu.Z6_SundayMorning": {
           "Arc": "Выходные в Зузу",
-          "ArcOrder": 10,
+          "ArcOrder": 14,
           "Order": 6,
           "EventIds": "HarveyOverhaulZuzu.Z6_SundayMorning",
           "Title": "Медленное утро",
@@ -979,7 +1195,7 @@
         },
         "{{ModId}}_HarveyOverhaulZuzu.Z7_EveningSquare": {
           "Arc": "Выходные в Зузу",
-          "ArcOrder": 10,
+          "ArcOrder": 14,
           "Order": 7,
           "EventIds": "HarveyOverhaulZuzu.Z7_EveningSquare",
           "Title": "Новые воспоминания",
@@ -989,9 +1205,81 @@
           "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
           "Repeatable": false
         },
+        "{{ModId}}_HarveyOverhaulZuzu.Z8_Familiar": {
+          "Arc": "Выходные в Зузу",
+          "ArcOrder": 14,
+          "Order": 8,
+          "EventIds": "HarveyOverhaulZuzu.Z8_Familiar",
+          "Title": "Во второй раз",
+          "Summary": "Город уже не его — ваш. И карта больше не нужна.",
+          "Hint": "На площади Зузу во время второй поездки.",
+          "Requires": "HarveyOverhaulZuzu.Z1_Arrival",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulZuzu.Z9_Regulars": {
+          "Arc": "Выходные в Зузу",
+          "ArcOrder": 14,
+          "Order": 9,
+          "EventIds": "HarveyOverhaulZuzu.Z9_Regulars",
+          "Title": "«Как в прошлый раз»",
+          "Summary": "Бариста вас запомнила. Вас — а не студента с четвёртой чашкой.",
+          "Hint": "В кофейне Зузу во время второй поездки.",
+          "Requires": "HarveyOverhaulZuzu.Z2_Coffee",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulZuzu.Z10_Lecture": {
+          "Arc": "Выходные в Зузу",
+          "ArcOrder": 14,
+          "Order": 10,
+          "EventIds": "HarveyOverhaulZuzu.Z10_Lecture",
+          "Title": "Пять минут о долине",
+          "Summary": "Встреча выпускников и самая маленькая лекция Харви.",
+          "Hint": "В читальном зале Зузу во время второй поездки.",
+          "Requires": "HarveyOverhaulZuzu.Z4_University",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulZuzu.Z11_Rooftop": {
+          "Arc": "Выходные в Зузу",
+          "ArcOrder": 14,
+          "Order": 11,
+          "EventIds": "HarveyOverhaulZuzu.Z11_Rooftop",
+          "Title": "Крыша гостиницы",
+          "Summary": "Весь город огнями — и долина там, где темно.",
+          "Hint": "Вечером в гостинице Зузу во время второй поездки.",
+          "Requires": "HarveyOverhaulZuzu.Z5_HotelEvening",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulZuzu.ZB1_Midnight": {
+          "Arc": "Выходные в Зузу",
+          "ArcOrder": 14,
+          "Order": 12,
+          "EventIds": "HarveyOverhaulZuzu.ZB1_Midnight",
+          "Title": "Полночь четырнадцатого",
+          "Summary": "Кекс, одна свечка и день рождения не на дежурстве.",
+          "Hint": "Увези Харви в Зузу в субботу, 13 зимы, — накануне его дня рождения. Вечером в гостинице.",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulZuzu.ZB2_BirthdayMorning": {
+          "Arc": "Выходные в Зузу",
+          "ArcOrder": 14,
+          "Order": 13,
+          "EventIds": "HarveyOverhaulZuzu.ZB2_BirthdayMorning",
+          "Title": "Его маршрут",
+          "Summary": "В свой день рождения он впервые выбрал, куда идти.",
+          "Hint": "Утром 14 зимы в гостинице Зузу.",
+          "Requires": "HarveyOverhaulZuzu.ZB1_Midnight",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married",
+          "Repeatable": false
+        },
         "{{ModId}}_HarveyOverhaulFather.P1_FirstNight": {
           "Arc": "Семья",
-          "ArcOrder": 11,
+          "ArcOrder": 15,
           "Order": 1,
           "EventIds": "HarveyOverhaulFather.P1_FirstNight",
           "Title": "Первая ночь",
@@ -1003,7 +1291,7 @@
         },
         "{{ModId}}_HarveyOverhaulFather.P2_BabyMonitor": {
           "Arc": "Семья",
-          "ArcOrder": 11,
+          "ArcOrder": 15,
           "Order": 2,
           "EventIds": "HarveyOverhaulFather.P2_BabyMonitor",
           "Title": "Радионяня",
@@ -1013,9 +1301,69 @@
           "Condition": "",
           "Repeatable": false
         },
+        "{{ModId}}_HarveyOverhaulFamily.K1_FirstWord": {
+          "Arc": "Семья",
+          "ArcOrder": 15,
+          "Order": 3,
+          "EventIds": "HarveyOverhaulFamily.K1_FirstWord",
+          "Title": "Первое слово",
+          "Summary": "Первое слово — «стоп». Градусник отправился в футляр.",
+          "Hint": "Вечером дома, когда малыш уже ходит.",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulFamily.K2_Knee": {
+          "Arc": "Семья",
+          "ArcOrder": 15,
+          "Order": 4,
+          "EventIds": "HarveyOverhaulFamily.K2_Knee",
+          "Title": "Коленка",
+          "Summary": "Две капли крови, пластырь со звёздочкой. Царапина — это тоже детство.",
+          "Hint": "Ясным днём у крыльца, когда малышу исполнится год.",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulFamily.K3_FirstYear": {
+          "Arc": "Семья",
+          "ArcOrder": 15,
+          "Order": 5,
+          "EventIds": "HarveyOverhaulFamily.K3_FirstYear",
+          "Title": "Первый год",
+          "Summary": "Одна свеча и торт, переставленный трижды.",
+          "Hint": "Вечером дома, когда малышу исполнится год.",
+          "Requires": "HarveyOverhaulFamily.K1_FirstWord",
+          "Condition": "",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulFamily.K4_Story": {
+          "Arc": "Семья",
+          "ArcOrder": 15,
+          "Order": 6,
+          "EventIds": "HarveyOverhaulFamily.K4_Story",
+          "Title": "Сказка на ночь",
+          "Summary": "Птицы, самолёт в озере или анатомия для самых маленьких.",
+          "Hint": "Вечером дома, когда малышу будет два года.",
+          "Requires": "",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married",
+          "Repeatable": false
+        },
+        "{{ModId}}_HarveyOverhaulFamily.K5_StoryCircle": {
+          "Arc": "Семья",
+          "ArcOrder": 15,
+          "Order": 7,
+          "EventIds": "HarveyOverhaulFamily.K5_StoryCircle",
+          "Title": "Кружок у фонтана",
+          "Summary": "Харви стоял на скамейке. Не рядом.",
+          "Hint": "Ясным вторником или четвергом у фонтана, когда малышу будет три года.",
+          "Requires": "HarveyOverhaulFamily.K1_FirstWord",
+          "Condition": "",
+          "Repeatable": false
+        },
         "{{ModId}}_eventHarveyEveningRadio": {
           "Arc": "Вечера у Харви",
-          "ArcOrder": 12,
+          "ArcOrder": 16,
           "Order": 1,
           "EventIds": "{{ModId}}_eventHarveyEveningRadio",
           "Title": "Радио",
@@ -1027,7 +1375,7 @@
         },
         "{{ModId}}_eventHarveyEveningPlanes": {
           "Arc": "Вечера у Харви",
-          "ArcOrder": 12,
+          "ArcOrder": 16,
           "Order": 2,
           "EventIds": "{{ModId}}_eventHarveyEveningPlanes",
           "Title": "Модели самолётов",
@@ -1039,7 +1387,7 @@
         },
         "{{ModId}}_eventHarveyEveningJournal": {
           "Arc": "Вечера у Харви",
-          "ArcOrder": 12,
+          "ArcOrder": 16,
           "Order": 3,
           "EventIds": "{{ModId}}_eventHarveyEveningJournal",
           "Title": "Дневник",
@@ -1051,7 +1399,7 @@
         },
         "{{ModId}}_HarveyMod_FirstTreatment": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 1,
           "EventIds": "HarveyMod_FirstTreatment",
           "Title": "Первое лечение",
@@ -1063,7 +1411,7 @@
         },
         "{{ModId}}_HarveyMod_TreatmentPlanMeeting": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 2,
           "EventIds": "HarveyMod_TreatmentPlanMeeting",
           "Title": "План лечения",
@@ -1075,7 +1423,7 @@
         },
         "{{ModId}}_eventHarveyMedicalCheck": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 3,
           "EventIds": "eventHarveyMedicalCheck eventHarveyMedicalCheck_Dating",
           "Title": "Медосмотр по письму",
@@ -1087,7 +1435,7 @@
         },
         "{{ModId}}_eventHarveyRoomCheckup": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 4,
           "EventIds": "eventHarveyRoomCheckup eventHarveyRoomCheckup2",
           "Title": "Осмотр наверху",
@@ -1099,7 +1447,7 @@
         },
         "{{ModId}}_HarveyMod_NightCrisis_PreDating": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 5,
           "EventIds": "HarveyMod_NightCrisis_PreDating HarveyMod_NightCrisis_Dating",
           "Title": "Свет в окне клиники",
@@ -1111,7 +1459,7 @@
         },
         "{{ModId}}_eventHarveyLateNightCollapse": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 6,
           "EventIds": "eventHarveyLateNightCollapse",
           "Title": "Ночь на площади",
@@ -1123,7 +1471,7 @@
         },
         "{{ModId}}_eventHarveyCheckHealthFarmer": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 7,
           "EventIds": "eventHarveyCheckHealthFarmer",
           "Title": "Утро после шахты",
@@ -1135,7 +1483,7 @@
         },
         "{{ModId}}_eventHarveyMorningCheckup": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 8,
           "EventIds": "eventHarveyMorningCheckup",
           "Title": "Завтрак в постель",
@@ -1147,7 +1495,7 @@
         },
         "{{ModId}}_eventHarveyCheckFarmerOutsideAfter22": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 9,
           "EventIds": "eventHarveyCheckFarmerOutsideAfter22",
           "Title": "Слишком поздно",
@@ -1159,7 +1507,7 @@
         },
         "{{ModId}}_HarveyMod_BirthdayHospital_Friend": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 10,
           "EventIds": "HarveyMod_BirthdayHospital_Friend HarveyMod_BirthdayHospital_Dating",
           "Title": "День рождения в клинике",
@@ -1171,7 +1519,7 @@
         },
         "{{ModId}}_HarveyOverhaulGoodWeek.GW1_Picnic": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 11,
           "EventIds": "HarveyOverhaulGoodWeek.GW1_Picnic",
           "Title": "Пикник за месяц спокойствия",
@@ -1183,7 +1531,7 @@
         },
         "{{ModId}}_58": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 12,
           "EventIds": "58",
           "Title": "Аэробика",
@@ -1195,7 +1543,7 @@
         },
         "{{ModId}}_528013": {
           "Arc": "Забота и осмотры",
-          "ArcOrder": 13,
+          "ArcOrder": 17,
           "Order": 13,
           "EventIds": "528013",
           "Title": "Воздушный шар",
@@ -1207,7 +1555,7 @@
         },
         "{{ModId}}_eventHarveyStormComfortFarm": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 1,
           "EventIds": "eventHarveyStormComfortFarm eventHarveyStormComfortTown eventHarveyStormComfortForest eventHarveyStormComfortMountain eventHarveyStormComfortDesert eventHarveyStormComfortMine",
           "Title": "Не одна в грозу",
@@ -1219,7 +1567,7 @@
         },
         "{{ModId}}_HarveyStress_GotoroForestRescue_MidTrust": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 2,
           "EventIds": "HarveyStress_GotoroForestRescue_MidTrust HarveyStress_GotoroForestRescue_HighTrust HarveyStress_GotoroForestRescue_Dating HarveyStress_GotoroForestRescue_Married",
           "Title": "Найти в лесу",
@@ -1231,7 +1579,7 @@
         },
         "{{ModId}}_eventHarveyMinorMineRescue": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 3,
           "EventIds": "eventHarveyMinorMineRescue eventHarveyMineRescue eventHarveyMineRescueDating",
           "Title": "Шаги в шахте",
@@ -1243,7 +1591,7 @@
         },
         "{{ModId}}_eventHarveyMineRescueMorning": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 4,
           "EventIds": "eventHarveyMineRescueMorning eventHarveyMineRescueMorningDating",
           "Title": "Утро после спасения",
@@ -1255,7 +1603,7 @@
         },
         "{{ModId}}_eventHarveyAfterExternalRescueHome": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 5,
           "EventIds": "eventHarveyAfterExternalRescueHome eventHarveyAfterExternalRescueHomeEngaged eventHarveyAfterExternalRescueHomeMarried",
           "Title": "Дома после спасения",
@@ -1267,7 +1615,7 @@
         },
         "{{ModId}}_eventHarveyAfterHospitalDischargeHome": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 6,
           "EventIds": "eventHarveyAfterHospitalDischargeHome",
           "Title": "Выписка",
@@ -1279,7 +1627,7 @@
         },
         "{{ModId}}_eventHarveyNightRoundSevereFirst": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 7,
           "EventIds": "eventHarveyNightRoundSevereFirst",
           "Title": "Ночной обход",
@@ -1291,7 +1639,7 @@
         },
         "{{ModId}}_HarveyOverhaulCare.DeathHospitalDating": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 8,
           "EventIds": "HarveyOverhaulCare.DeathHospitalDating",
           "Title": "Очнуться в клинике",
@@ -1303,7 +1651,7 @@
         },
         "{{ModId}}_eventHarveyExhaustion": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 9,
           "EventIds": "eventHarveyExhaustion",
           "Title": "Без сил",
@@ -1315,7 +1663,7 @@
         },
         "{{ModId}}_eventHarveyEmergencyCare": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 10,
           "EventIds": "eventHarveyEmergencyCare",
           "Title": "Белый халат в крови",
@@ -1327,7 +1675,7 @@
         },
         "{{ModId}}_eventHarveyMorningAfterExhaustion": {
           "Arc": "Гроза, шахта, спасения",
-          "ArcOrder": 14,
+          "ArcOrder": 18,
           "Order": 11,
           "EventIds": "eventHarveyMorningAfterExhaustion",
           "Title": "Утро после обморока",
@@ -1346,7 +1694,7 @@
       "Entries": {
         "{{ModId}}_HarveyOverhaulFamily.G1_Birds": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 1,
           "EventIds": "HarveyOverhaulFamily.G1_Birds",
           "Title": "Пи",
@@ -1358,7 +1706,7 @@
         },
         "{{ModId}}_HarveyOverhaulFamily.G2_Toy": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 2,
           "EventIds": "HarveyOverhaulFamily.G2_Toy",
           "Title": "Испытатель",
@@ -1370,7 +1718,7 @@
         },
         "{{ModId}}_HarveyOverhaulFamily.G3_Drawing": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 3,
           "EventIds": "HarveyOverhaulFamily.G3_Drawing",
           "Title": "Все поместились",
@@ -1382,7 +1730,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.A0_Letter": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 4,
           "EventIds": "HarveyOverhaulArend.A0_Letter",
           "Title": "Письмо отцу",
@@ -1394,7 +1742,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.A1_Arrival": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 5,
           "EventIds": "HarveyOverhaulArend.A1_Arrival",
           "Title": "Автобус в 10:40",
@@ -1406,7 +1754,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.A2_RoomWithoutWalls": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 6,
           "EventIds": "HarveyOverhaulArend.A2_RoomWithoutWalls",
           "Title": "Кабинет без стен",
@@ -1418,7 +1766,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.S1_Box": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 7,
           "EventIds": "HarveyOverhaulArend.S1_Box",
           "Title": "Шкатулка",
@@ -1430,7 +1778,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.S2_StormPlan": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 8,
           "EventIds": "HarveyOverhaulArend.S2_StormPlan",
           "Title": "План на грозу",
@@ -1442,7 +1790,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.H2_Chess": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 9,
           "EventIds": "HarveyOverhaulArend.H2_Chess",
           "Title": "Мат в четыре хода",
@@ -1454,7 +1802,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.H3_Gulls": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 10,
           "EventIds": "HarveyOverhaulArend.H3_Gulls",
           "Title": "Чайки Корнелиса",
@@ -1466,7 +1814,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.H5_Napkin": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 11,
           "EventIds": "HarveyOverhaulArend.H5_Napkin",
           "Title": "Салфетка",
@@ -1478,7 +1826,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.S4_ElinsBirthday": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 12,
           "EventIds": "HarveyOverhaulArend.S4_ElinsBirthday",
           "Title": "Третья тарелка",
@@ -1490,7 +1838,7 @@
         },
         "{{ModId}}_HarveyOverhaulArend.B1_Logbook": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
+          "ArcOrder": 19,
           "Order": 13,
           "EventIds": "HarveyOverhaulArend.B1_Logbook",
           "Title": "Вахтенный журнал",
@@ -1500,10 +1848,22 @@
           "Condition": "",
           "Repeatable": false
         },
+        "{{ModId}}_HarveyOverhaulCourtship.P3b_Blessing": {
+          "Arc": "Аренд",
+          "ArcOrder": 19,
+          "Order": 14,
+          "EventIds": "HarveyOverhaulCourtship.P3b_Blessing",
+          "Title": "Благословение",
+          "Summary": "Три страницы про сердечно-сосудистую систему — и один вопрос.",
+          "Hint": "Днём накануне свадьбы в комнате Харви.",
+          "Requires": "HarveyOverhaulArend.A1_Arrival",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Engaged Married",
+          "Repeatable": false
+        },
         "{{ModId}}_HarveyOverhaulArend.H4_Album": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 14,
+          "ArcOrder": 19,
+          "Order": 15,
           "EventIds": "HarveyOverhaulArend.H4_Album",
           "Title": "Альбом",
           "Summary": "Харви, семь лет, и перебинтованный кот Пончик.",
@@ -1514,8 +1874,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.H6_Lecture": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 15,
+          "ArcOrder": 19,
+          "Order": 16,
           "EventIds": "HarveyOverhaulArend.H6_Lecture",
           "Title": "Лекция для одной",
           "Summary": "Страх и предвкушение — одна химия. Мару запускает робота.",
@@ -1526,8 +1886,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.S3_PaperBoats": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 16,
+          "ArcOrder": 19,
+          "Order": 17,
           "EventIds": "HarveyOverhaulArend.S3_PaperBoats",
           "Title": "Бумажные кораблики",
           "Summary": "У того, что ты потеряла, теперь есть адрес.",
@@ -1538,8 +1898,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.H7_NightShift": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 17,
+          "ArcOrder": 19,
+          "Order": 18,
           "EventIds": "HarveyOverhaulArend.H7_NightShift",
           "Title": "Ночная смена",
           "Summary": "Год ночных смен и кухня с маминой чашкой. «Прости» — без «но».",
@@ -1550,8 +1910,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.H8_ImFine": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 18,
+          "ArcOrder": 19,
+          "Order": 19,
           "EventIds": "HarveyOverhaulArend.H8_ImFine",
           "Title": "Я в порядке",
           "Summary": "Теперь «в порядке» сказал он. Очередь была его.",
@@ -1562,8 +1922,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.F1_Suitcase": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 19,
+          "ArcOrder": 19,
+          "Order": 20,
           "EventIds": "HarveyOverhaulArend.F1_Suitcase",
           "Title": "Чемодан",
           "Summary": "Он уехал на неделю — продавать квартиру. Чтобы остаться.",
@@ -1574,8 +1934,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.H10_RedPencil": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 20,
+          "ArcOrder": 19,
+          "Order": 21,
           "EventIds": "HarveyOverhaulArend.H10_RedPencil",
           "Title": "Красный карандаш",
           "Summary": "Пустой блокнот и карандаш, который сорок лет только исправлял. Теперь считаешь ты.",
@@ -1586,8 +1946,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.W1_ElinsCup": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 21,
+          "ArcOrder": 19,
+          "Order": 22,
           "EventIds": "HarveyOverhaulArend.W1_ElinsCup",
           "Title": "Чашка Элин",
           "Summary": "«Можно я буду иногда говорить тебе „дочка“?»",
@@ -1598,8 +1958,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.P1_TwoStethoscopes": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 22,
+          "ArcOrder": 19,
+          "Order": 23,
           "EventIds": "HarveyOverhaulArend.P1_TwoStethoscopes",
           "Title": "Два стетоскопа",
           "Summary": "У заботы Харви есть второе имя — страх. Решать, как тебе, — тебе.",
@@ -1610,8 +1970,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.P2_Window": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 23,
+          "ArcOrder": 19,
+          "Order": 24,
           "EventIds": "HarveyOverhaulArend.P2_Window",
           "Title": "Окно",
           "Summary": "Две линии в блокноте: сон, люди рядом и «стоп» делают окно шире.",
@@ -1622,8 +1982,8 @@
         },
         "{{ModId}}_HarveyOverhaulArend.P3_ElinsGarden": {
           "Arc": "Аренд",
-          "ArcOrder": 15,
-          "Order": 24,
+          "ArcOrder": 19,
+          "Order": 25,
           "EventIds": "HarveyOverhaulArend.P3_ElinsGarden",
           "Title": "Сад Элин",
           "Summary": "Тюльпаны вместо колокольчиков. У того, что любили, должно быть место.",
@@ -1644,7 +2004,7 @@
       "Entries": {
         "{{ModId}}_eventRescueOperation": {
           "Arc": "Прошлое",
-          "ArcOrder": 16,
+          "ArcOrder": 20,
           "Order": 1,
           "EventIds": "eventRescueOperation",
           "Title": "Гроза в кустах",
@@ -1656,7 +2016,7 @@
         },
         "{{ModId}}_HarveyOverhaulLife.LW1_LewisSorry": {
           "Arc": "Прошлое",
-          "ArcOrder": 16,
+          "ArcOrder": 20,
           "Order": 2,
           "EventIds": "HarveyOverhaulLife.LW1_LewisSorry",
           "Title": "Прости старого дурака",
@@ -1668,7 +2028,7 @@
         },
         "{{ModId}}_eventHarveyTraumaExam": {
           "Arc": "Прошлое",
-          "ArcOrder": 16,
+          "ArcOrder": 20,
           "Order": 3,
           "EventIds": "eventHarveyTraumaExam",
           "Title": "Осмотр спины",
@@ -1680,7 +2040,7 @@
         },
         "{{ModId}}_HarveyOverhaulStory.T1_WhatIRemember": {
           "Arc": "Прошлое",
-          "ArcOrder": 16,
+          "ArcOrder": 20,
           "Order": 4,
           "EventIds": "HarveyOverhaulStory.T1_WhatIRemember",
           "Title": "Что я помню",
@@ -1692,7 +2052,7 @@
         },
         "{{ModId}}_HarveyOverhaulStory.T2_LastOne": {
           "Arc": "Прошлое",
-          "ArcOrder": 16,
+          "ArcOrder": 20,
           "Order": 5,
           "EventIds": "HarveyOverhaulStory.T2_LastOne",
           "Title": "Последняя",
@@ -1704,7 +2064,7 @@
         },
         "{{ModId}}_HarveyOverhaulScars.C1_LongSleeves": {
           "Arc": "Шрамы",
-          "ArcOrder": 17,
+          "ArcOrder": 21,
           "Order": 1,
           "EventIds": "HarveyOverhaulScars.C1_LongSleeves",
           "Title": "Длинные рукава",
@@ -1716,7 +2076,7 @@
         },
         "{{ModId}}_HarveyOverhaulScars.C2_Pop": {
           "Arc": "Шрамы",
-          "ArcOrder": 17,
+          "ArcOrder": 21,
           "Order": 2,
           "EventIds": "HarveyOverhaulScars.C2_Pop",
           "Title": "Хлопок",
@@ -1728,7 +2088,7 @@
         },
         "{{ModId}}_HarveyOverhaulScars.C3_ScarSalve": {
           "Arc": "Шрамы",
-          "ArcOrder": 17,
+          "ArcOrder": 21,
           "Order": 3,
           "EventIds": "HarveyOverhaulScars.C3_ScarSalve",
           "Title": "Мазь для рубцов",
@@ -1740,7 +2100,7 @@
         },
         "{{ModId}}_HarveyOverhaulScars.C4_ZuzuLetter": {
           "Arc": "Шрамы",
-          "ArcOrder": 17,
+          "ArcOrder": 21,
           "Order": 4,
           "EventIds": "HarveyOverhaulScars.C4_ZuzuLetter",
           "Title": "Письмо из Зузу",
@@ -1752,7 +2112,7 @@
         },
         "{{ModId}}_HarveyOverhaulScars.C6_Stranger": {
           "Arc": "Шрамы",
-          "ArcOrder": 17,
+          "ArcOrder": 21,
           "Order": 5,
           "EventIds": "HarveyOverhaulScars.C6_Stranger",
           "Title": "Чужой в Долине",
@@ -1764,7 +2124,7 @@
         },
         "{{ModId}}_HarveyOverhaulScars.C7_SleevesUp": {
           "Arc": "Шрамы",
-          "ArcOrder": 17,
+          "ArcOrder": 21,
           "Order": 6,
           "EventIds": "HarveyOverhaulScars.C7_SleevesUp",
           "Title": "Рукава закатаны",
@@ -1776,7 +2136,7 @@
         },
         "{{ModId}}_HarveyOverhaulScars.C8_Map": {
           "Arc": "Шрамы",
-          "ArcOrder": 17,
+          "ArcOrder": 21,
           "Order": 7,
           "EventIds": "HarveyOverhaulScars.C8_Map",
           "Title": "Карта, которую не пишут",
@@ -1798,7 +2158,7 @@
       "Entries": {
         "{{ModId}}_HarveyOverhaulAdult.A1_LunchBreak": {
           "Arc": "Только вдвоём (18+)",
-          "ArcOrder": 18,
+          "ArcOrder": 22,
           "Order": 1,
           "EventIds": "HarveyOverhaulAdult.A1_LunchBreak",
           "Title": "Обеденный перерыв",
@@ -1810,7 +2170,7 @@
         },
         "{{ModId}}_HarveyOverhaulAdult.A2_NightSwim": {
           "Arc": "Только вдвоём (18+)",
-          "ArcOrder": 18,
+          "ArcOrder": 22,
           "Order": 2,
           "EventIds": "HarveyOverhaulAdult.A2_NightSwim",
           "Title": "Ночное купание",
@@ -1822,7 +2182,7 @@
         },
         "{{ModId}}_HarveyOverhaulAdult.A3_Downpour": {
           "Arc": "Только вдвоём (18+)",
-          "ArcOrder": 18,
+          "ArcOrder": 22,
           "Order": 3,
           "EventIds": "HarveyOverhaulAdult.A3_Downpour",
           "Title": "Ливень",
@@ -1834,7 +2194,7 @@
         },
         "{{ModId}}_HarveyOverhaulAdult.A4_WhiteCoat": {
           "Arc": "Только вдвоём (18+)",
-          "ArcOrder": 18,
+          "ArcOrder": 22,
           "Order": 4,
           "EventIds": "HarveyOverhaulAdult.A4_WhiteCoat",
           "Title": "Белый халат",
@@ -1846,7 +2206,7 @@
         },
         "{{ModId}}_HarveyOverhaulAdult.A5_ReverseExam": {
           "Arc": "Только вдвоём (18+)",
-          "ArcOrder": 18,
+          "ArcOrder": 22,
           "Order": 5,
           "EventIds": "HarveyOverhaulAdult.A5_ReverseExam",
           "Title": "Наоборот",
@@ -1858,7 +2218,7 @@
         },
         "{{ModId}}_HarveyOverhaulAdult.A6_Vineyard": {
           "Arc": "Только вдвоём (18+)",
-          "ArcOrder": 18,
+          "ArcOrder": 22,
           "Order": 6,
           "EventIds": "HarveyOverhaulAdult.A6_Vineyard",
           "Title": "Виноградник",
@@ -1870,7 +2230,7 @@
         },
         "{{ModId}}_HarveyOverhaulAdult.A7_NightSpring": {
           "Arc": "Только вдвоём (18+)",
-          "ArcOrder": 18,
+          "ArcOrder": 22,
           "Order": 7,
           "EventIds": "HarveyOverhaulAdult.A7_NightSpring",
           "Title": "Ночной источник",
@@ -1882,7 +2242,7 @@
         },
         "{{ModId}}_HarveyOverhaulAdult.A8_Frozen": {
           "Arc": "Только вдвоём (18+)",
-          "ArcOrder": 18,
+          "ArcOrder": 22,
           "Order": 8,
           "EventIds": "HarveyOverhaulAdult.A8_Frozen",
           "Title": "Мороз",

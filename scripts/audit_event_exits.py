@@ -87,7 +87,7 @@ def audit(fname, location, key, script):
     end_kind = (last.split() + ["", ""])[1]
     if moved and moved[-1] != location and end_kind in ("", "dialogue"):
         findings.append(("INFO", f"сцена уходит в {moved[-1]}, конец `{last[:40]}` — фермер вернётся в {location}",
-                         "если по сюжету она остаётся там — `end position X Y`"))
+                         "`end position X Y` задаёт точку на исходной карте; для выхода в другую локацию нужен отдельный переход после события"))
 
     return eid, findings
 

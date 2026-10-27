@@ -13,6 +13,8 @@ import shutil
 from PIL import Image, ImageDraw, ImageFont
 import generate_buff_icons as buffs
 from native_anatomy import replacements as anatomy_replacements
+from injury_debuff_icons import build as injury_debuff_replacements
+from injury_debuff_icons import preview as injury_debuff_preview
 
 PACK = Path(__file__).resolve().parents[1]
 ROOT = PACK.parent
@@ -487,6 +489,9 @@ def build_sheets():
     anatomy, anatomy_legacy, anatomy_bases, anatomy_badge = anatomy_replacements(COLORS)
     for key, image in anatomy.items():
         recipes[key] = lambda image=image: image.copy()
+    injury_drawings, injury_legacy, _ = injury_debuff_replacements(COLORS, anatomy_badge)
+    for key, image in injury_drawings.items():
+        recipes[key] = lambda image=image: image.copy()
     mishap_images[1] = anatomy['HarveyMod_Splinter'].copy()
     mishap_images[5] = anatomy_badge(anatomy_bases['stitched'], 'drop')
     images = {key: recipes[key]() for key in index}
@@ -507,14 +512,12 @@ def build_sheets():
                         lambda c: c.px(10, 6, buffs.INK))(),
                 buffs.R(buffs.candle)(), anatomy_badge(anatomy_bases['hand'], 'heart'),
                 images["buffStressShadowParanoia"]]
-    # Preserve the infection glyph (not an anatomical illustration).
-    anatomy_legacy[8] = buffs.R(buffs.germ)()
     sheets = {
         "medicalItems.png": pack(MEDICAL, 9), "arendItems.png": pack(AREND, 3),
         "herbalItems.png": pack([herb(i) for i in range(4)] + [seed_packet(i) for i in range(4)], 8),
         "injury-book.png": book(), "stress-handbook.png": book(True),
         "harveyBuffIcons.png": atlas, "mishapBuffIcons.png": pack(mishap_images, 6),
-        "stressIcons.png": pack(handbook, 7), "injuryIcon.png": pack(anatomy_legacy, 4),
+        "stressIcons.png": pack(handbook, 7), "injuryIcon.png": pack(injury_legacy, 4),
     }
     return sheets, index
 
@@ -586,8 +589,13 @@ def preview(sheets):
             all_icons.paste(scaled, (x, cy), scaled)
             draw.text((x, cy+64), str(i), font=small, fill="#655363")
         y += ((count+15)//16)*78+15
-    all_icons.crop((0, 0, 1120, y)).save(ART / "preview-effects.png")
-    anatomy_preview(sheets)
+    # Publish the preview atomically so a viewer reading its old contents
+    # cannot interrupt generation of the runtime PNGs and review artifacts.
+    pending = ART / 'preview-effects.pending.png'
+    all_icons.crop((0, 0, 1120, y)).save(pending)
+    pending.replace(ART / 'preview-effects.png')
+    index = json.loads((PACK / 'assets/Tilesheets/harveyBuffIcons.json').read_text(encoding='utf-8-sig'))
+    injury_debuff_preview(PACK / 'art/injury-debuffs-v4', sheets['harveyBuffIcons.png'], index)
 
 
 def anatomy_preview(sheets):
@@ -668,6 +676,10 @@ def main(install=False):
                           "prompt": "anatomy-v3/concept-prompt.txt",
                           "conceptMethod": "built-in image_gen, art direction only",
                           "runtimeMethod": "integer pixel sources on 16x16 canvas; no bitmap sampling"},
+              "injuryDebuffs": {"source": "../../scripts/injury_debuff_icons.py",
+                                "concept": "../injury-debuffs-v4/concept.png",
+                                "preview": "../injury-debuffs-v4/preview.png",
+                                "method": "one dominant symbol per injury, native 16x16"},
               "sheets": {name: {"size": list(sheet.size), "sha256": hashlib.sha256(sheet.tobytes()).hexdigest(),
                                  "targets": TARGETS[name]} for name, sheet in sheets.items()}}
     (ART / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")

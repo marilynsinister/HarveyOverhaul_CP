@@ -1,0 +1,286 @@
+{
+  "revision": "Injury Debuffs V4",
+  "cellSize": [
+    16,
+    16
+  ],
+  "runtimeRendering": "integer pixel sources, no bitmap downscaling",
+  "conceptMethod": "built-in image_gen reference only",
+  "source": "../../scripts/injury_debuff_icons.py",
+  "changedCells": {
+    "harveyBuffIcons.png": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      75,
+      76,
+      77,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "injuryIcon.png": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "stressIcons.png": [],
+    "mishapBuffIcons.png": []
+  },
+  "changedBuffs": [
+    {
+      "id": "buffHurt",
+      "index": 75
+    },
+    {
+      "id": "buffPainFlare",
+      "index": 76
+    },
+    {
+      "id": "buffBadlyHurt",
+      "index": 77
+    },
+    {
+      "id": "buffBruisedRibs",
+      "index": 80
+    },
+    {
+      "id": "buffSprainedAnkle",
+      "index": 81
+    },
+    {
+      "id": "buffBackStrain",
+      "index": 82
+    },
+    {
+      "id": "buffDeepCuts",
+      "index": 83
+    },
+    {
+      "id": "buffBurnWounds",
+      "index": 84
+    },
+    {
+      "id": "buffTornMuscles",
+      "index": 85
+    },
+    {
+      "id": "buffConcussion",
+      "index": 86
+    },
+    {
+      "id": "buffFracturedBone",
+      "index": 87
+    },
+    {
+      "id": "buffShrapnelWounds",
+      "index": 88
+    },
+    {
+      "id": "buffInfectedWound",
+      "index": 89
+    },
+    {
+      "id": "buffAlcoholPoisoning",
+      "index": 90
+    },
+    {
+      "id": "buffSurgicalWound",
+      "index": 91
+    },
+    {
+      "id": "HarveyMod_WetBandage",
+      "index": 92
+    },
+    {
+      "id": "HarveyMod_DirtyWound",
+      "index": 93
+    },
+    {
+      "id": "HarveyMod_Neglect",
+      "index": 94
+    },
+    {
+      "id": "HarveyMod_PainFlare",
+      "index": 97
+    },
+    {
+      "id": "HarveyMod_AllergicRash",
+      "index": 98
+    },
+    {
+      "id": "HarveyMod_WetStitches",
+      "index": 99
+    },
+    {
+      "id": "HarveyMod_ImpairedMobility",
+      "index": 100
+    },
+    {
+      "id": "HarveyMod_MuscleAtrophy",
+      "index": 101
+    },
+    {
+      "id": "HarveyMod_BreathingDifficulty",
+      "index": 102
+    },
+    {
+      "id": "HarveyMod_Sepsis",
+      "index": 103
+    },
+    {
+      "id": "HarveyMod_FracturedBone_Acute",
+      "index": 16
+    },
+    {
+      "id": "HarveyMod_FracturedBone_Cast",
+      "index": 17
+    },
+    {
+      "id": "HarveyMod_FracturedBone_Recovery",
+      "index": 18
+    },
+    {
+      "id": "HarveyMod_Concussion_Acute",
+      "index": 19
+    },
+    {
+      "id": "HarveyMod_Concussion_Rest",
+      "index": 20
+    },
+    {
+      "id": "HarveyMod_Concussion_Limited",
+      "index": 21
+    },
+    {
+      "id": "HarveyMod_Shrapnel_Surgery",
+      "index": 22
+    },
+    {
+      "id": "HarveyMod_Shrapnel_Healing",
+      "index": 23
+    },
+    {
+      "id": "HarveyMod_Shrapnel_Recovery",
+      "index": 24
+    },
+    {
+      "id": "HarveyMod_TornMuscles_Acute",
+      "index": 25
+    },
+    {
+      "id": "HarveyMod_TornMuscles_Healing",
+      "index": 26
+    },
+    {
+      "id": "HarveyMod_SprainedAnkle_Acute",
+      "index": 28
+    },
+    {
+      "id": "HarveyMod_SprainedAnkle_Recovery",
+      "index": 29
+    },
+    {
+      "id": "HarveyMod_BruisedRibs_Acute",
+      "index": 30
+    },
+    {
+      "id": "HarveyMod_BruisedRibs_Healing",
+      "index": 31
+    },
+    {
+      "id": "HarveyMod_DeepCuts_Acute",
+      "index": 32
+    },
+    {
+      "id": "HarveyMod_DeepCuts_Healing",
+      "index": 33
+    },
+    {
+      "id": "HarveyMod_DeepCuts_Recovery",
+      "index": 34
+    },
+    {
+      "id": "HarveyMod_BurnWounds_Acute",
+      "index": 35
+    },
+    {
+      "id": "HarveyMod_BurnWounds_Healing",
+      "index": 36
+    },
+    {
+      "id": "HarveyMod_InfectedWound_Acute",
+      "index": 37
+    },
+    {
+      "id": "HarveyMod_InfectedWound_Treatment",
+      "index": 38
+    },
+    {
+      "id": "HarveyMod_BackStrain_Acute",
+      "index": 39
+    },
+    {
+      "id": "HarveyMod_BackStrain_Recovery",
+      "index": 40
+    }
+  ],
+  "checks": [
+    "49 injury/phase cells changed",
+    "12 legacy injury cells changed",
+    "other 117 HUD cells unchanged",
+    "stress and mishap sheets unchanged",
+    "all 166 HUD cells unique",
+    "binary alpha and dark contours checked",
+    "original indices and copies match"
+  ]
+}

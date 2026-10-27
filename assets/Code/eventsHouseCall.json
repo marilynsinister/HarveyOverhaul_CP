@@ -1,0 +1,303 @@
+{
+    // Лестница последствий, ступень 4: «Харви приходит сам».
+    // C#: HarveyOverhaulInjury/Managers/NeglectLadderManager.cs — письмо накануне, запуск сцены утром,
+    // ставит тему topicHarvey_HouseCallInjuryPending перед запуском и снимает после. Шапку (позиции)
+    // C# пересобирает под игрока (HarveyEventStaging.AtPlayer), поэтому move в сценах нет.
+    // Выбор: action HarveyOverhaulInjury_HouseCallAccept (осмотр) / HarveyOverhaulInjury_HouseCallDefer (пара дней).
+    // Пропуск сцены = осмотр: Харви пришёл лечить, а не спорить.
+    // Тон: 0–2 ♥ — «Вы», доктор; 3+ ♥ без романа — «ты», без ласковых имён; Dating/Engaged; Married — дома.
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        // ===== Первый визит: ферма =====
+        {
+            "LogName": "Визит Харви на ферму — врач (0–2 ♥)",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Relationship:Harvey |contains=Married,Engaged,Dating": false,
+                "Hearts:Harvey": "0,1,2"
+            },
+            "Entries": {
+                "eventHarveyHouseCallInjury/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_HouseCallInjuryPending": "
+        continue/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
+        skippable/
+        setSkipActions HarveyOverhaulInjury_HouseCallAccept#RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        pause 400/
+        message \"У калитки стоит Харви с врачебной сумкой. Похоже, он пришёл ещё до начала приёма.\"/
+        speak Harvey \"Доброе утро. Простите, что без приглашения — я писал, что зайду.$0#$b#В клинику вы так и не пришли, а такая травма сама не заживает. Она только забирает силы.$s\"/
+        speak Harvey \"Я не задержу вас надолго. Осмотр займёт минут десять, прямо здесь, на крыльце.$u\"/
+        quickQuestion #«Хорошо, осмотрите»#«Не сейчас, правда некогда»(break)message \"Харви ставит сумку на ступеньку и достаёт перчатки, флакон антисептика и свежий бинт.\"\\speak Harvey \"Спасибо. Держитесь за перила, если закружится голова.$0\"\\pause 600\\message \"Он работает быстро и аккуратно: промывает рану, проверяет, как она заживает, и накладывает новую повязку.\"\\action HarveyOverhaulInjury_HouseCallAccept\\speak Harvey \"Готово. Дальше — по плану, он у вас в журнале. Приходите на следующий осмотр сами, хорошо?$h\"(break)speak Harvey \"Понимаю. Ферма не ждёт.$s\"\\message \"Харви достаёт из сумки чистый бинт и обезболивающее.\"\\addItem (O){{ModId}}_CleanBandage 1\\addItem (O){{ModId}}_Painkiller 1\\action HarveyOverhaulInjury_HouseCallDefer\\speak Harvey \"Это поможет продержаться пару дней. Повязку меняйте утром и вечером.$0\"\\speak Harvey \"Через пару дней я зайду снова. Тогда, пожалуйста, найдите для меня десять минут.$u\"/
+        pause 400/
+        message \"Харви кивает на прощание и уходит по дороге к городу.\"/
+        action RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        end"
+            }
+        },
+        {
+            "LogName": "Визит Харви на ферму — друг (3+ ♥, без романа)",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Relationship:Harvey |contains=Married,Engaged,Dating": false,
+                "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+            },
+            "Entries": {
+                "eventHarveyHouseCallInjury/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_HouseCallInjuryPending": "
+        continue/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
+        skippable/
+        setSkipActions HarveyOverhaulInjury_HouseCallAccept#RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        pause 400/
+        message \"У крыльца тебя ждёт Харви — с сумкой и немного запыхавшийся, будто шёл быстрым шагом.\"/
+        speak Harvey \"Доброе утро. Я же писал, что зайду.$0#$b#Ты всё не приходила, и я начал переживать. С такими травмами «само пройдёт» обычно не проходит.$s\"/
+        speak Harvey \"Дай мне десять минут. Осмотрю прямо здесь — тебе никуда не нужно идти.$u\"/
+        quickQuestion #«Хорошо, осмотри»#«Не сейчас, правда некогда»(break)speak Harvey \"Вот и хорошо. Садись на ступеньку, я всё разложу.$h\"\\pause 400\\message \"Харви промывает рану, проверяет, как она заживает, и аккуратно накладывает свежую повязку.\"\\action HarveyOverhaulInjury_HouseCallAccept\\speak Harvey \"Всё. Видишь, совсем не страшно. Дальше по плану — и, пожалуйста, больше не пропадай.$h\"(break)speak Harvey \"Ладно. Держать тебя за рукав я не стану.$s\"\\message \"Харви вкладывает тебе в руки чистый бинт и упаковку обезболивающего.\"\\addItem (O){{ModId}}_CleanBandage 1\\addItem (O){{ModId}}_Painkiller 1\\action HarveyOverhaulInjury_HouseCallDefer\\speak Harvey \"Бинт меняй утром и вечером, таблетку — если будет сильно болеть.$0\"\\speak Harvey \"Через пару дней я приду снова. Тогда уже без «некогда», договорились?$u\"/
+        pause 400/
+        message \"Харви поправляет ремень сумки и уходит к дороге, пару раз оглянувшись.\"/
+        action RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        end"
+            }
+        },
+        {
+            "LogName": "Визит Харви на ферму — Dating/Engaged",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Relationship:Harvey": "Dating, Engaged"
+            },
+            "Entries": {
+                "eventHarveyHouseCallInjury/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_HouseCallInjuryPending": "
+        continue/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
+        skippable/
+        setSkipActions HarveyOverhaulInjury_HouseCallAccept#RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        pause 400/
+        message \"У крыльца стоит Харви. Сумка в руке, а на лице тревога, которую он даже не пытается спрятать.\"/
+        speak Harvey \"Доброе утро, солнышко. Я пришёл до приёма — как и обещал в письме.$l#$b#Ты не заходила, и я весь вечер думал о твоей ране.$s\"/
+        speak Harvey \"Можешь сердиться, но я не уйду, пока не посмотрю. Десять минут, прямо здесь.$u\"/
+        quickQuestion #«Хорошо, осмотри»#«Не сейчас, правда некогда»(break)speak Harvey \"Спасибо, что не споришь. Садись, я рядом.$l\"\\pause 400\\message \"Харви осторожно снимает старую повязку, промывает рану и накладывает новую. Руки у него тёплые и уверенные.\"\\action HarveyOverhaulInjury_HouseCallAccept\\speak Harvey \"Вот так. Теперь мне спокойнее. И тебе, надеюсь, тоже.$l\"(break)speak Harvey \"Хорошо. Я тебя слышу.$s\"\\message \"Харви вкладывает тебе в ладони чистый бинт и обезболивающее и задерживает руки на секунду дольше.\"\\addItem (O){{ModId}}_CleanBandage 1\\addItem (O){{ModId}}_Painkiller 1\\action HarveyOverhaulInjury_HouseCallDefer\\speak Harvey \"Меняй повязку утром и вечером. Если заболит сильнее — сразу ко мне, не жди.$u\"\\speak Harvey \"Через пару дней я приду снова. И тогда я очень попрошу мне не отказывать.$l\"/
+        pause 400/
+        message \"Харви целует тебя в висок и уходит, на ходу оглядываясь.\"/
+        action RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        end"
+            }
+        },
+
+        // ===== Первый визит: дома, в браке =====
+        {
+            "LogName": "Визит Харви — дома (Married)",
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "When": {
+                "Relationship:Harvey": "Married"
+            },
+            "Entries": {
+                "eventHarveyHouseCallInjuryMarried/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_HouseCallInjuryPending": "
+        continue/
+        {{HO_HomeVX}} 7/
+        farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/
+        skippable/
+        setSkipActions HarveyOverhaulInjury_HouseCallAccept#RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        viewport {{HO_HomeVX}} 7 true/
+        pause 400/
+        message \"Харви не ушёл на приём. Его сумка стоит у двери, а сам он ждёт тебя с чашкой чая.\"/
+        speak Harvey \"Доброе утро, любимая. Я попросил Мару открыть клинику без меня — на час.$l#$b#Ты уже несколько дней обходишь мою клинику стороной, а я вижу, как ты бережёшь рану.$s\"/
+        speak Harvey \"Сегодня ты не уйдёшь в поле, пока я не посмотрю. Можешь ворчать — я подожду.$u\"/
+        quickQuestion #«Хорошо, осмотри»#«Не сейчас, правда некогда»(break)speak Harvey \"Садись. Чай — тебе, рана — мне.$h\"\\pause 400\\message \"Харви раскладывает инструменты на столе и работает спокойно, будто это самое обычное утро.\"\\action HarveyOverhaulInjury_HouseCallAccept\\speak Harvey \"Вот. Теперь я пойду на работу со спокойной душой.$l\"(break)speak Harvey \"Хорошо. Воевать с тобой с утра я не буду.$s\"\\message \"Он кладёт на стол чистый бинт и обезболивающее — так, чтобы ты не могла их не заметить.\"\\addItem (O){{ModId}}_CleanBandage 1\\addItem (O){{ModId}}_Painkiller 1\\action HarveyOverhaulInjury_HouseCallDefer\\speak Harvey \"Повязку меняй утром и вечером. Я буду спрашивать.$u\"\\speak Harvey \"А через пару дней посмотрю сам, даже если придётся поймать тебя у порога.$l\"/
+        pause 400/
+        message \"Харви целует тебя, берёт сумку и уходит в клинику.\"/
+        action RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        end"
+            }
+        },
+
+        // ===== Повторный визит после «не сейчас» =====
+        // Второй отказ — последний: визитов больше не будет, а ступень 5 (обморок) взводится через день.
+        {
+            "LogName": "Повторный визит Харви — врач (0–2 ♥)",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Relationship:Harvey |contains=Married,Engaged,Dating": false,
+                "Hearts:Harvey": "0,1,2"
+            },
+            "Entries": {
+                "eventHarveyHouseCallInjuryRevisit/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_HouseCallInjuryPending": "
+        continue/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
+        skippable/
+        setSkipActions HarveyOverhaulInjury_HouseCallAccept#RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        pause 400/
+        message \"Харви снова у калитки. Он пришёл, как и обещал.\"/
+        speak Harvey \"Доброе утро. Как договаривались — посмотрим, как ваша рана?$0\"/
+        speak Harvey \"Скажу честно: дальше откладывать опасно. Такая травма может свалить с ног в самый неподходящий момент.$s\"/
+        quickQuestion #«Хорошо, осмотрите»#«Нет, я справлюсь сама»(break)speak Harvey \"Спасибо. Это правильное решение.$h\"\\pause 400\\message \"Харви осматривает рану, качает головой и долго, тщательно её обрабатывает.\"\\action HarveyOverhaulInjury_HouseCallAccept\\speak Harvey \"Теперь заживёт. Но следующий осмотр — в клинике, и не позже срока.$0\"(break)speak Harvey \"Это ваше решение. Я его услышал.$s\"\\action HarveyOverhaulInjury_HouseCallDefer\\speak Harvey \"Только если почувствуете слабость или головокружение — сразу прекращайте работу и идите в клинику. Пожалуйста.$u\"/
+        pause 400/
+        message \"Харви уходит не сразу. У калитки он ещё раз оборачивается.\"/
+        action RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        end"
+            }
+        },
+        {
+            "LogName": "Повторный визит Харви — друг (3+ ♥, без романа)",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Relationship:Harvey |contains=Married,Engaged,Dating": false,
+                "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+            },
+            "Entries": {
+                "eventHarveyHouseCallInjuryRevisit/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_HouseCallInjuryPending": "
+        continue/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
+        skippable/
+        setSkipActions HarveyOverhaulInjury_HouseCallAccept#RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        pause 400/
+        message \"Харви снова у крыльца. Сумка та же, а взгляд тревожнее, чем в прошлый раз.\"/
+        speak Harvey \"Привет. Я обещал вернуться — вот, вернулся.$0#$b#Бинт ещё остался? Покажи, как рана.$s\"/
+        speak Harvey \"Я не хочу тебя пугать, но дальше тянуть нельзя. Такие травмы валят с ног внезапно — посреди поля, с мотыгой в руках.$u\"/
+        quickQuestion #«Хорошо, осмотри»#«Нет, я справлюсь сама»(break)speak Harvey \"Спасибо. Правда спасибо.$h\"\\pause 400\\message \"Харви долго и тщательно обрабатывает рану, и с каждой минутой его плечи понемногу расслабляются.\"\\action HarveyOverhaulInjury_HouseCallAccept\\speak Harvey \"Вот теперь заживёт как надо. Следующий осмотр — у меня в клинике, ладно?$h\"(break)speak Harvey \"Ладно. Заставлять я не буду.$s\"\\action HarveyOverhaulInjury_HouseCallDefer\\speak Harvey \"Только пообещай: если в глазах потемнеет — бросай всё и садись. И зови на помощь, не геройствуй.$u\"/
+        pause 400/
+        message \"Харви уходит медленно, будто ещё надеется, что ты его окликнешь.\"/
+        action RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        end"
+            }
+        },
+        {
+            "LogName": "Повторный визит Харви — Dating/Engaged",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Relationship:Harvey": "Dating, Engaged"
+            },
+            "Entries": {
+                "eventHarveyHouseCallInjuryRevisit/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_HouseCallInjuryPending": "
+        continue/
+        {{HO_FarmX}} {{HO_FarmY0}}/
+        farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/
+        ignoreEventTileOffset/
+        skippable/
+        setSkipActions HarveyOverhaulInjury_HouseCallAccept#RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        pause 400/
+        message \"Харви снова здесь. Видно, что он плохо спал.\"/
+        speak Harvey \"Доброе утро, солнышко. Я вернулся, как обещал.$l#$b#Покажешь рану? Я всю ночь гадал, как она.$s\"/
+        speak Harvey \"Я люблю твоё упрямство. Но эта травма может свалить тебя посреди поля, и я не хочу узнать об этом последним.$u\"/
+        quickQuestion #«Хорошо, осмотри»#«Нет, я справлюсь сама»(break)speak Harvey \"Спасибо. Ты даже не представляешь, как мне от этого легче.$l\"\\pause 400\\message \"Харви обрабатывает рану долго и бережно, то и дело поглядывая тебе в лицо — не больно ли.\"\\action HarveyOverhaulInjury_HouseCallAccept\\speak Harvey \"Всё. Теперь я смогу спокойно работать. Следующий осмотр — у меня, и я буду ждать.$l\"(break)speak Harvey \"Хорошо. Я не стану тебя заставлять.$s\"\\action HarveyOverhaulInjury_HouseCallDefer\\speak Harvey \"Только пообещай мне одно: если в глазах потемнеет — бросай всё и садись. Я тебя найду.$u\"/
+        pause 400/
+        message \"Харви крепко обнимает тебя и уходит, так ни разу и не улыбнувшись.\"/
+        action RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        end"
+            }
+        },
+        {
+            "LogName": "Повторный визит Харви — дома (Married)",
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "When": {
+                "Relationship:Harvey": "Married"
+            },
+            "Entries": {
+                "eventHarveyHouseCallInjuryRevisit/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_HouseCallInjuryPending": "
+        continue/
+        {{HO_HomeVX}} 7/
+        farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/
+        skippable/
+        setSkipActions HarveyOverhaulInjury_HouseCallAccept#RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        viewport {{HO_HomeVX}} 7 true/
+        pause 400/
+        message \"Харви снова остался дома. Сумка уже открыта, бинты разложены на столе.\"/
+        speak Harvey \"Доброе утро, любимая. Сегодня я никуда не тороплюсь.$l#$b#Покажи мне рану. Пожалуйста.$s\"/
+        speak Harvey \"Я врач, и я твой муж. Оба во мне сейчас очень волнуются: такая травма может уложить тебя прямо в поле.$u\"/
+        quickQuestion #«Хорошо, осмотри»#«Нет, я справлюсь сама»(break)speak Harvey \"Спасибо, любимая.$l\"\\pause 400\\message \"Харви работает молча и сосредоточенно, а закончив, ещё долго держит твою руку.\"\\action HarveyOverhaulInjury_HouseCallAccept\\speak Harvey \"Вот теперь всё правильно. Отдыхай сегодня, а вечером я проверю повязку.$l\"(break)speak Harvey \"Хорошо. Я не стану воевать с тобой.$s\"\\action HarveyOverhaulInjury_HouseCallDefer\\speak Harvey \"Но если в глазах потемнеет — сразу садись и зови меня. Я прибегу с другого конца долины.$u\"/
+        pause 400/
+        message \"Харви целует тебя в лоб, тяжело вздыхает и уходит в клинику.\"/
+        action RemoveConversationTopic topicHarvey_HouseCallInjuryPending/
+        end"
+            }
+        },
+
+        // ===== Письма «загляну утром» (C# кладёт в ящик за день до визита; суффикс по отношениям) =====
+        {
+            "LogName": "Письма «загляну утром» — визит Харви",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "mailHarveyHouseCallInjury_LowHearts": "Доброе утро.^^Вы так и не пришли на осмотр, а травма без лечения только отнимает время и силы.^^Завтра утром, до начала приёма, я зайду к вам на ферму. Осмотр займёт минут десять, идти никуда не придётся.^^— Доктор Харви[#]Завтра утром зайду",
+                "mailHarveyHouseCallInjury_MidHearts": "Я всё жду тебя в клинике, а ты пропала.^^Раз ты не приходишь ко мне, завтра утром, до приёма, приду я. Возьму сумку и посмотрю рану прямо на ферме.^^Это не проверка. Мне просто неспокойно.^^— Харви[#]Загляну утром",
+                "mailHarveyHouseCallInjury_Dating": "Солнышко,^^ты уже несколько дней не заходишь, и я начинаю волноваться всерьёз.^^Завтра утром, до приёма, я приду к тебе на ферму. Захвачу сумку, посмотрю рану — и всё. Обещаю не отнимать много времени.^^Скучаю.^^— Харви[#]Утром приду",
+                "mailHarveyHouseCallInjury_Married": "Любимая,^^завтра утром я не уйду в клинику, пока не посмотрю твою рану. Мару откроет без меня.^^Не прячься от меня в курятнике — я всё равно найду.^^— Харви[#]Завтра утром"
+            }
+        },
+
+        // ===== Темы после визита и обморока =====
+        {
+            "LogName": "Темы визита на ферму — врач (0–2 ♥)",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Relationship:Harvey |contains=Married,Engaged,Dating": false,
+                "Hearts:Harvey": "0,1,2"
+            },
+            "Entries": {
+                "topicHarvey_HouseCallAccepted": "Как ваша рана после перевязки на ферме? Не мокнет, не тянет?$0#$b#Хорошо, что вы позволили посмотреть. Дальше будет проще.$h",
+                "topicHarvey_HouseCallDeferred": "Как вы? Бинт и обезболивающее пригодились?$0#$b#Я помню о нашем уговоре и скоро зайду снова.$s",
+                "topicHarvey_NeglectCollapse": "Как вы себя чувствуете после обморока?$s#$b#Вы тогда очень меня напугали. Пожалуйста, приходите на осмотры вовремя.$0"
+            }
+        },
+        {
+            "LogName": "Темы визита на ферму — друг (3+ ♥, без романа)",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Relationship:Harvey |contains=Married,Engaged,Dating": false,
+                "Hearts:Harvey": "3,4,5,6,7,8,9,10"
+            },
+            "Entries": {
+                "topicHarvey_HouseCallAccepted": "Как рана после перевязки на крыльце? Не тянет?$0#$b#Спасибо, что дала посмотреть. Мне правда стало спокойнее.$h",
+                "topicHarvey_HouseCallDeferred": "Меняешь повязку, как я просил?$0#$b#Я скоро зайду снова. Пожалуйста, найди тогда для меня десять минут.$s",
+                "topicHarvey_NeglectCollapse": "Ты как? Голова не кружится?$s#$b#Я до сих пор вижу, как тебя принесли в клинику. Давай больше не доводить до такого.$u"
+            }
+        },
+        {
+            "LogName": "Темы визита на ферму — Dating/Engaged",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Relationship:Harvey": "Dating, Engaged"
+            },
+            "Entries": {
+                "topicHarvey_HouseCallAccepted": "Как моя самая упрямая пациентка? Повязка держится?$h#$b#Спасибо, что позволила мне помочь. Для меня это много значит.$l",
+                "topicHarvey_HouseCallDeferred": "Ты меняешь повязку? Только честно.$s#$b#Я считаю дни до следующего осмотра. Не заставляй меня считать дольше.$l",
+                "topicHarvey_NeglectCollapse": "Солнышко, как ты сегодня?$s#$b#Я никогда так быстро не бегал, как в тот день. Давай лечиться вместе — заранее, а не после.$l"
+            }
+        },
+        {
+            "LogName": "Темы визита на ферму — Married",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Priority": "Late",
+            "When": {
+                "Relationship:Harvey": "Married"
+            },
+            "Entries": {
+                "topicHarvey_HouseCallAccepted": "Повязка на месте? Покажи.$0#$b#Утро с тобой и бинтами — не худшее начало дня. Но в следующий раз лучше приходи ко мне сама.$l",
+                "topicHarvey_HouseCallDeferred": "Бинтов на столе стало меньше — значит, меняешь. Это хорошо.$h#$b#Но через пару дней я всё равно посмотрю сам. Возражения принимаются после перевязки.$l",
+                "topicHarvey_NeglectCollapse": "Сегодня ты завтракаешь, а потом я смотрю рану. Без «потом».$u#$b#Мне сказали, что ты упала посреди поля. Я не хочу больше получать такие новости, любимая.$l"
+            }
+        }
+    ]
+}

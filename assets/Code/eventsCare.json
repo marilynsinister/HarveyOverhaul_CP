@@ -144,9 +144,9 @@
         setSkipActions AddConversationTopic topicAfterCheckup 5#RemoveConversationTopic topicAgreedCheckup/
         speak Harvey \"*поднимает голову от бумаг* А, вы пришли! *улыбается* Проходите, располагайтесь.$h#$b#*указывает на кушетку* Садитесь, пожалуйста. Это займет совсем немного времени.$l\"/
         pause 1000/
-        move farmer 1 0 0/
+        move farmer 1 0 0 false/
         pause 200/
-        move farmer 0 -1 0/
+        move farmer 0 -1 0 false/
         warp farmer 5 4/
         stopAnimation farmer/
         faceDirection farmer 2/
@@ -158,7 +158,7 @@
         speak Harvey \"*моет руки* Итак, как вы себя чувствуете? Есть жалобы?$s\"/
         message \"Вроде все нормально...\"/
         pause 1000/
-        move Harvey 1 0 0/
+        move Harvey 1 0 0 false/
         speak Harvey \"*кивает* Хорошо. Тем не менее, давайте проверим основные показатели.$h#$b#*достает стетоскоп* Можно послушать сердце? Скажите «стоп» — и я остановлюсь.$s\"/
         emote farmer 32/
         question fork2 \"#Конечно...#Только побыстрее, пожалуйста#Стоп. Не сейчас\"/
@@ -228,8 +228,10 @@
         setSkipActions AddConversationTopic topicFirstMeeting 7#AddConversationTopic topicConcernForHealth 4/
         move farmer 3 0 1 true/
         move Harvey -3 0 3 true/
-        proceedPosition farmer/
-        proceedPosition Harvey/
+        waitForAllStationary/
+        move false/
+        waitForAllStationary/
+        move false/
         emote Harvey 32/
         emote farmer 32/
         pause 500/
@@ -273,8 +275,10 @@
         globalFade/
         viewport -1000 -1000/
         pause 500/
-        proceedPosition Harvey/
-        proceedPosition farmer/
+        waitForAllStationary/
+        move false/
+        waitForAllStationary/
+        move false/
         end dialogue Harvey \"Рад был познакомиться. Отдыхайте хорошо.$l\"",
                 "declineFood": "
                     message \"Спасибо, но я справлюсь сама...\"/
@@ -320,8 +324,9 @@
         skippable/
         viewport 6 5 true/
         pause 1500/
-        move Harvey 0 -2 3/
-        proceedPosition Harvey/
+        move Harvey 0 -2 3 false/
+        waitForAllStationary/
+        move false/
         pause 100/
         faceDirection farmer 1/
         pause 100/
@@ -330,8 +335,9 @@
         emote Harvey 12/
         speak Harvey \"Ты понимаешь, что тут происходит?$s#$b#Монстры, яд, проклятия, смертельные ловушки...$s#$b#Мне страшно за тебя здесь.$s\"/
         pause 1500/
-        move Harvey -1 0 3/
-        proceedPosition Harvey/
+        move Harvey -1 0 3 false/
+        waitForAllStationary/
+        move false/
         speak Harvey \"А ты приходишь сюда одна! Без защиты! Без подготовки!$s#$b#Без... без меня рядом.$s\"/
         pause 1200/
         speak Harvey \"Если что-то случится с тобой здесь...$s#$b#Если я потеряю тебя в этом проклятом месте... Я себе этого не прощу.$s\"/
@@ -357,74 +363,75 @@
             "Target": "Data/Events/Mine",
             "Entries": {
                 "eventHarveyMineInterception": "
-    EarthMine/
-    17 7/
-    farmer 17 7 0 Harvey 17 10 0/
-    skippable/
-    addConversationTopic HarveyMineIntercept 3/
-    setSkipActions AddFriendshipPoints Harvey 100#AddConversationTopic HarveyMineIntercept 3#AddConversationTopic HarveyMod_CD_Global 3#AddItem 614 1/
-    pause 800/
-    speak Harvey \"Стой.$8#$b#Не делай и шага вниз — мне слишком тревожно.$s\"/
-    pause 600/
-    move Harvey 0 -2 0/
-    faceDirection farmer 2/
-    emote Harvey 12/
-    speak Harvey \"Я предупреждал: при таких ранах шахта — не вариант.$s#$b#Мне страшно, что организм не выдержит ещё одной нагрузки.$s\"/
-    pause 400/
-    emote farmer 8/
-    message \"Я... я просто хотела...\"/
-    speak Harvey \"Я знаю, ты умеешь справляться. Но сейчас дело не в смелости.$s#$b#*осматривает тебя* С такими ранами шахтная пыль, холод и нагрузка могут закончиться инфекцией или повторным кровотечением.$s\"/
-    pause 800/
-    animate Harvey false true 100 19/
-    speak Harvey \"*снимает с себя куртку и накидывает на фермера*#$b#На сегодня — наверх. Сначала согреемся и успокоим дыхание.$u\"/
-    stopAnimation Harvey/
-    pause 600/
-    message \"Но мне нужна руда для...\"/
-    speak Harvey \"Руда подождёт.$8 Руда всегда подождёт.$u#$b#А вот воспаление или срыв швов — нет.$s\"/
-    pause 1000/
-    speak Harvey \"*осторожно берёт за запястья — проверяет пульс*#$b#Ладони ледяные...#$b#Пульс учащённый...#$b#После тяжёлой травмы это не норма.$s\"/
-    pause 1200/
-    speak Harvey \"@, ты на пределе.$s#$b#И ты собиралась добавить к этому шахтный воздух и физическую нагрузку?$s\"/
-    pause 800/
-    emote Harvey 28/
-    speak Harvey \"Я не ругаю тебя. Я испугался за тебя.$s#$b#Сейчас мне нужно быть настойчивым — это лечение, не наказание.$s\"/
-    pause 1000/
-    message \"Я не маленький ребёнок...\"/
-    speak Harvey \"Нет, ты не ребёнок.$0#$b#Ты взрослая, сильная — и моя пациентка.$0#$b#Пожалуйста, позволь мне позаботиться о тебе сейчас. Это не наказание — это лечение.$u\"/
-    pause 1200/
-    move Harvey -1 0 0/
-    move Harvey 0 -1 1/
-    speak Harvey \"*достаёт из сумки термос*#$b#Вот успокаивающий чай.#$b#Пей здесь.$0\"/
-    addItem 614 1/
-    pause 800/
-    emote farmer 60/
-    speak Harvey \"Знаешь, что меня пугает сильнее всего?$s#$b#Не только монстры в темноте...$s\"/
-    pause 1000/
-    speak Harvey \"А то, что ты не даёшь ранам зажить.$s#$b#Слабость после травмы — не слабость характера.#$b#Это сигнал, который нельзя игнорировать.$u\"/
-    pause 1200/
-    faceDirection farmer 3/
-    speak Harvey \"*поправляет куртку на твоих плечах*#$b#На сегодня — наверх. Завтра утром я осмотрю раны и скажу, когда можно вернуться.$u#$b#Пожалуйста, не заставляй меня ловить тебя здесь снова.$l\"/
-    pause 800/
-    message \"А если я не послушаюсь?\"/
-    speak Harvey \"*смотрит прямо — только тревога*#$b#Тогда я буду настаивать.$s#$b#Я не могу спокойно смотреть, как ты рискуешь.$s#$b#Сегодня я слишком переживаю, чтобы отступить.$s\"/
-    pause 1000/
-    speak Harvey \"*встаёт и протягивает руку*#$b#На сегодня шахта закончена.$u#$b#Я выведу тебя наверх. Медленно. Без героизма — просто береги себя.$u\"/
-    move Harvey 0 3 2/
-    move farmer 0 3 2/
-    proceedPosition Harvey/
-    proceedPosition farmer/
-    pause 600/
-    message \"Харви ведёт тебя наверх, к выходу из шахты, поддерживая за локоть.\"/
-    pause 1200/
-    speak Harvey \"Я знаю, это неприятно слышать.$s#$b#Но я не могу делать вид, что всё в порядке, когда это не так.$s#$b#Позволь мне уберечь тебя — пока ещё можно сделать это просто.$l\"/
-    pause 1000/
-    friendship Harvey 100/
-    addConversationTopic HarveyMineIntercept 3/
-    addConversationTopic HarveyMod_CD_Global 3/
-    globalFade/
-    viewport -1000 -1000/
-    end
-",
+        EarthMine/
+        17 7/
+        farmer 17 7 0 Harvey 17 10 0/
+        skippable/
+        addConversationTopic HarveyMineIntercept 3/
+        setSkipActions AddFriendshipPoints Harvey 100#AddConversationTopic HarveyMineIntercept 3#AddConversationTopic HarveyMod_CD_Global 3#AddItem 614 1/
+        pause 800/
+        speak Harvey \"Стой.$8#$b#Не делай и шага вниз — мне слишком тревожно.$s\"/
+        pause 600/
+        move Harvey 0 -2 0 false/
+        faceDirection farmer 2/
+        emote Harvey 12/
+        speak Harvey \"Я предупреждал: при таких ранах шахта — не вариант.$s#$b#Мне страшно, что организм не выдержит ещё одной нагрузки.$s\"/
+        pause 400/
+        emote farmer 8/
+        message \"Я... я просто хотела...\"/
+        speak Harvey \"Я знаю, ты умеешь справляться. Но сейчас дело не в смелости.$s#$b#*осматривает тебя* С такими ранами шахтная пыль, холод и нагрузка могут закончиться инфекцией или повторным кровотечением.$s\"/
+        pause 800/
+        animate Harvey false true 100 19/
+        speak Harvey \"*снимает с себя куртку и накидывает на фермера*#$b#На сегодня — наверх. Сначала согреемся и успокоим дыхание.$u\"/
+        stopAnimation Harvey/
+        pause 600/
+        message \"Но мне нужна руда для...\"/
+        speak Harvey \"Руда подождёт.$8 Руда всегда подождёт.$u#$b#А вот воспаление или срыв швов — нет.$s\"/
+        pause 1000/
+        speak Harvey \"*осторожно берёт за запястья — проверяет пульс*#$b#Ладони ледяные...#$b#Пульс учащённый...#$b#После тяжёлой травмы это не норма.$s\"/
+        pause 1200/
+        speak Harvey \"@, ты на пределе.$s#$b#И ты собиралась добавить к этому шахтный воздух и физическую нагрузку?$s\"/
+        pause 800/
+        emote Harvey 28/
+        speak Harvey \"Я не ругаю тебя. Я испугался за тебя.$s#$b#Сейчас мне нужно быть настойчивым — это лечение, не наказание.$s\"/
+        pause 1000/
+        message \"Я не маленький ребёнок...\"/
+        speak Harvey \"Нет, ты не ребёнок.$0#$b#Ты взрослая, сильная — и моя пациентка.$0#$b#Пожалуйста, позволь мне позаботиться о тебе сейчас. Это не наказание — это лечение.$u\"/
+        pause 1200/
+        move Harvey -1 0 0 false/
+        move Harvey 0 -1 1 false/
+        speak Harvey \"*достаёт из сумки термос*#$b#Вот успокаивающий чай.#$b#Пей здесь.$0\"/
+        addItem 614 1/
+        pause 800/
+        emote farmer 60/
+        speak Harvey \"Знаешь, что меня пугает сильнее всего?$s#$b#Не только монстры в темноте...$s\"/
+        pause 1000/
+        speak Harvey \"А то, что ты не даёшь ранам зажить.$s#$b#Слабость после травмы — не слабость характера.#$b#Это сигнал, который нельзя игнорировать.$u\"/
+        pause 1200/
+        faceDirection farmer 3/
+        speak Harvey \"*поправляет куртку на твоих плечах*#$b#На сегодня — наверх. Завтра утром я осмотрю раны и скажу, когда можно вернуться.$u#$b#Пожалуйста, не заставляй меня ловить тебя здесь снова.$l\"/
+        pause 800/
+        message \"А если я не послушаюсь?\"/
+        speak Harvey \"*смотрит прямо — только тревога*#$b#Тогда я буду настаивать.$s#$b#Я не могу спокойно смотреть, как ты рискуешь.$s#$b#Сегодня я слишком переживаю, чтобы отступить.$s\"/
+        pause 1000/
+        speak Harvey \"*встаёт и протягивает руку*#$b#На сегодня шахта закончена.$u#$b#Я выведу тебя наверх. Медленно. Без героизма — просто береги себя.$u\"/
+        move Harvey 0 3 2 false/
+        move farmer 0 3 2 false/
+        waitForAllStationary/
+        move false/
+        waitForAllStationary/
+        move false/
+        pause 600/
+        message \"Харви ведёт тебя наверх, к выходу из шахты, поддерживая за локоть.\"/
+        pause 1200/
+        speak Harvey \"Я знаю, это неприятно слышать.$s#$b#Но я не могу делать вид, что всё в порядке, когда это не так.$s#$b#Позволь мне уберечь тебя — пока ещё можно сделать это просто.$l\"/
+        pause 1000/
+        friendship Harvey 100/
+        addConversationTopic HarveyMineIntercept 3/
+        addConversationTopic HarveyMod_CD_Global 3/
+        globalFade/
+        viewport -1000 -1000/
+        end",
             }
         }
     ]

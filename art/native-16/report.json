@@ -13,6 +13,12 @@
     "conceptMethod": "built-in image_gen, art direction only",
     "runtimeMethod": "integer pixel sources on 16x16 canvas; no bitmap sampling"
   },
+  "injuryDebuffs": {
+    "source": "../../scripts/injury_debuff_icons.py",
+    "concept": "../injury-debuffs-v4/concept.png",
+    "preview": "../injury-debuffs-v4/preview.png",
+    "method": "one dominant symbol per injury, native 16x16"
+  },
   "sheets": {
     "medicalItems.png": {
       "size": [
@@ -72,7 +78,7 @@
         256,
         176
       ],
-      "sha256": "af98bf8233c6d13399ba7d4464cea586a495a2b91eee6b5ae14619a8ab5edbc0",
+      "sha256": "2527af6380231c2959fcc1de0d0bcf2b2fed670cff1676cae8ee1cd0273a9adf",
       "targets": [
         "HarveyOverhaul [CP]/assets/Tilesheets/harveyBuffIcons.png"
       ]
@@ -103,7 +109,7 @@
         64,
         48
       ],
-      "sha256": "374cf1bbeed60399d9416a2121e152518469b00287eaea41b265550f21c8f5b3",
+      "sha256": "63f0ca7112984aaa29bad3db3c0eae66d0f9640bf40d00429ae1172aa7918e9c",
       "targets": [
         "HarveyOverhaul [CP]/assets/Tilesheets/injuryIcon.png"
       ]

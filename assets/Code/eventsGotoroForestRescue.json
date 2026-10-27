@@ -127,6 +127,8 @@
         emote Harvey 32/
         speak Harvey \"$query marilynsinister.HarveyStressMeter_CONSENT HoldHand Granted#*протягивает ладонь* Держись за меня. Я никуда не уйду.$l|Хорошо. Я рядом, на том расстоянии, какое тебе нужно. Никуда не уйду.$l\"/
         pause 400/
+        speak Harvey \"$query PLAYER_HAS_MAIL Current HarveyRomance_Signals Received, marilynsinister.HarveyStressMeter_CONSENT HoldHand Granted#*Твои пальцы трижды сжимают его ладонь.* Три раза. «Забери меня отсюда». …Слышу. Уведу тебя отсюда прямо сейчас. Держись за руку — считать будем по дороге.$l|Не торопись. Пойдём, когда сможешь.$l\"/
+        pause 400/
         action removeConversationTopic topicStressGotoroForestRescuePending/
         action addConversationTopic topicStressGotoroForestRescueDone 1/
         pause 200/

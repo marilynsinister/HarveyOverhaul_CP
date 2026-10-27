@@ -165,7 +165,12 @@ def campus_body(arend):
     lines += ['friendship Harvey 25', 'addConversationTopic HarveyZuzu_University 5']
     return script('continue', '12 10', actors, skip_cd('AddConversationTopic HarveyZuzu_University 5'), lines)
 
-night_key = trip_key('Z5_HotelEvening', 'Time 1900 2500', seen(NS+'.Z1_Arrival'))
+BIRTHDAY_TRIP = 'GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_HisBirthday Received'
+NOT_BIRTHDAY_TRIP = 'GameStateQuery !PLAYER_HAS_MAIL Current HarveyZuzu_HisBirthday Received'
+VISITED = 'GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Visited Received'
+
+# Вечер и утро в гостинице в поездку на день рождения Харви уступают место ZB1/ZB2.
+night_key = trip_key('Z5_HotelEvening', 'Time 1900 2500', seen(NS+'.Z1_Arrival'), NOT_BIRTHDAY_TRIP)
 night = script('harveys_theme_jazz', '12 10', 'farmer 11 10 1 Harvey 13 10 3',
     skip_cd('AddConversationTopic HarveyZuzu_Hotel 5'), [
         'pause 500', msg('За окном светятся чужие окна. Харви раскладывает покупки и никак не найдёт место для огромного бумажного пакета.'),
@@ -181,7 +186,7 @@ night = script('harveys_theme_jazz', '12 10', 'farmer 11 10 1 Harvey 13 10 3',
     ])
 
 morning_key = trip_key('Z6_SundayMorning', 'Time 0600 1200',
-    'GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Sunday Received')
+    'GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Sunday Received', NOT_BIRTHDAY_TRIP)
 morning = script('continue', '12 10', 'farmer 11 10 1 Harvey 13 10 3',
     skip_cd('AddConversationTopic HarveyZuzu_Morning 3'), [
         'pause 400', msg('Харви принёс чай и завтрак. Снаружи уже шумят машины, но здесь утро начинается медленно.'),
@@ -207,6 +212,104 @@ evening = script('harveys_theme_jazz', '18 14', 'farmer 17 14 1 Harvey 19 14 3',
     ])
 
 
+# ---------------------------------------------------------------- вторая поездка (флаг Core HarveyZuzu_Visited)
+familiar_key = trip_key('Z8_Familiar', 'Time 0800 2500', VISITED, seen(NS+'.Z1_Arrival'))
+familiar = script('continue', '18 14', 'farmer 17 14 1 Harvey 19 14 3',
+    skip_cd('AddConversationTopic HarveyZuzu_Familiar 5'), [
+        'viewport 18 14 true', 'pause 500',
+        msg('Та же площадь, тот же фонтан. Только в этот раз Харви не достаёт карту.'),
+        sp('Harvey', 'Смешно. В первый раз я вёл тебя по своему городу. А сейчас иду и думаю: вот здесь ты свернула не туда, и это было лучшее «не туда» в моей жизни.$h'),
+        qq(['Повести его своим маршрутом', 'Спросить, что он хочет повторить', 'Предложить найти что-то новое'], [
+            [sp('Harvey', 'Твоим? У тебя уже есть маршрут по моему городу? …Веди. Я даже не буду спрашивать, где обед.$h'), memory('Zuzu2_HerRoute')],
+            [sp('Harvey', 'Столик в кофейне. И окно в гостинице. И ещё раз посмотреть, как ты смеёшься у полки с садоводством.$l'), memory('Zuzu2_Repeat')],
+            [sp('Harvey', 'Новое… За все студенческие годы я так и не зашёл на крышу гостиницы. Говорят, оттуда видно весь город.$0'), memory('Zuzu2_New')],
+        ]),
+        'friendship Harvey 25', 'addConversationTopic HarveyZuzu_Familiar 5',
+    ])
+
+regulars_key = trip_key('Z9_Regulars', 'Time 0800 2300', VISITED, seen(NS+'.Z2_Coffee'))
+regulars = script('continue', '12 10', 'farmer 11 10 1 Harvey 13 10 3',
+    skip_cd('AddConversationTopic HarveyZuzu_Regulars 5'), [
+        'pause 400',
+        msg('Бариста поднимает голову от кофемашины: «О, вы снова! Вам как в прошлый раз?» На вашем столике кто-то оставил табличку «занято».'),
+        sp('Harvey', 'Она нас запомнила. Нас. Не меня — студента с четвёртой чашкой, а нас.$h'),
+        sp('Harvey', 'Я годами был здесь «тот, что сидит три часа». А теперь мы «как в прошлый раз». Это лучше.$l'),
+        qq(['Заказать как в прошлый раз', 'Попробовать что-то новое', 'Оставить на столике записку'], [
+            [sp('Harvey', 'Традиция. У нас уже есть традиции в другом городе. Я врач, а не романтик, но это очень романтично.$h'), memory('Zuzu2_SameOrder')],
+            [sp('Harvey', 'Новое? Тогда я тоже. Если не понравится — поменяемся чашками. Так честно.$h'), memory('Zuzu2_NewOrder')],
+            [msg('Ты пишешь на салфетке пару слов и прячешь под сахарницу. Харви делает вид, что не подсматривает.'),
+             sp('Harvey', 'Что ты написала? …Не говори. Найду в следующий раз. Если её не выбросят — значит, судьба.$l'), memory('Zuzu2_Note')],
+        ]),
+        'friendship Harvey 25', 'addConversationTopic HarveyZuzu_Regulars 5',
+    ])
+
+lecture_key = trip_key('Z10_Lecture', 'Time 0900 2000', VISITED, seen(NS+'.Z4_University'))
+lecture = script('continue', '12 10', 'farmer 11 10 1 Harvey 13 10 3',
+    skip_cd('AddConversationTopic HarveyZuzu_Lecture 5'), [
+        'pause 400',
+        msg('На доске объявлений — листок: «Встреча выпускников. Пять минут о своей практике — для студентов первого курса. Записаться здесь».'),
+        sp('Harvey', 'Пять минут. О маленькой клинике в долине. Для первокурсников. …Я? Нет. Я заикаюсь, когда говорю не про давление.$u'),
+        qq(['Записать его самой', 'Предложить отрепетировать прямо здесь', 'Сказать, что не обязательно'], [
+            [msg('Ты пишешь его имя. Харви бледнеет, потом краснеет, потом дописывает рядом: «и фермерша из долины — помощница».'),
+             sp('Harvey', 'Раз уж ты меня записала — стой в первом ряду. Мне нужен хотя бы один пульс в зале, который я знаю.$h'), memory('Zuzu2_Signed')],
+            [msg('Читальный зал пуст. Харви встаёт у доски и пять минут рассказывает тебе одной про клинику, где знаешь каждого пациента по имени.'),
+             sp('Harvey', '…И там я понял, что лечить — это ещё и знать, кто ждёт человека дома. Конец.$s#$b#Как? Слишком сентиментально?$u'), memory('Zuzu2_Rehearsal')],
+            [sp('Harvey', 'Не обязательно. Спасибо. Знаешь, мне впервые захотелось — именно потому, что не обязательно.$l'), memory('Zuzu2_NoPressure')],
+        ]),
+        'friendship Harvey 30', 'addConversationTopic HarveyZuzu_Lecture 5',
+    ])
+
+rooftop_key = trip_key('Z11_Rooftop', 'Time 1900 2500', VISITED, seen(NS+'.Z5_HotelEvening'), NOT_BIRTHDAY_TRIP)
+rooftop = script('harveys_theme_jazz', '12 10', 'farmer 11 10 1 Harvey 13 10 3',
+    skip_cd('AddConversationTopic HarveyZuzu_Rooftop 5'), [
+        'pause 500',
+        msg('Харви выпросил у портье ключ от крыши. Наверху ветрено, внизу — весь город огнями.'),
+        sp('Harvey', 'Вон университет. Вон кофейня — синяя крыша. А там, за горами, где темно, — долина. Наша.$l'),
+        sp('Harvey', '$query PLAYER_HAS_MAIL Current HarveyRomance_Radio Received#Рация отсюда до долины не добьёт. Я проверил. Конечно, проверил.$h|Отсюда видно, сколько в мире огней. И только один из них мне нужен.$l'),
+        qq(['Сказать, что здесь хорошо', 'Сказать, что хочется домой', 'Молча встать рядом'], [
+            [sp('Harvey', 'Хорошо. Но я впервые в этом городе не хочу остаться. Хочу вернуться — с тобой.$l'), memory('Zuzu2_Rooftop_Good')],
+            [sp('Harvey', 'Мне тоже. Странно, правда? Раньше дом был здесь. Теперь дом — это куда мы вернёмся завтра.$l'), memory('Zuzu2_Rooftop_Home')],
+            [msg('Вы стоите рядом. Ветер треплет его шарф. Он не смотрит на город — смотрит на тебя.'), memory('Zuzu2_Rooftop_Quiet')],
+        ]),
+        'friendship Harvey 30', 'addConversationTopic HarveyZuzu_Rooftop 5',
+    ])
+
+# ---------------------------------------------------------------- поездка на день рождения Харви (выезд 13 зимы)
+midnight_key = trip_key('ZB1_Midnight', 'Time 2300 2600', BIRTHDAY_TRIP)
+midnight = script('harveys_theme_jazz', '12 10', 'farmer 11 10 1 Harvey 13 10 3',
+    skip_cd('AddConversationTopic HarveyZuzu_HisBirthday 7'), [
+        'pause 500',
+        msg('Без двух минут полночь. Харви думает, что ты уснула. Ты достаёшь из сумки кекс и одну свечку, которую везла через всю долину.'),
+        'pause 600', msg('Полночь. Четырнадцатое зимы.'),
+        sp('Harvey', '…Ты помнишь. Я думал, мы просто едем на выходные.$u'),
+        sp('Harvey', 'Последние годы я встречал день рождения в клинике. Мару пекла кекс, я дежурил. Это было хорошо. Но это…$s'),
+        qq(['Попросить загадать желание', 'Сказать, что поездка — и есть подарок', 'Спеть ему шёпотом'], [
+            [msg('Он задувает свечу и долго держит глаза закрытыми.'),
+             sp('Harvey', 'Я загадал. Не скажу. Но оно про то, чтобы через год было так же.$l'), memory('ZuzuB_Wish')],
+            [sp('Harvey', 'Город, в котором я был один, — и ты в нём. Это лучший подарок. Других не нужно. …Но если есть, я не откажусь.$h'), memory('ZuzuB_Trip')],
+            [msg('Ты поёшь шёпотом, чтобы не разбудить соседей. Харви смеётся, потом перестаёт смеяться и просто слушает.'),
+             sp('Harvey', 'Никто мне не пел с тех пор, как мама… Спасибо. Правда.$s'), memory('ZuzuB_Song')],
+        ]),
+        'friendship Harvey 50', 'addConversationTopic HarveyZuzu_HisBirthday 7',
+    ])
+
+birthday_morning_key = trip_key('ZB2_BirthdayMorning', 'Time 0600 1200', BIRTHDAY_TRIP,
+    'GameStateQuery PLAYER_HAS_MAIL Current HarveyZuzu_Sunday Received')
+birthday_morning = script('continue', '12 10', 'farmer 11 10 1 Harvey 13 10 3',
+    skip_cd('AddConversationTopic HarveyZuzu_HisBirthdayMorning 5'), [
+        'pause 400',
+        msg('Утро дня рождения. На подносе — завтрак из кофейни «Вторая чашка» и открытка с тремя подписями: Мару, Эвелин и Льюиса.'),
+        sp('Harvey', 'Мару написала: «Клиника цела, пациенты живы, с днём рождения, не звоните». Это её любимый стиль.$h'),
+        sp('Harvey', 'Можно я сегодня выберу маршрут? Один раз. В свой день рождения.$l'),
+        qq(['Согласиться на любой маршрут', 'Предложить снова книжный', 'Предложить просто никуда не спешить'], [
+            [sp('Harvey', 'Тогда — авиационный музей. Он маленький, в подвале, туда никто не ходит. Я тоже не ходил: не с кем было.$l'), memory('ZuzuB_Museum')],
+            [sp('Harvey', 'Книжный. Ты меня знаешь. И не будешь торопить у полки с авиацией. Это лучший подарок для меня.$h'), memory('ZuzuB_Books')],
+            [sp('Harvey', 'Никуда не спешить. В свой день рождения. Я… никогда так не делал. Давай попробуем.$l'), memory('ZuzuB_Slow')],
+        ]),
+        'friendship Harvey 30', 'addConversationTopic HarveyZuzu_HisBirthdayMorning 5',
+    ])
+
+
 def build():
     changes = []
     for style in ('Quiet', 'Family', 'Surprise'):
@@ -219,6 +322,9 @@ def build():
         ('HarveyZuzuSquare', arrival_key, arrival), ('HarveyZuzuCafe', cafe_key, cafe),
         ('HarveyZuzuBooks', books_key, books), ('HarveyZuzuInn', night_key, night),
         ('HarveyZuzuInn', morning_key, morning), ('HarveyZuzuSquare', evening_key, evening),
+        ('HarveyZuzuSquare', familiar_key, familiar), ('HarveyZuzuCafe', regulars_key, regulars),
+        ('HarveyZuzuCampus', lecture_key, lecture), ('HarveyZuzuInn', rooftop_key, rooftop),
+        ('HarveyZuzuInn', midnight_key, midnight), ('HarveyZuzuInn', birthday_morning_key, birthday_morning),
     ]:
         changes.append(patch('Zuzu — '+event_key.split('/')[0], 'Data/Events/'+location, {event_key: body}))
     for arend in (False, True):
@@ -253,6 +359,9 @@ def build():
             'Буду ждать после пяти вечера в гостиной у клиники.^^Если сегодня не получится, перенесём: '
             'приглашение действует ещё неделю.^^Открой меню встреч с Харви (по умолчанию J), '
             'чтобы выбрать формат и пойти на праздник.^^— Харви[#]Твой день',
+        M+'_mailHarveyBirthdayHint{{Year}}': '@,^^Пишу тайком. Четырнадцатого зимы у доктора день рождения, и это воскресенье. '
+            'Каждый год он дежурит и делает вид, что так и надо.^^Если в субботу, тринадцатого, увезти его в Зузу с утра — '
+            'клинику я подменю. Он будет сопротивляться ровно три минуты.^^Только не говори, что это я придумала.^^— Мару[#]Тайный план',
         M+'_mailZuzuInvitation': '@,^^Хочу показать тебе Зузу: кофейню, книжный и университет. '
             'Можем выбрать свободные выходные и остаться на одну ночь.^^Выезд в субботу с 8 до 13 часов '
             'с автобусной остановки, если на выходных нет праздников. Меню встреч — по умолчанию J. '
@@ -262,6 +371,12 @@ def build():
         M+'_triggerZuzuInvitation': {'Id': M+'_triggerZuzuInvitation', 'Trigger': 'DayStarted',
             'Condition': 'PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married',
             'Actions': ['AddMail Current '+M+'_mailZuzuInvitation now']},
+        # Подсказка Мару о поездке на день рождения Харви — раз в год, если вы уже знаете дорогу в Зузу.
+        M+'_triggerHarveyBirthdayHint': {'Id': M+'_triggerHarveyBirthdayHint', 'Trigger': 'DayStarted',
+            'Condition': 'PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, SEASON winter, DAY_OF_MONTH 6 7 8 9 10 11 12, '
+                         'PLAYER_HAS_MAIL Current '+M+'_mailZuzuInvitation Received, '
+                         '!PLAYER_HAS_MAIL Current '+M+'_mailHarveyBirthdayHint{{Year}} Any',
+            'Actions': ['AddMail Current '+M+'_mailHarveyBirthdayHint{{Year}} now'], 'MarkActionApplied': False},
     }))
     topics = {
         'HarveyBirthday_Celebrated': 'Мне очень хотелось, чтобы этот вечер тебе понравился. Спасибо, что провела его со мной.$l',
@@ -272,6 +387,12 @@ def build():
         'HarveyZuzu_Hotel': 'Тот вечер у окна я буду помнить дольше всех чеков и билетов.$l',
         'HarveyZuzu_Morning': 'Мне понравилось никуда не торопиться утром. Кажется, стоит повторять это и дома.$l',
         'HarveyZuzu_Evening': 'Город тот же, а воспоминания теперь другие. Спасибо тебе.$l',
+        'HarveyZuzu_Familiar': 'Во второй раз город уже не мой. Он наш. Я даже купил вторую карту — для тебя. Ты её, конечно, не откроешь.$h',
+        'HarveyZuzu_Regulars': '$query PLAYER_HAS_MAIL Current HarveyOutingMemory_Zuzu2_Note Received#Я всё думаю, что ты написала на той салфетке. Не говори. Приедем — проверю.$h|«Как в прошлый раз». Я повторяю это про себя и улыбаюсь. Мару думает, у меня новый пациент.$h',
+        'HarveyZuzu_Lecture': '$query PLAYER_HAS_MAIL Current HarveyOutingMemory_Zuzu2_Signed Received#Мне пришло письмо из университета: ждут на встрече выпускников. Я в ужасе. И немного горжусь.$h|Ты была лучшей аудиторией. Одна, в первом ряду, и ни разу не посмотрела на часы.$l',
+        'HarveyZuzu_Rooftop': 'Ключ от крыши я вернул портье. Но вид оттуда оставил себе. И тебя на его фоне.$l',
+        'HarveyZuzu_HisBirthday': 'Я никому не сказал, что ты увезла меня на день рождения. Хочу, чтобы это было только наше. Мару, правда, догадалась.$l',
+        'HarveyZuzu_HisBirthdayMorning': 'Лучший день рождения. Я не дежурил, не проверял телефон и ни разу не спросил, ела ли ты. …Ладно, один раз спросил.$h',
         'HarveyZuzu_Returned': 'Покупки разобрал. Билеты оставил на память. Следующие выходные пока не планирую — но очень хочется.$h',
     }
     changes.append({**patch('Outings — Харви после праздника и поездки', 'Characters/Dialogue/Harvey', topics),

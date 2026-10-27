@@ -1,0 +1,267 @@
+{
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/WorkshopItems",
+      "FromFile": "assets/Items/workshopItems.png"
+    },
+    {
+      "LogName": "Мастерская трав — предметы",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_DriedHerbs": {
+          "Name": "{{ModId}}_DriedHerbs",
+          "DisplayName": "Сушёные травы",
+          "Description": "Пучок трав из аптекарского сада, высушенный до хруста. Пахнет летом даже зимой. Основа для чаёв и бальзамов.",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 95,
+          "Texture": "Mods/{{ModId}}/WorkshopItems",
+          "SpriteIndex": 0,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "{{ModId}}_dried_herbs",
+            "{{ModId}}_workshop_item"
+          ]
+        },
+        "{{ModId}}_WarmingTea": {
+          "Name": "{{ModId}}_WarmingTea",
+          "DisplayName": "Согревающий чай",
+          "Description": "Сушёные травы и имбирь. Харви наливает такой всем, кто пришёл в клинику с мороза. Согревает изнутри.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 160,
+          "Texture": "Mods/{{ModId}}/WorkshopItems",
+          "SpriteIndex": 1,
+          "Edibility": 30,
+          "IsDrink": true,
+          "ExcludeFromShippingCollection": true,
+          "Buffs": [
+            {
+              "Id": "{{ModId}}_WarmingTea",
+              "Duration": 480,
+              "CustomAttributes": {
+                "Defense": 1,
+                "Speed": 1
+              }
+            }
+          ],
+          "ContextTags": [
+            "hot_drink_item",
+            "drink_item",
+            "{{ModId}}_workshop_item"
+          ]
+        },
+        "{{ModId}}_HerbBalm": {
+          "Name": "{{ModId}}_HerbBalm",
+          "DisplayName": "Травяной бальзам",
+          "Description": "Мягкий бальзам на масле и смоле с сушёными травами. Для обветренных рук и тех, кто много работает на холоде.",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 150,
+          "Texture": "Mods/{{ModId}}/WorkshopItems",
+          "SpriteIndex": 2,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "{{ModId}}_workshop_item"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Мастерская трав — сушилка: 5 трав сада → 2 пучка",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "{{ModId}}_DriedHerbs": {
+          "Id": "{{ModId}}_DriedHerbs",
+          "Triggers": [
+            {
+              "Id": "ItemPlacedInMachine",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "{{ModId}}_medicinal_herb"
+              ],
+              "RequiredCount": 5
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "(O){{ModId}}_DriedHerbs",
+              "ItemId": "(O){{ModId}}_DriedHerbs",
+              "MinStack": 2,
+              "MaxStack": 2
+            }
+          ],
+          "DaysUntilReady": 1,
+          "InvalidCountMessage": "[LocalizedText Strings\\Objects:Machine_NeedsInputCount 5]"
+        }
+      },
+      "TargetField": [
+        "(BC)Dehydrator",
+        "OutputRules"
+      ]
+    },
+    {
+      "LogName": "Мастерская трав — кухня",
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_TeaStockRecipe": "{{ModId}}_DriedHerbs 1 340 1/1 10/{{ModId}}_HerbalTea 3/none/Чайный запас",
+        "{{ModId}}_WarmingTeaRecipe": "{{ModId}}_DriedHerbs 1 829 1/1 10/{{ModId}}_WarmingTea 1/none/Согревающий чай"
+      }
+    },
+    {
+      "LogName": "Мастерская трав — изготовление",
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModId}}_HerbBalmRecipe": "{{ModId}}_DriedHerbs 1 247 1 92 2/Home/{{ModId}}_HerbBalm 1/false/none/Травяной бальзам",
+        "{{ModId}}_HerbAntisepticRecipe": "{{ModId}}_DriedHerbs 1 771 2/Home/{{ModId}}_Antiseptic 2/false/none/Антисептик на травах"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Мастерская трав — бальзам любят Эвелин и Джордж, чай нравится Харви",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Evelyn",
+            "1"
+          ],
+          "Value": "{{ModId}}_HerbBalm",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "George",
+            "1"
+          ],
+          "Value": "{{ModId}}_HerbBalm",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Harvey",
+            "3"
+          ],
+          "Value": "{{ModId}}_WarmingTea",
+          "Delimiter": " "
+        }
+      ]
+    },
+    {
+      "LogName": "Мастерская трав — сезонные заготовки для клиники",
+      "Action": "EditData",
+      "Target": "Data/Quests",
+      "Entries": {
+        "{{ModId}}_PrepPollen": "ItemDelivery/Саше от пыльцы/Весной в клинике чихают все. Харви шьёт для пациентов маленькие саше из сушёных трав./Принеси Харви 3 пучка сушёных трав./Harvey (O){{ModId}}_DriedHerbs 3/-1/600/-1/true/Пахнет так, что даже Шейн перестал спорить.$h#$b#Сошью сегодня вечером. Первое — тебе, под подушку. Не отказывайся, это профилактика.$l#$action AddFriendshipPoints Harvey 40",
+        "{{ModId}}_PrepHeat": "ItemDelivery/После жары/Пэм никак не восстановится после летней жары, а лекарства из клиники пить отказывается./Отнеси Пэм 2 аптекарских сбора Харви./Pam (O){{ModId}}_GardenBlend 2/-1/500/-1/true/Это от дока? Ну… раз ты принесла — выпью. Холодный? С лимоном? Хм.$s#$b#…Слушай, а неплохо. Только ему не говори, что мне понравилось.$h#$action AddFriendshipPoints Harvey 40",
+        "{{ModId}}_PrepCold": "ItemDelivery/Старикам к холодам/Эвелин собирает корзинки для одиноких соседей и просит что-нибудь тёплое, но не горькое./Отнеси Эвелин 3 согревающих чая./Evelyn (O){{ModId}}_WarmingTea 3/-1/600/-1/true/Ох, имбирь! Как раз то, что нужно. Линусу — первую, он опять ночует у костра.$h#$b#Спасибо, дорогая. Доктор говорил, что ты сама их готовишь. Он очень тобой гордится — правда, только мне об этом и говорит.$l#$action AddFriendshipPoints Harvey 40",
+        "{{ModId}}_PrepHands": "ItemDelivery/Руки трескаются/Джордж зимой не носит перчатки, а трещины на руках прячет от доктора./Отнеси Джорджу 2 травяных бальзама./George (O){{ModId}}_HerbBalm 2/-1/500/-1/true/Бальзам? Я не просил.$a#$b#…Ладно. Эвелин всё равно заставит. Пахнет, как её старый, только лучше.$s#$b#Передай доктору, что у меня всё в порядке. И спасибо. Это тоже передай.$h#$action AddFriendshipPoints Harvey 40"
+      }
+    },
+    {
+      "LogName": "Мастерская трав — письма",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_mailWorkshopDryer": "@,^^Сад работает лучше, чем я надеялся: у меня на подоконнике уже не помещаются пучки.^^Если у тебя есть сушилка (её продаёт Пьер), положи в неё пять любых трав из нашего сада — к утру будет два пучка сушёных. Они хранятся всю зиму.^^А из пучка и ложки мёда получается целый чайный запас: три обычных травяных сбора. Рецепт прилагаю.^^— Харви%item cookingRecipe {{ModId}}_TeaStockRecipe %%[#]Сушилка",
+        "{{ModId}}_mailWorkshopWarming": "@,^^Второй рецепт — мой любимый. Сушёные травы и имбирь. Я наливаю такой всем, кто приходит в клинику с мороза, и половина сразу перестаёт спорить.^^Пей перед шахтой зимой. Это не назначение. Почти.^^— Харви%item cookingRecipe {{ModId}}_WarmingTeaRecipe %%[#]Согревающий чай",
+        "{{ModId}}_mailWorkshopBalm": "@,^^Эвелин научила меня бальзаму, которым мазала руки Джорджу после столярки: травы, капля масла и немного смолы.^^Я записал состав точнее, чем она диктовала. Она сказала, что я «зануда в халате». Это правда.^^— Харви%item craftingRecipe {{ModId}}_HerbBalmRecipe %%[#]Бальзам для рук",
+        "{{ModId}}_mailWorkshopAntiseptic": "@,^^Последняя страница тетради — практическая. Из пучка сушёных трав и волокна выходит антисептик не хуже того, что на моей полке. Две порции.^^Теперь у тебя дома почти вся клиника. Пожалуйста, пусть она пригождается как можно реже.^^— Харви%item craftingRecipe {{ModId}}_HerbAntisepticRecipe %%[#]Антисептик на травах",
+        "{{ModId}}_mailPrepPollen{{Year}}": "@,^^Весной в клинику приходят с красными глазами и чиханием на всю приёмную. Шейн уверяет, что это не аллергия, а «весна в целом».^^Я шью маленькие саше из сушёных трав — их кладут под подушку. Нужно три пучка. Если в сушилке найдутся, занеси, пожалуйста.^^— Харви%item quest {{ModId}}_PrepPollen true %%[#]Саше от пыльцы",
+        "{{ModId}}_mailPrepHeat{{Year}}": "@,^^Пэм после теплового удара пьёт только холодное пиво и уверяет, что это «восстановление водного баланса».^^Я бы предложил ей наш аптекарский сбор — остуженный, с лимоном. От меня она не возьмёт. От тебя — возьмёт.^^Два сбора, если не трудно.^^— Харви%item quest {{ModId}}_PrepHeat true %%[#]После жары",
+        "{{ModId}}_mailPrepCold{{Year}}": "@,^^Эвелин собирает корзинки для тех, кто живёт один, — к первым холодам. Попросила у меня «что-нибудь тёплое, но не горькое».^^Согревающий чай подойдёт лучше всего. Три чашки — и она обещала отнести их сама.^^— Харви%item quest {{ModId}}_PrepCold true %%[#]Старикам к холодам",
+        "{{ModId}}_mailPrepHands{{Year}}": "@,^^Джордж зимой не носит перчатки из принципа, а потом прячет руки в карманы, чтобы я не видел трещины.^^Бальзам Эвелин по нашему рецепту — то, что нужно. Две баночки. Отнеси, пожалуйста, сама: мне он скажет, что всё в порядке.^^— Харви%item quest {{ModId}}_PrepHands true %%[#]Руки трескаются"
+      }
+    },
+    {
+      "LogName": "Мастерская трав — письма-рецепты и заготовки раз в год",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_triggerWorkshopDryer": {
+          "Id": "{{ModId}}_triggerWorkshopDryer",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailWorkshopDryer Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailWorkshopDryer now"
+          ]
+        },
+        "{{ModId}}_triggerWorkshopWarming": {
+          "Id": "{{ModId}}_triggerWorkshopWarming",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailWorkshopDryer Received, PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailWorkshopWarming Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailWorkshopWarming now"
+          ]
+        },
+        "{{ModId}}_triggerWorkshopBalm": {
+          "Id": "{{ModId}}_triggerWorkshopBalm",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailWorkshopWarming Received, PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailWorkshopBalm Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailWorkshopBalm now"
+          ]
+        },
+        "{{ModId}}_triggerWorkshopAntiseptic": {
+          "Id": "{{ModId}}_triggerWorkshopAntiseptic",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailWorkshopBalm Received, PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailWorkshopAntiseptic Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailWorkshopAntiseptic now"
+          ]
+        },
+        "{{ModId}}_triggerPrepPollen": {
+          "Id": "{{ModId}}_triggerPrepPollen",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received, SEASON spring, DAY_OF_MONTH 3 4 5 6 7 8 9, RANDOM 0.4, !PLAYER_HAS_MAIL Current {{ModId}}_mailPrepPollen{{Year}} Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailPrepPollen{{Year}} now"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_triggerPrepHeat": {
+          "Id": "{{ModId}}_triggerPrepHeat",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received, SEASON summer, DAY_OF_MONTH 3 4 5 6 7 8 9, RANDOM 0.4, !PLAYER_HAS_MAIL Current {{ModId}}_mailPrepHeat{{Year}} Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailPrepHeat{{Year}} now"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_triggerPrepCold": {
+          "Id": "{{ModId}}_triggerPrepCold",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received, SEASON fall, DAY_OF_MONTH 3 4 5 6 7 8 9, RANDOM 0.4, !PLAYER_HAS_MAIL Current {{ModId}}_mailPrepCold{{Year}} Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailPrepCold{{Year}} now"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_triggerPrepHands": {
+          "Id": "{{ModId}}_triggerPrepHands",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_HerbalGardenFinished Received, SEASON winter, DAY_OF_MONTH 3 4 5 6 7 8 9, RANDOM 0.4, !PLAYER_HAS_MAIL Current {{ModId}}_mailPrepHands{{Year}} Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailPrepHands{{Year}} now"
+          ],
+          "MarkActionApplied": false
+        }
+      }
+    }
+  ]
+}

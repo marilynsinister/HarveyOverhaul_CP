@@ -27,7 +27,7 @@
         speak Harvey \"@?! НЕТ!$8\"/
         pause 300/
         speed Harvey 6/
-        move Harvey 0 -2 0/
+        move Harvey 0 -2 0 false/
         pause 400/
         stopAnimation Harvey/
         faceDirection Harvey 0/
@@ -158,7 +158,8 @@
         globalFade/
         viewport -1000 -1000/
         pause 1500/
-        proceedPosition Harvey/
+        waitForAllStationary/
+        move false/
         changeLocation Hospital/
         ignoreCollisions farmer/
         warp farmer 20 5/
@@ -190,6 +191,8 @@
         speak Harvey \"@! Ты в сознании.$u#$b#Не двигайся.$u\"/
         pause 800/
         speak Harvey \"Вчера ты потеряла сознание в шахте.$s#$b#Мне нужно завершить осмотр и начать лечение.$u\"/
+        pause 400/
+        speak Harvey \"$query PLAYER_HAS_MAIL Current HarveyRomance_Signals Received#*Твои пальцы дважды сжимают его ладонь.* Два раза. «Я в порядке». Понял. Не переспрашиваю — заканчиваю осмотр и сразу даю обезболивающее.$l|*Он ждёт, пока ты кивнёшь.* Хорошо. Начинаю.$u\"/
         pause 1000/
         emote Harvey 28/
         speak Harvey \"*голос смягчается* Солнышко, я буду рядом.$l#$b#Отдыхай. Я прослежу за каждым показателем.$l\"/
@@ -269,6 +272,8 @@
         pause 500/
         emote Harvey 12/
         speak Harvey \"Шахта подождёт. Сначала лечение.$s#$b#Если захочешь остановить меня — скажи «стоп».$s\"/
+        pause 400/
+        speak Harvey \"$query PLAYER_HAS_MAIL Current HarveyRomance_Signals Received#*Ты молча сжимаешь его руку дважды.* Не «стоп». «Я в порядке». …Ладно. Тогда без расспросов: перевязка, вода, сон. Я рядом.$l|*Он ждёт ответа и, не услышав «стоп», берётся за бинты.*$s\"/
         pause 800/
         speak Harvey \"Я буду рядом, пока показатели не станут безопасными.$l\"/
         pause 800/

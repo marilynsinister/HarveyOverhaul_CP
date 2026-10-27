@@ -1,0 +1,137 @@
+{
+  "Changes": [
+    {
+      "LogName": "Family K1 — «Первое слово» (FarmHouse)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulFamily.K1_FirstWord/Time 1700 2100/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K1_FirstWord/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/12 7/farmer 11 7 1 Harvey 13 6 2/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_FirstWord 7#AddFriendshipPoints Harvey 40/addTemporaryActor HarveyFamilyChild 16 32 12 7 1 true Character FamilyChild/pause 500/message \"Вечер. Малыш сидит на полу среди кубиков. Харви подходит с градусником — «только проверить, лоб тёплый».\"/speak Harvey \"Секунду. Одну секундочку. Под мышку, и всё…$0\"/message \"Малыш отодвигается, поднимает ладошку — точь-в-точь как ты — и очень отчётливо говорит:\"/message \"«Стоп!»\"/pause 600/emote Harvey 16/speak Harvey \"…Это было слово? Это было слово. Первое слово.$u\"/speak Harvey \"И это «стоп».$s#$b#…Ну конечно. Он слышал его от тебя — каждый раз, когда я перегибал.$h\"/quickQuestion #Рассмеяться#Сказать, что это хорошее первое слово#Убрать градусник вместе с ним(break)emote farmer 28\\speak Harvey \"Смейся. Я запишу в карту: «Первое слово — ограничитель. Пациент уважает границы с рождения».$h\"\\action AddMail Current HarveyMemory_FirstWord_Laugh Received(break)speak Harvey \"Хорошее. Правда. Значит, наш ребёнок знает, что его «нет» слышат.$l#$b#Это лучше, чем «папа». Ладно, почти.$h\"\\action AddMail Current HarveyMemory_FirstWord_Good Received(break)message \"Ты кладёшь градусник в футляр. Харви, помедлив, защёлкивает крышку сам.\"\\speak Harvey \"Убрал. Лоб я потрогаю губами, как все нормальные родители. Это ведь тоже считается.$l\"\\action AddMail Current HarveyMemory_FirstWord_Thermometer Received/friendship Harvey 40/addConversationTopic HarveyFamily_FirstWord 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Family K2 — «Коленка» (Farm)",
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "HarveyOverhaulFamily.K2_Knee/Weather sunny/Time 1000 1600/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ChildYear1 Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K2_Knee/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/{{HO_FarmX}} {{HO_FarmY0}}/farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY5}} 0/ignoreEventTileOffset/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_Knee 7#AddFriendshipPoints Harvey 35/addTemporaryActor HarveyFamilyChild 16 32 {{HO_FarmX}} {{HO_FarmY3}} 2 true Character FamilyChild/pause 500/message \"Малыш бежит к курятнику, спотыкается о порог — и садится прямо на дорожку. Тишина. Потом — громкий рёв.\"/emote Harvey 16/message \"Харви уже бежит: сумка через плечо, бинт, антисептик, фонарик — хотя на дворе полдень.\"/move Harvey 0 -1 0 false/speak Harvey \"Так. Спокойно. Я спокоен. Колено, ссадина, кровь… две капли. Две капли крови.$u\"/quickQuestion #Положить ладонь ему на плечо#Спросить малыша, где болит#Подуть на коленку(break)message \"Ты кладёшь руку ему на плечо. Он выдыхает — впервые с того момента, как услышал рёв.\"\\speak Harvey \"Да. Ты права. Сначала — я. Испуганный врач лечит хуже.$s\"\\message \"Он промывает ссадину неторопливо, приговаривая что-то смешное. Рёв стихает.\"\\action AddMail Current HarveyMemory_Knee_Calm Received(break)message \"Малыш перестаёт плакать от удивления, что его спросили, и показывает пальцем: «Тут».\"\\speak Harvey \"Вот. Пациент локализует боль сам. Анамнез собран. Учусь у тебя, как с ним говорить.$h\"\\action AddMail Current HarveyMemory_Knee_Asked Received(break)message \"Ты дуешь на коленку. Малыш смеётся сквозь слёзы. Харви смотрит на вас с раскрытым бинтом.\"\\speak Harvey \"Этого метода нет ни в одном учебнике. И он работает лучше половины учебников.$l\"\\action AddMail Current HarveyMemory_Knee_Blow Received/message \"Пластырь со звёздочкой. Малыш тут же убегает обратно к курятнику.\"/speak Harvey \"Он упадёт ещё сто раз. Я знаю. Царапина — это тоже детство.$s#$b#…Но сумку я всё-таки повешу у двери.$h\"/friendship Harvey 35/addConversationTopic HarveyFamily_Knee 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Family K5 — «Кружок у фонтана» (Town)",
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "HarveyOverhaulFamily.K5_StoryCircle/DayOfWeek Tue Thu/Weather sunny/Time 1000 1400/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ChildYear3 Received/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K1_FirstWord/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K5_StoryCircle/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/27 29/farmer 29 31 3 Harvey 30 31 3 Penny 26 29 2 Jas 25 31 0 Vincent 27 31 0/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_StoryCircle 7#AddFriendshipPoints Harvey 40#AddFriendshipPoints Penny 30/addTemporaryActor HarveyFamilyChild 16 32 26 31 0 true Character FamilyChild/viewport 27 29 true/pause 500/message \"У фонтана — кружок Пенни. Джас и Винсент уже сидят на подушках. Твой малыш — впервые среди них.\"/speak Penny \"Сегодня читаем про ёжика, который боялся темноты. Родители могут посидеть рядом — или погулять. Мы справимся.$h\"/message \"Харви не двигается с места. Он стоит в трёх шагах и считает, сколько метров до фонтана.\"/speak Harvey \"Три метра. Бортик гладкий. Вода по колено взрослому… Пенни, вы знаете, где у вас аптечка?$u\"/speak Penny \"Знаю, доктор. Вы сами её подписывали в прошлом году.$h\"/quickQuestion #Взять его под руку и увести на скамейку#Сказать, что малыш справится#Остаться, но на расстоянии(break)move farmer -1 0 3 false\\message \"Ты берёшь его под руку. Он идёт, но оглядывается каждые два шага.\"\\speak Harvey \"Скамейка. Хорошо. Отсюда видно. Видно же?$s#$b#…Видно. Он смеётся. Он не на меня смотрит — и смеётся.$l\"\\action AddMail Current HarveyMemory_Circle_Bench Received(break)speak Harvey \"Справится. Он сказал «стоп» раньше, чем «папа». Он умеет за себя постоять.$s#$b#А я — нет. Учусь.$h\"\\action AddMail Current HarveyMemory_Circle_Trust Received(break)message \"Вы остаётесь в стороне. Через десять минут малыш оборачивается, машет вам — и снова поворачивается к Пенни.\"\\speak Harvey \"Он помахал. Это значит «я в порядке». Мы его этому не учили. Сам.$l\"\\action AddMail Current HarveyMemory_Circle_Wave Received/speak Penny \"Приходите в четверг. Ёжик ещё не дочитан, а ваш — уже наш постоянный слушатель.$h\"/friendship Harvey 40/friendship Penny 30/addConversationTopic HarveyFamily_StoryCircle 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Family K3 — «Первый год», с Арендом",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulFamily.K3_FirstYear/Time 1800 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ChildYear1 Received/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K1_FirstWord/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K3_FirstYear/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "harveys_theme_jazz/12 7/farmer 11 7 1 Harvey 13 6 2 Arend 14 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_FirstYear 7#AddFriendshipPoints Harvey 40#AddFriendshipPoints Arend 30/addTemporaryActor HarveyFamilyChild 16 32 12 7 1 true Character FamilyChild/pause 500/message \"На столе — маленький торт с одной свечой. Харви трижды переставил его, чтобы малыш не дотянулся до пламени.\"/speak Harvey \"Год. Целый год. Я помню, как считал вдохи у колыбели в первую ночь.$s\"/speak Arend \"Год. Я принёс книгу про птиц. Читать ещё рано, но смотреть картинки — самое время.$h\"/speak Harvey \"Пап, там четыреста страниц.$a\"/speak Arend \"Значит, хватит до школы.$h\"/quickQuestion #Задуть свечу вместе с малышом#Сфотографировать их двоих#Обнять Харви(break)message \"Вы дуете вместе. Свеча гаснет с третьей попытки, малыш хлопает в ладоши.\"\\speak Harvey \"Загадали? Я — да. То же, что и в прошлом году. Сбывается.$l\"\\action AddMail Current HarveyMemory_FirstYear_Candle Received(break)message \"Харви держит малыша на коленях и смотрит не в объектив, а на него.\"\\speak Harvey \"Получилось? Я, наверное, опять смотрел не туда.$h\"\\action AddMail Current HarveyMemory_FirstYear_Photo Received(break)message \"Ты обнимаешь его со спины. Он накрывает твои руки своими.\"\\speak Harvey \"Спасибо за этот год. За все наши годы. Но за этот — особенно.$l\"\\action AddMail Current HarveyMemory_FirstYear_Hug Received/friendship Harvey 40/friendship Arend 30/addConversationTopic HarveyFamily_FirstYear 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "ArendEnabled": "true",
+        "HasSeenEvent |contains=HarveyOverhaulArend.A1_Arrival": "true"
+      }
+    },
+    {
+      "LogName": "Family K4 — «Сказка на ночь», с Арендом",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulFamily.K4_Story/Time 1900 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ChildYear2 Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K4_Story/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/12 7/farmer 11 7 1 Harvey 13 6 2 Arend 14 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_Story 7#AddFriendshipPoints Arend 30#AddFriendshipPoints Harvey 35/addTemporaryActor HarveyFamilyChild 16 32 12 7 0 true Character FamilyChild/pause 500/message \"Аренд сидит на краю кровати с книгой про птиц. Малыш уже не слушает — он показывает картинки сам.\"/speak Arend \"Это сорока. А это… да, ты прав, тоже «пи». Все птицы — «пи». Научная классификация меняется.$h\"/speak Harvey \"Пап, ему пора спать. Это уже пятая птица.$0\"/speak Arend \"Шестая. Ты в его возрасте выпросил одиннадцать.$h\"/quickQuestion #Попросить ещё одну птицу#Тихо выключить лампу#Сесть рядом и слушать(break)speak Arend \"Последняя. Цапля. Она стоит на одной ноге, пока все спят. Вот и ты спи, а цапля постоит.$l\"\\action AddMail Current HarveyMemory_Story_Heron Received(break)message \"Ты гасишь свет. Аренд дочитывает по памяти — тихо, почти шёпотом.\"\\action AddMail Current HarveyMemory_Story_Lamp Received(break)message \"Вы втроём сидите у кровати, пока дыхание малыша не становится ровным. Харви по привычке считает вдохи — и не мешает.\"\\action AddMail Current HarveyMemory_Story_Together Received/speak Arend \"Он запомнит не птиц. Он запомнит, что рядом сидели. Ты тоже запомнил, сын.$l\"/friendship Arend 30/friendship Harvey 35/addConversationTopic HarveyFamily_Story 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "ArendEnabled": "true",
+        "HasSeenEvent |contains=HarveyOverhaulArend.A1_Arrival": "true"
+      }
+    },
+    {
+      "LogName": "Family K3 — «Первый год», без Аренда (1)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulFamily.K3_FirstYear/Time 1800 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ChildYear1 Received/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K1_FirstWord/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K3_FirstYear/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "harveys_theme_jazz/12 7/farmer 11 7 1 Harvey 13 6 2/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_FirstYear 7#AddFriendshipPoints Harvey 40/addTemporaryActor HarveyFamilyChild 16 32 12 7 1 true Character FamilyChild/pause 500/message \"На столе — маленький торт с одной свечой. Харви трижды переставил его, чтобы малыш не дотянулся до пламени.\"/speak Harvey \"Год. Целый год. Я помню, как считал вдохи у колыбели в первую ночь.$s\"/speak Harvey \"Папа звонил утром. Сказал передать: «Год — это много. Каждый следующий будет ещё больше».$l\"/quickQuestion #Задуть свечу вместе с малышом#Сфотографировать их двоих#Обнять Харви(break)message \"Вы дуете вместе. Свеча гаснет с третьей попытки, малыш хлопает в ладоши.\"\\speak Harvey \"Загадали? Я — да. То же, что и в прошлом году. Сбывается.$l\"\\action AddMail Current HarveyMemory_FirstYear_Candle Received(break)message \"Харви держит малыша на коленях и смотрит не в объектив, а на него.\"\\speak Harvey \"Получилось? Я, наверное, опять смотрел не туда.$h\"\\action AddMail Current HarveyMemory_FirstYear_Photo Received(break)message \"Ты обнимаешь его со спины. Он накрывает твои руки своими.\"\\speak Harvey \"Спасибо за этот год. За все наши годы. Но за этот — особенно.$l\"\\action AddMail Current HarveyMemory_FirstYear_Hug Received/friendship Harvey 40/addConversationTopic HarveyFamily_FirstYear 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "ArendEnabled": "false"
+      }
+    },
+    {
+      "LogName": "Family K4 — «Сказка на ночь», без Аренда (1)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulFamily.K4_Story/Time 1900 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ChildYear2 Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K4_Story/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/12 7/farmer 11 7 1 Harvey 13 6 2/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_Story 7#AddFriendshipPoints Harvey 35/addTemporaryActor HarveyFamilyChild 16 32 12 7 0 true Character FamilyChild/pause 500/message \"Харви читает малышу на ночь. Книга подозрительно похожа на анатомический атлас — с картинками.\"/speak Harvey \"«Сердце — это мышца, которая работает всю жизнь и никогда не берёт выходной». …Хм. Как некоторые врачи.$h\"/quickQuestion #Предложить сказку про самолёт#Читать дальше вместе с ним#Забрать атлас и рассказать свою(break)speak Harvey \"Про самолёт… который однажды упал в озеро и был самым счастливым самолётом на свете. Хорошо. Эту я знаю наизусть.$l\"\\action AddMail Current HarveyMemory_Story_Plane Received(break)message \"Вы читаете по очереди. На главе про лёгкие малыш засыпает, держа палец на картинке.\"\\speak Harvey \"Будущий коллега. Или просто устал. Скорее второе.$h\"\\action AddMail Current HarveyMemory_Story_Atlas Received(break)message \"Ты рассказываешь, как пришла в долину и встретила доктора с бутербродами у остановки.\"\\speak Harvey \"Это лучшая сказка. И она правда случилась.$l\"\\action AddMail Current HarveyMemory_Story_Ours Received/friendship Harvey 35/addConversationTopic HarveyFamily_Story 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "ArendEnabled": "false"
+      }
+    },
+    {
+      "LogName": "Family K3 — «Первый год», без Аренда (2)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulFamily.K3_FirstYear/Time 1800 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ChildYear1 Received/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K1_FirstWord/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K3_FirstYear/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "harveys_theme_jazz/12 7/farmer 11 7 1 Harvey 13 6 2/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_FirstYear 7#AddFriendshipPoints Harvey 40/addTemporaryActor HarveyFamilyChild 16 32 12 7 1 true Character FamilyChild/pause 500/message \"На столе — маленький торт с одной свечой. Харви трижды переставил его, чтобы малыш не дотянулся до пламени.\"/speak Harvey \"Год. Целый год. Я помню, как считал вдохи у колыбели в первую ночь.$s\"/speak Harvey \"Папа звонил утром. Сказал передать: «Год — это много. Каждый следующий будет ещё больше».$l\"/quickQuestion #Задуть свечу вместе с малышом#Сфотографировать их двоих#Обнять Харви(break)message \"Вы дуете вместе. Свеча гаснет с третьей попытки, малыш хлопает в ладоши.\"\\speak Harvey \"Загадали? Я — да. То же, что и в прошлом году. Сбывается.$l\"\\action AddMail Current HarveyMemory_FirstYear_Candle Received(break)message \"Харви держит малыша на коленях и смотрит не в объектив, а на него.\"\\speak Harvey \"Получилось? Я, наверное, опять смотрел не туда.$h\"\\action AddMail Current HarveyMemory_FirstYear_Photo Received(break)message \"Ты обнимаешь его со спины. Он накрывает твои руки своими.\"\\speak Harvey \"Спасибо за этот год. За все наши годы. Но за этот — особенно.$l\"\\action AddMail Current HarveyMemory_FirstYear_Hug Received/friendship Harvey 40/addConversationTopic HarveyFamily_FirstYear 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "ArendEnabled": "true",
+        "HasSeenEvent |contains=HarveyOverhaulArend.A1_Arrival": "false"
+      }
+    },
+    {
+      "LogName": "Family K4 — «Сказка на ночь», без Аренда (2)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulFamily.K4_Story/Time 1900 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ToddlerReady Received/GameStateQuery PLAYER_HAS_MAIL Current HarveyFamily_ChildYear2 Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulFamily.K4_Story/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/12 7/farmer 11 7 1 Harvey 13 6 2/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyFamily_Story 7#AddFriendshipPoints Harvey 35/addTemporaryActor HarveyFamilyChild 16 32 12 7 0 true Character FamilyChild/pause 500/message \"Харви читает малышу на ночь. Книга подозрительно похожа на анатомический атлас — с картинками.\"/speak Harvey \"«Сердце — это мышца, которая работает всю жизнь и никогда не берёт выходной». …Хм. Как некоторые врачи.$h\"/quickQuestion #Предложить сказку про самолёт#Читать дальше вместе с ним#Забрать атлас и рассказать свою(break)speak Harvey \"Про самолёт… который однажды упал в озеро и был самым счастливым самолётом на свете. Хорошо. Эту я знаю наизусть.$l\"\\action AddMail Current HarveyMemory_Story_Plane Received(break)message \"Вы читаете по очереди. На главе про лёгкие малыш засыпает, держа палец на картинке.\"\\speak Harvey \"Будущий коллега. Или просто устал. Скорее второе.$h\"\\action AddMail Current HarveyMemory_Story_Atlas Received(break)message \"Ты рассказываешь, как пришла в долину и встретила доктора с бутербродами у остановки.\"\\speak Harvey \"Это лучшая сказка. И она правда случилась.$l\"\\action AddMail Current HarveyMemory_Story_Ours Received/friendship Harvey 35/addConversationTopic HarveyFamily_Story 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "ArendEnabled": "true",
+        "HasSeenEvent |contains=HarveyOverhaulArend.A1_Arrival": "false"
+      }
+    },
+    {
+      "LogName": "Family K — Харви о взрослеющем малыше",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyFamily_FirstWord": "$query PLAYER_HAS_MAIL Current HarveyMemory_FirstWord_Thermometer Received#Градусник лежит в футляре третий день. Я держусь. Лоб проверяю губами, как договорились.$h|Сегодня малыш сказал «стоп» коту. Кот послушался. Я горжусь обоими.$h",
+        "HarveyFamily_Knee": "Пластыри со звёздочками кончились. Я заказал коробку. Нет, две. Это не паника, это снабжение.$h",
+        "HarveyFamily_FirstYear": "Год назад я считал вдохи у колыбели. Сегодня меня за палец ведут смотреть кур. Время — странная штука.$l",
+        "HarveyFamily_Story": "$query PLAYER_HAS_MAIL Current HarveyMemory_Story_Plane Received#Малыш просит сказку про самолёт в озере каждый вечер. Я рассказываю. Каждый раз чуть смешнее.$h|Вчера он показал пальцем на мою грудь и сказал «серце». Почти правильно. Почти коллега.$h",
+        "HarveyFamily_StoryCircle": "Ёжика дочитали. Малыш теперь рассказывает его мне — со своими поправками. Ёжик у него больше не боится темноты: у него есть фонарь.$l"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "Relationship:Harvey": "Married"
+      }
+    },
+    {
+      "LogName": "Family K — Аренд о внуке",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Arend",
+      "Entries": {
+        "HarveyFamily_FirstYear": "Год. Я подарил книгу про птиц, а малыш съел угол обложки. Хорошая рецензия.$h",
+        "HarveyFamily_Story": "Внук назвал цаплю «пи». Я не стал спорить. В его возрасте это и есть орнитология.$h",
+        "HarveyFamily_StoryCircle": "Сын рассказал про кружок у фонтана. Сказал: «Я стоял на скамейке, пап». Понимаешь? На скамейке. Не рядом.$l"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "ArendEnabled": "true"
+      }
+    },
+    {
+      "LogName": "Family K5 — Пенни о кружке",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Entries": {
+        "HarveyFamily_StoryCircle": "Ваш малыш сегодня первым поднял руку. Спросил, есть ли у ёжика доктор. Угадайте, в кого.$h"
+      },
+      "Priority": "Late + 1"
+    }
+  ]
+}

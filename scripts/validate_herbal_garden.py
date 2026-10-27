@@ -53,7 +53,7 @@ def main():
     mail = entries(changes, "Data/Mail")
     triggers = entries(changes, "Data/TriggerActions")
     recipes = {**entries(changes, "Data/CookingRecipes"), **entries(changes, "Data/CraftingRecipes")}
-    assert (len(objects), len(crops), len(shop), len(quests), len(recipes)) == (8, 4, 8, 5, 3)
+    assert (len(objects), len(crops), len(shop), len(quests), len(recipes)) == (10, 4, 8, 5, 4)
 
     icons = Image.open(ROOT / "assets/Items/herbalItems.png").convert("RGBA")
     atlas = Image.open(ROOT / "assets/Crops/herbalCrops.png").convert("RGBA")
@@ -63,6 +63,8 @@ def main():
         assert set(image.getchannel("A").get_flattened_data()) == {0, 255}
         assert len({pixel[:3] for pixel in image.get_flattened_data() if pixel[3]}) <= 64
     for key, obj in objects.items():
+        if obj.get("Texture") != "Mods/{{ModId}}/HerbalItems":
+            continue  # общий сбор и страница тетради — чужие листы
         index = obj["SpriteIndex"]
         sprite = icons.crop((index * 16, 0, index * 16 + 16, 16))
         box = sprite.getbbox()
@@ -77,7 +79,8 @@ def main():
         assert f"{sum(crop['DaysInPhase'])} дн." in objects[seed]["Description"]
         assert not crop["CountForMonoculture"] and not crop["CountForPolyculture"]
         assert shop[herb]["AvailableStock"] >= 3 and shop[herb]["AvailableStockLimit"] == "Player"
-        assert "SEASON" not in shop[herb]["Condition"], "Winter fallback must stay available"
+        # Сырьё в клинике — только после финала, иначе всю цепочку можно купить и сдать за день.
+        assert shop[herb]["Condition"] == "PLAYER_HAS_MAIL Current " + MOD + "HerbalGardenFinished Received"
         assert shop[herb]["Price"] > objects[herb]["Price"]
         assert shop[seed]["PriceModifiers"][0]["Amount"] == 0.9
         index = crop["SpriteIndex"]
@@ -110,19 +113,35 @@ def main():
         assert "none" in fields, "Recipes must be explicitly taught, never automatic"
 
     start = MOD + "GardenGlass"
+    # Каждый шаг — своё действие: вырастить для Харви, отнести Эвелин, отнести Гасу,
+    # найти страницу у фонтана, приготовить общий сбор. Сырьё по пути не продаётся.
+    expected = [
+        ("ItemDelivery", "Harvey", "GlassDewberry", 3),
+        ("ItemDelivery", "Evelyn", "Moonvelvet", 3),
+        ("ItemDelivery", "Gus", "AmberHeartleaf", 3),
+        ("LostItem", "Harvey", "NotebookPage", None),
+        ("ItemDelivery", "Harvey", "GardenBlend", 1),
+    ]
     order, current = [], start
     while current != "-1":
         assert current in quests and current not in order, "Missing quest or cycle"
         order.append(current)
         fields = quests[current].split("/")
-        assert len(fields) == 10 and fields[0] == "ItemDelivery" and fields[8] == "false"
-        npc, item, count = fields[4].split()
-        assert npc == "Harvey" and item.removeprefix("(O)") in known_objects
-        assert int(count) == (3 if len(order) <= 4 else 2)
+        kind, npc_name, item_name, amount = expected[len(order) - 1]
+        assert len(fields) == 10 and fields[0] == kind and fields[8] == "false", current
+        req = fields[4].split()
+        assert req[0] == npc_name and req[1] == "(O)" + MOD + item_name, current
+        assert req[1].removeprefix("(O)") in known_objects
+        if kind == "LostItem":
+            assert objects[MOD + item_name]["Type"] == "Quest" and len(req) == 5
+        else:
+            assert int(req[2]) == amount
         assert int(fields[6]) > 0
         current = fields[5]
     assert len(order) == len(quests) == 5
     assert MOD + "HerbalGardenFinished Received" in quests[order[-1]]
+    blend = recipes[MOD + "GardenBlendRecipe"].split("/")[0]
+    assert all(MOD + herb in blend for herb in ("GlassDewberry", "Moonvelvet", "AmberHeartleaf", "SilverSeamleaf"))
 
     flags = {MOD + name for name in ("GardenAmberStudied", "GardenSilverStudied", "HerbalGardenFinished")}
     for text in list(mail.values()) + list(quests.values()):
@@ -147,7 +166,7 @@ def main():
         assert trigger.get("MarkActionApplied", True), "Rewards must run only once"
         for action in trigger["Actions"]:
             assert action.split()[0] == "AddMail" and action.split()[2] in mail
-    print("OK: 5 linked delivery quests; guaranteed seed mail; recipe and letter references; one-time rewards.")
+    print("OK: 5 linked quests (3 deliveries, lost page, cooked blend); guaranteed seed mail; recipe and letter references; one-time rewards.")
 
     for trauma in (False, True):
         active = [c for c in changes if not c.get("When") or trauma]

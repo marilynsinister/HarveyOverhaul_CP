@@ -471,6 +471,11 @@ Example: "%Abigail is lost in her music."
       "Action": "Include",
       "FromFile": "assets/Code/herbalGarden.json"
     },
+    // Мастерская трав после финала сада: сушилка, чаи, бальзам, сезонные заготовки — scripts/build_herbal_workshop.py
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/herbalWorkshop.json"
+    },
     // Серии «Хороших недель»: письма за 2 недели и за месяц, пикник у крыльца — scripts/build_good_week.py (C#: GoodWeekService)
     {
       "Action": "Include",
@@ -495,6 +500,12 @@ Example: "%Abigail is lost in her music."
       // Семья с Арендом, урок первой помощи, памятные вещи, годовщины по годам брака.
       "Action": "Include",
       "FromFile": "assets/Code/familyLife.json",
+      "When": { "HasMod": "marilynsinister.HarveyOverhaul.Core" }
+    },
+    {
+      // Дети растут (K1–K5): флаги возраста ребёнка HarveyFamily_ChildYear1…3 ставит Core — scripts/build_family_growth.py.
+      "Action": "Include",
+      "FromFile": "assets/Code/familyGrowth.json",
       "When": { "HasMod": "marilynsinister.HarveyOverhaul.Core" }
     },
     {
@@ -561,6 +572,12 @@ Example: "%Abigail is lost in her music."
       "Action": "Include",
       "FromFile": "assets/Code/eventsMorningAfterExhaustion.json"
     },
+    // Лестница последствий, ступень 4: Харви сам приходит осмотреть запущенную травму — события, письма, темы
+    // (C#: HarveyOverhaulInjury/Managers/NeglectLadderManager.cs)
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/eventsHouseCall.json"
+    },
     {
       "Action": "Include",
       "FromFile": "assets/Code/eventsGotoroForestRescue.json"
@@ -606,6 +623,12 @@ Example: "%Abigail is lost in her music."
     {
       "Action": "Include",
       "FromFile": "assets/Code/eventsCourtship.json"
+    },
+    // Линия «Позывной» и ухаживание (C1–C5, S1–S4, I1–I3, W1–W4) — scripts/build_courtship_line.py.
+    // Рацию по вечерам ведёт HarveyOverhaulCore (HarveyRadioService), флаг двух лет брака — тоже Core.
+    {
+      "Action": "Include",
+      "FromFile": "assets/Code/courtshipLine.json"
     },
     // 18+ — только при AdultEvents = true. Генерируется scripts/build_adult_events.py
     {

@@ -1,9 +1,11 @@
 """Regression fixtures for failures the old coordinate checker silently missed."""
 import unittest
 from unittest.mock import patch
+from pathlib import Path
 
 from event_staging import stage_script
 from validate_event_staging import Audit
+import validate_event_coords as c
 
 
 class Lane:
@@ -58,7 +60,7 @@ class EventStagingChecks(unittest.TestCase):
         original = 'none/2 2/farmer 1 1 1 Harvey 3 1 3/animate farmer false true 100 4 5/move farmer 1 0 1 true/move farmer 0 1 2/end'
         fixed = stage_script(original)
         self.assertIn('stopAnimation farmer/move farmer', fixed)
-        self.assertIn('proceedPosition farmer/move farmer', fixed)
+        self.assertIn('waitForAllStationary/move false/move farmer', fixed)
         self.assertEqual(stage_script(fixed), fixed)
 
     def test_farm_tokens_disable_automatic_offset(self):
@@ -98,6 +100,56 @@ class EventStagingChecks(unittest.TestCase):
     def test_trigger_actions_need_the_event_action_wrapper(self):
         self.assertIn('COMMAND', self.audit('removeConversationTopic topicAgreedCheckup/end'))
         self.assertNotIn('COMMAND', self.audit('action RemoveConversationTopic topicAgreedCheckup/end'))
+
+    def test_proceed_position_is_not_an_ordinary_move_barrier(self):
+        self.assertIn('MOTION', self.audit('proceedPosition farmer/move farmer 8 0 0/end'))
+        self.assertIn('MOTION', self.audit('move farmer 8 0 0 true/proceedPosition farmer/end'))
+
+    def test_explicit_move_barrier_completes_pending_motion(self):
+        self.assertNotIn('RACE', self.audit('move farmer 8 0 0 true/move false/move farmer -2 0 0 false/end'))
+        self.assertNotIn('SYNTAX', self.audit('move false/end'))
+
+    def test_normalizer_replaces_legacy_proceed_and_sets_move_mode(self):
+        fixed = stage_script('none/2 2/farmer 1 1 1 Harvey 3 1 3/proceedPosition farmer/move farmer 8 0 0/end')
+        self.assertNotIn('proceedPosition', fixed)
+        self.assertIn('waitForAllStationary/move false/move farmer 8 0 0 false', fixed)
+        self.assertEqual(stage_script(fixed), fixed)
+
+    def test_temporary_map_is_checked(self):
+        entries = [('fixture.json', 'Lane', 'Main',
+                    'none/2 2/farmer 1 1 1/changeToTemporaryMap Sky/warp farmer 1 0/end')]
+        with patch('validate_event_staging.variants', return_value=[('', Lane(), {})]):
+            issues = Audit(entries).run()
+        self.assertTrue(any(row[3] == 'TILE' and '@ Sky' in row[5] for row in issues))
+
+    def test_end_position_uses_the_original_return_map(self):
+        entries = [('fixture.json', 'Lane', 'Main',
+                    'none/2 2/farmer 1 1 1/changeToTemporaryMap Sky/end position 1 0')]
+        with patch('validate_event_staging.variants', return_value=[('', Lane(), {})]):
+            issues = Audit(entries).run()
+        self.assertTrue(any(row[3] == 'TILE' and '@ Lane' in row[5] for row in issues))
+
+    def test_sve_balloon_approach_and_boarding_positions(self):
+        doc = c.read_jsonc(Path(c.CP_ROOT) / 'assets/Code/events.json')
+        key, script = next((key, script) for change in doc['Changes']
+                           for key, script in (change.get('Entries') or {}).items()
+                           if key.split('/')[0] == '528013')
+        positions = []
+        original_move = Audit.move
+
+        def record(audit, state, who, dx, dy, raw):
+            original_move(audit, state, who, dx, dy, raw)
+            positions.append((raw, dict(state['actors'])))
+
+        with patch('validate_event_staging.variants', return_value=[('', Lane(), {})]), patch.object(Audit, 'move', record):
+            issues = Audit([('events.json', 'Town', key, script)]).run()
+        self.assertFalse(issues, issues)
+        arrival = next(actors for raw, actors in positions if raw == 'move farmer 8 0 0 false')
+        self.assertEqual(arrival['farmer'], (24, 42))
+        self.assertEqual(arrival['Harvey'], (24, 41))
+        self.assertEqual(positions[-1][1]['farmer'], (25, 40))
+        self.assertEqual(positions[-1][1]['Harvey'], (26, 40))
+        self.assertEqual(c.split_commands(script)[-1], 'end')
 
 
 if __name__ == '__main__':

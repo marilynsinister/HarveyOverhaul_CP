@@ -119,9 +119,20 @@ def main():
 
     events = [(change, key, body) for change in changes if change.get('Target', '').startswith('Data/Events/')
               for key, body in change['Entries'].items()]
-    assert len(events) == 13
+    assert len(events) == 19
     ids = {key.split('/')[0] for _, key, _ in events}
-    assert len(ids) == 8
+    assert len(ids) == 14
+    # Поездка на день рождения Харви (выезд 13 зимы): свой вечер и утро вместо Z5/Z6; сцены второй поездки — после первой.
+    his_birthday = 'PLAYER_HAS_MAIL Current HarveyZuzu_HisBirthday Received'
+    for _, key, _ in events:
+        eid = key.split('/')[0]
+        if eid.startswith('HarveyOverhaulZuzu.ZB'):
+            assert his_birthday in key and '!' + his_birthday not in key, eid
+        if eid in ('HarveyOverhaulZuzu.Z5_HotelEvening', 'HarveyOverhaulZuzu.Z6_SundayMorning', 'HarveyOverhaulZuzu.Z11_Rooftop'):
+            assert '!' + his_birthday in key, eid
+        if eid in ('HarveyOverhaulZuzu.Z8_Familiar', 'HarveyOverhaulZuzu.Z9_Regulars',
+                   'HarveyOverhaulZuzu.Z10_Lecture', 'HarveyOverhaulZuzu.Z11_Rooftop'):
+            assert 'PLAYER_HAS_MAIL Current HarveyZuzu_Visited Received' in key, eid
     for change, key, body in events:
         assert change['Target'].removeprefix('Data/Events/') in MAP_NAMES
         assert 'PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married' in key

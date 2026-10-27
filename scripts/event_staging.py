@@ -7,6 +7,15 @@ def finish_motion(commands, pending=None, loops=None):
     pending = set() if pending is None else set(pending)
     loops = set() if loops is None else set(loops)
     result = []
+
+    def wait_for_motion():
+        # ProceedPosition is for NPCControllers (advancedMove), not a barrier for
+        # ordinary move. It sets continueAfterMove=true even while stationary;
+        # an ensuing implicit move can then run twice. Wait for controllers and
+        # drain actorPositionsAfterMove using the game's explicit move barrier.
+        result.extend(('waitForAllStationary', 'move false'))
+        pending.clear()
+
     for raw in commands:
         t = raw.split()
         if not t:
@@ -23,27 +32,37 @@ def finish_motion(commands, pending=None, loops=None):
             raw = head + ''.join('(break)' + b for b in fixed)
             pending, loops = next_pending, next_loops
         elif cmd in ('move', 'advancedmove'):
+            if cmd == 'move' and len(t) == 2:
+                if t[1].lower() == 'false':
+                    pending.clear()
+                result.append(raw)
+                continue
             actors = [t[1]] if cmd == 'advancedmove' else [t[i] for i in range(1, len(t) - 3, 4)]
+            if pending.intersection(actors):
+                wait_for_motion()
             for actor in actors:
-                if actor in pending:
-                    result.append('proceedPosition ' + actor)
-                    pending.discard(actor)
                 if actor in loops:
                     result.append('stopAnimation ' + actor)
                     loops.discard(actor)
             if cmd == 'advancedmove' or t[-1].lower() == 'true':
                 pending.update(actors)
+            elif t[-1].lower() != 'false':
+                raw += ' false'
+            if cmd == 'move' and raw.split()[-1].lower() == 'false':
+                pending.clear()
         elif cmd == 'proceedposition':
-            pending.discard(t[1])
+            wait_for_motion()
+            continue
         elif cmd in ('stopadvancedmoves', 'waitforallstationary'):
+            pending.clear()
+        elif cmd == 'halt':
             pending.clear()
         elif cmd == 'warp':
             if t[1] in pending:
-                result.append('proceedPosition ' + t[1])
-                pending.discard(t[1])
-        elif cmd == 'changelocation':
-            result.extend('proceedPosition ' + actor for actor in sorted(pending))
-            pending.clear()
+                wait_for_motion()
+        elif cmd in ('changelocation', 'changetotemporarymap'):
+            if pending:
+                wait_for_motion()
         elif cmd == 'animate':
             loops.discard(t[1])
             if t[3].lower() == 'true': loops.add(t[1])
@@ -56,8 +75,8 @@ def finish_motion(commands, pending=None, loops=None):
             loops.discard(t[1])
         elif cmd == 'end':
             # Finish movement before fading/ending; don't leave a held pose on the player.
-            result.extend('proceedPosition ' + actor for actor in sorted(pending))
-            pending.clear()
+            if pending:
+                wait_for_motion()
             result.extend('stopAnimation ' + actor for actor in sorted(loops))
             loops.clear()
         result.append(raw)

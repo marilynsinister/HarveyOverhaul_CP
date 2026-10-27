@@ -1,0 +1,1200 @@
+{
+  "Changes": [
+    {
+      "LogName": "Courtship C1/C3 — «Частота», «Модель» (HarveyRoom)",
+      "Action": "EditData",
+      "Target": "Data/Events/HarveyRoom",
+      "Entries": {
+        "HarveyOverhaulCourtship.C1_Frequency/Time 1200 1500/Friendship Harvey 2300/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N3_ContactCard/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C1_Frequency/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/8 7/Harvey 8 6 0 farmer 7 9 0/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_Radio Received#AddConversationTopic HarveyRomance_RadioWait 3#AddMail Current {{ModId}}_mailRadio tomorrow/viewport 8 7 true/pause 600/message \"Обеденный перерыв. В комнате Харви тихо шипит приёмник: сводка погоды, чей-то голос с рыболовного судна, снова шипение.\"/move farmer 0 -3 0 false/faceDirection farmer 1/pause 300/faceDirection Harvey 3/emote Harvey 16/speak Harvey \"Ой. Ты здесь. Я… слушаю эфир. Так глупо звучит, когда говоришь вслух.$h\"/speak Harvey \"Морские частоты, метеостанция в Зузу, пара радиолюбителей с той стороны гор. Я их не знаю. Но знаю, что они там есть.$0\"/message \"Он вытаскивает из ящика стола маленькую потёртую рацию с длинной антенной.\"/speak Harvey \"Это моя первая. Купил на стипендию, когда ещё думал, что буду летать. Зрение не пустило. А рация осталась.$s\"/speak Harvey \"Хочу, чтобы она была у тебя.$l#$b#Канал семь. Если что-то случится — канал семь. Если ничего не случится — тоже канал семь.$l\"/quickQuestion #Взять рацию#А ты будешь отвечать?#Мне не нужна охрана(break)message \"Рация тёплая от его ладони. Ты нажимаешь кнопку — и из приёмника на столе раздаётся твоё собственное дыхание.\"\\speak Harvey \"Работает. Конечно, работает, я проверял её трижды.$h\"\\friendship Harvey 30(break)speak Harvey \"Всегда. Даже ночью. Даже если ты просто скажешь «приём» и ничего больше.$l\"\\speak Harvey \"Особенно тогда.$l\"\\friendship Harvey 35(break)speak Harvey \"Это не охрана. Это я. Просто чуть дальше, чем обычно.$s\"\\speak Harvey \"Можешь не отвечать. Я не буду вызывать тебя каждый вечер, честное слово. Но пусть она будет у тебя.$0\"\\action AddMail Current HarveyRomance_RadioDeclined Received\\friendship Harvey 25/speak Harvey \"Завтра принесу запасные батарейки. Да, я знаю. Я неисправим.$h\"/action AddMail Current HarveyRomance_Radio Received/action AddMail Current {{ModId}}_mailRadio tomorrow/addConversationTopic HarveyRomance_RadioWait 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end",
+        "HarveyOverhaulCourtship.C3_Model/DayOfWeek Sat Sun/Time 1200 1500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C2_Callsigns/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_ModelParts Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C3_Model/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/10 9/Harvey 10 10 1 farmer 11 10 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_ModelBuilt Received#AddConversationTopic HarveyRomance_Model 5#AddFriendshipPoints Harvey 35/viewport 10 9 true/pause 600/message \"На столе у окна — газета, клей, пинцет и почти готовый самолёт. Корпус блестит медными стойками от Клинта.\"/speak Harvey \"Так. Ты держишь крыло. Я клею. Не дыши.$a\"/pause 600/speak Harvey \"Нет, дыши. Но ровно.$h\"/message \"Он работает пинцетом так же, как на перевязке: быстро и очень бережно. Батарейка от Мару встаёт в нос самолёта с тихим щелчком.\"/speak Harvey \"Три года она лежала в ящике. Мне всё время казалось, что спешить некуда. А потом появился кто-то, кому хочется её показать.$l\"/message \"Он берёт тонкую кисточку и задумчиво смотрит на пустой борт.\"/speak Harvey \"Как назовём?$0\"/quickQuestion #Подписать вместе#Пусть будет мой позывной#Назвать её «Клиника»(break)message \"Он держит кисточку, ты — его руку. Буквы выходят чуть кривые и от этого лучше.\"\\speak Harvey \"Две подписи. Как на важном документе. Это и есть важный документ.$l\"\\action AddMail Current HarveyRomance_ModelName_Together Received(break)message \"На борту появляется твой позывной. Харви выводит его аккуратнее, чем рецепты.\"\\speak Harvey \"Теперь если она улетит — все будут знать, к кому возвращаться.$h\"\\action AddMail Current HarveyRomance_ModelName_Callsign Received(break)speak Harvey \"«Клиника»? Самолёт, который всё время возвращается туда, где его ждут. …Ладно. Это слишком точно.$h\"\\action AddMail Current HarveyRomance_ModelName_Clinic Received/speak Harvey \"В воскресенье, если будет ясно, — к озеру. Первый полёт. Я уже нервничаю.$u\"/friendship Harvey 35/action AddMail Current HarveyRomance_ModelBuilt Received/addConversationTopic HarveyRomance_Model 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Courtship C2/S3b/I1/W2 — крыльцо фермы",
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "HarveyOverhaulCourtship.C2_Callsigns/Weather sunny/Time 2100 2400/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C1_Frequency/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_RadioWait/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C2_Callsigns/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/{{HO_FarmX}} {{HO_FarmY0}}/farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey -1000 -1000 0/ignoreEventTileOffset/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_Callsign 5#AddMail Current {{ModId}}_mailModelParts tomorrow#AddFriendshipPoints Harvey 35/pause 800/message \"Вечер. Ты сидишь на крыльце, и рация на ступеньке вдруг трещит: «Поле-один, это Клиника. Приём».\"/emote farmer 8/pause 400/message \"Голос знакомый. Слишком близкий для рации.\"/warp Harvey {{HO_FarmX}} {{HO_FarmY5}}/move Harvey 0 -2 0 false/emote Harvey 32/speak Harvey \"Добрый вечер. Я звонил с тропинки. Хотел проверить дальность.$h#$b#Дальность — отличная. А идти до тебя — всё равно приятнее.$l\"/speak Harvey \"У пилотов в эфире позывные. Чтобы не путать, кто говорит. «Клиника» — это я, тут без фантазии.$0\"/speak Harvey \"А ты? «Поле-один» я придумал сам, но это черновик. Выбери свой.$l\"/quickQuestion #Поле-один#Ромашка#Придумай сам(break)action AddMail Current HarveyRomance_Callsign_Field Received\\speak Harvey \"Поле-один. Хорошо. Звучит, как будто у тебя своя взлётная полоса. Так и есть, кстати, — между тыквами.$h\"(break)action AddMail Current HarveyRomance_Callsign_Daisy Received\\speak Harvey \"Ромашка. Ромашка, это Клиника. …Да, теперь я буду улыбаться каждый раз, когда это говорю.$l\"(break)action AddMail Current HarveyRomance_Callsign_Sun Received\\message \"Харви открывает рот, закрывает. Уши у него краснеют даже в темноте.\"\\speak Harvey \"…Солнце. Если в эфире услышат — скажу, что это про погоду.$l\"/speak Harvey \"Есть ещё одно дело. У меня в ящике полмодели самолёта. Третий год. Не хватает деталей — и, кажется, второй пары рук.$s\"/speak Harvey \"Напишу завтра, что нужно. Спокойной ночи. Конец связи.$l\"/friendship Harvey 35/action AddMail Current {{ModId}}_mailModelParts tomorrow/addConversationTopic HarveyRomance_Callsign 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end",
+        "HarveyOverhaulCourtship.S3b_Coffee/Time 0900 1200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S3_Dinner/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S3b_Coffee/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/{{HO_FarmX}} {{HO_FarmY0}}/farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey -1000 -1000 0/ignoreEventTileOffset/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_Morning 3#AddItem (O)395 1/pause 500/message \"Утро. Ты только вышла с лейкой, как у калитки появляется Харви — с саженцем под мышкой и двумя кружками кофе.\"/warp Harvey {{HO_FarmX}} {{HO_FarmY5}}/move Harvey 0 -2 0 false/speak Harvey \"Джоджа в порядке. Перелом без смещения, гипс, неделя на костылях. Всю ночь шутил, что лестница была с ним не согласна.$0\"/speak Harvey \"Вчера я тебе задолжал вечер. Сегодня — утро. Оно маленькое, но целиком твоё.$l\"/message \"Он ставит кружку тебе в руки, а сам молча забирает лейку.\"/speak Harvey \"Грядку покажешь сама. Я учусь.$h\"/quickQuestion #Отдать лейку#Работать вместе#Сказать, что не сердишься(break)message \"Ты садишься на ступеньку с кофе и смотришь, как доктор Харви сосредоточенно поливает пастернак.\"\\speak Harvey \"Режим полива — как капельница: равномерно и без суеты. Видишь? Я быстро учусь.$h\"\\friendship Harvey 30(break)message \"Вы поливаете ряды вдвоём — он с лейкой, ты с кружкой и указаниями.\"\\speak Harvey \"Это лучшая смена за неделю. И самая короткая.$l\"\\friendship Harvey 35(break)speak Harvey \"Знаю. В этом и дело. Ты не сердишься — а мне всё равно хочется, чтобы ты не ждала зря.$s\"\\speak Harvey \"Я не могу не бежать на вызов. Но могу прийти утром. Это я могу всегда.$l\"\\friendship Harvey 35/addItem (O)395 1/addConversationTopic HarveyRomance_Morning 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end",
+        "HarveyOverhaulCourtship.I1_Dinner/Time 1800 2100/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_NoteDinner Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.I1_Dinner": "continue/{{HO_FarmX}} {{HO_FarmY0}}/farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey -1000 -1000 0/ignoreEventTileOffset/skippable/setSkipActions AddFriendshipPoints Harvey 25#RemoveMail Current HarveyRomance_NoteDinner/pause 500/warp Harvey {{HO_FarmX}} {{HO_FarmY5}}/move Harvey 0 -2 0 false/message \"Харви поднимается к крыльцу с кастрюлей, укутанной в полотенце. Твоя записка торчит из нагрудного кармана.\"/speak Harvey \"Получил приглашение. Явился. Суп с собой — на случай, если хозяйка забыла, что приглашала на ужин.$h\"/message \"Вы едите прямо на ступеньках, передавая друг другу одну ложку, потому что вторую он, конечно, забыл.\"/speak Harvey \"Записку я сохраню. У меня уже целая стопка. Мару говорит, это начало картотеки.$l\"/friendship Harvey 25/action RemoveMail Current HarveyRomance_NoteDinner/globalFade/viewport -1000 -1000/end",
+        "HarveyOverhaulCourtship.W2_QuietLanguage/Time 1900 2200/Friendship Harvey 3250/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N7_Key/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.W2_QuietLanguage/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/{{HO_FarmX}} {{HO_FarmY0}}/farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/ignoreEventTileOffset/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_Signals Received#AddConversationTopic HarveyRomance_Signals 7#AddFriendshipPoints Harvey 40/pause 600/message \"Вечер на крыльце. Харви сидит ступенькой ниже, твоя ладонь у него на плече.\"/speak Harvey \"Помнишь, как я учился читать твои сигналы? «Я в порядке» с таким лицом, что впору вызывать скорую.$h\"/speak Harvey \"Давай придумаем свои. Без слов. Чтобы даже на празднике, при всех, я знал.$l\"/message \"Он берёт твою руку и показывает: сжать дважды — «я в порядке». Три раза — «забери меня отсюда».\"/speak Harvey \"И ещё. Ладонь на сердце — «люблю, не говори вслух». Это для тех случаев, когда я на смене и рядом Мару.$h\"/speak Harvey \"Третий сигнал — твой. Придумай сама.$l\"/quickQuestion #Постучать его по плечу#Поправить ему воротник#Подмигнуть(break)speak Harvey \"Два раза по плечу — «посмотри на меня». Хорошо. Я и так смотрю. Но теперь будет повод.$l\"\\action AddMail Current HarveyRomance_Signal_Shoulder Received(break)speak Harvey \"Поправить воротник — «я рядом, выдохни». Ты так делаешь каждое утро. Оказывается, это был сигнал.$l\"\\action AddMail Current HarveyRomance_Signal_Collar Received(break)speak Harvey \"Подмигнуть… Это будет значить «сбегаем отсюда»? Принято. Меня давно никто не похищал с праздников.$h\"\\action AddMail Current HarveyRomance_Signal_Wink Received/message \"Он сжимает твою руку дважды. Ты отвечаешь тем же.\"/speak Harvey \"Связь установлена.$l\"/friendship Harvey 40/action AddMail Current HarveyRomance_Signals Received/addConversationTopic HarveyRomance_Signals 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Courtship C4 — «Запуск» (Mountain)",
+      "Action": "EditData",
+      "Target": "Data/Events/Mountain",
+      "Entries": {
+        "HarveyOverhaulCourtship.C4_Launch/DayOfWeek Sun/Season Spring Summer Fall/Weather sunny/Time 1000 1700/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C3_Model/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C4_Launch/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/45 20/farmer 44 21 1 Harvey 45 21 1/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_ModelCrashed Received#AddConversationTopic HarveyRomance_Pilot 5/viewport 45 20 true/pause 600/message \"Берег горного озера. Ветра почти нет. Харви трижды проверяет крылья, батарейку и винт.\"/speak Harvey \"Взлётная полоса свободна. Погода лётная. Пилот… пилот волнуется, как на экзамене.$u\"/message \"Он поднимает самолёт над головой — и отпускает. Моторчик жужжит, модель набирает высоту.\"/emote Harvey 32/pause 900/message \"Она делает широкий круг над водой. Солнце вспыхивает на медных стойках. Харви не дышит.\"/pause 800/message \"…А потом моторчик чихает, и модель плавно, почти изящно садится прямо в озеро.\"/playSound dropItemInWater/pause 600/faceDirection Harvey 3/emote Harvey 28/message \"Харви замирает. Ты смотришь на него — и не выдерживаешь, смеёшься. Через секунду смеётся и он.\"/speak Harvey \"Знаешь, раньше я бы три дня это переживал. Разбирал, где ошибся. Не спал.$h\"/speak Harvey \"А сейчас думаю только об одном: ты уже стоишь в воде по щиколотку. Зачем?$a\"/quickQuestion #Достать модель#Сказать, что починим#Поцеловать его, пока он смеётся(break)speak Harvey \"Нет. Ты — на берег. Это приказ лётного состава.$a\"\\message \"Он, конечно, лезет в воду сам — в брюках и ботинках — и возвращается с мокрым самолётом и абсолютно счастливым лицом.\"\\speak Harvey \"Крыло цело. Мотор просушим. Пилот промок, но доволен.$h\"\\friendship Harvey 30(break)speak Harvey \"Починим. У нас есть клей, пинцет и одна пара очень терпеливых рук. Твоих.$l\"\\friendship Harvey 30(break)message \"Ты целуешь его прямо посреди смеха. Он замолкает на полуслове.\"\\speak Harvey \"…Неудачный полёт. Самый лучший неудачный полёт в моей жизни.$l\"\\friendship Harvey 40/speak Harvey \"Пусть сохнет на подоконнике. Падать, оказывается, не страшно. Если рядом кто-то смеётся.$l\"/action AddMail Current HarveyRomance_ModelCrashed Received/addConversationTopic HarveyRomance_Pilot 5/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Courtship S2 — «Сплетни» (Town SVE)",
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "HarveyOverhaulCourtship.S2_Gossip/Time 0900 1500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N3_ContactCard/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_Rules/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S2_Gossip/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/38 57/farmer 37 58 1 Harvey 38 58 3 Pam 39 58 3 Emily 41 58 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_Public Received#AddConversationTopic HarveyRomance_Public 7#AddMail Current {{ModId}}_mailNoteThanksRecipe tomorrow/viewport 38 57 true/pause 500/message \"Харви вышел проводить тебя до крыльца клиники. Пэм как раз идёт мимо — и громко, на всю площадь, «по секрету» спрашивает:\"/speak Pam \"Док! А правду говорят, что вы с фермершей того… встречаетесь?$h\"/speak Emily \"Пэм! Ну нельзя же так в лоб! …Хотя мне тоже интересно.$h\"/emote Harvey 16/pause 600/message \"Харви краснеет до ушей. Секунду молчит. А потом берёт тебя за руку — при всех.\"/speak Harvey \"Да. Это она.$l#$b#Есть вопросы — запись в регистратуре.$h\"/speak Pam \"Ха! Я так и знала. Гас мне должен пиво.$h\"/quickQuestion #Сжать его руку#Рассмеяться#Уйти, смутившись(break)message \"Ты сжимаешь его ладонь. Он сжимает в ответ — дважды, будто это пароль.\"\\speak Harvey \"Вот. Теперь официально.$l\"\\friendship Harvey 35(break)emote farmer 28\\speak Emily \"Вы такие милые, что у меня аура порозовела.$h\"\\speak Harvey \"Это… медицински необъяснимо. Но приятно.$h\"\\friendship Harvey 30(break)move farmer -2 0 3 false\\pause 300\\move Harvey -1 0 3 false\\faceDirection farmer 1\\speak Harvey \"Прости. Я не спросил, готова ли ты. Это было нечестно.$s\"\\speak Harvey \"Но я не жалею, что сказал. Пусть знают. Если тебе нужно время — я подожду. Только больше не буду делать вид, что ты просто пациентка.$l\"\\friendship Harvey 30/action AddMail Current HarveyRomance_Public Received/action AddMail Current {{ModId}}_mailNoteThanksRecipe tomorrow/addConversationTopic HarveyRomance_Public 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Courtship S3 — «Сорванный ужин» (Saloon)",
+      "Action": "EditData",
+      "Target": "Data/Events/Saloon",
+      "Entries": {
+        "HarveyOverhaulCourtship.S3_Dinner/DayOfWeek Fri/Time 1800 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_MAIL Current {{ModId}}_mailDinnerInvite Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S3_Dinner/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "Saloon1/15 21/farmer 14 21 1 Harvey 16 21 3 Maru -1000 -1000 0/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_Dinner 3#AddItem (O)220 1/viewport 15 21 true/pause 500/message \"Пятница, салун. Харви в пиджаке, который явно надевает раз в год, и с меню, которое явно выучил заранее.\"/speak Harvey \"Я заказал нам суп, рыбу и десерт. И ещё раз проверил, что пейджер выключен. Дважды. Сегодня я не врач.$h\"/message \"Гас ставит на стол суп. Вы успеваете сделать по две ложки.\"/playSound doorClose/warp Maru 14 23/pause 300/emote Maru 16/speak Maru \"Доктор! Простите! У Джоджи упала лестница на ферме — нога, кажется, перелом. Я уже позвонила, но нужны вы.$s\"/faceDirection Harvey 2/pause 400/faceDirection Harvey 3/speak Harvey \"Иду.$a\"/message \"Он уже на ногах. Снимает с шеи шарф и кладёт рядом с твоей тарелкой.\"/speak Harvey \"Прости. Это вызов. Шарф — залог, что я вернусь. За ним, и за тобой.$s\"/warp Maru -1000 -1000/move Harvey 0 1 2 false/move Harvey -2 0 3 false/move Harvey 0 1 2 false/playSound doorClose/warp Harvey -1000 -1000/pause 800/message \"Ты сидишь одна над остывающим супом. Через минуту Гас ставит перед тобой кусок шоколадного торта.\"/message \"«За счёт доктора, — говорит Гас. — Он ещё неделю назад попросил: если ужин сорвётся, принести десерт и сказать, что ему очень жаль».\"/quickQuestion #Доесть торт и подождать#Забрать шарф и пойти домой#Попросить Гаса завернуть торт для Харви(break)message \"Ты ждёшь до закрытия. Харви не возвращается, но шарф пахнет кофе и антисептиком, и почему-то от этого не обидно.\"\\friendship Harvey 20(break)message \"Ты наматываешь его шарф — в два оборота, как он учил — и выходишь в ночь.\"\\friendship Harvey 20(break)message \"Гас заворачивает второй кусок в бумагу. «Отнесу ему утром», — подмигивает он.\"\\friendship Harvey 30\\friendship Gus 20/addItem (O)220 1/addConversationTopic HarveyRomance_Dinner 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Courtship C5 — «Взлёт» (рация: True, её страх высоты: True)",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_AdventurerSummit",
+      "Entries": {
+        "HarveyOverhaulCourtship.C5_Flight/Season Summer Fall/Weather sunny/Time 1600 1900/Friendship Harvey 3000/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C4_Launch/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_BalloonReady Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C5_Flight/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/34 25/farmer 33 26 1 Harvey 35 26 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_Flew Received#AddMail Current {{ModId}}_mailSky tomorrow#AddConversationTopic HarveyRomance_Sky 7#marilynsinister.HarveyStressMeter_ComfortRelief 20/viewport 34 25 true/pause 600/message \"Закат на плато. Ты сказала, что это «просто прогулка». За краем плато покачивается полосатый купол воздушного шара.\"/emote Harvey 16/pause 400/speak Harvey \"Это… это шар. Настоящий. С корзиной.$u\"/message \"Он бледнеет. Боится высоты всю жизнь — и всю жизнь хочет туда.\"/speak Harvey \"Ты это устроила. Льюис, Эмили, все эти секреты… Я думал, ты готовишь мне свитер.$s\"/globalFade/viewport 34 22 true/pause 400/message \"Корзина отрывается от земли. Ты вцепляешься в борт — высота всегда была твоим страхом. Ты сама записала это в анкету.\"/message \"Харви тут же накрывает твою руку своей. Сам он бледный, как халат, но голос ровный — рабочий.\"/speak Harvey \"Смотри на меня. Не вниз — на меня. Я здесь. Ты помнишь, что я обещал по анкете? Лестницы, крыша, ветки… и небо, оказывается, тоже.$l\"/pause 600/message \"Шар поднимается. Внизу золотится вся долина: озеро, где утонула модель, крыша клиники, твоё поле.\"/speak Harvey \"Я всю жизнь хотел в небо. Оказывается, мне нужен был кто-то, ради кого не страшно.$l\"/quickQuestion #Держать его руку#Показать на ферму внизу#Сказать позывной в рацию(break)message \"Ты переплетаешь пальцы с его. Он держится так, что белеют костяшки, — и постепенно отпускает.\"\\speak Harvey \"Вот. Пульс уже сто. Было сто сорок. Ты лучше любого бета-блокатора.$h\"\\friendship Harvey 40(break)message \"Ты показываешь вниз: крошечные грядки, крыша дома, точка-курятник. Где-то там — клиника.\"\\speak Harvey \"Отсюда всё такое маленькое. И всё равно я сразу нахожу, где ты живёшь. Где мы живём.$l\"\\friendship Harvey 40(break)message \"Ты достаёшь рацию и нажимаешь кнопку: «Клиника, это я. Приём».\"\\message \"Он смотрит на тебя — стоящую в полушаге — и всё равно отвечает в свою.\"\\speak Harvey \"Клиника на связи. Слышу тебя отлично. Вижу тоже. Конец связи — никогда.$l\"\\friendship Harvey 45/pause 400/speak Harvey \"Запиши в карту: «Пилот поднялся в небо. Второй пилот держал его за руку». Это главное, остальное неважно.$l\"/action AddMail Current HarveyRomance_Flew Received/action AddMail Current {{ModId}}_mailSky tomorrow/action marilynsinister.HarveyStressMeter_ComfortRelief 20/addConversationTopic HarveyRomance_Sky 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasFlag |contains=HarveyRomance_Radio": "true",
+        "HasFlag |contains=HarveyRomance_Fear_Height": "true"
+      }
+    },
+    {
+      "LogName": "Courtship C5 — «Взлёт» (рация: True, её страх высоты: False)",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_AdventurerSummit",
+      "Entries": {
+        "HarveyOverhaulCourtship.C5_Flight/Season Summer Fall/Weather sunny/Time 1600 1900/Friendship Harvey 3000/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C4_Launch/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_BalloonReady Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C5_Flight/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/34 25/farmer 33 26 1 Harvey 35 26 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_Flew Received#AddMail Current {{ModId}}_mailSky tomorrow#AddConversationTopic HarveyRomance_Sky 7#marilynsinister.HarveyStressMeter_ComfortRelief 20/viewport 34 25 true/pause 600/message \"Закат на плато. Ты сказала, что это «просто прогулка». За краем плато покачивается полосатый купол воздушного шара.\"/emote Harvey 16/pause 400/speak Harvey \"Это… это шар. Настоящий. С корзиной.$u\"/message \"Он бледнеет. Боится высоты всю жизнь — и всю жизнь хочет туда.\"/speak Harvey \"Ты это устроила. Льюис, Эмили, все эти секреты… Я думал, ты готовишь мне свитер.$s\"/globalFade/viewport 34 22 true/pause 400/message \"Корзина отрывается от земли. Харви вцепляется в борт, потом — в твою руку. Пальцы ледяные.\"/speak Harvey \"Я в порядке. Я абсолютно… нет. Не в порядке. Держи меня, пожалуйста.$u\"/pause 600/message \"Шар поднимается. Внизу золотится вся долина: озеро, где утонула модель, крыша клиники, твоё поле.\"/speak Harvey \"Я всю жизнь хотел в небо. Оказывается, мне нужен был кто-то, ради кого не страшно.$l\"/quickQuestion #Держать его руку#Показать на ферму внизу#Сказать позывной в рацию(break)message \"Ты переплетаешь пальцы с его. Он держится так, что белеют костяшки, — и постепенно отпускает.\"\\speak Harvey \"Вот. Пульс уже сто. Было сто сорок. Ты лучше любого бета-блокатора.$h\"\\friendship Harvey 40(break)message \"Ты показываешь вниз: крошечные грядки, крыша дома, точка-курятник. Где-то там — клиника.\"\\speak Harvey \"Отсюда всё такое маленькое. И всё равно я сразу нахожу, где ты живёшь. Где мы живём.$l\"\\friendship Harvey 40(break)message \"Ты достаёшь рацию и нажимаешь кнопку: «Клиника, это я. Приём».\"\\message \"Он смотрит на тебя — стоящую в полушаге — и всё равно отвечает в свою.\"\\speak Harvey \"Клиника на связи. Слышу тебя отлично. Вижу тоже. Конец связи — никогда.$l\"\\friendship Harvey 45/pause 400/speak Harvey \"Запиши в карту: «Пилот поднялся в небо. Второй пилот держал его за руку». Это главное, остальное неважно.$l\"/action AddMail Current HarveyRomance_Flew Received/action AddMail Current {{ModId}}_mailSky tomorrow/action marilynsinister.HarveyStressMeter_ComfortRelief 20/addConversationTopic HarveyRomance_Sky 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasFlag |contains=HarveyRomance_Radio": "true",
+        "HasFlag |contains=HarveyRomance_Fear_Height": "false"
+      }
+    },
+    {
+      "LogName": "Courtship C5 — «Взлёт» (рация: False, её страх высоты: True)",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_AdventurerSummit",
+      "Entries": {
+        "HarveyOverhaulCourtship.C5_Flight/Season Summer Fall/Weather sunny/Time 1600 1900/Friendship Harvey 3000/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C4_Launch/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_BalloonReady Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C5_Flight/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/34 25/farmer 33 26 1 Harvey 35 26 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_Flew Received#AddMail Current {{ModId}}_mailSky tomorrow#AddConversationTopic HarveyRomance_Sky 7#marilynsinister.HarveyStressMeter_ComfortRelief 20/viewport 34 25 true/pause 600/message \"Закат на плато. Ты сказала, что это «просто прогулка». За краем плато покачивается полосатый купол воздушного шара.\"/emote Harvey 16/pause 400/speak Harvey \"Это… это шар. Настоящий. С корзиной.$u\"/message \"Он бледнеет. Боится высоты всю жизнь — и всю жизнь хочет туда.\"/speak Harvey \"Ты это устроила. Льюис, Эмили, все эти секреты… Я думал, ты готовишь мне свитер.$s\"/globalFade/viewport 34 22 true/pause 400/message \"Корзина отрывается от земли. Ты вцепляешься в борт — высота всегда была твоим страхом. Ты сама записала это в анкету.\"/message \"Харви тут же накрывает твою руку своей. Сам он бледный, как халат, но голос ровный — рабочий.\"/speak Harvey \"Смотри на меня. Не вниз — на меня. Я здесь. Ты помнишь, что я обещал по анкете? Лестницы, крыша, ветки… и небо, оказывается, тоже.$l\"/pause 600/message \"Шар поднимается. Внизу золотится вся долина: озеро, где утонула модель, крыша клиники, твоё поле.\"/speak Harvey \"Я всю жизнь хотел в небо. Оказывается, мне нужен был кто-то, ради кого не страшно.$l\"/quickQuestion #Держать его руку#Показать на ферму внизу(break)message \"Ты переплетаешь пальцы с его. Он держится так, что белеют костяшки, — и постепенно отпускает.\"\\speak Harvey \"Вот. Пульс уже сто. Было сто сорок. Ты лучше любого бета-блокатора.$h\"\\friendship Harvey 40(break)message \"Ты показываешь вниз: крошечные грядки, крыша дома, точка-курятник. Где-то там — клиника.\"\\speak Harvey \"Отсюда всё такое маленькое. И всё равно я сразу нахожу, где ты живёшь. Где мы живём.$l\"\\friendship Harvey 40/pause 400/speak Harvey \"Запиши в карту: «Пилот поднялся в небо. Второй пилот держал его за руку». Это главное, остальное неважно.$l\"/action AddMail Current HarveyRomance_Flew Received/action AddMail Current {{ModId}}_mailSky tomorrow/action marilynsinister.HarveyStressMeter_ComfortRelief 20/addConversationTopic HarveyRomance_Sky 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasFlag |contains=HarveyRomance_Radio": "false",
+        "HasFlag |contains=HarveyRomance_Fear_Height": "true"
+      }
+    },
+    {
+      "LogName": "Courtship C5 — «Взлёт» (рация: False, её страх высоты: False)",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_AdventurerSummit",
+      "Entries": {
+        "HarveyOverhaulCourtship.C5_Flight/Season Summer Fall/Weather sunny/Time 1600 1900/Friendship Harvey 3000/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C4_Launch/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_BalloonReady Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C5_Flight/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/34 25/farmer 33 26 1 Harvey 35 26 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_Flew Received#AddMail Current {{ModId}}_mailSky tomorrow#AddConversationTopic HarveyRomance_Sky 7#marilynsinister.HarveyStressMeter_ComfortRelief 20/viewport 34 25 true/pause 600/message \"Закат на плато. Ты сказала, что это «просто прогулка». За краем плато покачивается полосатый купол воздушного шара.\"/emote Harvey 16/pause 400/speak Harvey \"Это… это шар. Настоящий. С корзиной.$u\"/message \"Он бледнеет. Боится высоты всю жизнь — и всю жизнь хочет туда.\"/speak Harvey \"Ты это устроила. Льюис, Эмили, все эти секреты… Я думал, ты готовишь мне свитер.$s\"/globalFade/viewport 34 22 true/pause 400/message \"Корзина отрывается от земли. Харви вцепляется в борт, потом — в твою руку. Пальцы ледяные.\"/speak Harvey \"Я в порядке. Я абсолютно… нет. Не в порядке. Держи меня, пожалуйста.$u\"/pause 600/message \"Шар поднимается. Внизу золотится вся долина: озеро, где утонула модель, крыша клиники, твоё поле.\"/speak Harvey \"Я всю жизнь хотел в небо. Оказывается, мне нужен был кто-то, ради кого не страшно.$l\"/quickQuestion #Держать его руку#Показать на ферму внизу(break)message \"Ты переплетаешь пальцы с его. Он держится так, что белеют костяшки, — и постепенно отпускает.\"\\speak Harvey \"Вот. Пульс уже сто. Было сто сорок. Ты лучше любого бета-блокатора.$h\"\\friendship Harvey 40(break)message \"Ты показываешь вниз: крошечные грядки, крыша дома, точка-курятник. Где-то там — клиника.\"\\speak Harvey \"Отсюда всё такое маленькое. И всё равно я сразу нахожу, где ты живёшь. Где мы живём.$l\"\\friendship Harvey 40/pause 400/speak Harvey \"Запиши в карту: «Пилот поднялся в небо. Второй пилот держал его за руку». Это главное, остальное неважно.$l\"/action AddMail Current HarveyRomance_Flew Received/action AddMail Current {{ModId}}_mailSky tomorrow/action marilynsinister.HarveyStressMeter_ComfortRelief 20/addConversationTopic HarveyRomance_Sky 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasFlag |contains=HarveyRomance_Radio": "false",
+        "HasFlag |contains=HarveyRomance_Fear_Height": "false"
+      }
+    },
+    {
+      "LogName": "Courtship S1 — «Рецепт» (Beach)",
+      "Action": "EditData",
+      "Target": "Data/Events/Beach",
+      "Entries": {
+        "HarveyOverhaulCourtship.S1_Beach/Time 1000 1900/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_Rx_Beach Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S1_Beach": "continue/40 23/farmer 40 23 0 Harvey 41 23 0/skippable/setSkipActions AddFriendshipPoints Harvey 20#RemoveMail Current HarveyRomance_Rx_Beach/viewport 40 23 true/pause 500/message \"Вы сидите на тёплом песке. Волны набегают и отступают. Харви вытряхивает песок из ботинка — уже второй раз.\"/speak Harvey \"Я выписал этот рецепт себе, если честно. Тебе просто повезло быть в нём побочным эффектом.$h\"/speak Harvey \"Курс на сегодня пройден. Следующий рецепт выпишу, когда соскучусь. То есть скоро.$l\"/friendship Harvey 20/action RemoveMail Current HarveyRomance_Rx_Beach/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Courtship S1 — «Рецепт» (Forest)",
+      "Action": "EditData",
+      "Target": "Data/Events/Forest",
+      "Entries": {
+        "HarveyOverhaulCourtship.S1_Forest/Time 1000 1900/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_Rx_Forest Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S1_Forest": "continue/49 14/farmer 48 14 1 Harvey 49 14 3/skippable/setSkipActions AddFriendshipPoints Harvey 20#RemoveMail Current HarveyRomance_Rx_Forest/viewport 49 14 true/pause 500/message \"Лес шумит. Харви показывает на птицу и тут же признаётся, что понятия не имеет, как она называется.\"/speak Harvey \"Папа бы знал. А я знаю только, что у тебя сейчас очень спокойное лицо. Это мой любимый симптом.$l\"/speak Harvey \"Курс на сегодня пройден. Следующий рецепт выпишу, когда соскучусь. То есть скоро.$l\"/friendship Harvey 20/action RemoveMail Current HarveyRomance_Rx_Forest/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Courtship S1 — «Рецепт» (Town)",
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "HarveyOverhaulCourtship.S1_Fountain/Time 1000 1900/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_Rx_Fountain Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S1_Fountain": "continue/26 28/farmer 26 30 0 Harvey 27 29 2/skippable/setSkipActions AddFriendshipPoints Harvey 20#RemoveMail Current HarveyRomance_Rx_Fountain/viewport 26 28 true/pause 500/message \"У фонтана тот же сквозняк. Харви молча поправляет на тебе шарф — в два оборота, как в первый раз.\"/speak Harvey \"Мороженое — тебе. Шарф — тоже тебе. Мне — смотреть. Справедливо.$h\"/speak Harvey \"Курс на сегодня пройден. Следующий рецепт выпишу, когда соскучусь. То есть скоро.$l\"/friendship Harvey 20/action RemoveMail Current HarveyRomance_Rx_Fountain/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Courtship S1 — «Рецепт» (Mountain)",
+      "Action": "EditData",
+      "Target": "Data/Events/Mountain",
+      "Entries": {
+        "HarveyOverhaulCourtship.S1_Mountain/Time 1000 1900/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_Rx_Mountain Received/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S1_Mountain": "continue/45 20/farmer 44 21 1 Harvey 45 21 3/skippable/setSkipActions AddFriendshipPoints Harvey 20#RemoveMail Current HarveyRomance_Rx_Mountain/viewport 45 20 true/pause 500/message \"Озеро спокойное, как зеркало. Харви считает круги от брошенного камушка вслух — как пульс.\"/speak Harvey \"Семь. Хороший результат. Ты тоже хороший результат. Самый лучший в моей практике.$l\"/speak Harvey \"Курс на сегодня пройден. Следующий рецепт выпишу, когда соскучусь. То есть скоро.$l\"/friendship Harvey 20/action RemoveMail Current HarveyRomance_Rx_Mountain/globalFade/viewport -1000 -1000/end"
+      }
+    },
+    {
+      "LogName": "Courtship I2 — «Похищение с дежурства» (после M5: True)",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "Entries": {
+        "HarveyOverhaulCourtship.I2_Kidnap/Weather sunny/Time 1300 1500/Friendship Harvey 2500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery PLAYER_HAS_ITEM Current (O){{ModId}}_PicnicBasket/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.I2_Kidnap/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "Hospital_Ambient/10 15/Harvey 10 14 2 Maru 13 16 2 farmer -1000 -1000 0/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_Kidnap 3#RemoveItem (O){{ModId}}_PicnicBasket 1#AddFriendshipPoints Harvey 35#marilynsinister.HarveyStressMeter_ComfortRelief 10/viewport 10 15 true/pause 400/playSound doorOpen/warp farmer 10 19/faceDirection farmer 0/move farmer 0 -3 0 false/pause 300/speak Harvey \"О, ты. У меня очередь до трёх, потом отчёты, потом…$0\"/message \"Ты ставишь на стойку корзину для пикника. Из-под салфетки пахнет хлебом.\"/speak Harvey \"Нет. Нет-нет. Я на дежурстве. Ты меня не уведёшь.$a\"/quickQuestion #Мару справится#Ты обещал, что я главная, когда ты на нуле#Я принесла твои пикули(break)speak Maru \"Справлюсь. Доктор, вы мне сами сказали: «отдыхающий врач — полезный врач». Я записала.$h\"\\speak Harvey \"Я сказал это про тебя!$a\"\\speak Maru \"А применяю к вам. Идите.$h\"(break)speak Harvey \"Я обещал, что я главный, когда ты на нуле.$a\"\\message \"Ты молча смотришь на его воспалённые глаза и третью чашку кофе на стойке.\"\\speak Harvey \"…Справедливо. Договор работает в обе стороны. Я сам его составил, сам и попался.$s\"(break)message \"Ты приоткрываешь корзину. Сверху, на самом видном месте, — банка маринованных огурцов.\"\\speak Harvey \"…Это нечестный аргумент. Это шантаж. Это работает.$h\"/speak Harvey \"Пять минут.$a#$b#…Ладно, двадцать. И запомни: это ты меня уводишь. Я не виноват.$h\"/removeItem (O){{ModId}}_PicnicBasket 1/globalFade/changeLocation Town/warp farmer 26 30/warp Harvey 27 29/faceDirection farmer 0/faceDirection Harvey 2/viewport 26 28 true/pause 500/message \"Вы сидите на бортике фонтана. Харви ест бутерброд и впервые за день не смотрит на часы.\"/speak Harvey \"Знаешь, что самое странное? Мне не тревожно. Клиника за углом, Мару справится, а я здесь. Так можно, оказывается.$l\"/friendship Harvey 35/action marilynsinister.HarveyStressMeter_ComfortRelief 10/addConversationTopic HarveyRomance_Kidnap 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasSeenEvent |contains=HarveyOverhaulMarriage.M5_Overworked": "true"
+      }
+    },
+    {
+      "LogName": "Courtship I2 — «Похищение с дежурства» (после M5: False)",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "Entries": {
+        "HarveyOverhaulCourtship.I2_Kidnap/Weather sunny/Time 1300 1500/Friendship Harvey 2500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married/GameStateQuery PLAYER_HAS_ITEM Current (O){{ModId}}_PicnicBasket/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.I2_Kidnap/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "Hospital_Ambient/10 15/Harvey 10 14 2 Maru 13 16 2 farmer -1000 -1000 0/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_Kidnap 3#RemoveItem (O){{ModId}}_PicnicBasket 1#AddFriendshipPoints Harvey 35#marilynsinister.HarveyStressMeter_ComfortRelief 10/viewport 10 15 true/pause 400/playSound doorOpen/warp farmer 10 19/faceDirection farmer 0/move farmer 0 -3 0 false/pause 300/speak Harvey \"О, ты. У меня очередь до трёх, потом отчёты, потом…$0\"/message \"Ты ставишь на стойку корзину для пикника. Из-под салфетки пахнет хлебом.\"/speak Harvey \"Нет. Нет-нет. Я на дежурстве. Ты меня не уведёшь.$a\"/quickQuestion #Мару справится#Я принесла твои пикули(break)speak Maru \"Справлюсь. Доктор, вы мне сами сказали: «отдыхающий врач — полезный врач». Я записала.$h\"\\speak Harvey \"Я сказал это про тебя!$a\"\\speak Maru \"А применяю к вам. Идите.$h\"(break)message \"Ты приоткрываешь корзину. Сверху, на самом видном месте, — банка маринованных огурцов.\"\\speak Harvey \"…Это нечестный аргумент. Это шантаж. Это работает.$h\"/speak Harvey \"Пять минут.$a#$b#…Ладно, двадцать. И запомни: это ты меня уводишь. Я не виноват.$h\"/removeItem (O){{ModId}}_PicnicBasket 1/globalFade/changeLocation Town/warp farmer 26 30/warp Harvey 27 29/faceDirection farmer 0/faceDirection Harvey 2/viewport 26 28 true/pause 500/message \"Вы сидите на бортике фонтана. Харви ест бутерброд и впервые за день не смотрит на часы.\"/speak Harvey \"Знаешь, что самое странное? Мне не тревожно. Клиника за углом, Мару справится, а я здесь. Так можно, оказывается.$l\"/friendship Harvey 35/action marilynsinister.HarveyStressMeter_ComfortRelief 10/addConversationTopic HarveyRomance_Kidnap 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasSeenEvent |contains=HarveyOverhaulMarriage.M5_Overworked": "false"
+      }
+    },
+    {
+      "LogName": "Courtship W3 — «Его плохая неделя» (Dance)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulCourtship.W3_MarriedBadWeek/Time 1800 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMarriage_BadDay\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_LetHimGo\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_HeStayed\"/GameStateQuery ANY \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekMarried Any\" \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekStreakMarried Any\" \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekMonthMarried Any\"/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.W3_MarriedBadWeek/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/12 7/farmer 11 7 1 Harvey 13 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_HisBadWeek 3#marilynsinister.HarveyStressMeter_ComfortRelief 15/pause 600/message \"Харви приходит домой поздно. Пальто висит криво, сумку он ставит мимо крючка — и даже не замечает.\"/speak Harvey \"Привет. Как твой день? Ты ела? Как спина? Как…$0\"/message \"Ты закрываешь ему рот ладонью. Он моргает над твоими пальцами.\"/message \"Ты молча снимаешь с него пальто и укладываешь на диван.\"/speak Harvey \"…Это нарушение протокола. Это я тут укладываю людей.$a\"/message \"Ты качаешь головой.\"/speak Harvey \"«Сегодня я главная». Да. Я сам придумал это правило. Сам и попался.$s\"/quickQuestion #Включить радио и потанцевать#Спросить, что случилось(break)message \"Ты включаешь его старое радио. Играет что-то медленное. Ты поднимаешь его с дивана.\"\\speak Harvey \"Я танцую как заржавевший аппарат ИВЛ. Я предупреждал. В анкете.$h\"\\message \"Он танцует ужасно. Вы почти не двигаетесь — просто стоите посреди кухни, обнявшись, и качаетесь.\"\\speak Harvey \"Твоё тайное желание. Я обещал научиться. Похоже, учиться буду долго. Это хорошо.$l\"\\friendship Harvey 40(break)speak Harvey \"Неделя. Просто неделя. Трое тяжёлых, один, которого не спасти, отчёты, Мару на экзамене, и я на всё один.$s\"\\speak Harvey \"А у тебя — хорошие недели. Я видел. Ты спишь, ешь, смеёшься. И я подумал: хоть у кого-то в этом доме всё в порядке.$s\"\\message \"Ты обнимаешь его. Хорошие недели — это не только твоё. Это общее.\"\\speak Harvey \"…Да. Общее. Значит, и плохие тоже. Спасибо.$l\"\\friendship Harvey 40/action marilynsinister.HarveyStressMeter_ComfortRelief 15/addConversationTopic HarveyRomance_HisBadWeek 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasFlag |contains=HarveyRomance_Wish_Dance": "true"
+      }
+    },
+    {
+      "LogName": "Courtship W3 — «Его плохая неделя» (Stars)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulCourtship.W3_MarriedBadWeek/Time 1800 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMarriage_BadDay\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_LetHimGo\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_HeStayed\"/GameStateQuery ANY \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekMarried Any\" \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekStreakMarried Any\" \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekMonthMarried Any\"/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.W3_MarriedBadWeek/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/12 7/farmer 11 7 1 Harvey 13 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_HisBadWeek 3#marilynsinister.HarveyStressMeter_ComfortRelief 15/pause 600/message \"Харви приходит домой поздно. Пальто висит криво, сумку он ставит мимо крючка — и даже не замечает.\"/speak Harvey \"Привет. Как твой день? Ты ела? Как спина? Как…$0\"/message \"Ты закрываешь ему рот ладонью. Он моргает над твоими пальцами.\"/message \"Ты молча снимаешь с него пальто и укладываешь на диван.\"/speak Harvey \"…Это нарушение протокола. Это я тут укладываю людей.$a\"/message \"Ты качаешь головой.\"/speak Harvey \"«Сегодня я главная». Да. Я сам придумал это правило. Сам и попался.$s\"/quickQuestion #Открыть окно и смотреть на звёзды#Спросить, что случилось(break)message \"Ты гасишь свет и распахиваешь окно. Над фермой — всё небо сразу.\"\\speak Harvey \"Карта неба. Я обещал найти её для тебя… и не нашёл. А ты просто открыла окно.$s\"\\message \"Он показывает на звёзды и путает созвездия. Ты не поправляешь.\"\\speak Harvey \"Вон то — Пациент Лежит Спокойно. Очень редкое созвездие. Видно только сегодня.$h\"\\friendship Harvey 40(break)speak Harvey \"Неделя. Просто неделя. Трое тяжёлых, один, которого не спасти, отчёты, Мару на экзамене, и я на всё один.$s\"\\speak Harvey \"А у тебя — хорошие недели. Я видел. Ты спишь, ешь, смеёшься. И я подумал: хоть у кого-то в этом доме всё в порядке.$s\"\\message \"Ты обнимаешь его. Хорошие недели — это не только твоё. Это общее.\"\\speak Harvey \"…Да. Общее. Значит, и плохие тоже. Спасибо.$l\"\\friendship Harvey 40/action marilynsinister.HarveyStressMeter_ComfortRelief 15/addConversationTopic HarveyRomance_HisBadWeek 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasFlag |contains=HarveyRomance_Wish_Stars": "true"
+      }
+    },
+    {
+      "LogName": "Courtship W3 — «Его плохая неделя» (Quiet)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulCourtship.W3_MarriedBadWeek/Time 1800 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMarriage_BadDay\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_LetHimGo\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_HeStayed\"/GameStateQuery ANY \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekMarried Any\" \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekStreakMarried Any\" \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekMonthMarried Any\"/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.W3_MarriedBadWeek/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/12 7/farmer 11 7 1 Harvey 13 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_HisBadWeek 3#marilynsinister.HarveyStressMeter_ComfortRelief 15/pause 600/message \"Харви приходит домой поздно. Пальто висит криво, сумку он ставит мимо крючка — и даже не замечает.\"/speak Harvey \"Привет. Как твой день? Ты ела? Как спина? Как…$0\"/message \"Ты закрываешь ему рот ладонью. Он моргает над твоими пальцами.\"/message \"Ты молча снимаешь с него пальто и укладываешь на диван.\"/speak Harvey \"…Это нарушение протокола. Это я тут укладываю людей.$a\"/message \"Ты качаешь головой.\"/speak Harvey \"«Сегодня я главная». Да. Я сам придумал это правило. Сам и попался.$s\"/quickQuestion #Просто посидеть в тишине#Спросить, что случилось(break)message \"Ты не говоришь ни слова. Просто садишься рядом и кладёшь его голову себе на колени.\"\\speak Harvey \"Тишина. Ты писала в анкете, что хочешь тишины.$s\"\\message \"Он замолкает. Через несколько минут дыхание становится медленным и ровным.\"\\speak Harvey \"…Оказывается, это и моё желание тоже.$l\"\\friendship Harvey 40(break)speak Harvey \"Неделя. Просто неделя. Трое тяжёлых, один, которого не спасти, отчёты, Мару на экзамене, и я на всё один.$s\"\\speak Harvey \"А у тебя — хорошие недели. Я видел. Ты спишь, ешь, смеёшься. И я подумал: хоть у кого-то в этом доме всё в порядке.$s\"\\message \"Ты обнимаешь его. Хорошие недели — это не только твоё. Это общее.\"\\speak Harvey \"…Да. Общее. Значит, и плохие тоже. Спасибо.$l\"\\friendship Harvey 40/action marilynsinister.HarveyStressMeter_ComfortRelief 15/addConversationTopic HarveyRomance_HisBadWeek 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasFlag |contains=HarveyRomance_Wish_Quiet": "true"
+      }
+    },
+    {
+      "LogName": "Courtship W3 — «Его плохая неделя» (без анкеты)",
+      "Action": "EditData",
+      "Target": "Data/Events/FarmHouse",
+      "Entries": {
+        "HarveyOverhaulCourtship.W3_MarriedBadWeek/Time 1800 2200/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery ANY \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMarriage_BadDay\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_LetHimGo\" \"PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_HeStayed\"/GameStateQuery ANY \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekMarried Any\" \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekStreakMarried Any\" \"PLAYER_HAS_MAIL Current {{ModId}}_mailGoodWeekMonthMarried Any\"/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.W3_MarriedBadWeek/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/12 7/farmer 11 7 1 Harvey 13 7 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_HisBadWeek 3#marilynsinister.HarveyStressMeter_ComfortRelief 15/pause 600/message \"Харви приходит домой поздно. Пальто висит криво, сумку он ставит мимо крючка — и даже не замечает.\"/speak Harvey \"Привет. Как твой день? Ты ела? Как спина? Как…$0\"/message \"Ты закрываешь ему рот ладонью. Он моргает над твоими пальцами.\"/message \"Ты молча снимаешь с него пальто и укладываешь на диван.\"/speak Harvey \"…Это нарушение протокола. Это я тут укладываю людей.$a\"/message \"Ты качаешь головой.\"/speak Harvey \"«Сегодня я главная». Да. Я сам придумал это правило. Сам и попался.$s\"/quickQuestion #Укрыть его пледом#Спросить, что случилось(break)message \"Ты укрываешь его пледом и садишься рядом.\"\\speak Harvey \"Плед. Чай. Ты. Полный курс терапии.$l\"\\friendship Harvey 40(break)speak Harvey \"Неделя. Просто неделя. Трое тяжёлых, один, которого не спасти, отчёты, Мару на экзамене, и я на всё один.$s\"\\speak Harvey \"А у тебя — хорошие недели. Я видел. Ты спишь, ешь, смеёшься. И я подумал: хоть у кого-то в этом доме всё в порядке.$s\"\\message \"Ты обнимаешь его. Хорошие недели — это не только твоё. Это общее.\"\\speak Harvey \"…Да. Общее. Значит, и плохие тоже. Спасибо.$l\"\\friendship Harvey 40/action marilynsinister.HarveyStressMeter_ComfortRelief 15/addConversationTopic HarveyRomance_HisBadWeek 3/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasFlag |contains=HarveyRomance_Wish_Dance, HarveyRomance_Wish_Stars, HarveyRomance_Wish_Quiet": "false"
+      }
+    },
+    {
+      "LogName": "Courtship W4 — «Через тридцать лет» (дети: True)",
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "HarveyOverhaulCourtship.W4_ThirtyYears/Season Fall/Weather sunny/Time 2000 2300/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_TwoYears Received/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.W2_QuietLanguage/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.W4_ThirtyYears/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/{{HO_FarmX}} {{HO_FarmY0}}/farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/ignoreEventTileOffset/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_Promise 7/pause 700/message \"Осенний вечер. На крыльце пахнет яблоками и дымом. Харви долго молчит, а потом спрашивает:\"/speak Harvey \"Как ты думаешь, какими мы будем через тридцать лет?$l\"/speak Harvey \"Я думаю, так: я буду мерить тебе давление каждое утро. Ты будешь закатывать глаза. А я буду счастлив.$h\"/speak Harvey \"Дети будут закатывать глаза вместе с тобой. «Папа опять меряет давление». Я буду мерить и им.$h\"/message \"Он оглядывается на тёмные окна детской и улыбается так, будто видит там уже взрослых.\"/quickQuestion #Обещай, что так и будет#А я буду чинить твою рацию#Молча положить голову ему на плечо(break)speak Harvey \"Обещаю. Это самый простой рецепт, который я выписывал. Принимать ежедневно. Всю жизнь.$l\"\\friendship Harvey 40(break)speak Harvey \"Она к тому времени будет древней. Как я. Значит, будешь чинить нас обоих.$h\"\\friendship Harvey 40(break)message \"Ты кладёшь голову ему на плечо. Он осторожно, будто боится спугнуть, накрывает твою руку своей.\"\\speak Harvey \"Вот так. Через тридцать лет — вот так.$l\"\\friendship Harvey 45/addConversationTopic HarveyRomance_Promise 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasValue:{{ChildNames}}": "true"
+      }
+    },
+    {
+      "LogName": "Courtship W4 — «Через тридцать лет» (дети: False)",
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "HarveyOverhaulCourtship.W4_ThirtyYears/Season Fall/Weather sunny/Time 2000 2300/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Married/GameStateQuery PLAYER_HAS_MAIL Current HarveyRomance_TwoYears Received/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.W2_QuietLanguage/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.W4_ThirtyYears/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "none/{{HO_FarmX}} {{HO_FarmY0}}/farmer {{HO_FarmX}} {{HO_FarmY1}} 2 Harvey {{HO_FarmX}} {{HO_FarmY3}} 0/ignoreEventTileOffset/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddConversationTopic HarveyRomance_Promise 7/pause 700/message \"Осенний вечер. На крыльце пахнет яблоками и дымом. Харви долго молчит, а потом спрашивает:\"/speak Harvey \"Как ты думаешь, какими мы будем через тридцать лет?$l\"/speak Harvey \"Я думаю, так: я буду мерить тебе давление каждое утро. Ты будешь закатывать глаза. А я буду счастлив.$h\"/speak Harvey \"Будем сидеть на этом крыльце. Тот же фонарь, та же ступенька. Только скрипеть будет не она, а мои колени.$h\"/quickQuestion #Обещай, что так и будет#А я буду чинить твою рацию#Молча положить голову ему на плечо(break)speak Harvey \"Обещаю. Это самый простой рецепт, который я выписывал. Принимать ежедневно. Всю жизнь.$l\"\\friendship Harvey 40(break)speak Harvey \"Она к тому времени будет древней. Как я. Значит, будешь чинить нас обоих.$h\"\\friendship Harvey 40(break)message \"Ты кладёшь голову ему на плечо. Он осторожно, будто боится спугнуть, накрывает твою руку своей.\"\\speak Harvey \"Вот так. Через тридцать лет — вот так.$l\"\\friendship Harvey 45/addConversationTopic HarveyRomance_Promise 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+      },
+      "When": {
+        "HasValue:{{ChildNames}}": "false"
+      }
+    },
+    {
+      "LogName": "Courtship — реплики Харви (Dating/Married)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyRomance_RadioWait": "Рация у тебя? Хорошо. Я сегодня дважды ловил себя на том, что смотрю на свою. Это пройдёт. Наверное.$h",
+        "HarveyRomance_Model": "Модель сохнет на подоконнике. Мару трижды спросила, можно ли потрогать. Нельзя. Это наша.$h",
+        "HarveyRomance_Pilot": "Самолёт высох. Мотор чихает, но работает. А я всё вспоминаю, как ты смеялась на берегу. И как мне вдруг стало совсем не стыдно.$l",
+        "HarveyRomance_Secret": "Ты сегодня какая-то загадочная. Льюис тоже. Вы что-то затеяли? …Не говори. Я не хочу знать. Хочу. Не говори.$h",
+        "HarveyRomance_Secret2": "Эмили улыбается мне так, будто знает что-то, чего не знаю я. Это начинает тревожить. Приятно тревожить.$h",
+        "HarveyRomance_Kidnap": "Мару говорит, клиника вчера прекрасно справилась без меня двадцать минут. Это, конечно, обидно. Но бутерброды были отличные.$h",
+        "HarveyRomance_Signals": "Сегодня на приёме ты дважды сжала мне руку. Я весь день ходил и улыбался. Пациенты нервничали.$h"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "Relationship:Harvey": "Dating, Married"
+      }
+    },
+    {
+      "LogName": "Courtship — реплики Харви (Dating)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyRomance_Public": "Пэм уже рассказала всему салуну. Гас подмигивает мне через площадь. Я не жалею. Ни капли.$l",
+        "HarveyRomance_Dinner": "Джоджа поправится. А вот мне за ужин стыдно до сих пор. Шарф пусть останется у тебя — в залог.$s",
+        "HarveyRomance_Morning": "Пастернак полит, кофе выпит. Я записал это утро в карту как «лучшее назначение недели».$l"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "Relationship:Harvey": "Dating"
+      }
+    },
+    {
+      "LogName": "Courtship — реплики Харви (Married)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyRomance_Sky": "Я сегодня трижды посмотрел в окно на небо. Раньше смотрел — и было грустно. Теперь — нет.$l",
+        "HarveyRomance_HisBadWeek": "Я выспался. Впервые за неделю. Ты закрыла мне рот ладонью, и мир не рухнул. Надо запомнить.$l",
+        "HarveyRomance_Promise": "Тридцать лет — это немного. Я уже посчитал: примерно десять тысяч утренних измерений давления. Начнём завтра.$h",
+        "HarveyRomance_Box_0": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#Записка первая. Остановка. «Бледная, уставшая с дороги. Предложил бутерброд. Надо будет проверить, как устроилась». Мой почерк, тот же вечер.$s#$b#Проверяю до сих пор. Каждый день.$l",
+        "HarveyRomance_Box_1": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#«Первое свидание. Плед, термос, градусник». Градусник был лишним, да. Но ты смеялась, а я впервые за десять лет испугался не за пациента.$l",
+        "HarveyRomance_Box_2": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#«Фонтан. Шарф в два оборота. Пункт про мороженое не выполнен». Знаешь, я так его и не выполнил. Сегодня исправлю.$h",
+        "HarveyRomance_Box_3": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#«Голубая луна. Ветер с моря, отдал пальто. Она надела его через минуту — сама». Сама. Для меня это до сих пор самая важная строчка.$l",
+        "HarveyRomance_Box_4": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#«Урок перевязки. Узел кривой, но держит. Спросила, больно ли мне, — раньше всего остального». Этому я тебя не учил. Это было твоё.$l",
+        "HarveyRomance_Box_5": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#«Опередила. Опять». Это про кулон. Коробочка полгода жила у меня в кармане, а ты всё равно успела первой.$h",
+        "HarveyRomance_Box_6": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#«Седьмой вариант речи». Остальные шесть я сжёг. Этот — здесь. Ты была моей единственной репетицией.$l",
+        "HarveyRomance_Box_7": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#«Первая смена после свадьбы. Пять минут стоял у крыльца. Половина обеда — её». Ровно пять минут, я засекал.$h",
+        "HarveyRomance_Box_8": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#«Модель — в озере. Пилот — в озере. Второй пилот смеётся». Лучшая неудача в моей жизни. Я её храню.$h",
+        "HarveyRomance_Box_9": "Сегодня годовщина. Я достал из шкатулки одну записку.$l#$b#«Небо». Одно слово. Больше в записку не поместилось. Да и не нужно было.$l",
+        "HarveyRomance_Box_Full": "Сегодня годовщина. В шкатулке не осталось непрочитанных записок.$l#$b#Значит, пора начинать новую. Первая строчка уже есть: «Мы всё ещё здесь».$l"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "Relationship:Harvey": "Married"
+      }
+    },
+    {
+      "LogName": "Courtship C2 — позывной (Field)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyRomance_Callsign": "Поле-один, это Клиника. Шучу. …Нет, не шучу, мне просто нравится это говорить.$h"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "Relationship:Harvey": "Dating, Married",
+        "HasFlag |contains=HarveyRomance_Callsign_Field": "true"
+      }
+    },
+    {
+      "LogName": "Courtship S4 — кофе в клинике (Dating, Field)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O)395": "Кофе. Мне. В разгар приёма.$h#$b#Поле-один, ты спасаешь Клинику. Я выпью его, пока он горячий — первый раз за месяц.$l#$action AddFriendshipPoints Harvey 30#$action AddMail Current HarveyRomance_CoffeeWeek Received"
+      },
+      "Priority": "Late + 2",
+      "Update": "OnLocationChange",
+      "When": {
+        "Relationship:Harvey": "Dating",
+        "LocationName": "Hospital",
+        "HasFlag |contains=HarveyRomance_CoffeeWeek": "false",
+        "HasFlag |contains=HarveyRomance_Callsign_Field": "true"
+      }
+    },
+    {
+      "LogName": "Courtship S4 — кофе в клинике (Married, Field)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O)395": "Кофе на работу. Жена принесла.$h#$b#Поле-один, ты спасаешь Клинику. Мару, запиши: у доктора законный перерыв.$l#$action AddFriendshipPoints Harvey 30#$action AddMail Current HarveyRomance_CoffeeWeek Received"
+      },
+      "Priority": "Late + 2",
+      "Update": "OnLocationChange",
+      "When": {
+        "Relationship:Harvey": "Married",
+        "LocationName": "Hospital",
+        "HasFlag |contains=HarveyRomance_CoffeeWeek": "false",
+        "HasFlag |contains=HarveyRomance_Callsign_Field": "true"
+      }
+    },
+    {
+      "LogName": "Courtship C2 — позывной (Daisy)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyRomance_Callsign": "Ромашка, приём. Да, я теперь называю так тебя даже мысленно. Мару что-то подозревает.$h"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "Relationship:Harvey": "Dating, Married",
+        "HasFlag |contains=HarveyRomance_Callsign_Daisy": "true"
+      }
+    },
+    {
+      "LogName": "Courtship S4 — кофе в клинике (Dating, Daisy)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O)395": "Кофе. Мне. В разгар приёма.$h#$b#Ромашка, спасибо. Я выпью его, пока он горячий — первый раз за месяц.$l#$action AddFriendshipPoints Harvey 30#$action AddMail Current HarveyRomance_CoffeeWeek Received"
+      },
+      "Priority": "Late + 2",
+      "Update": "OnLocationChange",
+      "When": {
+        "Relationship:Harvey": "Dating",
+        "LocationName": "Hospital",
+        "HasFlag |contains=HarveyRomance_CoffeeWeek": "false",
+        "HasFlag |contains=HarveyRomance_Callsign_Daisy": "true"
+      }
+    },
+    {
+      "LogName": "Courtship S4 — кофе в клинике (Married, Daisy)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O)395": "Кофе на работу. Жена принесла.$h#$b#Ромашка, спасибо. Мару, запиши: у доктора законный перерыв.$l#$action AddFriendshipPoints Harvey 30#$action AddMail Current HarveyRomance_CoffeeWeek Received"
+      },
+      "Priority": "Late + 2",
+      "Update": "OnLocationChange",
+      "When": {
+        "Relationship:Harvey": "Married",
+        "LocationName": "Hospital",
+        "HasFlag |contains=HarveyRomance_CoffeeWeek": "false",
+        "HasFlag |contains=HarveyRomance_Callsign_Daisy": "true"
+      }
+    },
+    {
+      "LogName": "Courtship C2 — позывной (Sun)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyRomance_Callsign": "Солнце. Мару спросила, почему я в пасмурный день говорю про погоду в рацию. Я не нашёлся, что ответить.$l"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "Relationship:Harvey": "Dating, Married",
+        "HasFlag |contains=HarveyRomance_Callsign_Sun": "true"
+      }
+    },
+    {
+      "LogName": "Courtship S4 — кофе в клинике (Dating, Sun)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O)395": "Кофе. Мне. В разгар приёма.$h#$b#Солнце, спасибо. Я выпью его, пока он горячий — первый раз за месяц.$l#$action AddFriendshipPoints Harvey 30#$action AddMail Current HarveyRomance_CoffeeWeek Received"
+      },
+      "Priority": "Late + 2",
+      "Update": "OnLocationChange",
+      "When": {
+        "Relationship:Harvey": "Dating",
+        "LocationName": "Hospital",
+        "HasFlag |contains=HarveyRomance_CoffeeWeek": "false",
+        "HasFlag |contains=HarveyRomance_Callsign_Sun": "true"
+      }
+    },
+    {
+      "LogName": "Courtship S4 — кофе в клинике (Married, Sun)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O)395": "Кофе на работу. Жена принесла.$h#$b#Солнце, спасибо. Мару, запиши: у доктора законный перерыв.$l#$action AddFriendshipPoints Harvey 30#$action AddMail Current HarveyRomance_CoffeeWeek Received"
+      },
+      "Priority": "Late + 2",
+      "Update": "OnLocationChange",
+      "When": {
+        "Relationship:Harvey": "Married",
+        "LocationName": "Hospital",
+        "HasFlag |contains=HarveyRomance_CoffeeWeek": "false",
+        "HasFlag |contains=HarveyRomance_Callsign_Sun": "true"
+      }
+    },
+    {
+      "LogName": "Courtship C2 — позывной (не выбран)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "HarveyRomance_Callsign": "Клиника на связи. Позывной у тебя есть, даже если ты его не выбрала. Это «моя».$l"
+      },
+      "Priority": "Late + 1",
+      "When": {
+        "Relationship:Harvey": "Dating, Married",
+        "HasFlag |contains=HarveyRomance_Callsign_Field, HarveyRomance_Callsign_Daisy, HarveyRomance_Callsign_Sun": "false"
+      }
+    },
+    {
+      "LogName": "Courtship S4 — кофе в клинике (Dating, без позывного)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O)395": "Кофе. Мне. В разгар приёма.$h#$b#Я выпью его, пока он горячий — первый раз за месяц.$l#$action AddFriendshipPoints Harvey 30#$action AddMail Current HarveyRomance_CoffeeWeek Received"
+      },
+      "Priority": "Late + 2",
+      "Update": "OnLocationChange",
+      "When": {
+        "Relationship:Harvey": "Dating",
+        "LocationName": "Hospital",
+        "HasFlag |contains=HarveyRomance_CoffeeWeek": "false",
+        "HasFlag |contains=HarveyRomance_Callsign_Field, HarveyRomance_Callsign_Daisy, HarveyRomance_Callsign_Sun": "false"
+      }
+    },
+    {
+      "LogName": "Courtship S4 — кофе в клинике (Married, без позывного)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O)395": "Кофе на работу. Жена принесла.$h#$b#Мару, запиши: у доктора законный перерыв.$l#$action AddFriendshipPoints Harvey 30#$action AddMail Current HarveyRomance_CoffeeWeek Received"
+      },
+      "Priority": "Late + 2",
+      "Update": "OnLocationChange",
+      "When": {
+        "Relationship:Harvey": "Married",
+        "LocationName": "Hospital",
+        "HasFlag |contains=HarveyRomance_CoffeeWeek": "false",
+        "HasFlag |contains=HarveyRomance_Callsign_Field, HarveyRomance_Callsign_Daisy, HarveyRomance_Callsign_Sun": "false"
+      }
+    },
+    {
+      "LogName": "Courtship §5.3 — позывной в репликах дня (Dating, Field)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "Mon8": "Поле-один, это Клиника. Доброе утро.$h#$b#Рация всю ночь молчала — значит, ты спала. Я проверил её дважды, прежде чем лечь сам. Это не тревожность, это техника безопасности.$l",
+        "Mon10": "Поле-один, это Клиника. Доброе утро.$h#$b#Рация всю ночь молчала — значит, ты спала. Я проверил её дважды, прежде чем лечь сам. Это не тревожность, это техника безопасности.$l",
+        "Tue8": "Поле-один, приём. Мару спросила, почему я разговариваю с рацией, когда в эфире тихо.$h#$b#Сказал, что проверяю батарейки. Она не поверила. Я бы тоже не поверил.$l",
+        "Tue10": "Поле-один, приём. Мару спросила, почему я разговариваю с рацией, когда в эфире тихо.$h#$b#Сказал, что проверяю батарейки. Она не поверила. Я бы тоже не поверил.$l",
+        "Wed8": "Середина недели, Поле-один. Погода лётная, давление у пациентов в норме, а у меня подскочило, когда ты вошла.$h#$b#Обед не пропускай. Это не совет, это сводка.$a",
+        "Wed10": "Середина недели, Поле-один. Погода лётная, давление у пациентов в норме, а у меня подскочило, когда ты вошла.$h#$b#Обед не пропускай. Это не совет, это сводка.$a",
+        "Thu8": "Поле-один, ты сегодня тише обычного.$s#$b#Не обязательно рассказывать. Канал семь открыт круглосуточно — даже если просто захочется помолчать в эфир.$l",
+        "Thu10": "Поле-один, ты сегодня тише обычного.$s#$b#Не обязательно рассказывать. Канал семь открыт круглосуточно — даже если просто захочется помолчать в эфир.$l",
+        "Fri8": "Пятница, Поле-один. Я дописал отчёты на час раньше и сам не понял как.$h#$b#Вечером в эфире будут метеосводки из Зузу. Скучно, но не когда ты на другом конце.$l",
+        "Fri10": "Пятница, Поле-один. Я дописал отчёты на час раньше и сам не понял как.$h#$b#Вечером в эфире будут метеосводки из Зузу. Скучно, но не когда ты на другом конце.$l",
+        "Sat8": "Поле-один, Клиника на связи. Суббота — день, когда я меньше врач и больше человек.$h#$b#Позовёшь на прогулку — отвечу «вас понял» раньше, чем ты договоришь.$l",
+        "Sat10": "Поле-один, Клиника на связи. Суббота — день, когда я меньше врач и больше человек.$h#$b#Позовёшь на прогулку — отвечу «вас понял» раньше, чем ты договоришь.$l",
+        "Sun8": "Воскресенье, Поле-один. Разбирал ящик с моделями и нашёл лишнее крыло.$h#$b#Не спрашивай, откуда в ящике лишнее крыло. В авиации так бывает.$l",
+        "Sun10": "Воскресенье, Поле-один. Разбирал ящик с моделями и нашёл лишнее крыло.$h#$b#Не спрашивай, откуда в ящике лишнее крыло. В авиации так бывает.$l"
+      },
+      "Priority": "Late + 3",
+      "When": {
+        "Relationship:Harvey": "Dating",
+        "HasFlag |contains=HarveyRomance_Callsign_Field": "true",
+        "Random:1, 2, 3, 4, 5 |key=HarveyCallsignDay": "1"
+      }
+    },
+    {
+      "LogName": "Courtship §5.3 — позывной в репликах брака (Field)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+      "Entries": {
+        "Indoor_Day_1": "Поле-один, это Клиника… то есть кухня. Я опять говорю как в эфире.$h#$b#Чайник горячий, хлеб нарезан. Приём окончен — садись завтракать.$l",
+        "Indoor_Night_1": "Рация на тумбочке, Поле-один. По привычке. Хотя ты на соседней подушке.$h#$b#Спи. Если приснится что-то плохое, канал семь не нужен — просто толкни меня.$l",
+        "Outdoor_1": "Поле-один, приём. Обошёл поле: пугало стоит, курятник закрыт.$h#$b#Уйдёшь далеко — возьми рацию. Не ради контроля. Я просто люблю слышать твой голос в эфире.$l",
+        "Rainy_Day_1": "Погода нелётная, Поле-один.$s#$b#Значит, никакой шахты и никаких полей без плаща. Сводку я составил сам, оспаривать можно за чаем.$h",
+        "Rainy_Night_1": "Дождь стучит, как помехи в эфире.$s#$b#Иди сюда, Поле-один. Под пледом приём лучше.$l"
+      },
+      "Priority": "Late + 3",
+      "When": {
+        "Relationship:Harvey": "Married",
+        "HasFlag |contains=HarveyRomance_Callsign_Field": "true",
+        "Random:1, 2, 3, 4, 5 |key=HarveyCallsignDay": "1"
+      }
+    },
+    {
+      "LogName": "Courtship §5.3 — позывной в репликах дня (Dating, Daisy)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "Mon8": "Ромашка, это Клиника. Доброе утро.$h#$b#Рация всю ночь молчала — значит, ты спала. Я проверил её дважды, прежде чем лечь сам. Это не тревожность, это техника безопасности.$l",
+        "Mon10": "Ромашка, это Клиника. Доброе утро.$h#$b#Рация всю ночь молчала — значит, ты спала. Я проверил её дважды, прежде чем лечь сам. Это не тревожность, это техника безопасности.$l",
+        "Tue8": "Ромашка, приём. Мару спросила, почему я разговариваю с рацией, когда в эфире тихо.$h#$b#Сказал, что проверяю батарейки. Она не поверила. Я бы тоже не поверил.$l",
+        "Tue10": "Ромашка, приём. Мару спросила, почему я разговариваю с рацией, когда в эфире тихо.$h#$b#Сказал, что проверяю батарейки. Она не поверила. Я бы тоже не поверил.$l",
+        "Wed8": "Середина недели, Ромашка. Погода лётная, давление у пациентов в норме, а у меня подскочило, когда ты вошла.$h#$b#Обед не пропускай. Это не совет, это сводка.$a",
+        "Wed10": "Середина недели, Ромашка. Погода лётная, давление у пациентов в норме, а у меня подскочило, когда ты вошла.$h#$b#Обед не пропускай. Это не совет, это сводка.$a",
+        "Thu8": "Ромашка, ты сегодня тише обычного.$s#$b#Не обязательно рассказывать. Канал семь открыт круглосуточно — даже если просто захочется помолчать в эфир.$l",
+        "Thu10": "Ромашка, ты сегодня тише обычного.$s#$b#Не обязательно рассказывать. Канал семь открыт круглосуточно — даже если просто захочется помолчать в эфир.$l",
+        "Fri8": "Пятница, Ромашка. Я дописал отчёты на час раньше и сам не понял как.$h#$b#Вечером в эфире будут метеосводки из Зузу. Скучно, но не когда ты на другом конце.$l",
+        "Fri10": "Пятница, Ромашка. Я дописал отчёты на час раньше и сам не понял как.$h#$b#Вечером в эфире будут метеосводки из Зузу. Скучно, но не когда ты на другом конце.$l",
+        "Sat8": "Ромашка, Клиника на связи. Суббота — день, когда я меньше врач и больше человек.$h#$b#Позовёшь на прогулку — отвечу «вас понял» раньше, чем ты договоришь.$l",
+        "Sat10": "Ромашка, Клиника на связи. Суббота — день, когда я меньше врач и больше человек.$h#$b#Позовёшь на прогулку — отвечу «вас понял» раньше, чем ты договоришь.$l",
+        "Sun8": "Воскресенье, Ромашка. Разбирал ящик с моделями и нашёл лишнее крыло.$h#$b#Не спрашивай, откуда в ящике лишнее крыло. В авиации так бывает.$l",
+        "Sun10": "Воскресенье, Ромашка. Разбирал ящик с моделями и нашёл лишнее крыло.$h#$b#Не спрашивай, откуда в ящике лишнее крыло. В авиации так бывает.$l"
+      },
+      "Priority": "Late + 3",
+      "When": {
+        "Relationship:Harvey": "Dating",
+        "HasFlag |contains=HarveyRomance_Callsign_Daisy": "true",
+        "Random:1, 2, 3, 4, 5 |key=HarveyCallsignDay": "1"
+      }
+    },
+    {
+      "LogName": "Courtship §5.3 — позывной в репликах брака (Daisy)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+      "Entries": {
+        "Indoor_Day_1": "Ромашка, это Клиника… то есть кухня. Я опять говорю как в эфире.$h#$b#Чайник горячий, хлеб нарезан. Приём окончен — садись завтракать.$l",
+        "Indoor_Night_1": "Рация на тумбочке, Ромашка. По привычке. Хотя ты на соседней подушке.$h#$b#Спи. Если приснится что-то плохое, канал семь не нужен — просто толкни меня.$l",
+        "Outdoor_1": "Ромашка, приём. Обошёл поле: пугало стоит, курятник закрыт.$h#$b#Уйдёшь далеко — возьми рацию. Не ради контроля. Я просто люблю слышать твой голос в эфире.$l",
+        "Rainy_Day_1": "Погода нелётная, Ромашка.$s#$b#Значит, никакой шахты и никаких полей без плаща. Сводку я составил сам, оспаривать можно за чаем.$h",
+        "Rainy_Night_1": "Дождь стучит, как помехи в эфире.$s#$b#Иди сюда, Ромашка. Под пледом приём лучше.$l"
+      },
+      "Priority": "Late + 3",
+      "When": {
+        "Relationship:Harvey": "Married",
+        "HasFlag |contains=HarveyRomance_Callsign_Daisy": "true",
+        "Random:1, 2, 3, 4, 5 |key=HarveyCallsignDay": "1"
+      }
+    },
+    {
+      "LogName": "Courtship §5.3 — позывной в репликах дня (Dating, Sun)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "Mon8": "Солнце, это Клиника. Доброе утро.$h#$b#Рация всю ночь молчала — значит, ты спала. Я проверил её дважды, прежде чем лечь сам. Это не тревожность, это техника безопасности.$l",
+        "Mon10": "Солнце, это Клиника. Доброе утро.$h#$b#Рация всю ночь молчала — значит, ты спала. Я проверил её дважды, прежде чем лечь сам. Это не тревожность, это техника безопасности.$l",
+        "Tue8": "Солнце, приём. Мару спросила, почему я разговариваю с рацией, когда в эфире тихо.$h#$b#Сказал, что проверяю батарейки. Она не поверила. Я бы тоже не поверил.$l",
+        "Tue10": "Солнце, приём. Мару спросила, почему я разговариваю с рацией, когда в эфире тихо.$h#$b#Сказал, что проверяю батарейки. Она не поверила. Я бы тоже не поверил.$l",
+        "Wed8": "Середина недели, Солнце. Погода лётная, давление у пациентов в норме, а у меня подскочило, когда ты вошла.$h#$b#Обед не пропускай. Это не совет, это сводка.$a",
+        "Wed10": "Середина недели, Солнце. Погода лётная, давление у пациентов в норме, а у меня подскочило, когда ты вошла.$h#$b#Обед не пропускай. Это не совет, это сводка.$a",
+        "Thu8": "Солнце, ты сегодня тише обычного.$s#$b#Не обязательно рассказывать. Канал семь открыт круглосуточно — даже если просто захочется помолчать в эфир.$l",
+        "Thu10": "Солнце, ты сегодня тише обычного.$s#$b#Не обязательно рассказывать. Канал семь открыт круглосуточно — даже если просто захочется помолчать в эфир.$l",
+        "Fri8": "Пятница, Солнце. Я дописал отчёты на час раньше и сам не понял как.$h#$b#Вечером в эфире будут метеосводки из Зузу. Скучно, но не когда ты на другом конце.$l",
+        "Fri10": "Пятница, Солнце. Я дописал отчёты на час раньше и сам не понял как.$h#$b#Вечером в эфире будут метеосводки из Зузу. Скучно, но не когда ты на другом конце.$l",
+        "Sat8": "Солнце, Клиника на связи. Суббота — день, когда я меньше врач и больше человек.$h#$b#Позовёшь на прогулку — отвечу «вас понял» раньше, чем ты договоришь.$l",
+        "Sat10": "Солнце, Клиника на связи. Суббота — день, когда я меньше врач и больше человек.$h#$b#Позовёшь на прогулку — отвечу «вас понял» раньше, чем ты договоришь.$l",
+        "Sun8": "Воскресенье, Солнце. Разбирал ящик с моделями и нашёл лишнее крыло.$h#$b#Не спрашивай, откуда в ящике лишнее крыло. В авиации так бывает.$l",
+        "Sun10": "Воскресенье, Солнце. Разбирал ящик с моделями и нашёл лишнее крыло.$h#$b#Не спрашивай, откуда в ящике лишнее крыло. В авиации так бывает.$l"
+      },
+      "Priority": "Late + 3",
+      "When": {
+        "Relationship:Harvey": "Dating",
+        "HasFlag |contains=HarveyRomance_Callsign_Sun": "true",
+        "Random:1, 2, 3, 4, 5 |key=HarveyCallsignDay": "1"
+      }
+    },
+    {
+      "LogName": "Courtship §5.3 — позывной в репликах брака (Sun)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+      "Entries": {
+        "Indoor_Day_1": "Солнце, это Клиника… то есть кухня. Я опять говорю как в эфире.$h#$b#Чайник горячий, хлеб нарезан. Приём окончен — садись завтракать.$l",
+        "Indoor_Night_1": "Рация на тумбочке, Солнце. По привычке. Хотя ты на соседней подушке.$h#$b#Спи. Если приснится что-то плохое, канал семь не нужен — просто толкни меня.$l",
+        "Outdoor_1": "Солнце, приём. Обошёл поле: пугало стоит, курятник закрыт.$h#$b#Уйдёшь далеко — возьми рацию. Не ради контроля. Я просто люблю слышать твой голос в эфире.$l",
+        "Rainy_Day_1": "Погода нелётная, Солнце.$s#$b#Значит, никакой шахты и никаких полей без плаща. Сводку я составил сам, оспаривать можно за чаем.$h",
+        "Rainy_Night_1": "Дождь стучит, как помехи в эфире.$s#$b#Иди сюда, Солнце. Под пледом приём лучше.$l"
+      },
+      "Priority": "Late + 3",
+      "When": {
+        "Relationship:Harvey": "Married",
+        "HasFlag |contains=HarveyRomance_Callsign_Sun": "true",
+        "Random:1, 2, 3, 4, 5 |key=HarveyCallsignDay": "1"
+      }
+    },
+    {
+      "LogName": "Courtship I1 — записки (Dating)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O){{ModId}}_NoteThanks": "Записка? Мне?$u#$b#…Я прочитаю её потом. Один. Иначе Мару увидит моё лицо.$l#$action RemoveMail Current {{ModId}}_mailNoteReply_Thanks#$action AddMail Current {{ModId}}_mailNoteReply_Thanks tomorrow",
+        "AcceptGift_(O){{ModId}}_NoteMiss": "Синяя печать… «Скучаю»?$u#$b#Ты стоишь в метре от меня. И я всё равно понимаю.$l#$action RemoveMail Current {{ModId}}_mailNoteReply_Miss#$action AddMail Current {{ModId}}_mailNoteReply_Miss tomorrow",
+        "AcceptGift_(O){{ModId}}_NoteDinner": "Золотая печать. Ужин. Сегодня.$h#$b#Буду в шесть. С супом. Отказаться не могу — это медицинский факт.$l#$action AddMail Current HarveyRomance_NoteDinner Received"
+      },
+      "Priority": "Late + 2",
+      "When": {
+        "Relationship:Harvey": "Dating"
+      }
+    },
+    {
+      "LogName": "Courtship I1 — записки (Married)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "AcceptGift_(O){{ModId}}_NoteThanks": "Записка? Ты же видишь меня каждое утро.$h#$b#…Значит, есть что-то, что удобнее написать. Прочитаю вечером.$l#$action RemoveMail Current {{ModId}}_mailNoteReply_Thanks#$action AddMail Current {{ModId}}_mailNoteReply_Thanks tomorrow",
+        "AcceptGift_(O){{ModId}}_NoteMiss": "«Скучаю». Мы виделись за завтраком.$h#$b#…Я тоже. С завтрака.$l#$action RemoveMail Current {{ModId}}_mailNoteReply_Miss#$action AddMail Current {{ModId}}_mailNoteReply_Miss tomorrow",
+        "AcceptGift_(O){{ModId}}_NoteDinner": "Приглашение на ужин в собственный дом. По всей форме.$h#$b#Принято. Буду ровно в шесть, у крыльца, как полагается.$l#$action AddMail Current HarveyRomance_NoteDinner Received"
+      },
+      "Priority": "Late + 2",
+      "When": {
+        "Relationship:Harvey": "Married"
+      }
+    },
+    {
+      "LogName": "Courtship S2 — Pam узнал(а) новость",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Pam",
+      "Entries": {
+        "HarveyRomance_Public": "Ну что, голубки? Я ж говорила — по доку сразу видно. Он улыбается, как будто ему зарплату подняли.$h"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "LogName": "Courtship S2 — Emily узнал(а) новость",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Entries": {
+        "HarveyRomance_Public": "Я видела, как доктор взял тебя за руку при всех. У меня до сих пор мурашки. Хорошие мурашки!$h"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "LogName": "Courtship S2 — Gus узнал(а) новость",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Entries": {
+        "HarveyRomance_Public": "Пэм выиграла у меня пиво. Ничего, за такую новость не жалко.$h"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "LogName": "Courtship S2 — Maru узнал(а) новость",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Entries": {
+        "HarveyRomance_Public": "Доктор сегодня напевал, когда раскладывал карты. Напевал! Я записала дату.$h"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "LogName": "Courtship S2 — Evelyn узнал(а) новость",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Entries": {
+        "HarveyRomance_Public": "Дорогая, я слышала про вас с доктором. Береги его — он хороший мальчик, только совсем не умеет отдыхать.$l"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "LogName": "Courtship I3 — Льюис хранит секрет",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lewis",
+      "Entries": {
+        "HarveyRomance_Secret": "Доктор? Ничего не спрашивал. Мы с ним обсуждали удобрения. Очень долго. Очень подробно.$h"
+      },
+      "Priority": "Late + 1"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/CourtshipItems",
+      "FromFile": "assets/Items/courtshipItems.png"
+    },
+    {
+      "LogName": "Courtship — предметы (рация, записки, корзина, квитанция)",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_HarveyRadio": {
+          "Name": "{{ModId}}_HarveyRadio",
+          "DisplayName": "Рация Харви",
+          "Description": "Первая рация Харви, купленная на студенческую стипендию. Канал семь. Если что-то случится — канал семь. Если ничего не случится — тоже.",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 0,
+          "Texture": "Mods/{{ModId}}/CourtshipItems",
+          "SpriteIndex": 0,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ContextTags": [
+            "not_giftable",
+            "prevent_loss_on_death",
+            "{{ModId}}_courtship_item"
+          ]
+        },
+        "{{ModId}}_NoteThanks": {
+          "Name": "{{ModId}}_NoteThanks",
+          "DisplayName": "Записка «Спасибо»",
+          "Description": "Сложенная записка для Харви с красной печатью-сердечком. Подари ему — он ответит письмом.",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 5,
+          "Texture": "Mods/{{ModId}}/CourtshipItems",
+          "SpriteIndex": 1,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ContextTags": [
+            "{{ModId}}_courtship_item"
+          ]
+        },
+        "{{ModId}}_NoteMiss": {
+          "Name": "{{ModId}}_NoteMiss",
+          "DisplayName": "Записка «Скучаю»",
+          "Description": "Сложенная записка для Харви с синей печатью. Подари ему — он ответит письмом.",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 5,
+          "Texture": "Mods/{{ModId}}/CourtshipItems",
+          "SpriteIndex": 2,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ContextTags": [
+            "{{ModId}}_courtship_item"
+          ]
+        },
+        "{{ModId}}_NoteDinner": {
+          "Name": "{{ModId}}_NoteDinner",
+          "DisplayName": "Записка «Приходи на ужин»",
+          "Description": "Записка с золотой печатью-чашкой. Подари Харви днём — вечером он придёт к твоему крыльцу.",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 5,
+          "Texture": "Mods/{{ModId}}/CourtshipItems",
+          "SpriteIndex": 3,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ContextTags": [
+            "{{ModId}}_courtship_item"
+          ]
+        },
+        "{{ModId}}_PicnicBasket": {
+          "Name": "{{ModId}}_PicnicBasket",
+          "DisplayName": "Корзина для пикника",
+          "Description": "Хлеб, сыр, яблоки и банка маринованных огурцов. С этим можно увести с дежурства даже очень упрямого врача.",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 175,
+          "Texture": "Mods/{{ModId}}/CourtshipItems",
+          "SpriteIndex": 4,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ContextTags": [
+            "not_giftable",
+            "{{ModId}}_courtship_item"
+          ]
+        },
+        "{{ModId}}_BalloonVoucher": {
+          "Name": "{{ModId}}_BalloonVoucher",
+          "DisplayName": "Квитанция за воздушный шар",
+          "Description": "Оплаченная аренда воздушного шара из Грамплтона на один закат. Отдай Льюису.",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 0,
+          "Texture": "Mods/{{ModId}}/CourtshipItems",
+          "SpriteIndex": 5,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ContextTags": [
+            "not_giftable",
+            "prevent_loss_on_death",
+            "{{ModId}}_courtship_item"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Courtship I1 — рецепты записок (приходят письмами)",
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModId}}_NoteThanks": "388 1 771 1/Home/{{ModId}}_NoteThanks 1/false/none/Записка «Спасибо»",
+        "{{ModId}}_NoteMiss": "388 1 771 1/Home/{{ModId}}_NoteMiss 1/false/none/Записка «Скучаю»",
+        "{{ModId}}_NoteDinner": "388 1 771 1/Home/{{ModId}}_NoteDinner 1/false/none/Записка «Приходи на ужин»"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Courtship I1 — записки нравятся Харви",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Harvey",
+            "3"
+          ],
+          "Value": "{{ModId}}_NoteThanks {{ModId}}_NoteMiss {{ModId}}_NoteDinner",
+          "Delimiter": " "
+        }
+      ]
+    },
+    {
+      "LogName": "Courtship I2 — корзина для пикника у Гаса",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Entries": {
+        "{{ModId}}_PicnicBasket": {
+          "Id": "{{ModId}}_PicnicBasket",
+          "ItemId": "(O){{ModId}}_PicnicBasket",
+          "Price": 350,
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Married"
+        }
+      },
+      "TargetField": [
+        "Saloon",
+        "Items"
+      ]
+    },
+    {
+      "LogName": "Courtship I3 — квитанция за шар у Пьера",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Entries": {
+        "{{ModId}}_BalloonVoucher": {
+          "Id": "{{ModId}}_BalloonVoucher",
+          "ItemId": "(O){{ModId}}_BalloonVoucher",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyRomance_BalloonCloth Received, !PLAYER_HAS_MAIL Current HarveyRomance_BalloonReady Received, !PLAYER_HAS_ITEM Current (O){{ModId}}_BalloonVoucher"
+        }
+      },
+      "TargetField": [
+        "SeedShop",
+        "Items"
+      ]
+    },
+    {
+      "LogName": "Courtship — квесты (модель, шар)",
+      "Action": "EditData",
+      "Target": "Data/Quests",
+      "Entries": {
+        "{{ModId}}_ModelGlass": "ItemDelivery/Лёгкое и блестящее/Харви третий год собирает модель самолёта. Для фонаря кабины ему нужно что-нибудь прозрачное и лёгкое — из шахт./Принеси Харви 1 очищенный кварц./Harvey (O)338 1/{{ModId}}_ModelStruts/150/-1/false/Очищенный кварц! Прозрачный, как стекло в операционной.$h#$b#Фонарь кабины будет лучше, чем у настоящего. Теперь стойки. Медь лёгкая, но я не умею её гнуть. А Клинт умеет — правда, ворчит.$0",
+        "{{ModId}}_ModelStruts": "ItemDelivery/Медные стойки/Крылья модели держатся на тонких стойках. Харви не умеет работать с металлом, а Клинт обещал согнуть их, «если будет из чего»./Отнеси Клинту 3 медных слитка./Clint (O)334 3/{{ModId}}_ModelMotor/200/-1/false/Стойки для самолётика? Для доктора?$s#$b#…Ладно. Это даже интересно. Тонкая работа, не то что твои кирки.$h#$b#Передай ему, что крыло я рассчитал под ветер с озера. И что он должен мне кофе.$0",
+        "{{ModId}}_ModelMotor": "ItemDelivery/Сердце самолёта/Без моторчика модель только планирует. Мару согласилась собрать маленький двигатель — ей нужен источник питания./Отнеси Мару 1 батарейку./Maru (O)787 1/-1/250/-1/false/О, батарейка! Это даже слишком для такого моторчика — она сможет облететь всю долину.$h#$b#Доктор каждый день спрашивает, «как там двигатель». Я ему ничего не говорила, но, кажется, он уже назначил дату запуска.$h#$b#Готово. Отнесу ему сегодня. Детали собраны — дальше дело за вами двумя.$l#$action AddMail Current HarveyRomance_ModelParts Received#$action AddFriendshipPoints Harvey 100",
+        "{{ModId}}_BalloonCloth": "ItemDelivery/Заплатка на небо/Льюис договорился о воздушном шаре из Грамплтона, но на куполе есть прореха. Эмили обещала залатать — нужна прочная ткань./Отнеси Эмили 3 ткани. Харви — ни слова./Emily (O)428 3/{{ModId}}_BalloonPay/0/-1/false/Ткань для купола? Для… ох. Это для доктора, да? Мне Льюис по секрету сказал. Ну, то есть он думал, что по секрету.$h#$b#Залатаю так, что ни одна звезда не просочится. А ты оплати аренду — Льюис сказал, квитанцию берут у Пьера.$l#$action AddMail Current HarveyRomance_BalloonCloth Received",
+        "{{ModId}}_BalloonPay": "ItemDelivery/Квитанция за шар/Купол залатан. Осталось оплатить аренду: квитанцию оформляют в лавке Пьера, а отдать её нужно Льюису./Купи у Пьера квитанцию за воздушный шар и отдай Льюису./Lewis (O){{ModId}}_BalloonVoucher 1/-1/0/-1/false/Оплачено. Отлично. Шар привезут к плато, как только будет летний или осенний закат без ветра.$h#$b#Хе-хе. Доктор третий день ходит за мной и спрашивает, «что вы там с ней затеяли». Я сказал, что мы обсуждаем удобрения.$h#$b#Завтра пришлю письмо. Не потеряй.$0#$action AddMail Current HarveyRomance_BalloonReady Received#$action AddMail Current {{ModId}}_mailBalloonReady tomorrow"
+      }
+    },
+    {
+      "LogName": "Courtship — письма",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_mailRadio": "@,^^Запасные батарейки — в коробке. Сама рация — тоже. Вчера я отдал её тебе, а сегодня понял, что забыл объяснить главное: она ловит меня из любой точки долины. Даже из шахты, если неглубоко.^^Канал семь.^^— Харви%item id (O){{ModId}}_HarveyRadio 1 %%[#]Канал семь",
+        "{{ModId}}_mailModelParts": "@,^^Обещал написать, что нужно для модели. Пишу.^^1. Что-нибудь прозрачное для фонаря кабины. Мару говорит — очищенный кварц.^2. Медные стойки для крыльев. Их согнёт Клинт, если принести ему медь.^3. Сердце самолёта — моторчик. Его соберёт Мару.^^Это не срочно. Но я уже расчистил стол.^^— Клиника%item quest {{ModId}}_ModelGlass true %%[#]Детали для модели",
+        "{{ModId}}_mailDinnerInvite": "@,^^Пятница, шесть вечера, салун. Столик у окна. Я забронировал его у Гаса за неделю, чем очень его рассмешил.^^Пейджер будет выключен. Почти наверняка.^^— Харви[#]Пятница, шесть вечера",
+        "{{ModId}}_mailNoteThanksRecipe": "@,^^Мару сказала, что я «совершенно не умею принимать знаки внимания». Это клевета. Но на всякий случай: если захочешь мне что-нибудь сказать без свидетелей — вот как складывать записки. Как в школе. Я хранил все.^^— Харви%item craftingRecipe {{ModId}}_NoteThanks %%[#]Записки",
+        "{{ModId}}_mailNoteMissRecipe": "@,^^Ещё один способ складывать записку. Этот — для тех дней, когда меня нет рядом. Я, правда, всегда рядом. Но вдруг.^^— Харви%item craftingRecipe {{ModId}}_NoteMiss %%[#]Ещё записка",
+        "{{ModId}}_mailNoteDinnerRecipe": "@,^^И последняя. С печатью-чашкой. Если подаришь мне такую днём — вечером я приду к твоему крыльцу. С супом. Отказаться не смогу, это медицинский факт.^^— Харви%item craftingRecipe {{ModId}}_NoteDinner %%[#]Приходи на ужин",
+        "{{ModId}}_mailNoteReply_Thanks": "@,^^Твоя записка лежит у меня в нагрудном кармане, рядом со стетоскопом. Я перечитал её четыре раза между пациентами.^^Это мне надо говорить спасибо. Каждый день. Начинаю.^^— Харви[#]Ответ на записку",
+        "{{ModId}}_mailNoteReply_Miss": "@,^^Я тоже.^^…Это всё, что я хотел написать. Но бумаги было много, поэтому: я тоже. Очень. Даже когда ты в соседней комнате.^^— Харви[#]Я тоже",
+        "{{ModId}}_mailLewisBalloon": "@,^^Я тут случайно узнал (Мару проговорилась, Мару вообще всё рассказывает Робин, а Робин — мне), что доктор мечтал летать. И что модель утонула в озере.^^У меня есть знакомый в Грамплтоне с воздушным шаром. На один закат его можно арендовать. Купол, правда, порван — но Эмили шьёт лучше всех в долине.^^Решишь устроить сюрприз — я в деле. Доктору ни слова.^^— Мэр Льюис%item quest {{ModId}}_BalloonCloth true %%[#]Совершенно секретно",
+        "{{ModId}}_mailBalloonReady": "@,^^Шар залатан, оплачен и ждёт. Будет на плато над горами в любой ясный летний или осенний вечер, с четырёх до семи.^^Приведи доктора «просто погулять». Он ничего не подозревает. Ну, почти ничего.^^— Льюис[#]Шар готов",
+        "{{ModId}}_mailSky": "@,^^Я не могу уснуть. Всё ещё чувствую, как корзина отрывается от земли.^^Мне было страшно. Очень. И одновременно — лучше, чем когда-либо в жизни. Оказывается, одно другому не мешает. Ты меня этому научила.^^Модель высохла. Стоит на подоконнике и смотрит в небо. Я теперь тоже смотрю.^^— Твой пилот[#]Небо",
+        "{{ModId}}_mailRx_Beach": "@,^^РЕЦЕПТ^Клиника доктора Харви^^Назначение: одна прогулка у моря. Дозировка: до заката. Побочные эффекты: я.^^Действительно сегодня, до семи вечера.^^— Подпись врача (неразборчиво)[#]Рецепт",
+        "{{ModId}}_mailRx_Forest": "@,^^РЕЦЕПТ^Клиника доктора Харви^^Назначение: двадцать минут в лесу. Без корзины, без топора, без списка дел. Дозировка: со мной.^^Действительно сегодня, до семи вечера.^^— Подпись врача (неразборчиво)[#]Рецепт",
+        "{{ModId}}_mailRx_Fountain": "@,^^РЕЦЕПТ^Клиника доктора Харви^^Назначение: мороженое у фонтана. Противопоказаний нет. Шарф обязателен — у фонтана сквозит.^^Действительно сегодня, до семи вечера.^^— Подпись врача (неразборчиво)[#]Рецепт",
+        "{{ModId}}_mailRx_Mountain": "@,^^РЕЦЕПТ^Клиника доктора Харви^^Назначение: посмотреть на горное озеро. Курс лечения: пока не надоест. Мне не надоест.^^Действительно сегодня, до семи вечера.^^— Подпись врача (неразборчиво)[#]Рецепт"
+      }
+    },
+    {
+      "LogName": "Courtship — триггеры (рецепты, записки, шар, шкатулка)",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_Courtship_Rx_Beach": {
+          "Id": "{{ModId}}_Courtship_Rx_Beach",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain, PLAYER_FRIENDSHIP_POINTS Current Harvey 2300, DAY_OF_WEEK Monday, !IS_FESTIVAL_DAY, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_RxCD, RANDOM 0.4",
+          "Actions": [
+            "RemoveMail Current {{ModId}}_mailRx_Beach",
+            "AddMail Current {{ModId}}_mailRx_Beach now",
+            "AddMail Current HarveyRomance_Rx_Beach Received",
+            "AddConversationTopic HarveyRomance_RxCD 10",
+            "AddConversationTopic HarveyRomance_RxToday 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Beach_Expire": {
+          "Id": "{{ModId}}_Courtship_Rx_Beach_Expire",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyRomance_Rx_Beach Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_RxToday",
+          "Actions": [
+            "RemoveMail Current HarveyRomance_Rx_Beach"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Beach_Return": {
+          "Id": "{{ModId}}_Courtship_Rx_Beach_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S1_Beach",
+          "Actions": [
+            "MarkEventSeen Current HarveyOverhaulCourtship.S1_Beach false"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Forest": {
+          "Id": "{{ModId}}_Courtship_Rx_Forest",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain, PLAYER_FRIENDSHIP_POINTS Current Harvey 2300, DAY_OF_WEEK Tuesday, !IS_FESTIVAL_DAY, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_RxCD, RANDOM 0.4",
+          "Actions": [
+            "RemoveMail Current {{ModId}}_mailRx_Forest",
+            "AddMail Current {{ModId}}_mailRx_Forest now",
+            "AddMail Current HarveyRomance_Rx_Forest Received",
+            "AddConversationTopic HarveyRomance_RxCD 10",
+            "AddConversationTopic HarveyRomance_RxToday 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Forest_Expire": {
+          "Id": "{{ModId}}_Courtship_Rx_Forest_Expire",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyRomance_Rx_Forest Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_RxToday",
+          "Actions": [
+            "RemoveMail Current HarveyRomance_Rx_Forest"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Forest_Return": {
+          "Id": "{{ModId}}_Courtship_Rx_Forest_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S1_Forest",
+          "Actions": [
+            "MarkEventSeen Current HarveyOverhaulCourtship.S1_Forest false"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Fountain": {
+          "Id": "{{ModId}}_Courtship_Rx_Fountain",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain, PLAYER_FRIENDSHIP_POINTS Current Harvey 2300, DAY_OF_WEEK Wednesday, !IS_FESTIVAL_DAY, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_RxCD, RANDOM 0.4",
+          "Actions": [
+            "RemoveMail Current {{ModId}}_mailRx_Fountain",
+            "AddMail Current {{ModId}}_mailRx_Fountain now",
+            "AddMail Current HarveyRomance_Rx_Fountain Received",
+            "AddConversationTopic HarveyRomance_RxCD 10",
+            "AddConversationTopic HarveyRomance_RxToday 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Fountain_Expire": {
+          "Id": "{{ModId}}_Courtship_Rx_Fountain_Expire",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyRomance_Rx_Fountain Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_RxToday",
+          "Actions": [
+            "RemoveMail Current HarveyRomance_Rx_Fountain"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Fountain_Return": {
+          "Id": "{{ModId}}_Courtship_Rx_Fountain_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S1_Fountain",
+          "Actions": [
+            "MarkEventSeen Current HarveyOverhaulCourtship.S1_Fountain false"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Mountain": {
+          "Id": "{{ModId}}_Courtship_Rx_Mountain",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain, PLAYER_FRIENDSHIP_POINTS Current Harvey 2300, DAY_OF_WEEK Thursday, !IS_FESTIVAL_DAY, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_RxCD, RANDOM 0.4",
+          "Actions": [
+            "RemoveMail Current {{ModId}}_mailRx_Mountain",
+            "AddMail Current {{ModId}}_mailRx_Mountain now",
+            "AddMail Current HarveyRomance_Rx_Mountain Received",
+            "AddConversationTopic HarveyRomance_RxCD 10",
+            "AddConversationTopic HarveyRomance_RxToday 1"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Mountain_Expire": {
+          "Id": "{{ModId}}_Courtship_Rx_Mountain_Expire",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyRomance_Rx_Mountain Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_RxToday",
+          "Actions": [
+            "RemoveMail Current HarveyRomance_Rx_Mountain"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Rx_Mountain_Return": {
+          "Id": "{{ModId}}_Courtship_Rx_Mountain_Return",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S1_Mountain",
+          "Actions": [
+            "MarkEventSeen Current HarveyOverhaulCourtship.S1_Mountain false"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_DinnerInvite": {
+          "Id": "{{ModId}}_Courtship_DinnerInvite",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating, DAY_OF_WEEK Thursday, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S2_Gossip, !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S3_Dinner, !PLAYER_HAS_MAIL Current {{ModId}}_mailDinnerInvite Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailDinnerInvite now"
+          ]
+        },
+        "{{ModId}}_Courtship_NoteMissRecipe": {
+          "Id": "{{ModId}}_Courtship_NoteMissRecipe",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailNoteThanksRecipe Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailNoteMissRecipe Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailNoteMissRecipe now"
+          ]
+        },
+        "{{ModId}}_Courtship_NoteDinnerRecipe": {
+          "Id": "{{ModId}}_Courtship_NoteDinnerRecipe",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailNoteMissRecipe Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailNoteDinnerRecipe Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailNoteDinnerRecipe now"
+          ]
+        },
+        "{{ModId}}_Courtship_NoteDinnerExpire": {
+          "Id": "{{ModId}}_Courtship_NoteDinnerExpire",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyRomance_NoteDinner Received",
+          "Actions": [
+            "RemoveMail Current HarveyRomance_NoteDinner"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_NoteDinnerReturn": {
+          "Id": "{{ModId}}_Courtship_NoteDinnerReturn",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.I1_Dinner",
+          "Actions": [
+            "MarkEventSeen Current HarveyOverhaulCourtship.I1_Dinner false"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_CoffeeWeek": {
+          "Id": "{{ModId}}_Courtship_CoffeeWeek",
+          "Trigger": "DayStarted",
+          "Condition": "DAY_OF_WEEK Monday, PLAYER_HAS_MAIL Current HarveyRomance_CoffeeWeek Received",
+          "Actions": [
+            "RemoveMail Current HarveyRomance_CoffeeWeek"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_LewisBalloon": {
+          "Id": "{{ModId}}_Courtship_LewisBalloon",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C4_Launch, !PLAYER_HAS_MAIL Current {{ModId}}_mailLewisBalloon Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_mailLewisBalloon now"
+          ]
+        },
+        "{{ModId}}_Courtship_BalloonSecret": {
+          "Id": "{{ModId}}_Courtship_BalloonSecret",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailLewisBalloon Received, !PLAYER_HAS_MAIL Current HarveyRomance_BalloonReady Received",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Secret 4"
+          ]
+        },
+        "{{ModId}}_Courtship_BalloonSecret2": {
+          "Id": "{{ModId}}_Courtship_BalloonSecret2",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HarveyRomance_BalloonCloth Received, !PLAYER_HAS_MAIL Current HarveyRomance_BalloonReady Received",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Secret2 4"
+          ]
+        },
+        "{{ModId}}_Courtship_Box_0": {
+          "Id": "{{ModId}}_Courtship_Box_0",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_0 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_0 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_1": {
+          "Id": "{{ModId}}_Courtship_Box_1",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_1 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_1 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_2": {
+          "Id": "{{ModId}}_Courtship_Box_2",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_2 Received, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_2 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_2 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_3": {
+          "Id": "{{ModId}}_Courtship_Box_3",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N4_BlueMoon, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_3 Received, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_2 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_3 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_3 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_4": {
+          "Id": "{{ModId}}_Courtship_Box_4",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N7_Key, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_4 Received, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_2 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_3 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N4_BlueMoon\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_4 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_4 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_5": {
+          "Id": "{{ModId}}_Courtship_Box_5",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P1_SecondAsk, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_5 Received, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_2 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_3 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N4_BlueMoon\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_4 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N7_Key\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_5 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_5 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_6": {
+          "Id": "{{ModId}}_Courtship_Box_6",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P3_Jitters, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_6 Received, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_2 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_3 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N4_BlueMoon\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_4 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N7_Key\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_5 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P1_SecondAsk\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_6 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_6 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_7": {
+          "Id": "{{ModId}}_Courtship_Box_7",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulMarriage.M1_FirstShift, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_7 Received, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_2 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_3 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N4_BlueMoon\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_4 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N7_Key\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_5 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P1_SecondAsk\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_6 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P3_Jitters\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_7 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_7 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_8": {
+          "Id": "{{ModId}}_Courtship_Box_8",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C4_Launch, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_8 Received, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_2 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_3 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N4_BlueMoon\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_4 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N7_Key\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_5 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P1_SecondAsk\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_6 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P3_Jitters\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_7 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulMarriage.M1_FirstShift\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_8 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_8 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_9": {
+          "Id": "{{ModId}}_Courtship_Box_9",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C5_Flight, !PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_9 Received, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_2 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_3 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N4_BlueMoon\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_4 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N7_Key\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_5 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P1_SecondAsk\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_6 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P3_Jitters\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_7 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulMarriage.M1_FirstShift\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_8 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C4_Launch\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_9 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1",
+            "AddMail Current HarveyRomance_BoxRead_9 Received"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_Box_Full": {
+          "Id": "{{ModId}}_Courtship_Box_Full",
+          "Trigger": "LocationChanged",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married, PLAYER_HAS_MAIL Current HarveyMarriage_AnniversaryToday Received, !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyRomance_BoxToday, ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_0 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstMeeting\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_1 Received\" \"!PLAYER_HAS_SEEN_EVENT Current eventHarveyFirstDate\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_2 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulDate.D1_Fountain\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_3 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N4_BlueMoon\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_4 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N7_Key\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_5 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P1_SecondAsk\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_6 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.P3_Jitters\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_7 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulMarriage.M1_FirstShift\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_8 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C4_Launch\", ANY \"PLAYER_HAS_MAIL Current HarveyRomance_BoxRead_9 Received\" \"!PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.C5_Flight\"",
+          "Actions": [
+            "AddConversationTopic HarveyRomance_Box_Full 1",
+            "AddConversationTopic HarveyRomance_BoxToday 1"
+          ],
+          "MarkActionApplied": false
+        }
+      }
+    }
+  ]
+}

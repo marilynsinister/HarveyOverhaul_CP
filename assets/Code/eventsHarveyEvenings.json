@@ -14,9 +14,9 @@
         skippable/
         setSkipActions AddFriendshipPoints Harvey 40#marilynsinister.HarveyStressMeter_ComfortRelief 15/
         warp farmer 6 12/
-        move farmer 0 -3 1/
-        move Harvey -1 0 3/
-        move farmer 1 0 1/
+        move farmer 0 -3 1 false/
+        move Harvey -1 0 3 false/
+        move farmer 1 0 1 false/
         pause 300/
         speak Harvey \"О, @! Заходи. Только тише... слышишь?$h\"/
         message \"Из старого приёмника доносится треск и далёкие голоса.\"/
@@ -37,9 +37,9 @@
         skippable/
         setSkipActions AddFriendshipPoints Harvey 50#marilynsinister.HarveyStressMeter_ComfortRelief 15/
         warp farmer 6 12/
-        move farmer 0 -3 1/
-        move Harvey -1 0 3/
-        move farmer 1 0 1/
+        move farmer 0 -3 1 false/
+        move Harvey -1 0 3 false/
+        move farmer 1 0 1 false/
         pause 300/
         speak Harvey \"@! Ты как раз вовремя. Подержишь крыло? Клей схватывается тридцать секунд.$h\"/
         message \"На столе — почти собранная модель самолёта. Ты осторожно придерживаешь крыло.\"/
@@ -60,9 +60,9 @@
         skippable/
         setSkipActions AddFriendshipPoints Harvey 60#marilynsinister.HarveyStressMeter_ComfortRelief 25/
         warp farmer 6 12/
-        move farmer 0 -3 1/
-        move Harvey -1 0 3/
-        move farmer 1 0 1/
+        move farmer 0 -3 1 false/
+        move Harvey -1 0 3 false/
+        move farmer 1 0 1 false/
         pause 300/
         speak Harvey \"Солнышко, ты пришла. Я как раз дочитывал статью... побудешь со мной?$l\"/
         animate Harvey false true 1000 47/
