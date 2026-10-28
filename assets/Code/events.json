@@ -131,7 +131,7 @@
         positionOffset farmer 32 -32/
         warp Harvey 19 5/
         faceDirection Harvey 1/
-        end position 20 5",
+        end position 20 6",
         "eventHarveyCheckFarmerOutsideAfter22/Time 2200 0200/GameStateQuery {{HO_EveningChecksQuery}}/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicPassedOutInTown/GameStateQuery PLAYER_NPC_RELATIONSHIP  Current Harvey Dating Married": "
         continue/
         {{HO_FarmX}} {{HO_FarmY0}}/
@@ -1286,7 +1286,7 @@
         action removeConversationTopic topicRescueOperation/
         stopAnimation Harvey/
         stopAnimation farmer/
-        end position 20 5"
+        end position 20 6"
       }
     },
     {
@@ -2515,7 +2515,7 @@
         message \"...\"/
         speak Harvey \"Не отвечай сейчас, если не готова. Я просто хотел, чтобы ты знала: я выбираю тебя. Но решение — только твоё.$l\"/
         pause 500/
-        animate Harvey true false 5000 38/
+        animate Harvey true false 5000 31/
         animate farmer true false 5000 101/
         positionOffset farmer -12 0/
         positionOffset Harvey 12 0/

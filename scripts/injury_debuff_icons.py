@@ -7,7 +7,7 @@ small treatment/phase details. Do not replace these with anatomical miniatures.
 from PIL import Image
 
 
-def build(palette, badge):
+def build(palette, badge, symbol_overrides=None):
     palette = {**palette, 'c': (255, 218, 178, 255)}
     ink = palette['o']
 
@@ -425,6 +425,10 @@ def build(palette, badge):
         'blood': blood, 'sepsis': sepsis, 'plaster': plaster, 'dirty': dirty, 'neglect': neglected, 'pain': pain,
         'crutch': crutch, 'weak_muscle': weak_muscle, 'ribs': bruised_ribs,
     }
+    # A newer native art set can supply paintings while retaining phase/order
+    # contracts. Callers without overrides keep the original v4 drawings.
+    if symbol_overrides:
+        symbols.update(symbol_overrides)
     # Basic injury debuffs and their complications have distinct silhouettes.
     spec = {
         'buffHurt': ('plaster', None), 'buffPainFlare': ('pain', None),

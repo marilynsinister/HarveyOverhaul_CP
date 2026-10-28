@@ -1,0 +1,43 @@
+{
+  "source": "../../../scripts/native_herbal_garden.py",
+  "method": "native integer pixel painting; no input bitmaps or downscaling",
+  "artDirection": "compact lush plants; rounded forms; warm upper-left glints; material-coloured internal contours; supplied Wildflour style reference",
+  "outline": "#263e31",
+  "cropCell": [
+    16,
+    32
+  ],
+  "itemCell": [
+    16,
+    16
+  ],
+  "frameMap": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5
+  ],
+  "installedInWorkspace": true,
+  "sheets": {
+    "herbalItems.png": {
+      "size": [
+        128,
+        16
+      ],
+      "colors": 41,
+      "sha256Pixels": "68736a7d7c25b90a4d900aebdf0475fb287dfb940cc58ccc3b7494590cad2df5"
+    },
+    "herbalCrops.png": {
+      "size": [
+        256,
+        64
+      ],
+      "colors": 42,
+      "sha256Pixels": "7f442144ec89ff2e8af8fee11148e8cc75eeb9bbec15868a9bae2515e72ee751"
+    }
+  }
+}

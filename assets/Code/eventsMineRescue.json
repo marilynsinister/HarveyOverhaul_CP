@@ -4,7 +4,10 @@
             "Action": "EditData",
             "Target": "Data/Events/Mine",
             "Entries": {
-                "eventHarveyMineRescue/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
+                // Legacy: C# больше не запускает. Условие FALSE — чтобы игра не включила сцену сама при входе
+                // в шахту с topicMineRescuePending (лёгкое спасение) и не закрыла этим утреннюю сцену навсегда.
+                // ID остаётся для старых сейвов (eventsSeen, журнал).
+                "eventHarveyMineRescue/GameStateQuery FALSE": "
         none/
         -1000 -1000/
         farmer 17 7 2 Harvey 1000 1000 0 Maru -1000 -1000 0/
@@ -91,9 +94,11 @@
         faceDirection farmer 3/
         globalFade/
         viewport -1000 -1000/
-        end position 20 5 dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
+        end position 20 6 dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
 
-                "eventHarveyMinorMineRescue/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
+                // Запускает только C# (PassOutHandler.TryTriggerMinorMineRescue): условия проверяет он сам,
+                // а после сцены снимает тему и ставит флаги. Сама игра эту сцену не включает.
+                "eventHarveyMinorMineRescue/GameStateQuery FALSE": "
         none/
         -1000 -1000/
         farmer 17 7 2 Harvey 17 10 0/
@@ -123,7 +128,8 @@
         stopAnimation Harvey/
         end position 14 6 dialogue Harvey \"Отдыхай. Я загляну позже.$h\"",
 
-                "eventHarveyMineRescueDating/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMinorMineRescue": "
+                // Legacy: см. eventHarveyMineRescue выше — автозапуск выключен.
+                "eventHarveyMineRescueDating/GameStateQuery FALSE": "
         none/
         -1000 -1000/
         farmer 17 7 2 Harvey 1000 1000 0/
@@ -202,7 +208,7 @@
         globalFade/
         viewport -1000 -1000/
         stopAnimation Harvey/
-        end position 20 5 dialogue Harvey \"Если боль усилится — скажи сразу. Я не далеко.$u\""
+        end position 20 6 dialogue Harvey \"Если боль усилится — скажи сразу. Я не далеко.$u\""
             }
         },
         {
@@ -216,7 +222,9 @@
             "Action": "EditData",
             "Target": "Data/Events/FarmHouse",
             "Entries": {
-                "eventHarveyMineRescueMorning/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, !PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorning, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorningDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
+                // Запускает только C# (PassOutHandler.TriggerMineRescueEvents): вариант по отношениям
+                // и «уже видел» выбирает он сам, после сцены начинает лечение. Сама игра сцену не включает.
+                "eventHarveyMineRescueMorning/GameStateQuery FALSE": "
         continue/
         {{HO_HomeVX}} 7/
         farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/
@@ -247,7 +255,8 @@
         stopAnimation Harvey/
         end dialogue Harvey \"Как боль? Нужно обезболивающее?$s\"",
 
-                "eventHarveyMineRescueMorningDating/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicMineRescuePending, PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorningDating, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueMorning, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescue, !PLAYER_HAS_SEEN_EVENT Current eventHarveyMineRescueDating": "
+                // Запускает только C#, см. eventHarveyMineRescueMorning выше.
+                "eventHarveyMineRescueMorningDating/GameStateQuery FALSE": "
         continue/
         {{HO_HomeVX}} 7/
         farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/

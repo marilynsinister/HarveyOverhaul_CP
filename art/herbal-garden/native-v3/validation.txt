@@ -1,0 +1,7 @@
+OK: 8 icons; 4 crop rows; all phases, seed variants and regrowth coordinates; binary alpha; dark contours; export copies.
+OK: 5 linked quests (3 deliveries, lost page, cooked blend); guaranteed seed mail; recipe and letter references; one-time rewards.
+OK: TraumaBackstory true/false; broth trust gate; salve scene gate; existing medical IDs preserved.
+Herbal garden: all static checks passed.
+Native icons: 227 cells; 9 sheets; binary alpha; dark contours; runtime copies and 166 buff indices OK.
+OK: native rebuild matches runtime PNGs; both item exporters use the same pixel paintings.
+Artwork: 16x32 crops, 16x16 items, opaque dark contour, upper-left highlights, binary alpha.

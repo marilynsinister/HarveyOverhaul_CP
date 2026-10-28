@@ -1,0 +1,1496 @@
+{
+  "buffHarveyTreatment": {
+    "index": 0,
+    "name": "Лечение Харви",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "c8700a634d68189ae11c68b965b4a6ae30356748789e787661a54b761848cb2a"
+  },
+  "buffHarveyIntensiveCare": {
+    "index": 1,
+    "name": "Интенсивная терапия",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "4a7e99f7073bf1141032092078fcb6b23a82679251639c60f40ba9115ea5f77b"
+  },
+  "HarveyMod_BadlyHurt_OutpatientCare": {
+    "index": 2,
+    "name": "Восстановление после тяжёлой травмы",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "73d9eec4bac91ef4ca329895c79a24085acb79c015165181942a1fa75a95ca3e"
+  },
+  "buffHarveyHealing": {
+    "index": 3,
+    "name": "Исцеление",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "3b5f75b2eba2fdd771714cb69d67fc94fc927d88d80725ddf74412ef44c785ec"
+  },
+  "buffHarveyRecovery": {
+    "index": 4,
+    "name": "Восстановление",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "763b0aeb630f971e05da199a41a429a0796af3b4aaf4d1b62a0dbb725cbfb29a"
+  },
+  "buffHarveyProtection": {
+    "index": 5,
+    "name": "Защита Харви",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "448e54224c38b9dd1fa4bd2143096cd74edd0f83e01e96eed42cc5510faad25e"
+  },
+  "buffAntibioticsTreatment": {
+    "index": 6,
+    "name": "Курс антибиотиков",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "4d763f37144a80a2adc0649edff11749b6b089e2a8cf0bb9047b7359b8d0eaa1"
+  },
+  "buffHarveyDropper": {
+    "index": 7,
+    "name": "Капельница Харви",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "f3037062928829605d6a5b116e16abba9e9cb69a6a83eb8a7354eeb224810209"
+  },
+  "buffTeracitin": {
+    "index": 8,
+    "name": "Терацитин",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "78d57dae31a9d4e8c87fddf008cc6aa64f66b6d0800505a3af5b5738f1322c23"
+  },
+  "buffCalmTeaEffect": {
+    "index": 9,
+    "name": "Чай с мелиссой",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "92f75b32f6a914b2d606da568ef2d8e162e73c139d9797fe7717932da75c75d1"
+  },
+  "buffStrictSupervision": {
+    "index": 10,
+    "name": "Строгое наблюдение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "2b3c33fbf9a7c4cddaf1975827015090e44895c82424e467cd5cd34bfa74ccd1"
+  },
+  "buffEmergencySupervision": {
+    "index": 11,
+    "name": "Экстренное наблюдение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "eb9a773472b51405d1e3c8cd5a9bb59c9f9495454c6e8281dd9ed3b26ff6b3b9"
+  },
+  "buffConstantSupervision": {
+    "index": 12,
+    "name": "Постоянное наблюдение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "c440d2f4e4a6ccfc2810d8295595d676e3e9f0a48ce5db077237228ec81b6464"
+  },
+  "buffForcedSedation": {
+    "index": 13,
+    "name": "Принудительная седация",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "6475003fe28cbd1220ba6df733b98b069e9b925e51a29ccecbecbaf9ff10b6b3"
+  },
+  "buffPostSurgicalCare": {
+    "index": 14,
+    "name": "Послеоперационный уход",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "da6249cb68cbfa2ae551b1cf3a018fec3d4bf332a4d2749742c39bc7f3bdfa49"
+  },
+  "buffTraumaHealing": {
+    "index": 15,
+    "name": "Исцеление травмы",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "405cc1addb968d1a99c913915ad3acd99c885107961f3eda42080992f7d70280"
+  },
+  "HarveyMod_FracturedBone_Acute": {
+    "index": 16,
+    "name": "Перелом: Острая фаза (Фаза 1/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "e298b2f8ce8c4ceb79f324d8387764b94c6c93656b70555ea42e41e0b42ef661"
+  },
+  "HarveyMod_FracturedBone_Cast": {
+    "index": 17,
+    "name": "Перелом: Гипс (Фаза 2/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "3be801012a3320d0786fa5a8483eff563f41344652bb1f60e4f4c40beee5d0fd"
+  },
+  "HarveyMod_FracturedBone_Recovery": {
+    "index": 18,
+    "name": "Перелом: Реабилитация (Фаза 3/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "9838f044ce81d8d4cab5a8897435f1280a764f794ef0eac68c9b20780fc0d2e0"
+  },
+  "HarveyMod_Concussion_Acute": {
+    "index": 19,
+    "name": "Сотрясение: Острая фаза (Фаза 1/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "f7c33ccd10326bfc8470878b69d3fc89c1bfb65764608bd99eb818dffe71f866"
+  },
+  "HarveyMod_Concussion_Rest": {
+    "index": 20,
+    "name": "Сотрясение: Домашний режим (Фаза 2/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "7da6d075f8f3f93fe0e16e716d016c3ec2ec778317c2688d7be24cab84712baf"
+  },
+  "HarveyMod_Concussion_Limited": {
+    "index": 21,
+    "name": "Сотрясение: Ограничения (Фаза 3/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "d6cc78ae50af77de5d2182a6747b93a4637fb07f04074f0f4149ec282e5065b1"
+  },
+  "HarveyMod_Shrapnel_Surgery": {
+    "index": 22,
+    "name": "После операции: Швы (Фаза 1/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "e30ab29b80cef1e4b8fe0ce59dae2bae57d2370a645567666779d66a0fcf9efe"
+  },
+  "HarveyMod_Shrapnel_Healing": {
+    "index": 23,
+    "name": "Заживление швов (Фаза 2/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "31e1c981723f4cd667b1239c13fa6d727c6e5c80d6b62c73ededff193e14235d"
+  },
+  "HarveyMod_Shrapnel_Recovery": {
+    "index": 24,
+    "name": "Восстановление тканей (Фаза 3/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "e933cb8f91de97ac28d70948796007d82701efa20412db9b956ecc0f4dc808cf"
+  },
+  "HarveyMod_TornMuscles_Acute": {
+    "index": 25,
+    "name": "Надрыв мышц: Острая боль (Фаза 1/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "f2c2f72bfca4235de782d0909ec76c9298182ddf63a1906756e916ecc412f118"
+  },
+  "HarveyMod_TornMuscles_Healing": {
+    "index": 26,
+    "name": "Надрыв мышц: Заживление (Фаза 2/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "9f7cf28cde35db046be8adc3e0e02c09ed3b64cfd77b7d240c3556e4b40dbedd"
+  },
+  "HarveyMod_TornMuscles_Rehab": {
+    "index": 27,
+    "name": "Надрыв мышц: Реабилитация (Фаза 3/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "67a608429d7ba837f931e032c362866e54933872420bd9d03536edaa590a8a82"
+  },
+  "HarveyMod_SprainedAnkle_Acute": {
+    "index": 28,
+    "name": "Растяжение: Острая боль (Фаза 1/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "2a29534f71e3f22863bae3eccd197a9fe8969bfe6cc3ccb23326308c6c584e87"
+  },
+  "HarveyMod_SprainedAnkle_Recovery": {
+    "index": 29,
+    "name": "Растяжение: Восстановление (Фаза 2/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "faa65067c760db37f4071e8ac1376c51a101b0781262b2ef9ce2d8abacac30c6"
+  },
+  "HarveyMod_BruisedRibs_Acute": {
+    "index": 30,
+    "name": "Ушиб рёбер: Острая боль (Фаза 1/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "480132d0207a253ef22c2c4d5a819d2b32504124f66cde344b508cf84f87ad5a"
+  },
+  "HarveyMod_BruisedRibs_Healing": {
+    "index": 31,
+    "name": "Ушиб рёбер: Заживление (Фаза 2/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "817449e93bf6cb93d050b50cfa68221c995cf4775ab1d21f578c3a25950db0b5"
+  },
+  "HarveyMod_DeepCuts_Acute": {
+    "index": 32,
+    "name": "Глубокие порезы: Швы (Фаза 1/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "874fc791effa36ba2e5e82e125a591c3e52f0f67d91a6fe4a8abe3743392b0f5"
+  },
+  "HarveyMod_DeepCuts_Healing": {
+    "index": 33,
+    "name": "Глубокие порезы: Заживление (Фаза 2/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "773c81a1fa3779ff2e8594903f14d9f6d12cbe9b646768b4b26d5ae5a120fab5"
+  },
+  "HarveyMod_DeepCuts_Recovery": {
+    "index": 34,
+    "name": "Глубокие порезы: Снятие швов (Фаза 3/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "9d15b2a31904bec378b129bd7cc2498081583f96ea52d6f1d2f010491283e27a"
+  },
+  "HarveyMod_BurnWounds_Acute": {
+    "index": 35,
+    "name": "Ожоги: Острая боль (Фаза 1/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "ab22ae58802f22115ddfb5424fb9955d3ad6fdca6ac5e3e68f6a466a06cdc506"
+  },
+  "HarveyMod_BurnWounds_Healing": {
+    "index": 36,
+    "name": "Ожоги: Регенерация (Фаза 2/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "d50a71c98807067fd8ee8f751a5039c79263d1aa5eb9c5f4f7a0c39763316ae2"
+  },
+  "HarveyMod_InfectedWound_Acute": {
+    "index": 37,
+    "name": "Инфекция: Лихорадка (Фаза 1/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "b886d696c86db8c2440909972d297a6791d80d2adb1643d4bfcede8eebdb85b5"
+  },
+  "HarveyMod_InfectedWound_Treatment": {
+    "index": 38,
+    "name": "Инфекция: Антибиотики (Фаза 2/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "42a00af26d8dce1af7386b344afe5e385aa3edf4174f3c172193681a91ffea34"
+  },
+  "HarveyMod_BackStrain_Acute": {
+    "index": 39,
+    "name": "Спина: Острая боль (Фаза 1/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "a7563526b71af02b4b37fca57ac3d6dcd45390ee60ad7f762ff83bf1069eace6"
+  },
+  "HarveyMod_BackStrain_Recovery": {
+    "index": 40,
+    "name": "Спина: Восстановление (Фаза 2/2)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "14f81047c968de96f40fbcc838dfe5e4e715f5efae73b010182f835baae1a370"
+  },
+  "HarveyMod_BadlyHurt_Acute": {
+    "index": 41,
+    "name": "Тяжёлая рана: Стабилизация (Фаза 1/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "bb17868f6c85e4194bf47fdceee7c2218bebdc495a569125688035e810033a5e"
+  },
+  "HarveyMod_BadlyHurt_Healing": {
+    "index": 42,
+    "name": "Тяжёлая рана: Заживление (Фаза 2/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "8ff8f053c3dd173dc015a90116ed891418ae73e3b9ca4a06ef51a98d68fe669d"
+  },
+  "HarveyMod_BadlyHurt_Recovery": {
+    "index": 43,
+    "name": "Тяжёлая рана: Восстановление (Фаза 3/3)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "3322ba501e7256b987beb19e88910473689f2b44175fb424fa4115fc77a3e3a6"
+  },
+  "buffHarveyCare": {
+    "index": 44,
+    "name": "Забота Харви",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "d2a436ac10cf2fc056c564958bfd8b77a8d94bb1531f422db4aa51c837f48452"
+  },
+  "buffHarveyTreatmentBreakdown": {
+    "index": 45,
+    "name": "Лечение нервного срыва",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "9d8380723676da5efab069c6e75dcea1fda99060e2dcacafadeca94dfb7f00e3"
+  },
+  "buffHarveyTreatmentCollapse": {
+    "index": 46,
+    "name": "Реабилитация после коллапса",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "e670e438d11cd911f09cbd31dc60f8da077a50c9e8bfb4c07e147b14a9888a87"
+  },
+  "buffHarveyTreatmentNumbness": {
+    "index": 47,
+    "name": "Лечение эмоционального онемения",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "ecaab8e40d4daf0adafdb2bec2c7fed493a6f0af63bd3548cfe4dde51d20addc"
+  },
+  "buffHarveyTreatmentDespair": {
+    "index": 48,
+    "name": "Интервенция отчаяния",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "cbc6c92f9042d174449b1d327f8bbd7ff46865e3648d4b072ca19504c1533d6e"
+  },
+  "buffHarveyTreatmentCritical": {
+    "index": 49,
+    "name": "Критическое лечение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "ae2d9e33d6917aff2819e4891a96f6a0e54a9d080b8f3de596ab67376aa1a81c"
+  },
+  "buffHarveyTreatmentTired": {
+    "index": 50,
+    "name": "Лечение хронической усталости",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "26354c9182b6d29bd315d1a9eb3dadc25145d75d2665e4c2f0cbe7654005f43a"
+  },
+  "buffHarveyTreatmentLonely": {
+    "index": 51,
+    "name": "Лечение одиночества",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "0b168d7342b1b4bac2263d7f2a50af83295756cd3e794bf9f800fecc101d61c0"
+  },
+  "buffHarveyTreatmentThunder": {
+    "index": 52,
+    "name": "Лечение страха грома",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "e7efa2ce1de7407ec2a324a3ce53d57aec95daf0dc329c7abd7aa3b77d1488bd"
+  },
+  "buffHarveyTreatmentHunger": {
+    "index": 53,
+    "name": "Лечение проблем с аппетитом",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "bd5f4a8eeaedbdb3770aff783abd07d53d805af038cebd1309676b0de2e7cac3"
+  },
+  "buffHarveyTreatmentOverwork": {
+    "index": 54,
+    "name": "Лечение переутомления",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "c94bc049e429f0d671e7ec9275a6d75ef795382ab8c1fb819a313f9705837b41"
+  },
+  "buffHarveyTreatmentNoSleep": {
+    "index": 55,
+    "name": "Лечение бессонницы",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "d532a9a92e860396ade4452bea0370de5aaea748b97610f631fc7a0d944ae21d"
+  },
+  "buffHarveyTreatmentTooCold": {
+    "index": 56,
+    "name": "Лечение холодовой чувствительности",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "3793a3f673360306a50906a6081900d421e295054b4fa5fb0b4fd10394c57421"
+  },
+  "buffHarveyTreatmentSocial": {
+    "index": 57,
+    "name": "Лечение социальной тревожности",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "5a1026ec8bff7b575ce88d6e406619073e5785bd67a1ee8ca5dfe53986052430"
+  },
+  "buffHarveyTreatmentDarkness": {
+    "index": 58,
+    "name": "Лечение страха темноты",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "f234ad2c5966c545c53590786eca75d7d35e10c82198e6d6bb823c06d47b0fe1"
+  },
+  "buffHarveyTreatmentCriticism": {
+    "index": 59,
+    "name": "Лечение самокритики",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "5274dda4ac572df6b512f835ade6193384e5345da97673b255a784a583b8f70c"
+  },
+  "buffHarveyTreatmentBadDream": {
+    "index": 60,
+    "name": "Лечение кошмаров",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "b58ace5d9bb91c28a3226fe76717636af25843df45757bd5ad493ee6107444c6"
+  },
+  "buffHarveyTreatmentPanic": {
+    "index": 61,
+    "name": "Лечение панических атак",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "198d7b9ec28b7b2d093f985093959ef1d2d0dbc02ad6711cf442de0c9676a231"
+  },
+  "buffHarveyTreatmentAnxietyWave": {
+    "index": 62,
+    "name": "Лечение тревожности",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "a77d8c2868efab5723512ef3688415cd7693fa76466f8208522b6841b3f12461"
+  },
+  "buffHarveyTreatmentMentalFatigue": {
+    "index": 63,
+    "name": "Лечение умственной усталости",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "311c0bc4e25a2369bcbf2029253cb4d2662353463a416a1458e846c4f6307858"
+  },
+  "buffHarveyTreatmentShadowParanoia": {
+    "index": 64,
+    "name": "Лечение паранойи",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "dfdff5940528aa16f4dc313961dd9eaf5a0a2be7b71bab248a7212eb4ec98846"
+  },
+  "buffHarveyTreatmentFreezeResponse": {
+    "index": 65,
+    "name": "Лечение реакции заморозки",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "19d619969e80e691147bdc6d336455e9e0bab8dacd1ebf190ff32c5853326e77"
+  },
+  "buffHarveyTreatmentIsolation": {
+    "index": 66,
+    "name": "Лечение изоляции",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "23410bbefdacceb27b824947cbf8cd724d1ad653f676ca19d76f5389664cf174"
+  },
+  "buffStressImmunity": {
+    "index": 67,
+    "name": "Иммунитет к стрессу",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "e210a2a4834c190065617d5474e020da3647891bcb09992ed7cef48ef1d400da"
+  },
+  "buffStressRecovery": {
+    "index": 68,
+    "name": "Восстановление от стресса",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "91f4f6a782214222f3c8fa8fbaad04cb0c8ff630106e1c45abc32d8d3ac07ffd"
+  },
+  "buffStressRecoveryAdvanced": {
+    "index": 69,
+    "name": "Продвинутое восстановление",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "417935b1787b549250d0ef33e174134c8747210ff7dceaafd4f7a4710e0f1a80"
+  },
+  "buffStressRecoveryGlow": {
+    "index": 70,
+    "name": "Покой и восстановление",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "06798cedb873596d32eaefce200de60758bd4bc36af4130df91e00c2d062b27d"
+  },
+  "buffRestingAtHome": {
+    "index": 71,
+    "name": "Отдых дома",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "045108232550fa8899b28df132121cef4ff7573a98c02772591bb1e64173f8f7"
+  },
+  "buffCalmingAtHospitalWithHarvey": {
+    "index": 72,
+    "name": "Спокойствие в больнице",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "16a9bc79191778d5685dd06ce5837c2edf81fcfec570d307866d5159b4d7e595"
+  },
+  "buffOverworkBreak": {
+    "index": 73,
+    "name": "Пауза отдыха",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "3686657b9870fab26ccdbef394928196d85905687dc71828816bbd036ef24cff"
+  },
+  "buffLightAndSafe": {
+    "index": 74,
+    "name": "Свет и безопасность",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "4dee1df2891efd9daf233d8bae271cf7a099e8a8c48df43c44ea698166ead765"
+  },
+  "buffHurt": {
+    "index": 75,
+    "name": "Рана",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "6c0a08783fcb34737fe717553bbc932863ace2513bdf25975a7ea063cfb7716e"
+  },
+  "buffPainFlare": {
+    "index": 76,
+    "name": "Острая боль",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "afe65c85bd03e8439afca8bf51339f21b03ea8bf597b5b5d61a223f5791997a1"
+  },
+  "buffBadlyHurt": {
+    "index": 77,
+    "name": "Сильная рана",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "aff8c54af449510e57ba2aa817f05e21d63f4a55cd1c79557ce71131ead6b532"
+  },
+  "buffFarmerExhausted": {
+    "index": 78,
+    "name": "Истощение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "61a0ac74ac77f63275ee8bc948bf9f75e52d20c13b48d356df7025dc09d487f8"
+  },
+  "buffSleepy": {
+    "index": 79,
+    "name": "Нарушение режима",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "532d24b9c2563e157325b08248e7632008a37710946930ccb43a6eeb031f5445"
+  },
+  "buffBruisedRibs": {
+    "index": 80,
+    "name": "Ушибленные рёбра",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "920fbc5670c591e791c1bd627045e678c56120b1116da3f4121d9886332ee612"
+  },
+  "buffSprainedAnkle": {
+    "index": 81,
+    "name": "Растянутая лодыжка",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "a3e64e57495d979adecf0bdfd64199d470b1973d83cc11a0172b6443000ba895"
+  },
+  "buffBackStrain": {
+    "index": 82,
+    "name": "Растяжение спины",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "5b64b0d2d393da601bf660726287841b8a06ef7ce398d7c1f7d24943cbc91460"
+  },
+  "buffDeepCuts": {
+    "index": 83,
+    "name": "Глубокие порезы",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "4a573e969bcc275d64f7dde6903bd2d1e213595208990e1ec694ce2f306dbe44"
+  },
+  "buffBurnWounds": {
+    "index": 84,
+    "name": "Ожоговые раны",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "d79bfacb3472ab84fa23e29b227b822843c242ce91f03cd5aee0465f7724d815"
+  },
+  "buffTornMuscles": {
+    "index": 85,
+    "name": "Надрыв мышцы",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "712682422cab6790be9bf5842a703005767960582b793a2f9a19989273119440"
+  },
+  "buffConcussion": {
+    "index": 86,
+    "name": "Сотрясение мозга",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "1aa582a4b1185787527c059fa958b88fd259ef22dea59f666759e85d7b409e15"
+  },
+  "buffFracturedBone": {
+    "index": 87,
+    "name": "Перелом кости",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "4a9036aadbae5c2ed900c8f2720514586b7055a7acd05dfc70c5554c74ec8f17"
+  },
+  "buffShrapnelWounds": {
+    "index": 88,
+    "name": "Осколочные ранения",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "335b7b1565adf2a4d5c861a864041f1271fcd5052ccba82c0f57e0b47bd47bf5"
+  },
+  "buffInfectedWound": {
+    "index": 89,
+    "name": "Инфицированная рана",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "5eed1236f94929f82a7be33bc60de690cde59564a8a160aa0b5521f326d7df44"
+  },
+  "buffAlcoholPoisoning": {
+    "index": 90,
+    "name": "Алкогольное отравление",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "a7d7630e480aa54b0f65284abddc9621300e7d82ba5f1c9f733160f93c61719b"
+  },
+  "buffSurgicalWound": {
+    "index": 91,
+    "name": "Послеоперационная рана",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "df98bc5c87af699f1cdce6f3a339f0c846f2fe82361276784d06797f186edd32"
+  },
+  "HarveyMod_WetBandage": {
+    "index": 92,
+    "name": "Мокрая повязка",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "12ba674b0eff2fd342737542855435cc444e6fc0ad3ae348ebdf57c5154e645d"
+  },
+  "HarveyMod_DirtyWound": {
+    "index": 93,
+    "name": "Грязная рана",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "ef0b925d482e29766c0eda8c0c0f3542f94d36c3e0d63220e8395ea051e6f703"
+  },
+  "HarveyMod_Neglect": {
+    "index": 94,
+    "name": "Небрежность в лечении",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "f7d48a7a7f85c8ffda5c7059575055c0625f8cce61e9064afaed43be12fd96a6"
+  },
+  "HarveyMod_MineForbidden": {
+    "index": 95,
+    "name": "Харви запретил шахту",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "397c7e4f0bd81aca71b25fb8a65ff31c3735c9194c39375f89984c5989b16773"
+  },
+  "HarveyMod_MineRestricted": {
+    "index": 96,
+    "name": "Шахта — с осторожностью",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "60d943858d21cdb703b5dc287c518e749f1a09195391659b78203295323016ef"
+  },
+  "HarveyMod_PainFlare": {
+    "index": 97,
+    "name": "Обострение боли",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "0f10b6b8b0b64ab7c48fbbd3d74f8b7d6ac6ff8bc707e677fe78072538393fac"
+  },
+  "HarveyMod_AllergicRash": {
+    "index": 98,
+    "name": "Аллергическая реакция",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "aea1c618a3cd19e9c0433c8018818bfba7f5901d4422845a05b49cd4ee7538d9"
+  },
+  "HarveyMod_WetStitches": {
+    "index": 99,
+    "name": "Намокшие швы",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "425e4a5ac9d61451db9910deb60d634cc823a34855f6707eccfdcddab3175e48"
+  },
+  "HarveyMod_ImpairedMobility": {
+    "index": 100,
+    "name": "Нарушение подвижности",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "652055f39496251de5f5d50d35e2daf29195496781aa52a5b7cdc032cd3a1964"
+  },
+  "HarveyMod_MuscleAtrophy": {
+    "index": 101,
+    "name": "Атрофия мышц",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "54680d59bf07bdcd0eb8e5969ebbf6d23af815689c1ebd3dab041447162886b2"
+  },
+  "HarveyMod_BreathingDifficulty": {
+    "index": 102,
+    "name": "Затруднённое дыхание",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "11ccb38ca1fb2ac7eeceab8762bff453c5ec5ea5a5ea29703fc67f3c6afd3ea6"
+  },
+  "HarveyMod_Sepsis": {
+    "index": 103,
+    "name": "Заражение крови",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "c49c49849a3e60d88c417e3e7c4f183600666a03314fe0e285707fd060bf9743"
+  },
+  "buffTooCold": {
+    "index": 104,
+    "name": "Озноб",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "3cfc85ade0ffac778051b487833bc2335d8a36ac0f92869790233a2b31b9a8c4"
+  },
+  "buffCold": {
+    "index": 105,
+    "name": "Простуда",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "ddaa8abd48e819b5452d79fdc3c10ef840db95c3777969bf4269d2845f8ebcf0"
+  },
+  "HarveyMod_Cold_Acute": {
+    "index": 106,
+    "name": "Простуда (острая фаза)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "232a782700cb89b54f3fcb1a28ac470cee4759b106b52c6c58e16a3d2c99c485"
+  },
+  "HarveyMod_Cold_Recovery": {
+    "index": 107,
+    "name": "Простуда (восстановление)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "a5d1913bced31ea2d704e5dee712568b32348528aa66a29a115de85574fff814"
+  },
+  "HarveyMod_Prescription_Rest": {
+    "index": 108,
+    "name": "Режим отдыха",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "5dabd03bb521a115a8a7357104aeee0e6de6a5c61cfd1dba6beab4082321123a"
+  },
+  "HarveyMod_Prescription_NoMine": {
+    "index": 109,
+    "name": "Без шахт",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "ede1d80a7b9bb5a2d168614ff1dd96e904d7c5f5d597a03a2f93fcd6cb923910"
+  },
+  "HarveyMod_Prescription_KeepDry": {
+    "index": 110,
+    "name": "Держать сухим",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "635498c385011785d803671688c63b36432ddb5b58242a39977a3e27f6ea028c"
+  },
+  "HarveyMod_Prescription_LightWork": {
+    "index": 111,
+    "name": "Лёгкая работа",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "1271bd84a8adbb52071ce16908069bb1d6387bf1a54997c7a56da324f36e9a60"
+  },
+  "HarveyMod_Prescription_Checkup": {
+    "index": 112,
+    "name": "Контрольный осмотр",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "f748f19fd789401090592f736b1860ccfa5d35cd14c0fc48ac4277cd5615e946"
+  },
+  "HarveyMod_Hospitalized": {
+    "index": 113,
+    "name": "Госпитализация",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "952afff49ff5e457dd87f380c7833cd6e431707bb3d2ba2f056d6125ad463719"
+  },
+  "HarveyMod_DoctorVisitNeeded": {
+    "index": 114,
+    "name": "Нужен приём у Харви",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "787d6340aeed887c43052df5e2a8f5469e776f3cfa40318d23e1fb8df6f4806c"
+  },
+  "buffHarveyRehab": {
+    "index": 115,
+    "name": "Восстановительный режим",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "06cbb8761c01aa077b75846210266b27888fadb38cad414599bc3ddcc174631c"
+  },
+  "HarveyMod_SelfCare": {
+    "index": 116,
+    "name": "Домашний уход",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "13fe6cefcaba0a16aec2fe440027fe47f97de213beb42a7237e633757fca7965"
+  },
+  "HarveyMod_CleanBandage": {
+    "index": 117,
+    "name": "Чистая повязка",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "52dcab28ad39c89f78c441c212641d7f94bc903470f00f26816f138be9d6e446"
+  },
+  "HarveyMod_WarmTea": {
+    "index": 118,
+    "name": "Тёплый чай",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "31d5c605170ca6d99e3239636c01973fe83d9b7fc32fba20ad450f997ec39402"
+  },
+  "buffStressTired": {
+    "index": 119,
+    "name": "Усталость",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "05921fd0bdb00612e6323730071ac37afc6d10253d4a14371e248f1efed0d869"
+  },
+  "buffStressLonely": {
+    "index": 120,
+    "name": "Одиночество",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "25d9df601884c55a75c39f4d4262a2069a19b4ea38240444a1b876eee14e296c"
+  },
+  "buffStressThunder": {
+    "index": 121,
+    "name": "Пугающая гроза",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "a06f474e101e4bff92b6faf04de10354d25cb31559b183ae939216e146c8b14d"
+  },
+  "buffStressHunger": {
+    "index": 122,
+    "name": "Слабость от голода",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "8820f5c5dcd21192a3169325cb14a89d1114fa3c342fe45c973fbc728c74469c"
+  },
+  "buffStressOverwork": {
+    "index": 123,
+    "name": "Переутомление",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "c9243534e44974969f9187095be62168674a20aec9821f5018e2730f20068bbf"
+  },
+  "buffStressNoSleep": {
+    "index": 124,
+    "name": "Недосып",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "fb09b95fc0057efc78b77f51fee51d21a82898a696631b34cca59af2eead76cc"
+  },
+  "buffStressTooCold": {
+    "index": 125,
+    "name": "Переохлаждение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "a3174341d53d26d47e18adebf0b3dc10683769179e9e57d31027311080056da1"
+  },
+  "buffStressDarkness": {
+    "index": 126,
+    "name": "Боязнь темноты",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "87bc548fe6f2165f2b9c294a5382a2f30d206bc60b595c907fec5fd3306cba7a"
+  },
+  "buffDarknessLevel1": {
+    "index": 127,
+    "name": "Боязнь темноты (легкая)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "15a433c904714b8d287eed85c5a2fc691adf7cb9b910bf6615ea21d0d3f4e07b"
+  },
+  "buffDarknessLevel2": {
+    "index": 128,
+    "name": "Боязнь темноты (сильная)",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "ecd455f053280b712b2b48cad338d8eb404d6a4e3d3ac047c867c5f4df74f4ff"
+  },
+  "buffDarknessLevel3": {
+    "index": 129,
+    "name": "Фобия темноты",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "2524d0817ca363fb6feb0f10c06aa2a3b015c750161108dad560436578228fed"
+  },
+  "buffDimLight": {
+    "index": 130,
+    "name": "Приглушенный свет",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "ea41e354a1d14728d1d73a79283deb31eb23e334bf7391993d5bd8833f7236c4"
+  },
+  "buffHarveyLantern": {
+    "index": 131,
+    "name": "Свет надежды",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "d3735484b7831b2ca0cb43f7e8894a7d40071eb955ed6203d517a6a96f311285"
+  },
+  "buffDarknessOvercome": {
+    "index": 132,
+    "name": "Преодоление",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "b26a3c5d077c76f5ba1e6b65f09d460650e9b73b4a2975dec3f8a97b959aa809"
+  },
+  "buffStressSocial": {
+    "index": 133,
+    "name": "Социальная тревожность",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "7f7ac94f0901680fed5b0dd98e3c9843dabbe91dfb03525a16ddac9f31cc9b6a"
+  },
+  "buffStressBadDream": {
+    "index": 134,
+    "name": "Тревожный сон",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "206c91ef8c1aa5974598a40a01514f046cbf056e5f2849ac904594406623bc8d"
+  },
+  "buffStressAnxietyWave": {
+    "index": 135,
+    "name": "Приступ тревоги",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "f09b5a28b9d7721d9c5acc42979a3f037b33c9b4664b34f5b95b2db9744ad14d"
+  },
+  "buffStressBreakdown": {
+    "index": 136,
+    "name": "Эмоциональный срыв",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "3287a7dfa290d52ea6dd996825d42a74472b7751a9ef4bdf6cb9ed15e387cad0"
+  },
+  "buffStressCollapse": {
+    "index": 137,
+    "name": "Коллапс",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "ba689a6b0701a4168a3b3bceccaeea3dc3b114f93f62181572aa5d02c7a4d577"
+  },
+  "buffStressDespair": {
+    "index": 138,
+    "name": "Отчаяние",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "db76abc54f75e609e2a5fac0c7175ea7e65e8a6b425491249e3f76eb1759f971"
+  },
+  "buffStressPanic": {
+    "index": 139,
+    "name": "Паническая атака",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "1702bbdd8f7079f0bd74e7409bc7b872e7e459c3a91a7e99731b5331381cc1c6"
+  },
+  "buffSleepDeprivation": {
+    "index": 140,
+    "name": "Критический недосып",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "23d870bf35c4b283917af171d72c16e0db6cfbf77cf024235b12ff537fa9e7df"
+  },
+  "buffStressCritical": {
+    "index": 141,
+    "name": "Критический стресс",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "a2c3593cdd3294064d3a0122b1a4939812db615ba7a0775902ad14ab34bea445"
+  },
+  "buffStressExhaustion": {
+    "index": 142,
+    "name": "Полное истощение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "85417764f05603a010271de7f2c1c90a00c08161eb1b6cc9d298908e9031f613"
+  },
+  "buffStressPhysicalDepletion": {
+    "index": 143,
+    "name": "Физическое истощение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "449a369b1ab5953194a8aa7c130b90abfae98f6774ac27c65e913c58570b66b3"
+  },
+  "buffStressNightTerror": {
+    "index": 144,
+    "name": "Ночные кошмары",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "a9d3c95dc9eab487be0d37e78a0d91e3dc5be3c220b9ef87fce0dee9eff2580d"
+  },
+  "buffStressBurnout": {
+    "index": 145,
+    "name": "Эмоциональное выгорание",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "77cb63afe6555fae992fcc2cafef02b574dc14f29916345a978276a78651ad9c"
+  },
+  "buffStressMentalBreakdown": {
+    "index": 146,
+    "name": "Психический срыв",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "493c4b754d08c544af18492ef9384dc542de9cdc770abab442e01418d0e1dd0b"
+  },
+  "buffStressPanicCollapse": {
+    "index": 147,
+    "name": "Панический коллапс",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "22eb0fbb39abeb51e51d939c73371df43e77b8baaedfeeb75335d5b1fa680eaf"
+  },
+  "buffStressDespairCollapse": {
+    "index": 148,
+    "name": "Коллапс отчаяния",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "72f76935ca5cb262cc2d4a3fd3ec6d0dd6abec7c386ce8b2bc0333118b2a9e97"
+  },
+  "buffStressPanicBreakdown": {
+    "index": 149,
+    "name": "Панический срыв",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "1494d0bfab6e1ff23471125c90dbdbaf61db88749479a894456b57e9edf2d3f8"
+  },
+  "buffStressParanoidCollapse": {
+    "index": 150,
+    "name": "Параноидальный коллапс",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "906609d8ab1abe06ebefaef6fba082bcf0fac3bd9ab14a5e318e1d398d7c6e10"
+  },
+  "buffStressCriticalExhaustion": {
+    "index": 151,
+    "name": "Критическое истощение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "f60d46cf2e10027d3e3cc88056dd7afc370701c44e25b4d15c39639f252d40d7"
+  },
+  "buffStressNumbness": {
+    "index": 152,
+    "name": "Эмоциональное онемение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "6349451635410dd4f61f4cac40da3fe6d0df1415e22c6ccda4a4560104b95f7b"
+  },
+  "buffStressShadowParanoia": {
+    "index": 153,
+    "name": "Паранойя и страх теней",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "53a20fa4929afc4fa530c66a936687568ed0bb4229e9e92e61514fd9856897d5"
+  },
+  "buffStressFreezeResponse": {
+    "index": 154,
+    "name": "Реакция заморозки",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "bc892a0f2d1c0771b278d0ce53c4ad389ae556fcf9b37d34e81155be5866da5f"
+  },
+  "buffStressIsolation": {
+    "index": 155,
+    "name": "Добровольная изоляция",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "e43fee977cdc892cf7a2811d05a31231821a30c56e6af5d96e845a39b4ebba3d"
+  },
+  "buffStressCriticism": {
+    "index": 156,
+    "name": "Самокритика",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "91890af3a09ef41586ab5e1094f97639e3bac16b628415ceb62300dcea03a94e"
+  },
+  "buffStressMentalFatigue": {
+    "index": 157,
+    "name": "Умственная усталость",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "9ca508cb7e534757f0c1e7768e1e765d46c4d715482fbf4fa473c0ad36bb083a"
+  },
+  "buffStressLoadTier": {
+    "index": 158,
+    "name": "Напряжение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "65fbda04ff6b0a94076b960e71ea8e3d57617b854bcc0bc5c494b8da1a1d6381"
+  },
+  "HarveyMod_Resilience": {
+    "index": 159,
+    "name": "Закалка",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "9666ac223db1f612d7d2c5e4f0c10997c2590840edc7891c150d9b52d5d02280"
+  },
+  "HarveyMod_Splinter": {
+    "index": 160,
+    "name": "Заноза",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "c4eae8ba0d74e0fd9e9f2f4fb7c39a0593957feb3ad6064a9106a07db6201a61"
+  },
+  "HarveyMod_BeeSting": {
+    "index": 161,
+    "name": "Укус пчелы",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "6b9e2224242edf19392887fc822ed8a1622f03bea1ba0e8047acd655d4ff295b"
+  },
+  "HarveyMod_Sunstroke": {
+    "index": 162,
+    "name": "Солнечный удар",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "bd2e55d38b150a208daeb848906f1e656e55a3850584216aa3615b0c10aa2545"
+  },
+  "HarveyMod_Frostbite": {
+    "index": 163,
+    "name": "Обморожение",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "9d044f3444b08bbbb4b5cceaa1360d6dcfcef56b531c96babb987a91d28597aa"
+  },
+  "buffStressClearMind": {
+    "index": 164,
+    "name": "Ясная голова",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "74a508297f0ad496ca4625caf831824182c2d90ee2c4e168a273713de292f18c"
+  },
+  "buffStressFireMemory": {
+    "index": 165,
+    "name": "Запах дыма",
+    "size": [
+      16,
+      16
+    ],
+    "sha256": "e483a51539b079d0204c93dddada1534d2954cc5c25ae8d040f36810a0c7d51f"
+  }
+}

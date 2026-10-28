@@ -1,0 +1,43 @@
+{
+  "source": "../../../scripts/native_herbal_garden.py",
+  "method": "native integer pixel painting; no input bitmaps or downscaling",
+  "artDirection": "upper-left specular highlights; cool reflected light in glass; pearl flower folds; gold and silver leaf glints",
+  "outline": "#301e25",
+  "cropCell": [
+    16,
+    32
+  ],
+  "itemCell": [
+    16,
+    16
+  ],
+  "frameMap": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5
+  ],
+  "installedInWorkspace": true,
+  "sheets": {
+    "herbalItems.png": {
+      "size": [
+        128,
+        16
+      ],
+      "colors": 37,
+      "sha256Pixels": "e6e7aff3b84469c2995dd08994c3785a8481dd8673612a3f2d683e4cb74d6aa0"
+    },
+    "herbalCrops.png": {
+      "size": [
+        256,
+        64
+      ],
+      "colors": 40,
+      "sha256Pixels": "6236add8a0e1a5bd6d01ac6ac1a2724fcca2d0f331b8e417a3e38c8884256a24"
+    }
+  }
+}

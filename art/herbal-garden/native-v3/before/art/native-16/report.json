@@ -1,0 +1,122 @@
+{
+  "cellSize": [
+    16,
+    16
+  ],
+  "method": "native integer pixel drawing; no resampling",
+  "outline": "#301e25, opaque 1px",
+  "buffCount": 166,
+  "anatomy": {
+    "source": "../../scripts/native_anatomy.py",
+    "concept": "anatomy-v3/concept.png",
+    "prompt": "anatomy-v3/concept-prompt.txt",
+    "conceptMethod": "built-in image_gen, art direction only",
+    "runtimeMethod": "integer pixel sources on 16x16 canvas; no bitmap sampling"
+  },
+  "injuryDebuffs": {
+    "source": "../../scripts/injury_debuff_icons.py",
+    "concept": "../injury-debuffs-v4/concept.png",
+    "preview": "../injury-debuffs-v4/preview.png",
+    "method": "one dominant symbol per injury, native 16x16"
+  },
+  "sheets": {
+    "medicalItems.png": {
+      "size": [
+        144,
+        16
+      ],
+      "sha256": "7b06b8587e9b589556ff811fa2cd96dfcdb8da1957c55d069ec0accfabcaec52",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Items/medicalItems.png",
+        "HarveyOverhaulCore/assets/sprites/planItems.png"
+      ]
+    },
+    "arendItems.png": {
+      "size": [
+        48,
+        16
+      ],
+      "sha256": "4cecd53c854f3d96eb8088c736e7f5732b79e789ced842ec3a1fa50d0a440eb9",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Items/arendItems.png"
+      ]
+    },
+    "herbalItems.png": {
+      "size": [
+        128,
+        16
+      ],
+      "sha256": "a640e9dca06972e9ad054db528d7dc949a48350084acaa3b2a97250416239fb4",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Items/herbalItems.png"
+      ]
+    },
+    "injury-book.png": {
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "4ab7193dd21881c4da3ec221ecb7a53cac9e90cbfcc822a81ece6c7fd21d5ec1",
+      "targets": [
+        "HarveyOverhaulInjury/assets/sprites/book.png",
+        "HarveyOverhaulCore/assets/sprites/planBook.png"
+      ]
+    },
+    "stress-handbook.png": {
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "1726b5b1bdb44e477d811477179285dd1066da73e741235fc718b1d90adfed7f",
+      "targets": [
+        "HarveyStressMeter/assets/sprites/handbook.png",
+        "HarveyStressMeter/assets/sprites/ui.png"
+      ]
+    },
+    "harveyBuffIcons.png": {
+      "size": [
+        256,
+        176
+      ],
+      "sha256": "2527af6380231c2959fcc1de0d0bcf2b2fed670cff1676cae8ee1cd0273a9adf",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Tilesheets/harveyBuffIcons.png"
+      ]
+    },
+    "mishapBuffIcons.png": {
+      "size": [
+        96,
+        16
+      ],
+      "sha256": "2c44759ca282e6cdaa24636f4bfaedf97454378e721cd7f0c58f14a5d59f2af0",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Items/mishapBuffIcons.png"
+      ]
+    },
+    "stressIcons.png": {
+      "size": [
+        112,
+        48
+      ],
+      "sha256": "ec98b35f2ca16e6ae59eb2d8ad0e2b3905e0060d786c95a98afc3bffc42f0fef",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Tilesheets/stressIcon.png",
+        "HarveyStressMeter/assets/sprites/stressIcons.png"
+      ]
+    },
+    "injuryIcon.png": {
+      "size": [
+        64,
+        48
+      ],
+      "sha256": "63f0ca7112984aaa29bad3db3c0eae66d0f9640bf40d00429ae1172aa7918e9c",
+      "targets": [
+        "HarveyOverhaul [CP]/assets/Tilesheets/injuryIcon.png"
+      ]
+    }
+  },
+  "herbalGarden": {
+    "source": "../../scripts/native_herbal_garden.py",
+    "method": "native pixel paintings; no resampling"
+  }
+}

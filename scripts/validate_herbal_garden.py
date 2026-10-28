@@ -12,6 +12,21 @@ from validate_event_coords import strip_jsonc
 ROOT = Path(__file__).resolve().parent.parent
 MOD = "{{ModId}}_"
 DATA = ROOT / "assets/Code/herbalGarden.json"
+INK = (38, 62, 49, 255)  # Garden's dark green contour, #263e31.
+
+
+def dark_contour(sprite, label):
+    # A coloured edge adjacent to transparency disappears against game soil.
+    # Validate the saved game pixels, independently of the drawing routines.
+    for y in range(sprite.height):
+        for x in range(sprite.width):
+            pixel = sprite.getpixel((x, y))
+            if pixel[3] and any(
+                not (0 <= xx < sprite.width and 0 <= yy < sprite.height)
+                or not sprite.getpixel((xx, yy))[3]
+                for xx, yy in ((x-1, y), (x+1, y), (x, y-1), (x, y+1))
+            ):
+                assert pixel == INK, (label, "broken dark contour", x, y)
 
 
 def unique_pairs(pairs):
@@ -59,6 +74,9 @@ def main():
     atlas = Image.open(ROOT / "assets/Crops/herbalCrops.png").convert("RGBA")
     assert icons.size == (128, 16)
     assert atlas.size == (256, 64)
+    for relative, runtime in (("Items/herbalItems.png", icons), ("Crops/herbalCrops.png", atlas)):
+        source = ROOT / "art/herbal-garden/exports" / Path(relative).name
+        assert Image.open(source).convert("RGBA").tobytes() == runtime.tobytes(), relative
     for image in (icons, atlas):
         assert set(image.getchannel("A").get_flattened_data()) == {0, 255}
         assert len({pixel[:3] for pixel in image.get_flattened_data() if pixel[3]}) <= 64
@@ -69,6 +87,7 @@ def main():
         sprite = icons.crop((index * 16, 0, index * 16 + 16, 16))
         box = sprite.getbbox()
         assert box and box[0] >= 1 and box[1] >= 1 and box[2] <= 15 and box[3] <= 15, key
+        dark_contour(sprite, key)
 
     for seed, crop in crops.items():
         assert objects[seed]["Category"] == -74 and objects[seed]["Type"] == "Seeds"
@@ -92,11 +111,12 @@ def main():
             sprite = atlas.crop((x, y, x + 16, y + 32))
             box = sprite.getbbox()
             assert box and box[0] >= 1 and box[2] <= 15 and box[3] == 31, (seed, frame, box)
+            dark_contour(sprite, (seed, frame))
             row.append(sprite.tobytes())
         assert row[0] == row[1], "Both seed variants must exist"
         assert row[5] == row[6] and row[6] != row[7], "Mature and picked regrowth frames"
         assert any(herb in recipe.split("/")[0] for recipe in recipes.values()), f"Unused herb: {herb}"
-    print("OK: 8 icons; 4 crop rows; all phases, seed variants and regrowth coordinates; binary alpha.")
+    print("OK: 8 icons; 4 crop rows; all phases, seed variants and regrowth coordinates; binary alpha; dark contours; export copies.")
 
     known_objects = dict(objects)
     for filename in ("medicalItems.json", "trustRewards.json", "eventsScars.json"):

@@ -1,0 +1,42 @@
+{
+  "source": "../../../scripts/native_herbal_garden.py",
+  "method": "native integer pixel painting; no input bitmaps or downscaling",
+  "outline": "#301e25",
+  "cropCell": [
+    16,
+    32
+  ],
+  "itemCell": [
+    16,
+    16
+  ],
+  "frameMap": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5
+  ],
+  "installedInWorkspace": true,
+  "sheets": {
+    "herbalItems.png": {
+      "size": [
+        128,
+        16
+      ],
+      "colors": 33,
+      "sha256Pixels": "a640e9dca06972e9ad054db528d7dc949a48350084acaa3b2a97250416239fb4"
+    },
+    "herbalCrops.png": {
+      "size": [
+        256,
+        64
+      ],
+      "colors": 33,
+      "sha256Pixels": "924e367ab6d232d59ee51049e019674d90946ca205d1f93a47df68f3ff6713f5"
+    }
+  }
+}

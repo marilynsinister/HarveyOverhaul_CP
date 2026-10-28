@@ -400,14 +400,17 @@ def validate(fname, location, event_id, script, start_map=None):
     actors = {}
     ignore = set()
 
-    def check(actor, x, y, what):
+    def check(actor, x, y, what, after_event=False):
         if x < 0 or y < 0 or x >= OFFSCREEN or y >= OFFSCREEN:
             return
         tmap = start_map if loc == location else map_variants(loc, fname, event_id)[0][1]
         if tmap is None:
             return
         problem = tmap.problem(x, y)
-        if problem and actor not in ignore:
+        if problem and after_event:
+            # После сцены фермер ходит сам: ignoreCollisions и поза на кровати уже не действуют.
+            issues.append(f"{what}: {actor} ({x},{y}) в {loc} — {problem} (после сцены застрянет)")
+        elif problem and actor not in ignore:
             issues.append(f"{what}: {actor} ({x},{y}) в {loc} — {problem}")
         elif problem and actor in ignore and problem.startswith(("за краем", "пустота")):
             issues.append(f"{what}: {actor} ({x},{y}) в {loc} — {problem} (ignoreCollisions не спасает)")
@@ -460,6 +463,8 @@ def validate(fname, location, event_id, script, start_map=None):
                     y += step_y
                     check(name, x, y, f"move {dx} {dy}")
                 actors[name] = (x, y)
+            elif cmd == "end" and len(tokens) >= 4 and tokens[1] == "position":
+                check("farmer", int(tokens[2]), int(tokens[3]), "end position", after_event=True)
         except ValueError:
             continue
 

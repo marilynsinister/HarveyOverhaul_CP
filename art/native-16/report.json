@@ -6,6 +6,12 @@
   "method": "native integer pixel drawing; no resampling",
   "outline": "#301e25, opaque 1px",
   "buffCount": 166,
+  "currentEffects": {
+    "source": "../../scripts/dimensional_effect_icons.py",
+    "preview": "../effects-dimensional-16/preview.png",
+    "gallery": "../effects-dimensional-16/all-effects.png",
+    "method": "hand-painted pixel clusters; jewel colors; explicit light/shadow planes"
+  },
   "anatomy": {
     "source": "../../scripts/native_anatomy.py",
     "concept": "anatomy-v3/concept.png",
@@ -18,6 +24,12 @@
     "concept": "../injury-debuffs-v4/concept.png",
     "preview": "../injury-debuffs-v4/preview.png",
     "method": "one dominant symbol per injury, native 16x16"
+  },
+  "herbalGarden": {
+    "source": "../../scripts/native_herbal_garden.py",
+    "method": "native pixel paintings; no resampling",
+    "outline": "#263e31",
+    "styleReference": "../herbal-garden/native-v4/style-reference.png"
   },
   "sheets": {
     "medicalItems.png": {
@@ -46,7 +58,7 @@
         128,
         16
       ],
-      "sha256": "a4e2f807c4acfa243b140b815db7b20d833c26ea32abf71f08ba5b4c4282d313",
+      "sha256": "68736a7d7c25b90a4d900aebdf0475fb287dfb940cc58ccc3b7494590cad2df5",
       "targets": [
         "HarveyOverhaul [CP]/assets/Items/herbalItems.png"
       ]
@@ -78,7 +90,7 @@
         256,
         176
       ],
-      "sha256": "2527af6380231c2959fcc1de0d0bcf2b2fed670cff1676cae8ee1cd0273a9adf",
+      "sha256": "bd7997200b9f582209983576266890acb1c8694dcda642c09f33b5e7f8e8c8a1",
       "targets": [
         "HarveyOverhaul [CP]/assets/Tilesheets/harveyBuffIcons.png"
       ]
@@ -88,7 +100,7 @@
         96,
         16
       ],
-      "sha256": "2c44759ca282e6cdaa24636f4bfaedf97454378e721cd7f0c58f14a5d59f2af0",
+      "sha256": "e5f02add3ffac4c8f32365e172c3c639b4d838f90d44081e025b63a6b1a24aec",
       "targets": [
         "HarveyOverhaul [CP]/assets/Items/mishapBuffIcons.png"
       ]
@@ -98,7 +110,7 @@
         112,
         48
       ],
-      "sha256": "ec98b35f2ca16e6ae59eb2d8ad0e2b3905e0060d786c95a98afc3bffc42f0fef",
+      "sha256": "028d130efd4c85f98c437029ba07f841c72d20252f0641a21a0d92aed44f9335",
       "targets": [
         "HarveyOverhaul [CP]/assets/Tilesheets/stressIcon.png",
         "HarveyStressMeter/assets/sprites/stressIcons.png"
@@ -109,7 +121,7 @@
         64,
         48
       ],
-      "sha256": "63f0ca7112984aaa29bad3db3c0eae66d0f9640bf40d00429ae1172aa7918e9c",
+      "sha256": "5f54288b86088d8828964cba470786065e8b71eeab839af567f7ddc7ea91665f",
       "targets": [
         "HarveyOverhaul [CP]/assets/Tilesheets/injuryIcon.png"
       ]

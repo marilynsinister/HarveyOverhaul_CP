@@ -1,0 +1,21 @@
+{
+  "cellSize": [
+    16,
+    16
+  ],
+  "buffCount": 166,
+  "method": "native pixel matrices; explicit material ramps; no resampling",
+  "source": "../../scripts/dimensional_effect_icons.py",
+  "previewScalingOnly": "nearest neighbor",
+  "runtimeAtlas": [
+    256,
+    176
+  ],
+  "unchangedIndices": true,
+  "alpha": [
+    0,
+    255
+  ],
+  "paletteColors": 38,
+  "gameSessionTested": false
+}

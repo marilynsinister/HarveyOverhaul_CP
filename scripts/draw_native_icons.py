@@ -2,7 +2,7 @@
 
 python scripts/draw_native_icons.py --install
 All runtime icons are authored at 16 pixels. Only preview() enlarges them.
-Existing buff recipes supply the subject vocabulary, not rendered bitmaps.
+Effect paintings and material ramps live in dimensional_effect_icons.py.
 """
 from pathlib import Path
 import argparse
@@ -11,10 +11,9 @@ import json
 import shutil
 
 from PIL import Image, ImageDraw, ImageFont
-import generate_buff_icons as buffs
-from native_anatomy import replacements as anatomy_replacements
-from injury_debuff_icons import build as injury_debuff_replacements
 from injury_debuff_icons import preview as injury_debuff_preview
+from native_herbal_garden import herb, seed_packet
+from dimensional_effect_icons import build as dimensional_effects
 
 PACK = Path(__file__).resolve().parents[1]
 ROOT = PACK.parent
@@ -306,90 +305,6 @@ def book(green=False):
     return pixels(source)
 
 
-def outline(image):
-    """A constant, opaque 1px contour around the native silhouette; no blur."""
-    source = image.copy()
-    width, height = source.size
-    for y in range(height):
-        for x in range(width):
-            if source.getpixel((x, y))[3]:
-                continue
-            if any(0 <= nx < width and 0 <= ny < height and source.getpixel((nx, ny))[3]
-                   for nx, ny in ((x-1, y), (x+1, y), (x, y-1), (x, y+1))):
-                image.putpixel((x, y), INK)
-    return image
-
-
-def herb(kind):
-    image = Image.new("RGBA", (16, 16))
-    d = ImageDraw.Draw(image)
-    def poly(points, color): d.polygon(points, fill=COLORS[color])
-    d.line([(6, 12), (10, 3)], fill=COLORS["G"])
-    poly([(7, 10), (3, 9), (3, 6), (6, 7)], "g")
-    d.point((3, 6), fill=COLORS["l"])
-    poly([(8, 9), (10, 7), (12, 7), (11, 10), (8, 11)], "g")
-    if kind == 0:
-        for x, y in ((8, 3), (5, 6), (9, 8)):
-            d.ellipse((x-1, y-1, x+2, y+2), fill=COLORS["j"])
-            d.rectangle((x, y-1, x+1, y), fill=COLORS["I"])
-            d.point((x, y-1), fill=COLORS["F"])
-    elif kind == 1:
-        for x, y in ((9, 3), (5, 5)):
-            poly([(x, y-1), (x+2, y), (x+2, y+2), (x+3, y+3), (x-2, y+3), (x-1, y+1)], "V")
-            d.line((x, y, x, y+2), fill=COLORS["v"])
-            d.point((x+1, y+3), fill=COLORS["W"])
-    elif kind == 2:
-        for x, y in ((8, 3), (4, 7), (10, 8)):
-            poly([(x-1, y-1), (x, y), (x+1, y-1), (x+2, y), (x+2, y+1), (x, y+3), (x-2, y+1), (x-2, y)], "a")
-            d.line((x-1, y, x, y+1), fill=COLORS["y"])
-            d.point((x+1, y+1), fill=COLORS["A"])
-    else:
-        for x, y in ((7, 5), (4, 7), (10, 8)):
-            poly([(x-1, y+2), (x, y-2), (x+2, y-3), (x+2, y), (x, y+3)], "i")
-            d.line((x, y+1, x+1, y-1), fill=COLORS["q"])
-            d.point((x+1, y-2), fill=COLORS["F"])
-    # An outline for each leaf/flower cluster keeps adjacent materials separate.
-    return outline(image)
-
-
-def seed_packet(kind):
-    image = pixels("""
-    ................
-    ................
-    ....oooooooo....
-    ...oHhhhhhhho...
-    ...oooooooooo...
-    ..oHWWWWWWwAbo..
-    ..oHWWWWWWwAbo..
-    ..oHWWWWWWwAbo..
-    ..oHWWWWWWwAbo..
-    ..oHWWWWWWwAbo..
-    ..oHWWWWWWwAbo..
-    ..oHWWWWWWwAbo..
-    ..oHwwwwwwwAbo..
-    ...oAAAAAAAbo...
-    ....oooooooo....
-    ................
-    """)
-    d = ImageDraw.Draw(image)
-    color, light, dark = [("j", "i", "J"), ("V", "v", "n"), ("a", "y", "A"), ("q", "i", "Q")][kind]
-    if kind == 0:
-        d.ellipse((6, 6, 9, 9), fill=INK)
-        d.rectangle((7, 7, 8, 8), fill=COLORS[color]); d.point((7, 7), fill=COLORS[light])
-    elif kind == 1:
-        d.polygon([(7, 6), (9, 6), (9, 8), (10, 9), (6, 9), (7, 8)], fill=INK)
-        d.line((8, 7, 8, 8), fill=COLORS[light])
-    elif kind == 2:
-        for x, y in ((6, 6), (8, 6), (7, 8)):
-            d.rectangle((x, y, x+1, y+1), fill=INK)
-        d.point((7, 7), fill=COLORS[light]); d.point((8, 7), fill=COLORS[color])
-    else:
-        d.polygon([(6, 9), (7, 6), (10, 6), (9, 9)], fill=INK)
-        d.line((7, 8, 9, 7), fill=COLORS[light])
-    d.line((6, 11, 9, 11), fill=COLORS[dark])
-    return image
-
-
 def pack(icons, columns, rows=None):
     sheet = Image.new("RGBA", (columns*16, (rows or ((len(icons)+columns-1)//columns))*16))
     for index, icon in enumerate(icons):
@@ -398,120 +313,10 @@ def pack(icons, columns, rows=None):
     return sheet
 
 
-def configure_buff_drawing():
-    # Three explicit tones per material replace the former per-pixel multiplied
-    # colors. Constant dark ink keeps every silhouette equally legible.
-    mapping = {
-        "SKIN": "k", "SKIN_D": "K", "BONE": "w", "WHITE": "W", "CREAM": "w",
-        "RED": "r", "DRED": "R", "PINK": "p", "BLUE": "j", "LBLUE": "i", "DBLUE": "J",
-        "GREEN": "g", "LGREEN": "l", "DGREEN": "G", "YELLOW": "y", "GOLD": "a", "ORANGE": "a",
-        "PURPLE": "V", "DPURP": "n", "LPURP": "v", "BROWN": "b", "LBROWN": "h",
-        "GREY": "e", "LGREY": "f", "DGREY": "S", "TEAL": "q", "NIGHT": "N", "INK": "o",
-    }
-    for name, key in mapping.items():
-        setattr(buffs, name, COLORS[key][:3])
-    ramps = ["Wws", "kKt", "prR", "lgG",
-             "iIj", "IjJ", "vVn", "Hhb", "yaA", "Ffe", "iqQ"]
-    shadow = {}
-    light = {}
-    for ramp in ramps:
-        a, b, c = [COLORS[key] for key in ramp]
-        shadow[a] = b; shadow[b] = c
-        light[b] = a; light[c] = b
-    def finish(image):
-        source = image.copy()
-        for y in range(16):
-            for x in range(16):
-                color = source.getpixel((x, y))
-                if not color[3] or color == INK:
-                    continue
-                # A few solid edge clusters, never dithering or gradients.
-                below = y == 15 or source.getpixel((x, y+1))[3] == 0
-                right = x == 15 or source.getpixel((x+1, y))[3] == 0
-                above = y == 0 or source.getpixel((x, y-1))[3] == 0
-                if below or right:
-                    image.putpixel((x, y), shadow.get(color, color))
-                elif above and x <= 8:
-                    image.putpixel((x, y), light.get(color, color))
-        outline(image)
-        # Native shapes can reach the edge of the cell: the final perimeter is
-        # still dark, so neighboring cells never create a bright clipped edge.
-        for i in range(16):
-            for xy in ((i, 0), (i, 15), (0, i), (15, i)):
-                if image.getpixel(xy)[3]: image.putpixel(xy, INK)
-    buffs.shade_and_outline = finish
-    # Treatment plus and phase dots fit the lower-right 5x5 area. The old
-    # 8x8 badges hid most of the underlying condition.
-    def plus(c, color=None):
-        color = color or buffs.GREEN
-        c.rect(12, 10, 12, 14, color); c.rect(10, 12, 14, 12, color)
-    def phase(c, n, total=3):
-        color = {1: buffs.RED, 2: buffs.GOLD, 3: buffs.GREEN}[min(n, 3)]
-        # A vertical sequence preserves the whole central injury silhouette.
-        for i in range(total):
-            c.px(14, 8+i*2, color if i < n else buffs.DGREY)
-    buffs.b_plus = plus
-    buffs.b_level = phase
-
-
 def build_sheets():
-    configure_buff_drawing()
-    recipes = buffs.build_recipes()
-    recipes["buffStressClearMind"] = buffs.R(buffs.head, lambda c: c.rect(3, 3, 12, 5, buffs.LBLUE), buffs.B(buffs.b_star))
-    recipes["buffStressFireMemory"] = buffs.R(buffs.flame, lambda c: c.rect(6, 8, 9, 9, buffs.NIGHT))
     index = json.loads((PACK / "assets/Tilesheets/harveyBuffIcons.json").read_text(encoding="utf-8-sig"))
-    assert set(recipes) == set(index), "Update native recipes when adding/removing a buff"
-
-    # Native mishap drawings use the same subject vocabulary, without reading
-    # the old rendered sheet. The six cell identities are kept exactly.
-    def splinter(c):
-        buffs.skin_patch(c); c.line([(8, 5), (6, 9)], buffs.BROWN, 2); c.px(5, 10, buffs.RED)
-    def bee(c):
-        c.oval(3, 3, 7, 7, buffs.LBLUE); c.oval(8, 3, 12, 7, buffs.LBLUE)
-        c.oval(3, 7, 12, 12, buffs.GOLD)
-        c.rect(6, 7, 7, 12, buffs.INK); c.rect(10, 8, 11, 11, buffs.INK)
-        c.px(12, 9, buffs.INK); c.px(2, 10, buffs.INK)
-    def sunstroke(c):
-        c.oval(4, 3, 11, 10, buffs.GOLD); c.oval(5, 4, 9, 8, buffs.YELLOW)
-        for xy in ((2, 2), (12, 2), (1, 7), (13, 7), (7, 1), (3, 12)):
-            c.px(*xy, buffs.ORANGE)
-        buffs.b_drop(c)
-    mishaps = [buffs.R(buffs.heart, buffs.band), buffs.R(splinter), buffs.R(bee),
-               buffs.R(sunstroke), buffs.R(buffs.snowflake, buffs.B(buffs.b_bang, buffs.RED)),
-               buffs.R(buffs.wound_line, buffs.stitches, buffs.B(buffs.b_drop))]
-    mishap_images = [recipe() for recipe in mishaps]
-    for key, image in zip(["HarveyMod_Resilience", "HarveyMod_Splinter", "HarveyMod_BeeSting", "HarveyMod_Sunstroke", "HarveyMod_Frostbite"], mishap_images):
-        recipes[key] = lambda image=image: image.copy()
-    # Shared inventory motifs match their care effects.
-    recipes["HarveyMod_CleanBandage"] = lambda: MEDICAL[0].copy()
-    recipes["buffCalmTeaEffect"] = lambda: MEDICAL[3].copy()
-    recipes["buffHarveyLantern"] = lambda: MEDICAL[6].copy()
-    anatomy, anatomy_legacy, anatomy_bases, anatomy_badge = anatomy_replacements(COLORS)
-    for key, image in anatomy.items():
-        recipes[key] = lambda image=image: image.copy()
-    injury_drawings, injury_legacy, _ = injury_debuff_replacements(COLORS, anatomy_badge)
-    for key, image in injury_drawings.items():
-        recipes[key] = lambda image=image: image.copy()
-    mishap_images[1] = anatomy['HarveyMod_Splinter'].copy()
-    mishap_images[5] = anatomy_badge(anatomy_bases['stitched'], 'drop')
-    images = {key: recipes[key]() for key in index}
+    images, handbook, injury_legacy, mishap_images = dimensional_effects(index)
     atlas = pack([images[key] for key in sorted(index, key=index.get)], 16)
-
-    # Handbook order follows stressIcons.json and HandbookManager.cs.
-    handbook = [images["buffStressOverwork"], buffs.R(buffs.person, buffs.B(buffs.b_bang))(),
-                images["buffStressThunder"], buffs.R(buffs.moon_crescent)(),
-                buffs.R(lambda c: c.poly([(2, 13), (4, 6), (7, 2), (11, 4), (13, 13)], buffs.GREY),
-                        lambda c: c.oval(6, 7, 10, 14, buffs.NIGHT))(),
-                images["buffStressLonely"], buffs.R(buffs.rx)(),
-                buffs.R(buffs.vial)(), buffs.R(buffs.ice_cube, buffs.crack)(),
-                buffs.R(buffs.clipboard, buffs.B(buffs.b_bang))(), buffs.R(buffs.rx, buffs.B(buffs.b_star))(),
-                images["buffStressTooCold"], images["buffStressNoSleep"], images["buffStressNumbness"],
-                images["buffStressPanic"], images["buffHarveyCare"], MEDICAL[3],
-                buffs.R(lambda c: c.poly([(3, 7), (6, 4), (10, 4), (13, 7), (10, 10), (6, 10)], buffs.BLUE),
-                        lambda c: c.poly([(3, 7), (1, 4), (1, 10)], buffs.LBLUE),
-                        lambda c: c.px(10, 6, buffs.INK))(),
-                buffs.R(buffs.candle)(), anatomy_badge(anatomy_bases['hand'], 'heart'),
-                images["buffStressShadowParanoia"]]
     sheets = {
         "medicalItems.png": pack(MEDICAL, 9), "arendItems.png": pack(AREND, 3),
         "herbalItems.png": pack([herb(i) for i in range(4)] + [seed_packet(i) for i in range(4)], 8),
@@ -669,8 +474,14 @@ def main(install=False):
             backup(target)
             herbs.crop((i*16, 0, i*16+16, 16)).save(target)
     preview(sheets)
+    from render_dimensional_effects import render as render_effects
+    render_effects(sheets, index)
     report = {"cellSize": [16, 16], "method": "native integer pixel drawing; no resampling",
               "outline": "#301e25, opaque 1px", "buffCount": len(index),
+              "currentEffects": {"source": "../../scripts/dimensional_effect_icons.py",
+                                 "preview": "../effects-dimensional-16/preview.png",
+                                 "gallery": "../effects-dimensional-16/all-effects.png",
+                                 "method": "hand-painted pixel clusters; jewel colors; explicit light/shadow planes"},
               "anatomy": {"source": "../../scripts/native_anatomy.py",
                           "concept": "anatomy-v3/concept.png",
                           "prompt": "anatomy-v3/concept-prompt.txt",
@@ -680,6 +491,10 @@ def main(install=False):
                                 "concept": "../injury-debuffs-v4/concept.png",
                                 "preview": "../injury-debuffs-v4/preview.png",
                                 "method": "one dominant symbol per injury, native 16x16"},
+              "herbalGarden": {"source": "../../scripts/native_herbal_garden.py",
+                                "method": "native pixel paintings; no resampling",
+                                "outline": "#263e31",
+                                "styleReference": "../herbal-garden/native-v4/style-reference.png"},
               "sheets": {name: {"size": list(sheet.size), "sha256": hashlib.sha256(sheet.tobytes()).hexdigest(),
                                  "targets": TARGETS[name]} for name, sheet in sheets.items()}}
     (ART / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
