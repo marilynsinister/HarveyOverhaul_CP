@@ -2,7 +2,7 @@
 
 python scripts/draw_native_icons.py --install
 Medical/effect icons are authored at 16 pixels. Garden icons are reductions
-of the large paintings in art/herbal-garden/painted-v6/sources.
+of the large paintings in art/herbal-garden/painted-v10/sources.
 Effect paintings and material ramps live in dimensional_effect_icons.py.
 """
 from pathlib import Path
@@ -493,10 +493,11 @@ def main(install=False):
                                 "preview": "../injury-debuffs-v4/preview.png",
                                 "method": "one dominant symbol per injury, native 16x16"},
               "herbalGarden": {"source": "../../scripts/painted_herbal_garden.py",
-                                "method": "airy image_gen paintings; proportional reduction; soft inner contour preserves gaps",
-                                "outline": "material colors blended with 35% #4e624c",
-                                "cropEdgeBrightness": 1.08,
-                                "sources": "../herbal-garden/painted-v6/sources"},
+                                "method": "v10 broad sweeping mature foliage; large produce; 3x intermediate color sampling; saturated pixel bands",
+                                "outline": "directional material-colored inner edge; no expansion",
+                                "colorSource": "../../scripts/refine_herbal_pixels.py",
+                                "sources": "../herbal-garden/painted-v10/sources",
+                                "matureSource": "../herbal-garden/painted-v10/mature-portraits"},
               "sheets": {name: {"size": list(sheet.size), "sha256": hashlib.sha256(sheet.tobytes()).hexdigest(),
                                  "targets": TARGETS[name]} for name, sheet in sheets.items()}}
     (ART / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")

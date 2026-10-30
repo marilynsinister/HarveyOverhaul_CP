@@ -1,0 +1,7 @@
+2026-10-30 | painted-v8
+Garden and full icon validators passed.
+All 32 alpha masks preserved; crop geometry identical to v7.
+Current, compatibility, full icon builder and runtime icons match.
+herbalCrops.png: (256, 64), 57 opaque colors, binary alpha.
+herbalItems.png: (128, 16), 54 opaque colors, binary alpha.
+Inspected every growth stage and light/dark soil previews. No running-game validation performed.

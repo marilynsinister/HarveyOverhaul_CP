@@ -27,10 +27,11 @@
   },
   "herbalGarden": {
     "source": "../../scripts/painted_herbal_garden.py",
-    "method": "airy image_gen paintings; proportional reduction; soft inner contour preserves gaps",
-    "outline": "material colors blended with 35% #4e624c",
-    "cropEdgeBrightness": 1.08,
-    "sources": "../herbal-garden/painted-v6/sources"
+    "method": "v10 broad sweeping mature foliage; large produce; 3x intermediate color sampling; saturated pixel bands",
+    "outline": "directional material-colored inner edge; no expansion",
+    "colorSource": "../../scripts/refine_herbal_pixels.py",
+    "sources": "../herbal-garden/painted-v10/sources",
+    "matureSource": "../herbal-garden/painted-v10/mature-portraits"
   },
   "sheets": {
     "medicalItems.png": {
@@ -59,7 +60,7 @@
         128,
         16
       ],
-      "sha256": "9339ce1291257b29b2d3d82d200fbb0c57280eefbab0bc7ad225ba6f1bd1a794",
+      "sha256": "46e5bfefc0133c3064dee57c66f288b6aaeed248687c0b7c85147a972f0989d6",
       "targets": [
         "HarveyOverhaul [CP]/assets/Items/herbalItems.png"
       ]

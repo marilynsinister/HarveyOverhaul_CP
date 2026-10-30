@@ -1,0 +1,109 @@
+{
+  "source": "../../../scripts/painted_herbal_garden.py",
+  "generation": "built-in image_gen",
+  "method": "v9 lifecycle sheets + v10 broad sweeping mature foliage portraits -> area-filtered alpha -> 3x intermediate color detail sampled with NEAREST -> opaque-neighbor sharpening -> richer foliage value bands -> directional inner contour -> 48 interior + 16 material edge colors",
+  "detailSampleScale": 3,
+  "sourceLayout": [
+    2,
+    4
+  ],
+  "colorSource": "../../../scripts/refine_herbal_pixels.py",
+  "outline": "directional material-colored inner edge; edge luminance >=60/255; no expansion",
+  "cropCell": [
+    16,
+    32
+  ],
+  "itemCell": [
+    16,
+    16
+  ],
+  "frameMap": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5
+  ],
+  "installedInWorkspace": true,
+  "sources": {
+    "glass-dewberry": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "e5d4bdc226b3352c791961c1646bf0693ed673094922f6bf60f1ceca5465ff59"
+    },
+    "moonvelvet": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "6a3dc5ac831a952dd3e421b1051cc56fc4e74a76d8416cd4cba0b1fea489592d"
+    },
+    "amber-heartleaf": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "1a476202c3e6a7b0a40f93c905a040348d1006c2149817abdb68bced87064362"
+    },
+    "silver-seamleaf": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "4420b0266fd14e0b025d48c1634978cfb7a8dd13eefa46a1b8d1f85e07efd4b3"
+    }
+  },
+  "maturePortraits": {
+    "glass-dewberry": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "5dbbe278eab3b5af09805f48013cd8a9b55f60731a6de7e69d3ddb1a924aecf2"
+    },
+    "moonvelvet": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "5928c971db36470a27a654c2ced9430fd7b7f5dcdc6cae78c6b386b295ea2844"
+    },
+    "amber-heartleaf": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "c43d030689d953a148993eae6415333b7961d3cbfbc21a7a9c1d426a7b13d53e"
+    },
+    "silver-seamleaf": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "7c6a8af1af28357fe2db493c255a753efd38c63febefb55f02269737ac052e04"
+    }
+  },
+  "sheets": {
+    "herbalItems.png": {
+      "size": [
+        128,
+        16
+      ],
+      "colors": 58,
+      "sha256Pixels": "46e5bfefc0133c3064dee57c66f288b6aaeed248687c0b7c85147a972f0989d6"
+    },
+    "herbalCrops.png": {
+      "size": [
+        256,
+        64
+      ],
+      "colors": 60,
+      "sha256Pixels": "ed857bb0d7174ff843d899134e8e01c124fdedf330e9b42fb5f56a6f6aea1cb9"
+    }
+  }
+}

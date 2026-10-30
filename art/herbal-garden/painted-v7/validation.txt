@@ -1,0 +1,24 @@
+2026-10-30 | painted-v7 | workspace assets
+
+[OK] нативные иконки 16×16
+[OK] регрессии постановки
+[OK] день рождения, Зузу и переходы между картами
+[OK] спрайты и поведение Аренда
+[OK] погода и доступность первого осмотра
+[OK] семья, памятные вещи и годовщины
+[OK] аптекарский сад
+[OK] сюжет
+[OK] координаты
+[OK] ветки, маршруты, анимации и варианты комнаты
+[OK] пропуск и выход из сцен
+[OK] JSON и тон
+[OK] setSkipActions в ручных файлах
+
+Все проверки пройдены.
+
+No running-game validation performed.
+
+All 32 sprite masks match v6: no silhouette movement, expansion or new alpha.
+Current, compatibility, full icon builder and runtime icon copies match.
+herbalCrops.png: (256, 64), 60 opaque colors, binary alpha.
+herbalItems.png: (128, 16), 59 opaque colors, binary alpha.

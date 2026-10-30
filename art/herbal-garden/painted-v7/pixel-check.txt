@@ -1,0 +1,4 @@
+All 32 sprite masks match v6: no silhouette movement, expansion or new alpha.
+Current, compatibility, full icon builder and runtime icon copies match.
+herbalCrops.png: (256, 64), 60 opaque colors, binary alpha.
+herbalItems.png: (128, 16), 59 opaque colors, binary alpha.

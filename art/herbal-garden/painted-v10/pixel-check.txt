@@ -1,0 +1,8 @@
+Pixel QA: runtime sheets match canonical builder and export copies.
+glass-dewberry: foliage pixels 110 -> 125; summed lateral reach 294.0 -> 371.5; bbox (1, 5, 15, 31).
+moonvelvet: foliage pixels 84 -> 128; summed lateral reach 145.0 -> 328.0; bbox (1, 5, 15, 31).
+amber-heartleaf: foliage pixels 29 -> 62; summed lateral reach 68.5 -> 191.0; bbox (1, 5, 14, 31).
+silver-seamleaf: foliage pixels 90 -> 113; summed lateral reach 197.0 -> 302.5; bbox (1, 5, 15, 31).
+herbalCrops.png: (256, 64); RGBA alpha 0/255; 60 opaque colors; 16 edge colors; minimum edge luminance 63.70/255.
+herbalItems.png: (128, 16); RGBA alpha 0/255; 58 opaque colors; 16 edge colors; minimum edge luminance 63.70/255.
+All four mature portraits have broader foliage; crop indices, cell padding and large produce retain their contracts. No running-game validation.

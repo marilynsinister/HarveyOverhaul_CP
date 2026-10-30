@@ -11,17 +11,20 @@ import json
 import shutil
 
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
+from refine_herbal_pixels import render as palette_images
 
 PACK = Path(__file__).resolve().parents[1]
 ART = PACK / 'art/herbal-garden'
-REVIEW = ART / 'painted-v6'
+REVIEW = ART / 'painted-v10'
 SOURCE = REVIEW / 'sources'
+MATURE = REVIEW / 'mature-portraits'
 NAMES = ('glass-dewberry', 'moonvelvet', 'amber-heartleaf', 'silver-seamleaf')
 LABELS = ('Стеклянная росница', 'Лунная бархатница', 'Янтарный сердцелист', 'Серебряный шовник')
 ASSETS = ('seed', 'sprout', 'juvenile', 'buds', 'mature', 'picked', 'harvest', 'packet')
-INK = (78, 98, 76, 255)  # Muted olive #4e624c; softer than the v5 charcoal.
-CROP_EDGE_BRIGHTNESS = 1.08
+INK = (78, 98, 76, 255)  # Legacy import compatibility; edges now retain their material colors.
+DETAIL_SAMPLE_SCALE = 3
 FRAME_MAP = (0, 0, 1, 2, 3, 4, 4, 5)
+SOURCE_COLUMNS = 2
 
 
 def canvas(size):
@@ -65,10 +68,13 @@ def source_boxes(im):
             selection = Image.frombytes('L', (w, h), bytes(ownership)).resize(im.size, Image.Resampling.NEAREST)
             boxes.append((box, selection.crop(box)))
     assert len(boxes) == 8, f'Expected eight separate source paintings, found {len(boxes)}'
-    top = sorted((b for b in boxes if (b[0][1]+b[0][3])/2 < im.height/2), key=lambda b: b[0][0]+b[0][2])
-    bottom = sorted((b for b in boxes if (b[0][1]+b[0][3])/2 >= im.height/2), key=lambda b: b[0][0]+b[0][2])
-    assert len(top) == len(bottom) == 4
-    return top + bottom
+    # Portrait source sheets: two columns, four rows, in ASSETS order. Sort
+    # by row centers so bottom-aligned tiny seeds need no hard crop boxes.
+    vertical = sorted(boxes, key=lambda b: b[0][1]+b[0][3])
+    ordered = []
+    for start in range(0, 8, SOURCE_COLUMNS):
+        ordered.extend(sorted(vertical[start:start+SOURCE_COLUMNS], key=lambda b: b[0][0]+b[0][2]))
+    return ordered
 
 
 @lru_cache(maxsize=4)
@@ -82,77 +88,34 @@ def paintings(kind):
         # Discard only the faint extraction fringe, keeping generated alpha.
         crop.putalpha(crop.getchannel('A').point(lambda a: a if a >= 128 else 0))
         result.append(crop.crop(crop.getbbox()))
+    # Mature plants are separate portrait paintings: this leaves enough
+    # vertical stem spacing for the larger flowers/fruit at 16x32, while the
+    # other seven source assets retain their own lifecycle/packet designs.
+    with Image.open(MATURE / (NAMES[kind]+'.png')) as portrait_source:
+        portrait = portrait_source.convert('RGBA')
+    portrait.putalpha(portrait.getchannel('A').point(lambda a: a if a >= 128 else 0))
+    assert portrait.getbbox(), (NAMES[kind], 'empty mature portrait')
+    result[4] = portrait.crop(portrait.getbbox())
     return result
 
 
 def reduce_painting(im, size, limit, baseline):
-    """Area-filter the actual painting, without changing its aspect ratio."""
+    """Keep the area-filtered silhouette; sample finer color detail separately."""
     scale = min(limit[0]/im.width, limit[1]/im.height)
-    reduced = im.resize((max(1, round(im.width*scale)), max(1, round(im.height*scale))), Image.Resampling.LANCZOS)
-    reduced.putalpha(reduced.getchannel('A').point(lambda a: 255 if a >= 112 else 0))
+    target = (max(1, round(im.width*scale)), max(1, round(im.height*scale)))
+    reduced = im.resize(target, Image.Resampling.LANCZOS)
+    detail_size = tuple(edge*DETAIL_SAMPLE_SCALE for edge in target)
+    details = im.resize(detail_size, Image.Resampling.LANCZOS).resize(target, Image.Resampling.NEAREST)
+    alpha = reduced.getchannel('A').point(lambda a: 255 if a >= 112 else 0)
+    # Color no longer averages across as much of a leaf/berry boundary. Keep
+    # the original color wherever the detail sample falls outside the plant.
+    reduced.putdata([d[:3]+(a,) if a and d[3] >= 128 else b[:3]+(a,)
+                     for b, d, a in zip(reduced.get_flattened_data(), details.get_flattened_data(), alpha.get_flattened_data())])
     reduced = reduced.crop(reduced.getbbox())
     result = canvas(size)
     result.alpha_composite(reduced, ((size[0]-reduced.width)//2, baseline-reduced.height))
     return result
 
-
-def edge_positions(im):
-    alpha = im.getchannel('A')
-    # The old outer dilation inflated narrow branches and closed their gaps.
-    # The inner, muted edge keeps the exact reduced silhouette, even at tips.
-    for y in range(im.height):
-        for x in range(im.width):
-            if alpha.getpixel((x, y)) and any(
-                not (0 <= xx < im.width and 0 <= yy < im.height)
-                or not alpha.getpixel((xx, yy))
-                for xx, yy in ((x-1, y), (x+1, y), (x, y-1), (x, y+1))
-            ):
-                yield x, y
-
-
-def edge_color(rgb):
-    # Keep the material's own hue instead of turning every thin leaf olive.
-    color = tuple(round(rgb[c]*0.65+INK[c]*0.35) for c in range(3))
-    lightness = sum(c*w for c, w in zip(color, (0.2126, 0.7152, 0.0722)))
-    if lightness < 64:
-        ink_lightness = sum(c*w for c, w in zip(INK, (0.2126, 0.7152, 0.0722)))
-        amount = (64-lightness)/(ink_lightness-lightness)
-        color = tuple(round(c+(ink-c)*amount) for c, ink in zip(color, INK))
-    return color
-
-
-def color_palette(colors, count):
-    training = Image.new('RGB', (len(colors), 1))
-    training.putdata(colors)
-    palette = training.quantize(colors=count, method=Image.Quantize.MAXCOVERAGE, dither=Image.Dither.NONE)
-    return [tuple(palette.getpalette()[i:i+3]) for i in range(0, count*3, 3)]
-
-
-def palette_images(images):
-    """48 interior colors and 16 soft material-colored edge tones, no dilation."""
-    colors = [p[:3] for im in images for p in im.get_flattened_data() if p[3]]
-    interior = color_palette(colors, 48)
-    edges = color_palette([edge_color(im.getpixel(xy)[:3]) for im in images for xy in edge_positions(im)], 16)
-    palette = Image.new('P', (1, 1))
-    padded = (interior*6)[:256]
-    palette.putpalette([c for rgb in padded for c in rgb])
-    edge_lookup = {}
-    result = []
-    for im in images:
-        mapped = im.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE).convert('RGBA')
-        mapped.putalpha(im.getchannel('A'))
-        mapped.putdata([p if p[3] else (0, 0, 0, 0) for p in mapped.get_flattened_data()])
-        for xy in edge_positions(im):
-            rgb = im.getpixel(xy)[:3]
-            if rgb not in edge_lookup:
-                softened = edge_color(rgb)
-                edge_lookup[rgb] = min(edges, key=lambda p: sum((a-b)**2 for a, b in zip(softened, p)))
-            edge = edge_lookup[rgb]
-            if im.height == 32:
-                edge = tuple(min(255, round(c*CROP_EDGE_BRIGHTNESS)) for c in edge)
-            mapped.putpixel(xy, edge+(255,))
-        result.append(mapped)
-    return result
 
 
 @lru_cache(maxsize=1)
@@ -225,7 +188,7 @@ def preview(items, plants):
     board = Image.new('RGB', (1400, 840), '#eee2c8')
     d = ImageDraw.Draw(board)
     d.text((28, 20), 'АПТЕКАРСКИЙ САД · НОВАЯ ПЕРЕРИСОВКА', font=font(29), fill='#252a30')
-    d.text((28, 61), 'Свободные веточки и листья · мягкий цветной контур · сохранены просветы', font=font(19), fill='#645d54')
+    d.text((28, 61), 'Широкие изгибы листьев · открытые боковые веточки · чёткий цветной контур', font=font(19), fill='#645d54')
     for k in range(4):
         x = 20+k*346
         d.rounded_rectangle((x, 104, x+332, 813), radius=12, fill='#ded1b3')
@@ -236,8 +199,8 @@ def preview(items, plants):
         d.text((x+18, 438), 'Крупный исходник', font=font(16), fill='#645d54')
         d.text((x+18, 477), 'Игровой спрайт 16×32 · ×8', font=font(17), fill='#252a30')
         d.rectangle((x+18, 505, x+314, 718), fill='#879b64')
-        d.rectangle((x+18, 645, x+165, 718), fill='#ab8259')
-        d.rectangle((x+166, 645, x+314, 718), fill='#584338')
+        d.rectangle((x+18, 645, x+165, 718), fill='#995b3b')
+        d.rectangle((x+166, 645, x+314, 718), fill='#704134')
         paste_scaled(board, plants[k][4], (x+26, 469), 8)
         paste_scaled(board, plants[k][4], (x+174, 469), 8)
         for i, caption in ((k, 'Урожай'), (k+4, 'Семена')):
@@ -266,7 +229,7 @@ def preview(items, plants):
         for stage, im in enumerate(plants[k]):
             xx = 344+stage*132
             sd.rectangle((xx-8, y+32, xx+77, y+137), fill='#879b64')
-            sd.rectangle((xx-8, y+112, xx+77, y+137), fill='#ab8259')
+            sd.rectangle((xx-8, y+112, xx+77, y+137), fill='#995b3b')
             paste_scaled(stages, im, (xx+2, y+4), 4)
     stages.save(REVIEW / 'preview.png')
     stages.save(ART / 'preview.png')
@@ -274,7 +237,7 @@ def preview(items, plants):
     garden = Image.new('RGB', (752, 358), '#eee2c8')
     gd = ImageDraw.Draw(garden)
     gd.text((24, 18), 'ЗРЕЛЫЕ РАСТЕНИЯ · ИГРОВОЙ МАСШТАБ ×4', font=font(22), fill='#252a30')
-    for row, soil in enumerate(('#ab8259', '#584338')):
+    for row, soil in enumerate(('#995b3b', '#704134')):
         yy = 76+row*136
         gd.rectangle((20, yy+30, 731, yy+120), fill=soil)
         for k in range(4):
@@ -288,15 +251,15 @@ def preview(items, plants):
         comparison = Image.new('RGB', (1040, 444), '#eee2c8')
         cd = ImageDraw.Draw(comparison)
         cd.text((24, 20), 'АПТЕКАРСКИЙ САД · БЫЛО / СТАЛО', font=font(27), fill='#354636')
-        cd.text((24, 58), 'Одинаковый масштаб ×6 · свободнее силуэт · мягче контур', font=font(18), fill='#645d54')
+        cd.text((24, 58), 'Одинаковый масштаб ×6 · размашистее листва · чётче цветной контур', font=font(18), fill='#645d54')
         for k in range(4):
             x = 16+k*256
             cd.rounded_rectangle((x, 94, x+246, 425), radius=10, fill='#ded1b3')
             first, second = LABELS[k].split(' ', 1)
             cd.text((x+13, 107), first, font=font(20), fill='#354636')
             cd.text((x+13, 131), second, font=font(20), fill='#354636')
-            cd.rectangle((x+10, 166, x+236, 358), fill='#879b64')
-            cd.rectangle((x+10, 308, x+236, 358), fill='#ab8259')
+            cd.rectangle((x+10, 166, x+236, 358), fill='#995b3b')
+            cd.rectangle((x+10, 308, x+236, 358), fill='#704134')
             xx, yy = (k%2)*128+5*16, (k//2)*32
             before = old.crop((xx, yy, xx+16, yy+32))
             paste_scaled(comparison, before, (x+15, 168), 6)
@@ -345,25 +308,32 @@ def export(install=False):
             report = json.loads(report_path.read_text(encoding='utf-8'))
             report['sheets']['herbalItems.png']['sha256'] = hashlib.sha256(items.tobytes()).hexdigest()
             report['herbalGarden'] = {'source': '../../scripts/painted_herbal_garden.py',
-                                      'method': 'airy image_gen paintings; proportional reduction; soft inner contour preserves gaps',
-                                      'outline': 'material colors blended with 35% #4e624c',
-                                      'cropEdgeBrightness': CROP_EDGE_BRIGHTNESS, 'sources': '../herbal-garden/painted-v6/sources'}
+                                      'method': 'v10 broad sweeping mature foliage; large produce; 3x intermediate color sampling; saturated pixel bands',
+                                      'outline': 'directional material-colored inner edge; no expansion',
+                                      'colorSource': '../../scripts/refine_herbal_pixels.py', 'sources': '../herbal-garden/painted-v10/sources',
+                                      'matureSource': '../herbal-garden/painted-v10/mature-portraits'}
             report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     remember_before(ART / 'preview.png')
     preview(items, plants)
     report = {'source': '../../../scripts/painted_herbal_garden.py', 'generation': 'built-in image_gen',
-              'method': 'airy RGBA source paintings -> proportional reduction -> binary alpha -> 48 interior + 16 soft edge colors; 1px inner edge, no dilation',
-              'outline': 'material colors blended with 35% #4e624c; edge luminance >=60/255', 'cropCell': [16, 32], 'itemCell': [16, 16],
-              'frameMap': list(FRAME_MAP), 'cropEdgeBrightness': CROP_EDGE_BRIGHTNESS, 'installedInWorkspace': install,
+              'method': 'v9 lifecycle sheets + v10 broad sweeping mature foliage portraits -> area-filtered alpha -> 3x intermediate color detail sampled with NEAREST -> opaque-neighbor sharpening -> richer foliage value bands -> directional inner contour -> 48 interior + 16 material edge colors',
+              'detailSampleScale': DETAIL_SAMPLE_SCALE,
+              'sourceLayout': [SOURCE_COLUMNS, 8//SOURCE_COLUMNS],
+              'colorSource': '../../../scripts/refine_herbal_pixels.py',
+              'outline': 'directional material-colored inner edge; edge luminance >=60/255; no expansion', 'cropCell': [16, 32], 'itemCell': [16, 16],
+              'frameMap': list(FRAME_MAP), 'installedInWorkspace': install,
               'sources': {name: {'size': list(Image.open(SOURCE / (name+'.png')).size),
                                  'sha256File': hashlib.sha256((SOURCE / (name+'.png')).read_bytes()).hexdigest()}
                           for name in NAMES},
+              'maturePortraits': {name: {'size': list(Image.open(MATURE / (name+'.png')).size),
+                                       'sha256File': hashlib.sha256((MATURE / (name+'.png')).read_bytes()).hexdigest()}
+                                 for name in NAMES},
               'sheets': {name: {'size': list(im.size), 'colors': len({p for p in im.get_flattened_data() if p[3]}),
                                  'sha256Pixels': hashlib.sha256(im.tobytes()).hexdigest()}
                          for name, im in (('herbalItems.png', items), ('herbalCrops.png', field))}}
     (REVIEW / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     print('Painted herbal garden: 4 large source sheets, 32 isolated paintings, 8 inventory icons, 24 crop stages.')
-    print('Reduced to 16x16 / 16x32; soft material-colored inner edge; binary alpha; <=64 colors.')
+    print('Reduced to 16x16 / 16x32; saturated pixel bands, opaque-neighbor sharpening; binary alpha; <=64 colors.')
     print('Workspace assets installed.' if install else 'Exports only; --install updates workspace assets.')
 
 

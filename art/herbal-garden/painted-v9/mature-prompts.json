@@ -1,0 +1,23 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-10-30",
+  "commonPrompt": "Use case: precise-object-edit.\nImage 1 is the EDIT TARGET, the original tall mature herb. Image 2 is a proportion/color REFERENCE showing newly larger flowers/fruits and richer green foliage. Make ONE mature plant game-asset source, not a sheet and not a scene.\nCombine the TALL OPEN BRANCHING STRUCTURE of image 1 with the LARGER PRIMARY FORMS and rich foliage of image 2. Preserve the species and its recognizable painterly 2D farming-RPG asset style.\nOutput a single genuinely transparent PORTRAIT image, aspect 1:2. Fit the complete plant with generous transparent margins, approximately 86% of canvas width and 78-82% of canvas height. The plant itself must have WIDTH:HEIGHT about 0.53-0.56, tall and slender, to fill a later 14x25 pixel crop. Nothing clipped.\nCrucial geometry: long curved main stem, branches sweeping left and right at DIFFERENT HEIGHTS, with long VISIBLE STEM SEGMENTS and transparent air between the primary forms. Do NOT draw a squat bush or a dense stacked bouquet. LENGTHEN THE VERTICAL SPACING between fruit/flower positions rather than shrinking the fruits/flowers. Each principal flower/fruit must be about 40-44% of the full plant width, enough to become 5-6 game pixels across. Keep large crisp rounded forms, two small lower leaves, and only a few separate side leaves.\nFoliage saturated deep emerald/forest and species-appropriate teal/mint, clear leaf faces, quiet shadows, restrained small highlights. Thin material-colored outlines, not a black border. Warm upper-left light; no fuzzy halo, neon green, excessive white leaf coating or tiny texture noise. All produce and leaves attached to the stem. No detached fragments or neighboring plants.\nExactly ONE complete mature plant centered on transparent alpha. No soil, pot, ground patch, cast shadow, grid, text, symbols or watermark.",
+  "species": [
+    {
+      "name": "glass-dewberry",
+      "detail": "Exactly THREE enlarged ROUND sky-blue glass-marble berries with cobalt undersides, azure/cyan bodies and compact ivory glints. One high-left, one mid-right, one low-left, well separated vertically, each attached on an arched stem. The blue spheres stay ROUND, not elongated ovals. A few saturated deep-teal leaves."
+    },
+    {
+      "name": "moonvelvet",
+      "detail": "Exactly THREE enlarged drooping LILAC BELLFLOWERS with flared scalloped rims and open dark plum throats, at high-left, mid-right, low-left levels on long arched stems. Each large bell about 40% of plant width. A few plush saturated sage-green leaves. Retain hanging bell silhouettes, not circular berries."
+    },
+    {
+      "name": "amber-heartleaf",
+      "detail": "Exactly THREE true heart-shaped amber-gold HARVEST LEAVES at high-right, mid-left, low-right levels on a long reddish main stem, and a few smaller rich forest-green side leaves. No fruit and no flowers. Match the gold heart-leaf proportions of image 1; they do not need enlargement. Preserve the original tall airy silhouette and give only the supporting green foliage the richer colors of image 2."
+    },
+    {
+      "name": "silver-seamleaf",
+      "detail": "Exactly TWO enlarged ivory five-petal FLOWERS with compact gold centers at high-center and mid-left, plus ONE small closed ivory bud at mid-right. Long separate lance-shaped SILVERY MINT leaves fan to either side at staggered heights, with rich emerald/mint shadow planes, light silver-mint faces and narrow pale stitched midribs. Maintain open transparent wedges between the leaf tips and flower stems."
+    }
+  ]
+}

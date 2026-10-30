@@ -1,0 +1,7 @@
+Current, compatibility, full icon builder and runtime icon copies match.
+Mature colored focal pixels, before -> after (excluding green foliage):
+glass-dewberry: 46 -> 59, foliage mean saturation 0.84 -> 0.86
+moonvelvet: 45 -> 57, foliage mean saturation 0.77 -> 0.84
+silver-seamleaf: 37 -> 52, foliage mean saturation 0.71 -> 0.86
+herbalCrops.png: (256, 64), 60 opaque colors, binary alpha.
+herbalItems.png: (128, 16), 59 opaque colors, binary alpha.
