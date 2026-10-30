@@ -1,7 +1,8 @@
-"""Native 16x16 pixel sources. No sampling, downscaling or image-generation input.
+"""Build game-sized 16x16 inventory and effect sheets.
 
 python scripts/draw_native_icons.py --install
-All runtime icons are authored at 16 pixels. Only preview() enlarges them.
+Medical/effect icons are authored at 16 pixels. Garden icons are reductions
+of the large paintings in art/herbal-garden/painted-v6/sources.
 Effect paintings and material ramps live in dimensional_effect_icons.py.
 """
 from pathlib import Path
@@ -12,7 +13,7 @@ import shutil
 
 from PIL import Image, ImageDraw, ImageFont
 from injury_debuff_icons import preview as injury_debuff_preview
-from native_herbal_garden import herb, seed_packet
+from painted_herbal_garden import herb, seed_packet
 from dimensional_effect_icons import build as dimensional_effects
 
 PACK = Path(__file__).resolve().parents[1]
@@ -476,7 +477,7 @@ def main(install=False):
     preview(sheets)
     from render_dimensional_effects import render as render_effects
     render_effects(sheets, index)
-    report = {"cellSize": [16, 16], "method": "native integer pixel drawing; no resampling",
+    report = {"cellSize": [16, 16], "method": "native integer pixel drawing; garden paintings reduced separately",
               "outline": "#301e25, opaque 1px", "buffCount": len(index),
               "currentEffects": {"source": "../../scripts/dimensional_effect_icons.py",
                                  "preview": "../effects-dimensional-16/preview.png",
@@ -491,10 +492,11 @@ def main(install=False):
                                 "concept": "../injury-debuffs-v4/concept.png",
                                 "preview": "../injury-debuffs-v4/preview.png",
                                 "method": "one dominant symbol per injury, native 16x16"},
-              "herbalGarden": {"source": "../../scripts/native_herbal_garden.py",
-                                "method": "native pixel paintings; no resampling",
-                                "outline": "#263e31",
-                                "styleReference": "../herbal-garden/native-v4/style-reference.png"},
+              "herbalGarden": {"source": "../../scripts/painted_herbal_garden.py",
+                                "method": "airy image_gen paintings; proportional reduction; soft inner contour preserves gaps",
+                                "outline": "material colors blended with 35% #4e624c",
+                                "cropEdgeBrightness": 1.08,
+                                "sources": "../herbal-garden/painted-v6/sources"},
               "sheets": {name: {"size": list(sheet.size), "sha256": hashlib.sha256(sheet.tobytes()).hexdigest(),
                                  "targets": TARGETS[name]} for name, sheet in sheets.items()}}
     (ART / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")

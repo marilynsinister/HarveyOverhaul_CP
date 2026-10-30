@@ -1,0 +1,34 @@
+2026-10-29 — painted-v5, workspace assets installed.
+
+python scripts/validate_herbal_garden.py
+OK: 8 icons; 4 crop rows; all phases, seed variants and regrowth coordinates; binary alpha; dark contours; export copies.
+OK: 5 linked quests (3 deliveries, lost page, cooked blend); guaranteed seed mail; recipe and letter references; one-time rewards.
+OK: TraumaBackstory true/false; broth trust gate; salve scene gate; existing medical IDs preserved.
+Herbal garden: all static checks passed.
+
+python scripts/validate_native_icons.py
+Native icons: 227 cells; 9 sheets; binary alpha; dark contours; runtime copies and 166 buff indices OK.
+
+Builder integration: painted_herbal_garden.build_items(), native_herbal_garden.build_items(),
+draw_native_icons.build_sheets()['herbalItems.png'] and runtime herbalItems.png
+have identical RGBA pixels.
+
+python scripts/check_all.py
+[OK] нативные иконки 16×16
+[OK] регрессии постановки
+[OK] день рождения, Зузу и переходы между картами
+[OK] спрайты и поведение Аренда
+[OK] погода и доступность первого осмотра
+[OK] семья, памятные вещи и годовщины
+[OK] аптекарский сад
+[OK] сюжет
+[OK] координаты
+[OK] ветки, маршруты, анимации и варианты комнаты
+[OK] пропуск и выход из сцен
+[OK] JSON и тон
+[OK] setSkipActions в ручных файлах
+Все проверки пройдены.
+
+Visual inspection: large source sheets, reduced game PNGs, all growth stages,
+harvest/seed icons, light and dark soil, integer nearest-neighbour enlargement.
+No running-game validation performed; no installed Mods directory modified.

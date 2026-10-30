@@ -12,12 +12,11 @@ from validate_event_coords import strip_jsonc
 ROOT = Path(__file__).resolve().parent.parent
 MOD = "{{ModId}}_"
 DATA = ROOT / "assets/Code/herbalGarden.json"
-INK = (38, 62, 49, 255)  # Garden's dark green contour, #263e31.
 
 
-def dark_contour(sprite, label):
-    # A coloured edge adjacent to transparency disappears against game soil.
-    # Validate the saved game pixels, independently of the drawing routines.
+def soft_contour(sprite, label):
+    # The colored edge must stay opaque and softer than the old charcoal.
+    # Check saved pixels independently of the exporter and its color palette.
     for y in range(sprite.height):
         for x in range(sprite.width):
             pixel = sprite.getpixel((x, y))
@@ -26,7 +25,8 @@ def dark_contour(sprite, label):
                 or not sprite.getpixel((xx, yy))[3]
                 for xx, yy in ((x-1, y), (x+1, y), (x, y-1), (x, y+1))
             ):
-                assert pixel == INK, (label, "broken dark contour", x, y)
+                luminance = sum(c*w for c, w in zip(pixel[:3], (0.2126, 0.7152, 0.0722)))
+                assert pixel[3] == 255 and luminance >= 60, (label, "edge too dark", x, y, pixel)
 
 
 def unique_pairs(pairs):
@@ -87,7 +87,7 @@ def main():
         sprite = icons.crop((index * 16, 0, index * 16 + 16, 16))
         box = sprite.getbbox()
         assert box and box[0] >= 1 and box[1] >= 1 and box[2] <= 15 and box[3] <= 15, key
-        dark_contour(sprite, key)
+        soft_contour(sprite, key)
 
     for seed, crop in crops.items():
         assert objects[seed]["Category"] == -74 and objects[seed]["Type"] == "Seeds"
@@ -111,12 +111,12 @@ def main():
             sprite = atlas.crop((x, y, x + 16, y + 32))
             box = sprite.getbbox()
             assert box and box[0] >= 1 and box[2] <= 15 and box[3] == 31, (seed, frame, box)
-            dark_contour(sprite, (seed, frame))
+            soft_contour(sprite, (seed, frame))
             row.append(sprite.tobytes())
         assert row[0] == row[1], "Both seed variants must exist"
         assert row[5] == row[6] and row[6] != row[7], "Mature and picked regrowth frames"
         assert any(herb in recipe.split("/")[0] for recipe in recipes.values()), f"Unused herb: {herb}"
-    print("OK: 8 icons; 4 crop rows; all phases, seed variants and regrowth coordinates; binary alpha; dark contours; export copies.")
+    print("OK: 8 icons; 4 crop rows; all phases, seed variants and regrowth coordinates; binary alpha; soft colored edges; export copies.")
 
     known_objects = dict(objects)
     for filename in ("medicalItems.json", "trustRewards.json", "eventsScars.json"):

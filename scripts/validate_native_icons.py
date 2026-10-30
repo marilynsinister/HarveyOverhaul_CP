@@ -30,9 +30,9 @@ def tile(sheet, index):
 def main():
     count = 0
     for name, (columns, rows, used) in LAYOUTS.items():
-        # The botanical sheet has its own dark green ink; medical sheets keep
+        # Botanical edges use a bounded soft color palette; medical sheets keep
         # their established dark plum contour. Both remain fully opaque.
-        expected_ink = (38, 62, 49, 255) if name == 'herbalItems.png' else INK
+        edge_colors = set()
         source = ART / 'exports' / name
         with Image.open(source) as image:
             assert image.mode == 'RGBA', name
@@ -59,8 +59,14 @@ def main():
                             not (0 <= nx < 16 and 0 <= ny < 16) or not icon.getpixel((nx, ny))[3]
                             for nx, ny in ((x-1, y), (x+1, y), (x, y-1), (x, y+1))
                         ):
-                            assert pixel == expected_ink, (name, index, 'outline', x, y, pixel)
+                            if name == 'herbalItems.png':
+                                edge_colors.add(pixel[:3])
+                                assert sum(c*w for c, w in zip(pixel[:3], (0.2126, 0.7152, 0.0722))) >= 60, (name, index, 'edge too dark', x, y, pixel)
+                            else:
+                                assert pixel == INK, (name, index, 'outline', x, y, pixel)
                 count += 1
+            if name == 'herbalItems.png':
+                assert len(edge_colors) <= 16, ('botanical edge palette', len(edge_colors))
         for relative in TARGETS[name]:
             assert (ROOT / relative).read_bytes() == source.read_bytes(), relative
 
@@ -87,7 +93,7 @@ def main():
         assert (sprite['X'], sprite['Y'], sprite['Width'], sprite['Height']) == (0, 0, 16, 16)
     core = (ROOT / 'HarveyOverhaulCore/UI/HarveyPanelIcons.cs').read_text(encoding='utf-8')
     assert 'new Sprite(book, new Rectangle(0, 0, 16, 16))' in core
-    print(f'Native icons: {count} cells; 9 sheets; binary alpha; dark contours; runtime copies and 166 buff indices OK.')
+    print(f'Native icons: {count} cells; 9 sheets; binary alpha; dark medical / soft botanical contours; runtime copies and 166 buff indices OK.')
 
 
 if __name__ == '__main__':

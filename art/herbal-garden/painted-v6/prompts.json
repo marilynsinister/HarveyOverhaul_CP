@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-29",
+  "mode": "built-in image_gen",
+  "commonPrompt": "Use case: precise-object-edit.\nAsset type: edit the supplied medicinal-herb source sheet for a farming RPG.\nInput image 1 is the EDIT TARGET. Preserve the same fictional species, jewel colors, recognizable produce, painterly 2D game-asset style, seed-envelope design and eight lifecycle assets. Redraw the PLANT GEOMETRY to be distinctly airy, tall and spreading, as requested by the user. The previous mature plant was a squat dense heap. Change its silhouette decisively.\nNEW SHEET FORMAT: ONE square transparent PNG, ideally 1536x1536. Exactly FOUR columns and TWO rows. Every cell is a TALL rectangle, 1 wide by 2 high, so the whole sheet is square. Exactly eight isolated assets. No borders or labels.\nTop row, left to right: (1) tiny split seed; (2) two-leaf sprout on a clear stem; (3) open juvenile plant; (4) tall open plant with small closed buds / folded leaves.\nBottom row, left to right: (1) tall MATURE plant; (2) same plant just after harvest with exposed stems and remaining side leaves; (3) separate harvested sprig inventory icon; (4) original folded cream/kraft seed packet with the species emblem.\nMATURE silhouette: about 80% of cell width and 85% of cell height, hence roughly width:height = 1:2. Slender curved stems visibly rising above the root, graceful asymmetric branches reaching left and right at different heights, only FOUR to SIX separated secondary leaves, and THREE prominent focal fruits/flowers/leaves. Plenty of TRANSPARENT AIR between branches, each fruit or flower distinct, visible gaps at least one fruit width. Leaves should fan outward with sweeping tips, not overlap in a compact central pile. No mound of basal foliage; just two small lower leaves. Bottom-aligned in the cell. Everything anatomically attached, no floating plant parts.\nBudding and picked stages follow the SAME airy branching architecture and common root baseline. Young phases smaller, mature tall. Keep generous gaps between cells. Inventory sprig also has a lightly fanned silhouette; the packet remains compact.\nOutline style: thin muted olive / material-colored edge, mid-dark and gentle, NOT black or charcoal. Bright clear color planes, cream highlights, quiet colored shadows. Coherent hand-painted source art with broad readable forms suitable for later reduction into 16x32 sprites. No pixel grid in this source.\nBackground: genuine transparent alpha. No soil, pot, floor, cast shadow patch, text, grid, checkerboard, watermarks or extra assets.",
+  "species": [
+    {
+      "name": "glass-dewberry",
+      "detail": "Glass dewberry: exactly three plump BLUE GLASS berries on three outward-sweeping curved branches at staggered heights; ROUND glass marbles, blue/cyan, ivory reflections. Deep teal oval leaves, long visible green stems between berries. No dense rosette."
+    },
+    {
+      "name": "moonvelvet",
+      "detail": "Moonvelvet: three large dangling lilac BELL FLOWERS with open deep-plum throats and pale scalloped rims, on long gracefully arching stems at different heights. Two to four velvety sage leaves with silver margins spread sideways. Bells clearly separated by transparent gaps. No dense rosette."
+    },
+    {
+      "name": "amber-heartleaf",
+      "detail": "Amber heartleaf: three large TRUE HEART-shaped golden amber leaves on exposed reddish stems at staggered heights, each pointing in a different outward direction; a few smaller olive-gold side leaves. Clear heart lobes, burnt orange shadows, honey highlights. No flowers and no fruits. Large golden harvest leaves removed in the picked stage."
+    },
+    {
+      "name": "silver-seamleaf",
+      "detail": "Silver seamleaf: a loose tall star-like fan of five long lance-shaped SILVERY MINT leaves, each with bright stitched midrib and separated sweeping pointed tips. Visible slim stems and transparent wedges between blades. ONE small ivory flower on a long upright stalk extending above the fan. Avoid a tightly stacked low rosette."
+    }
+  ]
+}

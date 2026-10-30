@@ -1,0 +1,73 @@
+{
+  "source": "../../../scripts/painted_herbal_garden.py",
+  "generation": "built-in image_gen",
+  "method": "large RGBA source paintings -> isolated assets -> proportional LANCZOS reduction -> binary alpha -> shared 63-color palette -> 1px outer outline",
+  "outline": "#1f2730",
+  "cropCell": [
+    16,
+    32
+  ],
+  "itemCell": [
+    16,
+    16
+  ],
+  "frameMap": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5
+  ],
+  "installedInWorkspace": true,
+  "sources": {
+    "glass-dewberry": {
+      "size": [
+        1774,
+        887
+      ],
+      "sha256File": "1050fc0e37d31f1cacfcc4348fd41304feaa8c9c5da5d77f7765e2b7fe327bbd"
+    },
+    "moonvelvet": {
+      "size": [
+        1774,
+        887
+      ],
+      "sha256File": "1eb03783a16d11a8a2679645459bac1562b5a49c8a17684270f0297d0547f854"
+    },
+    "amber-heartleaf": {
+      "size": [
+        1774,
+        887
+      ],
+      "sha256File": "bc5c0a54d0c10faf66d5c40d7efa167761f5bfec3d11486480d2f5a73a86a5dd"
+    },
+    "silver-seamleaf": {
+      "size": [
+        1774,
+        887
+      ],
+      "sha256File": "2f39d35adaeddd56068377684adbfefac98ad08b26c02fcf322c6c81644f0b5d"
+    }
+  },
+  "sheets": {
+    "herbalItems.png": {
+      "size": [
+        128,
+        16
+      ],
+      "colors": 60,
+      "sha256Pixels": "77ae9f4cd7c3f48121e37fe9b12040714a12b50970bef3217b08304172cd8cf1"
+    },
+    "herbalCrops.png": {
+      "size": [
+        256,
+        64
+      ],
+      "colors": 60,
+      "sha256Pixels": "ceab7ef084cd06c4f04b80788c5b2e183f899fe25a821456dfdfbfb2e89c6f5e"
+    }
+  }
+}

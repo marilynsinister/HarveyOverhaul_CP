@@ -26,10 +26,11 @@
     "method": "one dominant symbol per injury, native 16x16"
   },
   "herbalGarden": {
-    "source": "../../scripts/native_herbal_garden.py",
-    "method": "native pixel paintings; no resampling",
-    "outline": "#263e31",
-    "styleReference": "../herbal-garden/native-v4/style-reference.png"
+    "source": "../../scripts/painted_herbal_garden.py",
+    "method": "airy image_gen paintings; proportional reduction; soft inner contour preserves gaps",
+    "outline": "material colors blended with 35% #4e624c",
+    "cropEdgeBrightness": 1.08,
+    "sources": "../herbal-garden/painted-v6/sources"
   },
   "sheets": {
     "medicalItems.png": {
@@ -58,7 +59,7 @@
         128,
         16
       ],
-      "sha256": "68736a7d7c25b90a4d900aebdf0475fb287dfb940cc58ccc3b7494590cad2df5",
+      "sha256": "9339ce1291257b29b2d3d82d200fbb0c57280eefbab0bc7ad225ba6f1bd1a794",
       "targets": [
         "HarveyOverhaul [CP]/assets/Items/herbalItems.png"
       ]

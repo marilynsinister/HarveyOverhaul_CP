@@ -1,0 +1,26 @@
+2026-10-29 | painted-v6 | workspace assets
+
+[OK] нативные иконки 16×16
+[OK] регрессии постановки
+[OK] день рождения, Зузу и переходы между картами
+[OK] спрайты и поведение Аренда
+[OK] погода и доступность первого осмотра
+[OK] семья, памятные вещи и годовщины
+[OK] аптекарский сад
+[OK] сюжет
+[OK] координаты
+[OK] ветки, маршруты, анимации и варианты комнаты
+[OK] пропуск и выход из сцен
+[OK] JSON и тон
+[OK] setSkipActions в ручных файлах
+
+Все проверки пройдены.
+
+No running-game validation performed.
+
+Builder copies match; all 32 alpha masks unchanged by the contour.
+Mature silhouette: old width/height/fill -> new width/height/fill
+glass-dewberry: 14x13, 82% -> 14x20, 50%
+moonvelvet: 14x13, 88% -> 14x22, 46%
+amber-heartleaf: 14x13, 81% -> 14x23, 44%
+silver-seamleaf: 14x12, 74% -> 13x22, 45%

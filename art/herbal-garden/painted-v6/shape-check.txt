@@ -1,0 +1,6 @@
+Builder copies match; all 32 alpha masks unchanged by the contour.
+Mature silhouette: old width/height/fill -> new width/height/fill
+glass-dewberry: 14x13, 82% -> 14x20, 50%
+moonvelvet: 14x13, 88% -> 14x22, 46%
+amber-heartleaf: 14x13, 81% -> 14x23, 44%
+silver-seamleaf: 14x12, 74% -> 13x22, 45%

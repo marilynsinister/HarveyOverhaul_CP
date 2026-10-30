@@ -1,0 +1,2 @@
+OK: 1694 contour pixels brightened by 8%; alpha, interior pixels, dimensions and inventory icons unchanged.
+Garden and icon validators passed.
