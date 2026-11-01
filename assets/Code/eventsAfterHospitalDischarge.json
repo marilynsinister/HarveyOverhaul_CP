@@ -1,11 +1,12 @@
 {
     "$schema": "https://smapi.io/schemas/content-patcher.json",
+    // Запускает только Injury: одна сцена за визит, постановка у реальной кровати.
     "Changes": [
         {
             "Action": "EditData",
             "Target": "Data/Events/FarmHouse",
             "Entries": {
-                "eventHarveyAfterHospitalDischargeHome/Time 1800 2600/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_AfterHospitalDischargeHome/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married": "
+                "eventHarveyAfterHospitalDischargeHome/Time 1800 2600/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_AfterHospitalDischargeHome/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/GameStateQuery FALSE": "
         continue/
         {{HO_HomeVX}} 7/
         farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/
@@ -16,9 +17,9 @@
         speak Harvey \"Солнышко, осторожно. Не торопись.$s\"/
         speak Harvey \"Дом — не значит, что можно сразу забыть про лечение.$s\"/
         pause 300/
-        message \"Харви закрывает дверь и внимательно смотрит, как ты держишься на ногах.\"/
+        message \"Харви притворяет дверь и подходит к кровати. Ты устраиваешься на подушках, стараясь не потревожить рану.\"/
         pause 400/
-        speak Harvey \"До кровати дойдём медленно. Если закружится голова — сразу скажешь жестом, хорошо?$u\"/
+        speak Harvey \"Лежи спокойно. Если закружится голова — сразу скажешь жестом, хорошо?$u\"/
         pause 300/
         message \"Он ставит воду рядом с кроватью и раскладывает лекарства так, чтобы их было видно.\"/
         pause 400/

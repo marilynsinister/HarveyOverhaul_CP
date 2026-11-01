@@ -1,0 +1,48 @@
+{
+  "source": "../../../scripts/native_herbal_garden.py",
+  "pixelSource": "pixels.json",
+  "authoringSource": "../../../scripts/compose_native_herbs.py",
+  "method": "native pixel maps; one character = one output pixel; no resampling, quantization or automatic outline",
+  "nativeSize": true,
+  "downsampling": false,
+  "automaticOutline": false,
+  "paletteColors": 48,
+  "cropCell": [
+    16,
+    32
+  ],
+  "itemCell": [
+    16,
+    16
+  ],
+  "frameMap": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5
+  ],
+  "installedInWorkspace": true,
+  "sourceSha256": "59931e13a5e264d54e9e03fb2c79647e9230065a586a7960cc9d6a0e6aab642d",
+  "sheets": {
+    "herbalItems.png": {
+      "size": [
+        128,
+        16
+      ],
+      "colors": 44,
+      "sha256Pixels": "fd88c66c808106743368a7805a2ddf884dc220622a8cf364f89aba4c05c35e0a"
+    },
+    "herbalCrops.png": {
+      "size": [
+        256,
+        64
+      ],
+      "colors": 47,
+      "sha256Pixels": "e2698481af66dd09c2179eae902eb7dfa5bc8d62348add7a42c88efc63b04e25"
+    }
+  }
+}

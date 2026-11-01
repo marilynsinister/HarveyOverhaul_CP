@@ -1,0 +1,25 @@
+[OK] нативные иконки 16×16
+[OK] регрессии постановки
+[OK] день рождения, Зузу и переходы между картами
+[OK] спрайты и поведение Аренда
+[OK] погода и доступность первого осмотра
+[OK] семья, памятные вещи и годовщины
+[OK] аптекарский сад
+[OK] сюжет
+[OK] координаты
+[OK] ветки, маршруты, анимации и варианты комнаты
+[OK] пропуск и выход из сцен
+[OK] JSON и тон
+[OK] setSkipActions в ручных файлах
+
+Все проверки пройдены.
+
+Pixel QA: canonical builders, runtime and export PNGs match. Inventory silhouettes are unchanged.
+glass-dewberry: new mature portrait; 223 changed mature pixels; lifecycle source and non-mature silhouette retained; bbox (1, 5, 15, 31).
+moonvelvet: new mature portrait; 235 changed mature pixels; lifecycle source and non-mature silhouette retained; bbox (1, 5, 15, 31).
+amber-heartleaf: new mature portrait; 195 changed mature pixels; lifecycle source and non-mature silhouette retained; bbox (1, 5, 15, 31).
+silver-seamleaf: new mature portrait; 186 changed mature pixels; lifecycle source and non-mature silhouette retained; bbox (1, 5, 15, 31).
+herbalCrops.png: (256, 64); alpha 0/255; 54 opaque colors, 6 edge colors; edge luminance 26.11..43.47/255.
+herbalItems.png: (128, 16); alpha 0/255; 50 opaque colors, 7 edge colors; edge luminance 26.11..55.14/255.
+Glass Dewberry: three separate blue berry bodies survive reduction; blue-pixel counts [16, 24, 25].
+New harvest inks are darker than v11; mature/harvest light bands 10; green contacts outlined from the foliage side to preserve bright fruit faces. No running-game validation.

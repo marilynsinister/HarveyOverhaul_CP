@@ -1,0 +1,119 @@
+{
+  "source": "../../../scripts/painted_herbal_garden.py",
+  "generation": "built-in image_gen",
+  "method": "v11 large-form lifecycle sheets -> area-filtered alpha -> 3x intermediate color detail sampled with NEAREST -> opaque-neighbor sharpening -> 48 body colors -> dark 1px eight-neighbor material outline in reserved padding",
+  "detailSampleScale": 3,
+  "vegetativeHeightFill": [
+    2,
+    3,
+    5
+  ],
+  "prompts": [
+    "prompts.json",
+    "mature-prompts.json"
+  ],
+  "visibilityReference": "reference-in-game.png",
+  "sourceLayout": [
+    2,
+    4
+  ],
+  "colorSource": "../../../scripts/refine_herbal_pixels.py",
+  "outline": "dark 1px outer contour in seven material colors; edge luminance 16..80/255; cell gutter retained",
+  "cropCell": [
+    16,
+    32
+  ],
+  "itemCell": [
+    16,
+    16
+  ],
+  "frameMap": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5
+  ],
+  "installedInWorkspace": true,
+  "sources": {
+    "glass-dewberry": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "912401ee38e1a9a6961f55598509badbb66c6014dc7c0625c4719edf5a62157d"
+    },
+    "moonvelvet": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "c51cfefd462e3f16ea11dda257831c96499fdd2b831143a5519a8fdfa4f51e68"
+    },
+    "amber-heartleaf": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "ce5620a92b8b2c4cc2529e2134471bf87d769882990b2c12e0adb6751e646eba"
+    },
+    "silver-seamleaf": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "cb735c389da15bf688424a8f97c59ebc6a32bca95bbf60bc0ed1b988d5aac9e3"
+    }
+  },
+  "maturePortraits": {
+    "glass-dewberry": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "d221e596cbfd27064c8a3ac1976c47cd4288d3560076254c9c0f368ec6617a46"
+    },
+    "moonvelvet": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "06465f8f0cbb6ece3621acccd5754c0ce202ce66f6aaa5cef785fa78fae5d23f"
+    },
+    "amber-heartleaf": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "592344f72c047d8cdd017ba104f2007a325d05463488bafe0636d7150247682e"
+    },
+    "silver-seamleaf": {
+      "size": [
+        887,
+        1774
+      ],
+      "sha256File": "5fa4cb1964a411d0d19efd180a9057e6cac61a8e36a7af1ee6bd999726e16184"
+    }
+  },
+  "sheets": {
+    "herbalItems.png": {
+      "size": [
+        128,
+        16
+      ],
+      "colors": 51,
+      "sha256Pixels": "e785078938b4f00e77747813e43bd3997199b14615a93273bee9079629e3019b"
+    },
+    "herbalCrops.png": {
+      "size": [
+        256,
+        64
+      ],
+      "colors": 54,
+      "sha256Pixels": "d9d17e3f70211c867c40d7859e800f113885fad163463aac9b7fd0c6013f45ee"
+    }
+  }
+}

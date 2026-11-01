@@ -1,8 +1,8 @@
 """Build game-sized 16x16 inventory and effect sheets.
 
 python scripts/draw_native_icons.py --install
-Medical/effect icons are authored at 16 pixels. Garden icons are reductions
-of the large paintings in art/herbal-garden/painted-v10/sources.
+Medical/effect and garden icons are authored at 16 pixels. Garden pixel maps
+live in art/herbal-garden/native-v14/pixels.json.
 Effect paintings and material ramps live in dimensional_effect_icons.py.
 """
 from pathlib import Path
@@ -13,7 +13,7 @@ import shutil
 
 from PIL import Image, ImageDraw, ImageFont
 from injury_debuff_icons import preview as injury_debuff_preview
-from painted_herbal_garden import herb, seed_packet
+from native_herbal_garden import herb, seed_packet, metadata as garden_metadata
 from dimensional_effect_icons import build as dimensional_effects
 
 PACK = Path(__file__).resolve().parents[1]
@@ -492,12 +492,7 @@ def main(install=False):
                                 "concept": "../injury-debuffs-v4/concept.png",
                                 "preview": "../injury-debuffs-v4/preview.png",
                                 "method": "one dominant symbol per injury, native 16x16"},
-              "herbalGarden": {"source": "../../scripts/painted_herbal_garden.py",
-                                "method": "v10 broad sweeping mature foliage; large produce; 3x intermediate color sampling; saturated pixel bands",
-                                "outline": "directional material-colored inner edge; no expansion",
-                                "colorSource": "../../scripts/refine_herbal_pixels.py",
-                                "sources": "../herbal-garden/painted-v10/sources",
-                                "matureSource": "../herbal-garden/painted-v10/mature-portraits"},
+              "herbalGarden": garden_metadata(),
               "sheets": {name: {"size": list(sheet.size), "sha256": hashlib.sha256(sheet.tobytes()).hexdigest(),
                                  "targets": TARGETS[name]} for name, sheet in sheets.items()}}
     (ART / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")

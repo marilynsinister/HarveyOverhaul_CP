@@ -20,6 +20,8 @@ ENV = {**os.environ, "PYTHONIOENCODING": "utf-8"}
 CHECKS = [
     ("нативные иконки 16×16", ["validate_native_icons.py"], lambda out: "buff indices OK." in out),
     ("регрессии постановки", ["test_event_staging.py"], lambda out: out.strip().endswith('OK')),
+    ("совместимость клиники с Therapist NPC", ["validate_therapist_compat.py"], lambda out: "Therapist compatibility: all checks passed." in out),
+    ("домашняя забота и рецепты записок", ["validate_homecare_flow.py"], lambda out: "Home care and note recipes: all checks passed." in out),
     ("день рождения, Зузу и переходы между картами", ["validate_outings.py"], lambda out: "Outings: all checks passed." in out),
     ("спрайты и поведение Аренда", ["validate_arend_behaviour.py"], lambda out: "Arend behaviour: all checks passed." in out),
     ("погода и доступность первого осмотра", ["validate_intro_recovery.py"], lambda out: "Intro recovery: all checks passed." in out),

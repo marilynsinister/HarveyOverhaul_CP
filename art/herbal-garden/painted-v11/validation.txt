@@ -1,0 +1,24 @@
+[OK] нативные иконки 16×16
+[OK] регрессии постановки
+[OK] день рождения, Зузу и переходы между картами
+[OK] спрайты и поведение Аренда
+[OK] погода и доступность первого осмотра
+[OK] семья, памятные вещи и годовщины
+[OK] аптекарский сад
+[OK] сюжет
+[OK] координаты
+[OK] ветки, маршруты, анимации и варианты комнаты
+[OK] пропуск и выход из сцен
+[OK] JSON и тон
+[OK] setSkipActions в ручных файлах
+
+Все проверки пройдены.
+
+Pixel QA: canonical builder, runtime PNGs and all export copies match.
+glass-dewberry: occupied pixels v10 -> v11 by stage (young,buds,mature,picked): [(2, 78, 159), (3, 127, 254), (4, 213, 300), (5, 96, 212)]
+moonvelvet: occupied pixels v10 -> v11 by stage (young,buds,mature,picked): [(2, 71, 158), (3, 129, 260), (4, 229, 326), (5, 101, 232)]
+amber-heartleaf: occupied pixels v10 -> v11 by stage (young,buds,mature,picked): [(2, 70, 154), (3, 118, 254), (4, 202, 286), (5, 94, 220)]
+silver-seamleaf: occupied pixels v10 -> v11 by stage (young,buds,mature,picked): [(2, 57, 156), (3, 94, 228), (4, 198, 278), (5, 77, 204)]
+herbalCrops.png: size (256, 64); 54 opaque colors; 6 contour colors; contour luminance 37.55..56.80/255.
+herbalItems.png: size (128, 16); 51 opaque colors; 7 contour colors; contour luminance 37.55..56.80/255.
+4 eight-asset lifecycle sources + 4 tall mature portraits; binary alpha; crop frame order and padding preserved. No running-game validation.

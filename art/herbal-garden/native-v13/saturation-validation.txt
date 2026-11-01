@@ -1,0 +1,18 @@
+Saturation-only palette update; native pixel geometry and contour colors preserved.
+
+OK: 8 icons; 4 crop rows; all phases, seed variants and regrowth coordinates; binary alpha; dark material contours; export copies.
+OK: 5 linked quests (3 deliveries, lost page, cooked blend); guaranteed seed mail; recipe and letter references; one-time rewards.
+OK: TraumaBackstory true/false; broth trust gate; salve scene gate; existing medical IDs preserved.
+Herbal garden: all static checks passed.
+
+Native icons: 227 cells; 9 sheets; binary alpha; dark medical / material botanical contours; runtime copies and 166 buff indices OK.
+
+Saturation-only update: all 32 source pixel maps are identical; only palette values changed.
+crops: same dimensions, binary alpha, silhouettes and contour RGB; <=64 colors.
+items: same dimensions, binary alpha, silhouettes and contour RGB; <=64 colors.
+glass-dewberry: mean opaque-pixel HSV saturation 0.558 -> 0.626.
+moonvelvet: mean opaque-pixel HSV saturation 0.360 -> 0.429.
+amber-heartleaf: mean opaque-pixel HSV saturation 0.507 -> 0.566.
+silver-seamleaf: mean opaque-pixel HSV saturation 0.416 -> 0.465.
+
+

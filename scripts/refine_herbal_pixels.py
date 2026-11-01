@@ -1,6 +1,31 @@
-"""Separate garden pixel colors without moving or expanding the silhouette."""
+"""Reduce garden colors, then add a dark one-pixel material-colored contour.
+
+The reducer reserves a pixel around the body, so the ink fits the game cell.
+"""
 from colorsys import rgb_to_hls, hls_to_rgb, rgb_to_hsv
 from PIL import Image
+
+
+INKS = {
+    'leaf': (23, 50, 39),
+    'berry': (19, 25, 58),
+    'bell': (45, 21, 49),
+    'gold': (77, 35, 20),
+    'ivory': (60, 38, 29),
+    'stem': (70, 30, 29),
+    'paper': (86, 48, 35),
+}
+
+
+def material_ink(rgb, kind, packet=False):
+    if packet:
+        return INKS['paper']
+    h, s, value = rgb_to_hsv(*(c/255 for c in rgb))
+    if 0.19 < h < 0.52 and s > 0.20:
+        return INKS['leaf']
+    if kind == 2 and (h > 0.94 or h < 0.055) and s > 0.35:
+        return INKS['stem']
+    return INKS[('berry', 'bell', 'gold', 'ivory')[kind]]
 
 
 def edge_positions(image):
@@ -12,7 +37,24 @@ def edge_positions(image):
                 for xx, yy in ((x-1, y), (x+1, y), (x, y-1), (x, y+1)))}
 
 
-def grade(rgb, kind):
+def is_harvest_color(rgb, kind):
+    """Recognize harvest material separately from its supporting green foliage."""
+    h, saturation, value = rgb_to_hsv(*(c/255 for c in rgb))
+    if kind == 0:
+        return 0.50 <= h <= 0.73 and saturation >= 0.25 and value >= 0.18
+    if kind == 1:
+        return 0.65 <= h <= 0.95 and saturation >= 0.20 and value >= 0.18
+    if kind == 2:
+        return 0.065 <= h <= 0.19 and saturation >= 0.25 and value >= 0.30
+    return value >= 0.60 and (saturation <= 0.45 or 0.06 <= h <= 0.19)
+
+
+def is_foliage_color(rgb):
+    h, saturation, _ = rgb_to_hsv(*(c/255 for c in rgb))
+    return 0.19 < h < 0.52 and saturation > 0.20
+
+
+def grade(rgb, kind, harvest=False):
     h, light, saturation = rgb_to_hls(*(c/255 for c in rgb))
     # Keep blue, purple and gold identities; prevent gray-olive foliage from
     # disappearing into the warm soil. Mint leaves retain their silver glints.
@@ -35,7 +77,8 @@ def grade(rgb, kind):
     saturation_factor = (1.58 if kind == 3 else 1.42) if foliage else 1.32
     saturation = min(saturation_cap, saturation*saturation_factor)
     # Discrete value bands replace the soft succession of painterly half-tones.
-    light = round(light*18)/18
+    bands = 10 if harvest and not foliage else 18
+    light = round(light*bands)/bands
     return tuple(round(c*255) for c in hls_to_rgb(h, light, saturation))
 
 
@@ -65,12 +108,9 @@ def nearest_material(rgb, colors):
 
 def render(images):
     corrected = []
-    contours = []
     for index, image in enumerate(images):
         kind = index//8
         alpha = image.getchannel('A')
-        edges = edge_positions(image)
-        contours.append(edges)
         result = image.copy()
         for y in range(image.height):
             for x in range(image.width):
@@ -87,34 +127,15 @@ def render(images):
                 if len(neighbors) >= 2:
                     rgb = tuple(max(0, min(255, round(c+0.45*(c-sum(p[i] for p in neighbors)/len(neighbors)))))
                                 for i, c in enumerate(rgb))
-                rgb = grade(rgb, kind)
-                if (x, y) in edges:
-                    # Put the clearer contour INSIDE substantial shapes. A
-                    # narrow stem keeps its color, and leaf gaps stay open.
-                    # Lower/right edges carry the shade; upper/left edges
-                    # retain light accents rather than a uniform dark ring.
-                    luminance = sum(c*w for c, w in zip(rgb, (0.2126, 0.7152, 0.0722)))
-                    if len(neighbors) >= 3 and luminance < 220:
-                        shade = any(not (0 <= xx < image.width and 0 <= yy < image.height)
-                                    or not alpha.getpixel((xx, yy))
-                                    for xx, yy in ((x+1, y), (x, y+1)))
-                        factor = 0.78 if shade else 0.90
-                        rgb = tuple(round(c*factor) for c in rgb)
-                    luminance = sum(c*w for c, w in zip(rgb, (0.2126, 0.7152, 0.0722)))
-                    if luminance < 64:
-                        # Retain the established colored, moderate floor.
-                        amount = (64-luminance)/(255-luminance)
-                        rgb = tuple(round(c+(255-c)*amount) for c in rgb)
+                rgb = grade(rgb, kind, harvest=index%8 in (4, 6))
                 result.putpixel((x, y), rgb+(255,))
         corrected.append(result)
 
     core_colors = [p[:3] for im in corrected for p in im.get_flattened_data() if p[3]]
-    edge_colors = [im.getpixel(xy)[:3] for im, edges in zip(corrected, contours) for xy in edges]
     core = palette(core_colors, 48)
-    edge = palette(edge_colors, 16)
-    core_lookup, edge_lookup = {}, {}
+    core_lookup = {}
     result = []
-    for im, edges in zip(corrected, contours):
+    for index, im in enumerate(corrected):
         mapped = im.copy()
         for y in range(im.height):
             for x in range(im.width):
@@ -126,10 +147,38 @@ def render(images):
                 if rgb not in core_lookup:
                     core_lookup[rgb] = nearest_material(rgb, core)
                 mapped.putpixel((x, y), core_lookup[rgb]+(255,))
-        for xy in edges:
-            rgb = im.getpixel(xy)[:3]
-            if rgb not in edge_lookup:
-                edge_lookup[rgb] = nearest_material(rgb, edge)
-            mapped.putpixel(xy, edge_lookup[rgb]+(255,))
+        if index%8 in (4, 6):
+            # Transparency already receives the outer stroke below. Also ink
+            # the foliage side of broad contacts with harvest parts. Preserve
+            # the small bright fruit/petal face inside its dark boundary.
+            for y in range(im.height):
+                for x in range(im.width):
+                    p = im.getpixel((x, y))
+                    if not p[3] or not is_foliage_color(p[:3]):
+                        continue
+                    near = [im.getpixel((xx, yy))[:3]
+                            for yy in range(max(0, y-1), min(im.height, y+2))
+                            for xx in range(max(0, x-1), min(im.width, x+2))
+                            if (xx, yy) != (x, y) and im.getpixel((xx, yy))[3]]
+                    solid_head = sum(is_harvest_color(rgb, index//8) for rgb in near)
+                    contact = [im.getpixel((xx, yy))[:3]
+                               for xx, yy in ((x-1, y), (x+1, y), (x, y-1), (x, y+1))
+                               if 0 <= xx < im.width and 0 <= yy < im.height and im.getpixel((xx, yy))[3]]
+                    if solid_head >= 3 and sum(is_harvest_color(rgb, index//8) for rgb in contact) >= 2:
+                        mapped.putpixel((x, y), INKS[('berry', 'bell', 'gold', 'ivory')[index//8]]+(255,))
+        # Eight-neighbor ink gives leaves, petals and berries a continuous
+        # contour, including diagonal tips. Keep the bright body untouched.
+        # Pick a material from nearby BODY pixels, never from already drawn ink.
+        for y in range(im.height):
+            for x in range(im.width):
+                if im.getpixel((x, y))[3]:
+                    continue
+                neighbors = [im.getpixel((xx, yy))[:3]
+                             for yy in range(max(0, y-1), min(im.height, y+2))
+                             for xx in range(max(0, x-1), min(im.width, x+2))
+                             if im.getpixel((xx, yy))[3]]
+                if neighbors:
+                    rgb = max(neighbors, key=lambda p: max(p)-min(p))
+                    mapped.putpixel((x, y), material_ink(rgb, index//8, index%8 == 7)+(255,))
         result.append(mapped)
     return result

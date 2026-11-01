@@ -30,7 +30,7 @@ def tile(sheet, index):
 def main():
     count = 0
     for name, (columns, rows, used) in LAYOUTS.items():
-        # Botanical edges use a bounded soft color palette; medical sheets keep
+        # Botanical edges use a bounded dark material palette; medical sheets keep
         # their established dark plum contour. Both remain fully opaque.
         edge_colors = set()
         source = ART / 'exports' / name
@@ -61,7 +61,7 @@ def main():
                         ):
                             if name == 'herbalItems.png':
                                 edge_colors.add(pixel[:3])
-                                assert sum(c*w for c, w in zip(pixel[:3], (0.2126, 0.7152, 0.0722))) >= 60, (name, index, 'edge too dark', x, y, pixel)
+                                assert 16 <= sum(c*w for c, w in zip(pixel[:3], (0.2126, 0.7152, 0.0722))) <= 80, (name, index, 'dark contour', x, y, pixel)
                             else:
                                 assert pixel == INK, (name, index, 'outline', x, y, pixel)
                 count += 1
@@ -93,7 +93,7 @@ def main():
         assert (sprite['X'], sprite['Y'], sprite['Width'], sprite['Height']) == (0, 0, 16, 16)
     core = (ROOT / 'HarveyOverhaulCore/UI/HarveyPanelIcons.cs').read_text(encoding='utf-8')
     assert 'new Sprite(book, new Rectangle(0, 0, 16, 16))' in core
-    print(f'Native icons: {count} cells; 9 sheets; binary alpha; dark medical / soft botanical contours; runtime copies and 166 buff indices OK.')
+    print(f'Native icons: {count} cells; 9 sheets; binary alpha; dark medical / material botanical contours; runtime copies and 166 buff indices OK.')
 
 
 if __name__ == '__main__':

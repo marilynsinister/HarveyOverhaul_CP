@@ -1,0 +1,11 @@
+Organic native art revision: 2026-10-31.
+Existing validate_herbal_garden.py: PASS (8 icons, all crop phases, binary alpha, dark material contours, export copies, gameplay chain).
+Existing validate_native_icons.py: PASS (227 cells, 9 sheets, botanical/medical contours and runtime copies).
+Authoring glyphs reproduce pixels.json exactly: PASS.
+Native crop/item packing with resize and quantize disabled: PASS.
+All 32 saved tiles and both runtime atlases equal source pixels: PASS.
+Crop atlas 256x64; crop cells 16x32; item atlas 128x16; item cells 16x16.
+Palette: 48 colors. Changed maps: 28/32; seed frames unchanged.
+Four full-size leaf forms, two small leaf forms; three berry/bell/golden-leaf variants; two open-flower variants.
+Previous saturated assets and sources: before-organic/. Review: organic-comparison.png.
+Only the workspace assets were updated. In-game appearance has not been checked.

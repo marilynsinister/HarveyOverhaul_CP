@@ -28,6 +28,10 @@
       "IsRequired": false
     },
     {
+      "UniqueID": "Endwyr.TherapistNPC",
+      "IsRequired": false
+    },
+    {
       "UniqueID": "Veronnica.HarveySprite",
       "IsRequired": false
     },

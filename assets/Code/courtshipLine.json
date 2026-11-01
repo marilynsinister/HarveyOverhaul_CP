@@ -33,7 +33,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Town",
       "Entries": {
-        "HarveyOverhaulCourtship.S2_Gossip/Time 0900 1500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N3_ContactCard/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_Rules/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S2_Gossip/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/38 57/farmer 37 58 1 Harvey 38 58 3 Pam 39 58 3 Emily 41 58 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_Public Received#AddConversationTopic HarveyRomance_Public 7#AddMail Current {{ModId}}_mailNoteThanksRecipe tomorrow/viewport 38 57 true/pause 500/message \"Харви вышел проводить тебя до крыльца клиники. Пэм как раз идёт мимо — и громко, на всю площадь, «по секрету» спрашивает:\"/speak Pam \"Док! А правду говорят, что вы с фермершей того… встречаетесь?$h\"/speak Emily \"Пэм! Ну нельзя же так в лоб! …Хотя мне тоже интересно.$h\"/emote Harvey 16/pause 600/message \"Харви краснеет до ушей. Секунду молчит. А потом берёт тебя за руку — при всех.\"/speak Harvey \"Да. Это она.$l#$b#Есть вопросы — запись в регистратуре.$h\"/speak Pam \"Ха! Я так и знала. Гас мне должен пиво.$h\"/quickQuestion #Сжать его руку#Рассмеяться#Уйти, смутившись(break)message \"Ты сжимаешь его ладонь. Он сжимает в ответ — дважды, будто это пароль.\"\\speak Harvey \"Вот. Теперь официально.$l\"\\friendship Harvey 35(break)emote farmer 28\\speak Emily \"Вы такие милые, что у меня аура порозовела.$h\"\\speak Harvey \"Это… медицински необъяснимо. Но приятно.$h\"\\friendship Harvey 30(break)move farmer -2 0 3 false\\pause 300\\move Harvey -1 0 3 false\\faceDirection farmer 1\\speak Harvey \"Прости. Я не спросил, готова ли ты. Это было нечестно.$s\"\\speak Harvey \"Но я не жалею, что сказал. Пусть знают. Если тебе нужно время — я подожду. Только больше не буду делать вид, что ты просто пациентка.$l\"\\friendship Harvey 30/action AddMail Current HarveyRomance_Public Received/action AddMail Current {{ModId}}_mailNoteThanksRecipe tomorrow/addConversationTopic HarveyRomance_Public 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
+        "HarveyOverhaulCourtship.S2_Gossip/Time 0900 1500/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating/GameStateQuery PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulArc3.N3_ContactCard/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyArc3_Rules/!FestivalDay/GameStateQuery !PLAYER_HAS_SEEN_EVENT Current HarveyOverhaulCourtship.S2_Gossip/GameStateQuery !PLAYER_HAS_CONVERSATION_TOPIC Current HarveyMod_CD_Global": "continue/38 57/farmer 37 58 1 Harvey 38 58 3 Pam 39 58 3 Emily 41 58 3/skippable/setSkipActions AddConversationTopic HarveyMod_CD_Global 3#AddMail Current HarveyRomance_Public Received#AddConversationTopic HarveyRomance_Public 7/viewport 38 57 true/pause 500/message \"Харви вышел проводить тебя до крыльца клиники. Пэм как раз идёт мимо — и громко, на всю площадь, «по секрету» спрашивает:\"/speak Pam \"Док! А правду говорят, что вы с фермершей того… встречаетесь?$h\"/speak Emily \"Пэм! Ну нельзя же так в лоб! …Хотя мне тоже интересно.$h\"/emote Harvey 16/pause 600/message \"Харви краснеет до ушей. Секунду молчит. А потом берёт тебя за руку — при всех.\"/speak Harvey \"Да. Это она.$l#$b#Есть вопросы — запись в регистратуре.$h\"/speak Pam \"Ха! Я так и знала. Гас мне должен пиво.$h\"/quickQuestion #Сжать его руку#Рассмеяться#Уйти, смутившись(break)message \"Ты сжимаешь его ладонь. Он сжимает в ответ — дважды, будто это пароль.\"\\speak Harvey \"Вот. Теперь официально.$l\"\\friendship Harvey 35(break)emote farmer 28\\speak Emily \"Вы такие милые, что у меня аура порозовела.$h\"\\speak Harvey \"Это… медицински необъяснимо. Но приятно.$h\"\\friendship Harvey 30(break)move farmer -2 0 3 false\\pause 300\\move Harvey -1 0 3 false\\faceDirection farmer 1\\speak Harvey \"Прости. Я не спросил, готова ли ты. Это было нечестно.$s\"\\speak Harvey \"Но я не жалею, что сказал. Пусть знают. Если тебе нужно время — я подожду. Только больше не буду делать вид, что ты просто пациентка.$l\"\\friendship Harvey 30/action AddMail Current HarveyRomance_Public Received/addConversationTopic HarveyRomance_Public 7/addConversationTopic HarveyMod_CD_Global 3/globalFade/viewport -1000 -1000/end"
       }
     },
     {
@@ -774,7 +774,7 @@
       }
     },
     {
-      "LogName": "Courtship I1 — рецепты записок (приходят письмами)",
+      "LogName": "Courtship I1 — рецепты записок (с началом отношений)",
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
       "Entries": {
@@ -856,9 +856,9 @@
         "{{ModId}}_mailRadio": "@,^^Запасные батарейки — в коробке. Сама рация — тоже. Вчера я отдал её тебе, а сегодня понял, что забыл объяснить главное: она ловит меня из любой точки долины. Даже из шахты, если неглубоко.^^Канал семь.^^— Харви%item id (O){{ModId}}_HarveyRadio 1 %%[#]Канал семь",
         "{{ModId}}_mailModelParts": "@,^^Обещал написать, что нужно для модели. Пишу.^^1. Что-нибудь прозрачное для фонаря кабины. Мару говорит — очищенный кварц.^2. Медные стойки для крыльев. Их согнёт Клинт, если принести ему медь.^3. Сердце самолёта — моторчик. Его соберёт Мару.^^Это не срочно. Но я уже расчистил стол.^^— Клиника%item quest {{ModId}}_ModelGlass true %%[#]Детали для модели",
         "{{ModId}}_mailDinnerInvite": "@,^^Пятница, шесть вечера, салун. Столик у окна. Я забронировал его у Гаса за неделю, чем очень его рассмешил.^^Пейджер будет выключен. Почти наверняка.^^— Харви[#]Пятница, шесть вечера",
-        "{{ModId}}_mailNoteThanksRecipe": "@,^^Мару сказала, что я «совершенно не умею принимать знаки внимания». Это клевета. Но на всякий случай: если захочешь мне что-нибудь сказать без свидетелей — вот как складывать записки. Как в школе. Я хранил все.^^— Харви%item craftingRecipe {{ModId}}_NoteThanks %%[#]Записки",
-        "{{ModId}}_mailNoteMissRecipe": "@,^^Ещё один способ складывать записку. Этот — для тех дней, когда меня нет рядом. Я, правда, всегда рядом. Но вдруг.^^— Харви%item craftingRecipe {{ModId}}_NoteMiss %%[#]Ещё записка",
-        "{{ModId}}_mailNoteDinnerRecipe": "@,^^И последняя. С печатью-чашкой. Если подаришь мне такую днём — вечером я приду к твоему крыльцу. С супом. Отказаться не смогу, это медицинский факт.^^— Харви%item craftingRecipe {{ModId}}_NoteDinner %%[#]Приходи на ужин",
+        "{{ModId}}_mailNoteThanksRecipe": "@,^^Вчера Мару спросила, почему я весь вечер улыбаюсь. Я сказал, что день был хороший. Это правда — я ведь видел тебя.^^Береги себя. До встречи.^^— Харви%item craftingRecipe {{ModId}}_NoteThanks %%[#]Хороший день",
+        "{{ModId}}_mailNoteMissRecipe": "@,^^Между приёмами поймал себя на том, что прислушиваюсь к шагам за дверью. Ждал тебя, кажется.^^Просто хотел сказать: я скучаю.^^— Харви%item craftingRecipe {{ModId}}_NoteMiss %%[#]Между приёмами",
+        "{{ModId}}_mailNoteDinnerRecipe": "@,^^Сегодня заканчиваю пораньше. Если у тебя нет планов, давай поужинаем вместе? Я принесу суп и обещаю хотя бы за столом не говорить о работе.^^— Харви%item craftingRecipe {{ModId}}_NoteDinner %%[#]Свободный вечер",
         "{{ModId}}_mailNoteReply_Thanks": "@,^^Твоя записка лежит у меня в нагрудном кармане, рядом со стетоскопом. Я перечитал её четыре раза между пациентами.^^Это мне надо говорить спасибо. Каждый день. Начинаю.^^— Харви[#]Ответ на записку",
         "{{ModId}}_mailNoteReply_Miss": "@,^^Я тоже.^^…Это всё, что я хотел написать. Но бумаги было много, поэтому: я тоже. Очень. Даже когда ты в соседней комнате.^^— Харви[#]Я тоже",
         "{{ModId}}_mailLewisBalloon": "@,^^Я тут случайно узнал (Мару проговорилась, Мару вообще всё рассказывает Робин, а Робин — мне), что доктор мечтал летать. И что модель утонула в озере.^^У меня есть знакомый в Грамплтоне с воздушным шаром. На один закат его можно арендовать. Купол, правда, порван — но Эмили шьёт лучше всех в долине.^^Решишь устроить сюрприз — я в деле. Доктору ни слова.^^— Мэр Льюис%item quest {{ModId}}_BalloonCloth true %%[#]Совершенно секретно",
@@ -1007,21 +1007,34 @@
             "AddMail Current {{ModId}}_mailDinnerInvite now"
           ]
         },
-        "{{ModId}}_Courtship_NoteMissRecipe": {
-          "Id": "{{ModId}}_Courtship_NoteMissRecipe",
+
+
+        "{{ModId}}_Courtship_LearnNoteThanks": {
+          "Id": "{{ModId}}_Courtship_LearnNoteThanks",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailNoteThanksRecipe Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailNoteMissRecipe Any",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModId}}_NoteThanks",
           "Actions": [
-            "AddMail Current {{ModId}}_mailNoteMissRecipe now"
-          ]
+            "MarkCraftingRecipeKnown Current {{ModId}}_NoteThanks true"
+          ],
+          "MarkActionApplied": false
         },
-        "{{ModId}}_Courtship_NoteDinnerRecipe": {
-          "Id": "{{ModId}}_Courtship_NoteDinnerRecipe",
+        "{{ModId}}_Courtship_LearnNoteMiss": {
+          "Id": "{{ModId}}_Courtship_LearnNoteMiss",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_mailNoteMissRecipe Received, !PLAYER_HAS_MAIL Current {{ModId}}_mailNoteDinnerRecipe Any",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModId}}_NoteMiss",
           "Actions": [
-            "AddMail Current {{ModId}}_mailNoteDinnerRecipe now"
-          ]
+            "MarkCraftingRecipeKnown Current {{ModId}}_NoteMiss true"
+          ],
+          "MarkActionApplied": false
+        },
+        "{{ModId}}_Courtship_LearnNoteDinner": {
+          "Id": "{{ModId}}_Courtship_LearnNoteDinner",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModId}}_NoteDinner",
+          "Actions": [
+            "MarkCraftingRecipeKnown Current {{ModId}}_NoteDinner true"
+          ],
+          "MarkActionApplied": false
         },
         "{{ModId}}_Courtship_NoteDinnerExpire": {
           "Id": "{{ModId}}_Courtship_NoteDinnerExpire",

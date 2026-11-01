@@ -1,0 +1,23 @@
+Native-v14 botanical redraw — 2026-10-31.
+
+python scripts/validate_herbal_garden.py
+OK: 8 icons; 4 crop rows; all phases, seed variants and regrowth coordinates; binary alpha; dark material contours; export copies.
+OK: 5 linked quests (3 deliveries, lost page, cooked blend); guaranteed seed mail; recipe and letter references; one-time rewards.
+OK: TraumaBackstory true/false; broth trust gate; salve scene gate; existing medical IDs preserved.
+Herbal garden: all static checks passed.
+
+python scripts/validate_native_icons.py
+Native icons: 227 cells; 9 sheets; binary alpha; dark medical / material botanical contours; runtime copies and 166 buff indices OK.
+
+Additional native-pixel QA:
+PASS: authoring glyphs reproduce all 32 source maps and saved tiles.
+PASS: both runtime atlases equal direct native packing with resize/quantize disabled.
+PASS: all four mature plants and harvest icons redrawn; seed frames preserved.
+PASS: 51-color palette; current metadata uses native-v14.
+Crop atlas: 256x64; cells: 16x32. Items: 128x16; cells: 16x16.
+Crop frames remain (seed, seed, sprout, juvenile, buds, mature, mature, picked).
+
+Art direction: built-in image_gen, art-direction.png, exact prompt in art-direction.md.
+Runtime images are manually authored native glyphs, not resampled reference art.
+Only workspace assets updated; in-game appearance has not been checked.
+

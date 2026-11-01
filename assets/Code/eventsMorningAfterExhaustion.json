@@ -1,11 +1,12 @@
 {
     "$schema": "https://smapi.io/schemas/content-patcher.json",
+    // Запускает только Injury: одна сцена за визит, постановка у реальной кровати.
     "Changes": [
         {
             "Action": "EditData",
             "Target": "Data/Events/FarmHouse",
             "Entries": {
-                "eventHarveyMorningAfterExhaustion/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_MorningAfterExhaustion/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married": "
+                "eventHarveyMorningAfterExhaustion/Time 600 1100/!FestivalDay/GameStateQuery PLAYER_HAS_CONVERSATION_TOPIC Current topicHarvey_MorningAfterExhaustion/GameStateQuery PLAYER_NPC_RELATIONSHIP Current Harvey Dating Engaged Married/GameStateQuery FALSE": "
         continue/
         {{HO_HomeVX}} 7/
         farmer {{HO_HomeFX}} 6 1 Harvey {{HO_HomeHX}} 6 3/

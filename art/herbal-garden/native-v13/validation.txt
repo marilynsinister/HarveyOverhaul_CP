@@ -1,0 +1,24 @@
+[OK] нативные иконки 16×16
+[OK] регрессии постановки
+[OK] день рождения, Зузу и переходы между картами
+[OK] спрайты и поведение Аренда
+[OK] погода и доступность первого осмотра
+[OK] семья, памятные вещи и годовщины
+[OK] аптекарский сад
+[OK] сюжет
+[OK] координаты
+[OK] ветки, маршруты, анимации и варианты комнаты
+[OK] пропуск и выход из сцен
+[OK] JSON и тон
+[OK] setSkipActions в ручных файлах
+
+Все проверки пройдены.
+
+Native pixel QA: all 32 tiles and both atlases rendered with Image.resize and Image.quantize disabled.
+glass-dewberry: six 16x32 phases + two 16x16 icons; source symbols match saved pixels exactly.
+moonvelvet: six 16x32 phases + two 16x16 icons; source symbols match saved pixels exactly.
+amber-heartleaf: six 16x32 phases + two 16x16 icons; source symbols match saved pixels exactly.
+silver-seamleaf: six 16x32 phases + two 16x16 icons; source symbols match saved pixels exactly.
+herbalCrops.png: size (256, 64); 45 colors; alpha 0/255; runtime/export copies match.
+herbalItems.png: size (128, 16); 40 colors; alpha 0/255; runtime/export copies match.
+Legacy entry point matches native renderer. Frame order, seed variants, regrowth frames and cell gutters preserved. No running-game validation.

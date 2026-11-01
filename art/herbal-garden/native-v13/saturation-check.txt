@@ -1,0 +1,7 @@
+Saturation-only update: all 32 source pixel maps are identical; only palette values changed.
+crops: same dimensions, binary alpha, silhouettes and contour RGB; <=64 colors.
+items: same dimensions, binary alpha, silhouettes and contour RGB; <=64 colors.
+glass-dewberry: mean opaque-pixel HSV saturation 0.558 -> 0.626.
+moonvelvet: mean opaque-pixel HSV saturation 0.360 -> 0.429.
+amber-heartleaf: mean opaque-pixel HSV saturation 0.507 -> 0.566.
+silver-seamleaf: mean opaque-pixel HSV saturation 0.416 -> 0.465.
